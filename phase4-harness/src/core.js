@@ -38,15 +38,16 @@ export async function event(base,event){await mkdir(path.join(base,'manifest'),{
 
 function extractJson(text){const fenced=text.match(/```(?:json)?\s*([\s\S]*?)```/i);return JSON.parse(fenced?fenced[1]:text);}
 function prompt(packet){return `You are an FLT drafting worker. Return JSON only, matching this shape: {"proposed_rendering":"...","verse_renderings":[{"reference":"Phil.1.12","text":"..."}],"significant_decisions":[{"reference":"...","decision":"...","rationale":"..."}],"risks":[{"reference":"...","kind":"meaning_loss|added_meaning|too_loose|too_literal|oral_flow|theological|other","detail":"..."}],"human_only_questions":[{"reference":"...","question":"..."}]}. Include exactly Philippians 1:12 through 1:18 in verse_renderings. Never claim final authority.\n\nROLE PACKET:\n${JSON.stringify(packet)}`;}
-async function request(worker,packet,signal){
+export async function requestModel(worker,bodyText,signal){
   const key=process.env[worker.api_key_env]; if(!key) throw Object.assign(new Error(`Missing ${worker.api_key_env}`),{retryable:false});
-  const bodyText=prompt(packet); let url,headers={'content-type':'application/json'},body,parse;
+  let url,headers={'content-type':'application/json'},body,parse;
   if(worker.provider==='openai'){url='https://api.openai.com/v1/responses';headers.authorization=`Bearer ${key}`;body={model:worker.model,input:bodyText};parse=j=>({text:j.output_text??j.output?.flatMap(x=>x.content||[]).map(x=>x.text||'').join(''),id:j.id,usage:j.usage||{}})}
   else if(worker.provider==='anthropic'){url='https://api.anthropic.com/v1/messages';headers['x-api-key']=key;headers['anthropic-version']='2023-06-01';body={model:worker.model,max_tokens:5000,messages:[{role:'user',content:bodyText}]};parse=j=>({text:(j.content||[]).map(x=>x.text||'').join(''),id:j.id,usage:j.usage||{}})}
   else if(worker.provider==='google'){url=`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(worker.model)}:generateContent?key=${encodeURIComponent(key)}`;body={contents:[{parts:[{text:bodyText}]}],generationConfig:{responseMimeType:'application/json'}};parse=j=>({text:j.candidates?.[0]?.content?.parts?.map(x=>x.text||'').join('')||'',id:j.responseId||null,usage:j.usageMetadata||{}})}
   else throw Object.assign(new Error(`Unsupported provider ${worker.provider}`),{retryable:false});
   const res=await fetch(url,{method:'POST',headers,body:JSON.stringify(body),signal}); if(!res.ok)throw Object.assign(new Error(`${worker.provider} HTTP ${res.status}: ${(await res.text()).slice(0,500)}`),{retryable:res.status===408||res.status===429||res.status>=500});return parse(await res.json());
 }
+async function request(worker,packet,signal){return requestModel(worker,prompt(packet),signal);}
 export async function runWorker({worker,packet,runDir,maxAttempts,timeoutMs,validate}){
   const packetHash=sha256(packet); const rawDir=`failures/raw/${worker.role}`;
   for(let attempt=1;attempt<=maxAttempts;attempt++){
