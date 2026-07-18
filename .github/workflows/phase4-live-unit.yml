@@ -55,6 +55,9 @@ jobs:
       - name: Run three-provider blind draft
         run: node phase4-harness/src/cli.js run phase4-harness/.run-config.json
 
+      - name: Run self and anonymized cross critique
+        run: node phase4-harness/src/critique.js phase4-harness/.run-config.json "phase4-harness/runs/${{ steps.run.outputs.run_id }}"
+
       - name: Publish decision brief to summary
         if: success()
         shell: bash
