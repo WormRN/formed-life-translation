@@ -12,7 +12,7 @@ const source=await json(path.resolve(path.dirname(configPath),config.source_pack
 const schema=await json(path.join(root,'schemas/critique.schema.json'));
 const validate=new Ajv2020({allErrors:true}).compile(schema);
 const drafts=Object.fromEntries(await Promise.all(config.workers.map(async w=>[w.role,await json(path.join(runDir,`outputs/drafts/${w.role}.json`))])));
-const parse=t=>JSON.parse(t.match(/```(?:json)?\s*([\s\S]*?)```/i)?.[1]||t);
+const parse=t=>{if(!t?.trim())throw new Error('EMPTY_MODEL_RESPONSE');const candidate=t.match(/```(?:json)?\s*([\s\S]*?)```/i)?.[1]||t;try{return JSON.parse(candidate)}catch(e){throw new Error(`MALFORMED_OR_TRUNCATED_JSON: ${e.message}`)}};
 const shape='Return JSON only: {"scope":"self|cross","strengths":["..."],"findings":[{"draft_label":"...","reference":"Phil.1.12","severity":"must_revise|should_consider|minor","category":"semantic_coverage|readability|discourse|meaningful_form|theological_restraint|matrix_precedent|oral_flow|other","finding":"...","recommendation":"..."}],"human_only_questions":[{"reference":"...","question":"..."}]}. Never produce a replacement translation or claim final authority.';
 
 async function call(worker,stage,payload){
@@ -30,7 +30,7 @@ async function call(worker,stage,payload){
       }
       const record={run_id:config.run_id,unit_id:config.unit_id,stage,critic_role:worker.role,attempt,input_sha256:sha256(prompt),output,provider_provenance:{provider:worker.provider,model:worker.model,request_id:r.id,started_at:started.toISOString(),finished_at:new Date().toISOString(),usage:r.usage}};
       await event(runDir,{type:`${stage}_complete`,role:worker.role,attempt});return record;
-    }catch(e){await event(runDir,{type:`${stage}_failure`,role:worker.role,attempt,error:String(e),repair_feedback_added:Boolean(repair)});if(attempt===3)throw e}
+    }catch(e){if(!repair)repair=`IMPORTANT REPAIR: Your previous response was empty, truncated, or malformed (${String(e)}). Return one complete JSON object only, using the exact required schema. Be concise and reserve enough output tokens to close the JSON object.\n`;await event(runDir,{type:`${stage}_failure`,role:worker.role,attempt,error:String(e),repair_feedback_added:true});if(attempt===3)throw e}
     finally{clearTimeout(timer)}
   }
 }
