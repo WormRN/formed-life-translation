@@ -2,6 +2,8 @@
 
 This is the first executable harness for the Formed Life Translation. Its benchmark chapter is Philippians 1; its first live unit is Philippians 1:12–18.
 
+Phase 4 reserves run sequence numbers 101–999 so its immutable run IDs cannot collide with the Phase 3 simulation series.
+
 ## What it proves
 
 - three blind drafting roles are dispatched concurrently to three distinct providers;

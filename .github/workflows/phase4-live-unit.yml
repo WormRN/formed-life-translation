@@ -26,7 +26,7 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           cache: npm
           cache-dependency-path: phase4-harness/package-lock.json
 
@@ -42,7 +42,9 @@ jobs:
         id: run
         shell: bash
         run: |
-          sequence=$(printf '%03d' "${GITHUB_RUN_NUMBER}")
+          sequence_number=$((100 + GITHUB_RUN_NUMBER))
+          if (( sequence_number > 999 )); then echo "Phase 4 run-ID range exhausted" >&2; exit 1; fi
+          sequence=$(printf '%03d' "$sequence_number")
           run_id="FLT-PHP-01-$(date -u +%Y%m%d)-${sequence}"
           node phase4-harness/scripts/prepare-run-config.mjs phase4-harness/config.github-actions.json phase4-harness/.run-config.json "$run_id"
           echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
