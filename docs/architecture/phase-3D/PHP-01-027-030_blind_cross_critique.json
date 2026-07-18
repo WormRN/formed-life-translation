@@ -1,0 +1,74 @@
+{
+  "run_id": "FLT-PHP-01-20260718-001",
+  "unit_id": "PHP-01-027-030",
+  "role": "blind_cross_critique_agent",
+  "attempt": 1,
+  "status": "complete",
+  "drafts": {
+    "Draft A": "Above all, live together in a way that reflects the true value of the good news about Christ. Then, whether I come and see you or only hear about you from far away, I will know that you are standing firm with one purpose and working together as one team to remain faithful to the good news. Do not be frightened by those who oppose you. Your courage is a sign that they will be destroyed and that you will be saved—and this comes from God.\n\nFor Christ’s sake, you have been given not only the gift of trusting Him but also the gift of suffering for Him. You are facing the same struggle you once saw me face and now hear that I am still facing.",
+    "Draft B": "Only conduct yourselves as citizens in a manner worthy of the good news of Christ, so that whether I come and see you or am absent, I may hear that you are standing firm in one spirit, striving together with one mind for the faith of the good news, and not being frightened in any way by your opponents. This is a sign of destruction for them but of salvation for you—and this from God.\n\nFor it has been graciously given to you on behalf of Christ not only to believe in Him but also to suffer for Him, having the same struggle that you saw in me and now hear is still mine.",
+    "Draft C": "The most important thing is that you govern yourselves in a way that reflects the true value of the good news of Christ. Then, whether I come and see you or only hear about you from far away, I will know that you are standing firm, united in one spirit. I will know that you are competing together as one team to stay faithful to the good news.\n\nDo not be intimidated by those who oppose you. Your steadfast courage is a sign of their destruction and your salvation—and this comes from God. For Christ’s sake, you have been given not only the gift of trusting Him but also the gift of suffering for Him. You are facing the same struggle you once saw me face and now hear that I am still facing."
+  },
+  "worker_identity_visible": false,
+  "comparative_findings": [
+    {
+      "draft_id": "Draft A",
+      "evaluation": {
+        "status": "pass_with_warnings",
+        "strengths": [
+          "Natural paragraph movement",
+          "Accessible vocabulary",
+          "Clear referents"
+        ],
+        "must_fix": [],
+        "warnings": [
+          "The civic/public-conduct force of πολιτεύεσθε is softened.",
+          "Theologically weighty but faithful to the gracious-gift force; likely footnote candidate."
+        ],
+        "evidence_standard": "Each finding is tied to source meaning, target-reader effect, discourse, or style; no self-finalization."
+      },
+      "selection_note": "Useful source of natural phrasing."
+    },
+    {
+      "draft_id": "Draft B",
+      "evaluation": {
+        "status": "pass_with_warnings",
+        "strengths": [
+          "Strong source traceability",
+          "Preserves scope and agency",
+          "Retains difficult source relationships"
+        ],
+        "must_fix": [],
+        "warnings": [
+          "Semantically informative but formal and less natural than FLT target style."
+        ],
+        "evidence_standard": "Each finding is tied to source meaning, target-reader effect, discourse, or style; no self-finalization."
+      },
+      "selection_note": "Useful control for source precision."
+    },
+    {
+      "draft_id": "Draft C",
+      "evaluation": {
+        "status": "pass_with_warnings",
+        "strengths": [
+          "Strong balance of clarity and warrant",
+          "Good oral flow",
+          "Preserves most major source relationships"
+        ],
+        "must_fix": [],
+        "warnings": [
+          "Preserves civic force but may sound administrative to some readers.",
+          "Theologically weighty but faithful to the gracious-gift force; likely footnote candidate."
+        ],
+        "evidence_standard": "Each finding is tied to source meaning, target-reader effect, discourse, or style; no self-finalization."
+      },
+      "selection_note": "Strongest starting point for synthesis."
+    }
+  ],
+  "provisional_synthesis_direction": "Use Draft C as the base, consult Draft A for naturalness and Draft B for source-control checks.",
+  "must_fix_before_synthesis": [],
+  "human_only_questions": [],
+  "warnings": [
+    "Anonymization was procedural. The same assistant environment generated all drafts and critiques."
+  ]
+}

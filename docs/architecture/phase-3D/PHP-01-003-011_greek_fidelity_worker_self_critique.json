@@ -1,0 +1,27 @@
+{
+  "run_id": "FLT-PHP-01-20260718-001",
+  "unit_id": "PHP-01-003-011",
+  "role": "self_critique_agent",
+  "subject_role": "greek_fidelity_worker",
+  "attempt": 1,
+  "status": "complete",
+  "anonymized": false,
+  "subject_rendering": "I thank my God in every remembrance of you, always making my prayer for all of you with joy, because of your partnership in the good news from the first day until now. I am confident of this very thing: the One who began a good work among you will bring it to completion by the day of Christ Jesus.\n\nIt is right for me to think this way about all of you because I have you in my heart. All of you share with me in grace, both in my imprisonment and in the defense and confirmation of the good news. God is my witness that I long for all of you with the deep affection of Christ Jesus.\n\nAnd this I pray: that your love may grow still more in knowledge and every kind of discernment, so that you may test and approve what truly matters and be sincere and blameless for the day of Christ, filled with the fruit of righteousness that comes through Jesus Christ, to the glory and praise of God.",
+  "critique": {
+    "status": "pass_with_warnings",
+    "strengths": [
+      "Strong source traceability",
+      "Preserves scope and agency",
+      "Retains difficult source relationships"
+    ],
+    "must_fix": [],
+    "warnings": [
+      "Greek-shaped phrasing is awkward in contemporary English."
+    ],
+    "evidence_standard": "Each finding is tied to source meaning, target-reader effect, discourse, or style; no self-finalization."
+  },
+  "self_finalization_claim": false,
+  "warnings": [
+    "Single-model simulation; critique independence is procedural, not model-independent."
+  ]
+}

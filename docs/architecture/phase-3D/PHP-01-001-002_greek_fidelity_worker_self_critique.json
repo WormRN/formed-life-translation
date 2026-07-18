@@ -1,0 +1,25 @@
+{
+  "run_id": "FLT-PHP-01-20260718-001",
+  "unit_id": "PHP-01-001-002",
+  "role": "self_critique_agent",
+  "subject_role": "greek_fidelity_worker",
+  "attempt": 1,
+  "status": "complete",
+  "anonymized": false,
+  "subject_rendering": "Paul and Timothy, servants of Christ Jesus,\n\nto all the holy people in Christ Jesus who are in Philippi, together with the leaders and assistants:\n\nGrace to you and peace from God our Father and the Lord Jesus Christ.",
+  "critique": {
+    "status": "pass",
+    "strengths": [
+      "Strong source traceability",
+      "Preserves scope and agency",
+      "Retains difficult source relationships"
+    ],
+    "must_fix": [],
+    "warnings": [],
+    "evidence_standard": "Each finding is tied to source meaning, target-reader effect, discourse, or style; no self-finalization."
+  },
+  "self_finalization_claim": false,
+  "warnings": [
+    "Single-model simulation; critique independence is procedural, not model-independent."
+  ]
+}

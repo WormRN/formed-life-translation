@@ -1,0 +1,27 @@
+{
+  "run_id": "FLT-PHP-01-20260718-001",
+  "unit_id": "PHP-01-003-011",
+  "role": "self_critique_agent",
+  "subject_role": "readability_worker",
+  "attempt": 1,
+  "status": "complete",
+  "anonymized": false,
+  "subject_rendering": "I thank my God every time I remember you. Whenever I pray for all of you, I pray with joy because you have shared in spreading the good news from the first day until now. I am sure that the One who began this good work among you will keep working until it is complete when Christ Jesus returns.\n\nI have good reason to feel this way about all of you because I carry you in my heart. You share with me in God’s grace, both while I am in prison and while I defend the good news and show that it is true. God knows how deeply I long for all of you with the tender love of Christ Jesus.\n\nThis is my prayer: that your love will keep growing, along with knowledge and wise judgment, so you can recognize what matters most. Then you will live with integrity and without blame when Christ returns, filled with the good fruit of right living that comes through Jesus Christ and brings glory and praise to God.",
+  "critique": {
+    "status": "pass_with_warnings",
+    "strengths": [
+      "Natural paragraph movement",
+      "Accessible vocabulary",
+      "Clear referents"
+    ],
+    "must_fix": [],
+    "warnings": [
+      "Clear but interpretive rendering of δικαιοσύνη; Matrix/theology checker should review."
+    ],
+    "evidence_standard": "Each finding is tied to source meaning, target-reader effect, discourse, or style; no self-finalization."
+  },
+  "self_finalization_claim": false,
+  "warnings": [
+    "Single-model simulation; critique independence is procedural, not model-independent."
+  ]
+}

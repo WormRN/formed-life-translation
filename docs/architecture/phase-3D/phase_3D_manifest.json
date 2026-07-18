@@ -1,0 +1,112 @@
+[
+  {
+    "file": "PHP-01-001-002_balanced_worker_self_critique.json",
+    "sha256": "95a17a1c95f8f54bc57ac5211fd0f74a8a8de103156a4fe42f803e9abe9eb4c1",
+    "bytes": 979
+  },
+  {
+    "file": "PHP-01-001-002_blind_cross_critique.json",
+    "sha256": "ad025dbc093dea2ce88b2fbb7d88d2bf1ba5488b11b1673233b2824968d77c1c",
+    "bytes": 2820
+  },
+  {
+    "file": "PHP-01-001-002_greek_fidelity_worker_self_critique.json",
+    "sha256": "657c018e8ec3e741b017d29402fbb4f5d7192fde9c375c44628af4bac80b0444",
+    "bytes": 967
+  },
+  {
+    "file": "PHP-01-001-002_readability_worker_self_critique.json",
+    "sha256": "5f54b820707ef2be61fb547c0e9bbbfc3e9cd1d06e0f943c601a9fee3ab20aa6",
+    "bytes": 949
+  },
+  {
+    "file": "PHP-01-003-011_balanced_worker_self_critique.json",
+    "sha256": "11a817cb542c2c011531759204c5cf4013f1ae2a808dfe876af118ac738dacc2",
+    "bytes": 2043
+  },
+  {
+    "file": "PHP-01-003-011_blind_cross_critique.json",
+    "sha256": "288f9fe38819e54152b206adb65bedaca8c411451fc4c8801b4df1c44b9b5ebb",
+    "bytes": 5468
+  },
+  {
+    "file": "PHP-01-003-011_greek_fidelity_worker_self_critique.json",
+    "sha256": "249656ae9823b15121f2a4ae7e2f706e520ef019b76ea40ce1861ebe95a6a4bc",
+    "bytes": 1724
+  },
+  {
+    "file": "PHP-01-003-011_readability_worker_self_critique.json",
+    "sha256": "67f49995e5cc67bf0ed20115b7d26770ca5eaba7526fe5cd1a5c6a0d3e958424",
+    "bytes": 1744
+  },
+  {
+    "file": "PHP-01-012-018_balanced_worker_self_critique.json",
+    "sha256": "50a0a38e671b9766d35ceb87838f40173f41b080c4f830b5ee4e65e54627d4b4",
+    "bytes": 1759
+  },
+  {
+    "file": "PHP-01-012-018_blind_cross_critique.json",
+    "sha256": "b4d6f209478c3adc483c31ed34c773fe098d372739dde1ebb85a8e021fa46ec5",
+    "bytes": 5192
+  },
+  {
+    "file": "PHP-01-012-018_greek_fidelity_worker_self_critique.json",
+    "sha256": "a02acd041183d123d5182fae7de583ee8319ded49d7527a6d2a1a42e91a951bc",
+    "bytes": 1591
+  },
+  {
+    "file": "PHP-01-012-018_readability_worker_self_critique.json",
+    "sha256": "a56fb238b40eac5403b1f58c9a68abaf0391c69200a109ea5221c5de0409f0f8",
+    "bytes": 1889
+  },
+  {
+    "file": "PHP-01-019-026_balanced_worker_self_critique.json",
+    "sha256": "ee9be7a5d286677e6c95811fa556a87ed25e6cfc1c990ee68347cd321974cecf",
+    "bytes": 1703
+  },
+  {
+    "file": "PHP-01-019-026_blind_cross_critique.json",
+    "sha256": "e85be37c9f2e5eb00587ae224284e8a6baa5adb863d4453b3052ddf06785f624",
+    "bytes": 5116
+  },
+  {
+    "file": "PHP-01-019-026_greek_fidelity_worker_self_critique.json",
+    "sha256": "17c6251cb6d7e9ea10eec284a33301b9acd9126354a47a068be45826a2af31fb",
+    "bytes": 1754
+  },
+  {
+    "file": "PHP-01-019-026_readability_worker_self_critique.json",
+    "sha256": "6fd1e5c2960911aeb9a77825fca32473a410a35617df6572bea0eaee23513a1c",
+    "bytes": 1706
+  },
+  {
+    "file": "PHP-01-027-030_balanced_worker_self_critique.json",
+    "sha256": "33a6c3209b37f94f0dc53ed6e265f36a1b383c24bc5cfc8bf00dd5b7a6ef8dcc",
+    "bytes": 1636
+  },
+  {
+    "file": "PHP-01-027-030_blind_cross_critique.json",
+    "sha256": "00067bdf5f278a5c4efd41c3722e0a2d1b644d326def8191c8088b38160afaf1",
+    "bytes": 4581
+  },
+  {
+    "file": "PHP-01-027-030_greek_fidelity_worker_self_critique.json",
+    "sha256": "a227727f908b45785ba27d712708c795bc7633881f6c1a3fc6b34e07369cb137",
+    "bytes": 1427
+  },
+  {
+    "file": "PHP-01-027-030_readability_worker_self_critique.json",
+    "sha256": "d17e8b2e253fb66257a36d5953e53691b8be88a1f045dd1af532009453da2a07",
+    "bytes": 1561
+  },
+  {
+    "file": "README.md",
+    "sha256": "ec145b405fcc0e2dbc4155a90af446754f21a13d16ba3ad1de0dfddb7ecb763c",
+    "bytes": 749
+  },
+  {
+    "file": "phase_3D_status_report.json",
+    "sha256": "78fde912eb6958118c2f04ba7142e765aeacdbdd1a1ad0e178f2caef81b4f741",
+    "bytes": 565
+  }
+]

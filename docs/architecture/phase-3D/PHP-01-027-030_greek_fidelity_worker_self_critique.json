@@ -1,0 +1,27 @@
+{
+  "run_id": "FLT-PHP-01-20260718-001",
+  "unit_id": "PHP-01-027-030",
+  "role": "self_critique_agent",
+  "subject_role": "greek_fidelity_worker",
+  "attempt": 1,
+  "status": "complete",
+  "anonymized": false,
+  "subject_rendering": "Only conduct yourselves as citizens in a manner worthy of the good news of Christ, so that whether I come and see you or am absent, I may hear that you are standing firm in one spirit, striving together with one mind for the faith of the good news, and not being frightened in any way by your opponents. This is a sign of destruction for them but of salvation for you—and this from God.\n\nFor it has been graciously given to you on behalf of Christ not only to believe in Him but also to suffer for Him, having the same struggle that you saw in me and now hear is still mine.",
+  "critique": {
+    "status": "pass_with_warnings",
+    "strengths": [
+      "Strong source traceability",
+      "Preserves scope and agency",
+      "Retains difficult source relationships"
+    ],
+    "must_fix": [],
+    "warnings": [
+      "Semantically informative but formal and less natural than FLT target style."
+    ],
+    "evidence_standard": "Each finding is tied to source meaning, target-reader effect, discourse, or style; no self-finalization."
+  },
+  "self_finalization_claim": false,
+  "warnings": [
+    "Single-model simulation; critique independence is procedural, not model-independent."
+  ]
+}

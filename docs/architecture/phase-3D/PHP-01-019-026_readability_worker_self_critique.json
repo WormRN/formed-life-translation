@@ -1,0 +1,27 @@
+{
+  "run_id": "FLT-PHP-01-20260718-001",
+  "unit_id": "PHP-01-019-026",
+  "role": "self_critique_agent",
+  "subject_role": "readability_worker",
+  "attempt": 1,
+  "status": "complete",
+  "anonymized": false,
+  "subject_rendering": "I know that my distress will lead to my deliverance through your prayers and the generous help of the Spirit of Jesus Christ. I eagerly expect and hope that I will never have reason to be ashamed. Instead, I will face everything with complete courage so that Christ will be honored through me, whether I live or die.\n\nFor me, living means Christ, and dying is gain. But if I keep living, I can continue doing fruitful work. I do not know which I would choose. I am pulled in both directions. I long to leave this life and be with Christ, which is far better. Yet it is more necessary for your sake that I remain alive.\n\nSince I am convinced of this, I know that I will remain and continue with all of you so that you may grow and rejoice as you trust Christ. Then, when I am with you again, you will have even more reason to rejoice in Christ Jesus because of me.",
+  "critique": {
+    "status": "pass_with_warnings",
+    "strengths": [
+      "Natural paragraph movement",
+      "Accessible vocabulary",
+      "Clear referents"
+    ],
+    "must_fix": [],
+    "warnings": [
+      "Dynamic clarification of τοῦτο; defensible, but interpretive and should remain documented."
+    ],
+    "evidence_standard": "Each finding is tied to source meaning, target-reader effect, discourse, or style; no self-finalization."
+  },
+  "self_finalization_claim": false,
+  "warnings": [
+    "Single-model simulation; critique independence is procedural, not model-independent."
+  ]
+}

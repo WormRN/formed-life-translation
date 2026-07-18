@@ -1,0 +1,28 @@
+{
+  "run_id": "FLT-PHP-01-20260718-001",
+  "unit_id": "PHP-01-012-018",
+  "role": "self_critique_agent",
+  "subject_role": "balanced_worker",
+  "attempt": 1,
+  "status": "complete",
+  "anonymized": false,
+  "subject_rendering": "I want all of you to know, brothers and sisters, that my imprisonment has actually helped the good news move forward. Everyone in the imperial guard, along with the others here, now knows that I am imprisoned because of Christ. Being in prison has made most of the believers here more confident in the Lord. They are more daring to speak God’s message without fear.\n\nSome proclaim Christ out of envy and rivalry, while others do it with good intentions. Those who act out of love know that I am here to defend the good news. But the others proclaim Christ from selfish ambition rather than sincere motives. They think they can add to my suffering while I am in prison. What really matters is that Christ is being proclaimed, whether people speak with false motives or sincere ones. That is why I rejoice and continue to rejoice!",
+  "critique": {
+    "status": "pass_with_warnings",
+    "strengths": [
+      "Strong balance of clarity and warrant",
+      "Good oral flow",
+      "Preserves most major source relationships",
+      "English punctuation effectively represents Paul’s emphatic continued rejoicing."
+    ],
+    "must_fix": [],
+    "warnings": [
+      "Faithful to the courage-to-act force, but slightly less idiomatic."
+    ],
+    "evidence_standard": "Each finding is tied to source meaning, target-reader effect, discourse, or style; no self-finalization."
+  },
+  "self_finalization_claim": false,
+  "warnings": [
+    "Single-model simulation; critique independence is procedural, not model-independent."
+  ]
+}

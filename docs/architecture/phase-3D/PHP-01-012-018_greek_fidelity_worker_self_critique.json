@@ -1,0 +1,25 @@
+{
+  "run_id": "FLT-PHP-01-20260718-001",
+  "unit_id": "PHP-01-012-018",
+  "role": "self_critique_agent",
+  "subject_role": "greek_fidelity_worker",
+  "attempt": 1,
+  "status": "complete",
+  "anonymized": false,
+  "subject_rendering": "I want you to know, brothers and sisters, that the things concerning me have turned out rather for the advance of the good news. As a result, it has become clear throughout the whole imperial guard and to everyone else that my imprisonment is in Christ. Most of the brothers and sisters, having become confident in the Lord because of my imprisonment, dare even more to speak the word without fear.\n\nSome proclaim Christ because of envy and rivalry, but others from goodwill. The latter do so from love, knowing that I am appointed for the defense of the good news. The former proclaim Christ from selfish ambition, not sincerely, thinking to stir up trouble for me in my imprisonment. What then? Only this: in every way, whether from false motives or in truth, Christ is proclaimed, and in this I rejoice. Yes, and I will continue to rejoice.",
+  "critique": {
+    "status": "pass",
+    "strengths": [
+      "Strong source traceability",
+      "Preserves scope and agency",
+      "Retains difficult source relationships"
+    ],
+    "must_fix": [],
+    "warnings": [],
+    "evidence_standard": "Each finding is tied to source meaning, target-reader effect, discourse, or style; no self-finalization."
+  },
+  "self_finalization_claim": false,
+  "warnings": [
+    "Single-model simulation; critique independence is procedural, not model-independent."
+  ]
+}
