@@ -1,0 +1,9 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","additionalProperties":false,
+  "required":["candidate_assessments","preferred_candidate","preference_reason"],
+  "properties":{
+    "candidate_assessments":{"type":"array","minItems":3,"maxItems":3,"items":{"type":"object","additionalProperties":false,"required":["candidate_label","naturalness","religion_naive_clarity","oral_flow","likely_misunderstandings","churchy_or_formal_phrases"],"properties":{"candidate_label":{"enum":["Candidate A","Candidate B","Candidate C"]},"naturalness":{"type":"integer","minimum":1,"maximum":5},"religion_naive_clarity":{"type":"integer","minimum":1,"maximum":5},"oral_flow":{"type":"integer","minimum":1,"maximum":5},"likely_misunderstandings":{"type":"array","items":{"type":"string"}},"churchy_or_formal_phrases":{"type":"array","items":{"type":"string"}}}}},
+    "preferred_candidate":{"enum":["Candidate A","Candidate B","Candidate C","hybrid"]},
+    "preference_reason":{"type":"string","minLength":1}
+  }
+}
