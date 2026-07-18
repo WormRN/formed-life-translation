@@ -1,6 +1,10 @@
 name: FLT Phase 4 ensemble review
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/phase4-ensemble-review.yml'
   workflow_dispatch:
     inputs:
       artifact_id:
