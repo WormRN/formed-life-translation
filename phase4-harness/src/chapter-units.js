@@ -1,0 +1,25 @@
+#!/usr/bin/env node
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import Ajv2020 from 'ajv/dist/2020.js';
+import {json,emit,event,requestModel,sha256} from './core.js';
+
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const configPath=path.resolve(process.argv[2]),runDir=path.resolve(process.argv[3]),sourcePath=path.resolve(process.argv[4]);
+const config=await json(configPath),chapter=await json(sourcePath);
+const validate=new Ajv2020({allErrors:true}).compile(await json(path.join(root,'schemas/chapter-unit-candidate.schema.json')));
+const parse=t=>{if(!t?.trim())throw new Error('EMPTY_MODEL_RESPONSE');const s=t.match(/```(?:json)?\s*([\s\S]*?)```/i)?.[1]||t;return JSON.parse(s)};
+const missions={readability_worker:'Lead with effortless oral English, warmth, and immediate comprehension. Be dynamically bold when it helps the target reader.',greek_fidelity_worker:'Produce natural reader-first English while guarding only material meaning, logic, ambiguity, and theological force. Do not imitate Greek form.',balanced_worker:'Act as a publication editor: create a coherent, distinctive FLT voice that is dynamic, dignified, and clear without becoming commentary.'};
+async function call(worker,unit,prompt){let repair='';for(let attempt=1;attempt<=3;attempt++){const full=`Return complete JSON only. ${repair}\n${prompt}`,started=new Date(),controller=new AbortController(),timer=setTimeout(()=>controller.abort(),config.timeout_ms||180000);try{const r=await requestModel(worker,full,controller.signal);await emit(runDir,`failures/raw/${unit.unit_id}/${worker.role}/attempt-${attempt}.txt`,r.text);const output=parse(r.text);if(!validate(output)){repair=`Repair schema errors: ${JSON.stringify(validate.errors)}. Be concise.`;throw new Error(repair)}const refs=output.verse_renderings.map(v=>v.reference),expected=unit.verses.map(v=>v.reference);if(JSON.stringify(refs)!==JSON.stringify(expected)){repair=`Return exactly these verse references in order: ${expected.join(', ')}.`;throw new Error(repair)}const record={run_id:config.run_id,chapter_id:chapter.chapter_id,unit_id:unit.unit_id,stage:'blind_reader_first_unit_draft',role:worker.role,attempt,input_sha256:sha256(full),output,provider_provenance:{provider:worker.provider,model:worker.model,request_id:r.id,started_at:started.toISOString(),finished_at:new Date().toISOString(),usage:r.usage}};await event(runDir,{type:'unit_draft_complete',unit_id:unit.unit_id,role:worker.role,attempt});return record}catch(e){if(!repair)repair=`Previous response was incomplete or malformed: ${String(e)}. Close the JSON and be concise.`;await event(runDir,{type:'unit_draft_failure',unit_id:unit.unit_id,role:worker.role,attempt,error:String(e)});if(attempt===3)throw e}finally{clearTimeout(timer)}}}
+
+const provenance=[];
+for(const unit of chapter.units){
+  const common={project:{translation_identity:chapter.translation_identity,target_reader:chapter.target_reader,tone:chapter.tone},governing_rules:chapter.governing_rules,existing_decisions:chapter.existing_decisions,unit:{unit_id:unit.unit_id,passage:unit.passage,title:unit.title,known_issues:unit.known_issues,verses:unit.verses},visibility:{sealed_human_unit_absent:true,comparison_translations_absent:true,benchmark_absent:true}};
+  const results=await Promise.all(config.workers.map(w=>call(w,unit,`You are drafting one blind surrounding unit for FLT Philippians 1. Mission: ${missions[w.role]} The reading text is firmly dynamic-equivalence; closeness to Greek form is not a virtue by itself. Preserve meaning and avoid unsupported commentary. Do not reconstruct or refer to Philippians 1:12-18. Schema: {"verse_renderings":[{"reference":"Phil.1.1","text":"..."}],"paragraph_rendering":"...","dynamic_moves":[{"reference":"...","move":"...","warrant":"..."}],"risks":[{"reference":"...","risk":"..."}],"human_questions":[{"reference":"...","question":"...","options":["...","..."]}]}. MATERIAL:${JSON.stringify(common)}`)));
+  for(const x of results){await emit(runDir,`outputs/units/${unit.unit_id}/${x.role}.json`,x);provenance.push(x)}
+  let md=`# ${unit.passage} — Blind Reader-First Candidates\n\n**Status:** Human editing required; no candidate is approved.\n\n`;
+  for(const [i,x] of results.entries())md+=`## Candidate ${String.fromCharCode(65+i)}\n\n${x.output.verse_renderings.map(v=>`**${v.reference.replace('Phil.1.','')}** ${v.text}`).join('\n\n')}\n\n`;
+  await emit(runDir,`outputs/briefs/${unit.unit_id}.md`,md);
+}
+await emit(runDir,'manifest/chapter-drafting-provenance.json',{run_id:config.run_id,chapter_id:chapter.chapter_id,sealed_unit:chapter.sealed_unit,provider_calls:provenance.map(x=>x.provider_provenance),visibility:'Each worker saw one Greek unit, project rules, and scoped decisions. Human-edited 1:12-18, benchmarks, and comparison translations were absent.',status:'remaining_units_ready_for_human_editing'});
+console.log('Blind surrounding-unit drafting complete');
