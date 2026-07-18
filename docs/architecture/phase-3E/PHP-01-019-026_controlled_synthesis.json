@@ -1,0 +1,18 @@
+{
+  "run_id": "FLT-PHP-01-20260718-001",
+  "unit_id": "PHP-01-019-026",
+  "base_candidate_role": "balanced_worker",
+  "revision_cycle": 1,
+  "revised_candidate": "I know that my distress will become my deliverance through your prayers and the generous help of the Spirit of Jesus Christ. I eagerly expect and hope that I will have no reason to be ashamed. Instead, I will face this with complete courage so that Christ will be honored through me, whether I live or die.\n\nFor me, living is Christ, and dying is gain. If I go on living, I can continue doing fruitful work. I do not know which I would prefer. I am pulled in both directions. I long to leave this life and be with Christ, which is far better. But remaining alive is more necessary for your sake.\n\nSince I am convinced of this, I know that I will remain and continue with all of you for your progress and joy as you trust Christ. Then, when I am with you again, you will have even more reason to rejoice in Christ Jesus because of me.",
+  "changes": [],
+  "unresolved_human_decisions": [
+    {
+      "verses": [
+        19
+      ],
+      "question": "Confirm the dynamic clarification “my distress” for τοῦτο.",
+      "recommended": "Keep “my distress” because the referent is Paul’s imprisonment and affliction, with the interpretive move documented."
+    }
+  ],
+  "status": "ready_for_human_brief"
+}

@@ -1,0 +1,17 @@
+{
+  "run_id": "FLT-PHP-01-20260718-001",
+  "unit_id": "PHP-01-012-018",
+  "base_candidate_role": "balanced_worker",
+  "revision_cycle": 1,
+  "revised_candidate": "I want all of you to know, brothers and sisters, that my imprisonment has actually helped the good news move forward. Everyone in the imperial guard, along with the others here, now knows that I am imprisoned because of Christ. Being in prison has made most of the believers here more confident in the Lord. They now speak God’s message more boldly and without fear.\n\nSome proclaim Christ out of envy and rivalry, while others do it with good intentions. Those who act out of love know that I am here to defend the good news. But the others proclaim Christ from selfish ambition rather than sincere motives. They think they can add to my suffering while I am in prison. What really matters is that Christ is being proclaimed, whether people speak with false motives or sincere ones. That is why I rejoice and continue to rejoice!",
+  "changes": [
+    {
+      "finding": "communication_readability_checker warning",
+      "old": "They are more daring to speak God’s message without fear.",
+      "new": "They now speak God’s message more boldly and without fear.",
+      "reason": "Improves idiomatic oral English while preserving increased courage and fearless speech."
+    }
+  ],
+  "unresolved_human_decisions": [],
+  "status": "ready_for_human_brief"
+}

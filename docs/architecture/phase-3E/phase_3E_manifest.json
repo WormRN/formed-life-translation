@@ -1,0 +1,67 @@
+[
+  {
+    "file": "PHP-01-001-002_controlled_synthesis.json",
+    "sha256": "a972519c397d4f24c0c2f05647ba702a05c6b9991fae96c5db0d73d5214bb141",
+    "bytes": 493
+  },
+  {
+    "file": "PHP-01-001-002_focused_checker_report.json",
+    "sha256": "ce23af05488459b027a6075c466193a4a0d281674d7829d38e79f2a0b05f5375",
+    "bytes": 2141
+  },
+  {
+    "file": "PHP-01-003-011_controlled_synthesis.json",
+    "sha256": "a6b9bd1cba8a0a14f17f5708e2cf3a95decc2d77e021d138ea12a22917df27e9",
+    "bytes": 1547
+  },
+  {
+    "file": "PHP-01-003-011_focused_checker_report.json",
+    "sha256": "e61f9e15e9b575a3fc5c21e427e1bfdc9863c32fdad9c63df3d4687d3467d34a",
+    "bytes": 3334
+  },
+  {
+    "file": "PHP-01-012-018_controlled_synthesis.json",
+    "sha256": "6cf1f30cc18f1b6c46706fb18cd2aae7a941eace502f3c236c3f9a01b9a92378",
+    "bytes": 1425
+  },
+  {
+    "file": "PHP-01-012-018_focused_checker_report.json",
+    "sha256": "c7e5eed68b742874cb4da2d7b0eaca751ae3ee7c97dbf66a6783d91de77aecce",
+    "bytes": 2824
+  },
+  {
+    "file": "PHP-01-019-026_controlled_synthesis.json",
+    "sha256": "fe0907f66afe9dc4fdc857c0747d8231d952bdc30093792c8ef33e3ba72fbf72",
+    "bytes": 1383
+  },
+  {
+    "file": "PHP-01-019-026_focused_checker_report.json",
+    "sha256": "2348d6291a841b49543712be3873662eb19ff6365a6cc07d0ddd262aee28a39a",
+    "bytes": 2856
+  },
+  {
+    "file": "PHP-01-027-030_controlled_synthesis.json",
+    "sha256": "fb90331134a6c3d2d3237afb5d730b94f73d91df5a252a6edbec1646777f18b8",
+    "bytes": 1233
+  },
+  {
+    "file": "PHP-01-027-030_focused_checker_report.json",
+    "sha256": "0afc78591e40db60b349476f43951b79b2ee7e6dc9bd3d6bd39b2c0043de35c1",
+    "bytes": 2994
+  },
+  {
+    "file": "README.md",
+    "sha256": "df8e6336c1c7efab49a18511a70d9d5bc23e600190f6a08b2bd5a129bfbc7f60",
+    "bytes": 480
+  },
+  {
+    "file": "phase_3E_human_decision_brief.md",
+    "sha256": "e711cb419271e9aad064536b2990a616bd518f88b4cdcab01bcf7d7ff3bafc67",
+    "bytes": 1736
+  },
+  {
+    "file": "phase_3E_status_report.json",
+    "sha256": "8623a3b4a2c36e80610031259736cfc27449ca3fb9648df607786bbd39e79823",
+    "bytes": 505
+  }
+]

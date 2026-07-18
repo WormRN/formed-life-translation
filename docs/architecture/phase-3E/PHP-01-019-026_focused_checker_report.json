@@ -1,0 +1,61 @@
+{
+  "run_id": "FLT-PHP-01-20260718-001",
+  "unit_id": "PHP-01-019-026",
+  "candidate_source": "balanced_worker draft",
+  "candidate_text": "I know that my distress will become my deliverance through your prayers and the generous help of the Spirit of Jesus Christ. I eagerly expect and hope that I will have no reason to be ashamed. Instead, I will face this with complete courage so that Christ will be honored through me, whether I live or die.\n\nFor me, living is Christ, and dying is gain. If I go on living, I can continue doing fruitful work. I do not know which I would prefer. I am pulled in both directions. I long to leave this life and be with Christ, which is far better. But remaining alive is more necessary for your sake.\n\nSince I am convinced of this, I know that I will remain and continue with all of you for your progress and joy as you trust Christ. Then, when I am with you again, you will have even more reason to rejoice in Christ Jesus because of me.",
+  "checkers": {
+    "warrant_checker": [
+      {
+        "classification": "pass",
+        "issue": "General warrant",
+        "evidence": "No broad commentary layer or unrelated explanatory material is introduced."
+      },
+      {
+        "classification": "warning",
+        "issue": "“generous help”",
+        "evidence": "Captures the ample/provision sense of ἐπιχορηγία but adds evaluative warmth."
+      }
+    ],
+    "communication_readability_checker": [
+      {
+        "classification": "pass",
+        "issue": "Overall readability",
+        "evidence": "Candidate uses current vocabulary, explicit referents, and manageable sentence structure for the target reader."
+      }
+    ],
+    "discourse_cohesion_checker": [
+      {
+        "classification": "pass",
+        "issue": "Unit movement",
+        "evidence": "Major logical and rhetorical progression of the source unit remains visible."
+      },
+      {
+        "classification": "pass",
+        "issue": "Life/death tension",
+        "evidence": "The pull between fruitful ministry and being with Christ remains clear."
+      }
+    ],
+    "theological_risk_checker": [
+      {
+        "classification": "pass",
+        "issue": "Deliverance",
+        "evidence": "Candidate preserves ambiguity between release/vindication/final salvation by retaining “deliverance.”"
+      }
+    ],
+    "matrix_precedent_checker": [],
+    "ambiguity_scope_checker": [
+      {
+        "classification": "human_decision",
+        "issue": "τοῦτο in verse 19",
+        "evidence": "“My distress” identifies the referent dynamically; defensible, but more specific than “this.”"
+      }
+    ]
+  },
+  "summary": {
+    "must_revise": 0,
+    "human_decisions": 1,
+    "warnings": 1,
+    "passes": 5
+  },
+  "checker_independence_note": "Procedural role separation only; same assistant environment."
+}

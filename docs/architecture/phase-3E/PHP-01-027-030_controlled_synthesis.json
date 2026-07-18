@@ -1,0 +1,18 @@
+{
+  "run_id": "FLT-PHP-01-20260718-001",
+  "unit_id": "PHP-01-027-030",
+  "base_candidate_role": "balanced_worker",
+  "revision_cycle": 1,
+  "revised_candidate": "The most important thing is that you govern yourselves in a way that reflects the true value of the good news of Christ. Then, whether I come and see you or only hear about you from far away, I will know that you are standing firm, united in one spirit. I will know that you are competing together as one team to stay faithful to the good news.\n\nDo not be intimidated by those who oppose you. Your steadfast courage is a sign of their destruction and your salvation—and this comes from God. For Christ’s sake, you have been given not only the gift of trusting Him but also the gift of suffering for Him. You are facing the same struggle you once saw me face and now hear that I am still facing.",
+  "changes": [],
+  "unresolved_human_decisions": [
+    {
+      "verses": [
+        27
+      ],
+      "question": "Confirm “stay faithful to the good news” as the scoped resolution of τῇ πίστει τοῦ εὐαγγελίου.",
+      "recommended": "Keep current wording as an approved contextual decision."
+    }
+  ],
+  "status": "ready_for_human_brief"
+}

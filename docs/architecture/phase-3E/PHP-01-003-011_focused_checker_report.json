@@ -1,0 +1,67 @@
+{
+  "run_id": "FLT-PHP-01-20260718-001",
+  "unit_id": "PHP-01-003-011",
+  "candidate_source": "balanced_worker draft",
+  "candidate_text": "I thank my God whenever I remember you. Every time I pray for all of you, I pray with joy because you have worked alongside me for the good news from the first day until now. I am sure of this: the One who began a good work among you will continue it until it is finished on the day Christ Jesus returns.\n\nI have good reason to feel this way about all of you because I carry you in my heart. You all share with me in God’s grace, whether I am in prison or defending and confirming the truth of the good news. God knows how deeply I long for all of you with the tender love that comes from Christ Jesus.\n\nThis is what I pray for you: that your love will keep growing as you gain knowledge and learn to make wise judgments. Then you will be able to recognize what matters most and live with integrity and without blame when Christ returns. Your lives will be filled with the good fruit of right living that comes through Jesus Christ, bringing glory and praise to God.",
+  "checkers": {
+    "warrant_checker": [
+      {
+        "classification": "pass",
+        "issue": "General warrant",
+        "evidence": "No broad commentary layer or unrelated explanatory material is introduced."
+      },
+      {
+        "classification": "warning",
+        "issue": "“worked alongside me for the good news”",
+        "evidence": "Clear dynamic rendering of κοινωνία, but the degree of direct co-labor is interpretive and should remain documented."
+      },
+      {
+        "classification": "warning",
+        "issue": "“the truth of the good news”",
+        "evidence": "Clarifies βεβαίωσις but adds an explicit truth formulation not lexically stated."
+      }
+    ],
+    "communication_readability_checker": [
+      {
+        "classification": "pass",
+        "issue": "Overall readability",
+        "evidence": "Candidate uses current vocabulary, explicit referents, and manageable sentence structure for the target reader."
+      }
+    ],
+    "discourse_cohesion_checker": [
+      {
+        "classification": "pass",
+        "issue": "Unit movement",
+        "evidence": "Major logical and rhetorical progression of the source unit remains visible."
+      }
+    ],
+    "theological_risk_checker": [
+      {
+        "classification": "warning",
+        "issue": "Verse 11 causation",
+        "evidence": "Candidate keeps the fruit coming through Jesus Christ, avoiding moral self-production."
+      }
+    ],
+    "matrix_precedent_checker": [
+      {
+        "classification": "human_decision",
+        "issue": "δικαιοσύνη in verse 11",
+        "evidence": "“Right living” is readable but resolves a weighted theological term dynamically; requires human confirmation or prior precedent."
+      }
+    ],
+    "ambiguity_scope_checker": [
+      {
+        "classification": "warning",
+        "issue": "“whether I am in prison...”",
+        "evidence": "Natural English, though Greek presents both circumstances rather than alternatives."
+      }
+    ]
+  },
+  "summary": {
+    "must_revise": 0,
+    "human_decisions": 1,
+    "warnings": 4,
+    "passes": 3
+  },
+  "checker_independence_note": "Procedural role separation only; same assistant environment."
+}

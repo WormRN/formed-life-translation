@@ -1,0 +1,67 @@
+{
+  "run_id": "FLT-PHP-01-20260718-001",
+  "unit_id": "PHP-01-027-030",
+  "candidate_source": "balanced_worker draft",
+  "candidate_text": "The most important thing is that you govern yourselves in a way that reflects the true value of the good news of Christ. Then, whether I come and see you or only hear about you from far away, I will know that you are standing firm, united in one spirit. I will know that you are competing together as one team to stay faithful to the good news.\n\nDo not be intimidated by those who oppose you. Your steadfast courage is a sign of their destruction and your salvation—and this comes from God. For Christ’s sake, you have been given not only the gift of trusting Him but also the gift of suffering for Him. You are facing the same struggle you once saw me face and now hear that I am still facing.",
+  "checkers": {
+    "warrant_checker": [
+      {
+        "classification": "pass",
+        "issue": "General warrant",
+        "evidence": "No broad commentary layer or unrelated explanatory material is introduced."
+      },
+      {
+        "classification": "warning",
+        "issue": "“govern yourselves”",
+        "evidence": "Preserves civic force of πολιτεύεσθε but may sound administrative."
+      }
+    ],
+    "communication_readability_checker": [
+      {
+        "classification": "pass",
+        "issue": "Overall readability",
+        "evidence": "Candidate uses current vocabulary, explicit referents, and manageable sentence structure for the target reader."
+      },
+      {
+        "classification": "warning",
+        "issue": "Sentence length",
+        "evidence": "Verse 27 is long but coherent; breath-based paragraphing may help oral reading."
+      }
+    ],
+    "discourse_cohesion_checker": [
+      {
+        "classification": "pass",
+        "issue": "Unit movement",
+        "evidence": "Major logical and rhetorical progression of the source unit remains visible."
+      }
+    ],
+    "theological_risk_checker": [
+      {
+        "classification": "pass",
+        "issue": "Gift of suffering",
+        "evidence": "Candidate preserves the difficult claim that suffering for Christ is graciously given, without adding God as explicit subject."
+      }
+    ],
+    "matrix_precedent_checker": [
+      {
+        "classification": "warning",
+        "issue": "πίστις",
+        "evidence": "“Stay faithful to the good news” selects a faithfulness-oriented sense and should be logged as a scoped decision."
+      }
+    ],
+    "ambiguity_scope_checker": [
+      {
+        "classification": "warning",
+        "issue": "“stay faithful to the good news”",
+        "evidence": "Contextual resolution of τῇ πίστει τοῦ εὐαγγελίου; plausible but not the only reading."
+      }
+    ]
+  },
+  "summary": {
+    "must_revise": 0,
+    "human_decisions": 0,
+    "warnings": 4,
+    "passes": 4
+  },
+  "checker_independence_note": "Procedural role separation only; same assistant environment."
+}

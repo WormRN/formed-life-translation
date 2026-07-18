@@ -1,0 +1,56 @@
+{
+  "run_id": "FLT-PHP-01-20260718-001",
+  "unit_id": "PHP-01-001-002",
+  "candidate_source": "balanced_worker draft",
+  "candidate_text": "From Paul and Timothy, servants of Christ Jesus.\n\nTo all of God’s holy people in Philippi who belong to Christ Jesus, together with the leaders and assistants:\n\nMay God our Father and the Lord Jesus Christ give you grace and peace.",
+  "checkers": {
+    "warrant_checker": [
+      {
+        "classification": "pass",
+        "issue": "General warrant",
+        "evidence": "No broad commentary layer or unrelated explanatory material is introduced."
+      }
+    ],
+    "communication_readability_checker": [
+      {
+        "classification": "pass",
+        "issue": "Overall readability",
+        "evidence": "Candidate uses current vocabulary, explicit referents, and manageable sentence structure for the target reader."
+      }
+    ],
+    "discourse_cohesion_checker": [
+      {
+        "classification": "pass",
+        "issue": "Unit movement",
+        "evidence": "Major logical and rhetorical progression of the source unit remains visible."
+      }
+    ],
+    "theological_risk_checker": [],
+    "matrix_precedent_checker": [
+      {
+        "classification": "warning",
+        "issue": "δοῦλοι",
+        "evidence": "“Servants” is accessible but may understate allegiance/status; Matrix footnote policy should remain available."
+      },
+      {
+        "classification": "warning",
+        "issue": "ἐπισκόποις καὶ διακόνοις",
+        "evidence": "“Leaders and assistants” is plain-language and consistent with FLT precedent, but should be logged as scoped ecclesial terminology."
+      }
+    ],
+    "ambiguity_scope_checker": [
+      {
+        "classification": "pass",
+        "issue": "ἐν Χριστῷ Ἰησοῦ",
+        "evidence": "Rendered relationally as belonging to Christ; clear and contextually defensible."
+      }
+    ]
+  },
+  "summary": {
+    "must_revise": 0,
+    "human_decisions": 0,
+    "warnings": 2,
+    "passes": 4
+  },
+  "checker_independence_note": "Procedural role separation only; same assistant environment."
+}
