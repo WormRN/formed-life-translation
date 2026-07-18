@@ -1,0 +1,32 @@
+[
+  {
+    "file": "README.md",
+    "sha256": "9f918beca68db2b493490dffa5b4a433016040b884917182fbd44e749bfedfee",
+    "bytes": 406
+  },
+  {
+    "file": "phase_3G_benchmark_comparison.json",
+    "sha256": "2bee9d58d9a1ed71c512527d79697567ae8021a4a9a0c44f8be8666a19621b21",
+    "bytes": 979
+  },
+  {
+    "file": "phase_3G_post_draft_copyright_review.md",
+    "sha256": "0f504a424e817dba6d2dae6ef796fb2a82d25b2f8740b9c35125e448cbbb1184",
+    "bytes": 1810
+  },
+  {
+    "file": "phase_3G_provenance_record.json",
+    "sha256": "1a5b5548b478f178dc4abf179b951a733b52e8319a66eb79662d190456b20b5a",
+    "bytes": 1409
+  },
+  {
+    "file": "phase_3G_status_report.json",
+    "sha256": "ceef0243914ec24e899ea85f7e1c00db7fb5fade4dd64be33beae70596d004c5",
+    "bytes": 573
+  },
+  {
+    "file": "phase_3_final_verdict.md",
+    "sha256": "981f6375bc3c3b977b830bdb9f1c9c6636fb7f59a43628650cff144a6060d875",
+    "bytes": 2552
+  }
+]

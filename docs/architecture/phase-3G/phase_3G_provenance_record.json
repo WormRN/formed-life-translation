@@ -1,0 +1,37 @@
+{
+  "run_id": "FLT-PHP-01-20260718-001",
+  "source": {
+    "edition": "SBLGNT",
+    "parsed_input": "sblgnt_parsed.json",
+    "chapter": "Philippians 1"
+  },
+  "governing_documents": [
+    "Constitution v2.0",
+    "Copyright Independence Policy v2.0",
+    "Style Guide v2.0",
+    "Contextual Lexical Matrix v2.0",
+    "Translation Packet Template v2.0",
+    "Agent Roles and Checker Specifications v2.0",
+    "Phase 3 Production Mechanics Test Plan"
+  ],
+  "phase_artifacts": {
+    "3A": "Harness contract and test fixtures",
+    "3B": "Five neutral source-master packets",
+    "3C": "Fifteen role packets and fifteen role-simulation drafts",
+    "3D": "Fifteen self-critiques and five anonymized cross-critiques",
+    "3E": "Five focused checker reports and five controlled syntheses",
+    "3F": "Human-confirmed chapter candidate and literary/oral review",
+    "3G": "Copyright review, benchmark comparison, provenance, verdict"
+  },
+  "model_independence": {
+    "status": "not validated",
+    "detail": "Drafting, critique, checker, and synthesis roles were simulated in one assistant environment."
+  },
+  "human_decisions": [
+    "Retain Philippians 1:11 wording",
+    "Retain Philippians 1:19 wording",
+    "Retain Philippians 1:27 wording",
+    "Retain Philippians 1:14 wording; optional smoother alternative may be flagged but not auto-applied"
+  ],
+  "publication_status": "not publication-cleared"
+}

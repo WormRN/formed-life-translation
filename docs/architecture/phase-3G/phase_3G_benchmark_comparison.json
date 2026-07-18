@@ -1,0 +1,26 @@
+{
+  "run_id": "FLT-PHP-01-20260718-001",
+  "benchmark": "Frozen Philippians 1 v0.2",
+  "comparison_type": "semantic and process benchmark, not exact-string target",
+  "scores": {
+    "semantic_coverage": 2,
+    "dynamic_naturalness": 2,
+    "discourse_movement": 2,
+    "meaningful_form": 2,
+    "theological_restraint": 2,
+    "matrix_precedent_discipline": 1,
+    "copyright_independence": 1,
+    "human_burden": 2,
+    "provenance_completeness": 1
+  },
+  "total": 15,
+  "maximum": 18,
+  "verdict": "CONDITIONAL PASS",
+  "explanation": [
+    "The candidate substantially matches the benchmark's major semantic and discourse decisions.",
+    "Human reconstruction burden was zero in Phase 3E\u20133F.",
+    "Matrix and precedent logging still needs implementation beyond narrative reports.",
+    "Copyright review remains preliminary rather than corpus-automated.",
+    "Provenance is documented in files and manifests, but not yet captured by an executable orchestrator."
+  ]
+}
