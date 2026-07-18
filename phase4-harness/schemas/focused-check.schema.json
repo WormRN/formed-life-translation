@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["specialty", "findings", "convergences", "human_decisions"],
+  "properties": {
+    "specialty": {"type": "string", "minLength": 1},
+    "findings": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["reference", "issue", "analysis", "recommendation", "confidence"], "properties": {
+      "reference": {"type": "string", "minLength": 1}, "issue": {"type": "string", "minLength": 1}, "analysis": {"type": "string", "minLength": 1}, "recommendation": {"type": "string", "minLength": 1}, "confidence": {"enum": ["high", "medium", "low"]}
+    }}},
+    "convergences": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "human_decisions": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["reference", "question", "credible_options", "stakes"], "properties": {
+      "reference": {"type": "string", "minLength": 1}, "question": {"type": "string", "minLength": 1}, "credible_options": {"type": "array", "minItems": 2, "items": {"type": "string", "minLength": 1}}, "stakes": {"type": "string", "minLength": 1}
+    }}}
+  }
+}
