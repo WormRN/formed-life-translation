@@ -1,0 +1,8 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","additionalProperties":false,
+  "required":["candidate_assessments","floor_statement"],
+  "properties":{
+    "candidate_assessments":{"type":"array","minItems":3,"maxItems":3,"items":{"type":"object","additionalProperties":false,"required":["candidate_label","eligible","violations"],"properties":{"candidate_label":{"enum":["Candidate A","Candidate B","Candidate C"]},"eligible":{"type":"boolean"},"violations":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["reference","severity","kind","problem","minimum_repair"],"properties":{"reference":{"type":"string"},"severity":{"enum":["block","warn"]},"kind":{"enum":["meaning_loss","added_meaning","misleading_meaning"]},"problem":{"type":"string"},"minimum_repair":{"type":"string"}}}}}}},
+    "floor_statement":{"type":"string","minLength":1}
+  }
+}
