@@ -1,0 +1,74 @@
+name: FLT Phase 4 recover critique
+
+on:
+  workflow_dispatch:
+    inputs:
+      artifact_id:
+        description: Source drafting artifact ID
+        required: true
+        default: '8432702157'
+      parent_run_id:
+        description: Immutable parent run ID
+        required: true
+        default: 'FLT-PHP-01-20260718-104'
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: flt-phase-4-critique-recovery
+  cancel-in-progress: false
+
+jobs:
+  recover:
+    name: Recover critique from preserved drafts
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: phase4-harness/package-lock.json
+      - name: Install and test
+        working-directory: phase4-harness
+        run: npm ci && npm test
+      - name: Create recovery identity
+        id: recovery
+        shell: bash
+        run: |
+          sequence_number=$((500 + GITHUB_RUN_NUMBER))
+          if (( sequence_number > 799 )); then echo "Recovery run-ID range exhausted" >&2; exit 1; fi
+          run_id="FLT-PHP-01-$(date -u +%Y%m%d)-$(printf '%03d' "$sequence_number")"
+          node phase4-harness/scripts/prepare-run-config.mjs phase4-harness/config.github-actions.json phase4-harness/.recovery-config.json "$run_id"
+          echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
+      - name: Download preserved parent artifact
+        shell: bash
+        run: |
+          mkdir -p /tmp/parent-artifact
+          gh api -H 'Accept: application/vnd.github+json' "/repos/${GITHUB_REPOSITORY}/actions/artifacts/${{ inputs.artifact_id }}/zip" > /tmp/parent.zip
+          unzip -q /tmp/parent.zip -d /tmp/parent-artifact
+          source_dir=$(find /tmp/parent-artifact -mindepth 1 -maxdepth 1 -type d | head -n 1)
+          test -n "$source_dir"
+          test -d "$source_dir/outputs/drafts"
+          target="phase4-harness/runs/${{ steps.recovery.outputs.run_id }}"
+          mkdir -p "$target/outputs" "$target/manifest"
+          cp -R "$source_dir/outputs/drafts" "$target/outputs/drafts"
+          jq -n --arg run_id '${{ steps.recovery.outputs.run_id }}' --arg parent '${{ inputs.parent_run_id }}' --arg artifact '${{ inputs.artifact_id }}' --arg workflow_run '${{ github.run_id }}' '{run_id:$run_id,parent_run_id:$parent,parent_artifact_id:$artifact,recovery_workflow_run:$workflow_run,reused_material:["validated blind drafts only"],excluded_material:["failed critique outputs","human preferences","benchmark wording","comparison translations"],status:"critique_recovery_initialized"}' > "$target/manifest/recovery_provenance.json"
+      - name: Run recovered self and cross critique
+        run: node phase4-harness/src/critique.js phase4-harness/.recovery-config.json "phase4-harness/runs/${{ steps.recovery.outputs.run_id }}"
+      - name: Upload recovery provenance bundle
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.recovery.outputs.run_id || 'FLT-critique-recovery-blocked' }}
+          path: phase4-harness/runs/
+          if-no-files-found: warn
+          retention-days: 30
