@@ -1,0 +1,68 @@
+name: FLT Phase 4 live unit
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: flt-phase-4-live-unit
+  cancel-in-progress: false
+
+jobs:
+  translate:
+    name: Philippians 1:12-18
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: phase4-harness/package-lock.json
+
+      - name: Install locked dependencies
+        working-directory: phase4-harness
+        run: npm ci
+
+      - name: Run contract tests
+        working-directory: phase4-harness
+        run: npm test
+
+      - name: Prepare immutable run ID
+        id: run
+        shell: bash
+        run: |
+          sequence=$(printf '%03d' "${GITHUB_RUN_NUMBER}")
+          run_id="FLT-PHP-01-$(date -u +%Y%m%d)-${sequence}"
+          node phase4-harness/scripts/prepare-run-config.mjs phase4-harness/config.github-actions.json phase4-harness/.run-config.json "$run_id"
+          echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
+
+      - name: Validate blind packets
+        run: node phase4-harness/src/cli.js validate phase4-harness/.run-config.json
+
+      - name: Run three-provider blind draft
+        run: node phase4-harness/src/cli.js run phase4-harness/.run-config.json
+
+      - name: Publish decision brief to summary
+        if: success()
+        shell: bash
+        run: cat "phase4-harness/runs/${{ steps.run.outputs.run_id }}/outputs/decision_briefs/PHP-01-012-018.md" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload complete provenance bundle
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.run.outputs.run_id || 'FLT-PHP-01-blocked' }}
+          path: phase4-harness/runs/
+          if-no-files-found: warn
+          retention-days: 30
