@@ -1,0 +1,296 @@
+{
+  "packet_id": "PKT-PHP-01-001-002-SOURCE-MASTER-001",
+  "run_id": "FLT-PHP-01-20260718-001",
+  "role": "source_master",
+  "unit_id": "PHP-01-001-002",
+  "passage": "Philippians 1:1–2",
+  "visibility_class": [
+    "N",
+    "G"
+  ],
+  "source_data": {
+    "edition": "SBLGNT",
+    "book": "Philippians",
+    "chapter": 1,
+    "verse_start": 1,
+    "verse_end": 2,
+    "genre": "New Testament letter",
+    "speaker": "Paul, with Timothy named in the greeting",
+    "primary_recipients": "the believers in Philippi",
+    "chapter_context": "Paul greets the Philippians, thanks God for their partnership, interprets his imprisonment in relation to the advance of the message about Christ, reflects on life and death, and calls the community to united courage.",
+    "verses": [
+      {
+        "reference": "Phil.1.1",
+        "greek": "Παῦλος καὶ Τιμόθεος δοῦλοι Χριστοῦ Ἰησοῦ πᾶσιν τοῖς ἁγίοις ἐν Χριστῷ Ἰησοῦ τοῖς οὖσιν ἐν Φιλίπποις σὺν ἐπισκόποις καὶ διακόνοις",
+        "tokens": [
+          {
+            "greek": "Παῦλος",
+            "lemma": "Παῦλος",
+            "strongs": "G3972",
+            "morph": "----NSM-"
+          },
+          {
+            "greek": "καὶ",
+            "lemma": "καί",
+            "strongs": "G2532",
+            "morph": "--------"
+          },
+          {
+            "greek": "Τιμόθεος",
+            "lemma": "Τιμόθεος",
+            "strongs": "G5095",
+            "morph": "----NSM-"
+          },
+          {
+            "greek": "δοῦλοι",
+            "lemma": "δοῦλος",
+            "strongs": "G1401",
+            "morph": "----NPM-"
+          },
+          {
+            "greek": "Χριστοῦ",
+            "lemma": "Χριστός",
+            "strongs": "G5547",
+            "morph": "----GSM-"
+          },
+          {
+            "greek": "Ἰησοῦ",
+            "lemma": "Ἰησοῦς",
+            "strongs": "G2424",
+            "morph": "----GSM-"
+          },
+          {
+            "greek": "πᾶσιν",
+            "lemma": "πᾶς",
+            "strongs": "G3956",
+            "morph": "----DPM-"
+          },
+          {
+            "greek": "τοῖς",
+            "lemma": "ὁ",
+            "strongs": "G3588",
+            "morph": "----DPM-"
+          },
+          {
+            "greek": "ἁγίοις",
+            "lemma": "ἅγιος",
+            "strongs": "G40",
+            "morph": "----DPM-"
+          },
+          {
+            "greek": "ἐν",
+            "lemma": "ἐν",
+            "strongs": "G1722",
+            "morph": "--------"
+          },
+          {
+            "greek": "Χριστῷ",
+            "lemma": "Χριστός",
+            "strongs": "G5547",
+            "morph": "----DSM-"
+          },
+          {
+            "greek": "Ἰησοῦ",
+            "lemma": "Ἰησοῦς",
+            "strongs": "G2424",
+            "morph": "----DSM-"
+          },
+          {
+            "greek": "τοῖς",
+            "lemma": "ὁ",
+            "strongs": "G3588",
+            "morph": "----DPM-"
+          },
+          {
+            "greek": "οὖσιν",
+            "lemma": "εἰμί",
+            "strongs": "G1510",
+            "morph": "-PAPDPM-"
+          },
+          {
+            "greek": "ἐν",
+            "lemma": "ἐν",
+            "strongs": "G1722",
+            "morph": "--------"
+          },
+          {
+            "greek": "Φιλίπποις",
+            "lemma": "Φίλιπποι",
+            "strongs": "G5375",
+            "morph": "----DPM-"
+          },
+          {
+            "greek": "σὺν",
+            "lemma": "σύν",
+            "strongs": "G4862",
+            "morph": "--------"
+          },
+          {
+            "greek": "ἐπισκόποις",
+            "lemma": "ἐπίσκοπος",
+            "strongs": "G1985",
+            "morph": "----DPM-"
+          },
+          {
+            "greek": "καὶ",
+            "lemma": "καί",
+            "strongs": "G2532",
+            "morph": "--------"
+          },
+          {
+            "greek": "διακόνοις",
+            "lemma": "διάκονος",
+            "strongs": "G1249",
+            "morph": "----DPM-"
+          }
+        ]
+      },
+      {
+        "reference": "Phil.1.2",
+        "greek": "χάρις ὑμῖν καὶ εἰρήνη ἀπὸ θεοῦ πατρὸς ἡμῶν καὶ κυρίου Ἰησοῦ Χριστοῦ",
+        "tokens": [
+          {
+            "greek": "χάρις",
+            "lemma": "χάρις",
+            "strongs": "G5485",
+            "morph": "----NSF-"
+          },
+          {
+            "greek": "ὑμῖν",
+            "lemma": "σύ",
+            "strongs": "G4771",
+            "morph": "----DP--"
+          },
+          {
+            "greek": "καὶ",
+            "lemma": "καί",
+            "strongs": "G2532",
+            "morph": "--------"
+          },
+          {
+            "greek": "εἰρήνη",
+            "lemma": "εἰρήνη",
+            "strongs": "G1515",
+            "morph": "----NSF-"
+          },
+          {
+            "greek": "ἀπὸ",
+            "lemma": "ἀπό",
+            "strongs": "G575",
+            "morph": "--------"
+          },
+          {
+            "greek": "θεοῦ",
+            "lemma": "θεός",
+            "strongs": "G2316",
+            "morph": "----GSM-"
+          },
+          {
+            "greek": "πατρὸς",
+            "lemma": "πατήρ",
+            "strongs": "G3962",
+            "morph": "----GSM-"
+          },
+          {
+            "greek": "ἡμῶν",
+            "lemma": "ἐγώ",
+            "strongs": "G1473",
+            "morph": "----GP--"
+          },
+          {
+            "greek": "καὶ",
+            "lemma": "καί",
+            "strongs": "G2532",
+            "morph": "--------"
+          },
+          {
+            "greek": "κυρίου",
+            "lemma": "κύριος",
+            "strongs": "G2962",
+            "morph": "----GSM-"
+          },
+          {
+            "greek": "Ἰησοῦ",
+            "lemma": "Ἰησοῦς",
+            "strongs": "G2424",
+            "morph": "----GSM-"
+          },
+          {
+            "greek": "Χριστοῦ",
+            "lemma": "Χριστός",
+            "strongs": "G5547",
+            "morph": "----GSM-"
+          }
+        ]
+      }
+    ]
+  },
+  "governing_rules": [
+    {
+      "name": "Meaning-over-form",
+      "rule": "Translate the meaning into clear, natural, dignified English; Greek form is not binding when it produces awkward, opaque, or misleading English."
+    },
+    {
+      "name": "Warrant boundary",
+      "rule": "Every significant meaning expressed in English must be defensible from the Greek and context. Do not add commentary, motive, theology, or emotional force not warranted by the text."
+    },
+    {
+      "name": "Target reader",
+      "rule": "Write for religion-naive adults and older adolescents near the sixth-grade reading level without sounding childish."
+    },
+    {
+      "name": "Meaningful form",
+      "rule": "Preserve or functionally recreate meaningful repetition, contrast, metaphor, ambiguity, emphasis, and discourse movement."
+    },
+    {
+      "name": "Copyright independence",
+      "rule": "Existing English translations and the frozen benchmark are not drafting sources and must remain unavailable during blind stages."
+    }
+  ],
+  "matrix_entries": [
+    {
+      "lemma": "δοῦλος",
+      "entry": "doulos",
+      "status": "approved contextual entry",
+      "note": "Use the Matrix to weigh service, allegiance, and social-status implications; do not default mechanically to a single gloss."
+    },
+    {
+      "lemma": "ἅγιος",
+      "entry": "hagios",
+      "status": "approved contextual entry",
+      "note": "Avoid opaque religious jargon for people; preserve belonging to God and consecrated identity."
+    },
+    {
+      "lemma": "ἐπίσκοπος",
+      "entry": "episkopos",
+      "status": "approved contextual entry",
+      "note": "Use plain role language appropriate to context; avoid unexplained ecclesial jargon."
+    },
+    {
+      "lemma": "διάκονος",
+      "entry": "diakonos",
+      "status": "approved contextual entry",
+      "note": "Use plain service-role language appropriate to context; avoid unexplained title language."
+    },
+    {
+      "lemma": "χάρις",
+      "entry": "charis",
+      "status": "approved contextual entry",
+      "note": "Retain grace when intelligible and support first-use comprehension; weigh contextual senses rather than replacing mechanically."
+    }
+  ],
+  "scoped_precedents": [],
+  "known_issues": [
+    {
+      "type": "benchmark_isolation",
+      "instruction": "No Philippians 1 English benchmark wording or Phase 2 adjudication may enter this packet."
+    }
+  ],
+  "forbidden_material_check": {
+    "benchmark_absent": true,
+    "copyright_text_absent": true,
+    "sibling_drafts_absent": true
+  },
+  "integrity_status": "pass",
+  "blocking_integrity_failures": []
+}

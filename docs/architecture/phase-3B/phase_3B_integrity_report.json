@@ -1,0 +1,77 @@
+{
+  "phase": "3B",
+  "run_id": "FLT-PHP-01-20260718-001",
+  "status": "PASS",
+  "packets_validated": 5,
+  "checks": {
+    "all_expected_units_present": true,
+    "all_greek_verses_present": true,
+    "token_morphology_present": true,
+    "benchmark_english_absent": true,
+    "copyrighted_comparison_text_absent": true,
+    "sibling_drafts_absent": true,
+    "preferred_translation_wording_absent": true,
+    "matrix_entries_limited_to_applicable_lemmas": true,
+    "packets_releasable_to_blind_drafting": true
+  },
+  "notes": [
+    "No Philippians-specific scoped English precedents were included, to prevent the frozen benchmark from becoming a hidden drafting target.",
+    "Matrix guidance is policy-level and does not supply selected English wording.",
+    "The chapter context is descriptive and does not resolve disputed lexical or syntactic questions.",
+    "These are source-master packets. Role-specific worker packets may be derived from them only after hash verification."
+  ],
+  "packets": [
+    {
+      "file": "PHP-01-001-002_source_master.json",
+      "sha256": "ba9a1af15fd263b3990914eccf27f2af5cbe89124987527c2dd267e482b4929b",
+      "verses": "1-2",
+      "matrix_entries": [
+        "δοῦλος",
+        "ἅγιος",
+        "ἐπίσκοπος",
+        "διάκονος",
+        "χάρις"
+      ],
+      "integrity_status": "pass"
+    },
+    {
+      "file": "PHP-01-003-011_source_master.json",
+      "sha256": "6040c367f816fbd3fbea72909cfebcdbb89fdc1f42dd0f0cf095a244b0b5bd44",
+      "verses": "3-11",
+      "matrix_entries": [
+        "χάρις",
+        "εὐαγγέλιον",
+        "δικαιοσύνη"
+      ],
+      "integrity_status": "pass"
+    },
+    {
+      "file": "PHP-01-012-018_source_master.json",
+      "sha256": "24b739a8394eb19bda0a4316fb40e258b237c85a34fd06a9c23dc2a240afaa35",
+      "verses": "12-18",
+      "matrix_entries": [
+        "εὐαγγέλιον"
+      ],
+      "integrity_status": "pass"
+    },
+    {
+      "file": "PHP-01-019-026_source_master.json",
+      "sha256": "6f7573d46535771bd714f4dd3fde6d73f7c449cc92d02120387d3eebaa5e96c8",
+      "verses": "19-26",
+      "matrix_entries": [
+        "πίστις"
+      ],
+      "integrity_status": "pass"
+    },
+    {
+      "file": "PHP-01-027-030_source_master.json",
+      "sha256": "d43c270b76c4ac3317bf5217b29e457475652b47b9573095625a751e2ce59852",
+      "verses": "27-30",
+      "matrix_entries": [
+        "εὐαγγέλιον",
+        "πίστις"
+      ],
+      "integrity_status": "pass"
+    }
+  ]
+}

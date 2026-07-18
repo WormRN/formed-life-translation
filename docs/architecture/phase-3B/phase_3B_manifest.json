@@ -1,0 +1,37 @@
+[
+  {
+    "file": "PHP-01-001-002_source_master.json",
+    "sha256": "ba9a1af15fd263b3990914eccf27f2af5cbe89124987527c2dd267e482b4929b",
+    "bytes": 9171
+  },
+  {
+    "file": "PHP-01-003-011_source_master.json",
+    "sha256": "6040c367f816fbd3fbea72909cfebcdbb89fdc1f42dd0f0cf095a244b0b5bd44",
+    "bytes": 28414
+  },
+  {
+    "file": "PHP-01-012-018_source_master.json",
+    "sha256": "24b739a8394eb19bda0a4316fb40e258b237c85a34fd06a9c23dc2a240afaa35",
+    "bytes": 21675
+  },
+  {
+    "file": "PHP-01-019-026_source_master.json",
+    "sha256": "6f7573d46535771bd714f4dd3fde6d73f7c449cc92d02120387d3eebaa5e96c8",
+    "bytes": 26082
+  },
+  {
+    "file": "PHP-01-027-030_source_master.json",
+    "sha256": "d43c270b76c4ac3317bf5217b29e457475652b47b9573095625a751e2ce59852",
+    "bytes": 17045
+  },
+  {
+    "file": "README.md",
+    "sha256": "1a4ac1af556ca4060ff499f049c3b53f8428740704cd9e9856d6b3862d950b2e",
+    "bytes": 917
+  },
+  {
+    "file": "phase_3B_integrity_report.json",
+    "sha256": "a585ae0d0e135eeefdadfbb295deaa7549c944eee916df3eaf094130772d5ab0",
+    "bytes": 2536
+  }
+]

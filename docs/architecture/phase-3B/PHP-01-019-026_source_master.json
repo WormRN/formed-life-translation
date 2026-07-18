@@ -1,0 +1,926 @@
+{
+  "packet_id": "PKT-PHP-01-019-026-SOURCE-MASTER-001",
+  "run_id": "FLT-PHP-01-20260718-001",
+  "role": "source_master",
+  "unit_id": "PHP-01-019-026",
+  "passage": "Philippians 1:19–26",
+  "visibility_class": [
+    "N",
+    "G"
+  ],
+  "source_data": {
+    "edition": "SBLGNT",
+    "book": "Philippians",
+    "chapter": 1,
+    "verse_start": 19,
+    "verse_end": 26,
+    "genre": "New Testament letter",
+    "speaker": "Paul, with Timothy named in the greeting",
+    "primary_recipients": "the believers in Philippi",
+    "chapter_context": "Paul greets the Philippians, thanks God for their partnership, interprets his imprisonment in relation to the advance of the message about Christ, reflects on life and death, and calls the community to united courage.",
+    "verses": [
+      {
+        "reference": "Phil.1.19",
+        "greek": "οἶδα γὰρ ὅτι τοῦτό μοι ἀποβήσεται εἰς σωτηρίαν διὰ τῆς ὑμῶν δεήσεως καὶ ἐπιχορηγίας τοῦ πνεύματος Ἰησοῦ Χριστοῦ",
+        "tokens": [
+          {
+            "greek": "οἶδα",
+            "lemma": "οἶδα",
+            "strongs": "",
+            "morph": "1XAI-S--"
+          },
+          {
+            "greek": "γὰρ",
+            "lemma": "γάρ",
+            "strongs": "G1063",
+            "morph": "--------"
+          },
+          {
+            "greek": "ὅτι",
+            "lemma": "ὅτι",
+            "strongs": "G3754",
+            "morph": "--------"
+          },
+          {
+            "greek": "τοῦτό",
+            "lemma": "οὗτος",
+            "strongs": "G3778",
+            "morph": "----NSN-"
+          },
+          {
+            "greek": "μοι",
+            "lemma": "ἐγώ",
+            "strongs": "G1473",
+            "morph": "----DS--"
+          },
+          {
+            "greek": "ἀποβήσεται",
+            "lemma": "ἀποβαίνω",
+            "strongs": "G576",
+            "morph": "3FMI-S--"
+          },
+          {
+            "greek": "εἰς",
+            "lemma": "εἰς",
+            "strongs": "G1519",
+            "morph": "--------"
+          },
+          {
+            "greek": "σωτηρίαν",
+            "lemma": "σωτηρία",
+            "strongs": "G4991",
+            "morph": "----ASF-"
+          },
+          {
+            "greek": "διὰ",
+            "lemma": "διά",
+            "strongs": "G1223",
+            "morph": "--------"
+          },
+          {
+            "greek": "τῆς",
+            "lemma": "ὁ",
+            "strongs": "G3588",
+            "morph": "----GSF-"
+          },
+          {
+            "greek": "ὑμῶν",
+            "lemma": "σύ",
+            "strongs": "G4771",
+            "morph": "----GP--"
+          },
+          {
+            "greek": "δεήσεως",
+            "lemma": "δέησις",
+            "strongs": "G1162",
+            "morph": "----GSF-"
+          },
+          {
+            "greek": "καὶ",
+            "lemma": "καί",
+            "strongs": "G2532",
+            "morph": "--------"
+          },
+          {
+            "greek": "ἐπιχορηγίας",
+            "lemma": "ἐπιχορηγία",
+            "strongs": "G2024",
+            "morph": "----GSF-"
+          },
+          {
+            "greek": "τοῦ",
+            "lemma": "ὁ",
+            "strongs": "G3588",
+            "morph": "----GSN-"
+          },
+          {
+            "greek": "πνεύματος",
+            "lemma": "πνεῦμα",
+            "strongs": "G4151",
+            "morph": "----GSN-"
+          },
+          {
+            "greek": "Ἰησοῦ",
+            "lemma": "Ἰησοῦς",
+            "strongs": "G2424",
+            "morph": "----GSM-"
+          },
+          {
+            "greek": "Χριστοῦ",
+            "lemma": "Χριστός",
+            "strongs": "G5547",
+            "morph": "----GSM-"
+          }
+        ]
+      },
+      {
+        "reference": "Phil.1.20",
+        "greek": "κατὰ τὴν ἀποκαραδοκίαν καὶ ἐλπίδα μου ὅτι ἐν οὐδενὶ αἰσχυνθήσομαι ἀλλ’ ἐν πάσῃ παρρησίᾳ ὡς πάντοτε καὶ νῦν μεγαλυνθήσεται Χριστὸς ἐν τῷ σώματί μου εἴτε διὰ ζωῆς εἴτε διὰ θανάτου",
+        "tokens": [
+          {
+            "greek": "κατὰ",
+            "lemma": "κατά",
+            "strongs": "G2596",
+            "morph": "--------"
+          },
+          {
+            "greek": "τὴν",
+            "lemma": "ὁ",
+            "strongs": "G3588",
+            "morph": "----ASF-"
+          },
+          {
+            "greek": "ἀποκαραδοκίαν",
+            "lemma": "ἀποκαραδοκία",
+            "strongs": "G603",
+            "morph": "----ASF-"
+          },
+          {
+            "greek": "καὶ",
+            "lemma": "καί",
+            "strongs": "G2532",
+            "morph": "--------"
+          },
+          {
+            "greek": "ἐλπίδα",
+            "lemma": "ἐλπίς",
+            "strongs": "G1680",
+            "morph": "----ASF-"
+          },
+          {
+            "greek": "μου",
+            "lemma": "ἐγώ",
+            "strongs": "G1473",
+            "morph": "----GS--"
+          },
+          {
+            "greek": "ὅτι",
+            "lemma": "ὅτι",
+            "strongs": "G3754",
+            "morph": "--------"
+          },
+          {
+            "greek": "ἐν",
+            "lemma": "ἐν",
+            "strongs": "G1722",
+            "morph": "--------"
+          },
+          {
+            "greek": "οὐδενὶ",
+            "lemma": "οὐδείς",
+            "strongs": "G3762",
+            "morph": "----DSN-"
+          },
+          {
+            "greek": "αἰσχυνθήσομαι",
+            "lemma": "αἰσχύνομαι",
+            "strongs": "G153",
+            "morph": "1FPI-S--"
+          },
+          {
+            "greek": "ἀλλ’",
+            "lemma": "ἀλλά",
+            "strongs": "G235",
+            "morph": "--------"
+          },
+          {
+            "greek": "ἐν",
+            "lemma": "ἐν",
+            "strongs": "G1722",
+            "morph": "--------"
+          },
+          {
+            "greek": "πάσῃ",
+            "lemma": "πᾶς",
+            "strongs": "G3956",
+            "morph": "----DSF-"
+          },
+          {
+            "greek": "παρρησίᾳ",
+            "lemma": "παρρησία",
+            "strongs": "",
+            "morph": "----DSF-"
+          },
+          {
+            "greek": "ὡς",
+            "lemma": "ὡς",
+            "strongs": "G5613",
+            "morph": "--------"
+          },
+          {
+            "greek": "πάντοτε",
+            "lemma": "πάντοτε",
+            "strongs": "G3842",
+            "morph": "--------"
+          },
+          {
+            "greek": "καὶ",
+            "lemma": "καί",
+            "strongs": "G2532",
+            "morph": "--------"
+          },
+          {
+            "greek": "νῦν",
+            "lemma": "νῦν",
+            "strongs": "G3568",
+            "morph": "--------"
+          },
+          {
+            "greek": "μεγαλυνθήσεται",
+            "lemma": "μεγαλύνω",
+            "strongs": "G3170",
+            "morph": "3FPI-S--"
+          },
+          {
+            "greek": "Χριστὸς",
+            "lemma": "Χριστός",
+            "strongs": "G5547",
+            "morph": "----NSM-"
+          },
+          {
+            "greek": "ἐν",
+            "lemma": "ἐν",
+            "strongs": "G1722",
+            "morph": "--------"
+          },
+          {
+            "greek": "τῷ",
+            "lemma": "ὁ",
+            "strongs": "G3588",
+            "morph": "----DSN-"
+          },
+          {
+            "greek": "σώματί",
+            "lemma": "σῶμα",
+            "strongs": "G4983",
+            "morph": "----DSN-"
+          },
+          {
+            "greek": "μου",
+            "lemma": "ἐγώ",
+            "strongs": "G1473",
+            "morph": "----GS--"
+          },
+          {
+            "greek": "εἴτε",
+            "lemma": "εἴτε",
+            "strongs": "G1535",
+            "morph": "--------"
+          },
+          {
+            "greek": "διὰ",
+            "lemma": "διά",
+            "strongs": "G1223",
+            "morph": "--------"
+          },
+          {
+            "greek": "ζωῆς",
+            "lemma": "ζωή",
+            "strongs": "G2222",
+            "morph": "----GSF-"
+          },
+          {
+            "greek": "εἴτε",
+            "lemma": "εἴτε",
+            "strongs": "G1535",
+            "morph": "--------"
+          },
+          {
+            "greek": "διὰ",
+            "lemma": "διά",
+            "strongs": "G1223",
+            "morph": "--------"
+          },
+          {
+            "greek": "θανάτου",
+            "lemma": "θάνατος",
+            "strongs": "G2288",
+            "morph": "----GSM-"
+          }
+        ]
+      },
+      {
+        "reference": "Phil.1.21",
+        "greek": "ἐμοὶ γὰρ τὸ ζῆν Χριστὸς καὶ τὸ ἀποθανεῖν κέρδος",
+        "tokens": [
+          {
+            "greek": "ἐμοὶ",
+            "lemma": "ἐγώ",
+            "strongs": "G1473",
+            "morph": "----DS--"
+          },
+          {
+            "greek": "γὰρ",
+            "lemma": "γάρ",
+            "strongs": "G1063",
+            "morph": "--------"
+          },
+          {
+            "greek": "τὸ",
+            "lemma": "ὁ",
+            "strongs": "G3588",
+            "morph": "----NSN-"
+          },
+          {
+            "greek": "ζῆν",
+            "lemma": "ζάω",
+            "strongs": "G2198",
+            "morph": "-PAN----"
+          },
+          {
+            "greek": "Χριστὸς",
+            "lemma": "Χριστός",
+            "strongs": "G5547",
+            "morph": "----NSM-"
+          },
+          {
+            "greek": "καὶ",
+            "lemma": "καί",
+            "strongs": "G2532",
+            "morph": "--------"
+          },
+          {
+            "greek": "τὸ",
+            "lemma": "ὁ",
+            "strongs": "G3588",
+            "morph": "----NSN-"
+          },
+          {
+            "greek": "ἀποθανεῖν",
+            "lemma": "ἀποθνῄσκω",
+            "strongs": "",
+            "morph": "-AAN----"
+          },
+          {
+            "greek": "κέρδος",
+            "lemma": "κέρδος",
+            "strongs": "G2771",
+            "morph": "----NSN-"
+          }
+        ]
+      },
+      {
+        "reference": "Phil.1.22",
+        "greek": "εἰ δὲ τὸ ζῆν ἐν σαρκί τοῦτό μοι καρπὸς ἔργου καὶ τί αἱρήσομαι οὐ γνωρίζω",
+        "tokens": [
+          {
+            "greek": "εἰ",
+            "lemma": "εἰ",
+            "strongs": "G1487",
+            "morph": "--------"
+          },
+          {
+            "greek": "δὲ",
+            "lemma": "δέ",
+            "strongs": "G1161",
+            "morph": "--------"
+          },
+          {
+            "greek": "τὸ",
+            "lemma": "ὁ",
+            "strongs": "G3588",
+            "morph": "----NSN-"
+          },
+          {
+            "greek": "ζῆν",
+            "lemma": "ζάω",
+            "strongs": "G2198",
+            "morph": "-PAN----"
+          },
+          {
+            "greek": "ἐν",
+            "lemma": "ἐν",
+            "strongs": "G1722",
+            "morph": "--------"
+          },
+          {
+            "greek": "σαρκί",
+            "lemma": "σάρξ",
+            "strongs": "G4561",
+            "morph": "----DSF-"
+          },
+          {
+            "greek": "τοῦτό",
+            "lemma": "οὗτος",
+            "strongs": "G3778",
+            "morph": "----NSN-"
+          },
+          {
+            "greek": "μοι",
+            "lemma": "ἐγώ",
+            "strongs": "G1473",
+            "morph": "----DS--"
+          },
+          {
+            "greek": "καρπὸς",
+            "lemma": "καρπός",
+            "strongs": "G2590",
+            "morph": "----NSM-"
+          },
+          {
+            "greek": "ἔργου",
+            "lemma": "ἔργον",
+            "strongs": "G2041",
+            "morph": "----GSN-"
+          },
+          {
+            "greek": "καὶ",
+            "lemma": "καί",
+            "strongs": "G2532",
+            "morph": "--------"
+          },
+          {
+            "greek": "τί",
+            "lemma": "τίς",
+            "strongs": "G5101",
+            "morph": "----ASN-"
+          },
+          {
+            "greek": "αἱρήσομαι",
+            "lemma": "αἱρέομαι",
+            "strongs": "G138",
+            "morph": "1FMI-S--"
+          },
+          {
+            "greek": "οὐ",
+            "lemma": "οὐ",
+            "strongs": "G3756",
+            "morph": "--------"
+          },
+          {
+            "greek": "γνωρίζω",
+            "lemma": "γνωρίζω",
+            "strongs": "G1107",
+            "morph": "1PAI-S--"
+          }
+        ]
+      },
+      {
+        "reference": "Phil.1.23",
+        "greek": "συνέχομαι δὲ ἐκ τῶν δύο τὴν ἐπιθυμίαν ἔχων εἰς τὸ ἀναλῦσαι καὶ σὺν Χριστῷ εἶναι πολλῷ γὰρ μᾶλλον κρεῖσσον",
+        "tokens": [
+          {
+            "greek": "συνέχομαι",
+            "lemma": "συνέχω",
+            "strongs": "G4912",
+            "morph": "1PPI-S--"
+          },
+          {
+            "greek": "δὲ",
+            "lemma": "δέ",
+            "strongs": "G1161",
+            "morph": "--------"
+          },
+          {
+            "greek": "ἐκ",
+            "lemma": "ἐκ",
+            "strongs": "G1537",
+            "morph": "--------"
+          },
+          {
+            "greek": "τῶν",
+            "lemma": "ὁ",
+            "strongs": "G3588",
+            "morph": "----GPN-"
+          },
+          {
+            "greek": "δύο",
+            "lemma": "δύο",
+            "strongs": "G1417",
+            "morph": "----GPN-"
+          },
+          {
+            "greek": "τὴν",
+            "lemma": "ὁ",
+            "strongs": "G3588",
+            "morph": "----ASF-"
+          },
+          {
+            "greek": "ἐπιθυμίαν",
+            "lemma": "ἐπιθυμία",
+            "strongs": "G1939",
+            "morph": "----ASF-"
+          },
+          {
+            "greek": "ἔχων",
+            "lemma": "ἔχω",
+            "strongs": "G2192",
+            "morph": "-PAPNSM-"
+          },
+          {
+            "greek": "εἰς",
+            "lemma": "εἰς",
+            "strongs": "G1519",
+            "morph": "--------"
+          },
+          {
+            "greek": "τὸ",
+            "lemma": "ὁ",
+            "strongs": "G3588",
+            "morph": "----ASN-"
+          },
+          {
+            "greek": "ἀναλῦσαι",
+            "lemma": "ἀναλύω",
+            "strongs": "G360",
+            "morph": "-AAN----"
+          },
+          {
+            "greek": "καὶ",
+            "lemma": "καί",
+            "strongs": "G2532",
+            "morph": "--------"
+          },
+          {
+            "greek": "σὺν",
+            "lemma": "σύν",
+            "strongs": "G4862",
+            "morph": "--------"
+          },
+          {
+            "greek": "Χριστῷ",
+            "lemma": "Χριστός",
+            "strongs": "G5547",
+            "morph": "----DSM-"
+          },
+          {
+            "greek": "εἶναι",
+            "lemma": "εἰμί",
+            "strongs": "G1510",
+            "morph": "-PAN----"
+          },
+          {
+            "greek": "πολλῷ",
+            "lemma": "πολύς",
+            "strongs": "G4183",
+            "morph": "----DSN-"
+          },
+          {
+            "greek": "γὰρ",
+            "lemma": "γάρ",
+            "strongs": "G1063",
+            "morph": "--------"
+          },
+          {
+            "greek": "μᾶλλον",
+            "lemma": "μᾶλλον",
+            "strongs": "G3123",
+            "morph": "--------"
+          },
+          {
+            "greek": "κρεῖσσον",
+            "lemma": "κρείττων",
+            "strongs": "G2909",
+            "morph": "----NSNC"
+          }
+        ]
+      },
+      {
+        "reference": "Phil.1.24",
+        "greek": "τὸ δὲ ἐπιμένειν ἐν τῇ σαρκὶ ἀναγκαιότερον δι’ ὑμᾶς",
+        "tokens": [
+          {
+            "greek": "τὸ",
+            "lemma": "ὁ",
+            "strongs": "G3588",
+            "morph": "----NSN-"
+          },
+          {
+            "greek": "δὲ",
+            "lemma": "δέ",
+            "strongs": "G1161",
+            "morph": "--------"
+          },
+          {
+            "greek": "ἐπιμένειν",
+            "lemma": "ἐπιμένω",
+            "strongs": "G1961",
+            "morph": "-PAN----"
+          },
+          {
+            "greek": "ἐν",
+            "lemma": "ἐν",
+            "strongs": "G1722",
+            "morph": "--------"
+          },
+          {
+            "greek": "τῇ",
+            "lemma": "ὁ",
+            "strongs": "G3588",
+            "morph": "----DSF-"
+          },
+          {
+            "greek": "σαρκὶ",
+            "lemma": "σάρξ",
+            "strongs": "G4561",
+            "morph": "----DSF-"
+          },
+          {
+            "greek": "ἀναγκαιότερον",
+            "lemma": "ἀναγκαῖος",
+            "strongs": "G316",
+            "morph": "----NSNC"
+          },
+          {
+            "greek": "δι’",
+            "lemma": "διά",
+            "strongs": "G1223",
+            "morph": "--------"
+          },
+          {
+            "greek": "ὑμᾶς",
+            "lemma": "σύ",
+            "strongs": "G4771",
+            "morph": "----AP--"
+          }
+        ]
+      },
+      {
+        "reference": "Phil.1.25",
+        "greek": "καὶ τοῦτο πεποιθὼς οἶδα ὅτι μενῶ καὶ παραμενῶ πᾶσιν ὑμῖν εἰς τὴν ὑμῶν προκοπὴν καὶ χαρὰν τῆς πίστεως",
+        "tokens": [
+          {
+            "greek": "καὶ",
+            "lemma": "καί",
+            "strongs": "G2532",
+            "morph": "--------"
+          },
+          {
+            "greek": "τοῦτο",
+            "lemma": "οὗτος",
+            "strongs": "G3778",
+            "morph": "----ASN-"
+          },
+          {
+            "greek": "πεποιθὼς",
+            "lemma": "πείθω",
+            "strongs": "G3982",
+            "morph": "-XAPNSM-"
+          },
+          {
+            "greek": "οἶδα",
+            "lemma": "οἶδα",
+            "strongs": "",
+            "morph": "1XAI-S--"
+          },
+          {
+            "greek": "ὅτι",
+            "lemma": "ὅτι",
+            "strongs": "G3754",
+            "morph": "--------"
+          },
+          {
+            "greek": "μενῶ",
+            "lemma": "μένω",
+            "strongs": "G3306",
+            "morph": "1FAI-S--"
+          },
+          {
+            "greek": "καὶ",
+            "lemma": "καί",
+            "strongs": "G2532",
+            "morph": "--------"
+          },
+          {
+            "greek": "παραμενῶ",
+            "lemma": "παραμένω",
+            "strongs": "G3887",
+            "morph": "1FAI-S--"
+          },
+          {
+            "greek": "πᾶσιν",
+            "lemma": "πᾶς",
+            "strongs": "G3956",
+            "morph": "----DPM-"
+          },
+          {
+            "greek": "ὑμῖν",
+            "lemma": "σύ",
+            "strongs": "G4771",
+            "morph": "----DP--"
+          },
+          {
+            "greek": "εἰς",
+            "lemma": "εἰς",
+            "strongs": "G1519",
+            "morph": "--------"
+          },
+          {
+            "greek": "τὴν",
+            "lemma": "ὁ",
+            "strongs": "G3588",
+            "morph": "----ASF-"
+          },
+          {
+            "greek": "ὑμῶν",
+            "lemma": "σύ",
+            "strongs": "G4771",
+            "morph": "----GP--"
+          },
+          {
+            "greek": "προκοπὴν",
+            "lemma": "προκοπή",
+            "strongs": "G4297",
+            "morph": "----ASF-"
+          },
+          {
+            "greek": "καὶ",
+            "lemma": "καί",
+            "strongs": "G2532",
+            "morph": "--------"
+          },
+          {
+            "greek": "χαρὰν",
+            "lemma": "χαρά",
+            "strongs": "G5479",
+            "morph": "----ASF-"
+          },
+          {
+            "greek": "τῆς",
+            "lemma": "ὁ",
+            "strongs": "G3588",
+            "morph": "----GSF-"
+          },
+          {
+            "greek": "πίστεως",
+            "lemma": "πίστις",
+            "strongs": "G4102",
+            "morph": "----GSF-"
+          }
+        ]
+      },
+      {
+        "reference": "Phil.1.26",
+        "greek": "ἵνα τὸ καύχημα ὑμῶν περισσεύῃ ἐν Χριστῷ Ἰησοῦ ἐν ἐμοὶ διὰ τῆς ἐμῆς παρουσίας πάλιν πρὸς ὑμᾶς",
+        "tokens": [
+          {
+            "greek": "ἵνα",
+            "lemma": "ἵνα",
+            "strongs": "G2443",
+            "morph": "--------"
+          },
+          {
+            "greek": "τὸ",
+            "lemma": "ὁ",
+            "strongs": "G3588",
+            "morph": "----NSN-"
+          },
+          {
+            "greek": "καύχημα",
+            "lemma": "καύχημα",
+            "strongs": "G2745",
+            "morph": "----NSN-"
+          },
+          {
+            "greek": "ὑμῶν",
+            "lemma": "σύ",
+            "strongs": "G4771",
+            "morph": "----GP--"
+          },
+          {
+            "greek": "περισσεύῃ",
+            "lemma": "περισσεύω",
+            "strongs": "G4052",
+            "morph": "3PAS-S--"
+          },
+          {
+            "greek": "ἐν",
+            "lemma": "ἐν",
+            "strongs": "G1722",
+            "morph": "--------"
+          },
+          {
+            "greek": "Χριστῷ",
+            "lemma": "Χριστός",
+            "strongs": "G5547",
+            "morph": "----DSM-"
+          },
+          {
+            "greek": "Ἰησοῦ",
+            "lemma": "Ἰησοῦς",
+            "strongs": "G2424",
+            "morph": "----DSM-"
+          },
+          {
+            "greek": "ἐν",
+            "lemma": "ἐν",
+            "strongs": "G1722",
+            "morph": "--------"
+          },
+          {
+            "greek": "ἐμοὶ",
+            "lemma": "ἐγώ",
+            "strongs": "G1473",
+            "morph": "----DS--"
+          },
+          {
+            "greek": "διὰ",
+            "lemma": "διά",
+            "strongs": "G1223",
+            "morph": "--------"
+          },
+          {
+            "greek": "τῆς",
+            "lemma": "ὁ",
+            "strongs": "G3588",
+            "morph": "----GSF-"
+          },
+          {
+            "greek": "ἐμῆς",
+            "lemma": "ἐμός",
+            "strongs": "G1699",
+            "morph": "----GSF-"
+          },
+          {
+            "greek": "παρουσίας",
+            "lemma": "παρουσία",
+            "strongs": "G3952",
+            "morph": "----GSF-"
+          },
+          {
+            "greek": "πάλιν",
+            "lemma": "πάλιν",
+            "strongs": "G3825",
+            "morph": "--------"
+          },
+          {
+            "greek": "πρὸς",
+            "lemma": "πρός",
+            "strongs": "G4314",
+            "morph": "--------"
+          },
+          {
+            "greek": "ὑμᾶς",
+            "lemma": "σύ",
+            "strongs": "G4771",
+            "morph": "----AP--"
+          }
+        ]
+      }
+    ]
+  },
+  "governing_rules": [
+    {
+      "name": "Meaning-over-form",
+      "rule": "Translate the meaning into clear, natural, dignified English; Greek form is not binding when it produces awkward, opaque, or misleading English."
+    },
+    {
+      "name": "Warrant boundary",
+      "rule": "Every significant meaning expressed in English must be defensible from the Greek and context. Do not add commentary, motive, theology, or emotional force not warranted by the text."
+    },
+    {
+      "name": "Target reader",
+      "rule": "Write for religion-naive adults and older adolescents near the sixth-grade reading level without sounding childish."
+    },
+    {
+      "name": "Meaningful form",
+      "rule": "Preserve or functionally recreate meaningful repetition, contrast, metaphor, ambiguity, emphasis, and discourse movement."
+    },
+    {
+      "name": "Copyright independence",
+      "rule": "Existing English translations and the frozen benchmark are not drafting sources and must remain unavailable during blind stages."
+    }
+  ],
+  "matrix_entries": [
+    {
+      "lemma": "πίστις",
+      "entry": "pistis",
+      "status": "approved contextual entry",
+      "note": "Weigh trust, faith, faithfulness, and the content of belief contextually."
+    }
+  ],
+  "scoped_precedents": [],
+  "known_issues": [
+    {
+      "type": "benchmark_isolation",
+      "instruction": "No Philippians 1 English benchmark wording or Phase 2 adjudication may enter this packet."
+    }
+  ],
+  "forbidden_material_check": {
+    "benchmark_absent": true,
+    "copyright_text_absent": true,
+    "sibling_drafts_absent": true
+  },
+  "integrity_status": "pass",
+  "blocking_integrity_failures": []
+}
