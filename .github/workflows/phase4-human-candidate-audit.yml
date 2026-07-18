@@ -1,0 +1,41 @@
+name: FLT Phase 4 human candidate audit
+
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/phase4-human-candidate-audit.yml']
+  workflow_dispatch:
+
+permissions: {contents: read}
+concurrency: {group: flt-phase-4-human-candidate-audit, cancel-in-progress: false}
+
+jobs:
+  audit:
+    name: English reconstruction and semantic-floor audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: 24, cache: npm, cache-dependency-path: phase4-harness/package-lock.json}
+      - name: Install and test
+        working-directory: phase4-harness
+        run: npm ci && npm test
+      - name: Create run identity
+        id: run
+        shell: bash
+        run: |
+          n=$((970 + GITHUB_RUN_NUMBER)); if (( n > 999 )); then exit 1; fi
+          run_id="FLT-PHP-01-$(date -u +%Y%m%d)-$(printf '%03d' "$n")"
+          node phase4-harness/scripts/prepare-run-config.mjs phase4-harness/config.github-actions.json phase4-harness/.audit-config.json "$run_id"
+          echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
+      - name: Run exact-candidate audit
+        run: node phase4-harness/src/human-candidate-audit.js phase4-harness/.audit-config.json "phase4-harness/runs/${{ steps.run.outputs.run_id }}" docs/architecture/phase-4/PHP-01-012-018_human-editor-candidate-v01.json
+      - name: Upload audit bundle
+        if: always()
+        uses: actions/upload-artifact@v4
+        with: {name: "${{ steps.run.outputs.run_id || 'FLT-human-audit-blocked' }}", path: phase4-harness/runs/, retention-days: 30}
