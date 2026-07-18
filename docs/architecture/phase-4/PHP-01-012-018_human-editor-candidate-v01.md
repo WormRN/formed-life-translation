@@ -2,9 +2,11 @@
 
 **Project:** Formed Life Translation  
 **Unit:** Philippians 1:12–18  
-**Status:** Human-edited candidate; reviewed by comparison and repeated audio testing; not finalized  
+**Status:** Human-edited candidate; semantic-floor eligible with no blocking findings; not finalized  
 **Date:** 2026-07-18  
 **Evidence chain:** Reader-first run `FLT-PHP-01-20260718-951`; artifact `8434192713`
+
+**Meaning audit:** Run `FLT-PHP-01-20260718-971`; all three auditors eligible; warnings retained for 1:17 and 1:18
 
 ## Reading text
 
