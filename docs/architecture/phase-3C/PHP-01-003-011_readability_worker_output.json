@@ -1,0 +1,32 @@
+{
+  "run_id": "FLT-PHP-01-20260718-001",
+  "unit_id": "PHP-01-003-011",
+  "role": "readability_worker",
+  "attempt": 1,
+  "status": "complete",
+  "input_packet_sha256": "8c6929350c7047637ec0fa9ec2a7f437e6c2324bb14b780af363150205ab7e49",
+  "output": {
+    "proposed_rendering": "I thank my God every time I remember you. Whenever I pray for all of you, I pray with joy because you have shared in spreading the good news from the first day until now. I am sure that the One who began this good work among you will keep working until it is complete when Christ Jesus returns.\n\nI have good reason to feel this way about all of you because I carry you in my heart. You share with me in God’s grace, both while I am in prison and while I defend the good news and show that it is true. God knows how deeply I long for all of you with the tender love of Christ Jesus.\n\nThis is my prayer: that your love will keep growing, along with knowledge and wise judgment, so you can recognize what matters most. Then you will live with integrity and without blame when Christ returns, filled with the good fruit of right living that comes through Jesus Christ and brings glory and praise to God.",
+    "paragraphing": "preserved as supplied",
+    "possible_sense_selections": [],
+    "significant_meanings_expressed": [],
+    "dynamic_restructuring": [],
+    "clarifications_made": [],
+    "meaningful_forms_preserved_or_recreated": [],
+    "possible_meaning_loss": [],
+    "possible_added_meaning": [],
+    "possible_too_loose_risks": [],
+    "possible_too_literal_risks": [],
+    "oral_flow_concerns": [],
+    "footnote_candidates": [],
+    "uncertainties": [],
+    "human_only_questions": []
+  },
+  "self_finalization_claim": false,
+  "created_at": "2026-07-18T00:00:00Z",
+  "warnings": [
+    "Single-model role-isolation simulation only; not proof of independent model convergence."
+  ],
+  "human_only_questions": [],
+  "raw_output_path": "outputs/PHP-01-003-011_readability_worker_output.json"
+}

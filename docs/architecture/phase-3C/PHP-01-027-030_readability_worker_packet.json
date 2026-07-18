@@ -1,0 +1,21 @@
+{
+  "packet_id": "PKT-PHP-01-027-030-READABILITY_WORKER-001",
+  "run_id": "FLT-PHP-01-20260718-001",
+  "role": "readability_worker",
+  "unit_id": "PHP-01-027-030",
+  "passage": "Philippians 1:27\u201330",
+  "source_packet_reference": "../phase-3B/PHP-01-027-030_source_master.json",
+  "role_mission": "Produce the clearest natural FLT English for religion-naive readers while remaining warranted by the Greek.",
+  "blindness_contract": "No sibling drafts, benchmark wording, prior human wording, prior critiques, or copyrighted comparison translations supplied.",
+  "visibility_class": [
+    "N",
+    "G"
+  ],
+  "forbidden_material_check": {
+    "benchmark_absent": true,
+    "copyright_text_absent": true,
+    "sibling_drafts_absent": true,
+    "prior_human_wording_absent": true
+  },
+  "integrity_status": "pass"
+}

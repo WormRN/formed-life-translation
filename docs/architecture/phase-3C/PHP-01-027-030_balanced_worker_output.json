@@ -1,0 +1,32 @@
+{
+  "run_id": "FLT-PHP-01-20260718-001",
+  "unit_id": "PHP-01-027-030",
+  "role": "balanced_worker",
+  "attempt": 1,
+  "status": "complete",
+  "input_packet_sha256": "871cb4c2a6d55b90d276e9361f71b6ea6013a9a02ca5790c2630a1a9caa3a415",
+  "output": {
+    "proposed_rendering": "The most important thing is that you govern yourselves in a way that reflects the true value of the good news of Christ. Then, whether I come and see you or only hear about you from far away, I will know that you are standing firm, united in one spirit. I will know that you are competing together as one team to stay faithful to the good news.\n\nDo not be intimidated by those who oppose you. Your steadfast courage is a sign of their destruction and your salvation—and this comes from God. For Christ’s sake, you have been given not only the gift of trusting Him but also the gift of suffering for Him. You are facing the same struggle you once saw me face and now hear that I am still facing.",
+    "paragraphing": "preserved as supplied",
+    "possible_sense_selections": [],
+    "significant_meanings_expressed": [],
+    "dynamic_restructuring": [],
+    "clarifications_made": [],
+    "meaningful_forms_preserved_or_recreated": [],
+    "possible_meaning_loss": [],
+    "possible_added_meaning": [],
+    "possible_too_loose_risks": [],
+    "possible_too_literal_risks": [],
+    "oral_flow_concerns": [],
+    "footnote_candidates": [],
+    "uncertainties": [],
+    "human_only_questions": []
+  },
+  "self_finalization_claim": false,
+  "created_at": "2026-07-18T00:00:00Z",
+  "warnings": [
+    "Single-model role-isolation simulation only; not proof of independent model convergence."
+  ],
+  "human_only_questions": [],
+  "raw_output_path": "outputs/PHP-01-027-030_balanced_worker_output.json"
+}

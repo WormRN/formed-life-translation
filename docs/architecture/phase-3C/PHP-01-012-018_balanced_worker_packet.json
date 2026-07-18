@@ -1,0 +1,21 @@
+{
+  "packet_id": "PKT-PHP-01-012-018-BALANCED_WORKER-001",
+  "run_id": "FLT-PHP-01-20260718-001",
+  "role": "balanced_worker",
+  "unit_id": "PHP-01-012-018",
+  "passage": "Philippians 1:12\u201318",
+  "source_packet_reference": "../phase-3B/PHP-01-012-018_source_master.json",
+  "role_mission": "Apply the Communication Test and Warrant Test together and produce the strongest overall FLT candidate.",
+  "blindness_contract": "No sibling drafts, benchmark wording, prior human wording, prior critiques, or copyrighted comparison translations supplied.",
+  "visibility_class": [
+    "N",
+    "G"
+  ],
+  "forbidden_material_check": {
+    "benchmark_absent": true,
+    "copyright_text_absent": true,
+    "sibling_drafts_absent": true,
+    "prior_human_wording_absent": true
+  },
+  "integrity_status": "pass"
+}

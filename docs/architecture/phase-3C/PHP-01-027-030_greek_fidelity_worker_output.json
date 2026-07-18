@@ -1,0 +1,32 @@
+{
+  "run_id": "FLT-PHP-01-20260718-001",
+  "unit_id": "PHP-01-027-030",
+  "role": "greek_fidelity_worker",
+  "attempt": 1,
+  "status": "complete",
+  "input_packet_sha256": "459880128c3988cfa7744aebb05e0b9390d93f85a3a0426fc56e726b805b28be",
+  "output": {
+    "proposed_rendering": "Only conduct yourselves as citizens in a manner worthy of the good news of Christ, so that whether I come and see you or am absent, I may hear that you are standing firm in one spirit, striving together with one mind for the faith of the good news, and not being frightened in any way by your opponents. This is a sign of destruction for them but of salvation for you—and this from God.\n\nFor it has been graciously given to you on behalf of Christ not only to believe in Him but also to suffer for Him, having the same struggle that you saw in me and now hear is still mine.",
+    "paragraphing": "preserved as supplied",
+    "possible_sense_selections": [],
+    "significant_meanings_expressed": [],
+    "dynamic_restructuring": [],
+    "clarifications_made": [],
+    "meaningful_forms_preserved_or_recreated": [],
+    "possible_meaning_loss": [],
+    "possible_added_meaning": [],
+    "possible_too_loose_risks": [],
+    "possible_too_literal_risks": [],
+    "oral_flow_concerns": [],
+    "footnote_candidates": [],
+    "uncertainties": [],
+    "human_only_questions": []
+  },
+  "self_finalization_claim": false,
+  "created_at": "2026-07-18T00:00:00Z",
+  "warnings": [
+    "Single-model role-isolation simulation only; not proof of independent model convergence."
+  ],
+  "human_only_questions": [],
+  "raw_output_path": "outputs/PHP-01-027-030_greek_fidelity_worker_output.json"
+}

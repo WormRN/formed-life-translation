@@ -1,0 +1,15 @@
+{
+  "phase": "3C",
+  "run_id": "FLT-PHP-01-20260718-001",
+  "status": "CONDITIONAL_PASS",
+  "units": 5,
+  "role_packets": 15,
+  "draft_outputs": 15,
+  "schema_status": "pass",
+  "visibility_contract_status": "pass by construction",
+  "independence_status": "not fully validated",
+  "reason": "All three roles were executed as isolated role simulations within one assistant environment. No claim of genuine model independence is made.",
+  "allowed_use": "Test packet shape, role prompts, output schemas, anonymization, and downstream handoff mechanics.",
+  "not_allowed_use": "Do not cite these outputs as proof that three independent models converged.",
+  "next_required_test": "Repeat the three drafting roles through independently instantiated model calls or distinct providers."
+}

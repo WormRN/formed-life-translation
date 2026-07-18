@@ -1,0 +1,32 @@
+{
+  "run_id": "FLT-PHP-01-20260718-001",
+  "unit_id": "PHP-01-001-002",
+  "role": "readability_worker",
+  "attempt": 1,
+  "status": "complete",
+  "input_packet_sha256": "ca4788bf1c249c53ca7dc87543851517d42568006b6aa8fa5d1e5a486e49f36c",
+  "output": {
+    "proposed_rendering": "From Paul and Timothy, servants of Christ Jesus.\n\nTo all of God’s holy people in Philippi who belong to Christ Jesus, along with the leaders and assistants:\n\nMay God our Father and the Lord Jesus Christ give you grace and peace.",
+    "paragraphing": "preserved as supplied",
+    "possible_sense_selections": [],
+    "significant_meanings_expressed": [],
+    "dynamic_restructuring": [],
+    "clarifications_made": [],
+    "meaningful_forms_preserved_or_recreated": [],
+    "possible_meaning_loss": [],
+    "possible_added_meaning": [],
+    "possible_too_loose_risks": [],
+    "possible_too_literal_risks": [],
+    "oral_flow_concerns": [],
+    "footnote_candidates": [],
+    "uncertainties": [],
+    "human_only_questions": []
+  },
+  "self_finalization_claim": false,
+  "created_at": "2026-07-18T00:00:00Z",
+  "warnings": [
+    "Single-model role-isolation simulation only; not proof of independent model convergence."
+  ],
+  "human_only_questions": [],
+  "raw_output_path": "outputs/PHP-01-001-002_readability_worker_output.json"
+}

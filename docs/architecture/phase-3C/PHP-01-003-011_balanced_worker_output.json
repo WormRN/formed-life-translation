@@ -1,0 +1,32 @@
+{
+  "run_id": "FLT-PHP-01-20260718-001",
+  "unit_id": "PHP-01-003-011",
+  "role": "balanced_worker",
+  "attempt": 1,
+  "status": "complete",
+  "input_packet_sha256": "f55e6733f7f96899a46e42444a9d4a50b37749512799e2f49a4fdc422ac7089d",
+  "output": {
+    "proposed_rendering": "I thank my God whenever I remember you. Every time I pray for all of you, I pray with joy because you have worked alongside me for the good news from the first day until now. I am sure of this: the One who began a good work among you will continue it until it is finished on the day Christ Jesus returns.\n\nI have good reason to feel this way about all of you because I carry you in my heart. You all share with me in God’s grace, whether I am in prison or defending and confirming the truth of the good news. God knows how deeply I long for all of you with the tender love that comes from Christ Jesus.\n\nThis is what I pray for you: that your love will keep growing as you gain knowledge and learn to make wise judgments. Then you will be able to recognize what matters most and live with integrity and without blame when Christ returns. Your lives will be filled with the good fruit of right living that comes through Jesus Christ, bringing glory and praise to God.",
+    "paragraphing": "preserved as supplied",
+    "possible_sense_selections": [],
+    "significant_meanings_expressed": [],
+    "dynamic_restructuring": [],
+    "clarifications_made": [],
+    "meaningful_forms_preserved_or_recreated": [],
+    "possible_meaning_loss": [],
+    "possible_added_meaning": [],
+    "possible_too_loose_risks": [],
+    "possible_too_literal_risks": [],
+    "oral_flow_concerns": [],
+    "footnote_candidates": [],
+    "uncertainties": [],
+    "human_only_questions": []
+  },
+  "self_finalization_claim": false,
+  "created_at": "2026-07-18T00:00:00Z",
+  "warnings": [
+    "Single-model role-isolation simulation only; not proof of independent model convergence."
+  ],
+  "human_only_questions": [],
+  "raw_output_path": "outputs/PHP-01-003-011_balanced_worker_output.json"
+}

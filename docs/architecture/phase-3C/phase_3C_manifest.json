@@ -1,0 +1,162 @@
+[
+  {
+    "file": "PHP-01-001-002_balanced_worker_output.json",
+    "sha256": "059690dfd4c8fe5c669d7e6ea58e8288e3d255bebf52f4aab64bcb969228c1f9",
+    "bytes": 1314
+  },
+  {
+    "file": "PHP-01-001-002_balanced_worker_packet.json",
+    "sha256": "5574287bb222a585d80fb01470368a13f046ad1b92491f9a891b906a0977618b",
+    "bytes": 804
+  },
+  {
+    "file": "PHP-01-001-002_greek_fidelity_worker_output.json",
+    "sha256": "7b6f50db3f0f4688b7602c7f91e2321ba7366087d052a2ed2c5212043ab5f5dc",
+    "bytes": 1310
+  },
+  {
+    "file": "PHP-01-001-002_greek_fidelity_worker_packet.json",
+    "sha256": "04e37d042794d9282d159ff7c3ae527a3f1dec09ab2d53a1b5eed5e97ea62906",
+    "bytes": 844
+  },
+  {
+    "file": "PHP-01-001-002_readability_worker_output.json",
+    "sha256": "bd0f801caab523d27d1df79ca9bf765bf87917f24de2124507a2c9a6fee32142",
+    "bytes": 1317
+  },
+  {
+    "file": "PHP-01-001-002_readability_worker_packet.json",
+    "sha256": "ca4788bf1c249c53ca7dc87543851517d42568006b6aa8fa5d1e5a486e49f36c",
+    "bytes": 814
+  },
+  {
+    "file": "PHP-01-003-011_balanced_worker_output.json",
+    "sha256": "c644a825aa0b3acc8675eb9c1882cc235f1af074c5c43708aace8b7c8e26129a",
+    "bytes": 2049
+  },
+  {
+    "file": "PHP-01-003-011_balanced_worker_packet.json",
+    "sha256": "f55e6733f7f96899a46e42444a9d4a50b37749512799e2f49a4fdc422ac7089d",
+    "bytes": 805
+  },
+  {
+    "file": "PHP-01-003-011_greek_fidelity_worker_output.json",
+    "sha256": "7df0e02622539ff81a62288adab6a5bf429e37bef06ef7e12877c0ef146ae18d",
+    "bytes": 1982
+  },
+  {
+    "file": "PHP-01-003-011_greek_fidelity_worker_packet.json",
+    "sha256": "9e40af2681a5deb56bf2f4dabf7d00d2f74b86fb1a41762a49276e35522693cd",
+    "bytes": 845
+  },
+  {
+    "file": "PHP-01-003-011_readability_worker_output.json",
+    "sha256": "efca1ead87144c3b4bf956183b62fb3309c5a6004a4d51c88b6ce84302bba590",
+    "bytes": 1988
+  },
+  {
+    "file": "PHP-01-003-011_readability_worker_packet.json",
+    "sha256": "8c6929350c7047637ec0fa9ec2a7f437e6c2324bb14b780af363150205ab7e49",
+    "bytes": 815
+  },
+  {
+    "file": "PHP-01-012-018_balanced_worker_output.json",
+    "sha256": "ea501251539518704f5e13a9d91ddaa161cdd9325b511850476f68ce144a4ab0",
+    "bytes": 1909
+  },
+  {
+    "file": "PHP-01-012-018_balanced_worker_packet.json",
+    "sha256": "896e12770915a16a4fc9c29b9d9b675115967256683fde7c807b27c33a8968c7",
+    "bytes": 806
+  },
+  {
+    "file": "PHP-01-012-018_greek_fidelity_worker_output.json",
+    "sha256": "a5f8d333f0583c5ac319da7d4ccdcf26f36aa6023a7ae7b602157528fe053e83",
+    "bytes": 1934
+  },
+  {
+    "file": "PHP-01-012-018_greek_fidelity_worker_packet.json",
+    "sha256": "c0e8103ee2c3b53a8f46b7e3959b4182612d37a2e9dd7f9c7110e603869adee5",
+    "bytes": 846
+  },
+  {
+    "file": "PHP-01-012-018_readability_worker_output.json",
+    "sha256": "f48b462f5c2e67f44fd784ca1c9f8305a2d359f72aecec67729d0a2281feeb85",
+    "bytes": 1935
+  },
+  {
+    "file": "PHP-01-012-018_readability_worker_packet.json",
+    "sha256": "4c59ca1cc7a34e5ddd8daa04a556b4ba294798df51c1ae8ae1ecbe3339b9f3df",
+    "bytes": 816
+  },
+  {
+    "file": "PHP-01-019-026_balanced_worker_output.json",
+    "sha256": "0389f3bfc432f5ca7603658db321699e464b6b7321ee42229ca82ddaf11f8405",
+    "bytes": 1914
+  },
+  {
+    "file": "PHP-01-019-026_balanced_worker_packet.json",
+    "sha256": "6341bf3f87009846656f472deff6e826352f33816d97bf0dc84440f8305e56fb",
+    "bytes": 806
+  },
+  {
+    "file": "PHP-01-019-026_greek_fidelity_worker_output.json",
+    "sha256": "f95bf4258112f0a78a44f3b2b622926379411c98a9e4394aff2f45b12dc09535",
+    "bytes": 1956
+  },
+  {
+    "file": "PHP-01-019-026_greek_fidelity_worker_packet.json",
+    "sha256": "6915a5a6ab7780df6b16186c116aa211b8feed7b8cce4a55cdd8814b39ba435d",
+    "bytes": 846
+  },
+  {
+    "file": "PHP-01-019-026_readability_worker_output.json",
+    "sha256": "246c0111e6ad088cdb38ce6170a81213ba20d49172f6daeb23f852feecd0d314",
+    "bytes": 1950
+  },
+  {
+    "file": "PHP-01-019-026_readability_worker_packet.json",
+    "sha256": "3a1b8a0379643da734aeee98f5b234c2626e9f3b42c1fa9f11b21474e9753b09",
+    "bytes": 816
+  },
+  {
+    "file": "PHP-01-027-030_balanced_worker_output.json",
+    "sha256": "4504f13d8194e556f36a9b23b0f3e2085ca06fbacd61ecac43221d511caacc79",
+    "bytes": 1777
+  },
+  {
+    "file": "PHP-01-027-030_balanced_worker_packet.json",
+    "sha256": "871cb4c2a6d55b90d276e9361f71b6ea6013a9a02ca5790c2630a1a9caa3a415",
+    "bytes": 806
+  },
+  {
+    "file": "PHP-01-027-030_greek_fidelity_worker_output.json",
+    "sha256": "5b82c09ddb3509e33d14068cf88403d45c4afd23390770f2c91e94191eadbf07",
+    "bytes": 1667
+  },
+  {
+    "file": "PHP-01-027-030_greek_fidelity_worker_packet.json",
+    "sha256": "459880128c3988cfa7744aebb05e0b9390d93f85a3a0426fc56e726b805b28be",
+    "bytes": 846
+  },
+  {
+    "file": "PHP-01-027-030_readability_worker_output.json",
+    "sha256": "1cb0db6600b98ff20ff8d4d153e6e697f85e0ec0f6a74e3c00e535ea76654bbf",
+    "bytes": 1733
+  },
+  {
+    "file": "PHP-01-027-030_readability_worker_packet.json",
+    "sha256": "615495df70ccd440604233f5f98d8da211a321770e9fd1e32ab5fabfe5c572a2",
+    "bytes": 816
+  },
+  {
+    "file": "README.md",
+    "sha256": "1f731ff6786f3fb98f6950e639e7e15b25a23096342c67dbf7813be8f1fc93a0",
+    "bytes": 684
+  },
+  {
+    "file": "phase_3C_status_report.json",
+    "sha256": "a3b0d9af1e9e97c82b8505458a378ad168d2ad941cc0d49fe077e7ad18412b85",
+    "bytes": 783
+  }
+]

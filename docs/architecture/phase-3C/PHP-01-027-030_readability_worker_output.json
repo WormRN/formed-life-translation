@@ -1,0 +1,32 @@
+{
+  "run_id": "FLT-PHP-01-20260718-001",
+  "unit_id": "PHP-01-027-030",
+  "role": "readability_worker",
+  "attempt": 1,
+  "status": "complete",
+  "input_packet_sha256": "615495df70ccd440604233f5f98d8da211a321770e9fd1e32ab5fabfe5c572a2",
+  "output": {
+    "proposed_rendering": "Above all, live together in a way that reflects the true value of the good news about Christ. Then, whether I come and see you or only hear about you from far away, I will know that you are standing firm with one purpose and working together as one team to remain faithful to the good news. Do not be frightened by those who oppose you. Your courage is a sign that they will be destroyed and that you will be saved—and this comes from God.\n\nFor Christ’s sake, you have been given not only the gift of trusting Him but also the gift of suffering for Him. You are facing the same struggle you once saw me face and now hear that I am still facing.",
+    "paragraphing": "preserved as supplied",
+    "possible_sense_selections": [],
+    "significant_meanings_expressed": [],
+    "dynamic_restructuring": [],
+    "clarifications_made": [],
+    "meaningful_forms_preserved_or_recreated": [],
+    "possible_meaning_loss": [],
+    "possible_added_meaning": [],
+    "possible_too_loose_risks": [],
+    "possible_too_literal_risks": [],
+    "oral_flow_concerns": [],
+    "footnote_candidates": [],
+    "uncertainties": [],
+    "human_only_questions": []
+  },
+  "self_finalization_claim": false,
+  "created_at": "2026-07-18T00:00:00Z",
+  "warnings": [
+    "Single-model role-isolation simulation only; not proof of independent model convergence."
+  ],
+  "human_only_questions": [],
+  "raw_output_path": "outputs/PHP-01-027-030_readability_worker_output.json"
+}
