@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["candidate_assessments", "verse_preferences", "remaining_human_decisions"],
+  "properties": {
+    "candidate_assessments": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "object", "additionalProperties": false, "required": ["candidate_label", "strengths", "risks"], "properties": {"candidate_label": {"enum": ["Candidate A", "Candidate B", "Candidate C"]}, "strengths": {"type": "array", "items": {"type": "string"}}, "risks": {"type": "array", "items": {"type": "string"}}}}},
+    "verse_preferences": {"type": "array", "minItems": 7, "maxItems": 7, "items": {"type": "object", "additionalProperties": false, "required": ["reference", "preferred_candidate", "reason", "confidence"], "properties": {"reference": {"type": "string"}, "preferred_candidate": {"enum": ["Candidate A", "Candidate B", "Candidate C", "hybrid", "human_choice"]}, "reason": {"type": "string", "minLength": 1}, "confidence": {"enum": ["high", "medium", "low"]}}}},
+    "remaining_human_decisions": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["reference", "question", "why_model_vote_is_insufficient"], "properties": {"reference": {"type": "string", "minLength": 1}, "question": {"type": "string", "minLength": 1}, "why_model_vote_is_insufficient": {"type": "string", "minLength": 1}}}}
+  }
+}
