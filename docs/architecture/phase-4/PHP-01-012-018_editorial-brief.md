@@ -3,10 +3,12 @@
 **Unit:** Philippians 1:12–18  
 **Evidence run:** `FLT-PHP-01-20260718-901`  
 **Parent artifact:** `8433634100`  
-**Status:** Provisional editorial candidate; explicit human approval required  
+**Status:** Diagnostic ensemble candidate; rejected as the publication direction after human-editor review  
 **Benchmark use:** None. This candidate derives only from the blind drafts, critiques, focused checks, independent syntheses, and blind evaluations.
 
 ## Recommended composite
+
+> **Human-editor diagnostic (2026-07-18):** This composite has drifted left of FLT's intended dynamic-equivalence center and resembles the Greek-fidelity draft too strongly. It may remain as evidence of the ensemble's precision bias, but it is not approved as a provisional benchmark or publication candidate. A reader-first refinement pass is required.
 
 **12** Brothers and sisters, I want you to know that what has happened to me has actually advanced the good news.
 
