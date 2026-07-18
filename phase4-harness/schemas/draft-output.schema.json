@@ -1,0 +1,13 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "type":"object",
+  "required":["proposed_rendering","verse_renderings","significant_decisions","risks","human_only_questions"],
+  "properties":{
+    "proposed_rendering":{"type":"string","minLength":1},
+    "verse_renderings":{"type":"array","minItems":7,"items":{"type":"object","required":["reference","text"],"properties":{"reference":{"type":"string","pattern":"^Phil\\.1\\.(1[2-8])$"},"text":{"type":"string","minLength":1}},"additionalProperties":false}},
+    "significant_decisions":{"type":"array","items":{"type":"object","required":["reference","decision","rationale"],"properties":{"reference":{"type":"string"},"decision":{"type":"string"},"rationale":{"type":"string"}},"additionalProperties":false}},
+    "risks":{"type":"array","items":{"type":"object","required":["reference","kind","detail"],"properties":{"reference":{"type":"string"},"kind":{"enum":["meaning_loss","added_meaning","too_loose","too_literal","oral_flow","theological","other"]},"detail":{"type":"string"}},"additionalProperties":false}},
+    "human_only_questions":{"type":"array","items":{"type":"object","required":["reference","question"],"properties":{"reference":{"type":"string"},"question":{"type":"string"}},"additionalProperties":false}}
+  },
+  "additionalProperties":false
+}

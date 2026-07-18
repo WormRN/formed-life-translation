@@ -1,0 +1,13 @@
+{
+  "run_id": "FLT-PHP-01-20260718-002",
+  "unit_id": "PHP-01-012-018",
+  "source_packet": "../docs/architecture/phase-3B/PHP-01-012-018_source_master.json",
+  "output_root": "./runs",
+  "max_attempts": 3,
+  "timeout_ms": 180000,
+  "workers": [
+    {"role":"readability_worker","provider":"anthropic","model":"claude-sonnet-5","api_key_env":"ANTHROPIC_API_KEY"},
+    {"role":"greek_fidelity_worker","provider":"openai","model":"gpt-5.6-sol","api_key_env":"OPENAI_API_KEY"},
+    {"role":"balanced_worker","provider":"google","model":"gemini-3.1-pro-preview","api_key_env":"GEMINI_API_KEY"}
+  ]
+}

@@ -1,0 +1,5 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {validateSeparation,makePacket,decisionBrief} from '../src/core.js';
+const workers=[{role:'readability_worker',provider:'openai',model:'a'},{role:'greek_fidelity_worker',provider:'anthropic',model:'b'},{role:'balanced_worker',provider:'google',model:'c'}];
+test('requires three distinct providers',()=>{assert.doesNotThrow(()=>validateSeparation(workers));assert.throws(()=>validateSeparation(workers.map((w,i)=>i?{...w,provider:'openai'}:w)),/distinct providers/)});
+test('blind packet is constructed from an allowlist',()=>{const p=makePacket({unit_id:'PHP-01-012-018',passage:'Philippians 1:12–18',source_data:{verses:[]},governing_rules:[],matrix_entries:[],benchmark:'LEAK'},'FLT-PHP-01-20260718-002','balanced_worker');assert.equal(p.benchmark,undefined);assert.equal(p.integrity_status,'pass')});
+test('brief preserves human authority',()=>{const o=workers.map(w=>({role:w.role,output:{proposed_rendering:w.model,human_only_questions:[]}}));const b=decisionBrief(o);assert.match(b,/no wording is finalized/i);assert.match(b,/will not select or silently merge/i)});

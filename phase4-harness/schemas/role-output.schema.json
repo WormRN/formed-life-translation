@@ -1,0 +1,13 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "type":"object",
+  "required":["run_id","unit_id","role","attempt","status","input_packet_sha256","output","self_finalization_claim","created_at","provider_provenance"],
+  "properties":{
+    "run_id":{"type":"string"},"unit_id":{"type":"string"},"role":{"type":"string"},"attempt":{"type":"integer","minimum":1},
+    "status":{"enum":["complete","incomplete","refused","malformed","blocked"]},
+    "input_packet_sha256":{"type":"string","pattern":"^[a-f0-9]{64}$"},
+    "output":{"$ref":"draft-output.schema.json"},"self_finalization_claim":{"const":false},"created_at":{"type":"string","format":"date-time"},
+    "provider_provenance":{"type":"object","required":["provider","model","request_id","started_at","finished_at","latency_ms","usage"],"properties":{"provider":{"type":"string"},"model":{"type":"string"},"request_id":{"type":["string","null"]},"started_at":{"type":"string","format":"date-time"},"finished_at":{"type":"string","format":"date-time"},"latency_ms":{"type":"number","minimum":0},"usage":{"type":"object"}},"additionalProperties":false},
+    "warnings":{"type":"array","items":{"type":"string"}},"raw_output_path":{"type":"string"}
+  },"additionalProperties":false
+}
