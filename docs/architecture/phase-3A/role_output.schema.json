@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FLT Role Output Envelope",
+  "type": "object",
+  "required": [
+    "run_id",
+    "unit_id",
+    "role",
+    "attempt",
+    "status",
+    "input_packet_sha256",
+    "output",
+    "self_finalization_claim",
+    "created_at"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "unit_id": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "attempt": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "status": {
+      "enum": [
+        "complete",
+        "incomplete",
+        "refused",
+        "malformed",
+        "blocked"
+      ]
+    },
+    "input_packet_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "output": {
+      "type": "object"
+    },
+    "self_finalization_claim": {
+      "const": false
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "human_only_questions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "raw_output_path": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "file": "README.md",
+    "sha256": "7fae8bc38499ca343fd3191e98a98d80138470084b74358f57d4aba7eb40b147",
+    "bytes": 612
+  },
+  {
+    "file": "benchmark_rubric.md",
+    "sha256": "d3f8a8b91d4643de0ef1974ad2cc66c0c8976db97b9ce9f4c992b40f9124861c",
+    "bytes": 1637
+  },
+  {
+    "file": "human_burden_tracker.schema.json",
+    "sha256": "f0d92c0ebdc54306b88128078ec07e5a660a455b11ceb78ac5a61d42a5a7d930",
+    "bytes": 2432
+  },
+  {
+    "file": "retry_stop_rules.md",
+    "sha256": "10f0b847e687941761c6c31889cfd6c98597e8047b283a3dcaa1fa3af61a7227",
+    "bytes": 1247
+  },
+  {
+    "file": "role_output.schema.json",
+    "sha256": "160d796ec715051b37de72557d783da78e00f39ba5444f0eb8756c3322113184",
+    "bytes": 1252
+  },
+  {
+    "file": "role_packet.schema.json",
+    "sha256": "19817a700585e4e1ef2d37836289a4528587ca5f6cf6de8a47f2d247e464ffbb",
+    "bytes": 1890
+  },
+  {
+    "file": "run_directory_contract.md",
+    "sha256": "ab414df0e5261a0d4bd163bfacb5db6158f6c4b3e460798732e31a62c112c776",
+    "bytes": 2031
+  },
+  {
+    "file": "run_manifest.schema.json",
+    "sha256": "36fadce194712bd34764fb584c8c8b2ec8da92040ea092eaffed46a209f63e7a",
+    "bytes": 3274
+  },
+  {
+    "file": "visibility_control_checklist.md",
+    "sha256": "31c562e43a90b138c0c303c3b8a7385f3393378f275dcc1a5d5af75aa1ad4cd7",
+    "bytes": 1553
+  }
+]

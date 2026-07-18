@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FLT Role Packet",
+  "type": "object",
+  "required": [
+    "packet_id",
+    "run_id",
+    "role",
+    "unit_id",
+    "visibility_class",
+    "source_data",
+    "governing_rules",
+    "matrix_entries",
+    "scoped_precedents",
+    "forbidden_material_check",
+    "integrity_status"
+  ],
+  "properties": {
+    "packet_id": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "unit_id": {
+      "type": "string"
+    },
+    "visibility_class": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "N",
+          "G",
+          "I",
+          "C",
+          "D"
+        ]
+      }
+    },
+    "source_data": {
+      "type": "object"
+    },
+    "governing_rules": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "matrix_entries": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "scoped_precedents": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "known_issues": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "forbidden_material_check": {
+      "type": "object",
+      "required": [
+        "benchmark_absent",
+        "copyright_text_absent",
+        "sibling_drafts_absent"
+      ],
+      "properties": {
+        "benchmark_absent": {
+          "type": "boolean"
+        },
+        "copyright_text_absent": {
+          "type": "boolean"
+        },
+        "sibling_drafts_absent": {
+          "type": "boolean"
+        }
+      }
+    },
+    "integrity_status": {
+      "enum": [
+        "pass",
+        "fail"
+      ]
+    },
+    "blocking_integrity_failures": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

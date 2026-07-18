@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FLT Human Decision Burden Tracker",
+  "type": "object",
+  "required": [
+    "run_id",
+    "chapter_verse_count",
+    "decisions",
+    "summary"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "chapter_verse_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "decision_id",
+          "unit_id",
+          "verses",
+          "category",
+          "burden_level",
+          "question",
+          "reconstruction_required"
+        ],
+        "properties": {
+          "decision_id": {
+            "type": "string"
+          },
+          "unit_id": {
+            "type": "string"
+          },
+          "verses": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "category": {
+            "enum": [
+              "ambiguity",
+              "lexical",
+              "theological",
+              "dynamic_expansion",
+              "precedent",
+              "copyright",
+              "literary",
+              "other"
+            ]
+          },
+          "burden_level": {
+            "enum": [
+              "micro",
+              "choice",
+              "substantive",
+              "reconstruction"
+            ]
+          },
+          "question": {
+            "type": "string"
+          },
+          "reconstruction_required": {
+            "type": "boolean"
+          },
+          "minutes_estimated": {
+            "type": "number",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "total_decisions",
+        "substantive_or_higher",
+        "verses_requiring_reconstruction",
+        "reconstruction_rate"
+      ],
+      "properties": {
+        "total_decisions": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "substantive_or_higher": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "verses_requiring_reconstruction": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "reconstruction_rate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "provisional_target_met": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}
