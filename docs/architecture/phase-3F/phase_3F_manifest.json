@@ -1,0 +1,27 @@
+[
+  {
+    "file": "FLT_Philippians_1_phase_3F_candidate.md",
+    "sha256": "3e43ecb1dc1c44c96a32bdbdcf65156f4412eb69a9d0d156789ee5a7af509325",
+    "bytes": 4009
+  },
+  {
+    "file": "README.md",
+    "sha256": "5dee202f7bfe1b3b09415597f19d6333c050efd0d7dfc46a51381151973b9377",
+    "bytes": 265
+  },
+  {
+    "file": "phase_3F_decision_and_governance_record.md",
+    "sha256": "ec980e9397d74331e8c55773e2a9b57be5b614a8305513965099fdcef7d476bd",
+    "bytes": 921
+  },
+  {
+    "file": "phase_3F_literary_oral_review.md",
+    "sha256": "c4983e5a4e88a663d91553a947a4a9264803600c36cc9659507531bf614c1a97",
+    "bytes": 1635
+  },
+  {
+    "file": "phase_3F_status_report.json",
+    "sha256": "405ef14d2de9ef7e03b447bfe4e880514af234abf5dec87f45986ba031635395",
+    "bytes": 428
+  }
+]
