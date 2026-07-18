@@ -1,0 +1,9 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","additionalProperties":false,
+  "required":["verse_meanings","passage_summary","unclear_phrases"],
+  "properties":{
+    "verse_meanings":{"type":"array","minItems":7,"maxItems":7,"items":{"type":"object","additionalProperties":false,"required":["reference","propositions","inferred_relationships"],"properties":{"reference":{"type":"string"},"propositions":{"type":"array","minItems":1,"items":{"type":"string"}},"inferred_relationships":{"type":"array","items":{"type":"string"}}}}},
+    "passage_summary":{"type":"string","minLength":1},
+    "unclear_phrases":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["reference","phrase","possible_meanings"],"properties":{"reference":{"type":"string"},"phrase":{"type":"string"},"possible_meanings":{"type":"array","minItems":1,"items":{"type":"string"}}}}}
+  }
+}
