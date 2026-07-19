@@ -1,0 +1,57 @@
+{
+  "chapter_id": "PHP-02",
+  "book": "Philippians",
+  "chapter": 2,
+  "source_edition": "SBLGNT",
+  "tone": "warm, communal, humble, Christ-centered, persuasive without manipulation",
+  "target_reader": "religion-naive adults and older adolescents near grade 6",
+  "translation_identity": "firmly dynamic-equivalence, NLT-like in readability but independent",
+  "sealed_unit": null,
+  "governing_rules": [
+    "The prose serves the reader; the apparatus serves accountability.",
+    "Translate meaning, logic, tone, and theological force rather than Greek surface form.",
+    "Use clear natural oral English; reorder, split, unpack, and clarify implied relationships when comprehension benefits.",
+    "Do not add commentary or meaning not defensible from Greek and context.",
+    "No comparison translations or benchmark wording may enter blind drafting."
+  ],
+  "existing_decisions": [
+    "Render euangelion accessibly as good news where context supports it.",
+    "For mixed-congregation adelphoi, normally use brothers and sisters while preserving the family metaphor.",
+    "Render masculine generics according to intended meaning.",
+    "Deity pronouns capitalized.",
+    "Maintain the reader-first dynamic center established by the audited Philippians 1 benchmark without exposing its wording to blind workers."
+  ],
+  "units": [
+    {
+      "unit_id": "PHP-02-001-004",
+      "passage": "Philippians 2:1–4",
+      "title": "A unified life shaped by Christ",
+      "known_issues": [
+        "Verse 1 uses a rhetorical conditional sequence whose force is assumed reality, not uncertainty.",
+        "κοινωνία πνεύματος may refer to fellowship created by or participation in the Spirit; avoid prematurely collapsing the ambiguity.",
+        "Verse 2 coordinates same mind, same love, shared life, and common purpose without demanding personality uniformity.",
+        "ἐριθεία and κενοδοξία require natural renderings of selfish rivalry and empty self-importance.",
+        "Verse 3 asks believers to regard others above themselves without implying that others possess greater intrinsic worth.",
+        "Verse 4 contrasts exclusive self-concern with active attention to others; it does not forbid legitimate personal responsibility."
+      ],
+      "verses": [
+        {
+          "reference": "Phil.2.1",
+          "greek": "Εἴ τις οὖν παράκλησις ἐν Χριστῷ εἴ τι παραμύθιον ἀγάπης εἴ τις κοινωνία πνεύματος εἴ τις σπλάγχνα καὶ οἰκτιρμοί"
+        },
+        {
+          "reference": "Phil.2.2",
+          "greek": "πληρώσατέ μου τὴν χαρὰν ἵνα τὸ αὐτὸ φρονῆτε τὴν αὐτὴν ἀγάπην ἔχοντες σύμψυχοι τὸ ἓν φρονοῦντες"
+        },
+        {
+          "reference": "Phil.2.3",
+          "greek": "μηδὲν κατ’ ἐριθείαν μηδὲ κατὰ κενοδοξίαν ἀλλὰ τῇ ταπεινοφροσύνῃ ἀλλήλους ἡγούμενοι ὑπερέχοντας ἑαυτῶν"
+        },
+        {
+          "reference": "Phil.2.4",
+          "greek": "μὴ τὰ ἑαυτῶν ἕκαστοι σκοποῦντες ἀλλὰ καὶ τὰ ἑτέρων ἕκαστοι"
+        }
+      ]
+    }
+  ]
+}
