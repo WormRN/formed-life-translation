@@ -61,7 +61,7 @@
 
 **28** Do not let your opponents intimidate you in any way. Your courage will be a clear sign to them that they are headed for destruction, but that you are headed for deliverance—and all of this is from God.
 
-**29** God has graciously given you the privilege not only to trust in Him, but also to suffer for Christ and His cause.
+**29** God has graciously given you the privilege not only to trust in Christ, but also to suffer for Him and His cause.
 
 **30** You are facing the same struggle you once saw me face, and that you now hear I am still facing today.
 
