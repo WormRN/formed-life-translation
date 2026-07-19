@@ -1,0 +1,17 @@
+{
+  "candidate_id":"FLT-PHP-01-019-026-HUMAN-EDITOR-v01",
+  "unit_id":"PHP-01-019-026",
+  "status":"human_edited_candidate_not_finalized",
+  "evidence_run":"FLT-PHP-01-20260718-981",
+  "verse_renderings":[
+    {"reference":"Phil.1.19","text":"I know that my distress will become my deliverance through your prayers and the help of the Spirit of Jesus Christ."},
+    {"reference":"Phil.1.20","text":"My eager hope and expectation is that I will not be ashamed in any way. Instead, I hope to have complete courage so that now, as always, Christ will be honored in my body, whether I live or die."},
+    {"reference":"Phil.1.21","text":"For to me, living means living for Christ, and dying means gaining something even better."},
+    {"reference":"Phil.1.22","text":"But if living on in this body means more fruitful work for me, then I honestly don’t know which one to choose!"},
+    {"reference":"Phil.1.23","text":"I am torn between the two. I long to leave this life and be with Christ—that would be far better."},
+    {"reference":"Phil.1.24","text":"But for your sake, it is more necessary that I remain in this body."},
+    {"reference":"Phil.1.25","text":"Since I am convinced of this, I know I will stay. I will remain with all of you so that you can grow and experience joy in your faith."},
+    {"reference":"Phil.1.26","text":"Then, when I return to you, you will have even more reason to be proud of what Christ Jesus has done in me."}
+  ],
+  "finalization_claim":false
+}
