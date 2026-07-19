@@ -12,7 +12,7 @@
 
 **28** Do not let your opponents intimidate you in any way. Your courage will be a clear sign to them that they are headed for destruction, but that you are headed for deliverance—and all of this is from God.
 
-**29** God has graciously given you the privilege not only to trust in Him, but also to suffer for Christ and His cause.
+**29** God has graciously given you the privilege not only to trust in Christ, but also to suffer for Him and His cause.
 
 **30** You are facing the same struggle you once saw me face, and that you now hear I am still facing today.
 
@@ -22,7 +22,7 @@
 - **1:27 — unity and contest:** “United in one spirit” preserves the unresolved human-spirit/Holy-Spirit question. “Competing together as one team” recreates the coordinated-contest imagery in accessible contemporary language.
 - **1:27 — faith of the good news:** “Stay faithful to the good news” resolves the relationship as continued allegiance. The added perseverance sense in “stay” remains an audit point.
 - **1:28 — sign and deliverance:** Makes their courage the sign, preserves the destruction/deliverance contrast, and attributes the whole outcome to God. “Deliverance” supports chapter-level continuity with verse 19 while retaining the salvation resonance.
-- **1:29 — gracious privilege:** Preserves divine gift, trust, and suffering. Because “God” begins the sentence, “Him” may be heard as referring to God even though the Greek pronoun refers to Christ; this is a high-priority reader-reconstruction point. “Christ and His cause” expands the Greek “for Him” and remains a semantic-audit point.
+- **1:29 — gracious privilege:** Preserves divine gift, trust, and suffering. “Trust in Christ” makes the Greek object of faith explicit and removes the reader-reconstruction ambiguity identified by the full-chapter audit. “For Him and His cause” keeps Christ as the clear referent while expanding the Greek “for Him”; the expansion remains a documented human editorial choice.
 - **1:30 — shared struggle:** Uses non-militaristic language and clearly connects the congregation’s present struggle with Paul’s past and continuing struggle.
 
 ## Remaining gates
