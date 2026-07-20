@@ -1,0 +1,25 @@
+{
+  "candidate_id": "FLT-PHP-02-001-004-HUMAN-EDITOR-v01",
+  "unit_id": "PHP-02-001-004",
+  "status": "human_edited_candidate_not_finalized",
+  "evidence_run": "FLT-PHP-02-20260719-3",
+  "verse_renderings": [
+    {
+      "reference": "Phil.2.1",
+      "text": "So then, since belonging to Christ gives you encouragement, since His love brings you comfort, since you share a partnership in the Spirit, and since you have deep affection and compassion,"
+    },
+    {
+      "reference": "Phil.2.2",
+      "text": "make my joy complete by sharing the same mindset. Share the same love, and work together with one heart and purpose."
+    },
+    {
+      "reference": "Phil.2.3",
+      "text": "Don’t compete against each other or try to make yourselves look important. Instead, be humble and treat others as more important than yourselves."
+    },
+    {
+      "reference": "Phil.2.4",
+      "text": "Don’t think only about what matters to you. Focus on what matters to others, too."
+    }
+  ],
+  "finalization_claim": false
+}
