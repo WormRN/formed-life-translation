@@ -1,0 +1,67 @@
+{
+  "unit_id": "PHP-02-001-004",
+  "passage": "Philippians 2:1-4",
+  "governing_rules": [
+    {
+      "name": "Dynamic identity",
+      "rule": "FLT is firmly dynamic-equivalence and reader-facing prose serves the reader; Greek form belongs in the apparatus."
+    },
+    {
+      "name": "Meaning floor",
+      "rule": "Preserve meaning, logic, tone, discourse, and theological force; block only material loss, addition, or misleading meaning."
+    },
+    {
+      "name": "Target reader",
+      "rule": "Religion-naive adults and older adolescents near grade 6."
+    },
+    {
+      "name": "Natural English",
+      "rule": "Reordering, unpacking, sentence splitting, supplied connectors, and rhetorical recreation are permitted when warranted."
+    },
+    {
+      "name": "Human authority",
+      "rule": "The human editor owns wording decisions; audits supply evidence and do not finalize."
+    }
+  ],
+  "matrix_entries": [
+    {
+      "lemma": "κοινωνία",
+      "entry": "partnership / shared participation according to context",
+      "status": "candidate contextual precedent"
+    },
+    {
+      "lemma": "φρονέω",
+      "entry": "mindset / shared way of thinking according to context",
+      "status": "candidate contextual precedent"
+    }
+  ],
+  "source_data": {
+    "edition": "SBLGNT",
+    "book": "Philippians",
+    "chapter": 2,
+    "verse_start": 1,
+    "verse_end": 4,
+    "verses": [
+      {
+        "reference": "Phil.2.1",
+        "greek": "Εἴ τις οὖν παράκλησις ἐν Χριστῷ εἴ τι παραμύθιον ἀγάπης εἴ τις κοινωνία πνεύματος εἴ τις σπλάγχνα καὶ οἰκτιρμοί",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.2.2",
+        "greek": "πληρώσατέ μου τὴν χαρὰν ἵνα τὸ αὐτὸ φρονῆτε τὴν αὐτὴν ἀγάπην ἔχοντες σύμψυχοι τὸ ἓν φρονοῦντες",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.2.3",
+        "greek": "μηδὲν κατ’ ἐριθείαν μηδὲ κατὰ κενοδοξίαν ἀλλὰ τῇ ταπεινοφροσύνῃ ἀλλήλους ἡγούμενοι ὑπερέχοντας ἑαυτῶν",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.2.4",
+        "greek": "μὴ τὰ ἑαυτῶν ἕκαστοι σκοποῦντες ἀλλὰ καὶ τὰ ἑτέρων ἕκαστοι",
+        "tokens": []
+      }
+    ]
+  }
+}
