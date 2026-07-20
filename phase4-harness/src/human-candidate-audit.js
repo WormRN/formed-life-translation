@@ -26,7 +26,7 @@ const auditPrompt=`Audit the exact human-edited candidate against the Greek sema
 const audits=await Promise.all(config.workers.map(w=>call(w,'semantic_audit',auditPrompt,validateAudit,o=>assertRefs(o.verse_assessments))));
 for(const x of audits)await emit(runDir,`outputs/audits/${x.role}.json`,x);
 
-let md=`# FLT Phase 4 — Human Candidate Meaning Audit\n\n**Candidate:** ${candidate.candidate_id}  \n**Status:** Audit evidence only; human decision required.\n\n## Human-edited text\n\n${candidate.verse_renderings.map(v=>`**${v.reference.replace('Phil.1.','')}** ${v.text}`).join('\n\n')}\n\n## Independent semantic-floor results\n\n`;
+let md=`# FLT Phase 4 — Human Candidate Meaning Audit\n\n**Candidate:** ${candidate.candidate_id}  \n**Status:** Audit evidence only; human decision required.\n\n## Human-edited text\n\n${candidate.verse_renderings.map(v=>`**${v.reference.replace(/^Phil\.\d+\./,'')}** ${v.text}`).join('\n\n')}\n\n## Independent semantic-floor results\n\n`;
 for(const [i,a] of audits.entries()){md+=`### Auditor ${i+1}: ${a.output.overall_eligible?'eligible':'blocked'}\n\n${a.output.overall_statement}\n\n`;for(const v of a.output.verse_assessments.filter(v=>v.status!=='pass'))md+=`- **${v.reference} — ${v.status}:** ${v.findings.map(f=>f.assessment).join(' ')}\n`;md+='\n'}
 md+='## Interpretation\n\nEligibility means the candidate remains defensible inside FLT’s semantic floor. Warnings identify documented human choices; they are not automatic demands for more literal wording. Any block requires human review before advancement.\n';
 await emit(runDir,'outputs/human-candidate-audit.md',md);
