@@ -1,0 +1,59 @@
+{
+  "unit_id": "PHP-02-005-011",
+  "passage": "Philippians 2:5-11",
+  "governing_rules": [
+    {
+      "name": "Dynamic identity",
+      "rule": "FLT is firmly dynamic-equivalence and reader-facing prose serves the reader; Greek form belongs in the apparatus."
+    },
+    {
+      "name": "Meaning floor",
+      "rule": "Preserve meaning, logic, tone, discourse, and theological force; block only material loss, addition, or misleading meaning."
+    },
+    {
+      "name": "Target reader",
+      "rule": "Religion-naive adults and older adolescents near grade 6."
+    },
+    {
+      "name": "Natural English",
+      "rule": "Reordering, unpacking, sentence splitting, supplied connectors, and rhetorical recreation are permitted when warranted."
+    },
+    {
+      "name": "Human authority",
+      "rule": "The human editor owns wording decisions; audits supply evidence and do not finalize."
+    }
+  ],
+  "matrix_entries": [
+    {
+      "lemma": "φρονέω",
+      "entry": "mindset / shared way of thinking according to context",
+      "status": "candidate contextual precedent"
+    },
+    {
+      "lemma": "κενόω",
+      "entry": "self-emptying expressed contextually through renouncing the exercise of divine rights and taking servant form; must not imply loss of deity",
+      "status": "candidate contextual precedent requiring audit"
+    },
+    {
+      "lemma": "μορφή",
+      "entry": "nature / status according to context; preserve the conceptual parallel between the nature of God and the nature of a servant",
+      "status": "candidate contextual precedent"
+    }
+  ],
+  "source_data": {
+    "edition": "SBLGNT",
+    "book": "Philippians",
+    "chapter": 2,
+    "verse_start": 5,
+    "verse_end": 11,
+    "verses": [
+      {"reference":"Phil.2.5","greek":"τοῦτο φρονεῖτε ἐν ὑμῖν ὃ καὶ ἐν Χριστῷ Ἰησοῦ","tokens":[]},
+      {"reference":"Phil.2.6","greek":"ὃς ἐν μορφῇ θεοῦ ὑπάρχων οὐχ ἁρπαγμὸν ἡγήσατο τὸ εἶναι ἴσα θεῷ","tokens":[]},
+      {"reference":"Phil.2.7","greek":"ἀλλὰ ἑαυτὸν ἐκένωσεν μορφὴν δούλου λαβών ἐν ὁμοιώματι ἀνθρώπων γενόμενος καὶ σχήματι εὑρεθεὶς ὡς ἄνθρωπος","tokens":[]},
+      {"reference":"Phil.2.8","greek":"ἐταπείνωσεν ἑαυτὸν γενόμενος ὑπήκοος μέχρι θανάτου θανάτου δὲ σταυροῦ","tokens":[]},
+      {"reference":"Phil.2.9","greek":"διὸ καὶ ὁ θεὸς αὐτὸν ὑπερύψωσεν καὶ ἐχαρίσατο αὐτῷ τὸ ὄνομα τὸ ὑπὲρ πᾶν ὄνομα","tokens":[]},
+      {"reference":"Phil.2.10","greek":"ἵνα ἐν τῷ ὀνόματι Ἰησοῦ πᾶν γόνυ κάμψῃ ἐπουρανίων καὶ ἐπιγείων καὶ καταχθονίων","tokens":[]},
+      {"reference":"Phil.2.11","greek":"καὶ πᾶσα γλῶσσα ἐξομολογήσηται ὅτι κύριος Ἰησοῦς Χριστὸς εἰς δόξαν θεοῦ πατρός","tokens":[]}
+    ]
+  }
+}
