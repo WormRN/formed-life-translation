@@ -1,0 +1,37 @@
+{
+  "candidate_id": "FLT-PHP-02-005-011-HUMAN-EDITOR-v01",
+  "unit_id": "PHP-02-005-011",
+  "status": "human_edited_candidate_not_finalized",
+  "evidence_run": "FLT-PHP-02-20260721-1",
+  "verse_renderings": [
+    {
+      "reference": "Phil.2.5",
+      "text": "Have the same mindset toward one another that Christ Jesus had."
+    },
+    {
+      "reference": "Phil.2.6",
+      "text": "Though He existed in the very nature of God, He did not treat His equality with God as something to use for His own advantage."
+    },
+    {
+      "reference": "Phil.2.7",
+      "text": "Instead, He chose not to exercise His divine rights. He took on the true nature of a servant and was born as a human being."
+    },
+    {
+      "reference": "Phil.2.8",
+      "text": "And as a man, He lived in humble obedience all the way to death—His death on a cross."
+    },
+    {
+      "reference": "Phil.2.9",
+      "text": "Because of this, God elevated Him to the highest place of honor and gave Him the name above every other name,"
+    },
+    {
+      "reference": "Phil.2.10",
+      "text": "so that at the name of Jesus every knee will bow—in heaven, on the earth, and under the earth—"
+    },
+    {
+      "reference": "Phil.2.11",
+      "text": "and every tongue will openly declare that Jesus Christ is Lord, to the glory of God the Father."
+    }
+  ],
+  "finalization_claim": false
+}
