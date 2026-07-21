@@ -1,8 +1,10 @@
 {
-  "candidate_id": "FLT-PHP-02-005-011-HUMAN-EDITOR-v01",
+  "candidate_id": "FLT-PHP-02-005-011-HUMAN-EDITOR-v02",
+  "supersedes": "FLT-PHP-02-005-011-HUMAN-EDITOR-v01",
   "unit_id": "PHP-02-005-011",
-  "status": "human_edited_candidate_not_finalized",
+  "status": "human_approved_phase_4_benchmark",
   "evidence_run": "FLT-PHP-02-20260721-1",
+  "github_actions_run": "29868317005",
   "verse_renderings": [
     {
       "reference": "Phil.2.5",
@@ -18,7 +20,7 @@
     },
     {
       "reference": "Phil.2.8",
-      "text": "And as a man, He lived in humble obedience all the way to death—His death on a cross."
+      "text": "And as a man, He humbled Himself in obedience all the way to death—His death on a cross."
     },
     {
       "reference": "Phil.2.9",
@@ -33,5 +35,11 @@
       "text": "and every tongue will openly declare that Jesus Christ is Lord, to the glory of God the Father."
     }
   ],
-  "finalization_claim": false
+  "human_decision": {
+    "date": "2026-07-21",
+    "decision": "approved_for_phase_4_benchmark",
+    "accepted_audit_repair": "Phil.2.8 restores the explicit self-humbling action.",
+    "footnote_direction": "Retain transparent notes for consequential interpretive choices and decision rationale."
+  },
+  "publication_finalization_claim": false
 }
