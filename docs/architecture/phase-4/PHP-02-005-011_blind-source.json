@@ -1,0 +1,75 @@
+{
+  "chapter_id": "PHP-02",
+  "book": "Philippians",
+  "chapter": 2,
+  "source_edition": "SBLGNT",
+  "tone": "majestic yet accessible, worshipful, self-giving, climactic, Christ-centered",
+  "target_reader": "religion-naive adults and older adolescents near grade 6",
+  "translation_identity": "firmly dynamic-equivalence, NLT-like in readability but independent",
+  "sealed_unit": {
+    "unit_id": "PHP-02-001-004",
+    "instruction": "The completed human-edited wording of Philippians 2:1-4 is excluded from blind drafting."
+  },
+  "governing_rules": [
+    "The prose serves the reader; the apparatus serves accountability.",
+    "Translate meaning, logic, tone, discourse movement, and theological force rather than Greek surface form.",
+    "Use clear natural oral English; reorder, split, unpack, and clarify implied relationships when comprehension benefits.",
+    "Preserve the passage's movement from Christ's status, through self-humbling and death, to God's exaltation and universal acknowledgment.",
+    "Do not turn contested clauses into unsupported commentary; document consequential resolutions as risks or human questions.",
+    "No comparison translations, traditional benchmark wording, or sealed human wording may enter blind drafting."
+  ],
+  "existing_decisions": [
+    "Use Christ and Jesus Christ naturally according to the source reference.",
+    "Deity pronouns capitalized.",
+    "Maintain the reader-first dynamic center established by the audited Philippians 1 benchmark without exposing its wording to blind workers."
+  ],
+  "units": [
+    {
+      "unit_id": "PHP-02-005-011",
+      "passage": "Philippians 2:5–11",
+      "title": "Christ’s self-humbling and exaltation",
+      "known_issues": [
+        "Verse 5 connects the community's mindset to the mindset embodied by Christ; preserve the ethical bridge from verses 1-4 without exposing their human-edited wording.",
+        "Verse 6's μορφῇ θεοῦ affirms divine status or form; avoid reducing it to mere appearance.",
+        "Verse 6's ἁρπαγμός is disputed: Christ did not regard equality with God as something to seize, exploit, or use for His own advantage. Any resolution must preserve the contrast with self-giving.",
+        "Verse 7's 'emptied Himself' is metaphorical and explained by taking servant form and becoming human; do not imply that Christ ceased to be divine or discarded divine attributes.",
+        "μορφή is used for both God and servant in verses 6-7; keep the conceptual relationship accountable even if English wording differs.",
+        "δοῦλος carries servant/slave force; choose accessible wording without erasing low status.",
+        "Verses 7-8 affirm genuine human existence and radical obedience culminating in the shameful death of a cross.",
+        "Verse 9 makes God's exaltation a response to Christ's self-humbling and speaks of the supreme bestowed name; avoid prematurely inserting an unstated name unless clearly documented.",
+        "Verses 10-11 have universal cosmic scope: beings in heaven, on earth, and under the earth bow, and every tongue acknowledges Jesus Christ as Lord.",
+        "Preserve the climax 'Jesus Christ is Lord' and its result: glory to God the Father."
+      ],
+      "verses": [
+        {
+          "reference": "Phil.2.5",
+          "greek": "τοῦτο φρονεῖτε ἐν ὑμῖν ὃ καὶ ἐν Χριστῷ Ἰησοῦ"
+        },
+        {
+          "reference": "Phil.2.6",
+          "greek": "ὃς ἐν μορφῇ θεοῦ ὑπάρχων οὐχ ἁρπαγμὸν ἡγήσατο τὸ εἶναι ἴσα θεῷ"
+        },
+        {
+          "reference": "Phil.2.7",
+          "greek": "ἀλλὰ ἑαυτὸν ἐκένωσεν μορφὴν δούλου λαβών ἐν ὁμοιώματι ἀνθρώπων γενόμενος καὶ σχήματι εὑρεθεὶς ὡς ἄνθρωπος"
+        },
+        {
+          "reference": "Phil.2.8",
+          "greek": "ἐταπείνωσεν ἑαυτὸν γενόμενος ὑπήκοος μέχρι θανάτου θανάτου δὲ σταυροῦ"
+        },
+        {
+          "reference": "Phil.2.9",
+          "greek": "διὸ καὶ ὁ θεὸς αὐτὸν ὑπερύψωσεν καὶ ἐχαρίσατο αὐτῷ τὸ ὄνομα τὸ ὑπὲρ πᾶν ὄνομα"
+        },
+        {
+          "reference": "Phil.2.10",
+          "greek": "ἵνα ἐν τῷ ὀνόματι Ἰησοῦ πᾶν γόνυ κάμψῃ ἐπουρανίων καὶ ἐπιγείων καὶ καταχθονίων"
+        },
+        {
+          "reference": "Phil.2.11",
+          "greek": "καὶ πᾶσα γλῶσσα ἐξομολογήσηται ὅτι κύριος Ἰησοῦς Χριστὸς εἰς δόξαν θεοῦ πατρός"
+        }
+      ]
+    }
+  ]
+}
