@@ -105,3 +105,42 @@ Epistolary openings may use either “From...” or “This letter is from...”
 
 **Revisit trigger:**  
 Revisit after the full Philippians 1 read-aloud pass to confirm rhythm and consistency.
+
+
+---
+
+## Phil 2:5–11 — Christ’s Divine Status, Self-Emptying, and Humble Obedience
+
+**Date:** 2026-07-21  
+**Status:** confirmed for the Phase 4 benchmark
+
+**Issue:**  
+How to express Christ’s divine status, equality with God, self-emptying, servant nature, true humanity, and self-humbling in clear reader-facing English without implying that He ceased to be God.
+
+**Options considered:**  
+
+- “did not treat His equality with God as something to use for His own advantage” and the alternate interpretive tradition “did not cling to equality with God”
+- “emptied Himself,” “gave up His divine privileges,” and “chose not to exercise His divine rights”
+- “He lived in humble obedience” and “He humbled Himself in obedience”
+
+**Decision:**  
+Use “chose not to exercise His divine rights” as the contextual rendering of the kenosis language. Restore the explicit reflexive action in verse 8: “He humbled Himself in obedience.”
+
+**Reason:**  
+The three-reader reconstruction and three-agent semantic-floor audit consistently recovered voluntary nonuse of divine privilege without loss of deity. “Chose not to exercise” protects the continuing possession of divine status more clearly than language of surrendering or relinquishing it. The verse 8 revision more directly preserves “He humbled Himself” while remaining natural English.
+
+**Final benchmark wording:**  
+
+> Though He existed in the very nature of God, He did not treat His equality with God as something to use for His own advantage. Instead, He chose not to exercise His divine rights. He took on the true nature of a servant and was born as a human being. And as a man, He humbled Himself in obedience all the way to death—His death on a cross.
+
+**Footnotes needed:**  
+Yes. Explain the meaningful interpretive alternative in verse 6 and clarify that verse 7 describes voluntary nonexercise of divine rights, not loss of deity. Preserve the audit rationale for future reviewers.
+
+**Glossary update needed:**  
+Add contextual precedent entries for κενόω and μορφή after the benchmark corpus is reviewed as a whole.
+
+**Style Guide update needed:**  
+Add a general footnote-transparency policy: notes may be numerous when they document consequential interpretive choices, alternatives, precedent, or safeguards against misunderstanding. Notes should remain accessible to religion-naive readers and need not reproduce the technical scale of the NET Full Notes.
+
+**Revisit trigger:**  
+Revisit during whole-letter oral-flow review, theological review of the benchmark corpus, or if later κενόω/μορφή contexts expose a conflict.
