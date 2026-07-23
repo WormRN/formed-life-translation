@@ -1,0 +1,57 @@
+{
+  "chapter_id": "PHP-02",
+  "book": "Philippians",
+  "chapter": 2,
+  "source_edition": "SBLGNT",
+  "tone": "warm, pastoral, earnest, communal, joyful, and urgent",
+  "target_reader": "religion-naive adults and older adolescents near grade 6",
+  "translation_identity": "firmly dynamic-equivalence, NLT-like in readability but independent",
+  "sealed_unit": {
+    "unit_id": "PHP-02-001-011",
+    "instruction": "The completed human-edited wording of Philippians 2:1-11 is excluded from blind drafting. Preserve only the source-text discourse connection into verse 12."
+  },
+  "governing_rules": [
+    "The prose serves the reader; the apparatus serves accountability.",
+    "Translate meaning, logic, tone, discourse movement, and theological force rather than Greek surface form.",
+    "Use clear natural oral English; reorder, split, unpack, and clarify implied relationships when comprehension benefits.",
+    "Preserve the paragraph's movement from continuing obedience, through God's enabling work, to blameless communal witness and shared sacrificial joy.",
+    "Do not make salvation earned by human effort; preserve the relationship between the command in verse 12 and God's prior and active work in verse 13.",
+    "Do not turn disputed clauses into unsupported commentary; document consequential resolutions as risks or human questions.",
+    "No comparison translations, traditional benchmark wording, conversational drafts, or sealed human wording may enter blind drafting."
+  ],
+  "existing_decisions": [
+    "Use Christ and Jesus Christ naturally according to the source reference.",
+    "Deity pronouns capitalized.",
+    "Maintain the reader-first dynamic center established by the audited Philippians 1 benchmark without exposing its wording to blind workers."
+  ],
+  "units": [
+    {
+      "unit_id": "PHP-02-012-018",
+      "passage": "Philippians 2:12–18",
+      "title": "God at work in an obedient and joyful community",
+      "known_issues": [
+        "Verse 12 begins with a logical consequence from the Christ-pattern immediately preceding it; preserve the connection without exposing the approved wording of verses 5-11.",
+        "The address and commands are plural and communal. Do not erase the corporate dimension, but do not force an exclusively corporate interpretation.",
+        "Verse 12's 'work out your own salvation' describes carrying salvation into effect or living out its results, not earning salvation. Preserve the command's force without creating works-righteousness.",
+        "Verse 12's 'fear and trembling' conveys profound seriousness, humility, and reverence; avoid casualness, but do not make believers terrified that God may withdraw salvation.",
+        "Verse 13 repeats the work/energize word family and attributes both willing and acting to God's active work in or among the believers. Preserve both the inner desire and outward action.",
+        "The final phrase of verse 13 may mean for God's good pleasure or according to His gracious purpose. Do not silently flatten the referent without documenting the choice.",
+        "Verse 14's second noun can concern disputes, arguments, doubts, or contentious reasoning. Choose natural wording that fits the communal warning.",
+        "Verse 15 echoes scriptural language about a crooked and distorted generation and depicts believers as God's blameless children shining like heavenly lights in the world.",
+        "Verse 16's ἐπέχοντες may mean holding firmly to the word of life or holding it out to others. Preserve the best contextual sense and flag the consequential alternative.",
+        "Verse 16's day of Christ and Paul's running/labor imagery express his hope that his ministry will prove fruitful, not personal vanity.",
+        "Verse 17 uses sacrificial and drink-offering imagery for Paul's possible death alongside the believers' faith-filled service. Make the relationship intelligible without erasing the image.",
+        "Verses 17-18 repeat joy and shared rejoicing. Preserve the mutual and communal force rather than reducing it to private happiness."
+      ],
+      "verses": [
+        {"reference":"Phil.2.12","greek":"Ὥστε ἀγαπητοί μου καθὼς πάντοτε ὑπηκούσατε μὴ ὡς ἐν τῇ παρουσίᾳ μου μόνον ἀλλὰ νῦν πολλῷ μᾶλλον ἐν τῇ ἀπουσίᾳ μου μετὰ φόβου καὶ τρόμου τὴν ἑαυτῶν σωτηρίαν κατεργάζεσθε"},
+        {"reference":"Phil.2.13","greek":"θεὸς γάρ ἐστιν ὁ ἐνεργῶν ἐν ὑμῖν καὶ τὸ θέλειν καὶ τὸ ἐνεργεῖν ὑπὲρ τῆς εὐδοκίας"},
+        {"reference":"Phil.2.14","greek":"Πάντα ποιεῖτε χωρὶς γογγυσμῶν καὶ διαλογισμῶν"},
+        {"reference":"Phil.2.15","greek":"ἵνα γένησθε ἄμεμπτοι καὶ ἀκέραιοι τέκνα θεοῦ ἄμωμα μέσον γενεᾶς σκολιᾶς καὶ διεστραμμένης ἐν οἷς φαίνεσθε ὡς φωστῆρες ἐν κόσμῳ"},
+        {"reference":"Phil.2.16","greek":"λόγον ζωῆς ἐπέχοντες εἰς καύχημα ἐμοὶ εἰς ἡμέραν Χριστοῦ ὅτι οὐκ εἰς κενὸν ἔδραμον οὐδὲ εἰς κενὸν ἐκοπίασα"},
+        {"reference":"Phil.2.17","greek":"ἀλλὰ εἰ καὶ σπένδομαι ἐπὶ τῇ θυσίᾳ καὶ λειτουργίᾳ τῆς πίστεως ὑμῶν χαίρω καὶ συγχαίρω πᾶσιν ὑμῖν"},
+        {"reference":"Phil.2.18","greek":"τὸ δὲ αὐτὸ καὶ ὑμεῖς χαίρετε καὶ συγχαίρετέ μοι"}
+      ]
+    }
+  ]
+}
