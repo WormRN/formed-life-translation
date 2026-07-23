@@ -1,0 +1,33 @@
+{
+  "unit_id": "PHP-02-012-018",
+  "passage": "Philippians 2:12-18",
+  "governing_rules": [
+    {"name":"Dynamic identity","rule":"FLT is firmly dynamic-equivalence and reader-facing prose serves the reader; Greek form belongs in the apparatus."},
+    {"name":"Meaning floor","rule":"Preserve meaning, logic, tone, discourse, and theological force; block only material loss, addition, or misleading meaning."},
+    {"name":"Target reader","rule":"Religion-naive adults and older adolescents near grade 6."},
+    {"name":"Natural English","rule":"Reordering, unpacking, sentence splitting, supplied connectors, and rhetorical recreation are permitted when warranted."},
+    {"name":"Human authority","rule":"The human editor owns wording decisions; audits supply evidence and do not finalize."}
+  ],
+  "matrix_entries": [
+    {"lemma":"κατεργάζομαι","entry":"live out / carry into effect according to context; must not imply earning salvation","status":"candidate contextual precedent requiring audit"},
+    {"lemma":"ἐπέχω","entry":"display / present / exhibit according to the visible-witness context; holding firmly and holding out remain consequential alternatives","status":"candidate contextual precedent requiring audit"},
+    {"lemma":"τρέχω and κοπιάω","entry":"combined dynamically as hard work when the running image carries no essential independent force","status":"candidate contextual precedent requiring audit"},
+    {"lemma":"σπένδομαι","entry":"life poured out like an offering in relation to the believers’ faithful sacrificial service","status":"candidate contextual precedent requiring audit"}
+  ],
+  "source_data": {
+    "edition": "SBLGNT",
+    "book": "Philippians",
+    "chapter": 2,
+    "verse_start": 12,
+    "verse_end": 18,
+    "verses": [
+      {"reference":"Phil.2.12","greek":"Ὥστε ἀγαπητοί μου καθὼς πάντοτε ὑπηκούσατε μὴ ὡς ἐν τῇ παρουσίᾳ μου μόνον ἀλλὰ νῦν πολλῷ μᾶλλον ἐν τῇ ἀπουσίᾳ μου μετὰ φόβου καὶ τρόμου τὴν ἑαυτῶν σωτηρίαν κατεργάζεσθε","tokens":[]},
+      {"reference":"Phil.2.13","greek":"θεὸς γάρ ἐστιν ὁ ἐνεργῶν ἐν ὑμῖν καὶ τὸ θέλειν καὶ τὸ ἐνεργεῖν ὑπὲρ τῆς εὐδοκίας","tokens":[]},
+      {"reference":"Phil.2.14","greek":"Πάντα ποιεῖτε χωρὶς γογγυσμῶν καὶ διαλογισμῶν","tokens":[]},
+      {"reference":"Phil.2.15","greek":"ἵνα γένησθε ἄμεμπτοι καὶ ἀκέραιοι τέκνα θεοῦ ἄμωμα μέσον γενεᾶς σκολιᾶς καὶ διεστραμμένης ἐν οἷς φαίνεσθε ὡς φωστῆρες ἐν κόσμῳ","tokens":[]},
+      {"reference":"Phil.2.16","greek":"λόγον ζωῆς ἐπέχοντες εἰς καύχημα ἐμοὶ εἰς ἡμέραν Χριστοῦ ὅτι οὐκ εἰς κενὸν ἔδραμον οὐδὲ εἰς κενὸν ἐκοπίασα","tokens":[]},
+      {"reference":"Phil.2.17","greek":"ἀλλὰ εἰ καὶ σπένδομαι ἐπὶ τῇ θυσίᾳ καὶ λειτουργίᾳ τῆς πίστεως ὑμῶν χαίρω καὶ συγχαίρω πᾶσιν ὑμῖν","tokens":[]},
+      {"reference":"Phil.2.18","greek":"τὸ δὲ αὐτὸ καὶ ὑμεῖς χαίρετε καὶ συγχαίρετέ μοι","tokens":[]}
+    ]
+  }
+}
