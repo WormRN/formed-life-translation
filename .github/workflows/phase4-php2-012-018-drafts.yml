@@ -1,0 +1,43 @@
+name: FLT Phase 4 Philippians 2:12-18 blind drafts
+
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/phase4-php2-012-018-drafts.yml']
+  workflow_dispatch:
+
+permissions: {contents: read}
+concurrency: {group: flt-phase-4-php2-012-018-drafts, cancel-in-progress: false}
+
+jobs:
+  draft:
+    name: Blind reader-first drafts for Philippians 2:12-18
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: 24, cache: npm, cache-dependency-path: phase4-harness/package-lock.json}
+      - name: Install and test
+        working-directory: phase4-harness
+        run: npm ci && npm test
+      - name: Create run identity
+        id: run
+        shell: bash
+        run: |
+          run_id="FLT-PHP-02-$(date -u +%Y%m%d)-${GITHUB_RUN_NUMBER}"
+          node phase4-harness/scripts/prepare-run-config.mjs phase4-harness/config.github-actions.json phase4-harness/.php2-012-018-config.json "$run_id"
+          echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
+      - name: Draft unit
+        run: node phase4-harness/src/chapter-units.js phase4-harness/.php2-012-018-config.json "phase4-harness/runs/${{ steps.run.outputs.run_id }}" docs/architecture/phase-4/PHP-02-012-018_blind-source.json
+      - name: Upload blind-draft bundle
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: "${{ steps.run.outputs.run_id || 'FLT-PHP-02-012-018-blocked' }}"
+          path: phase4-harness/runs/
+          retention-days: 30
