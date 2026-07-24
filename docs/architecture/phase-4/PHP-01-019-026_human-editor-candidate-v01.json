@@ -48,7 +48,8 @@
     "requested_on": "2026-07-24",
     "workflow": ".github/workflows/phase4-php1-019-026-candidate-audit.yml",
     "reason": "Required sealed-candidate audit after common-goal process revalidation and human selection.",
-    "trigger": 1
+    "trigger": 2,
+    "note": "Harmless retrigger after the workflow-creation push produced no associated run."
   },
   "revision": {
     "authorized_on": "2026-07-24",
