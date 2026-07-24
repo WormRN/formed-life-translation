@@ -189,3 +189,44 @@ None at this stage.
 
 **Revisit trigger:**  
 Revisit during whole-chapter oral-flow review, chapter-level theological review, or if a later occurrence exposes a conflict.
+
+---
+
+## Phil 2:19–24 — Timothy’s Shared Concern and Proven Character
+
+**Date:** 2026-07-23  
+**Status:** confirmed for the Phase 4 benchmark
+
+**Issue:**  
+How to express Paul’s hope “in the Lord Jesus,” Timothy’s uniquely shared concern, the contrast with self-interest, and the father–son service image in clear natural English.
+
+**Decision:**  
+Retain “shares my heart” for Timothy’s like-minded concern, “what matters to Jesus Christ” for Christ’s interests, and the father working alongside his son image. Restore the source’s full title in verse 19: “I hope in the Lord Jesus.”
+
+**Reason:**  
+The first exact-candidate audit found only one blocking defect: verse 19 omitted “Jesus” from “in the Lord Jesus.” The human editor authorized that single repair. The corrected candidate then passed all three independent semantic-floor audits with zero blocking defects.
+
+**Final wording:**
+
+> **19** I hope in the Lord Jesus to send Timothy to you soon. Then I will be deeply encouraged when I hear how you are doing.  
+> **20** He is the only one I have who shares my heart and genuinely cares about your well-being.  
+> **21** Everyone else is looking out for their own interests instead of what matters to Jesus Christ.  
+> **22** But you already know Timothy’s proven character. Like a son working at his father's side, he has served with me to spread the good news.  
+> **23** So I hope to send him as soon as I see how my own situation turns out.  
+> **24** And I am confident in the Lord that I myself will come soon too.
+
+**Audit:**  
+GitHub run 30062746430; three of three auditors eligible; zero blocking defects.
+
+**Footnotes needed:**  
+None presently required.
+
+**Glossary update needed:**  
+Consider a contextual precedent for ἰσόψυχος after the benchmark corpus is reviewed as a whole.
+
+**Style Guide update needed:**  
+None.
+
+**Revisit trigger:**  
+Whole-chapter oral-flow review or a later contextual conflict.
+
