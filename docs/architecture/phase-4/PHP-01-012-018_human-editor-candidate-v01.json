@@ -1,7 +1,7 @@
 {
   "candidate_id": "FLT-PHP-01-012-018-HUMAN-EDITOR-v01",
   "unit_id": "PHP-01-012-018",
-  "status": "human_selected_candidate_for_revalidation_audit",
+  "status": "human_approved_process_revalidated",
   "revalidation_evidence_run": "FLT-PHP-REVALIDATION-20260724-1",
   "verse_renderings": [
     {
@@ -52,5 +52,20 @@
     "prior_wording": "Everyone in the imperial guard, and everyone else, now knows that I am in prison because of Christ.",
     "selected_wording": "As a result, it has become obvious to the entire palace guard and to everyone else that I am in prison because of Christ.",
     "scope": "Only verse 13 changed; verses 12 and 14–18 retained exactly."
+  },
+  "audit_result": {
+    "audited_on": "2026-07-24",
+    "github_run_id": 30115635072,
+    "run_url": "https://github.com/WormRN/formed-life-translation/actions/runs/30115635072",
+    "artifact_name": "FLT-PHP-01-20260724-1",
+    "auditor_total": 3,
+    "eligible_count": 3,
+    "blocking_defects": 0,
+    "semantic_pass": true
+  },
+  "approval": {
+    "approved_by": "human_editor",
+    "scope": "Philippians 1:12–18 as sealed, including the revised verse 13 and unchanged verses 12 and 14–18.",
+    "status": "unit_approved_pending_chapter_finalization"
   }
 }
