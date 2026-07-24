@@ -1,5 +1,5 @@
 schema_version: 1
-last_updated: "2026-07-23"
+last_updated: "2026-07-24"
 project:
   name: "Formed Life Translation"
   repository: "WormRN/formed-life-translation"
@@ -53,66 +53,69 @@ governing_documents:
 
 current_checkpoint:
   book: "Philippians"
-  chapter: 2
-  current_unit_id: "PHP-02-025-030"
-  current_passage: "Philippians 2:25-30"
-  stage: "whole_chapter_oral_review"
-  candidate_status: "corrected_candidate_passed_semantic_floor"
-  candidate_sealed: true
-  latest_accepted_unit: "PHP-02-019-024"
-  next_permitted_action: "Present Philippians 2:1-30 as a continuous read-aloud text. Await the human editor’s oral-flow feedback and explicit acceptance of 2:25-30 before finalizing the unit or advancing to chapter 3."
-  latest_draft:
+  chapter: 1
+  current_unit_id: "PHP-REVALIDATION-001-024"
+  current_passage: "Philippians 1:1-30 and 2:1-24 process revalidation"
+  stage: "common_goal_blind_draft_revalidation"
+  candidate_status: "Previous human wording retained; invalid role-divergent upstream drafting evidence is being replaced."
+  candidate_sealed: false
+  latest_accepted_unit: "PHP-02-019-024 (wording acceptance; drafting-process revalidation pending)"
+  next_permitted_action: "Run the authenticated nine-unit common-goal blind-draft batch. After receipt verification, present one unit at a time as Verse/A/B/C/Current FLT for human reaffirmation or revision."
+  process_revalidation:
+    reason: "Earlier blind drafting assigned different readability, Greek-fidelity, and balanced missions instead of one common constitutional goal."
+    affected_units:
+      - "PHP-01-001-002"
+      - "PHP-01-003-011"
+      - "PHP-01-012-018"
+      - "PHP-01-019-026"
+      - "PHP-01-027-030"
+      - "PHP-02-001-004"
+      - "PHP-02-005-011"
+      - "PHP-02-012-018"
+      - "PHP-02-019-024"
+    excluded_valid_unit: "PHP-02-025-030"
+    current_flt_hidden_from_workers: true
+    comparison_translations_hidden_from_workers: true
+    required_presentation: "Verse/A/B/C/Current FLT"
+    audit_policy:
+      philippians_1: "Run a sealed-candidate audit after human revalidation because exact-candidate evidence is incomplete under the newer process."
+      philippians_2_1_24: "Preserve existing exact-candidate audits if the human editor reaffirms wording unchanged; rerun the audit for any changed unit."
+      philippians_2_25_30: "No drafting rerun; valid common-goal drafting and corrected semantic-floor audit already exist."
+  last_valid_common_goal_unit:
+    passage: "Philippians 2:25-30"
     github_run_id: 30063037938
     engine_run_id: "FLT-PHP-02-20260724-2"
-    receipt_status: "completed"
     common_prompt_sha256: "e02ea8de3d69bd715c9a714ee67eb4e412e0314c9a21857ea9998247c549df20"
-    common_goal_verified: true
-  latest_audit:
-    passage: "Philippians 2:25-30"
-    github_run_id: 30065182431
-    engine_run_id: "FLT-PHP-02-20260724-2"
-    receipt_status: "passed_semantic_floor"
-    auditor_total: 3
-    eligible_count: 3
-    blocking_defects: 0
+    audit_run_id: 30065182431
     semantic_pass: true
-    human_decision_required: true
-    authorized_repair: "Philippians 2:28 changed from 'relieve my own anxiety' to 'lessen my own sorrow'."
-  latest_completed_audit:
-    passage: "Philippians 2:25-30"
-    github_run_id: 30065182431
-    engine_run_id: "FLT-PHP-02-20260724-2"
-    receipt_status: "passed_semantic_floor"
-    auditor_total: 3
-    eligible_count: 3
-    blocking_defects: 0
-    semantic_pass: true
+    human_acceptance_after_oral_review_pending: true
   active_files:
-    blind_source: "docs/architecture/phase-4/PHP-02-025-030_blind-source.json"
-    human_candidate: "docs/architecture/phase-4/PHP-02-025-030_human-editor-candidate-v01.json"
-    audit_source: "docs/architecture/phase-4/PHP-02-025-030_audit-source.json"
-    workflow: ".github/workflows/phase4-php2-025-030-candidate-audit.yml"
+    blind_source: "docs/architecture/phase-4/PHP-REVALIDATION-001-024_blind-source.json"
+    runner: "phase4-harness/src/process-revalidation-batch.js"
+    workflow: ".github/workflows/phase4-philippians-process-revalidation.yml"
     latest_draft_receipt: "config/latest_draft_run.json"
-    latest_audit_receipt: "config/latest_audit_run.json"
-  launch_commit: "b6ec0c7b26cdd07fda813e50a46dfeaf9851dbfc"
 
 accepted_units:
   - passage: "Philippians 1:1-30"
-    status: "accepted benchmark text"
+    status: "wording accepted benchmark text; common-goal drafting revalidation required; sealed-candidate audit required after human reaffirmation"
   - passage: "Philippians 2:1-4"
-    status: "accepted after exact-candidate audit"
+    status: "wording accepted after exact-candidate audit; common-goal drafting revalidation required"
   - passage: "Philippians 2:5-11"
-    status: "accepted after exact-candidate audit"
+    status: "wording accepted after exact-candidate audit; common-goal drafting revalidation required"
     audit_run_id: 29868317005
     audit_artifact: "FLT-PHP-02-20260721-1"
   - passage: "Philippians 2:12-18"
-    status: "accepted_without_repair"
+    status: "wording accepted without repair after exact-candidate audit; common-goal drafting revalidation required"
     audit_run_id: 30043603606
     audit_artifact: "FLT-PHP-02-20260723-2"
   - passage: "Philippians 2:19-24"
-    status: "accepted_after_authorized_repair"
+    status: "wording accepted after authorized repair and exact-candidate audit; common-goal drafting revalidation required"
     audit_run_id: 30062746430
     audit_artifact: "FLT-PHP-02-20260724-3"
+  - passage: "Philippians 2:25-30"
+    status: "valid common-goal drafting and corrected semantic-floor audit; awaiting explicit human acceptance after oral review"
+    draft_run_id: 30063037938
+    audit_run_id: 30065182431
 
 audit_retrieval:
   user_run_link_required: false
