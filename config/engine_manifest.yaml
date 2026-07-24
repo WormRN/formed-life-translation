@@ -56,11 +56,17 @@ current_checkpoint:
   chapter: 2
   current_unit_id: "PHP-02-025-030"
   current_passage: "Philippians 2:25-30"
-  stage: "blind_candidate_generation_running"
-  candidate_status: "awaiting_independent_A_B_C_drafts"
+  stage: "blind_candidates_ready_for_human_editing"
+  candidate_status: "three_untouched_common_goal_candidates_retrieved"
   candidate_sealed: false
   latest_accepted_unit: "PHP-02-019-024"
-  next_permitted_action: "Retrieve the completed blind A/B/C drafts for Philippians 2:25-30, verify provenance, and present untouched candidates verse by verse. Do not select or edit for the human editor."
+  next_permitted_action: "Present the untouched A/B/C candidates verse by verse and await the human editor’s selection or synthesis. Do not select, edit, audit, accept, or finalize without human direction."
+  latest_draft:
+    github_run_id: 30063037938
+    engine_run_id: "FLT-PHP-02-20260724-2"
+    receipt_status: "completed"
+    common_prompt_sha256: "e02ea8de3d69bd715c9a714ee67eb4e412e0314c9a21857ea9998247c549df20"
+    common_goal_verified: true
   latest_completed_audit:
     passage: "Philippians 2:19-24"
     github_run_id: 30062746430
