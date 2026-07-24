@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "repository": "WormRN/formed-life-translation",
+  "workflow_path": ".github/workflows/phase4-php2-019-024-candidate-audit.yml",
+  "unit_id": "PHP-02-019-024",
+  "passage": "Philippians 2:19-24",
+  "engine_run_id": "FLT-PHP-02-20260724-2",
+  "github_run_id": 30062235705,
+  "run_url": "https://github.com/WormRN/formed-life-translation/actions/runs/30062235705",
+  "artifact_name": "FLT-PHP-02-20260724-2",
+  "artifact_summary_path": "outputs/human-candidate-audit.md",
+  "head_sha": "9dfa7ebf2c462b413f484af5046877ef67ce1cec",
+  "generated_at": "2026-07-24T02:41:45Z",
+  "job_outcome": "success",
+  "receipt_status": "review_required",
+  "audit_evidence": {
+    "auditor_total": 3,
+    "eligible_count": 2,
+    "blocking_defects": 1,
+    "semantic_pass": false
+  },
+  "authority": {
+    "candidate_was_sealed": true,
+    "human_decision_required": true,
+    "audit_finalizes_candidate": false
+  }
+}
