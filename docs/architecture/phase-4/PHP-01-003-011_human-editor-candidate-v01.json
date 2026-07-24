@@ -46,5 +46,9 @@
     "decision": "Reaffirm the current FLT without alteration.",
     "instruction": "Audit this exact wording without pre-audit repair. Auditors provide evidence only; the human editor alone decides whether any finding warrants a change."
   },
-  "finalization_claim": false
+  "finalization_claim": false,
+  "audit_request": {
+    "requested_on": "2026-07-24",
+    "workflow": ".github/workflows/phase4-php1-003-011-candidate-audit.yml"
+  }
 }
