@@ -144,3 +144,48 @@ Add a general footnote-transparency policy: notes may be numerous when they docu
 
 **Revisit trigger:**  
 Revisit during whole-letter oral-flow review, theological review of the benchmark corpus, or if later κενόω/μορφή contexts expose a conflict.
+
+
+---
+
+## Phil 2:12–18 — Living Out Salvation and Displaying the Life-Giving Message
+
+**Date:** 2026-07-23  
+**Status:** confirmed for the Phase 4 benchmark
+
+**Issue:**  
+How to express the believers’ active response to salvation without implying that salvation is earned, and how to render ἐπέχοντες in the visible-witness context of verses 15–16.
+
+**Options considered:**  
+
+- “work out your salvation” and “keep living out your salvation”
+- “holding firmly to,” “holding out,” and “display” for ἐπέχω
+- preserving “I did not run or work for nothing” or consolidating the two images as “my hard work wasn’t wasted”
+
+**Decision:**  
+Use “keep living out your salvation” in verse 12 and “as your lives display the message that gives life” in verse 16. Consolidate Paul’s running and labor language as “my hard work wasn’t wasted.”
+
+**Reason:**  
+Verse 13 immediately grounds the believers’ obedience in God’s active work, so “living out” communicates salvation brought into practice rather than earned by effort. Mounce recognizes “present, exhibit, display” as a valid sense of ἐπέχω, and the surrounding imagery describes God’s children visibly shining within a corrupt generation. “Your lives display” therefore expresses embodied communal witness. The running image is not independently developed in the paragraph; “my hard work wasn’t wasted” preserves Paul’s meaning with less friction. Three reader reconstructions and three semantic-floor audits found no blocking defect and required no repair.
+
+**Final wording:**  
+
+> **12** Because of this, my dear friends, continue to obey as you always have. Now that I am away from you, it is even more important that you do so. Keep living out your salvation with deep reverence and awe.  
+> **13** For God is at work in all of you. He gives you both the desire and the power to do what pleases Him.  
+> **14** Do everything without complaining or arguing with one another,  
+> **15** so that no one can find fault with you. As God’s pure and innocent children, you will stand out in a crooked and corrupt generation, shining among them like stars in the dark sky  
+> **16** as your lives display the message that gives life. Then, when Christ returns, I will have reason to rejoice that my hard work wasn’t wasted.  
+> **17** Your faithful service is like a holy sacrifice offered to God. But even if my life is poured out like an offering over your sacrifice, I am full of joy, and I share this joy with all of you.  
+> **18** In the same way, you too should be glad and share your joy with me.
+
+**Footnotes needed:**  
+Consider a note on “living out your salvation” clarifying that God produces both desire and power, and a note identifying “hold firmly to” or “hold out” as meaningful alternatives for verse 16.
+
+**Glossary update needed:**  
+Add contextual precedent entries for κατεργάζομαι and ἐπέχω after the benchmark corpus is reviewed as a whole.
+
+**Style Guide update needed:**  
+None at this stage.
+
+**Revisit trigger:**  
+Revisit during whole-chapter oral-flow review, chapter-level theological review, or if a later occurrence exposes a conflict.
