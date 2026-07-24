@@ -236,3 +236,44 @@ None.
 **Revisit trigger:**  
 Whole-chapter oral-flow review or a later contextual conflict.
 
+---
+
+## Phil 1:12–18 — Imprisonment Advances the Good News
+
+**Date:** 2026-07-24  
+**Status:** process-revalidated and approved as a unit
+
+**Issue:**  
+How to state the result of Paul’s circumstances in verse 13 while clearly identifying both the palace guard and everyone else who learned why he was imprisoned.
+
+**Decision:**  
+Replace the earlier verse 13 with: “As a result, it has become obvious to the entire palace guard and to everyone else that I am in prison because of Christ.” Retain the existing FLT wording in verses 12 and 14–18.
+
+**Reason:**  
+“As a result” preserves the explicit consequence flowing from verse 12. “It has become obvious” communicates the public disclosure, and “the entire palace guard and everyone else” preserves the full scope of the Greek. The complete human-selected unit passed three independent semantic-floor audits with zero blocking defects.
+
+**Final wording:**
+
+> **12** I want you to know, brothers and sisters, that what has happened to me has actually helped spread the good news.  
+> **13** As a result, it has become obvious to the entire palace guard and to everyone else that I am in prison because of Christ.  
+> **14** And my imprisonment has given most of the brothers and sisters new confidence in the Lord, so that they now dare to speak God’s message even more boldly, without fear.  
+> **15** Some preach about Christ because they are jealous and want to compete. Others preach with good intentions.  
+> **16** Those who preach out of love know I have been given the task of defending the good news.  
+> **17** The others preach about Christ only to advance themselves. Their motives are not sincere, and they think they can make my suffering in prison worse.  
+> **18** But what does that matter? The important thing is that Christ is being preached, whether the motives are false or sincere. And in that I take great joy. Yes, I will continue to be full of joy.
+
+**Audit:**  
+GitHub run 30115635072; three of three auditors eligible; zero blocking defects.
+
+**Footnotes needed:**  
+Consider a study-layer note on the possible institutional or location nuance of πραιτώριον if the chapter notes require it.
+
+**Glossary update needed:**  
+None.
+
+**Style Guide update needed:**  
+None.
+
+**Revisit trigger:**  
+Whole-chapter oral-flow review or a later contextual conflict.
+
