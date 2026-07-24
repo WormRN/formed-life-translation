@@ -61,7 +61,7 @@ A Drafting Packet contains:
 - relevant Style Guide rules;
 - relevant Matrix entries, limited to approved scope and unresolved cautions;
 - approved FLT precedents that have passed similarity review;
-- role-specific instructions.
+- identical common-goal drafting instructions and a neutral candidate identifier.
 
 Draft independence is not merely separation from other English drafts. It also requires control of shared interpretive framing.
 
@@ -101,7 +101,7 @@ It contains:
 
 - the worker’s own draft;
 - the same source-side material used for drafting;
-- the role’s self-critique instructions;
+- the common self-critique instructions;
 - no other worker drafts;
 - no comparison translations.
 
@@ -245,7 +245,7 @@ Before execution, the harness confirms:
 integrity_checks:
   greek_source_present: true
   unit_boundaries_present: true
-  role_instructions_present: true
+  common_goal_instructions_present: true
   output_schema_present: true
   relevant_matrix_entries_present_or_declared_none: true
   relevant_precedents_present_or_declared_none: true
@@ -409,13 +409,15 @@ Every role receives this irreducible core:
 7. The human editor makes every final decision.
 ```
 
-## 5.2 Role-Specific Style Rules
+## 5.2 Task-Specific Governing Rules
 
-The assembler adds only sections relevant to the role.
+The assembler adds only sections relevant to the task and review lens.
+
+All three blind drafting candidates receive the same drafting rules, source packet, known issues, Matrix excerpts, precedents, output schema, and constitutional mission. Provider or candidate identity must never alter the translation goal.
 
 Examples:
 
-- drafting workers: dynamic default, reading level, clarification boundary, theological vocabulary, form preservation;
+- all drafting candidates: dynamic default, reading level, clarification boundary, theological vocabulary, form preservation;
 - Warrant Checker: significant meaning, connectors, active/passive, ambiguity, clarification boundary;
 - Communication Checker: reading level, sentence flow, oral comprehension, pronouns, paragraph cohesion;
 - Matrix Checker: lexical governance and scoped precedents;
@@ -559,144 +561,78 @@ Agents may analyze these issues but may not settle them.
 
 ---
 
-# 7. Independent Drafting Roles
+# 7. Independent Common-Goal Drafting
 
 The first three drafts are produced independently and blindly.
 
-No worker sees another worker’s draft.
+No worker sees another worker’s draft, the current human-edited FLT wording, or comparison translations.
 
-## 7.1 Worker A — Readability-Optimized Translator
+## 7.1 One Governing Mission
 
-### Mission
+Candidate A, Candidate B, and Candidate C receive this identical mission:
 
-Produce the clearest natural FLT rendering that an intelligent religion-naive reader can understand on first reading or hearing.
+> Produce one independent FLT candidate that communicates the full meaning, logic, tone, discourse movement, and theological force of the Greek in clear, natural, dignified English for a religion-naive adult or older adolescent reading near the sixth-grade level. Dynamic expression is the normal posture. Preserve meaningful form, ambiguity, and theological force; do not add unsupported commentary or make the English more expressive than the Greek.
 
-### Priority Order
+The candidates differ only because independent models may reason and write differently. They are not assigned readability, Greek-fidelity, or balanced missions.
 
-1. warranted meaning;
-2. first-read and oral clarity;
-3. paragraph flow;
-4. adult naturalness;
-5. preservation of meaningful form;
-6. lexical continuity.
+Current provider mapping:
 
-### Special Risks to Avoid
+- Candidate A — Claude Sonnet
+- Candidate B — GPT-5.6 Sol
+- Candidate C — Gemini Pro
 
-- mini-sermons;
-- explanatory additions;
-- flattening metaphors;
-- loss of ambiguity;
-- childish prose;
-- over-simplification;
-- unsupported connectors.
+Provider mapping may change only through an explicit process decision. A provider change never changes the constitutional mission.
 
-### Required Output
+## 7.2 Common Priorities
+
+Every candidate applies the same priorities:
+
+1. pass the Warrant Test and Communication Test together;
+2. communicate the complete warranted meaning;
+3. use clear, natural, mature English near the sixth-grade level;
+4. preserve or recreate meaningful form, tone, rhetoric, ambiguity, and discourse movement;
+5. remain free in form and disciplined in meaning;
+6. preserve scoped lexical and editorial precedents without seeing the current unit’s human wording;
+7. identify uncertainties for human judgment.
+
+No candidate receives extra credit for Greek-shaped English, and no candidate may gain readability by losing or adding meaning.
+
+## 7.3 Identical Inputs and Prompt Verification
+
+The harness must verify before model calls that all three candidates receive:
+
+- the same Greek and source-side data;
+- the same unit and context;
+- the same governing excerpts;
+- the same Matrix entries and scoped precedents;
+- the same known issues;
+- the same required output schema;
+- the same mission and priorities.
+
+The exact common drafting prompt must be hashed. The run is invalid unless the recorded common-prompt hash is identical for A, B, and C. Candidate or provider identity belongs in provenance metadata, not in the mission text.
+
+Legacy labels such as `readability_worker`, `greek_fidelity_worker`, and `balanced_worker` may remain temporarily in machine configuration for backward compatibility, but they must resolve to the identical common mission and must not inject different priorities, risks, or instructions.
+
+## 7.4 Required Common Output
 
 ```yaml
-role: readability_worker
+candidate_id: A | B | C
 proposed_rendering:
+verse_renderings:
 paragraphing:
 sense_selections:
 significant_meanings_expressed:
-clarifications_added:
+dynamic_moves:
 meaningful_forms_preserved_or_recreated:
 possible_too_loose_risks:
 possible_too_literal_risks:
 footnotes_suggested:
 uncertainties:
+human_questions:
 confidence_by_issue:
 ```
 
-The worker must identify every place where the rendering expands one Greek word or compact construction beyond one English phrase or dependent clause. Such expansion is not automatically wrong, but it must be flagged for independent warrant review.
-
-## 7.2 Worker B — Greek-Fidelity Translator
-
-### Mission
-
-Produce a natural English rendering that protects every proposition, relationship, ambiguity, repeated term, discourse feature, and theological claim carried by the Greek.
-
-### Priority Order
-
-1. warranted meaning;
-2. source logic and scope;
-3. ambiguity and theological force;
-4. meaningful form;
-5. natural English;
-6. readability.
-
-This role must not equate formal resemblance with faithfulness.
-
-### Special Risks to Avoid
-
-- word-for-word imitation;
-- Greek-shaped syntax;
-- abstract noun stacking;
-- untranslated church vocabulary;
-- assuming literal wording is more faithful;
-- treating lexical glosses as final renderings.
-
-### Required Output
-
-```yaml
-role: greek_fidelity_worker
-proposed_rendering:
-greek_propositions:
-logical_relationships:
-scope_and_agency:
-ambiguities_preserved_or_resolved:
-repetition_and_literary_links:
-sense_selections:
-significant_meanings_expressed:
-possible_meaning_loss:
-possible_overtranslation:
-possible_hidden_literalism:
-footnotes_suggested:
-uncertainties:
-confidence_by_issue:
-```
-
-## 7.3 Worker C — Balanced Translator
-
-### Mission
-
-Produce the strongest overall FLT candidate by applying the Communication Test and Warrant Test together from the start.
-
-### Priority Order
-
-1. both constitutional tests;
-2. recognizably dynamic natural English;
-3. semantic discipline;
-4. paragraph cohesion;
-5. literary and theological force;
-6. scoped precedent.
-
-### Special Risks to Avoid
-
-- merely averaging formal and dynamic wording;
-- preserving a formal rendering because it feels safer;
-- splitting differences between incompatible interpretations;
-- hiding uncertainty behind vague English.
-
-### Required Output
-
-```yaml
-role: balanced_worker
-proposed_rendering:
-paragraphing:
-sense_selections:
-significant_meanings_expressed:
-communication_rationale:
-warrant_rationale:
-dynamic_choices:
-meaningful_forms_preserved_or_recreated:
-possible_too_loose_risks:
-possible_too_literal_risks:
-footnotes_suggested:
-decision_questions:
-confidence_by_issue:
-```
-
----
+Each candidate must identify every place where its rendering expands one Greek word or compact construction beyond one English phrase or dependent clause. Such expansion is not automatically wrong, but it must be flagged for independent warrant review.
 
 # 8. Self-Critique
 
@@ -1295,8 +1231,8 @@ Use this compressed form for an ordinary worker call.
 ```md
 # FLT Drafting Task
 
-## Role
-[Readability-Optimized | Greek-Fidelity | Balanced]
+## Candidate
+[A | B | C — identifier only; the mission is identical]
 
 ## Unit
 [Book, chapter, verses]
@@ -1374,10 +1310,7 @@ PASS | PASS WITH NOTE | REVISE | BLOCK | HUMAN DECISION
 1. Assemble a clean source-side packet and validate integrity.
 2. Separate neutral shared data from interpretive framing.
 3. Retrieve only relevant governing excerpts, Matrix senses, and scoped precedents.
-4. Run three blind independent workers:
-   - readability;
-   - Greek fidelity;
-   - balanced.
+4. Run three blind independent candidates—A, B, and C—under one identical constitutional mission and verify one common prompt hash.
 5. Record drafts before comparison.
 6. Run self-critiques.
 7. Present drafts anonymously and run cross-critiques without copyrighted translations.
