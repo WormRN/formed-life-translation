@@ -368,29 +368,29 @@ Whole-chapter oral-flow review, target-reader review, or a later contextual conf
 ## Phil 1:27–30 — A Community Worthy of the Good News
 
 **Date:** 2026-07-24  
-**Status:** process-revalidated and approved as a unit
+**Status:** confirmed and frozen for the Phase 4 benchmark
 
 **Issue:**  
 How to communicate Paul’s civic-community command, the church’s united struggle, the opponents’ intimidation, and suffering as a gracious gift in natural sixth-grade-adult English.
 
 **Decision:**  
-Revise verses 27, 28, and 29 exactly as directed by the human editor. Retain verse 30 unchanged.
+Retain the human-selected wording in verses 27–29 and apply the human-authorized chapter-level oral-flow repair in verse 30 by removing the redundant final word “today.”
 
 **Reason:**  
-“Live together as a community” communicates that Paul is addressing the church’s shared way of life, while “worthy of the good news” preserves the gospel as the standard shaping that life. “Fighting side by side with a single purpose” recreates the united struggle expressed by one spirit, one soul, and the athletic image without requiring readers to reconstruct Greek idiom. Separating “This sign comes from God” makes the divine source unmistakable. “You have been given a gift” preserves the gracious-gift force of the verb and places both trusting and suffering for Christ within that gift. The complete sealed unit passed three independent semantic-floor auditors with zero blocking defects.
+“Live together as a community” communicates that Paul is addressing the church’s shared way of life, while “worthy of the good news” preserves the gospel as the standard shaping that life. “Fighting side by side with a single purpose” recreates the united struggle expressed by one spirit, one soul, and the athletic image without requiring readers to reconstruct Greek idiom. Separating “This sign comes from God” makes the divine source unmistakable. “You have been given a gift” preserves the gracious-gift force of the verb and places both trusting and suffering for Christ within that gift. The originally sealed unit passed three independent semantic-floor auditors with zero blocking defects. During the whole-chapter oral-flow review, the human editor authorized removal of the redundant final word “today” in verse 30. The repaired exact candidate also passed three independent semantic-floor auditors with zero blocking defects.
 
 **Final wording:**
 
 > **27** Above all, live together as a community in a way that is worthy of the good news of Christ. Then, whether I come and visit you or only hear about you from far away, I will know that you are standing firm, united in one spirit. I will know that you are fighting side by side with a single purpose to stay faithful to the good news.  
 > **28** Do not let your opponents intimidate you in any way. Your courage will be a clear sign to them that they are headed for destruction, but that you are headed for deliverance. This sign comes from God.  
 > **29** For you have been given a gift for the sake of Christ: not only to trust in Him, but also to suffer for Him.  
-> **30** You are facing the same struggle you once saw me face, and that you now hear I am still facing today.
+> **30** You are facing the same struggle you once saw me face, and that you now hear I am still facing.
 
 **Audit:**  
-GitHub run 30119484697; three of three auditors eligible; zero blocking defects.
+Initial unit audit: GitHub run 30119484697. Final verse 30 repaired-candidate audit: GitHub run 30126936712. Three of three auditors eligible; zero blocking defects.
 
 **Footnotes needed:**  
-Consider a note explaining that “live together as a community” reflects civic or citizenship language and a note clarifying the gracious-gift language surrounding trust and suffering in verse 29.
+Completed in `docs/architecture/phase-4/FLT_Philippians_1_notes-v01.md`: civic-community language in verse 27 and gracious-gift language in verse 29.
 
 **Glossary update needed:**  
 Consider scoped contextual precedents for πολιτεύομαι and συναθλέω after the benchmark corpus is reviewed as a whole.
@@ -399,4 +399,4 @@ Consider scoped contextual precedents for πολιτεύομαι and συναθ�
 None presently required.
 
 **Revisit trigger:**  
-Whole-chapter oral-flow and literary review, target-reader review, or a later contextual conflict.
+Reopen only if the whole-letter review or later contextual evidence exposes a concrete problem.
