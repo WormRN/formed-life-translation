@@ -56,17 +56,27 @@ current_checkpoint:
   chapter: 2
   current_unit_id: "PHP-02-025-030"
   current_passage: "Philippians 2:25-30"
-  stage: "blind_candidates_ready_for_human_editing"
-  candidate_status: "three_untouched_common_goal_candidates_retrieved"
-  candidate_sealed: false
+  stage: "candidate_audit_review_required"
+  candidate_status: "audited_with_one_blocking_finding"
+  candidate_sealed: true
   latest_accepted_unit: "PHP-02-019-024"
-  next_permitted_action: "Present the untouched A/B/C candidates verse by verse and await the human editor’s selection or synthesis. Do not select, edit, audit, accept, or finalize without human direction."
+  next_permitted_action: "Present the complete Philippians 2:25-30 audit evidence and await the human editor’s decision. Do not repair, accept, reject, or finalize the candidate without explicit human direction."
   latest_draft:
     github_run_id: 30063037938
     engine_run_id: "FLT-PHP-02-20260724-2"
     receipt_status: "completed"
     common_prompt_sha256: "e02ea8de3d69bd715c9a714ee67eb4e412e0314c9a21857ea9998247c549df20"
     common_goal_verified: true
+  latest_audit:
+    passage: "Philippians 2:25-30"
+    github_run_id: 30064767951
+    engine_run_id: "FLT-PHP-02-20260724-1"
+    receipt_status: "review_required"
+    auditor_total: 3
+    eligible_count: 2
+    blocking_defects: 1
+    semantic_pass: false
+    human_decision_required: true
   latest_completed_audit:
     passage: "Philippians 2:19-24"
     github_run_id: 30062746430
@@ -78,9 +88,12 @@ current_checkpoint:
     semantic_pass: true
   active_files:
     blind_source: "docs/architecture/phase-4/PHP-02-025-030_blind-source.json"
-    workflow: ".github/workflows/phase4-php2-025-030-drafts.yml"
+    human_candidate: "docs/architecture/phase-4/PHP-02-025-030_human-editor-candidate-v01.json"
+    audit_source: "docs/architecture/phase-4/PHP-02-025-030_audit-source.json"
+    workflow: ".github/workflows/phase4-php2-025-030-candidate-audit.yml"
     latest_draft_receipt: "config/latest_draft_run.json"
-  launch_commit: "b89098504f9e1dd2d3e6e926c6ace36564b462ee"
+    latest_audit_receipt: "config/latest_audit_run.json"
+  launch_commit: "ed4dab902ca6158b7d55ffb091c70faecd72aee5"
 
 accepted_units:
   - passage: "Philippians 1:1-30"
