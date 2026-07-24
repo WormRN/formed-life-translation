@@ -1,0 +1,402 @@
+{
+  "schema_version": 1,
+  "batch_id": "PHP-REVALIDATION-001-024",
+  "book": "Philippians",
+  "source_edition": "SBLGNT",
+  "purpose": "Replace invalid role-divergent drafting evidence while preserving the human editor’s existing wording as a separate, hidden comparison.",
+  "target_reader": "religion-naive adult or older adolescent reading near the sixth-grade level",
+  "translation_identity": "dynamic equivalence; reader-first, free in form and disciplined in meaning",
+  "common_candidate_mission": "Produce one independent FLT candidate under the same constitutional goal as every other candidate: communicate the full meaning, logic, tone, discourse movement, and theological force of the Greek in clear, natural, dignified English for a religion-naive adult or older adolescent reading near the sixth-grade level. Dynamic expression is the default; preserve meaningful form and avoid unsupported commentary.",
+  "candidate_mapping": {
+    "A": "Claude Sonnet",
+    "B": "GPT-5.6 Sol",
+    "C": "Gemini Pro"
+  },
+  "blindness": {
+    "current_flt_text_absent": true,
+    "comparison_translations_absent": true,
+    "sibling_candidates_absent": true,
+    "prior_role_specific_missions_absent": true,
+    "excluded_valid_unit": "Philippians 2:25-30"
+  },
+  "governing_rules": [
+    "Pass the Communication Test and Warrant Test together.",
+    "Translate meaning, logic, tone, emphasis, imagery, rhetoric, discourse movement, and theological force rather than Greek surface form.",
+    "Dynamic expression is the normal posture. Reorder, divide, combine, unpack, verbalize, clarify referents, and reshape grammar when natural English benefits.",
+    "Travel as far from Greek form as clear communication requires, but do not carry the English beyond what the Greek and its context warrant.",
+    "Check both directions: meaning may not be lost, weakened, narrowed, expanded, embellished, or supplemented; Greek-shaped, abstract, churchy, or compressed English may not remain merely because it is defensible.",
+    "Write mature, coherent, orally natural English near the sixth-grade level without childishness, choppiness, or flattened theology.",
+    "Preserve or functionally recreate meaningful repetition, metaphor, contrast, ambiguity, tone, emphasis, and paragraph movement.",
+    "Make implicit relationships explicit only when strongly supported and needed by natural English. Do not add commentary, application, motive, background, or doctrinal synthesis.",
+    "Use clear referents and preserve plural communal address where it matters.",
+    "Put reader-facing meaning in the body; reserve technical traceability and significant alternatives for notes or study data.",
+    "Do not consult or reproduce modern English translations. Produce wording independently from the SBLGNT and these governing rules.",
+    "The human editor alone selects, repairs, accepts, or finalizes wording. Candidate output is evidence."
+  ],
+  "style_and_matrix_rules": [
+    "Capitalize personal pronouns that refer clearly to God, Christ, or the Holy Spirit, without using capitalization to settle a disputed referent.",
+    "Use 'the good news' for euangelion when the message is in view; retain the conceptual link in mission or proclamation contexts without forcing one fixed syntax.",
+    "Use 'God’s holy people' for substantival plural hagioi referring to the congregation.",
+    "For Phil.1.1, doulos may be rendered 'servants' with study-layer accountability; episkopoi and diakonoi are functionally 'leaders' and 'assistants' within this approved scope.",
+    "Traditional theological labels must earn their place; render contextual meaning when an opaque church term would not communicate.",
+    "Contractions are permitted when natural; avoid them when they weaken solemnity or rhetorical weight.",
+    "Prefer periods to semicolons; use em dashes sparingly; use contemporary American English punctuation.",
+    "Paragraph clarity governs over verse-by-verse isolation."
+  ],
+  "units": [
+    {
+      "unit_id": "PHP-01-001-002",
+      "passage": "Philippians 1:1-2",
+      "title": "Greeting and blessing",
+      "known_issues": [
+        "Preserve the letter opening, both senders, their relationship to Christ Jesus, the whole Philippian congregation, and the specifically named congregational service roles.",
+        "The Greek describes Paul and Timothy with doulos; communicate belonging and service without importing a misleading modern slavery frame or opaque church vocabulary.",
+        "The plural hagioi identifies ordinary believers as people belonging to God; avoid language suggesting an elite class.",
+        "The phrase en Christo Iesou expresses a defining relationship with Christ; render naturally without turning the greeting into commentary.",
+        "Episkopoi and diakonoi name recognized local roles. Apply the approved Matrix scope for Philippians 1:1 while keeping the greeting readable.",
+        "Verse 2 invokes grace and peace from God the Father and the Lord Jesus Christ; preserve the shared source and blessing form."
+      ],
+      "verses": [
+        {
+          "reference": "Phil.1.1",
+          "greek": "Παῦλος καὶ Τιμόθεος δοῦλοι Χριστοῦ Ἰησοῦ πᾶσιν τοῖς ἁγίοις ἐν Χριστῷ Ἰησοῦ τοῖς οὖσιν ἐν Φιλίπποις σὺν ἐπισκόποις καὶ διακόνοις"
+        },
+        {
+          "reference": "Phil.1.2",
+          "greek": "χάρις ὑμῖν καὶ εἰρήνη ἀπὸ θεοῦ πατρὸς ἡμῶν καὶ κυρίου Ἰησοῦ Χριστοῦ"
+        }
+      ]
+    },
+    {
+      "unit_id": "PHP-01-003-011",
+      "passage": "Philippians 1:3-11",
+      "title": "Thanksgiving and prayer",
+      "known_issues": [
+        "Preserve the movement from thanksgiving and joyful prayer to partnership, confidence in God’s continuing work, affection, and Paul’s prayer for discerning love and fruitful living.",
+        "Verse 3 permits a syntactic question about whether Paul thanks God whenever he remembers them or because they remember him; identify the best contextual reading without concealing real uncertainty.",
+        "Verses 4-5 connect joy in prayer with partnership in the good news from the first day until now.",
+        "Verse 6 points to God completing the good work at the day of Christ Jesus; do not reduce this to ordinary human self-improvement.",
+        "Verse 7 links affection, imprisonment, defense/confirmation of the good news, and shared grace. Preserve the scope of all participants.",
+        "Verse 8 uses strong affection language associated with Christ; communicate warmth without ornamental sentiment.",
+        "Verses 9-11 link growing love with knowledge and discernment, choosing what matters, readiness for Christ’s day, and fruit through Jesus Christ to God’s glory.",
+        "Dikaiosyne language in verse 11 is high-impact and not globally settled in the Matrix; render contextually and flag the decision."
+      ],
+      "verses": [
+        {
+          "reference": "Phil.1.3",
+          "greek": "Εὐχαριστῶ τῷ θεῷ μου ἐπὶ πάσῃ τῇ μνείᾳ ὑμῶν"
+        },
+        {
+          "reference": "Phil.1.4",
+          "greek": "πάντοτε ἐν πάσῃ δεήσει μου ὑπὲρ πάντων ὑμῶν μετὰ χαρᾶς τὴν δέησιν ποιούμενος"
+        },
+        {
+          "reference": "Phil.1.5",
+          "greek": "ἐπὶ τῇ κοινωνίᾳ ὑμῶν εἰς τὸ εὐαγγέλιον ἀπὸ τῆς πρώτης ἡμέρας ἄχρι τοῦ νῦν"
+        },
+        {
+          "reference": "Phil.1.6",
+          "greek": "πεποιθὼς αὐτὸ τοῦτο ὅτι ὁ ἐναρξάμενος ἐν ὑμῖν ἔργον ἀγαθὸν ἐπιτελέσει ἄχρι ἡμέρας Χριστοῦ Ἰησοῦ"
+        },
+        {
+          "reference": "Phil.1.7",
+          "greek": "καθώς ἐστιν δίκαιον ἐμοὶ τοῦτο φρονεῖν ὑπὲρ πάντων ὑμῶν διὰ τὸ ἔχειν με ἐν τῇ καρδίᾳ ὑμᾶς ἔν τε τοῖς δεσμοῖς μου καὶ ἐν τῇ ἀπολογίᾳ καὶ βεβαιώσει τοῦ εὐαγγελίου συγκοινωνούς μου τῆς χάριτος πάντας ὑμᾶς ὄντας"
+        },
+        {
+          "reference": "Phil.1.8",
+          "greek": "μάρτυς γάρ μου ὁ θεός ὡς ἐπιποθῶ πάντας ὑμᾶς ἐν σπλάγχνοις Χριστοῦ Ἰησοῦ"
+        },
+        {
+          "reference": "Phil.1.9",
+          "greek": "καὶ τοῦτο προσεύχομαι ἵνα ἡ ἀγάπη ὑμῶν ἔτι μᾶλλον καὶ μᾶλλον περισσεύῃ ἐν ἐπιγνώσει καὶ πάσῃ αἰσθήσει"
+        },
+        {
+          "reference": "Phil.1.10",
+          "greek": "εἰς τὸ δοκιμάζειν ὑμᾶς τὰ διαφέροντα ἵνα ἦτε εἰλικρινεῖς καὶ ἀπρόσκοποι εἰς ἡμέραν Χριστοῦ"
+        },
+        {
+          "reference": "Phil.1.11",
+          "greek": "πεπληρωμένοι καρπὸν δικαιοσύνης τὸν διὰ Ἰησοῦ Χριστοῦ εἰς δόξαν καὶ ἔπαινον θεοῦ"
+        }
+      ]
+    },
+    {
+      "unit_id": "PHP-01-012-018",
+      "passage": "Philippians 1:12-18",
+      "title": "Imprisonment advances the good news",
+      "known_issues": [
+        "Preserve the surprising claim that Paul’s circumstances advanced the good news rather than stopping it.",
+        "Verse 13 refers to the whole praetorian guard and everyone else learning that Paul’s imprisonment is connected with Christ.",
+        "Verse 14 describes most fellow believers gaining confidence because of Paul’s imprisonment and daring to speak the word without fear.",
+        "Verses 15-17 contrast envy and rivalry with goodwill and love, including selfish ambition intended to increase Paul’s distress.",
+        "Verse 18 does not approve corrupt motives; it celebrates that Christ is proclaimed whether the immediate pretext is false or sincere.",
+        "Preserve Paul’s emphatic joy and the paragraph’s emotional turn without adding moral explanation."
+      ],
+      "verses": [
+        {
+          "reference": "Phil.1.12",
+          "greek": "Γινώσκειν δὲ ὑμᾶς βούλομαι ἀδελφοί ὅτι τὰ κατ’ ἐμὲ μᾶλλον εἰς προκοπὴν τοῦ εὐαγγελίου ἐλήλυθεν"
+        },
+        {
+          "reference": "Phil.1.13",
+          "greek": "ὥστε τοὺς δεσμούς μου φανεροὺς ἐν Χριστῷ γενέσθαι ἐν ὅλῳ τῷ πραιτωρίῳ καὶ τοῖς λοιποῖς πᾶσιν"
+        },
+        {
+          "reference": "Phil.1.14",
+          "greek": "καὶ τοὺς πλείονας τῶν ἀδελφῶν ἐν κυρίῳ πεποιθότας τοῖς δεσμοῖς μου περισσοτέρως τολμᾶν ἀφόβως τὸν λόγον λαλεῖν"
+        },
+        {
+          "reference": "Phil.1.15",
+          "greek": "Τινὲς μὲν καὶ διὰ φθόνον καὶ ἔριν τινὲς δὲ καὶ δι’ εὐδοκίαν τὸν Χριστὸν κηρύσσουσιν"
+        },
+        {
+          "reference": "Phil.1.16",
+          "greek": "οἱ μὲν ἐξ ἀγάπης εἰδότες ὅτι εἰς ἀπολογίαν τοῦ εὐαγγελίου κεῖμαι"
+        },
+        {
+          "reference": "Phil.1.17",
+          "greek": "οἱ δὲ ἐξ ἐριθείας τὸν Χριστὸν καταγγέλλουσιν οὐχ ἁγνῶς οἰόμενοι θλῖψιν ἐγείρειν τοῖς δεσμοῖς μου"
+        },
+        {
+          "reference": "Phil.1.18",
+          "greek": "τί γάρ πλὴν ὅτι παντὶ τρόπῳ εἴτε προφάσει εἴτε ἀληθείᾳ Χριστὸς καταγγέλλεται καὶ ἐν τούτῳ χαίρω ἀλλὰ καὶ χαρήσομαι"
+        }
+      ]
+    },
+    {
+      "unit_id": "PHP-01-019-026",
+      "passage": "Philippians 1:19-26",
+      "title": "Life, death, and fruitful service",
+      "known_issues": [
+        "Verse 19 uses soteria in a context that may point to deliverance, vindication, ultimate salvation, or an intentional echo of Job; do not settle the scope casually.",
+        "Preserve the role of the Philippians’ prayers and the provision or help of the Spirit of Jesus Christ.",
+        "Verse 20 contrasts shame with bold courage and centers Christ being honored in Paul’s body whether through life or death.",
+        "Verse 21 is compressed and memorable: living is Christ and dying is gain. Recreate its force in understandable English.",
+        "Verses 22-24 express Paul’s real tension between fruitful bodily life and departing to be with Christ, while recognizing the church’s need.",
+        "Verses 25-26 turn toward confidence that Paul will remain for their progress and joy, culminating in their boasting or proud confidence in Christ Jesus because of Paul.",
+        "Avoid making Paul sound suicidal, indecisive in a trivial way, or certain beyond what the discourse supports."
+      ],
+      "verses": [
+        {
+          "reference": "Phil.1.19",
+          "greek": "οἶδα γὰρ ὅτι τοῦτό μοι ἀποβήσεται εἰς σωτηρίαν διὰ τῆς ὑμῶν δεήσεως καὶ ἐπιχορηγίας τοῦ πνεύματος Ἰησοῦ Χριστοῦ"
+        },
+        {
+          "reference": "Phil.1.20",
+          "greek": "κατὰ τὴν ἀποκαραδοκίαν καὶ ἐλπίδα μου ὅτι ἐν οὐδενὶ αἰσχυνθήσομαι ἀλλ’ ἐν πάσῃ παρρησίᾳ ὡς πάντοτε καὶ νῦν μεγαλυνθήσεται Χριστὸς ἐν τῷ σώματί μου εἴτε διὰ ζωῆς εἴτε διὰ θανάτου"
+        },
+        {
+          "reference": "Phil.1.21",
+          "greek": "ἐμοὶ γὰρ τὸ ζῆν Χριστὸς καὶ τὸ ἀποθανεῖν κέρδος"
+        },
+        {
+          "reference": "Phil.1.22",
+          "greek": "εἰ δὲ τὸ ζῆν ἐν σαρκί τοῦτό μοι καρπὸς ἔργου καὶ τί αἱρήσομαι οὐ γνωρίζω"
+        },
+        {
+          "reference": "Phil.1.23",
+          "greek": "συνέχομαι δὲ ἐκ τῶν δύο τὴν ἐπιθυμίαν ἔχων εἰς τὸ ἀναλῦσαι καὶ σὺν Χριστῷ εἶναι πολλῷ γὰρ μᾶλλον κρεῖσσον"
+        },
+        {
+          "reference": "Phil.1.24",
+          "greek": "τὸ δὲ ἐπιμένειν ἐν τῇ σαρκὶ ἀναγκαιότερον δι’ ὑμᾶς"
+        },
+        {
+          "reference": "Phil.1.25",
+          "greek": "καὶ τοῦτο πεποιθὼς οἶδα ὅτι μενῶ καὶ παραμενῶ πᾶσιν ὑμῖν εἰς τὴν ὑμῶν προκοπὴν καὶ χαρὰν τῆς πίστεως"
+        },
+        {
+          "reference": "Phil.1.26",
+          "greek": "ἵνα τὸ καύχημα ὑμῶν περισσεύῃ ἐν Χριστῷ Ἰησοῦ ἐν ἐμοὶ διὰ τῆς ἐμῆς παρουσίας πάλιν πρὸς ὑμᾶς"
+        }
+      ]
+    },
+    {
+      "unit_id": "PHP-01-027-030",
+      "passage": "Philippians 1:27-30",
+      "title": "United courage in suffering",
+      "known_issues": [
+        "Politeuomai carries civic-conduct or citizenship resonance in a Roman colony. Communicate communal conduct worthy of the good news without forcing an unexplained metaphor.",
+        "Verse 27 emphasizes one spirit, one soul or united purpose, and striving together for the faith or cause of the good news.",
+        "Verse 28 contrasts the opponents’ destruction with the believers’ salvation or deliverance and identifies God as the source.",
+        "Verse 29 presents trust in Christ and suffering for Him as graciously granted; preserve the difficult theological force without implying suffering is pleasant.",
+        "Verse 30 links the Philippians’ struggle with the struggle they saw and now hear in Paul.",
+        "Maintain the plural communal address and the paragraph’s public, courageous tone."
+      ],
+      "verses": [
+        {
+          "reference": "Phil.1.27",
+          "greek": "Μόνον ἀξίως τοῦ εὐαγγελίου τοῦ Χριστοῦ πολιτεύεσθε ἵνα εἴτε ἐλθὼν καὶ ἰδὼν ὑμᾶς εἴτε ἀπὼν ἀκούω τὰ περὶ ὑμῶν ὅτι στήκετε ἐν ἑνὶ πνεύματι μιᾷ ψυχῇ συναθλοῦντες τῇ πίστει τοῦ εὐαγγελίου"
+        },
+        {
+          "reference": "Phil.1.28",
+          "greek": "καὶ μὴ πτυρόμενοι ἐν μηδενὶ ὑπὸ τῶν ἀντικειμένων ἥτις ἐστὶν αὐτοῖς ἔνδειξις ἀπωλείας ὑμῶν δὲ σωτηρίας καὶ τοῦτο ἀπὸ θεοῦ"
+        },
+        {
+          "reference": "Phil.1.29",
+          "greek": "ὅτι ὑμῖν ἐχαρίσθη τὸ ὑπὲρ Χριστοῦ οὐ μόνον τὸ εἰς αὐτὸν πιστεύειν ἀλλὰ καὶ τὸ ὑπὲρ αὐτοῦ πάσχειν"
+        },
+        {
+          "reference": "Phil.1.30",
+          "greek": "τὸν αὐτὸν ἀγῶνα ἔχοντες οἷον εἴδετε ἐν ἐμοὶ καὶ νῦν ἀκούετε ἐν ἐμοί"
+        }
+      ]
+    },
+    {
+      "unit_id": "PHP-02-001-004",
+      "passage": "Philippians 2:1-4",
+      "title": "Unity through humble concern",
+      "known_issues": [
+        "Preserve the cumulative appeals grounded in Christ, love, shared participation in the Spirit, affection, and compassion.",
+        "Verse 2 piles up unity language: same mind, same love, united in soul, thinking one thing. Recreate the force without wooden repetition or flattening it to mere agreement.",
+        "Verse 3 rejects selfish ambition and empty glory, then commands humility that regards others as surpassing oneself.",
+        "Verse 4 contrasts attention to one’s own interests with attention to the interests of others; preserve the plural scope and avoid implying total neglect of legitimate personal responsibility.",
+        "Phroneo language links this unit with verse 5; preserve a natural conceptual bridge without exposing the current FLT wording."
+      ],
+      "verses": [
+        {
+          "reference": "Phil.2.1",
+          "greek": "Εἴ τις οὖν παράκλησις ἐν Χριστῷ εἴ τι παραμύθιον ἀγάπης εἴ τις κοινωνία πνεύματος εἴ τις σπλάγχνα καὶ οἰκτιρμοί"
+        },
+        {
+          "reference": "Phil.2.2",
+          "greek": "πληρώσατέ μου τὴν χαρὰν ἵνα τὸ αὐτὸ φρονῆτε τὴν αὐτὴν ἀγάπην ἔχοντες σύμψυχοι τὸ ἓν φρονοῦντες"
+        },
+        {
+          "reference": "Phil.2.3",
+          "greek": "μηδὲν κατ’ ἐριθείαν μηδὲ κατὰ κενοδοξίαν ἀλλὰ τῇ ταπεινοφροσύνῃ ἀλλήλους ἡγούμενοι ὑπερέχοντας ἑαυτῶν"
+        },
+        {
+          "reference": "Phil.2.4",
+          "greek": "μὴ τὰ ἑαυτῶν ἕκαστοι σκοποῦντες ἀλλὰ καὶ τὰ ἑτέρων ἕκαστοι"
+        }
+      ]
+    },
+    {
+      "unit_id": "PHP-02-005-011",
+      "passage": "Philippians 2:5-11",
+      "title": "Christ’s self-humbling and exaltation",
+      "known_issues": [
+        "Verse 5 links the community’s mindset toward one another with Christ Jesus; the syntax is compact and debated.",
+        "Morphe theou and equality with God must preserve Christ’s genuine divine status.",
+        "Harpagmos in verse 6 permits debated nuances involving grasping, exploiting, or using equality for advantage; do not hide the interpretive choice.",
+        "The kenosis language in verse 7 describes voluntary self-emptying in the movement of taking servant form and becoming human. Do not imply that Christ stopped being God or ceased to possess deity.",
+        "Preserve the true servant status, true humanity, self-humbling obedience, and death on a cross.",
+        "Verses 9-11 move to God’s supreme exaltation, the bestowed name, universal homage across heaven, earth, and under the earth, and confession that Jesus Christ is Lord.",
+        "Preserve the hymn-like movement, theological weight, and Old Testament echo without retreating into opaque formula."
+      ],
+      "verses": [
+        {
+          "reference": "Phil.2.5",
+          "greek": "τοῦτο φρονεῖτε ἐν ὑμῖν ὃ καὶ ἐν Χριστῷ Ἰησοῦ"
+        },
+        {
+          "reference": "Phil.2.6",
+          "greek": "ὃς ἐν μορφῇ θεοῦ ὑπάρχων οὐχ ἁρπαγμὸν ἡγήσατο τὸ εἶναι ἴσα θεῷ"
+        },
+        {
+          "reference": "Phil.2.7",
+          "greek": "ἀλλὰ ἑαυτὸν ἐκένωσεν μορφὴν δούλου λαβών ἐν ὁμοιώματι ἀνθρώπων γενόμενος καὶ σχήματι εὑρεθεὶς ὡς ἄνθρωπος"
+        },
+        {
+          "reference": "Phil.2.8",
+          "greek": "ἐταπείνωσεν ἑαυτὸν γενόμενος ὑπήκοος μέχρι θανάτου θανάτου δὲ σταυροῦ"
+        },
+        {
+          "reference": "Phil.2.9",
+          "greek": "διὸ καὶ ὁ θεὸς αὐτὸν ὑπερύψωσεν καὶ ἐχαρίσατο αὐτῷ τὸ ὄνομα τὸ ὑπὲρ πᾶν ὄνομα"
+        },
+        {
+          "reference": "Phil.2.10",
+          "greek": "ἵνα ἐν τῷ ὀνόματι Ἰησοῦ πᾶν γόνυ κάμψῃ ἐπουρανίων καὶ ἐπιγείων καὶ καταχθονίων"
+        },
+        {
+          "reference": "Phil.2.11",
+          "greek": "καὶ πᾶσα γλῶσσα ἐξομολογήσηται ὅτι κύριος Ἰησοῦς Χριστὸς εἰς δόξαν θεοῦ πατρός"
+        }
+      ]
+    },
+    {
+      "unit_id": "PHP-02-012-018",
+      "passage": "Philippians 2:12-18",
+      "title": "God at work in an obedient community",
+      "known_issues": [
+        "Verses 12-13 hold human obedience together with God actively producing both willing and working; do not imply salvation is earned or that human response is absent.",
+        "Fear and trembling communicates serious reverence; avoid either terror language or casual weakening.",
+        "Verses 14-15 connect conduct without grumbling or dispute with being blameless, innocent children of God amid a crooked generation and shining like lights.",
+        "Epecho in verse 16 may mean holding fast to, holding out, or presenting the word of life. Preserve the visible-witness context and flag the choice.",
+        "Paul’s running and labor imagery points toward the day of Christ and the possibility that his work could prove empty; carry the rhetorical force naturally.",
+        "Verses 17-18 combine sacrificial and drink-offering imagery with shared joy. Preserve whose sacrifice/service is in view and do not turn the image into unsupported ritual explanation."
+      ],
+      "verses": [
+        {
+          "reference": "Phil.2.12",
+          "greek": "Ὥστε ἀγαπητοί μου καθὼς πάντοτε ὑπηκούσατε μὴ ὡς ἐν τῇ παρουσίᾳ μου μόνον ἀλλὰ νῦν πολλῷ μᾶλλον ἐν τῇ ἀπουσίᾳ μου μετὰ φόβου καὶ τρόμου τὴν ἑαυτῶν σωτηρίαν κατεργάζεσθε"
+        },
+        {
+          "reference": "Phil.2.13",
+          "greek": "θεὸς γάρ ἐστιν ὁ ἐνεργῶν ἐν ὑμῖν καὶ τὸ θέλειν καὶ τὸ ἐνεργεῖν ὑπὲρ τῆς εὐδοκίας"
+        },
+        {
+          "reference": "Phil.2.14",
+          "greek": "Πάντα ποιεῖτε χωρὶς γογγυσμῶν καὶ διαλογισμῶν"
+        },
+        {
+          "reference": "Phil.2.15",
+          "greek": "ἵνα γένησθε ἄμεμπτοι καὶ ἀκέραιοι τέκνα θεοῦ ἄμωμα μέσον γενεᾶς σκολιᾶς καὶ διεστραμμένης ἐν οἷς φαίνεσθε ὡς φωστῆρες ἐν κόσμῳ"
+        },
+        {
+          "reference": "Phil.2.16",
+          "greek": "λόγον ζωῆς ἐπέχοντες εἰς καύχημα ἐμοὶ εἰς ἡμέραν Χριστοῦ ὅτι οὐκ εἰς κενὸν ἔδραμον οὐδὲ εἰς κενὸν ἐκοπίασα"
+        },
+        {
+          "reference": "Phil.2.17",
+          "greek": "ἀλλὰ εἰ καὶ σπένδομαι ἐπὶ τῇ θυσίᾳ καὶ λειτουργίᾳ τῆς πίστεως ὑμῶν χαίρω καὶ συγχαίρω πᾶσιν ὑμῖν"
+        },
+        {
+          "reference": "Phil.2.18",
+          "greek": "τὸ δὲ αὐτὸ καὶ ὑμεῖς χαίρετε καὶ συγχαίρετέ μοι"
+        }
+      ]
+    },
+    {
+      "unit_id": "PHP-02-019-024",
+      "passage": "Philippians 2:19-24",
+      "title": "Timothy’s genuine concern",
+      "known_issues": [
+        "Verse 19 states Paul’s hope in the Lord Jesus to send Timothy soon and his renewed encouragement upon learning their condition.",
+        "Isopsychos in verse 20 describes Timothy as uniquely like-minded or sharing Paul’s concern; communicate the personal force without unsupported emotional detail.",
+        "Verse 21’s everyone seeks their own interests is rhetorically broad but contextually concerns those available or relevant to send; do not casually erase or universalize the force.",
+        "The interests of Jesus Christ contrast with self-interest.",
+        "Verse 22 invokes Timothy’s tested character and a child-with-father relationship in shared service for the good news. Preserve both relationship and cooperative service without making Timothy childish.",
+        "Verses 23-24 distinguish Paul’s plan to send Timothy after seeing how his own affairs go from confidence in the Lord that Paul himself will come soon."
+      ],
+      "verses": [
+        {
+          "reference": "Phil.2.19",
+          "greek": "Ἐλπίζω δὲ ἐν κυρίῳ Ἰησοῦ Τιμόθεον ταχέως πέμψαι ὑμῖν ἵνα κἀγὼ εὐψυχῶ γνοὺς τὰ περὶ ὑμῶν"
+        },
+        {
+          "reference": "Phil.2.20",
+          "greek": "οὐδένα γὰρ ἔχω ἰσόψυχον ὅστις γνησίως τὰ περὶ ὑμῶν μεριμνήσει"
+        },
+        {
+          "reference": "Phil.2.21",
+          "greek": "οἱ πάντες γὰρ τὰ ἑαυτῶν ζητοῦσιν οὐ τὰ Ἰησοῦ Χριστοῦ"
+        },
+        {
+          "reference": "Phil.2.22",
+          "greek": "τὴν δὲ δοκιμὴν αὐτοῦ γινώσκετε ὅτι ὡς πατρὶ τέκνον σὺν ἐμοὶ ἐδούλευσεν εἰς τὸ εὐαγγέλιον"
+        },
+        {
+          "reference": "Phil.2.23",
+          "greek": "τοῦτον μὲν οὖν ἐλπίζω πέμψαι ὡς ἂν ἀφίδω τὰ περὶ ἐμὲ ἐξαυτῆς"
+        },
+        {
+          "reference": "Phil.2.24",
+          "greek": "πέποιθα δὲ ἐν κυρίῳ ὅτι καὶ αὐτὸς ταχέως ἐλεύσομαι"
+        }
+      ]
+    }
+  ]
+}
