@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "repository": "WormRN/formed-life-translation",
+  "workflow_path": ".github/workflows/phase4-php2-025-030-drafts.yml",
+  "unit_id": "PHP-02-025-030",
+  "passage": "Philippians 2:25-30",
+  "engine_run_id": "FLT-PHP-02-20260724-1",
+  "github_run_id": 30062892804,
+  "run_url": "https://github.com/WormRN/formed-life-translation/actions/runs/30062892804",
+  "artifact_name": "FLT-PHP-02-20260724-1",
+  "head_sha": "b89098504f9e1dd2d3e6e926c6ace36564b462ee",
+  "generated_at": "2026-07-24T02:57:06Z",
+  "job_outcome": "success",
+  "receipt_status": "completed"
+}
