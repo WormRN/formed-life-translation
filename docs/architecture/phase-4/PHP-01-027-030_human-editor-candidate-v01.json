@@ -18,12 +18,12 @@
     },
     {
       "reference": "Phil.1.30",
-      "text": "You are facing the same struggle you once saw me face, and that you now hear I am still facing today."
+      "text": "You are facing the same struggle you once saw me face, and that you now hear I am still facing."
     }
   ],
   "authority": {
     "selected_by": "human_editor",
-    "decision": "Revise Philippians 1:27, 1:28, and 1:29 exactly as specified by the human editor; retain verse 30 unchanged.",
+    "decision": "Retain the human-selected wording in Philippians 1:27-29 and apply the human-authorized chapter-level oral-flow repair in verse 30 by removing the redundant final word “today.”",
     "editorial_normalization": "None. Preserve the selected wording and punctuation exactly.",
     "instruction": "Audit this exact selected wording without pre-audit repair. Auditors provide evidence only; the human editor alone decides whether any finding warrants a change."
   },
@@ -31,16 +31,14 @@
   "audit_request": {
     "requested_on": "2026-07-24",
     "workflow": ".github/workflows/phase4-php1-027-030-candidate-audit.yml",
-    "reason": "Required sealed-candidate audit after common-goal process revalidation and human selection.",
-    "trigger": 2
+    "reason": "Required fresh sealed-candidate audit after the human-authorized Philippians 1:30 chapter-level oral-flow repair.",
+    "trigger": 3
   },
   "revision": {
     "authorized_on": "2026-07-24",
     "changed_references": [
-      "Phil.1.27",
-      "Phil.1.28",
-      "Phil.1.29"
+      "Phil.1.30"
     ],
-    "scope": "Only verses 27, 28, and 29 changed; verse 30 retained exactly."
+    "scope": "Only verse 30 changed from the previously audited candidate; the final word “today” was removed. Verses 27-29 remain untouched."
   }
 }
