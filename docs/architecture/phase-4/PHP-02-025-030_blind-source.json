@@ -1,0 +1,71 @@
+{
+  "chapter_id": "PHP-02",
+  "book": "Philippians",
+  "chapter": 2,
+  "source_edition": "SBLGNT",
+  "tone": "warm, personal, commendatory, relieved, joyful, and pastoral",
+  "target_reader": "religion-naive adults and older adolescents near grade 6",
+  "translation_identity": "firmly dynamic-equivalence, NLT-like in readability but independent",
+  "sealed_unit": {
+    "unit_id": "PHP-02-001-024",
+    "instruction": "The completed human-edited wording of Philippians 2:1-24 is excluded from blind drafting. Preserve only the source-text discourse transition into verse 25."
+  },
+  "governing_rules": [
+    "The prose serves the reader; the apparatus serves accountability.",
+    "Translate meaning, logic, tone, discourse movement, and theological force rather than Greek surface form.",
+    "Use clear natural oral English; reorder, split, unpack, and clarify implied relationships when comprehension benefits.",
+    "Preserve the paragraph’s movement from Paul’s decision to send Epaphroditus, through his illness and recovery, to the church’s joyful welcome and honor for his costly service.",
+    "Preserve meaningful relational and sacrificial imagery without turning it into unexplained church language or unsupported commentary.",
+    "No comparison translations, traditional benchmark wording, conversational drafts, or sealed human wording may enter blind drafting."
+  ],
+  "existing_decisions": [
+    "Use Christ and Jesus Christ naturally according to the source reference.",
+    "Deity pronouns capitalized.",
+    "Render familial and ministry relationships in clear reader-facing English without erasing their force.",
+    "Maintain the reader-first dynamic center established by the audited Philippians benchmark without exposing its wording to blind workers."
+  ],
+  "units": [
+    {
+      "unit_id": "PHP-02-025-030",
+      "passage": "Philippians 2:25–30",
+      "title": "Paul sends Epaphroditus home with honor",
+      "known_issues": [
+        "Verse 25 presents Paul’s considered decision that sending Epaphroditus back was necessary; preserve the personal judgment without making the timing or compulsion more definite than the source.",
+        "Verse 25 stacks five relational and ministry descriptions: Paul’s brother, fellow worker, and fellow soldier, and the Philippians’ messenger and servant to Paul’s need. Preserve the accumulated honor while keeping the sentence understandable.",
+        "Verse 25 uses apostolos for the Philippians’ commissioned messenger. Avoid misleading religion-naive readers into assuming that Epaphroditus held the same foundational office as the Twelve.",
+        "Verse 26 says Epaphroditus longed for all of them and was deeply distressed because they heard he was ill. Preserve that his concern centers on their distress, not merely on his own illness.",
+        "Verse 27 says he came near death, God showed mercy to him and to Paul, and Paul was spared sorrow upon sorrow. Preserve the emotional and theological force without implying that recovery is always guaranteed.",
+        "Verse 28 uses comparative language: Paul sent him all the more eagerly so they could rejoice on seeing him again and Paul could be less sorrowful or anxious. Make both purposes natural.",
+        "Verse 29 commands a joyful welcome in the Lord and honor for people like him. Preserve both the immediate welcome and the broader principle.",
+        "Verse 30 says he came near death for the work of Christ, risking his life. Preserve the costly danger without romanticizing recklessness.",
+        "Verse 30 says he completed what was lacking in the Philippians’ service to Paul. This is not necessarily blame; Epaphroditus personally supplied the help distance prevented the whole church from giving. Avoid making the church sound negligent without warrant."
+      ],
+      "verses": [
+        {
+          "reference": "Phil.2.25",
+          "greek": "Ἀναγκαῖον δὲ ἡγησάμην Ἐπαφρόδιτον τὸν ἀδελφὸν καὶ συνεργὸν καὶ συστρατιώτην μου, ὑμῶν δὲ ἀπόστολον καὶ λειτουργὸν τῆς χρείας μου, πέμψαι πρὸς ὑμᾶς"
+        },
+        {
+          "reference": "Phil.2.26",
+          "greek": "ἐπειδὴ ἐπιποθῶν ἦν πάντας ὑμᾶς καὶ ἀδημονῶν διότι ἠκούσατε ὅτι ἠσθένησεν"
+        },
+        {
+          "reference": "Phil.2.27",
+          "greek": "καὶ γὰρ ἠσθένησεν παραπλήσιον θανάτῳ· ἀλλὰ ὁ θεὸς ἠλέησεν αὐτόν, οὐκ αὐτὸν δὲ μόνον ἀλλὰ καὶ ἐμέ, ἵνα μὴ λύπην ἐπὶ λύπην σχῶ"
+        },
+        {
+          "reference": "Phil.2.28",
+          "greek": "σπουδαιοτέρως οὖν ἔπεμψα αὐτὸν ἵνα ἰδόντες αὐτὸν πάλιν χαρῆτε κἀγὼ ἀλυπότερος ὦ"
+        },
+        {
+          "reference": "Phil.2.29",
+          "greek": "προσδέχεσθε οὖν αὐτὸν ἐν κυρίῳ μετὰ πάσης χαρᾶς, καὶ τοὺς τοιούτους ἐντίμους ἔχετε"
+        },
+        {
+          "reference": "Phil.2.30",
+          "greek": "ὅτι διὰ τὸ ἔργον Χριστοῦ μέχρι θανάτου ἤγγισεν, παραβολευσάμενος τῇ ψυχῇ ἵνα ἀναπληρώσῃ τὸ ὑμῶν ὑστέρημα τῆς πρός με λειτουργίας"
+        }
+      ]
+    }
+  ]
+}
