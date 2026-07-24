@@ -1,7 +1,7 @@
 {
   "candidate_id": "FLT-PHP-01-003-011-HUMAN-EDITOR-v01",
   "unit_id": "PHP-01-003-011",
-  "status": "human_editor_candidate_for_revalidation_audit",
+  "status": "human_authorized_repair_for_revalidation_audit",
   "revalidation_evidence_run": "FLT-PHP-REVALIDATION-20260724-1",
   "verse_renderings": [
     {
@@ -22,7 +22,7 @@
     },
     {
       "reference": "Phil.1.7",
-      "text": "Because you are so dear to me, it is right for me to feel this way about all of you. We share together in God’s grace, whether I am in prison or defending the good news and showing that it is true."
+      "text": "Because you are so dear to me, it is right for me to feel this way about all of you. We share together in God’s grace, both while I am in prison and while I am defending the good news and showing that it is true."
     },
     {
       "reference": "Phil.1.8",
@@ -43,12 +43,20 @@
   ],
   "authority": {
     "selected_by": "human_editor",
-    "decision": "Reaffirm the current FLT without alteration.",
-    "instruction": "Audit this exact wording without pre-audit repair. Auditors provide evidence only; the human editor alone decides whether any finding warrants a change."
+    "decision": "Authorize the minimum Philippians 1:7 repair: change the alternative construction “whether … or” to the inclusive construction “both while … and while.” Retain every other word in Philippians 1:3–11.",
+    "instruction": "Audit this exact repaired wording without pre-audit repair. Auditors provide evidence only; the human editor alone decides whether any further finding warrants a change."
   },
   "finalization_claim": false,
   "audit_request": {
     "requested_on": "2026-07-24",
-    "workflow": ".github/workflows/phase4-php1-003-011-candidate-audit.yml"
+    "workflow": ".github/workflows/phase4-php1-003-011-candidate-audit.yml",
+    "reason": "Reaudit after human-authorized minimum repair."
+  },
+  "repair": {
+    "authorized_on": "2026-07-24",
+    "reference": "Phil.1.7",
+    "prior_wording": "We share together in God’s grace, whether I am in prison or defending the good news and showing that it is true.",
+    "repaired_wording": "We share together in God’s grace, both while I am in prison and while I am defending the good news and showing that it is true.",
+    "scope": "Only the authorized whether/or to both/and repair; all other verse renderings unchanged."
   }
 }
