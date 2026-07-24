@@ -1,0 +1,103 @@
+schema_version: 1
+last_updated: "2026-07-23"
+project:
+  name: "Formed Life Translation"
+  repository: "WormRN/formed-life-translation"
+  source_text: "SBLGNT"
+engine:
+  name: "FLT Translation Engine"
+  version: "2.0"
+  phase: 4
+  translation_identity: "dynamic equivalence"
+  target_reader: "religion-naive adult or older adolescent near a sixth-grade reading level"
+  common_candidate_goal: true
+  candidate_mapping:
+    A: "Claude Sonnet"
+    B: "GPT-5.6 Sol"
+    C: "Gemini Pro"
+
+bootstrap:
+  required_entry_file: "docs/START_HERE.md"
+  stop_if_unavailable: true
+  prohibit_chat_memory_reconstruction: true
+  prohibit_version_1_substitution: true
+  required_read_order:
+    - "docs/START_HERE.md"
+    - "config/engine_manifest.yaml"
+    - "config/latest_audit_run.json"
+    - "relevant governing documents"
+    - "current unit files"
+
+authority:
+  final_decision_maker: "human_editor"
+  orchestration_boss: "primary_assistant"
+  worker_and_checker_role: "evidence_only"
+  exact_candidate_sealed_for_audit: true
+  silent_pre_audit_repair_forbidden: true
+  audit_may_finalize: false
+  boss_may_finalize: false
+  rules:
+    - "The human editor owns wording, repairs, acceptance, rejection, and finalization."
+    - "The primary assistant orchestrates Engine 2.0 and may recommend, but may not substitute its preference for the human-selected candidate."
+    - "A request to run checks means the next Engine 2.0 checkpoint, not a boss-only editorial opinion."
+    - "Workers and auditors may flag concerns and alternatives but may not change the candidate or issue the final decision."
+
+governing_documents:
+  - "docs/current/FLT_translation_philosophy_revision_brief_v2.0.md"
+  - "docs/current/FLT_constitution_v2.0.md"
+  - "docs/current/FLT_style_guide_v2.0.md"
+  - "docs/current/FLT_contextual_lexical_matrix_v2.0.md"
+  - "docs/current/FLT_copyright_independence_policy_v2.0.md"
+  - "docs/current/FLT_translation_packet_template_v2.0.md"
+  - "logs/FLT_decision_log.md"
+
+current_checkpoint:
+  book: "Philippians"
+  chapter: 2
+  current_unit_id: "PHP-02-019-024"
+  current_passage: "Philippians 2:19-24"
+  stage: "exact_human_candidate_audit_launched"
+  candidate_status: "human_editor_candidate_for_audit"
+  candidate_sealed: true
+  latest_accepted_unit: "PHP-02-012-018"
+  next_permitted_action: "Retrieve and report the exact-candidate audit evidence; do not edit, accept, reject, or finalize without the human editor."
+  active_files:
+    candidate: "docs/architecture/phase-4/PHP-02-019-024_human-editor-candidate-v01.json"
+    audit_source: "docs/architecture/phase-4/PHP-02-019-024_audit-source.json"
+    workflow: ".github/workflows/phase4-php2-019-024-candidate-audit.yml"
+  launch_commit: "7cc00808082e0d4667e4dc73fd35cd16d27e01b6"
+
+accepted_units:
+  - passage: "Philippians 1:1-30"
+    status: "accepted benchmark text"
+  - passage: "Philippians 2:1-4"
+    status: "accepted after exact-candidate audit"
+  - passage: "Philippians 2:5-11"
+    status: "accepted after exact-candidate audit"
+    audit_run_id: 29868317005
+    audit_artifact: "FLT-PHP-02-20260721-1"
+  - passage: "Philippians 2:12-18"
+    status: "accepted_without_repair"
+    audit_run_id: 30043603606
+    audit_artifact: "FLT-PHP-02-20260723-2"
+
+audit_retrieval:
+  user_run_link_required: false
+  latest_receipt: "config/latest_audit_run.json"
+  semantic_pass_requires:
+    auditor_count: 3
+    eligible_count: 3
+    blocking_defects: 0
+  successful_job_alone_is_semantic_pass: false
+  audit_alone_finalizes_candidate: false
+  fallback_order:
+    - "Read config/latest_audit_run.json."
+    - "Use the connected GitHub Actions tools with the recorded run ID."
+    - "Retrieve the recorded artifact and audit summary."
+    - "Ask the user for a run link only if connected repository retrieval is unavailable."
+
+workflow_requirements:
+  blind_candidates_share_one_constitutional_goal: true
+  role_specific_readability_fidelity_balanced_goals_forbidden: true
+  exact_candidate_must_be_preserved: true
+  publish_latest_audit_receipt: true
