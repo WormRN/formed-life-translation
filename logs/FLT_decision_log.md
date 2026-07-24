@@ -59,8 +59,9 @@ Examples worth logging:
 
 ## Phil 1:1–2 — Greeting and Church Role Terms
 
-**Date:** 2026-06-12  
-**Status:** provisional trial decision; revisit after full chapter read-aloud  
+**Original decision date:** 2026-06-12  
+**Process-revalidation date:** 2026-07-24  
+**Status:** confirmed for the Phase 4 benchmark; common-goal drafting and exact-candidate audit complete
 
 **Issue:**  
 How to render the opening sender line, δοῦλοι, ἅγιοι, ἐν Χριστῷ Ἰησοῦ, ἐπισκόποις καὶ διακόνοις, and χάρις καὶ εἰρήνη.
@@ -71,40 +72,45 @@ How to render the opening sender line, δοῦλοι, ἅγιοι, ἐν Χρι�
 - “servants,” “slaves,” “bondservants,” or “who serve” for δοῦλοι
 - “God’s holy people” vs “saints” for ἅγιοι
 - “who belong to Christ Jesus” vs “in Christ Jesus” vs “who are united with Christ Jesus”
-- “overseers and deacons” vs “leaders and helpers” vs “leaders and assistants”
+- “overseers and deacons,” “leaders and assistants,” or “church leaders and those who serve with them”
 - retaining “grace and peace” vs unpacking the greeting in the body text
 
 **Decision:**  
-Use clear reader-facing language while preserving the major Greek relationships:
+Retain the current FLT unchanged after reviewing the valid common-goal A/B/C recovery drafts.
 
-> From Paul and Timothy, servants of Christ Jesus.
->
-> To all of God’s holy people in Philippi who are united with Christ Jesus, together with your leaders and assistants.
->
-> May God our Father and the Lord Jesus Christ give you grace and peace.
+**Final wording:**  
+
+> **1** This letter is from Paul and Timothy, servants of Christ Jesus. We are writing to all of God’s holy people in Philippi who are united with Christ Jesus, including your church leaders and those who serve with them.  
+> **2** May God our Father and the Lord Jesus Christ give you grace and peace.
 
 **Reason:**  
-“From” is simple and clear enough for a modern letter opening. “Servants” is retained in the body text because it is readable, but a footnote expands the allegiance/belonging force of δοῦλοι. “God’s holy people” is clearer than “saints” for religion-naive readers. “United with Christ Jesus” better preserves the theological force of ἐν Χριστῷ Ἰησοῦ than “belong to Christ Jesus.” “Leaders and assistants” is chosen because “overseers and deacons” is not transparent to the target reader and may carry later church-tradition baggage. “Leader” gives the force of overseer in clear modern English, and “assistant” communicates the service role of deacon without requiring prior church knowledge. “Grace and peace” is retained as a learnable Christian greeting.
+“This letter is from” immediately identifies the epistolary setting for a religion-naive reader. “Servants” remains clear in the body text while a note can preserve the allegiance and belonging force of δοῦλοι. “God’s holy people” avoids suggesting an elite class of saints. “United with Christ Jesus” communicates the defining relationship expressed by ἐν Χριστῷ Ἰησοῦ. “Church leaders and those who serve with them” gives ordinary readers a functional picture of the two recognized service groups without requiring later church vocabulary. Verse 2 naturally preserves the blessing and its shared source in God the Father and the Lord Jesus Christ.
+
+The replacement drafting evidence used one identical constitutional mission for Claude, GPT-5.6 Sol, and Gemini, with the current FLT and comparison translations hidden. The human editor reaffirmed the current FLT. The exact sealed candidate then passed all three semantic-floor auditors with zero blocking defects.
+
+**Process evidence:**  
+
+- Common-goal recovery run: GitHub Actions 30073170869
+- Exact-candidate audit: GitHub Actions 30113294398
+- Audit result: three of three auditors eligible; zero blocking defects
 
 **Footnotes needed:**  
 
 - **servants** — The word means more than hired workers. Paul and Timothy are bound to Christ by loyal allegiance and belong fully to His service.
 - **Christ** — Christ means “Anointed One,” the promised Messiah.
 - **God’s holy people** — God’s people are “holy” because they have been set apart as His own.
-- **leaders and assistants** — The words refer to recognized servant-leaders in the church. The first group gave care and direction; the second served in practical ministry.
+- **church leaders and those who serve with them** — The words refer to two recognized groups serving the church: those who gave care and direction and those who served in practical ministry.
 
-**Glossary update needed:**  
+**Glossary or Matrix update needed:**  
 
-- Add Phil 1:1 as an example where δοῦλοι is rendered “servants” with an explanatory footnote.
-- Add Phil 1:1 as an example where ἅγιοι is rendered “God’s holy people.”
-- Add Phil 1:1 as an example where ἐν Χριστῷ Ἰησοῦ is rendered “united with Christ Jesus,” while noting that this should not become an automatic rendering for every occurrence.
-- Add Phil 1:1 as an example where ἐπίσκοποι καὶ διάκονοι is rendered “leaders and assistants.”
+- Preserve Phil 1:1 as a scoped example for “servants,” “God’s holy people,” and “united with Christ Jesus.”
+- Record “church leaders and those who serve with them” as the confirmed functional rendering for ἐπισκόποις καὶ διακόνοις in this verse.
 
 **Style Guide update needed:**  
 Epistolary openings may use either “From...” or “This letter is from...” depending on flow and clarity.
 
 **Revisit trigger:**  
-Revisit after the full Philippians 1 read-aloud pass to confirm rhythm and consistency.
+Revisit only if the full Philippians 1 read-aloud or target-reader review exposes a concrete comprehension or oral-flow problem.
 
 
 ---
