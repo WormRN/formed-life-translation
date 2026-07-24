@@ -56,11 +56,11 @@ current_checkpoint:
   chapter: 2
   current_unit_id: "PHP-02-025-030"
   current_passage: "Philippians 2:25-30"
-  stage: "chapter_level_oral_flow_and_human_acceptance"
-  candidate_status: "The nine-unit process-revalidation recovery is complete. Philippians 2:25-30 retains valid common-goal drafting and corrected semantic-floor evidence and awaits explicit human acceptance after the compiled chapter oral-flow review."
+  stage: "philippians_2_chapter_level_review"
+  candidate_status: "Philippians 2:25-30 was explicitly accepted by the human editor exactly as corrected and audited. All Philippians 2 units are accepted; chapter-level review is in progress."
   candidate_sealed: true
-  latest_accepted_unit: "PHP-02-019-024 (human-selected revised wording passed three semantic-floor auditors with zero blocking defects; process revalidated; audit run 30123491843)"
-  next_permitted_action: "Conduct full-chapter oral-flow, literary-cohesion, terminology, and cumulative-expansion reviews for Philippians 1 and 2. During the Philippians 2 review, present Philippians 2:25-30 for explicit human acceptance without rerunning its valid common-goal drafting or corrected audit."
+  latest_accepted_unit: "PHP-02-025-030 (human editor accepted the exact corrected wording; prior audit run 30065182431 reported three eligible auditors and zero blocking defects)"
+  next_permitted_action: "Complete and present the Philippians 2 continuous-reading review. Surface any proposed wording change to the human editor; make no silent changes. After human chapter approval, synchronize text, notes, decision log, and chapter freeze, then perform the corresponding Philippians 1 chapter-close review before advancing to chapter 3."
   process_revalidation:
     reason: "Earlier blind drafting assigned different readability, Greek-fidelity, and balanced missions instead of one common constitutional goal."
     status: "recovery_completed_all_nine_units_process_revalidated"
@@ -189,7 +189,7 @@ current_checkpoint:
     common_prompt_sha256: "e02ea8de3d69bd715c9a714ee67eb4e412e0314c9a21857ea9998247c549df20"
     audit_run_id: 30065182431
     semantic_pass: true
-    human_acceptance_after_oral_review_pending: true
+    human_acceptance_after_oral_review_pending: false
   active_files:
     blind_source: "docs/architecture/phase-4/PHP-REVALIDATION-001-024_blind-source.json"
     runner: "phase4-harness/src/process-revalidation-batch.js"
@@ -242,7 +242,7 @@ accepted_units:
     audit_run_id: 30123491843
     audit_artifact: "FLT-PHP-02-20260724-4"
   - passage: "Philippians 2:25-30"
-    status: "valid common-goal drafting and corrected semantic-floor audit; awaiting explicit human acceptance after oral review"
+    status: "human editor accepted the exact corrected wording; valid common-goal drafting and corrected semantic-floor audit preserved; chapter-level oral-flow and literary review remains due"
     draft_run_id: 30063037938
     audit_run_id: 30065182431
 
