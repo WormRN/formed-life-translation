@@ -277,3 +277,46 @@ None.
 **Revisit trigger:**  
 Whole-chapter oral-flow review or a later contextual conflict.
 
+
+
+---
+
+## Phil 1:19–26 — Life, Death, and Fruitful Service
+
+**Date:** 2026-07-24  
+**Status:** process-revalidated and approved as a unit
+
+**Issue:**  
+How to express Paul’s complete courage, the Christ-centered meaning of both life and death, and his strong pull toward departing to be with Christ while retaining natural sixth-grade-adult English.
+
+**Decision:**  
+Revise verses 20, 21, and 23 as directed by the human editor. Retain the existing FLT wording in verses 19, 22, and 24–26.
+
+**Reason:**  
+“I will have complete courage” expresses Paul’s confident expectation rather than merely repeating that he hopes for courage. “Because for me” carries the explanatory force connecting verse 21 to Christ being honored whether Paul lives or dies. “I am pulled in both directions” makes the real pressure of Paul’s alternatives immediately understandable, while “which is far better” clearly identifies being with Christ as the preferred outcome. The complete sealed unit passed three independent semantic-floor auditors with zero blocking defects.
+
+**Final wording:**
+
+> **19** I know that my distress will become my deliverance through your prayers and the help of the Spirit of Jesus Christ.  
+> **20** My eager hope and expectation is that I will not be ashamed in any way. Instead, I will have complete courage so that now, as always, Christ will be honored in my body, whether I live or die.  
+> **21** Because for me, living means living for Christ, and dying means gaining something even better.  
+> **22** But if living on in this body means more fruitful work for me, then I honestly don’t know which one to choose!  
+> **23** I am pulled in both directions. I long to leave this life and be with Christ, which is far better.  
+> **24** But for your sake, it is more necessary that I remain in this body.  
+> **25** Since I am convinced of this, I know I will stay. I will remain with all of you so that you can grow and experience joy in your faith.  
+> **26** Then, when I return to you, you will have even more reason to be proud of what Christ Jesus has done in me.
+
+**Audit:**  
+GitHub run 30117320796; three of three auditors eligible; zero blocking defects.
+
+**Footnotes needed:**  
+Consider a note on the possible scope of “deliverance” in verse 19 during chapter-level notes review.
+
+**Glossary update needed:**  
+None presently required.
+
+**Style Guide update needed:**  
+None.
+
+**Revisit trigger:**  
+Whole-chapter oral-flow review, target-reader review, or a later contextual conflict.
