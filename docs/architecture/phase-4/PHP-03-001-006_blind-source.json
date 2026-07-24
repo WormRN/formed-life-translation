@@ -1,0 +1,86 @@
+{
+  "chapter_id": "PHP-03",
+  "book": "Philippians",
+  "chapter": 3,
+  "source_edition": "SBLGNT",
+  "tone": "warm and pastoral in the opening, then sharply warning, forceful, ironic, and personally emphatic",
+  "target_reader": "religion-naive adults and older adolescents near grade 6",
+  "translation_identity": "firmly dynamic-equivalence, NLT-like in readability but independent",
+  "sealed_context": {
+    "prior_chapters": "Philippians 1-2 are finalized and frozen.",
+    "instruction": "The completed English wording of Philippians 1-2 is excluded from blind drafting. Preserve only the source-text discourse transition into Philippians 3."
+  },
+  "governing_rules": [
+    "All three candidates pursue the same constitutional goal; no provider receives a readability, fidelity, or blended specialty.",
+    "The prose serves the reader; the apparatus serves accountability.",
+    "Translate meaning, logic, tone, discourse movement, and theological force rather than Greek surface form.",
+    "Use clear natural oral English for adults; reorder, split, unpack, and clarify implied relationships when comprehension benefits.",
+    "Preserve Paul’s movement from rejoicing, to urgent warning, to the contrast between Spirit-shaped worship and confidence in human credentials, and then to his own credential list.",
+    "Preserve forceful rhetoric, repetition, irony, and wordplay when possible without turning the body text into commentary.",
+    "No comparison translations, traditional benchmark wording, prior FLT wording, conversational drafts, or sealed human wording may enter blind drafting."
+  ],
+  "existing_decisions": [
+    "Render adelphoi inclusively as “brothers and sisters” when English context requires the inclusive address, but blind workers must choose their own complete sentence wording.",
+    "Capitalize pronouns referring to deity and capitalize Spirit when the referent is God’s Spirit.",
+    "Render theological vocabulary contextually in reader-facing English; do not preserve opaque church terms merely because they are traditional.",
+    "Maintain the reader-first dynamic center established by the audited Philippians benchmark without exposing its wording to blind workers."
+  ],
+  "matrix_alerts": [
+    {
+      "lemma": "σάρξ",
+      "status": "high-priority stub; mandatory contextual review",
+      "neutral_range": "body, human descent, human limitation, merely human capability, or the sphere opposed to the Spirit",
+      "instruction": "In verses 3-4, determine from the local contrast what kind of confidence Paul rejects. Do not force one global English equivalent."
+    },
+    {
+      "lemma": "δικαιοσύνη",
+      "status": "high-priority stub; mandatory human review",
+      "neutral_range": "righteousness, justice, right conduct, right standing, or God’s own rightness",
+      "instruction": "In verse 6, preserve that Paul describes his blameless standing or conduct measured by the law without implying moral sinlessness beyond the claim."
+    }
+  ],
+  "units": [
+    {
+      "unit_id": "PHP-03-001-006",
+      "passage": "Philippians 3:1–6",
+      "title": "Rejoice in the Lord and reject confidence in human credentials",
+      "known_issues": [
+        "Verse 1 opens with to loipon, which may mark a transition such as “further,” “now,” or “finally”; do not make the letter sound as though it is ending if the discourse does not warrant that effect.",
+        "Verse 1 says that writing “the same things” is not burdensome to Paul and is safe or protective for the readers. The precise backward reference is not explicit in the sentence; avoid inventing a specific earlier statement.",
+        "Verse 2 repeats the warning verb three times and uses the insulting images “dogs,” “evil workers,” and a cutting/mutilation wordplay against those demanding circumcision. Preserve Paul’s sharp force while making the target and rhetorical movement followable.",
+        "Verse 3 says “we are the circumcision,” then identifies the group by worship or service through God’s Spirit, boasting or glorying in Christ Jesus, and refusing confidence in sarx. Preserve the identity claim and three-part description.",
+        "The phrase pneumati theou in verse 3 is source-side wording “Spirit of God/by God’s Spirit”; capitalize Spirit without adding a theological explanation to the body text.",
+        "Verses 3-4 use sarx contextually for human grounds of confidence, especially ancestry, religious status, achievement, and observance. Avoid a misleading reference to physical skin or the body unless the sentence makes the intended contrast clear.",
+        "Verse 4 shifts into irony or rhetorical concession: if human credentials could establish confidence, Paul has more grounds than his opponents. Preserve the boast’s argumentative function without making Paul endorse those grounds.",
+        "Verse 5 lists circumcision on the eighth day, Israelite descent, Benjaminite tribe, Hebrew identity, and Pharisaic relation to the law. Keep the credential pile-up intelligible to a religion-naive reader; explanatory background may belong in notes rather than the body text.",
+        "Verse 6 names Paul’s zeal as persecution of the church and calls him blameless with respect to righteousness under the law. Preserve the shocking contrast and the limited standard of the blameless claim; do not present persecution as morally righteous."
+      ],
+      "verses": [
+        {
+          "reference": "Phil.3.1",
+          "greek": "Τὸ λοιπόν ἀδελφοί μου χαίρετε ἐν κυρίῳ τὰ αὐτὰ γράφειν ὑμῖν ἐμοὶ μὲν οὐκ ὀκνηρόν ὑμῖν δὲ ἀσφαλές"
+        },
+        {
+          "reference": "Phil.3.2",
+          "greek": "Βλέπετε τοὺς κύνας βλέπετε τοὺς κακοὺς ἐργάτας βλέπετε τὴν κατατομήν"
+        },
+        {
+          "reference": "Phil.3.3",
+          "greek": "ἡμεῖς γάρ ἐσμεν ἡ περιτομή οἱ πνεύματι θεοῦ λατρεύοντες καὶ καυχώμενοι ἐν Χριστῷ Ἰησοῦ καὶ οὐκ ἐν σαρκὶ πεποιθότες"
+        },
+        {
+          "reference": "Phil.3.4",
+          "greek": "καίπερ ἐγὼ ἔχων πεποίθησιν καὶ ἐν σαρκί Εἴ τις δοκεῖ ἄλλος πεποιθέναι ἐν σαρκί ἐγὼ μᾶλλον"
+        },
+        {
+          "reference": "Phil.3.5",
+          "greek": "περιτομῇ ὀκταήμερος ἐκ γένους Ἰσραήλ φυλῆς Βενιαμίν Ἑβραῖος ἐξ Ἑβραίων κατὰ νόμον Φαρισαῖος"
+        },
+        {
+          "reference": "Phil.3.6",
+          "greek": "κατὰ ζῆλος διώκων τὴν ἐκκλησίαν κατὰ δικαιοσύνην τὴν ἐν νόμῳ γενόμενος ἄμεμπτος"
+        }
+      ]
+    }
+  ]
+}
