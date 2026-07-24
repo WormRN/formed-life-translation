@@ -1,0 +1,87 @@
+{
+  "unit_id": "PHP-01-019-026",
+  "passage": "Philippians 1:19-26",
+  "governing_rules": [
+    {
+      "name": "Dynamic identity",
+      "rule": "FLT is firmly dynamic-equivalence and reader-facing prose serves the reader; Greek form belongs in the apparatus."
+    },
+    {
+      "name": "Meaning floor",
+      "rule": "Preserve meaning, logic, tone, discourse, and theological force; identify material loss, addition, or misleading meaning without rewriting the human candidate."
+    },
+    {
+      "name": "Target reader",
+      "rule": "Religion-naive adults and older adolescents near grade 6."
+    },
+    {
+      "name": "Natural English",
+      "rule": "Reordering, unpacking, sentence splitting, supplied connectors, and rhetorical recreation are permitted when warranted."
+    },
+    {
+      "name": "Unit movement",
+      "rule": "Preserve Paul’s confident expectation of deliverance, his resolve that Christ be honored whether through life or death, the tension between life with fruitful service and departure to be with Christ, and his confidence that remaining will serve the believers’ progress and joy."
+    },
+    {
+      "name": "Scoped pressure points",
+      "rule": "Assess the scope of soteria in verse 19, shame and complete courage in verse 20, the compressed force of living as Christ and dying as gain in verse 21, the real two-direction tension in verses 22–24, and the progress, joy, and Christ-centered boasting in verses 25–26 without demanding Greek-shaped English."
+    },
+    {
+      "name": "Human authority",
+      "rule": "The human editor owns every wording decision. Workers and auditors test the submitted candidate exactly as selected, may report concerns and alternatives, and may not repair, replace, accept, or finalize it."
+    }
+  ],
+  "audit_boundary": {
+    "candidate_is_sealed": true,
+    "instruction": "Evaluate the exact human-selected text. Do not silently restore source wording or substitute a preferred rendering. Classify findings by severity and return them to the human editor for decision."
+  },
+  "source_data": {
+    "edition": "SBLGNT",
+    "book": "Philippians",
+    "chapter": 1,
+    "verse_start": 19,
+    "verse_end": 26,
+    "verses": [
+      {
+        "reference": "Phil.1.19",
+        "greek": "οἶδα γὰρ ὅτι τοῦτό μοι ἀποβήσεται εἰς σωτηρίαν διὰ τῆς ὑμῶν δεήσεως καὶ ἐπιχορηγίας τοῦ πνεύματος Ἰησοῦ Χριστοῦ",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.1.20",
+        "greek": "κατὰ τὴν ἀποκαραδοκίαν καὶ ἐλπίδα μου ὅτι ἐν οὐδενὶ αἰσχυνθήσομαι ἀλλ’ ἐν πάσῃ παρρησίᾳ ὡς πάντοτε καὶ νῦν μεγαλυνθήσεται Χριστὸς ἐν τῷ σώματί μου εἴτε διὰ ζωῆς εἴτε διὰ θανάτου",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.1.21",
+        "greek": "ἐμοὶ γὰρ τὸ ζῆν Χριστὸς καὶ τὸ ἀποθανεῖν κέρδος",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.1.22",
+        "greek": "εἰ δὲ τὸ ζῆν ἐν σαρκί τοῦτό μοι καρπὸς ἔργου καὶ τί αἱρήσομαι οὐ γνωρίζω",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.1.23",
+        "greek": "συνέχομαι δὲ ἐκ τῶν δύο τὴν ἐπιθυμίαν ἔχων εἰς τὸ ἀναλῦσαι καὶ σὺν Χριστῷ εἶναι πολλῷ γὰρ μᾶλλον κρεῖσσον",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.1.24",
+        "greek": "τὸ δὲ ἐπιμένειν ἐν τῇ σαρκὶ ἀναγκαιότερον δι’ ὑμᾶς",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.1.25",
+        "greek": "καὶ τοῦτο πεποιθὼς οἶδα ὅτι μενῶ καὶ παραμενῶ πᾶσιν ὑμῖν εἰς τὴν ὑμῶν προκοπὴν καὶ χαρὰν τῆς πίστεως",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.1.26",
+        "greek": "ἵνα τὸ καύχημα ὑμῶν περισσεύῃ ἐν Χριστῷ Ἰησοῦ ἐν ἐμοὶ διὰ τῆς ἐμῆς παρουσίας πάλιν πρὸς ὑμᾶς",
+        "tokens": []
+      }
+    ]
+  }
+}
