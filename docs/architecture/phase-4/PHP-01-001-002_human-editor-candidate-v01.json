@@ -1,11 +1,16 @@
 {
-  "candidate_id":"FLT-PHP-01-001-002-HUMAN-EDITOR-v01",
-  "unit_id":"PHP-01-001-002",
-  "status":"human_edited_candidate_not_finalized",
-  "evidence_run":"FLT-PHP-01-20260718-981",
-  "verse_renderings":[
+  "candidate_id": "FLT-PHP-01-001-002-HUMAN-EDITOR-v01",
+  "unit_id": "PHP-01-001-002",
+  "status": "human_editor_candidate_for_revalidation_audit",
+  "revalidation_evidence_run": "FLT-PHP-REVALIDATION-20260724-1",
+  "verse_renderings": [
     {"reference":"Phil.1.1","text":"This letter is from Paul and Timothy, servants of Christ Jesus. We are writing to all of God’s holy people in Philippi who are united with Christ Jesus, including your church leaders and those who serve with them."},
     {"reference":"Phil.1.2","text":"May God our Father and the Lord Jesus Christ give you grace and peace."}
   ],
-  "finalization_claim":false
+  "authority": {
+    "selected_by": "human_editor",
+    "decision": "Reaffirm the current FLT without alteration.",
+    "instruction": "Audit this exact wording without pre-audit repair. Auditors provide evidence only; the human editor alone decides whether any finding warrants a change."
+  },
+  "finalization_claim": false
 }
