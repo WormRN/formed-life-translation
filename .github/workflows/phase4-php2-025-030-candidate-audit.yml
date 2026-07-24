@@ -1,0 +1,138 @@
+name: FLT Phase 4 Philippians 2:25-30 candidate audit
+run-name: Philippians 2:25-30 exact human-candidate audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/phase4-php2-025-030-candidate-audit.yml'
+      - 'docs/architecture/phase-4/PHP-02-025-030_human-editor-candidate-v01.json'
+      - 'docs/architecture/phase-4/PHP-02-025-030_audit-source.json'
+  workflow_dispatch:
+
+permissions: {contents: write}
+concurrency: {group: flt-phase-4-php2-025-030-candidate-audit, cancel-in-progress: false}
+
+jobs:
+  audit:
+    name: Reconstruction and semantic-floor audit for Philippians 2:25-30
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: 24, cache: npm, cache-dependency-path: phase4-harness/package-lock.json}
+      - name: Install and test
+        working-directory: phase4-harness
+        run: npm ci && npm test
+      - name: Create run identity
+        id: run
+        shell: bash
+        run: |
+          run_id="FLT-PHP-02-$(date -u +%Y%m%d)-${GITHUB_RUN_NUMBER}"
+          node phase4-harness/scripts/prepare-run-config.mjs phase4-harness/config.github-actions.json phase4-harness/.php2-025-030-audit-config.json "$run_id"
+          jq '.unit_id="PHP-02-025-030" | .source_packet="../docs/architecture/phase-4/PHP-02-025-030_audit-source.json"' phase4-harness/.php2-025-030-audit-config.json > phase4-harness/.php2-025-030-audit-config.tmp
+          mv phase4-harness/.php2-025-030-audit-config.tmp phase4-harness/.php2-025-030-audit-config.json
+          echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
+      - name: Audit exact human-selected candidate
+        id: audit
+        run: node phase4-harness/src/human-candidate-audit.js phase4-harness/.php2-025-030-audit-config.json "phase4-harness/runs/${{ steps.run.outputs.run_id }}" docs/architecture/phase-4/PHP-02-025-030_human-editor-candidate-v01.json
+      - name: Upload candidate audit bundle
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: "${{ steps.run.outputs.run_id || 'FLT-PHP-02-025-030-audit-blocked' }}"
+          path: phase4-harness/runs/
+          retention-days: 30
+      - name: Publish machine-readable audit receipt
+        if: always()
+        env:
+          AUDIT_STEP_OUTCOME: ${{ steps.audit.outcome }}
+          ENGINE_RUN_ID: ${{ steps.run.outputs.run_id }}
+        shell: bash
+        run: |
+          audit_dir="phase4-harness/runs/${ENGINE_RUN_ID}/outputs/audits"
+          audit_files=()
+          while IFS= read -r file; do
+            audit_files+=("$file")
+          done < <(find "$audit_dir" -maxdepth 1 -type f -name '*.json' -print 2>/dev/null | sort)
+
+          auditor_total=${#audit_files[@]}
+          eligible_count=0
+          blocking_defects=0
+          if [ "$auditor_total" -gt 0 ]; then
+            eligible_count=$(jq -s '[.[] | select(.output.overall_eligible == true)] | length' "${audit_files[@]}")
+            blocking_defects=$(jq -s '[.[].output.verse_assessments[]? | select(.status == "block")] | length' "${audit_files[@]}")
+          fi
+
+          semantic_pass=false
+          receipt_status="review_required"
+          if [ "$AUDIT_STEP_OUTCOME" != "success" ]; then
+            receipt_status="workflow_failed"
+          elif [ "$auditor_total" -eq 3 ] && [ "$eligible_count" -eq 3 ] && [ "$blocking_defects" -eq 0 ]; then
+            semantic_pass=true
+            receipt_status="passed_semantic_floor"
+          fi
+
+          mkdir -p config
+          generated_at=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          run_url="https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          jq -n \
+            --argjson schema_version 1 \
+            --arg repository "$GITHUB_REPOSITORY" \
+            --arg workflow_path ".github/workflows/phase4-php2-025-030-candidate-audit.yml" \
+            --arg unit_id "PHP-02-025-030" \
+            --arg passage "Philippians 2:25-30" \
+            --arg engine_run_id "$ENGINE_RUN_ID" \
+            --argjson github_run_id "$GITHUB_RUN_ID" \
+            --arg run_url "$run_url" \
+            --arg artifact_name "$ENGINE_RUN_ID" \
+            --arg head_sha "$GITHUB_SHA" \
+            --arg generated_at "$generated_at" \
+            --arg job_outcome "$AUDIT_STEP_OUTCOME" \
+            --arg receipt_status "$receipt_status" \
+            --argjson auditor_total "$auditor_total" \
+            --argjson eligible_count "$eligible_count" \
+            --argjson blocking_defects "$blocking_defects" \
+            --argjson semantic_pass "$semantic_pass" \
+            '{
+              schema_version: $schema_version,
+              repository: $repository,
+              workflow_path: $workflow_path,
+              unit_id: $unit_id,
+              passage: $passage,
+              engine_run_id: $engine_run_id,
+              github_run_id: $github_run_id,
+              run_url: $run_url,
+              artifact_name: $artifact_name,
+              artifact_summary_path: "outputs/human-candidate-audit.md",
+              head_sha: $head_sha,
+              generated_at: $generated_at,
+              job_outcome: $job_outcome,
+              receipt_status: $receipt_status,
+              audit_evidence: {
+                auditor_total: $auditor_total,
+                eligible_count: $eligible_count,
+                blocking_defects: $blocking_defects,
+                semantic_pass: $semantic_pass
+              },
+              authority: {
+                candidate_was_sealed: true,
+                human_decision_required: true,
+                audit_finalizes_candidate: false
+              }
+            }' > config/latest_audit_run.json
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add config/latest_audit_run.json
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "Record Philippians 2:25-30 audit run receipt"
+          git pull --rebase origin main
+          git push origin HEAD:main
