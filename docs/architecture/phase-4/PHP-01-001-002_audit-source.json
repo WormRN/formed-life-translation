@@ -1,0 +1,27 @@
+{
+  "unit_id": "PHP-01-001-002",
+  "passage": "Philippians 1:1-2",
+  "governing_rules": [
+    {"name":"Dynamic identity","rule":"FLT is firmly dynamic-equivalence and reader-facing prose serves the reader; Greek form belongs in the apparatus."},
+    {"name":"Meaning floor","rule":"Preserve meaning, logic, tone, discourse, and theological force; identify material loss, addition, or misleading meaning without rewriting the human candidate."},
+    {"name":"Target reader","rule":"Religion-naive adults and older adolescents near grade 6."},
+    {"name":"Natural English","rule":"Reordering, unpacking, sentence splitting, supplied connectors, and rhetorical recreation are permitted when warranted."},
+    {"name":"Scoped lexical precedents","rule":"For Philippians 1:1, servants, God’s holy people, leaders, and assistants or clear functional equivalents are governed contextual options; assess meaning rather than demanding Greek-shaped labels."},
+    {"name":"Human authority","rule":"The human editor owns every wording decision. Workers and auditors test the submitted candidate exactly as selected, may report concerns and alternatives, and may not repair, replace, accept, or finalize it."}
+  ],
+  "audit_boundary": {
+    "candidate_is_sealed": true,
+    "instruction": "Evaluate the exact human-reaffirmed text. Do not silently restore source wording or substitute a preferred rendering. Classify findings by severity and return them to the human editor for decision."
+  },
+  "source_data": {
+    "edition": "SBLGNT",
+    "book": "Philippians",
+    "chapter": 1,
+    "verse_start": 1,
+    "verse_end": 2,
+    "verses": [
+      {"reference":"Phil.1.1","greek":"Παῦλος καὶ Τιμόθεος δοῦλοι Χριστοῦ Ἰησοῦ πᾶσιν τοῖς ἁγίοις ἐν Χριστῷ Ἰησοῦ τοῖς οὖσιν ἐν Φιλίπποις σὺν ἐπισκόποις καὶ διακόνοις","tokens":[]},
+      {"reference":"Phil.1.2","greek":"χάρις ὑμῖν καὶ εἰρήνη ἀπὸ θεοῦ πατρὸς ἡμῶν καὶ κυρίου Ἰησοῦ Χριστοῦ","tokens":[]}
+    ]
+  }
+}
