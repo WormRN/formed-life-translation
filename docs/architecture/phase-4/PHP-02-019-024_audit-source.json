@@ -1,0 +1,30 @@
+{
+  "unit_id": "PHP-02-019-024",
+  "passage": "Philippians 2:19-24",
+  "governing_rules": [
+    {"name":"Dynamic identity","rule":"FLT is firmly dynamic-equivalence and reader-facing prose serves the reader; Greek form belongs in the apparatus."},
+    {"name":"Meaning floor","rule":"Preserve meaning, logic, tone, discourse, and theological force; identify material loss, addition, or misleading meaning without rewriting the human candidate."},
+    {"name":"Target reader","rule":"Religion-naive adults and older adolescents near grade 6."},
+    {"name":"Natural English","rule":"Reordering, unpacking, sentence splitting, supplied connectors, and rhetorical recreation are permitted when warranted."},
+    {"name":"Human authority","rule":"The human editor owns every wording decision. Workers, editors, and auditors must test the submitted candidate exactly as selected, may report concerns and alternatives, and may not repair, replace, accept, or finalize it."}
+  ],
+  "audit_boundary": {
+    "candidate_is_sealed": true,
+    "instruction": "Evaluate the exact human-selected text. Do not silently restore source wording or substitute a preferred rendering. Classify findings by severity and return them to the human editor for decision."
+  },
+  "source_data": {
+    "edition": "SBLGNT",
+    "book": "Philippians",
+    "chapter": 2,
+    "verse_start": 19,
+    "verse_end": 24,
+    "verses": [
+      {"reference":"Phil.2.19","greek":"Ἐλπίζω δὲ ἐν κυρίῳ Ἰησοῦ Τιμόθεον ταχέως πέμψαι ὑμῖν ἵνα κἀγὼ εὐψυχῶ γνοὺς τὰ περὶ ὑμῶν","tokens":[]},
+      {"reference":"Phil.2.20","greek":"οὐδένα γὰρ ἔχω ἰσόψυχον ὅστις γνησίως τὰ περὶ ὑμῶν μεριμνήσει","tokens":[]},
+      {"reference":"Phil.2.21","greek":"οἱ πάντες γὰρ τὰ ἑαυτῶν ζητοῦσιν οὐ τὰ Ἰησοῦ Χριστοῦ","tokens":[]},
+      {"reference":"Phil.2.22","greek":"τὴν δὲ δοκιμὴν αὐτοῦ γινώσκετε ὅτι ὡς πατρὶ τέκνον σὺν ἐμοὶ ἐδούλευσεν εἰς τὸ εὐαγγέλιον","tokens":[]},
+      {"reference":"Phil.2.23","greek":"τοῦτον μὲν οὖν ἐλπίζω πέμψαι ὡς ἂν ἀφίδω τὰ περὶ ἐμὲ ἐξαυτῆς","tokens":[]},
+      {"reference":"Phil.2.24","greek":"πέποιθα δὲ ἐν κυρίῳ ὅτι καὶ αὐτὸς ταχέως ἐλεύσομαι","tokens":[]}
+    ]
+  }
+}
