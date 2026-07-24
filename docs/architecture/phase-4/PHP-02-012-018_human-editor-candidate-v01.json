@@ -1,7 +1,7 @@
 {
   "candidate_id": "FLT-PHP-02-012-018-HUMAN-EDITOR-v01",
   "unit_id": "PHP-02-012-018",
-  "status": "accepted_phase_4_benchmark_unit",
+  "status": "human_reaffirmed_process_revalidated",
   "evidence_run": "FLT-PHP-02-20260723-2",
   "audit_run_url": "https://github.com/WormRN/formed-life-translation/actions/runs/30043603606/workflow",
   "audit_result": {
@@ -12,13 +12,34 @@
     "accepted_date": "2026-07-23"
   },
   "verse_renderings": [
-    {"reference":"Phil.2.12","text":"Because of this, my dear friends, continue to obey as you always have. Now that I am away from you, it is even more important that you do so. Keep living out your salvation with deep reverence and awe."},
-    {"reference":"Phil.2.13","text":"For God is at work in all of you. He gives you both the desire and the power to do what pleases Him."},
-    {"reference":"Phil.2.14","text":"Do everything without complaining or arguing with one another,"},
-    {"reference":"Phil.2.15","text":"so that no one can find fault with you. As God’s pure and innocent children, you will stand out in a crooked and corrupt generation, shining among them like stars in the dark sky"},
-    {"reference":"Phil.2.16","text":"as your lives display the message that gives life. Then, when Christ returns, I will have reason to rejoice that my hard work wasn’t wasted."},
-    {"reference":"Phil.2.17","text":"Your faithful service is like a holy sacrifice offered to God. But even if my life is poured out like an offering over your sacrifice, I am full of joy, and I share this joy with all of you."},
-    {"reference":"Phil.2.18","text":"In the same way, you too should be glad and share your joy with me."}
+    {
+      "reference": "Phil.2.12",
+      "text": "Because of this, my dear friends, continue to obey as you always have. Now that I am away from you, it is even more important that you do so. Keep living out your salvation with deep reverence and awe."
+    },
+    {
+      "reference": "Phil.2.13",
+      "text": "For God is at work in all of you. He gives you both the desire and the power to do what pleases Him."
+    },
+    {
+      "reference": "Phil.2.14",
+      "text": "Do everything without complaining or arguing with one another,"
+    },
+    {
+      "reference": "Phil.2.15",
+      "text": "so that no one can find fault with you. As God’s pure and innocent children, you will stand out in a crooked and corrupt generation, shining among them like stars in the dark sky"
+    },
+    {
+      "reference": "Phil.2.16",
+      "text": "as your lives display the message that gives life. Then, when Christ returns, I will have reason to rejoice that my hard work wasn’t wasted."
+    },
+    {
+      "reference": "Phil.2.17",
+      "text": "Your faithful service is like a holy sacrifice offered to God. But even if my life is poured out like an offering over your sacrifice, I am full of joy, and I share this joy with all of you."
+    },
+    {
+      "reference": "Phil.2.18",
+      "text": "In the same way, you too should be glad and share your joy with me."
+    }
   ],
   "editorial_resolutions": [
     {
@@ -32,5 +53,21 @@
       "rationale": "The running metaphor is not developed further in this paragraph; the chosen wording preserves the point with less reader friction."
     }
   ],
-  "finalization_claim": true
+  "finalization_claim": true,
+  "revalidation_evidence_run": "FLT-PHP-REVALIDATION-20260724-1",
+  "audit_evidence": {
+    "audit_run": "FLT-PHP-02-20260723-2",
+    "github_actions_run": "30043603606",
+    "result": "eligible",
+    "eligible_auditors": 3,
+    "blocking_defects": 0
+  },
+  "authority": {
+    "selected_by": "human_editor",
+    "decision_date": "2026-07-24",
+    "decision": "Reaffirm the current FLT wording for Philippians 2:12–18 exactly as presented.",
+    "duplicate_audit_required": false,
+    "reason": "The wording is identical to the accepted benchmark candidate already evaluated by three eligible semantic-floor auditors with zero blocking defects."
+  },
+  "remaining_gate": "chapter_level_oral_flow_literary_cohesion_terminology_and_cumulative_expansion_review"
 }
