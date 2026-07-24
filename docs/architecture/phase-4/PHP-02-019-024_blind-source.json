@@ -1,0 +1,53 @@
+{
+  "chapter_id": "PHP-02",
+  "book": "Philippians",
+  "chapter": 2,
+  "source_edition": "SBLGNT",
+  "tone": "warm, personal, commendatory, hopeful, and pastoral",
+  "target_reader": "religion-naive adults and older adolescents near grade 6",
+  "translation_identity": "firmly dynamic-equivalence, NLT-like in readability but independent",
+  "sealed_unit": {
+    "unit_id": "PHP-02-001-018",
+    "instruction": "The completed human-edited wording of Philippians 2:1-18 is excluded from blind drafting. Preserve only the source-text discourse transition into verse 19."
+  },
+  "governing_rules": [
+    "The prose serves the reader; the apparatus serves accountability.",
+    "Translate meaning, logic, tone, discourse movement, and theological force rather than Greek surface form.",
+    "Use clear natural oral English; reorder, split, unpack, and clarify implied relationships when comprehension benefits.",
+    "Preserve the paragraph’s movement from Paul’s hope to send Timothy, through Timothy’s proven character and sincere concern, to Paul’s hope of coming personally.",
+    "Do not turn idioms or relational images into unsupported commentary; document consequential resolutions as risks or human questions.",
+    "No comparison translations, traditional benchmark wording, conversational drafts, or sealed human wording may enter blind drafting."
+  ],
+  "existing_decisions": [
+    "Use Christ and Jesus Christ naturally according to the source reference.",
+    "Deity pronouns capitalized.",
+    "Render εὐαγγέλιον as the good news when context permits.",
+    "Maintain the reader-first dynamic center established by the audited Philippians benchmark without exposing its wording to blind workers."
+  ],
+  "units": [
+    {
+      "unit_id": "PHP-02-019-024",
+      "passage": "Philippians 2:19–24",
+      "title": "Paul hopes to send Timothy",
+      "known_issues": [
+        "Verse 19’s hope is explicitly grounded 'in the Lord Jesus'; preserve dependence on the Lord without making the English stiff or formulaic.",
+        "Verse 19’s εὐψυχῶ means to be encouraged or cheered by receiving news about the Philippians; make the emotional result clear.",
+        "Verse 20’s ἰσόψυχον describes Timothy as like-minded or sharing Paul’s concern. Avoid implying absolute identity in every respect.",
+        "Verse 20’s μεριμνήσει is positive, sincere care for their welfare, despite the word family’s possible association with anxiety elsewhere.",
+        "Verse 21 contrasts self-interest with the interests or cause of Jesus Christ. Identify the contrast naturally without exaggerating Paul’s statement into a universal condemnation of every Christian worker.",
+        "Verse 22’s δοκιμή refers to Timothy’s tested and proven character, which the Philippians already know.",
+        "Verse 22 uses a father-child image for Timothy serving with Paul in advancing the good news. Preserve both their close relationship and Timothy’s active partnership; avoid making him sound merely subordinate or childish.",
+        "Verse 23 says Paul will send Timothy as soon as Paul sees how his own circumstances turn out. Make the referent clear without inventing details.",
+        "Verse 24 again grounds Paul’s confidence in the Lord and expresses hope that Paul himself will come soon."
+      ],
+      "verses": [
+        {"reference":"Phil.2.19","greek":"Ἐλπίζω δὲ ἐν κυρίῳ Ἰησοῦ Τιμόθεον ταχέως πέμψαι ὑμῖν ἵνα κἀγὼ εὐψυχῶ γνοὺς τὰ περὶ ὑμῶν"},
+        {"reference":"Phil.2.20","greek":"οὐδένα γὰρ ἔχω ἰσόψυχον ὅστις γνησίως τὰ περὶ ὑμῶν μεριμνήσει"},
+        {"reference":"Phil.2.21","greek":"οἱ πάντες γὰρ τὰ ἑαυτῶν ζητοῦσιν οὐ τὰ Ἰησοῦ Χριστοῦ"},
+        {"reference":"Phil.2.22","greek":"τὴν δὲ δοκιμὴν αὐτοῦ γινώσκετε ὅτι ὡς πατρὶ τέκνον σὺν ἐμοὶ ἐδούλευσεν εἰς τὸ εὐαγγέλιον"},
+        {"reference":"Phil.2.23","greek":"τοῦτον μὲν οὖν ἐλπίζω πέμψαι ὡς ἂν ἀφίδω τὰ περὶ ἐμὲ ἐξαυτῆς"},
+        {"reference":"Phil.2.24","greek":"πέποιθα δὲ ἐν κυρίῳ ὅτι καὶ αὐτὸς ταχέως ἐλεύσομαι"}
+      ]
+    }
+  ]
+}
