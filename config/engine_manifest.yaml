@@ -57,10 +57,10 @@ current_checkpoint:
   current_unit_id: "PHP-01-CHAPTER-CLOSE"
   current_passage: "Philippians 1:1-30"
   stage: "philippians_1_chapter_level_review"
-  candidate_status: "All Philippians 1 units are process-revalidated and accepted. Philippians 2 is finalized and frozen. The promised Philippians 1 whole-chapter close review is now in progress."
+  candidate_status: "All Philippians 1 units are process-revalidated and accepted. The assistant chapter-level review is complete; one oral-flow question in verse 30 awaits the human editor."
   candidate_sealed: true
   latest_accepted_unit: "PHP-02-025-030 (human-authorized verse 27 repair passed audit run 30126332658; Philippians 2 notes, validation, and freeze completed)"
-  next_permitted_action: "Assemble the authoritative accepted Philippians 1 text, conduct oral-flow, literary-cohesion, terminology, and cumulative-expansion review, surface any genuine wording question to the human editor, then synchronize notes and create the Philippians 1 freeze. Advance to Philippians 3 only after Philippians 1 is closed."
+  next_permitted_action: "Present docs/architecture/phase-4/FLT_Philippians_1_chapter-review-v01.md. Await the human decision to retain verse 30 or remove the redundant final word today. If changed, audit only the repaired exact candidate. Then finalize notes, validation, and the Philippians 1 freeze and advance to chapter 3."
   process_revalidation:
     reason: "Earlier blind drafting assigned different readability, Greek-fidelity, and balanced missions instead of one common constitutional goal."
     status: "recovery_completed_all_nine_units_process_revalidated"
@@ -195,7 +195,7 @@ current_checkpoint:
     runner: "phase4-harness/src/process-revalidation-batch.js"
     workflow: ".github/workflows/phase4-philippians-process-revalidation.yml"
     latest_draft_receipt: "config/latest_draft_run.json"
-    current_unit_brief: "Philippians 1 compiled chapter-close review in preparation"
+    current_unit_brief: "docs/architecture/phase-4/FLT_Philippians_1_chapter-review-v01.md"
     last_revalidated_candidate: "docs/architecture/phase-4/PHP-02-019-024_human-editor-decision-v02.json"
     last_revalidated_audit_source: "docs/architecture/phase-4/PHP-02-019-024_audit-source.json"
     last_revalidated_audit_workflow: ".github/workflows/phase4-php2-019-024-candidate-audit.yml"
