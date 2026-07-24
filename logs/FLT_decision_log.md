@@ -400,3 +400,13 @@ None presently required.
 
 **Revisit trigger:**  
 Reopen only if the whole-letter review or later contextual evidence exposes a concrete problem.
+
+## 2026-07-24 — Philippians 3:1–6 human synthesis accepted after audit
+
+- **Unit:** `PHP-03-001-006`
+- **Decision:** Adopt the human editor’s six-verse synthesis exactly as supplied.
+- **Required notes:** Preserve reader-facing explanations for verse 2 (“dogs” and “mutilate”) and verse 3 (“human credentials” as the contextual rendering of Greek “flesh”).
+- **Draft provenance:** Three independent candidates pursued one identical constitutional goal in GitHub Actions run 30127266973.
+- **Audit evidence:** The sealed exact candidate passed run 30131378909 with three eligible auditors, zero blocking defects, and a passing semantic floor.
+- **Next gate:** Whole-chapter oral-flow, literary-cohesion, terminology, notes, validation, and freeze review after Philippians 3 is complete.
+
