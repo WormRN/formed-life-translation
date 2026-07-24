@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "repository": "WormRN/formed-life-translation",
-  "workflow_path": ".github/workflows/phase4-php1-012-018-candidate-audit.yml",
-  "unit_id": "PHP-01-012-018",
-  "passage": "Philippians 1:12-18",
+  "workflow_path": ".github/workflows/phase4-php1-019-026-candidate-audit.yml",
+  "unit_id": "PHP-01-019-026",
+  "passage": "Philippians 1:19-26",
   "engine_run_id": "FLT-PHP-01-20260724-1",
-  "github_run_id": 30115635072,
-  "run_url": "https://github.com/WormRN/formed-life-translation/actions/runs/30115635072",
+  "github_run_id": 30117320796,
+  "run_url": "https://github.com/WormRN/formed-life-translation/actions/runs/30117320796",
   "artifact_name": "FLT-PHP-01-20260724-1",
   "artifact_summary_path": "outputs/human-candidate-audit.md",
-  "head_sha": "fd0aecf9ac189da461fc5d571fcbc70d45f8b559",
-  "generated_at": "2026-07-24T18:07:49Z",
+  "head_sha": "b462630b4cc6c66fc34b87ad299422563cf3e811",
+  "generated_at": "2026-07-24T18:34:00Z",
   "job_outcome": "success",
   "receipt_status": "passed_semantic_floor",
   "audit_evidence": {
@@ -23,14 +23,5 @@
     "candidate_was_sealed": true,
     "human_decision_required": true,
     "audit_finalizes_candidate": false
-  },
-  "receipt_note": "Restored as the governing latest valid audit after an incidental metadata-only retrigger (run 30115763449) failed before producing auditors because the Anthropic API credit balance was too low. The verse renderings were unchanged.",
-  "superseded_incidental_run": {
-    "github_run_id": 30115763449,
-    "run_url": "https://github.com/WormRN/formed-life-translation/actions/runs/30115763449",
-    "status": "workflow_failed_before_audit",
-    "cause": "Anthropic API credit balance too low",
-    "auditor_total": 0,
-    "candidate_text_changed": false
   }
 }
