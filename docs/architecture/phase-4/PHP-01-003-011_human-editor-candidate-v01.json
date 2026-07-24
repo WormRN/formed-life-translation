@@ -50,7 +50,9 @@
   "audit_request": {
     "requested_on": "2026-07-24",
     "workflow": ".github/workflows/phase4-php1-003-011-candidate-audit.yml",
-    "reason": "Reaudit after human-authorized minimum repair."
+    "reason": "Reaudit after human-authorized minimum repair.",
+    "trigger": 2,
+    "note": "Harmless retrigger after the first repaired-candidate push produced no new receipt."
   },
   "repair": {
     "authorized_on": "2026-07-24",
