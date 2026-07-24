@@ -56,11 +56,11 @@ current_checkpoint:
   chapter: 3
   current_unit_id: "PHP-03-001-006"
   current_passage: "Philippians 3:1-6"
-  stage: "common_goal_blind_drafting"
-  candidate_status: "Philippians 1 and 2 are finalized and frozen. The blind source packet for Philippians 3:1-6 is sealed and the common-goal A/B/C drafting workflow has been launched; no human candidate exists yet."
+  stage: "human_editor_candidate_selection"
+  candidate_status: "Philippians 3:1-6 common-goal blind drafting completed successfully. Three untouched candidates are authenticated by one identical input SHA-256 and await human selection or synthesis."
   candidate_sealed: false
   latest_accepted_unit: "PHP-01-027-030 (human-authorized verse 30 oral-flow repair passed audit run 30126936712; Philippians 1 notes, validation, and freeze completed)"
-  next_permitted_action: "Read config/latest_draft_run.json and verify it names PHP-03-001-006 with a completed workflow. Retrieve the authenticated artifact, confirm three untouched common-goal candidates mapped A=Claude Sonnet, B=GPT-5.6 Sol, C=Gemini Pro, and present them verse by verse to the human editor. Do not expose prior FLT or comparison translations to workers."
+  next_permitted_action: "Present the authenticated A/B/C candidates verse by verse to the human editor: A=Claude Sonnet, B=GPT-5.6 Sol, C=Gemini Pro. Await selection, revision, or synthesis. Do not seal or audit a candidate until the human editor supplies or approves exact wording."
   process_revalidation:
     reason: "Earlier blind drafting assigned different readability, Greek-fidelity, and balanced missions instead of one common constitutional goal."
     status: "recovery_completed_all_nine_units_process_revalidated"
@@ -174,22 +174,26 @@ current_checkpoint:
       philippians_2_1_24: "Preserve existing exact-candidate audits if the human editor reaffirms wording unchanged; rerun the audit for any changed unit."
       philippians_2_25_30: "No drafting rerun; valid common-goal drafting and corrected semantic-floor audit already exist."
   latest_draft:
-    passage: "Philippians 1:1-30 and 2:1-24"
-    github_run_id: 30073170869
-    engine_run_id: "FLT-PHP-REVALIDATION-20260724-1"
+    passage: "Philippians 3:1-6"
+    github_run_id: 30127266973
+    engine_run_id: "FLT-PHP-03-20260724-1"
+    artifact_id: 8609724412
+    artifact_name: "FLT-PHP-03-20260724-1"
     receipt_status: "completed"
     common_goal_verified: true
-    candidate_count: 27
-    unit_count: 9
-    aggregate_prompt_sha256: "9dfaaeb1ce8a1152d295b5c37ed0c66ed124aa18a7f36884fa28818d9a6cb784"
+    candidate_count: 3
+    unit_count: 1
+    common_prompt_sha256: "5cc1fba76160c3e25dcda5f434c4d122e96aaad992ee7ccc197216d11ffe2984"
+    current_flt_hidden_from_workers: true
+    comparison_translations_hidden_from_workers: true
   last_valid_common_goal_unit:
-    passage: "Philippians 2:25-30"
-    github_run_id: 30063037938
-    engine_run_id: "FLT-PHP-02-20260724-2"
-    common_prompt_sha256: "e02ea8de3d69bd715c9a714ee67eb4e412e0314c9a21857ea9998247c549df20"
-    audit_run_id: 30065182431
-    semantic_pass: true
-    human_acceptance_after_oral_review_pending: false
+    passage: "Philippians 3:1-6"
+    github_run_id: 30127266973
+    engine_run_id: "FLT-PHP-03-20260724-1"
+    common_prompt_sha256: "5cc1fba76160c3e25dcda5f434c4d122e96aaad992ee7ccc197216d11ffe2984"
+    audit_run_id: null
+    semantic_pass: null
+    human_acceptance_after_oral_review_pending: true
   active_files:
     blind_source: "docs/architecture/phase-4/PHP-03-001-006_blind-source.json"
     runner: "phase4-harness/src/chapter-units.js"
@@ -227,7 +231,7 @@ accepted_units:
     draft_run_id: 30073170869
     audit_run_id: 29717014308
   - passage: "Philippians 2:5-11"
-    status: "authoritative v02 FLT reaffirmed unchanged after valid common-goal blind drafting; existing semantic-floor evidence and benchmark decision preserved; process revalidated; chapter-level oral-flow and literary review remains due"
+    status: "authoritative v02 FLT reaffirmed unchanged after valid common-goal blind drafting; existing semantic-floor evidence and benchmark decision preserved; process revalidated; chapter review, notes, validation, and freeze complete"
     draft_run_id: 30073170869
     audit_run_id: 29868317005
     audit_artifact: "FLT-PHP-02-20260721-1"
