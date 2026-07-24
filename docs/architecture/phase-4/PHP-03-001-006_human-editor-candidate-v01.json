@@ -1,7 +1,7 @@
 {
   "candidate_id": "FLT-PHP-03-001-006-HUMAN-EDITOR-v01",
   "unit_id": "PHP-03-001-006",
-  "status": "human_selected_candidate_for_audit",
+  "status": "human_selected_audit_cleared",
   "draft_evidence_run": "FLT-PHP-03-20260724-1",
   "verse_renderings": [
     {
@@ -32,12 +32,17 @@
   "required_reader_notes": [
     {
       "reference": "Phil.3.2",
-      "anchors": ["dogs", "mutilate"],
+      "anchors": [
+        "dogs",
+        "mutilate"
+      ],
       "text": "In the ancient world, “dogs” was a severe insult often used by Jewish people against Gentiles. Here, Paul turns the insult back on his opponents—legalistic teachers who insisted that Gentile Christians must be physically circumcised. Paul angrily calls their obsession with physical circumcision a mere “mutilation of the body,” arguing that true belonging to God is a matter of the Spirit (verse 3)."
     },
     {
       "reference": "Phil.3.3",
-      "anchors": ["human credentials"],
+      "anchors": [
+        "human credentials"
+      ],
       "text": "The literal Greek word here is “flesh.” In this context, Paul uses it to refer to earthly privileges, ethnic heritage, and human achievements used to earn status before God."
     }
   ],
@@ -48,11 +53,21 @@
     "editorial_normalization": "None. Preserve the selected wording and punctuation exactly.",
     "instruction": "Audit this exact selected wording without pre-audit repair. Auditors provide evidence only; the human editor alone decides whether any finding warrants a change."
   },
-  "finalization_claim": false,
+  "finalization_claim": true,
   "audit_request": {
     "requested_on": "2026-07-24",
     "workflow": ".github/workflows/phase4-php3-001-006-candidate-audit.yml",
     "reason": "Required sealed-candidate audit after common-goal blind drafting and human synthesis.",
     "trigger": 1
-  }
+  },
+  "audit_evidence": {
+    "engine_run_id": "FLT-PHP-03-20260724-1",
+    "github_actions_run": 30131378909,
+    "run_url": "https://github.com/WormRN/formed-life-translation/actions/runs/30131378909",
+    "result": "eligible",
+    "eligible_auditors": 3,
+    "blocking_defects": 0,
+    "semantic_pass": true
+  },
+  "remaining_gate": "chapter_level_oral_flow_literary_cohesion_terminology_notes_validation_and_freeze"
 }
