@@ -56,11 +56,11 @@ current_checkpoint:
   chapter: 3
   current_unit_id: "PHP-03-001-006"
   current_passage: "Philippians 3:1-6"
-  stage: "human_editor_candidate_selection"
-  candidate_status: "Philippians 3:1-6 common-goal blind drafting completed successfully. Three untouched candidates are authenticated by one identical input SHA-256 and await human selection or synthesis."
-  candidate_sealed: false
+  stage: "sealed_candidate_audit"
+  candidate_status: "The human editor supplied and sealed the exact Philippians 3:1-6 synthesis. Required reader notes for verse 2 and verse 3 are recorded. The three-provider semantic-floor audit is pending."
+  candidate_sealed: true
   latest_accepted_unit: "PHP-01-027-030 (human-authorized verse 30 oral-flow repair passed audit run 30126936712; Philippians 1 notes, validation, and freeze completed)"
-  next_permitted_action: "Present the authenticated A/B/C candidates verse by verse to the human editor: A=Claude Sonnet, B=GPT-5.6 Sol, C=Gemini Pro. Await selection, revision, or synthesis. Do not seal or audit a candidate until the human editor supplies or approves exact wording."
+  next_permitted_action: "Read config/latest_audit_run.json and require a receipt naming PHP-03-001-006 and the sealed candidate audit workflow. Advance only if three auditors are eligible with zero blocking defects; otherwise return findings to the human editor without silently changing wording."
   process_revalidation:
     reason: "Earlier blind drafting assigned different readability, Greek-fidelity, and balanced missions instead of one common constitutional goal."
     status: "recovery_completed_all_nine_units_process_revalidated"
@@ -198,6 +198,10 @@ current_checkpoint:
     blind_source: "docs/architecture/phase-4/PHP-03-001-006_blind-source.json"
     runner: "phase4-harness/src/chapter-units.js"
     workflow: ".github/workflows/phase4-php3-001-006-drafts.yml"
+    human_candidate: "docs/architecture/phase-4/PHP-03-001-006_human-editor-candidate-v01.json"
+    audit_source: "docs/architecture/phase-4/PHP-03-001-006_audit-source.json"
+    audit_workflow: ".github/workflows/phase4-php3-001-006-candidate-audit.yml"
+    reader_notes_draft: "docs/architecture/phase-4/PHP-03-001-006_reader-notes-draft-v01.md"
     latest_draft_receipt: "config/latest_draft_run.json"
     current_unit_brief: "docs/architecture/phase-4/PHP-03-001-006_blind-source.json"
     last_revalidated_candidate: "docs/architecture/phase-4/PHP-01-027-030_human-editor-candidate-v01.json"
