@@ -1,0 +1,82 @@
+{
+  "unit_id": "PHP-01-012-018",
+  "passage": "Philippians 1:12-18",
+  "governing_rules": [
+    {
+      "name": "Dynamic identity",
+      "rule": "FLT is firmly dynamic-equivalence and reader-facing prose serves the reader; Greek form belongs in the apparatus."
+    },
+    {
+      "name": "Meaning floor",
+      "rule": "Preserve meaning, logic, tone, discourse, and theological force; identify material loss, addition, or misleading meaning without rewriting the human candidate."
+    },
+    {
+      "name": "Target reader",
+      "rule": "Religion-naive adults and older adolescents near grade 6."
+    },
+    {
+      "name": "Natural English",
+      "rule": "Reordering, unpacking, sentence splitting, supplied connectors, and rhetorical recreation are permitted when warranted."
+    },
+    {
+      "name": "Unit movement",
+      "rule": "Preserve the surprising advance of the good news through imprisonment, the resulting courage of other believers, the contrast between loving and selfish proclamation, and Paul’s emphatic joy that Christ is proclaimed."
+    },
+    {
+      "name": "Scoped pressure points",
+      "rule": "Assess the causal/result link in verses 12-13, the scope and referent of the praetorium in verse 13, the source of confidence in verse 14, the motive contrasts in verses 15-17, and the pretense/truth contrast and joy in verse 18 without demanding Greek-shaped English."
+    },
+    {
+      "name": "Human authority",
+      "rule": "The human editor owns every wording decision. Workers and auditors test the submitted candidate exactly as selected, may report concerns and alternatives, and may not repair, replace, accept, or finalize it."
+    }
+  ],
+  "audit_boundary": {
+    "candidate_is_sealed": true,
+    "instruction": "Evaluate the exact human-selected text. Do not silently restore source wording or substitute a preferred rendering. Classify findings by severity and return them to the human editor for decision."
+  },
+  "source_data": {
+    "edition": "SBLGNT",
+    "book": "Philippians",
+    "chapter": 1,
+    "verse_start": 12,
+    "verse_end": 18,
+    "verses": [
+      {
+        "reference": "Phil.1.12",
+        "greek": "Γινώσκειν δὲ ὑμᾶς βούλομαι ἀδελφοί ὅτι τὰ κατ’ ἐμὲ μᾶλλον εἰς προκοπὴν τοῦ εὐαγγελίου ἐλήλυθεν",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.1.13",
+        "greek": "ὥστε τοὺς δεσμούς μου φανεροὺς ἐν Χριστῷ γενέσθαι ἐν ὅλῳ τῷ πραιτωρίῳ καὶ τοῖς λοιποῖς πᾶσιν",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.1.14",
+        "greek": "καὶ τοὺς πλείονας τῶν ἀδελφῶν ἐν κυρίῳ πεποιθότας τοῖς δεσμοῖς μου περισσοτέρως τολμᾶν ἀφόβως τὸν λόγον λαλεῖν",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.1.15",
+        "greek": "Τινὲς μὲν καὶ διὰ φθόνον καὶ ἔριν τινὲς δὲ καὶ δι’ εὐδοκίαν τὸν Χριστὸν κηρύσσουσιν",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.1.16",
+        "greek": "οἱ μὲν ἐξ ἀγάπης εἰδότες ὅτι εἰς ἀπολογίαν τοῦ εὐαγγελίου κεῖμαι",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.1.17",
+        "greek": "οἱ δὲ ἐξ ἐριθείας τὸν Χριστὸν καταγγέλλουσιν οὐχ ἁγνῶς οἰόμενοι θλῖψιν ἐγείρειν τοῖς δεσμοῖς μου",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.1.18",
+        "greek": "τί γάρ πλὴν ὅτι παντὶ τρόπῳ εἴτε προφάσει εἴτε ἀληθείᾳ Χριστὸς καταγγέλλεται καὶ ἐν τούτῳ χαίρω ἀλλὰ καὶ χαρήσομαι",
+        "tokens": []
+      }
+    ]
+  }
+}
