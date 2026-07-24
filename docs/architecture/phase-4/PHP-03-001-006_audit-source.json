@@ -1,0 +1,81 @@
+{
+  "unit_id": "PHP-03-001-006",
+  "passage": "Philippians 3:1-6",
+  "governing_rules": [
+    {
+      "name": "Dynamic identity",
+      "rule": "FLT is firmly dynamic-equivalence and reader-facing prose serves the reader; Greek form belongs in the apparatus."
+    },
+    {
+      "name": "Meaning floor",
+      "rule": "Preserve meaning, logic, tone, discourse, and theological force; identify material loss, addition, or misleading meaning without rewriting the human candidate."
+    },
+    {
+      "name": "Target reader",
+      "rule": "Religion-naive adults and older adolescents near grade 6."
+    },
+    {
+      "name": "Natural English",
+      "rule": "Reordering, unpacking, sentence splitting, supplied connectors, and rhetorical recreation are permitted when warranted."
+    },
+    {
+      "name": "Unit movement",
+      "rule": "Preserve Paul’s movement from rejoicing and protective repetition, to a threefold sharp warning, to the contrast between Spirit-shaped worship and confidence in human credentials, and then to Paul’s own credential list."
+    },
+    {
+      "name": "Scoped pressure points",
+      "rule": "Assess the force of rejoice in the Lord and the protective function of repeated writing in verse 1; the repeated warning, severe insult, evil-worker description, and circumcision/mutilation wordplay in verse 2; the identity claim “we are the circumcision,” worship by God’s Spirit, pride in Christ, and refusal of confidence in sarx in verse 3; the ironic concession and comparative claim in verse 4; the ancestry and Pharisaic credentials in verse 5; and the shocking link between zeal, persecution, and blamelessness measured by law-righteousness in verse 6. Do not demand Greek-shaped English."
+    },
+    {
+      "name": "Footnote boundary",
+      "rule": "Required reader notes may explain the cultural force of “dogs,” the circumcision/mutilation wordplay, and the contextual sense of sarx as “human credentials,” but notes may not repair a material defect in the reading text."
+    },
+    {
+      "name": "Human authority",
+      "rule": "The human editor owns every wording decision. Workers and auditors test the submitted candidate exactly as selected, may report concerns and alternatives, and may not repair, replace, accept, or finalize it."
+    }
+  ],
+  "audit_boundary": {
+    "candidate_is_sealed": true,
+    "instruction": "Evaluate the exact human-selected text. Do not silently restore source wording or substitute a preferred rendering. Classify findings by severity and return them to the human editor for decision."
+  },
+  "source_data": {
+    "edition": "SBLGNT",
+    "book": "Philippians",
+    "chapter": 3,
+    "verse_start": 1,
+    "verse_end": 6,
+    "verses": [
+      {
+        "reference": "Phil.3.1",
+        "greek": "Τὸ λοιπόν ἀδελφοί μου χαίρετε ἐν κυρίῳ τὰ αὐτὰ γράφειν ὑμῖν ἐμοὶ μὲν οὐκ ὀκνηρόν ὑμῖν δὲ ἀσφαλές",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.3.2",
+        "greek": "Βλέπετε τοὺς κύνας βλέπετε τοὺς κακοὺς ἐργάτας βλέπετε τὴν κατατομήν",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.3.3",
+        "greek": "ἡμεῖς γάρ ἐσμεν ἡ περιτομή οἱ πνεύματι θεοῦ λατρεύοντες καὶ καυχώμενοι ἐν Χριστῷ Ἰησοῦ καὶ οὐκ ἐν σαρκὶ πεποιθότες",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.3.4",
+        "greek": "καίπερ ἐγὼ ἔχων πεποίθησιν καὶ ἐν σαρκί Εἴ τις δοκεῖ ἄλλος πεποιθέναι ἐν σαρκί ἐγὼ μᾶλλον",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.3.5",
+        "greek": "περιτομῇ ὀκταήμερος ἐκ γένους Ἰσραήλ φυλῆς Βενιαμίν Ἑβραῖος ἐξ Ἑβραίων κατὰ νόμον Φαρισαῖος",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.3.6",
+        "greek": "κατὰ ζῆλος διώκων τὴν ἐκκλησίαν κατὰ δικαιοσύνην τὴν ἐν νόμῳ γενόμενος ἄμεμπτος",
+        "tokens": []
+      }
+    ]
+  }
+}
