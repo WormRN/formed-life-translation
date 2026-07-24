@@ -241,28 +241,28 @@ Whole-chapter oral-flow review or a later contextual conflict.
 ## Phil 2:25–30 — Epaphroditus’s Service, Illness, and Return
 
 **Date:** 2026-07-24  
-**Status:** process-revalidated and approved as a unit; chapter-level oral-flow review pending
+**Status:** confirmed and frozen for the Phase 4 benchmark
 
 **Issue:**  
 How to describe Epaphroditus’s relationship to Paul and the Philippian church, his near-fatal illness, God’s mercy, Paul’s sorrow, and the honor due faithful servants.
 
 **Decision:**  
-Accept the six-verse unit exactly as corrected and audited. In verse 28, use “lessen my own sorrow” rather than “relieve my own anxiety.”
+Accept the six-verse unit with the human-authorized chapter-level oral-flow repair in verse 27. Use “but on me too” rather than the doubled “but also on me too.” In verse 28, use “lessen my own sorrow” rather than “relieve my own anxiety.”
 
 **Reason:**  
-The wording presents Epaphroditus as brother, coworker, fellow soldier, and the church’s messenger in natural language. “Lessen my own sorrow” preserves Paul’s grief rather than changing it into anxiety. The corrected exact candidate passed three independent semantic-floor auditors with zero blocking defects, and the human editor explicitly accepted it.
+The wording presents Epaphroditus as brother, coworker, fellow soldier, and the church’s messenger in natural language. Removing the doubled additive in verse 27 improves oral English without changing the source relationship. “Lessen my own sorrow” preserves Paul’s grief rather than changing it into anxiety. The final repaired exact candidate passed three independent semantic-floor auditors with zero blocking defects, and the human editor explicitly accepted it.
 
 **Final wording:**
 
 > **25** But I felt it was necessary to send Epaphroditus back to you. He is my brother, my coworker, and my fellow soldier, as well as the messenger you sent to take care of my needs.  
 > **26** He has been longing to see all of you, and he has been deeply troubled because he knows that news of his illness worried you.  
-> **27** He really was sick and nearly died. But God showed mercy to him, and not only on him but also on me too, so that I would not have one heartbreak on top of another.  
+> **27** He really was sick and nearly died. But God showed mercy to him, and not only on him but on me too, so that I would not have one heartbreak on top of another.  
 > **28** So I am eagerly sending him back to you. Seeing him again will bring you joy, and it will lessen my own sorrow.  
 > **29** So welcome him with great joy in the Lord, and show high honor to people like him.  
 > **30** He risked his life and came close to death for the work of Christ, stepping in to give me in person the help that you were too far away to give.
 
 **Audit:**  
-GitHub run 30065182431; three of three auditors eligible; zero blocking defects.
+Initial corrected-unit audit: GitHub run 30065182431. Final verse 27 repaired-candidate audit: GitHub run 30126332658. Three of three auditors eligible; zero blocking defects.
 
 **Footnotes needed:**  
 Consider a note explaining Epaphroditus’s role as the Philippians’ authorized messenger and servant.
@@ -274,7 +274,7 @@ Consider contextual precedents for ἀπόστολος in a non-Twelve messenger
 None.
 
 **Revisit trigger:**  
-The current chapter-level oral-flow review, especially the doubled phrase “but also on me too” in verse 27.
+Reopen only if the whole-letter review or later contextual evidence exposes a concrete problem.
 
 
 ---
