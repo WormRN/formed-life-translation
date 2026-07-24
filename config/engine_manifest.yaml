@@ -56,11 +56,11 @@ current_checkpoint:
   chapter: 1
   current_unit_id: "PHP-01-003-011"
   current_passage: "Philippians 1:3-11"
-  stage: "sequential_human_process_revalidation"
-  candidate_status: "Common-goal A/B/C recovery candidates for Philippians 1:3-11 are verified and ready for human comparison with the current FLT."
-  candidate_sealed: false
+  stage: "human_repair_decision_required"
+  candidate_status: "The human editor reaffirmed the current FLT unchanged. The sealed candidate audit returned two eligible judgments and one blocking defect in Philippians 1:7; no wording has been altered."
+  candidate_sealed: true
   latest_accepted_unit: "PHP-01-001-002 (current FLT reaffirmed and process revalidated; audit run 30113294398)"
-  next_permitted_action: "Present Philippians 1:3-11 verse by verse as A/B/C/Current FLT. Await the human editor’s reaffirmation or revised selection. Do not audit or advance until that decision."
+  next_permitted_action: "Present the Philippians 1:7 audit finding to the human editor and await an explicit decision. Do not repair or advance to Philippians 1:12-18 without authorization."
   process_revalidation:
     reason: "Earlier blind drafting assigned different readability, Greek-fidelity, and balanced missions instead of one common constitutional goal."
     status: "batch_completed_and_provenance_verified"
@@ -124,6 +124,11 @@ current_checkpoint:
     workflow: ".github/workflows/phase4-philippians-process-revalidation.yml"
     latest_draft_receipt: "config/latest_draft_run.json"
     current_unit_brief: "artifact outputs/briefs/PHP-01-003-011.md"
+    current_human_candidate: "docs/architecture/phase-4/PHP-01-003-011_human-editor-candidate-v01.json"
+    current_audit_source: "docs/architecture/phase-4/PHP-01-003-011_audit-source.json"
+    current_audit_workflow: ".github/workflows/phase4-php1-003-011-candidate-audit.yml"
+    current_audit_run_id: 30114179337
+    current_audit_status: "review_required: 2 eligible, 1 blocking defect in Philippians 1:7"
     last_revalidated_candidate: "docs/architecture/phase-4/PHP-01-001-002_human-editor-candidate-v01.json"
     last_revalidated_audit_source: "docs/architecture/phase-4/PHP-01-001-002_audit-source.json"
     last_revalidated_audit_workflow: ".github/workflows/phase4-php1-001-002-candidate-audit.yml"
