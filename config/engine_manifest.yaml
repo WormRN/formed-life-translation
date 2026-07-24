@@ -54,13 +54,13 @@ governing_documents:
 current_checkpoint:
   book: "Philippians"
   chapter: 1
-  current_unit_id: "PHP-01-001-002"
-  current_passage: "Philippians 1:1-2"
-  stage: "sealed_candidate_revalidation_audit_running"
-  candidate_status: "Human editor reaffirmed the current FLT for Philippians 1:1-2 without alteration; exact candidate sealed and audit launched."
-  candidate_sealed: true
-  latest_accepted_unit: "PHP-02-019-024 (wording acceptance; drafting-process revalidation pending)"
-  next_permitted_action: "Retrieve and interpret the Philippians 1:1-2 exact-candidate audit receipt. If clean, record process revalidation and present Philippians 1:3-11 as A/B/C/Current FLT. If blocked, return the evidence to the human editor without changing wording."
+  current_unit_id: "PHP-01-003-011"
+  current_passage: "Philippians 1:3-11"
+  stage: "sequential_human_process_revalidation"
+  candidate_status: "Common-goal A/B/C recovery candidates for Philippians 1:3-11 are verified and ready for human comparison with the current FLT."
+  candidate_sealed: false
+  latest_accepted_unit: "PHP-01-001-002 (current FLT reaffirmed and process revalidated; audit run 30113294398)"
+  next_permitted_action: "Present Philippians 1:3-11 verse by verse as A/B/C/Current FLT. Await the human editor’s reaffirmation or revised selection. Do not audit or advance until that decision."
   process_revalidation:
     reason: "Earlier blind drafting assigned different readability, Greek-fidelity, and balanced missions instead of one common constitutional goal."
     status: "batch_completed_and_provenance_verified"
@@ -86,6 +86,17 @@ current_checkpoint:
       - "PHP-02-019-024"
     excluded_valid_unit: "PHP-02-025-030"
     required_presentation: "Verse/A/B/C/Current FLT"
+    human_review_status: "1 of 9 affected units process-revalidated"
+    revalidated_units:
+      - unit_id: "PHP-01-001-002"
+        passage: "Philippians 1:1-2"
+        human_decision: "Reaffirm current FLT without alteration."
+        audit_run_id: 30113294398
+        audit_artifact: "FLT-PHP-01-20260724-1"
+        auditor_total: 3
+        eligible_count: 3
+        blocking_defects: 0
+        semantic_pass: true
     audit_policy:
       philippians_1: "Run a sealed-candidate audit after human revalidation because exact-candidate evidence is incomplete under the newer process."
       philippians_2_1_24: "Preserve existing exact-candidate audits if the human editor reaffirms wording unchanged; rerun the audit for any changed unit."
@@ -112,14 +123,18 @@ current_checkpoint:
     runner: "phase4-harness/src/process-revalidation-batch.js"
     workflow: ".github/workflows/phase4-philippians-process-revalidation.yml"
     latest_draft_receipt: "config/latest_draft_run.json"
-    current_unit_brief: "artifact outputs/briefs/PHP-01-001-002.md"
-    human_candidate: "docs/architecture/phase-4/PHP-01-001-002_human-editor-candidate-v01.json"
-    audit_source: "docs/architecture/phase-4/PHP-01-001-002_audit-source.json"
-    audit_workflow: ".github/workflows/phase4-php1-001-002-candidate-audit.yml"
+    current_unit_brief: "artifact outputs/briefs/PHP-01-003-011.md"
+    last_revalidated_candidate: "docs/architecture/phase-4/PHP-01-001-002_human-editor-candidate-v01.json"
+    last_revalidated_audit_source: "docs/architecture/phase-4/PHP-01-001-002_audit-source.json"
+    last_revalidated_audit_workflow: ".github/workflows/phase4-php1-001-002-candidate-audit.yml"
 
 accepted_units:
-  - passage: "Philippians 1:1-30"
-    status: "wording accepted benchmark text; common-goal drafting revalidation required; sealed-candidate audit required after human reaffirmation"
+  - passage: "Philippians 1:1-2"
+    status: "current FLT reaffirmed after valid common-goal blind drafting; sealed candidate passed three semantic-floor auditors with zero blocking defects; process revalidated"
+    draft_run_id: 30073170869
+    audit_run_id: 30113294398
+  - passage: "Philippians 1:3-30"
+    status: "wording accepted benchmark text; common-goal drafting revalidation and sealed-candidate audit still required"
   - passage: "Philippians 2:1-4"
     status: "wording accepted after exact-candidate audit; common-goal drafting revalidation required"
   - passage: "Philippians 2:5-11"
