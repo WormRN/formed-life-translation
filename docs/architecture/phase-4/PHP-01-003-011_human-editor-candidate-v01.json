@@ -1,18 +1,50 @@
 {
-  "candidate_id":"FLT-PHP-01-003-011-HUMAN-EDITOR-v01",
-  "unit_id":"PHP-01-003-011",
-  "status":"human_edited_candidate_not_finalized",
-  "evidence_run":"FLT-PHP-01-20260718-981",
-  "verse_renderings":[
-    {"reference":"Phil.1.3","text":"Every time I think of you, I thank my God."},
-    {"reference":"Phil.1.4","text":"Whenever I pray for all of you, I always pray with joy."},
-    {"reference":"Phil.1.5","text":"I am so grateful for how you have partnered with me in spreading the good news, from the very first day until now."},
-    {"reference":"Phil.1.6","text":"I am certain that God, who began this good work in you, will continue it until it is finished on the day Christ Jesus returns."},
-    {"reference":"Phil.1.7","text":"Because you are so dear to me, it is right for me to feel this way about all of you. We share together in God’s grace, whether I am in prison or defending the good news and showing that it is true."},
-    {"reference":"Phil.1.8","text":"God is my witness how deeply I long for all of you with the tender affection of Christ Jesus."},
-    {"reference":"Phil.1.9","text":"I pray that your love will grow more and more, guided by true knowledge and good judgment,"},
-    {"reference":"Phil.1.10","text":"so that you can recognize and choose what matters most. Then you will be pure and blameless when Christ returns."},
-    {"reference":"Phil.1.11","text":"Your lives will be filled with the good fruit of right living that comes through Jesus Christ, bringing glory and praise to God."}
+  "candidate_id": "FLT-PHP-01-003-011-HUMAN-EDITOR-v01",
+  "unit_id": "PHP-01-003-011",
+  "status": "human_editor_candidate_for_revalidation_audit",
+  "revalidation_evidence_run": "FLT-PHP-REVALIDATION-20260724-1",
+  "verse_renderings": [
+    {
+      "reference": "Phil.1.3",
+      "text": "Every time I think of you, I thank my God."
+    },
+    {
+      "reference": "Phil.1.4",
+      "text": "Whenever I pray for all of you, I always pray with joy."
+    },
+    {
+      "reference": "Phil.1.5",
+      "text": "I am so grateful for how you have partnered with me in spreading the good news, from the very first day until now."
+    },
+    {
+      "reference": "Phil.1.6",
+      "text": "I am certain that God, who began this good work in you, will continue it until it is finished on the day Christ Jesus returns."
+    },
+    {
+      "reference": "Phil.1.7",
+      "text": "Because you are so dear to me, it is right for me to feel this way about all of you. We share together in God’s grace, whether I am in prison or defending the good news and showing that it is true."
+    },
+    {
+      "reference": "Phil.1.8",
+      "text": "God is my witness how deeply I long for all of you with the tender affection of Christ Jesus."
+    },
+    {
+      "reference": "Phil.1.9",
+      "text": "I pray that your love will grow more and more, guided by true knowledge and good judgment,"
+    },
+    {
+      "reference": "Phil.1.10",
+      "text": "so that you can recognize and choose what matters most. Then you will be pure and blameless when Christ returns."
+    },
+    {
+      "reference": "Phil.1.11",
+      "text": "Your lives will be filled with the good fruit of right living that comes through Jesus Christ, bringing glory and praise to God."
+    }
   ],
-  "finalization_claim":false
+  "authority": {
+    "selected_by": "human_editor",
+    "decision": "Reaffirm the current FLT without alteration.",
+    "instruction": "Audit this exact wording without pre-audit repair. Auditors provide evidence only; the human editor alone decides whether any finding warrants a change."
+  },
+  "finalization_claim": false
 }
