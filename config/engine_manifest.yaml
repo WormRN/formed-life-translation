@@ -53,14 +53,14 @@ governing_documents:
 
 current_checkpoint:
   book: "Philippians"
-  chapter: 1
-  current_unit_id: "PHP-01-CHAPTER-CLOSE"
-  current_passage: "Philippians 1:1-30"
-  stage: "philippians_1_chapter_level_review"
-  candidate_status: "All Philippians 1 units are process-revalidated and accepted. The assistant chapter-level review is complete; one oral-flow question in verse 30 awaits the human editor."
-  candidate_sealed: true
-  latest_accepted_unit: "PHP-02-025-030 (human-authorized verse 27 repair passed audit run 30126332658; Philippians 2 notes, validation, and freeze completed)"
-  next_permitted_action: "Present docs/architecture/phase-4/FLT_Philippians_1_chapter-review-v01.md. Await the human decision to retain verse 30 or remove the redundant final word today. If changed, audit only the repaired exact candidate. Then finalize notes, validation, and the Philippians 1 freeze and advance to chapter 3."
+  chapter: 3
+  current_unit_id: "PHP-03-001-006"
+  current_passage: "Philippians 3:1-6"
+  stage: "common_goal_blind_drafting"
+  candidate_status: "Philippians 1 and 2 are finalized and frozen. The blind source packet for Philippians 3:1-6 is sealed and the common-goal A/B/C drafting workflow has been launched; no human candidate exists yet."
+  candidate_sealed: false
+  latest_accepted_unit: "PHP-01-027-030 (human-authorized verse 30 oral-flow repair passed audit run 30126936712; Philippians 1 notes, validation, and freeze completed)"
+  next_permitted_action: "Read config/latest_draft_run.json and verify it names PHP-03-001-006 with a completed workflow. Retrieve the authenticated artifact, confirm three untouched common-goal candidates mapped A=Claude Sonnet, B=GPT-5.6 Sol, C=Gemini Pro, and present them verse by verse to the human editor. Do not expose prior FLT or comparison translations to workers."
   process_revalidation:
     reason: "Earlier blind drafting assigned different readability, Greek-fidelity, and balanced missions instead of one common constitutional goal."
     status: "recovery_completed_all_nine_units_process_revalidated"
@@ -126,9 +126,9 @@ current_checkpoint:
         semantic_pass: true
       - unit_id: "PHP-01-027-030"
         passage: "Philippians 1:27-30"
-        human_decision: "Revise verses 27, 28, and 29 exactly as specified by the human editor; retain verse 30 unchanged."
-        audit_run_id: 30119484697
-        audit_artifact: "FLT-PHP-01-20260724-1"
+        human_decision: "Retain verses 27-29 and apply the human-authorized chapter-level oral-flow repair in verse 30 by removing the redundant final word today."
+        audit_run_id: 30126936712
+        audit_artifact: "FLT-PHP-01-20260724-3"
         auditor_total: 3
         eligible_count: 3
         blocking_defects: 0
@@ -191,15 +191,15 @@ current_checkpoint:
     semantic_pass: true
     human_acceptance_after_oral_review_pending: false
   active_files:
-    blind_source: "docs/architecture/phase-4/PHP-REVALIDATION-001-024_blind-source.json"
-    runner: "phase4-harness/src/process-revalidation-batch.js"
-    workflow: ".github/workflows/phase4-philippians-process-revalidation.yml"
+    blind_source: "docs/architecture/phase-4/PHP-03-001-006_blind-source.json"
+    runner: "phase4-harness/src/chapter-units.js"
+    workflow: ".github/workflows/phase4-php3-001-006-drafts.yml"
     latest_draft_receipt: "config/latest_draft_run.json"
-    current_unit_brief: "docs/architecture/phase-4/FLT_Philippians_1_chapter-review-v01.md"
-    last_revalidated_candidate: "docs/architecture/phase-4/PHP-02-019-024_human-editor-decision-v02.json"
-    last_revalidated_audit_source: "docs/architecture/phase-4/PHP-02-019-024_audit-source.json"
-    last_revalidated_audit_workflow: ".github/workflows/phase4-php2-019-024-candidate-audit.yml"
-    last_revalidated_audit_run_id: 30123491843
+    current_unit_brief: "docs/architecture/phase-4/PHP-03-001-006_blind-source.json"
+    last_revalidated_candidate: "docs/architecture/phase-4/PHP-01-027-030_human-editor-candidate-v01.json"
+    last_revalidated_audit_source: "docs/architecture/phase-4/PHP-01-027-030_audit-source.json"
+    last_revalidated_audit_workflow: ".github/workflows/phase4-php1-027-030-candidate-audit.yml"
+    last_revalidated_audit_run_id: 30126936712
 
 accepted_units:
   - passage: "Philippians 1:1-2"
@@ -219,9 +219,9 @@ accepted_units:
     draft_run_id: 30073170869
     audit_run_id: 30117320796
   - passage: "Philippians 1:27-30"
-    status: "verses 27-29 revised by the human editor after valid common-goal blind drafting; verse 30 retained; sealed candidate passed three semantic-floor auditors with zero blocking defects; process revalidated; chapter-level oral-flow and literary review remains due"
+    status: "verses 27-29 retained; human editor approved the final verse 30 oral-flow repair; repaired exact candidate passed three semantic-floor auditors with zero blocking defects; chapter review, notes, validation, and freeze complete"
     draft_run_id: 30073170869
-    audit_run_id: 30119484697
+    audit_run_id: 30126936712
   - passage: "Philippians 2:1-4"
     status: "current FLT reaffirmed unchanged after valid common-goal blind drafting; existing three-auditor semantic-floor evidence preserved; process revalidated"
     draft_run_id: 30073170869
@@ -245,6 +245,16 @@ accepted_units:
     status: "human editor accepted the exact corrected wording; human editor approved final verse 27 oral-flow repair; repaired exact candidate passed three semantic-floor auditors with zero blocking defects; chapter review, notes, validation, and freeze complete"
     draft_run_id: 30063037938
     audit_run_id: 30065182431
+
+chapter_closures:
+  philippians_1:
+    status: "finalized_and_frozen"
+    freeze_file: "docs/architecture/phase-4/FLT_Philippians_1_freeze-v01.md"
+    final_repair_audit_run_id: 30126936712
+  philippians_2:
+    status: "finalized_and_frozen"
+    freeze_file: "docs/architecture/phase-4/FLT_Philippians_2_freeze-v01.md"
+    final_repair_audit_run_id: 30126332658
 
 audit_retrieval:
   user_run_link_required: false
