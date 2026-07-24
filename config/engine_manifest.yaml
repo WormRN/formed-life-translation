@@ -54,13 +54,13 @@ governing_documents:
 current_checkpoint:
   book: "Philippians"
   chapter: 1
-  current_unit_id: "PHP-01-003-011"
-  current_passage: "Philippians 1:3-11"
-  stage: "authorized_repair_audit_in_progress"
-  candidate_status: "The human editor authorized the minimum Philippians 1:7 repair. Only whether/or was changed to both while/and while; the corrected exact candidate is sealed and undergoing revalidation audit."
-  candidate_sealed: true
-  latest_accepted_unit: "PHP-01-001-002 (current FLT reaffirmed and process revalidated; audit run 30113294398)"
-  next_permitted_action: "Verify the fresh Philippians 1:3-11 audit receipt. If three auditors are eligible with zero blocking defects, record the unit as process-revalidated and present Philippians 1:12-18 in Verse/A/B/C/Current FLT format."
+  current_unit_id: "PHP-01-012-018"
+  current_passage: "Philippians 1:12-18"
+  stage: "sequential_human_process_revalidation"
+  candidate_status: "Common-goal A/B/C recovery candidates for Philippians 1:12-18 are verified and ready for human comparison with the current FLT."
+  candidate_sealed: false
+  latest_accepted_unit: "PHP-01-003-011 (current FLT retained with the human-authorized Philippians 1:7 minimum repair; process revalidated; audit run 30114620659)"
+  next_permitted_action: "Present Philippians 1:12-18 verse by verse as A/B/C/Current FLT. Await the human editor’s reaffirmation or revised selection. Do not audit or advance until that decision."
   process_revalidation:
     reason: "Earlier blind drafting assigned different readability, Greek-fidelity, and balanced missions instead of one common constitutional goal."
     status: "batch_completed_and_provenance_verified"
@@ -86,13 +86,22 @@ current_checkpoint:
       - "PHP-02-019-024"
     excluded_valid_unit: "PHP-02-025-030"
     required_presentation: "Verse/A/B/C/Current FLT"
-    human_review_status: "1 of 9 affected units process-revalidated"
+    human_review_status: "2 of 9 affected units process-revalidated"
     revalidated_units:
       - unit_id: "PHP-01-001-002"
         passage: "Philippians 1:1-2"
         human_decision: "Reaffirm current FLT without alteration."
         audit_run_id: 30113294398
         audit_artifact: "FLT-PHP-01-20260724-1"
+        auditor_total: 3
+        eligible_count: 3
+        blocking_defects: 0
+        semantic_pass: true
+      - unit_id: "PHP-01-003-011"
+        passage: "Philippians 1:3-11"
+        human_decision: "Retain the current FLT except for the authorized Philippians 1:7 minimum repair: replace whether/or with both while/and while."
+        audit_run_id: 30114620659
+        audit_artifact: "FLT-PHP-01-20260724-3"
         auditor_total: 3
         eligible_count: 3
         blocking_defects: 0
@@ -123,22 +132,22 @@ current_checkpoint:
     runner: "phase4-harness/src/process-revalidation-batch.js"
     workflow: ".github/workflows/phase4-philippians-process-revalidation.yml"
     latest_draft_receipt: "config/latest_draft_run.json"
-    current_unit_brief: "artifact outputs/briefs/PHP-01-003-011.md"
-    current_human_candidate: "docs/architecture/phase-4/PHP-01-003-011_human-editor-candidate-v01.json"
-    current_audit_source: "docs/architecture/phase-4/PHP-01-003-011_audit-source.json"
-    current_audit_workflow: ".github/workflows/phase4-php1-003-011-candidate-audit.yml"
-    current_audit_run_id: 30114179337
-    current_audit_status: "authorized minimum repair committed at beda2249c14d0d8119664c9a977d4421c108df91; fresh audit in progress"
-    last_revalidated_candidate: "docs/architecture/phase-4/PHP-01-001-002_human-editor-candidate-v01.json"
-    last_revalidated_audit_source: "docs/architecture/phase-4/PHP-01-001-002_audit-source.json"
-    last_revalidated_audit_workflow: ".github/workflows/phase4-php1-001-002-candidate-audit.yml"
+    current_unit_brief: "artifact outputs/briefs/PHP-01-012-018.md"
+    last_revalidated_candidate: "docs/architecture/phase-4/PHP-01-003-011_human-editor-candidate-v01.json"
+    last_revalidated_audit_source: "docs/architecture/phase-4/PHP-01-003-011_audit-source.json"
+    last_revalidated_audit_workflow: ".github/workflows/phase4-php1-003-011-candidate-audit.yml"
+    last_revalidated_audit_run_id: 30114620659
 
 accepted_units:
   - passage: "Philippians 1:1-2"
     status: "current FLT reaffirmed after valid common-goal blind drafting; sealed candidate passed three semantic-floor auditors with zero blocking defects; process revalidated"
     draft_run_id: 30073170869
     audit_run_id: 30113294398
-  - passage: "Philippians 1:3-30"
+  - passage: "Philippians 1:3-11"
+    status: "current FLT retained after valid common-goal blind drafting with the human-authorized Philippians 1:7 minimum repair; sealed candidate passed three semantic-floor auditors with zero blocking defects; process revalidated"
+    draft_run_id: 30073170869
+    audit_run_id: 30114620659
+  - passage: "Philippians 1:12-30"
     status: "wording accepted benchmark text; common-goal drafting revalidation and sealed-candidate audit still required"
   - passage: "Philippians 2:1-4"
     status: "wording accepted after exact-candidate audit; common-goal drafting revalidation required"
