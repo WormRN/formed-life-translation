@@ -54,16 +54,16 @@ governing_documents:
 current_checkpoint:
   book: "Philippians"
   chapter: 2
-  current_unit_id: "PHP-02-019-024"
-  current_passage: "Philippians 2:19-24"
-  stage: "sequential_human_process_revalidation"
-  candidate_status: "Common-goal A/B/C recovery candidates for Philippians 2:19-24 are verified and ready for human comparison with the current FLT."
-  candidate_sealed: false
-  latest_accepted_unit: "PHP-02-012-018 (current FLT reaffirmed unchanged; existing semantic-floor evidence preserved; process revalidated; audit run 30043603606)"
-  next_permitted_action: "Present Philippians 2:19-24 verse by verse as A/B/C/Current FLT. Await the human editor’s reaffirmation or revised selection. Preserve the existing exact-candidate audit if wording is reaffirmed unchanged; rerun only if the human editor changes the unit."
+  current_unit_id: "PHP-02-025-030"
+  current_passage: "Philippians 2:25-30"
+  stage: "chapter_level_oral_flow_and_human_acceptance"
+  candidate_status: "The nine-unit process-revalidation recovery is complete. Philippians 2:25-30 retains valid common-goal drafting and corrected semantic-floor evidence and awaits explicit human acceptance after the compiled chapter oral-flow review."
+  candidate_sealed: true
+  latest_accepted_unit: "PHP-02-019-024 (human-selected revised wording passed three semantic-floor auditors with zero blocking defects; process revalidated; audit run 30123491843)"
+  next_permitted_action: "Conduct full-chapter oral-flow, literary-cohesion, terminology, and cumulative-expansion reviews for Philippians 1 and 2. During the Philippians 2 review, present Philippians 2:25-30 for explicit human acceptance without rerunning its valid common-goal drafting or corrected audit."
   process_revalidation:
     reason: "Earlier blind drafting assigned different readability, Greek-fidelity, and balanced missions instead of one common constitutional goal."
-    status: "batch_completed_and_provenance_verified"
+    status: "recovery_completed_all_nine_units_process_revalidated"
     github_run_id: 30073170869
     engine_run_id: "FLT-PHP-REVALIDATION-20260724-1"
     artifact_id: 8588820020
@@ -86,7 +86,7 @@ current_checkpoint:
       - "PHP-02-019-024"
     excluded_valid_unit: "PHP-02-025-030"
     required_presentation: "Verse/A/B/C/Current FLT"
-    human_review_status: "8 of 9 affected units process-revalidated"
+    human_review_status: "9 of 9 affected units process-revalidated; recovery complete"
     revalidated_units:
       - unit_id: "PHP-01-001-002"
         passage: "Philippians 1:1-2"
@@ -160,6 +160,15 @@ current_checkpoint:
         eligible_count: 3
         blocking_defects: 0
         semantic_pass: true
+      - unit_id: "PHP-02-019-024"
+        passage: "Philippians 2:19-24"
+        human_decision: "Adopt the revised six-verse unit exactly as supplied; revise verses 19 and 24 and retain verses 20-23."
+        audit_run_id: 30123491843
+        audit_artifact: "FLT-PHP-02-20260724-4"
+        auditor_total: 3
+        eligible_count: 3
+        blocking_defects: 0
+        semantic_pass: true
     audit_policy:
       philippians_1: "Run a sealed-candidate audit after human revalidation because exact-candidate evidence is incomplete under the newer process."
       philippians_2_1_24: "Preserve existing exact-candidate audits if the human editor reaffirms wording unchanged; rerun the audit for any changed unit."
@@ -186,11 +195,11 @@ current_checkpoint:
     runner: "phase4-harness/src/process-revalidation-batch.js"
     workflow: ".github/workflows/phase4-philippians-process-revalidation.yml"
     latest_draft_receipt: "config/latest_draft_run.json"
-    current_unit_brief: "artifact outputs/briefs/PHP-02-019-024.md"
-    last_revalidated_candidate: "docs/architecture/phase-4/PHP-02-012-018_human-editor-candidate-v01.json"
-    last_revalidated_audit_source: "docs/architecture/phase-4/PHP-02-012-018_audit-source.json"
-    last_revalidated_audit_workflow: ".github/workflows/phase4-php2-012-018-candidate-audit.yml"
-    last_revalidated_audit_run_id: 30043603606
+    current_unit_brief: "chapter-level compiled reading view for Philippians 2, including PHP-02-025-030"
+    last_revalidated_candidate: "docs/architecture/phase-4/PHP-02-019-024_human-editor-decision-v02.json"
+    last_revalidated_audit_source: "docs/architecture/phase-4/PHP-02-019-024_audit-source.json"
+    last_revalidated_audit_workflow: ".github/workflows/phase4-php2-019-024-candidate-audit.yml"
+    last_revalidated_audit_run_id: 30123491843
 
 accepted_units:
   - passage: "Philippians 1:1-2"
@@ -228,9 +237,10 @@ accepted_units:
     audit_run_id: 30043603606
     audit_artifact: "FLT-PHP-02-20260723-2"
   - passage: "Philippians 2:19-24"
-    status: "wording accepted after authorized repair and exact-candidate audit; common-goal drafting revalidation required"
-    audit_run_id: 30062746430
-    audit_artifact: "FLT-PHP-02-20260724-3"
+    status: "verses 19 and 24 revised by the human editor after valid common-goal blind drafting; verses 20-23 retained; sealed candidate passed three semantic-floor auditors with zero blocking defects; process revalidated; nine-unit recovery complete"
+    draft_run_id: 30073170869
+    audit_run_id: 30123491843
+    audit_artifact: "FLT-PHP-02-20260724-4"
   - passage: "Philippians 2:25-30"
     status: "valid common-goal drafting and corrected semantic-floor audit; awaiting explicit human acceptance after oral review"
     draft_run_id: 30063037938
