@@ -1,17 +1,62 @@
 {
-  "candidate_id":"FLT-PHP-01-019-026-HUMAN-EDITOR-v01",
-  "unit_id":"PHP-01-019-026",
-  "status":"human_edited_candidate_not_finalized",
-  "evidence_run":"FLT-PHP-01-20260718-981",
-  "verse_renderings":[
-    {"reference":"Phil.1.19","text":"I know that my distress will become my deliverance through your prayers and the help of the Spirit of Jesus Christ."},
-    {"reference":"Phil.1.20","text":"My eager hope and expectation is that I will not be ashamed in any way. Instead, I hope to have complete courage so that now, as always, Christ will be honored in my body, whether I live or die."},
-    {"reference":"Phil.1.21","text":"For to me, living means living for Christ, and dying means gaining something even better."},
-    {"reference":"Phil.1.22","text":"But if living on in this body means more fruitful work for me, then I honestly don’t know which one to choose!"},
-    {"reference":"Phil.1.23","text":"I am torn between the two. I long to leave this life and be with Christ—that would be far better."},
-    {"reference":"Phil.1.24","text":"But for your sake, it is more necessary that I remain in this body."},
-    {"reference":"Phil.1.25","text":"Since I am convinced of this, I know I will stay. I will remain with all of you so that you can grow and experience joy in your faith."},
-    {"reference":"Phil.1.26","text":"Then, when I return to you, you will have even more reason to be proud of what Christ Jesus has done in me."}
+  "candidate_id": "FLT-PHP-01-019-026-HUMAN-EDITOR-v01",
+  "unit_id": "PHP-01-019-026",
+  "status": "human_selected_candidate_for_revalidation_audit",
+  "revalidation_evidence_run": "FLT-PHP-REVALIDATION-20260724-1",
+  "verse_renderings": [
+    {
+      "reference": "Phil.1.19",
+      "text": "I know that my distress will become my deliverance through your prayers and the help of the Spirit of Jesus Christ."
+    },
+    {
+      "reference": "Phil.1.20",
+      "text": "My eager hope and expectation is that I will not be ashamed in any way. Instead, I will have complete courage so that now, as always, Christ will be honored in my body, whether I live or die."
+    },
+    {
+      "reference": "Phil.1.21",
+      "text": "Because for me, living means living for Christ, and dying means gaining something even better."
+    },
+    {
+      "reference": "Phil.1.22",
+      "text": "But if living on in this body means more fruitful work for me, then I honestly don’t know which one to choose!"
+    },
+    {
+      "reference": "Phil.1.23",
+      "text": "I am pulled in both directions. I long to leave this life and be with Christ, which is far better."
+    },
+    {
+      "reference": "Phil.1.24",
+      "text": "But for your sake, it is more necessary that I remain in this body."
+    },
+    {
+      "reference": "Phil.1.25",
+      "text": "Since I am convinced of this, I know I will stay. I will remain with all of you so that you can grow and experience joy in your faith."
+    },
+    {
+      "reference": "Phil.1.26",
+      "text": "Then, when I return to you, you will have even more reason to be proud of what Christ Jesus has done in me."
+    }
   ],
-  "finalization_claim":false
+  "authority": {
+    "selected_by": "human_editor",
+    "decision": "Revise Philippians 1:20, 1:21, and 1:23 as specified by the human editor; retain verses 19, 22, and 24–26.",
+    "editorial_normalization": "Treat “completed courage” as the evident typo “complete courage” and restore ordinary punctuation in verse 20.",
+    "instruction": "Audit this exact selected wording without pre-audit repair. Auditors provide evidence only; the human editor alone decides whether any finding warrants a change."
+  },
+  "finalization_claim": false,
+  "audit_request": {
+    "requested_on": "2026-07-24",
+    "workflow": ".github/workflows/phase4-php1-019-026-candidate-audit.yml",
+    "reason": "Required sealed-candidate audit after common-goal process revalidation and human selection.",
+    "trigger": 1
+  },
+  "revision": {
+    "authorized_on": "2026-07-24",
+    "changed_references": [
+      "Phil.1.20",
+      "Phil.1.21",
+      "Phil.1.23"
+    ],
+    "scope": "Only verses 20, 21, and 23 changed; verses 19, 22, and 24–26 retained exactly."
+  }
 }
