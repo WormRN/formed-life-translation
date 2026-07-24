@@ -1,0 +1,86 @@
+{
+  "chapter_id": "PHP-03",
+  "book": "Philippians",
+  "chapter": 3,
+  "source_edition": "SBLGNT",
+  "tone": "personally emphatic, evaluative, Christ-centered, and deeply yearning; Paul overturns his former value system and presses toward knowing Christ",
+  "target_reader": "religion-naive adults and older adolescents near grade 6",
+  "translation_identity": "firmly dynamic-equivalence, NLT-like in readability but independent",
+  "sealed_context": {
+    "prior_unit": "Philippians 3:1-6 has a sealed, audit-cleared human candidate.",
+    "instruction": "The completed English wording of Philippians 3:1-6 is excluded from blind drafting. Preserve only the source-text discourse movement from the credential list into Paul’s reversal of gain and loss."
+  },
+  "governing_rules": [
+    "All three candidates pursue the same constitutional goal; no provider receives a readability, fidelity, or blended specialty.",
+    "The prose serves the reader; the apparatus serves accountability.",
+    "Translate meaning, logic, tone, discourse movement, and theological force rather than Greek surface form.",
+    "Use clear natural oral English for adults; reorder, split, unpack, and clarify implied relationships when comprehension benefits.",
+    "Preserve Paul’s gain/loss accounting metaphor, the surpassing value of knowing Christ, his desire to belong to Christ rather than rely on law-based righteousness, and his yearning to know Christ through resurrection power and shared suffering.",
+    "Preserve strong or coarse rhetoric when it carries material force, while using notes rather than weakening the text or turning it into commentary.",
+    "No comparison translations, traditional benchmark wording, prior FLT wording, conversational drafts, or sealed human wording may enter blind drafting."
+  ],
+  "existing_decisions": [
+    "Capitalize pronouns referring to deity.",
+    "Render theological vocabulary contextually in reader-facing English; do not preserve opaque church terms merely because they are traditional.",
+    "Maintain the reader-first dynamic center established by the audited Philippians benchmark without exposing its wording to blind workers.",
+    "Footnotes may disclose disputed constructions, traditional glosses, and strong source-language terms, but may not compensate for material meaning missing from the reading text."
+  ],
+  "matrix_alerts": [
+    {
+      "lemma": "δικαιοσύνη",
+      "status": "high-priority stub; mandatory contextual review",
+      "neutral_range": "righteousness, justice, right conduct, right standing, or God’s own rightness",
+      "instruction": "In verse 9, preserve the contrast between a right status Paul might claim from law observance and the right status that comes from God in connection with faith."
+    },
+    {
+      "lemma": "πίστις",
+      "status": "weighted term; disputed construction in verse 9",
+      "neutral_range": "faith, trust, faithfulness; the phrase pisteōs Christou may be read as faith in Christ or Christ’s faithfulness",
+      "instruction": "Choose a coherent reading in the body text and flag the construction for human review; do not hide the interpretive choice."
+    },
+    {
+      "lemma": "σκύβαλον",
+      "status": "rhetorically strong term",
+      "neutral_range": "refuse, garbage, filth, dung or excrement depending context and register",
+      "instruction": "Preserve Paul’s contemptuous force in adult natural English without using a needlessly genteel abstraction; flag the register decision for notes."
+    }
+  ],
+  "units": [
+    {
+      "unit_id": "PHP-03-007-011",
+      "passage": "Philippians 3:7–11",
+      "title": "Everything is loss compared with knowing Christ",
+      "known_issues": [
+        "Verses 7-8 extend the accounting metaphor: former gains are now counted as loss because of Christ, and everything else is loss compared with the surpassing value of knowing Christ Jesus as Lord. Preserve the escalation and repetition without making it sound accidental.",
+        "Verse 8 says Paul suffered or accepted the loss of all things and regards them as skubala so that he may gain Christ. Preserve the term’s dismissive or offensive force at an appropriate adult register; do not flatten it to something mildly inconvenient.",
+        "Verse 9’s 'be found in Him' expresses belonging or union with Christ. Preserve the contrast between Paul’s own law-derived righteousness and the righteousness from God connected with faith.",
+        "The phrase dia pisteōs Christou in verse 9 is grammatically disputed: it may mean faith in Christ or the faithfulness of Christ. The reading text must be coherent, and the human editor must be alerted to the choice.",
+        "Verse 10’s 'know Him' is relational and experiential, not merely knowing information. It includes resurrection power, participation in Christ’s sufferings, and being conformed to His death.",
+        "Verse 11’s ei pōs must preserve Paul’s humble striving or uncertainty of manner without suggesting that he doubts God’s promise or teaches that resurrection is earned by suffering.",
+        "Verses 8-11 form a long connected movement in Greek. Use paragraph-level natural English and sentence division where helpful while retaining the logical relationships."
+      ],
+      "verses": [
+        {
+          "reference": "Phil.3.7",
+          "greek": "Ἀλλὰ ἅτινα ἦν μοι κέρδη ταῦτα ἥγημαι διὰ τὸν Χριστὸν ζημίαν"
+        },
+        {
+          "reference": "Phil.3.8",
+          "greek": "ἀλλὰ μενοῦνγε καὶ ἡγοῦμαι πάντα ζημίαν εἶναι διὰ τὸ ὑπερέχον τῆς γνώσεως Χριστοῦ Ἰησοῦ τοῦ κυρίου μου δι’ ὃν τὰ πάντα ἐζημιώθην καὶ ἡγοῦμαι σκύβαλα ἵνα Χριστὸν κερδήσω"
+        },
+        {
+          "reference": "Phil.3.9",
+          "greek": "καὶ εὑρεθῶ ἐν αὐτῷ μὴ ἔχων ἐμὴν δικαιοσύνην τὴν ἐκ νόμου ἀλλὰ τὴν διὰ πίστεως Χριστοῦ τὴν ἐκ θεοῦ δικαιοσύνην ἐπὶ τῇ πίστει"
+        },
+        {
+          "reference": "Phil.3.10",
+          "greek": "τοῦ γνῶναι αὐτὸν καὶ τὴν δύναμιν τῆς ἀναστάσεως αὐτοῦ καὶ κοινωνίαν παθημάτων αὐτοῦ συμμορφιζόμενος τῷ θανάτῳ αὐτοῦ"
+        },
+        {
+          "reference": "Phil.3.11",
+          "greek": "εἴ πως καταντήσω εἰς τὴν ἐξανάστασιν τὴν ἐκ νεκρῶν"
+        }
+      ]
+    }
+  ]
+}
