@@ -54,14 +54,13 @@ governing_documents:
 current_checkpoint:
   book: "Philippians"
   chapter: 1
-  current_unit_id: "PHP-01-019-026"
-  current_passage: "Philippians 1:19-26"
+  current_unit_id: "PHP-01-027-030"
+  current_passage: "Philippians 1:27-30"
   stage: "sequential_human_process_revalidation"
-  candidate_status: "Common-goal A/B/C recovery candidates for Philippians 1:19-26 are verified and ready for human comparison with the current FLT."
+  candidate_status: "Common-goal A/B/C recovery candidates for Philippians 1:27-30 are verified and ready for human comparison with the current FLT."
   candidate_sealed: false
-  latest_accepted_unit: "PHP-01-012-018 (verse 13 revised by the human editor; remaining wording retained; process revalidated; audit run 30115635072)"
-  next_permitted_action: "Present Philippians 1:19-26 verse by verse as A/B/C/Current FLT. Await the human editor’s reaffirmation or revised selection. Do not audit or advance until that decision."
-  provider_alert: "Anthropic API credit balance is too low as of incidental audit run 30115763449. Existing successful audit run 30115635072 remains valid because the exact verse renderings were unchanged; replenish Anthropic credit before the next new audit."
+  latest_accepted_unit: "PHP-01-019-026 (verses 20, 21, and 23 revised by the human editor; remaining wording retained; process revalidated; audit run 30117320796)"
+  next_permitted_action: "Present Philippians 1:27-30 verse by verse as A/B/C/Current FLT. Await the human editor’s reaffirmation or revised selection. Do not audit or advance until that decision."
   process_revalidation:
     reason: "Earlier blind drafting assigned different readability, Greek-fidelity, and balanced missions instead of one common constitutional goal."
     status: "batch_completed_and_provenance_verified"
@@ -87,7 +86,7 @@ current_checkpoint:
       - "PHP-02-019-024"
     excluded_valid_unit: "PHP-02-025-030"
     required_presentation: "Verse/A/B/C/Current FLT"
-    human_review_status: "3 of 9 affected units process-revalidated"
+    human_review_status: "4 of 9 affected units process-revalidated"
     revalidated_units:
       - unit_id: "PHP-01-001-002"
         passage: "Philippians 1:1-2"
@@ -111,6 +110,15 @@ current_checkpoint:
         passage: "Philippians 1:12-18"
         human_decision: "Replace verse 13 with the human-selected palace-guard wording; retain verses 12 and 14-18."
         audit_run_id: 30115635072
+        audit_artifact: "FLT-PHP-01-20260724-1"
+        auditor_total: 3
+        eligible_count: 3
+        blocking_defects: 0
+        semantic_pass: true
+      - unit_id: "PHP-01-019-026"
+        passage: "Philippians 1:19-26"
+        human_decision: "Revise verses 20, 21, and 23 as specified by the human editor; retain verses 19, 22, and 24-26."
+        audit_run_id: 30117320796
         audit_artifact: "FLT-PHP-01-20260724-1"
         auditor_total: 3
         eligible_count: 3
@@ -142,11 +150,11 @@ current_checkpoint:
     runner: "phase4-harness/src/process-revalidation-batch.js"
     workflow: ".github/workflows/phase4-philippians-process-revalidation.yml"
     latest_draft_receipt: "config/latest_draft_run.json"
-    current_unit_brief: "artifact outputs/briefs/PHP-01-019-026.md"
-    last_revalidated_candidate: "docs/architecture/phase-4/PHP-01-012-018_human-editor-candidate-v01.json"
-    last_revalidated_audit_source: "docs/architecture/phase-4/PHP-01-012-018_audit-source.json"
-    last_revalidated_audit_workflow: ".github/workflows/phase4-php1-012-018-candidate-audit.yml"
-    last_revalidated_audit_run_id: 30115635072
+    current_unit_brief: "artifact outputs/briefs/PHP-01-027-030.md"
+    last_revalidated_candidate: "docs/architecture/phase-4/PHP-01-019-026_human-editor-candidate-v01.json"
+    last_revalidated_audit_source: "docs/architecture/phase-4/PHP-01-019-026_audit-source.json"
+    last_revalidated_audit_workflow: ".github/workflows/phase4-php1-019-026-candidate-audit.yml"
+    last_revalidated_audit_run_id: 30117320796
 
 accepted_units:
   - passage: "Philippians 1:1-2"
@@ -161,7 +169,11 @@ accepted_units:
     status: "verse 13 revised by the human editor after valid common-goal blind drafting; remaining wording retained; sealed candidate passed three semantic-floor auditors with zero blocking defects; process revalidated"
     draft_run_id: 30073170869
     audit_run_id: 30115635072
-  - passage: "Philippians 1:19-30"
+  - passage: "Philippians 1:19-26"
+    status: "verses 20, 21, and 23 revised by the human editor after valid common-goal blind drafting; remaining wording retained; sealed candidate passed three semantic-floor auditors with zero blocking defects; process revalidated"
+    draft_run_id: 30073170869
+    audit_run_id: 30117320796
+  - passage: "Philippians 1:27-30"
     status: "wording accepted benchmark text; common-goal drafting revalidation and sealed-candidate audit still required"
   - passage: "Philippians 2:1-4"
     status: "wording accepted after exact-candidate audit; common-goal drafting revalidation required"
