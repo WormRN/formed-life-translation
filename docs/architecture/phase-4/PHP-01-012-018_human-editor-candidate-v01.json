@@ -1,17 +1,55 @@
 {
   "candidate_id": "FLT-PHP-01-012-018-HUMAN-EDITOR-v01",
   "unit_id": "PHP-01-012-018",
-  "status": "human_edited_candidate_not_finalized",
-  "evidence_run": "FLT-PHP-01-20260718-951",
+  "status": "human_selected_candidate_for_revalidation_audit",
+  "revalidation_evidence_run": "FLT-PHP-REVALIDATION-20260724-1",
   "verse_renderings": [
-    {"reference":"Phil.1.12","text":"I want you to know, brothers and sisters, that what has happened to me has actually helped spread the good news."},
-    {"reference":"Phil.1.13","text":"Everyone in the imperial guard, and everyone else, now knows that I am in prison because of Christ."},
-    {"reference":"Phil.1.14","text":"And my imprisonment has given most of the brothers and sisters new confidence in the Lord, so that they now dare to speak God’s message even more boldly, without fear."},
-    {"reference":"Phil.1.15","text":"Some preach about Christ because they are jealous and want to compete. Others preach with good intentions."},
-    {"reference":"Phil.1.16","text":"Those who preach out of love know I have been given the task of defending the good news."},
-    {"reference":"Phil.1.17","text":"The others preach about Christ only to advance themselves. Their motives are not sincere, and they think they can make my suffering in prison worse."},
-    {"reference":"Phil.1.18","text":"But what does that matter? The important thing is that Christ is being preached, whether the motives are false or sincere. And in that I take great joy. Yes, I will continue to be full of joy."}
+    {
+      "reference": "Phil.1.12",
+      "text": "I want you to know, brothers and sisters, that what has happened to me has actually helped spread the good news."
+    },
+    {
+      "reference": "Phil.1.13",
+      "text": "As a result, it has become obvious to the entire palace guard and to everyone else that I am in prison because of Christ."
+    },
+    {
+      "reference": "Phil.1.14",
+      "text": "And my imprisonment has given most of the brothers and sisters new confidence in the Lord, so that they now dare to speak God’s message even more boldly, without fear."
+    },
+    {
+      "reference": "Phil.1.15",
+      "text": "Some preach about Christ because they are jealous and want to compete. Others preach with good intentions."
+    },
+    {
+      "reference": "Phil.1.16",
+      "text": "Those who preach out of love know I have been given the task of defending the good news."
+    },
+    {
+      "reference": "Phil.1.17",
+      "text": "The others preach about Christ only to advance themselves. Their motives are not sincere, and they think they can make my suffering in prison worse."
+    },
+    {
+      "reference": "Phil.1.18",
+      "text": "But what does that matter? The important thing is that Christ is being preached, whether the motives are false or sincere. And in that I take great joy. Yes, I will continue to be full of joy."
+    }
   ],
-  "human_review_evidence": ["ruthless comparison","several audio-engine passes"],
-  "finalization_claim": false
+  "authority": {
+    "selected_by": "human_editor",
+    "decision": "Replace Philippians 1:13 with: “As a result, it has become obvious to the entire palace guard and to everyone else that I am in prison because of Christ.” Retain every other word in Philippians 1:12–18.",
+    "instruction": "Audit this exact selected wording without pre-audit repair. Auditors provide evidence only; the human editor alone decides whether any finding warrants a change."
+  },
+  "finalization_claim": false,
+  "audit_request": {
+    "requested_on": "2026-07-24",
+    "workflow": ".github/workflows/phase4-php1-012-018-candidate-audit.yml",
+    "reason": "Required sealed-candidate audit after common-goal process revalidation and human selection.",
+    "trigger": 1
+  },
+  "revision": {
+    "authorized_on": "2026-07-24",
+    "reference": "Phil.1.13",
+    "prior_wording": "Everyone in the imperial guard, and everyone else, now knows that I am in prison because of Christ.",
+    "selected_wording": "As a result, it has become obvious to the entire palace guard and to everyone else that I am in prison because of Christ.",
+    "scope": "Only verse 13 changed; verses 12 and 14–18 retained exactly."
+  }
 }
