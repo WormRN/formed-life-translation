@@ -54,26 +54,27 @@ governing_documents:
 current_checkpoint:
   book: "Philippians"
   chapter: 2
-  current_unit_id: "PHP-02-019-024"
-  current_passage: "Philippians 2:19-24"
-  stage: "exact_human_candidate_audit_complete_review_required"
-  candidate_status: "human_editor_candidate_audited_with_one_blocking_finding"
-  candidate_sealed: true
-  latest_accepted_unit: "PHP-02-012-018"
-  next_permitted_action: "Return the Phil.2.19 finding to the human editor. The human editor decides whether to retain Lord or restore Lord Jesus; do not change, accept, reject, or finalize without that decision."
-  latest_audit:
-    github_run_id: 30062235705
-    engine_run_id: "FLT-PHP-02-20260724-2"
-    receipt_status: "review_required"
+  current_unit_id: "PHP-02-025-030"
+  current_passage: "Philippians 2:25-30"
+  stage: "blind_candidate_generation_running"
+  candidate_status: "awaiting_independent_A_B_C_drafts"
+  candidate_sealed: false
+  latest_accepted_unit: "PHP-02-019-024"
+  next_permitted_action: "Retrieve the completed blind A/B/C drafts for Philippians 2:25-30, verify provenance, and present untouched candidates verse by verse. Do not select or edit for the human editor."
+  latest_completed_audit:
+    passage: "Philippians 2:19-24"
+    github_run_id: 30062746430
+    engine_run_id: "FLT-PHP-02-20260724-3"
+    receipt_status: "passed_semantic_floor"
     auditor_total: 3
-    eligible_count: 2
-    blocking_defects: 1
-    semantic_pass: false
+    eligible_count: 3
+    blocking_defects: 0
+    semantic_pass: true
   active_files:
-    candidate: "docs/architecture/phase-4/PHP-02-019-024_human-editor-candidate-v01.json"
-    audit_source: "docs/architecture/phase-4/PHP-02-019-024_audit-source.json"
-    workflow: ".github/workflows/phase4-php2-019-024-candidate-audit.yml"
-  launch_commit: "7cc00808082e0d4667e4dc73fd35cd16d27e01b6"
+    blind_source: "docs/architecture/phase-4/PHP-02-025-030_blind-source.json"
+    workflow: ".github/workflows/phase4-php2-025-030-drafts.yml"
+    latest_draft_receipt: "config/latest_draft_run.json"
+  launch_commit: "b89098504f9e1dd2d3e6e926c6ace36564b462ee"
 
 accepted_units:
   - passage: "Philippians 1:1-30"
@@ -88,6 +89,10 @@ accepted_units:
     status: "accepted_without_repair"
     audit_run_id: 30043603606
     audit_artifact: "FLT-PHP-02-20260723-2"
+  - passage: "Philippians 2:19-24"
+    status: "accepted_after_authorized_repair"
+    audit_run_id: 30062746430
+    audit_artifact: "FLT-PHP-02-20260724-3"
 
 audit_retrieval:
   user_run_link_required: false
