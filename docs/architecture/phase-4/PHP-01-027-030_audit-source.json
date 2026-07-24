@@ -1,0 +1,67 @@
+{
+  "unit_id": "PHP-01-027-030",
+  "passage": "Philippians 1:27-30",
+  "governing_rules": [
+    {
+      "name": "Dynamic identity",
+      "rule": "FLT is firmly dynamic-equivalence and reader-facing prose serves the reader; Greek form belongs in the apparatus."
+    },
+    {
+      "name": "Meaning floor",
+      "rule": "Preserve meaning, logic, tone, discourse, and theological force; identify material loss, addition, or misleading meaning without rewriting the human candidate."
+    },
+    {
+      "name": "Target reader",
+      "rule": "Religion-naive adults and older adolescents near grade 6."
+    },
+    {
+      "name": "Natural English",
+      "rule": "Reordering, unpacking, sentence splitting, supplied connectors, and rhetorical recreation are permitted when warranted."
+    },
+    {
+      "name": "Unit movement",
+      "rule": "Preserve Paul’s opening priority, the church’s shared public life worthy of the good news, its united resistance and side-by-side struggle, the opponents’ intimidation and God-given sign, suffering as a gracious gift for Christ, and the believers’ participation in Paul’s struggle."
+    },
+    {
+      "name": "Scoped pressure points",
+      "rule": "Assess the civic and communal force of politeuesthe in verse 27, the standard expressed by axios, the unity of one spirit and one purpose, the force of synathlountes and the relationship to faithfulness to the good news, the sign and its divine source in verse 28, the gracious-gift force of echaristhe and the two coordinated infinitives in verse 29, and continuity with Paul’s struggle in verse 30 without demanding Greek-shaped English."
+    },
+    {
+      "name": "Human authority",
+      "rule": "The human editor owns every wording decision. Workers and auditors test the submitted candidate exactly as selected, may report concerns and alternatives, and may not repair, replace, accept, or finalize it."
+    }
+  ],
+  "audit_boundary": {
+    "candidate_is_sealed": true,
+    "instruction": "Evaluate the exact human-selected text. Do not silently restore source wording or substitute a preferred rendering. Classify findings by severity and return them to the human editor for decision."
+  },
+  "source_data": {
+    "edition": "SBLGNT",
+    "book": "Philippians",
+    "chapter": 1,
+    "verse_start": 27,
+    "verse_end": 30,
+    "verses": [
+      {
+        "reference": "Phil.1.27",
+        "greek": "Μόνον ἀξίως τοῦ εὐαγγελίου τοῦ Χριστοῦ πολιτεύεσθε, ἵνα εἴτε ἐλθὼν καὶ ἰδὼν ὑμᾶς εἴτε ἀπὼν ἀκούω τὰ περὶ ὑμῶν, ὅτι στήκετε ἐν ἑνὶ πνεύματι, μιᾷ ψυχῇ συναθλοῦντες τῇ πίστει τοῦ εὐαγγελίου",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.1.28",
+        "greek": "καὶ μὴ πτυρόμενοι ἐν μηδενὶ ὑπὸ τῶν ἀντικειμένων, ἥτις ἐστὶν αὐτοῖς ἔνδειξις ἀπωλείας, ὑμῶν δὲ σωτηρίας, καὶ τοῦτο ἀπὸ θεοῦ·",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.1.29",
+        "greek": "ὅτι ὑμῖν ἐχαρίσθη τὸ ὑπὲρ Χριστοῦ, οὐ μόνον τὸ εἰς αὐτὸν πιστεύειν ἀλλὰ καὶ τὸ ὑπὲρ αὐτοῦ πάσχειν,",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.1.30",
+        "greek": "τὸν αὐτὸν ἀγῶνα ἔχοντες, οἷον εἴδετε ἐν ἐμοὶ καὶ νῦν ἀκούετε ἐν ἐμοί.",
+        "tokens": []
+      }
+    ]
+  }
+}
