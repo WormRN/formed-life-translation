@@ -53,14 +53,14 @@ governing_documents:
 
 current_checkpoint:
   book: "Philippians"
-  chapter: 2
-  current_unit_id: "PHP-02-025-030"
-  current_passage: "Philippians 2:25-30"
-  stage: "philippians_2_chapter_level_review"
-  candidate_status: "All Philippians 2 units are accepted. The assistant chapter-level review is complete; the continuous reading view and one surfaced oral-flow question in verse 27 await human chapter approval."
+  chapter: 1
+  current_unit_id: "PHP-01-CHAPTER-CLOSE"
+  current_passage: "Philippians 1:1-30"
+  stage: "philippians_1_chapter_level_review"
+  candidate_status: "All Philippians 1 units are process-revalidated and accepted. Philippians 2 is finalized and frozen. The promised Philippians 1 whole-chapter close review is now in progress."
   candidate_sealed: true
-  latest_accepted_unit: "PHP-02-025-030 (human editor accepted the exact corrected wording; prior audit run 30065182431 reported three eligible auditors and zero blocking defects)"
-  next_permitted_action: "Present docs/architecture/phase-4/FLT_Philippians_2_chapter-review-v01.md to the human editor. Await the decision to retain verse 27 or authorize the minimal repair from 'but also on me too' to 'but on me too'. Then finish notes, validation, and the chapter freeze before closing Philippians 1 and advancing to chapter 3."
+  latest_accepted_unit: "PHP-02-025-030 (human-authorized verse 27 repair passed audit run 30126332658; Philippians 2 notes, validation, and freeze completed)"
+  next_permitted_action: "Assemble the authoritative accepted Philippians 1 text, conduct oral-flow, literary-cohesion, terminology, and cumulative-expansion review, surface any genuine wording question to the human editor, then synchronize notes and create the Philippians 1 freeze. Advance to Philippians 3 only after Philippians 1 is closed."
   process_revalidation:
     reason: "Earlier blind drafting assigned different readability, Greek-fidelity, and balanced missions instead of one common constitutional goal."
     status: "recovery_completed_all_nine_units_process_revalidated"
@@ -195,7 +195,7 @@ current_checkpoint:
     runner: "phase4-harness/src/process-revalidation-batch.js"
     workflow: ".github/workflows/phase4-philippians-process-revalidation.yml"
     latest_draft_receipt: "config/latest_draft_run.json"
-    current_unit_brief: "docs/architecture/phase-4/FLT_Philippians_2_chapter-review-v01.md"
+    current_unit_brief: "Philippians 1 compiled chapter-close review in preparation"
     last_revalidated_candidate: "docs/architecture/phase-4/PHP-02-019-024_human-editor-decision-v02.json"
     last_revalidated_audit_source: "docs/architecture/phase-4/PHP-02-019-024_audit-source.json"
     last_revalidated_audit_workflow: ".github/workflows/phase4-php2-019-024-candidate-audit.yml"
@@ -242,7 +242,7 @@ accepted_units:
     audit_run_id: 30123491843
     audit_artifact: "FLT-PHP-02-20260724-4"
   - passage: "Philippians 2:25-30"
-    status: "human editor accepted the exact corrected wording; valid common-goal drafting and corrected semantic-floor audit preserved; chapter-level oral-flow and literary review remains due"
+    status: "human editor accepted the exact corrected wording; human editor approved final verse 27 oral-flow repair; repaired exact candidate passed three semantic-floor auditors with zero blocking defects; chapter review, notes, validation, and freeze complete"
     draft_run_id: 30063037938
     audit_run_id: 30065182431
 
