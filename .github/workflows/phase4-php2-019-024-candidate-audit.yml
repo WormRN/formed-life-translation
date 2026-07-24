@@ -4,7 +4,10 @@ run-name: Philippians 2:19-24 exact human-candidate audit
 on:
   push:
     branches: [main]
-    paths: ['.github/workflows/phase4-php2-019-024-candidate-audit.yml']
+    paths:
+      - '.github/workflows/phase4-php2-019-024-candidate-audit.yml'
+      - 'docs/architecture/phase-4/PHP-02-019-024_human-editor-candidate-v01.json'
+      - 'docs/architecture/phase-4/PHP-02-019-024_audit-source.json'
   workflow_dispatch:
 
 permissions: {contents: write}
