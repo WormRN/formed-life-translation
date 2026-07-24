@@ -56,11 +56,19 @@ current_checkpoint:
   chapter: 2
   current_unit_id: "PHP-02-019-024"
   current_passage: "Philippians 2:19-24"
-  stage: "exact_human_candidate_audit_launched"
-  candidate_status: "human_editor_candidate_for_audit"
+  stage: "exact_human_candidate_audit_complete_review_required"
+  candidate_status: "human_editor_candidate_audited_with_one_blocking_finding"
   candidate_sealed: true
   latest_accepted_unit: "PHP-02-012-018"
-  next_permitted_action: "Retrieve and report the exact-candidate audit evidence; do not edit, accept, reject, or finalize without the human editor."
+  next_permitted_action: "Return the Phil.2.19 finding to the human editor. The human editor decides whether to retain Lord or restore Lord Jesus; do not change, accept, reject, or finalize without that decision."
+  latest_audit:
+    github_run_id: 30062235705
+    engine_run_id: "FLT-PHP-02-20260724-2"
+    receipt_status: "review_required"
+    auditor_total: 3
+    eligible_count: 2
+    blocking_defects: 1
+    semantic_pass: false
   active_files:
     candidate: "docs/architecture/phase-4/PHP-02-019-024_human-editor-candidate-v01.json"
     audit_source: "docs/architecture/phase-4/PHP-02-019-024_audit-source.json"
