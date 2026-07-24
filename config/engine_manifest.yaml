@@ -56,11 +56,11 @@ current_checkpoint:
   chapter: 1
   current_unit_id: "PHP-01-001-002"
   current_passage: "Philippians 1:1-2"
-  stage: "sequential_human_process_revalidation"
-  candidate_status: "Nine-unit common-goal blind-draft recovery batch completed and verified; current unit awaits human reaffirmation or revision."
-  candidate_sealed: false
+  stage: "sealed_candidate_revalidation_audit_running"
+  candidate_status: "Human editor reaffirmed the current FLT for Philippians 1:1-2 without alteration; exact candidate sealed and audit launched."
+  candidate_sealed: true
   latest_accepted_unit: "PHP-02-019-024 (wording acceptance; drafting-process revalidation pending)"
-  next_permitted_action: "Present Philippians 1:1-2 verse by verse as A/B/C/Current FLT. Await the human editor’s reaffirmation or revised selection. Do not audit or advance until that decision."
+  next_permitted_action: "Retrieve and interpret the Philippians 1:1-2 exact-candidate audit receipt. If clean, record process revalidation and present Philippians 1:3-11 as A/B/C/Current FLT. If blocked, return the evidence to the human editor without changing wording."
   process_revalidation:
     reason: "Earlier blind drafting assigned different readability, Greek-fidelity, and balanced missions instead of one common constitutional goal."
     status: "batch_completed_and_provenance_verified"
@@ -113,6 +113,9 @@ current_checkpoint:
     workflow: ".github/workflows/phase4-philippians-process-revalidation.yml"
     latest_draft_receipt: "config/latest_draft_run.json"
     current_unit_brief: "artifact outputs/briefs/PHP-01-001-002.md"
+    human_candidate: "docs/architecture/phase-4/PHP-01-001-002_human-editor-candidate-v01.json"
+    audit_source: "docs/architecture/phase-4/PHP-01-001-002_audit-source.json"
+    audit_workflow: ".github/workflows/phase4-php1-001-002-candidate-audit.yml"
 
 accepted_units:
   - passage: "Philippians 1:1-30"
