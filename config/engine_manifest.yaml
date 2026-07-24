@@ -56,11 +56,11 @@ current_checkpoint:
   chapter: 3
   current_unit_id: "PHP-03-007-011"
   current_passage: "Philippians 3:7-11"
-  stage: "common_goal_blind_drafting"
-  candidate_status: "Philippians 3:1-6 is human-selected and audit-cleared with required notes recorded. The blind source for Philippians 3:7-11 is sealed and its common-goal A/B/C drafting workflow has been launched; no human candidate exists yet."
+  stage: "human_editor_candidate_selection"
+  candidate_status: "Philippians 3:7-11 common-goal blind drafting completed successfully. Three untouched candidates are authenticated by one identical input SHA-256 and await human selection or synthesis."
   candidate_sealed: false
   latest_accepted_unit: "PHP-03-001-006 (human synthesis passed audit run 30131378909 with three eligible auditors and zero blocking defects; required reader notes recorded)"
-  next_permitted_action: "Read config/latest_draft_run.json and require a completed receipt naming PHP-03-007-011. Retrieve the authenticated artifact, confirm three untouched candidates shared one identical prompt hash, and present A=Claude Sonnet, B=GPT-5.6 Sol, C=Gemini Pro verse by verse to the human editor."
+  next_permitted_action: "Present the authenticated A/B/C candidates for Philippians 3:7-11 verse by verse to the human editor: A=Claude Sonnet, B=GPT-5.6 Sol, C=Gemini Pro. Await exact selection, revision, or synthesis; do not seal or audit wording until the human editor decides."
   process_revalidation:
     reason: "Earlier blind drafting assigned different readability, Greek-fidelity, and balanced missions instead of one common constitutional goal."
     status: "recovery_completed_all_nine_units_process_revalidated"
@@ -174,16 +174,16 @@ current_checkpoint:
       philippians_2_1_24: "Preserve existing exact-candidate audits if the human editor reaffirms wording unchanged; rerun the audit for any changed unit."
       philippians_2_25_30: "No drafting rerun; valid common-goal drafting and corrected semantic-floor audit already exist."
   latest_draft:
-    passage: "Philippians 3:1-6"
-    github_run_id: 30127266973
+    passage: "Philippians 3:7-11"
+    github_run_id: 30131572818
     engine_run_id: "FLT-PHP-03-20260724-1"
-    artifact_id: 8609724412
+    artifact_id: 8611303345
     artifact_name: "FLT-PHP-03-20260724-1"
     receipt_status: "completed"
     common_goal_verified: true
     candidate_count: 3
     unit_count: 1
-    common_prompt_sha256: "5cc1fba76160c3e25dcda5f434c4d122e96aaad992ee7ccc197216d11ffe2984"
+    common_prompt_sha256: "6ca9ee189d34efc0a88ee49854ec8c7e5e9041aeef9320ea32abccf08a867199"
     current_flt_hidden_from_workers: true
     comparison_translations_hidden_from_workers: true
   last_valid_common_goal_unit:
