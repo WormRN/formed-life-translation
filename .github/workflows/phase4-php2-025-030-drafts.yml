@@ -7,6 +7,7 @@ on:
     paths:
       - '.github/workflows/phase4-php2-025-030-drafts.yml'
       - 'docs/architecture/phase-4/PHP-02-025-030_blind-source.json'
+      - 'phase4-harness/src/chapter-units.js'
   workflow_dispatch:
 
 permissions: {contents: write}
