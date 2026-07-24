@@ -1,0 +1,18 @@
+{
+  "candidate_id": "FLT-PHP-02-025-030-HUMAN-EDITOR-v01",
+  "unit_id": "PHP-02-025-030",
+  "status": "human_editor_candidate_for_audit",
+  "verse_renderings": [
+    {"reference":"Phil.2.25","text":"But I felt it was necessary to send Epaphroditus back to you. He is my brother, my coworker, and my fellow soldier, as well as the messenger you sent to take care of my needs."},
+    {"reference":"Phil.2.26","text":"He has been longing to see all of you, and he has been deeply troubled because he knows that news of his illness worried you."},
+    {"reference":"Phil.2.27","text":"He really was sick and nearly died. But God showed mercy to him, and not only on him but also on me too, so that I would not have one heartbreak on top of another."},
+    {"reference":"Phil.2.28","text":"So I am eagerly sending him back to you. Seeing him again will bring you joy, and it will relieve my own anxiety."},
+    {"reference":"Phil.2.29","text":"So welcome him with great joy in the Lord, and show high honor to people like him."},
+    {"reference":"Phil.2.30","text":"He risked his life and came close to death for the work of Christ, stepping in to give me in person the help that you were too far away to give."}
+  ],
+  "authority": {
+    "selected_by": "human_editor",
+    "instruction": "Audit this exact wording without pre-audit repair. Auditors provide evidence only; the human editor alone decides whether any finding warrants a change."
+  },
+  "finalization_claim": false
+}
