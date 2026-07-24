@@ -56,11 +56,11 @@ current_checkpoint:
   chapter: 1
   current_unit_id: "PHP-01-003-011"
   current_passage: "Philippians 1:3-11"
-  stage: "human_repair_decision_required"
-  candidate_status: "The human editor reaffirmed the current FLT unchanged. The sealed candidate audit returned two eligible judgments and one blocking defect in Philippians 1:7; no wording has been altered."
+  stage: "authorized_repair_audit_in_progress"
+  candidate_status: "The human editor authorized the minimum Philippians 1:7 repair. Only whether/or was changed to both while/and while; the corrected exact candidate is sealed and undergoing revalidation audit."
   candidate_sealed: true
   latest_accepted_unit: "PHP-01-001-002 (current FLT reaffirmed and process revalidated; audit run 30113294398)"
-  next_permitted_action: "Present the Philippians 1:7 audit finding to the human editor and await an explicit decision. Do not repair or advance to Philippians 1:12-18 without authorization."
+  next_permitted_action: "Verify the fresh Philippians 1:3-11 audit receipt. If three auditors are eligible with zero blocking defects, record the unit as process-revalidated and present Philippians 1:12-18 in Verse/A/B/C/Current FLT format."
   process_revalidation:
     reason: "Earlier blind drafting assigned different readability, Greek-fidelity, and balanced missions instead of one common constitutional goal."
     status: "batch_completed_and_provenance_verified"
@@ -128,7 +128,7 @@ current_checkpoint:
     current_audit_source: "docs/architecture/phase-4/PHP-01-003-011_audit-source.json"
     current_audit_workflow: ".github/workflows/phase4-php1-003-011-candidate-audit.yml"
     current_audit_run_id: 30114179337
-    current_audit_status: "review_required: 2 eligible, 1 blocking defect in Philippians 1:7"
+    current_audit_status: "authorized minimum repair committed at beda2249c14d0d8119664c9a977d4421c108df91; fresh audit in progress"
     last_revalidated_candidate: "docs/architecture/phase-4/PHP-01-001-002_human-editor-candidate-v01.json"
     last_revalidated_audit_source: "docs/architecture/phase-4/PHP-01-001-002_audit-source.json"
     last_revalidated_audit_workflow: ".github/workflows/phase4-php1-001-002-candidate-audit.yml"
