@@ -1,0 +1,58 @@
+{
+  "candidate_id": "FLT-PHP-03-001-006-HUMAN-EDITOR-v01",
+  "unit_id": "PHP-03-001-006",
+  "status": "human_selected_candidate_for_audit",
+  "draft_evidence_run": "FLT-PHP-03-20260724-1",
+  "verse_renderings": [
+    {
+      "reference": "Phil.3.1",
+      "text": "Now, my brothers and sisters, be full of joy because you belong to the Lord! It is no trouble for me to write the same things to you again, and it is for your own protection."
+    },
+    {
+      "reference": "Phil.3.2",
+      "text": "Watch out for those dogs! Watch out for those who do evil! Watch out for those who mutilate the body!"
+    },
+    {
+      "reference": "Phil.3.3",
+      "text": "For we are the true circumcision—those who worship by God’s Spirit, take pride in Christ Jesus, and place no confidence in human credentials."
+    },
+    {
+      "reference": "Phil.3.4",
+      "text": "Yet I could rely on such credentials myself. If anyone thinks he has good reason to rely on human credentials, I have even more:"
+    },
+    {
+      "reference": "Phil.3.5",
+      "text": "I was circumcised when I was eight days old. I am an Israelite by birth, from the tribe of Benjamin, a Hebrew born to Hebrew parents. As for strict observance of the Law, I was a Pharisee."
+    },
+    {
+      "reference": "Phil.3.6",
+      "text": "My religious zeal was so fierce that I persecuted the church. And as for the righteousness that the Law demands, my record was flawless."
+    }
+  ],
+  "required_reader_notes": [
+    {
+      "reference": "Phil.3.2",
+      "anchors": ["dogs", "mutilate"],
+      "text": "In the ancient world, “dogs” was a severe insult often used by Jewish people against Gentiles. Here, Paul turns the insult back on his opponents—legalistic teachers who insisted that Gentile Christians must be physically circumcised. Paul angrily calls their obsession with physical circumcision a mere “mutilation of the body,” arguing that true belonging to God is a matter of the Spirit (verse 3)."
+    },
+    {
+      "reference": "Phil.3.3",
+      "anchors": ["human credentials"],
+      "text": "The literal Greek word here is “flesh.” In this context, Paul uses it to refer to earthly privileges, ethnic heritage, and human achievements used to earn status before God."
+    }
+  ],
+  "authority": {
+    "selected_by": "human_editor",
+    "decision_date": "2026-07-24",
+    "decision": "Adopt the six-verse synthesis exactly as supplied and require reader-facing notes for the sharp rhetoric in verse 2 and the contextual rendering “human credentials” in verse 3.",
+    "editorial_normalization": "None. Preserve the selected wording and punctuation exactly.",
+    "instruction": "Audit this exact selected wording without pre-audit repair. Auditors provide evidence only; the human editor alone decides whether any finding warrants a change."
+  },
+  "finalization_claim": false,
+  "audit_request": {
+    "requested_on": "2026-07-24",
+    "workflow": ".github/workflows/phase4-php3-001-006-candidate-audit.yml",
+    "reason": "Required sealed-candidate audit after common-goal blind drafting and human synthesis.",
+    "trigger": 1
+  }
+}
