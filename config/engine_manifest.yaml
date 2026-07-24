@@ -61,6 +61,7 @@ current_checkpoint:
   candidate_sealed: false
   latest_accepted_unit: "PHP-01-012-018 (verse 13 revised by the human editor; remaining wording retained; process revalidated; audit run 30115635072)"
   next_permitted_action: "Present Philippians 1:19-26 verse by verse as A/B/C/Current FLT. Await the human editor’s reaffirmation or revised selection. Do not audit or advance until that decision."
+  provider_alert: "Anthropic API credit balance is too low as of incidental audit run 30115763449. Existing successful audit run 30115635072 remains valid because the exact verse renderings were unchanged; replenish Anthropic credit before the next new audit."
   process_revalidation:
     reason: "Earlier blind drafting assigned different readability, Greek-fidelity, and balanced missions instead of one common constitutional goal."
     status: "batch_completed_and_provenance_verified"
