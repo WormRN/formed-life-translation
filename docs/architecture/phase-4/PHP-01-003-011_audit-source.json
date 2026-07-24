@@ -1,0 +1,92 @@
+{
+  "unit_id": "PHP-01-003-011",
+  "passage": "Philippians 1:3-11",
+  "governing_rules": [
+    {
+      "name": "Dynamic identity",
+      "rule": "FLT is firmly dynamic-equivalence and reader-facing prose serves the reader; Greek form belongs in the apparatus."
+    },
+    {
+      "name": "Meaning floor",
+      "rule": "Preserve meaning, logic, tone, discourse, and theological force; identify material loss, addition, or misleading meaning without rewriting the human candidate."
+    },
+    {
+      "name": "Target reader",
+      "rule": "Religion-naive adults and older adolescents near grade 6."
+    },
+    {
+      "name": "Natural English",
+      "rule": "Reordering, unpacking, sentence splitting, supplied connectors, and rhetorical recreation are permitted when warranted."
+    },
+    {
+      "name": "Unit movement",
+      "rule": "Preserve the movement from thanksgiving and joyful prayer to partnership, confidence in God’s continuing work, affection, discerning love, readiness for Christ’s day, and fruitful living through Jesus Christ to God’s glory."
+    },
+    {
+      "name": "Scoped pressure points",
+      "rule": "Assess the verse 3 syntactic question, the shared-grace scope in verse 7, discerning love in verses 9-10, and contextual dikaiosyne language in verse 11 without demanding Greek-shaped English."
+    },
+    {
+      "name": "Human authority",
+      "rule": "The human editor owns every wording decision. Workers and auditors test the submitted candidate exactly as selected, may report concerns and alternatives, and may not repair, replace, accept, or finalize it."
+    }
+  ],
+  "audit_boundary": {
+    "candidate_is_sealed": true,
+    "instruction": "Evaluate the exact human-reaffirmed text. Do not silently restore source wording or substitute a preferred rendering. Classify findings by severity and return them to the human editor for decision."
+  },
+  "source_data": {
+    "edition": "SBLGNT",
+    "book": "Philippians",
+    "chapter": 1,
+    "verse_start": 3,
+    "verse_end": 11,
+    "verses": [
+      {
+        "reference": "Phil.1.3",
+        "greek": "Εὐχαριστῶ τῷ θεῷ μου ἐπὶ πάσῃ τῇ μνείᾳ ὑμῶν",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.1.4",
+        "greek": "πάντοτε ἐν πάσῃ δεήσει μου ὑπὲρ πάντων ὑμῶν μετὰ χαρᾶς τὴν δέησιν ποιούμενος",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.1.5",
+        "greek": "ἐπὶ τῇ κοινωνίᾳ ὑμῶν εἰς τὸ εὐαγγέλιον ἀπὸ τῆς πρώτης ἡμέρας ἄχρι τοῦ νῦν",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.1.6",
+        "greek": "πεποιθὼς αὐτὸ τοῦτο ὅτι ὁ ἐναρξάμενος ἐν ὑμῖν ἔργον ἀγαθὸν ἐπιτελέσει ἄχρι ἡμέρας Χριστοῦ Ἰησοῦ",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.1.7",
+        "greek": "καθώς ἐστιν δίκαιον ἐμοὶ τοῦτο φρονεῖν ὑπὲρ πάντων ὑμῶν διὰ τὸ ἔχειν με ἐν τῇ καρδίᾳ ὑμᾶς ἔν τε τοῖς δεσμοῖς μου καὶ ἐν τῇ ἀπολογίᾳ καὶ βεβαιώσει τοῦ εὐαγγελίου συγκοινωνούς μου τῆς χάριτος πάντας ὑμᾶς ὄντας",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.1.8",
+        "greek": "μάρτυς γάρ μου ὁ θεός ὡς ἐπιποθῶ πάντας ὑμᾶς ἐν σπλάγχνοις Χριστοῦ Ἰησοῦ",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.1.9",
+        "greek": "καὶ τοῦτο προσεύχομαι ἵνα ἡ ἀγάπη ὑμῶν ἔτι μᾶλλον καὶ μᾶλλον περισσεύῃ ἐν ἐπιγνώσει καὶ πάσῃ αἰσθήσει",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.1.10",
+        "greek": "εἰς τὸ δοκιμάζειν ὑμᾶς τὰ διαφέροντα ἵνα ἦτε εἰλικρινεῖς καὶ ἀπρόσκοποι εἰς ἡμέραν Χριστοῦ",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.1.11",
+        "greek": "πεπληρωμένοι καρπὸν δικαιοσύνης τὸν διὰ Ἰησοῦ Χριστοῦ εἰς δόξαν καὶ ἔπαινον θεοῦ",
+        "tokens": []
+      }
+    ]
+  }
+}
