@@ -1,0 +1,51 @@
+{
+  "candidate_id": "FLT-PHP-02-019-024-HUMAN-EDITOR-v02",
+  "unit_id": "PHP-02-019-024",
+  "status": "human_selected_process_revalidated",
+  "revalidation_evidence_run": "FLT-PHP-REVALIDATION-20260724-1",
+  "verse_renderings": [
+    {
+      "reference": "Phil.2.19",
+      "text": "Trusting in the Lord Jesus, I hope to send Timothy to you soon. Then I will be deeply encouraged when I hear how you are doing."
+    },
+    {
+      "reference": "Phil.2.20",
+      "text": "He is the only one I have who shares my heart and genuinely cares about your well-being."
+    },
+    {
+      "reference": "Phil.2.21",
+      "text": "Everyone else is looking out for their own interests instead of what matters to Jesus Christ."
+    },
+    {
+      "reference": "Phil.2.22",
+      "text": "But you already know Timothy’s proven character. Like a son working at his father’s side, he has served with me to spread the good news."
+    },
+    {
+      "reference": "Phil.2.23",
+      "text": "So I hope to send him as soon as I see how my own situation turns out."
+    },
+    {
+      "reference": "Phil.2.24",
+      "text": "And because I trust in the Lord, I am confident that I myself will come soon too."
+    }
+  ],
+  "audit_evidence": {
+    "engine_run_id": "FLT-PHP-02-20260724-4",
+    "github_actions_run": 30123491843,
+    "run_url": "https://github.com/WormRN/formed-life-translation/actions/runs/30123491843",
+    "result": "eligible",
+    "eligible_auditors": 3,
+    "blocking_defects": 0,
+    "semantic_pass": true,
+    "audited_candidate_head_sha": "8e57372878d0ec20f66f6e4898f11be39152738c"
+  },
+  "authority": {
+    "selected_by": "human_editor",
+    "decision_date": "2026-07-24",
+    "decision": "Adopt the revised six-verse unit exactly as supplied. Verses 19 and 24 receive substantive revisions; verses 20–23 retain the current FLT wording.",
+    "audit_finalizes_candidate": false,
+    "human_decision_finalizes_wording": true
+  },
+  "finalization_claim": true,
+  "remaining_gate": "chapter_level_oral_flow_literary_cohesion_terminology_and_cumulative_expansion_review"
+}
