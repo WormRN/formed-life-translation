@@ -200,29 +200,29 @@ Revisit during whole-chapter oral-flow review, chapter-level theological review,
 
 ## Phil 2:19–24 — Timothy’s Shared Concern and Proven Character
 
-**Date:** 2026-07-23  
-**Status:** confirmed for the Phase 4 benchmark
+**Date:** 2026-07-24  
+**Status:** process-revalidated and approved as a unit
 
 **Issue:**  
-How to express Paul’s hope “in the Lord Jesus,” Timothy’s uniquely shared concern, the contrast with self-interest, and the father–son service image in clear natural English.
+How to express Paul’s hope and confidence in the Lord, Timothy’s uniquely shared concern, the contrast with self-interest, and the father–son service image in clear natural English.
 
 **Decision:**  
-Retain “shares my heart” for Timothy’s like-minded concern, “what matters to Jesus Christ” for Christ’s interests, and the father working alongside his son image. Restore the source’s full title in verse 19: “I hope in the Lord Jesus.”
+Begin verse 19 with “Trusting in the Lord Jesus” and verse 24 with “And because I trust in the Lord.” Retain “shares my heart,” “what matters to Jesus Christ,” and the father–son service image.
 
 **Reason:**  
-The first exact-candidate audit found only one blocking defect: verse 19 omitted “Jesus” from “in the Lord Jesus.” The human editor authorized that single repair. The corrected candidate then passed all three independent semantic-floor audits with zero blocking defects.
+The revised wording makes Paul’s dependence on the Lord explicit in natural English at both ends of the paragraph. Timothy’s shared heart and genuine care embody the concern for others commanded earlier in the chapter. The complete human-selected unit passed three independent semantic-floor auditors with zero blocking defects.
 
 **Final wording:**
 
-> **19** I hope in the Lord Jesus to send Timothy to you soon. Then I will be deeply encouraged when I hear how you are doing.  
+> **19** Trusting in the Lord Jesus, I hope to send Timothy to you soon. Then I will be deeply encouraged when I hear how you are doing.  
 > **20** He is the only one I have who shares my heart and genuinely cares about your well-being.  
 > **21** Everyone else is looking out for their own interests instead of what matters to Jesus Christ.  
-> **22** But you already know Timothy’s proven character. Like a son working at his father's side, he has served with me to spread the good news.  
+> **22** But you already know Timothy’s proven character. Like a son working at his father’s side, he has served with me to spread the good news.  
 > **23** So I hope to send him as soon as I see how my own situation turns out.  
-> **24** And I am confident in the Lord that I myself will come soon too.
+> **24** And because I trust in the Lord, I am confident that I myself will come soon too.
 
 **Audit:**  
-GitHub run 30062746430; three of three auditors eligible; zero blocking defects.
+GitHub run 30123491843; three of three auditors eligible; zero blocking defects.
 
 **Footnotes needed:**  
 None presently required.
@@ -235,6 +235,47 @@ None.
 
 **Revisit trigger:**  
 Whole-chapter oral-flow review or a later contextual conflict.
+
+---
+
+## Phil 2:25–30 — Epaphroditus’s Service, Illness, and Return
+
+**Date:** 2026-07-24  
+**Status:** process-revalidated and approved as a unit; chapter-level oral-flow review pending
+
+**Issue:**  
+How to describe Epaphroditus’s relationship to Paul and the Philippian church, his near-fatal illness, God’s mercy, Paul’s sorrow, and the honor due faithful servants.
+
+**Decision:**  
+Accept the six-verse unit exactly as corrected and audited. In verse 28, use “lessen my own sorrow” rather than “relieve my own anxiety.”
+
+**Reason:**  
+The wording presents Epaphroditus as brother, coworker, fellow soldier, and the church’s messenger in natural language. “Lessen my own sorrow” preserves Paul’s grief rather than changing it into anxiety. The corrected exact candidate passed three independent semantic-floor auditors with zero blocking defects, and the human editor explicitly accepted it.
+
+**Final wording:**
+
+> **25** But I felt it was necessary to send Epaphroditus back to you. He is my brother, my coworker, and my fellow soldier, as well as the messenger you sent to take care of my needs.  
+> **26** He has been longing to see all of you, and he has been deeply troubled because he knows that news of his illness worried you.  
+> **27** He really was sick and nearly died. But God showed mercy to him, and not only on him but also on me too, so that I would not have one heartbreak on top of another.  
+> **28** So I am eagerly sending him back to you. Seeing him again will bring you joy, and it will lessen my own sorrow.  
+> **29** So welcome him with great joy in the Lord, and show high honor to people like him.  
+> **30** He risked his life and came close to death for the work of Christ, stepping in to give me in person the help that you were too far away to give.
+
+**Audit:**  
+GitHub run 30065182431; three of three auditors eligible; zero blocking defects.
+
+**Footnotes needed:**  
+Consider a note explaining Epaphroditus’s role as the Philippians’ authorized messenger and servant.
+
+**Glossary update needed:**  
+Consider contextual precedents for ἀπόστολος in a non-Twelve messenger sense and λειτουργός as practical ministry after benchmark review.
+
+**Style Guide update needed:**  
+None.
+
+**Revisit trigger:**  
+The current chapter-level oral-flow review, especially the doubled phrase “but also on me too” in verse 27.
+
 
 ---
 
