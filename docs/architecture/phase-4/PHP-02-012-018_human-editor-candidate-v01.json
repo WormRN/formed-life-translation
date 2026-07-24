@@ -1,8 +1,16 @@
 {
   "candidate_id": "FLT-PHP-02-012-018-HUMAN-EDITOR-v01",
   "unit_id": "PHP-02-012-018",
-  "status": "human_edited_candidate_not_finalized",
+  "status": "accepted_phase_4_benchmark_unit",
   "evidence_run": "FLT-PHP-02-20260723-2",
+  "audit_run_url": "https://github.com/WormRN/formed-life-translation/actions/runs/30043603606/workflow",
+  "audit_result": {
+    "eligible": true,
+    "blocking_defects": 0,
+    "required_repairs": 0,
+    "human_decision": "accepted_without_repair",
+    "accepted_date": "2026-07-23"
+  },
   "verse_renderings": [
     {"reference":"Phil.2.12","text":"Because of this, my dear friends, continue to obey as you always have. Now that I am away from you, it is even more important that you do so. Keep living out your salvation with deep reverence and awe."},
     {"reference":"Phil.2.13","text":"For God is at work in all of you. He gives you both the desire and the power to do what pleases Him."},
@@ -24,5 +32,5 @@
       "rationale": "The running metaphor is not developed further in this paragraph; the chosen wording preserves the point with less reader friction."
     }
   ],
-  "finalization_claim": false
+  "finalization_claim": true
 }
