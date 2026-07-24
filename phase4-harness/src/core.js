@@ -4,10 +4,11 @@ import path from 'node:path';
 import Ajv2020 from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
 
+export const COMMON_CANDIDATE_MISSION='Produce one independent FLT candidate under the same constitutional goal as every other candidate: communicate the full meaning, logic, tone, discourse movement, and theological force of the Greek in clear, natural, dignified English for a religion-naive adult or older adolescent reading near the sixth-grade level. Dynamic expression is the default; preserve meaningful form and avoid unsupported commentary.';
 export const ROLES={
-  readability_worker:'Produce exceptionally clear, natural, adult English near a sixth-grade reading level while preserving all warranted meaning.',
-  greek_fidelity_worker:'Protect semantic coverage, discourse relations, scope, agency, ambiguity, and meaningful form while producing acceptable English.',
-  balanced_worker:'Balance source fidelity with clear, natural FLT English; identify choices that require human judgment.'
+  readability_worker:COMMON_CANDIDATE_MISSION,
+  greek_fidelity_worker:COMMON_CANDIDATE_MISSION,
+  balanced_worker:COMMON_CANDIDATE_MISSION
 };
 export const sha256=v=>createHash('sha256').update(typeof v==='string'?v:JSON.stringify(v)).digest('hex');
 export async function json(file){return JSON.parse(await readFile(file,'utf8'));}
