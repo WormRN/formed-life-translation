@@ -1,13 +1,46 @@
 {
-  "candidate_id":"FLT-PHP-01-027-030-HUMAN-EDITOR-v01",
-  "unit_id":"PHP-01-027-030",
-  "status":"human_edited_candidate_not_finalized",
-  "evidence_run":"FLT-PHP-01-20260718-981",
-  "verse_renderings":[
-    {"reference":"Phil.1.27","text":"The most important thing is that you govern yourselves in a way that reflects the true value of the good news of Christ. Then, whether I visit you or only hear about you from far away, I will know that you are standing firm, united in one spirit. I will know that you are competing together as one team to stay faithful to the good news."},
-    {"reference":"Phil.1.28","text":"Do not let your opponents intimidate you in any way. Your courage will be a clear sign to them that they are headed for destruction, but that you are headed for deliverance—and all of this is from God."},
-    {"reference":"Phil.1.29","text":"God has graciously given you the privilege not only to trust in Christ, but also to suffer for Him and His cause."},
-    {"reference":"Phil.1.30","text":"You are facing the same struggle you once saw me face, and that you now hear I am still facing today."}
+  "candidate_id": "FLT-PHP-01-027-030-HUMAN-EDITOR-v01",
+  "unit_id": "PHP-01-027-030",
+  "status": "human_selected_candidate_for_revalidation_audit",
+  "revalidation_evidence_run": "FLT-PHP-REVALIDATION-20260724-1",
+  "verse_renderings": [
+    {
+      "reference": "Phil.1.27",
+      "text": "Above all, live together as a community in a way that is worthy of the good news of Christ. Then, whether I come and visit you or only hear about you from far away, I will know that you are standing firm, united in one spirit. I will know that you are fighting side by side with a single purpose to stay faithful to the good news."
+    },
+    {
+      "reference": "Phil.1.28",
+      "text": "Do not let your opponents intimidate you in any way. Your courage will be a clear sign to them that they are headed for destruction, but that you are headed for deliverance. This sign comes from God."
+    },
+    {
+      "reference": "Phil.1.29",
+      "text": "For you have been given a gift for the sake of Christ: not only to trust in Him, but also to suffer for Him."
+    },
+    {
+      "reference": "Phil.1.30",
+      "text": "You are facing the same struggle you once saw me face, and that you now hear I am still facing today."
+    }
   ],
-  "finalization_claim":false
+  "authority": {
+    "selected_by": "human_editor",
+    "decision": "Revise Philippians 1:27, 1:28, and 1:29 exactly as specified by the human editor; retain verse 30 unchanged.",
+    "editorial_normalization": "None. Preserve the selected wording and punctuation exactly.",
+    "instruction": "Audit this exact selected wording without pre-audit repair. Auditors provide evidence only; the human editor alone decides whether any finding warrants a change."
+  },
+  "finalization_claim": false,
+  "audit_request": {
+    "requested_on": "2026-07-24",
+    "workflow": ".github/workflows/phase4-php1-027-030-candidate-audit.yml",
+    "reason": "Required sealed-candidate audit after common-goal process revalidation and human selection.",
+    "trigger": 1
+  },
+  "revision": {
+    "authorized_on": "2026-07-24",
+    "changed_references": [
+      "Phil.1.27",
+      "Phil.1.28",
+      "Phil.1.29"
+    ],
+    "scope": "Only verses 27, 28, and 29 changed; verse 30 retained exactly."
+  }
 }
