@@ -1,7 +1,7 @@
 {
   "candidate_id": "FLT-PHP-03-007-011-HUMAN-EDITOR-v01",
   "unit_id": "PHP-03-007-011",
-  "status": "human_selected_pending_audit",
+  "status": "human_selected_audit_review_required",
   "draft_evidence_run": "FLT-PHP-03-20260724-1",
   "verse_renderings": [
     {
@@ -62,6 +62,15 @@
     "reason": "Required sealed-candidate audit after common-goal blind drafting and human synthesis.",
     "trigger": 1
   },
-  "audit_evidence": null,
-  "remaining_gate": "three_provider_semantic_floor_audit_then_human_acceptance_and_chapter_level_review"
+  "audit_evidence": {
+    "engine_run_id": "FLT-PHP-03-20260725-1",
+    "github_actions_run": 30147095111,
+    "run_url": "https://github.com/WormRN/formed-life-translation/actions/runs/30147095111",
+    "result": "review_required",
+    "eligible_auditors": 2,
+    "blocking_defects": 1,
+    "semantic_pass": false,
+    "human_review_issue": "One auditor judged that verse 11’s ‘somehow ... may’ could imply uncertainty about Paul’s inclusion in the resurrection; two auditors judged it a faithful preservation of Paul’s humble qualification. Verse 8 also received nonblocking warnings about ‘given it all up’ and the softened force of ‘waste.’"
+  },
+  "remaining_gate": "human_editor_decision_on_audit_finding"
 }
