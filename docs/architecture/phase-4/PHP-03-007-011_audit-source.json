@@ -1,0 +1,76 @@
+{
+  "unit_id": "PHP-03-007-011",
+  "passage": "Philippians 3:7-11",
+  "governing_rules": [
+    {
+      "name": "Dynamic identity",
+      "rule": "FLT is firmly dynamic-equivalence and reader-facing prose serves the reader; Greek form belongs in the apparatus."
+    },
+    {
+      "name": "Meaning floor",
+      "rule": "Preserve meaning, logic, tone, discourse, and theological force; identify material loss, addition, or misleading meaning without rewriting the human candidate."
+    },
+    {
+      "name": "Target reader",
+      "rule": "Religion-naive adults and older adolescents near grade 6."
+    },
+    {
+      "name": "Natural English",
+      "rule": "Reordering, unpacking, sentence splitting, supplied connectors, and rhetorical recreation are permitted when warranted."
+    },
+    {
+      "name": "Unit movement",
+      "rule": "Preserve Paul’s reversal of his former gain-and-loss accounting, the supreme value of knowing and belonging to Christ, the contrast between law-derived standing and God-given standing connected with faith, and his yearning to know Christ through resurrection power, suffering, death, and resurrection."
+    },
+    {
+      "name": "Scoped pressure points",
+      "rule": "Assess the escalation from former gains to everything as loss in verses 7-8; the force of skybalon and the purpose clauses about gaining and belonging to Christ; the law-based versus God-given right standing in verse 9 and the coherent choice to read pisteos Christou as reliance on Christ; the relational and experiential force of knowing Christ in verse 10; and the humble qualification in verse 11 without implying doubt of God’s promise or resurrection earned by suffering. Do not demand Greek-shaped English."
+    },
+    {
+      "name": "Footnote boundary",
+      "rule": "Required reader notes may explain the force of skybalon, the disputed pisteos Christou construction, and the nuance of ‘somehow,’ but notes may not repair a material defect in the reading text."
+    },
+    {
+      "name": "Human authority",
+      "rule": "The human editor owns every wording decision. Workers and auditors test the submitted candidate exactly as selected, may report concerns and alternatives, and may not repair, replace, accept, or finalize it."
+    }
+  ],
+  "audit_boundary": {
+    "candidate_is_sealed": true,
+    "instruction": "Evaluate the exact human-selected text. Do not silently restore source wording or substitute a preferred rendering. Classify findings by severity and return them to the human editor for decision."
+  },
+  "source_data": {
+    "edition": "SBLGNT",
+    "book": "Philippians",
+    "chapter": 3,
+    "verse_start": 7,
+    "verse_end": 11,
+    "verses": [
+      {
+        "reference": "Phil.3.7",
+        "greek": "Ἀλλὰ ἅτινα ἦν μοι κέρδη ταῦτα ἥγημαι διὰ τὸν Χριστὸν ζημίαν",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.3.8",
+        "greek": "ἀλλὰ μενοῦνγε καὶ ἡγοῦμαι πάντα ζημίαν εἶναι διὰ τὸ ὑπερέχον τῆς γνώσεως Χριστοῦ Ἰησοῦ τοῦ κυρίου μου δι’ ὃν τὰ πάντα ἐζημιώθην καὶ ἡγοῦμαι σκύβαλα ἵνα Χριστὸν κερδήσω",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.3.9",
+        "greek": "καὶ εὑρεθῶ ἐν αὐτῷ μὴ ἔχων ἐμὴν δικαιοσύνην τὴν ἐκ νόμου ἀλλὰ τὴν διὰ πίστεως Χριστοῦ τὴν ἐκ θεοῦ δικαιοσύνην ἐπὶ τῇ πίστει",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.3.10",
+        "greek": "τοῦ γνῶναι αὐτὸν καὶ τὴν δύναμιν τῆς ἀναστάσεως αὐτοῦ καὶ κοινωνίαν παθημάτων αὐτοῦ συμμορφιζόμενος τῷ θανάτῳ αὐτοῦ",
+        "tokens": []
+      },
+      {
+        "reference": "Phil.3.11",
+        "greek": "εἴ πως καταντήσω εἰς τὴν ἐξανάστασιν τὴν ἐκ νεκρῶν",
+        "tokens": []
+      }
+    ]
+  }
+}
