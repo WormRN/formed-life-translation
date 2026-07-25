@@ -56,11 +56,11 @@ current_checkpoint:
   chapter: 3
   current_unit_id: "PHP-03-007-011"
   current_passage: "Philippians 3:7-11"
-  stage: "human_audit_review"
-  candidate_status: "The exact Philippians 3:7-11 candidate completed audit run 30147095111. Two auditors found it eligible; one reported a blocking concern that verse 11 could imply doubt about whether Paul will be raised. Verse 8 received nonblocking warnings. Human editorial review is required; no wording has been changed."
+  stage: "human_selected_audit_cleared_paused"
+  candidate_status: "The human editor explicitly retained and accepted the exact Philippians 3:7-11 candidate, including verse 11 unchanged. The same sealed candidate has a clean final receipt in audit run 30147179126: three eligible auditors, zero blocking defects, semantic floor passed. Three required reader notes remain attached for the chapter-note pass."
   candidate_sealed: true
-  latest_accepted_unit: "PHP-03-001-006 (human synthesis passed audit run 30131378909 with three eligible auditors and zero blocking defects; required reader notes recorded)"
-  next_permitted_action: "Present the exact audit evidence to the human editor. Await an explicit decision to retain or revise the sealed wording. Do not advance or silently repair. If wording changes, reseal and rerun the three-provider audit."
+  latest_accepted_unit: "PHP-03-007-011 (human editor retained the exact synthesis; final audit run 30147179126 passed with three eligible auditors and zero blocking defects; required reader notes recorded)"
+  next_permitted_action: "When work resumes, prepare the blind source for PHP-03-012-016 and launch three independent A/B/C candidates pursuing the identical constitutional goal. Do not reopen PHP-03-007-011 unless the later whole-chapter review exposes a concrete issue."
   process_revalidation:
     reason: "Earlier blind drafting assigned different readability, Greek-fidelity, and balanced missions instead of one common constitutional goal."
     status: "recovery_completed_all_nine_units_process_revalidated"
