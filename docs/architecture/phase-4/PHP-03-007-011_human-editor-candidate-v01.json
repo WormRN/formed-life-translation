@@ -1,7 +1,7 @@
 {
   "candidate_id": "FLT-PHP-03-007-011-HUMAN-EDITOR-v01",
   "unit_id": "PHP-03-007-011",
-  "status": "human_selected_audit_review_required",
+  "status": "human_selected_audit_cleared",
   "draft_evidence_run": "FLT-PHP-03-20260724-1",
   "verse_renderings": [
     {
@@ -55,7 +55,7 @@
     "editorial_normalization": "None. Preserve the selected wording and punctuation exactly.",
     "instruction": "Audit this exact selected wording without pre-audit repair. Auditors provide evidence only; the human editor alone decides whether any finding warrants a change."
   },
-  "finalization_claim": false,
+  "finalization_claim": true,
   "audit_request": {
     "requested_on": "2026-07-25",
     "workflow": ".github/workflows/phase4-php3-007-011-candidate-audit.yml",
@@ -63,14 +63,25 @@
     "trigger": 1
   },
   "audit_evidence": {
-    "engine_run_id": "FLT-PHP-03-20260725-1",
-    "github_actions_run": 30147095111,
-    "run_url": "https://github.com/WormRN/formed-life-translation/actions/runs/30147095111",
-    "result": "review_required",
-    "eligible_auditors": 2,
-    "blocking_defects": 1,
-    "semantic_pass": false,
-    "human_review_issue": "One auditor judged that verse 11’s ‘somehow ... may’ could imply uncertainty about Paul’s inclusion in the resurrection; two auditors judged it a faithful preservation of Paul’s humble qualification. Verse 8 also received nonblocking warnings about ‘given it all up’ and the softened force of ‘waste.’"
+    "engine_run_id": "FLT-PHP-03-20260725-3",
+    "github_actions_run": 30147179126,
+    "run_url": "https://github.com/WormRN/formed-life-translation/actions/runs/30147179126",
+    "result": "eligible",
+    "eligible_auditors": 3,
+    "blocking_defects": 0,
+    "semantic_pass": true,
+    "prior_review_run": {
+      "github_actions_run": 30147095111,
+      "result": "review_required",
+      "eligible_auditors": 2,
+      "blocking_defects": 1,
+      "disposition": "The human editor explicitly retained verse 11 exactly as written. The concern was considered and rejected; the required verse 11 note remains attached."
+    }
   },
-  "remaining_gate": "human_editor_decision_on_audit_finding"
+  "remaining_gate": "chapter_level_oral_flow_literary_cohesion_terminology_notes_validation_and_freeze",
+  "human_acceptance": {
+    "accepted_on": "2026-07-25",
+    "decision": "Retain and record the exact sealed candidate, including verse 11 without revision.",
+    "wording_changed_after_audit": false
+  }
 }
