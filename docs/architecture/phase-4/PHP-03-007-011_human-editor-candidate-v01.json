@@ -1,0 +1,67 @@
+{
+  "candidate_id": "FLT-PHP-03-007-011-HUMAN-EDITOR-v01",
+  "unit_id": "PHP-03-007-011",
+  "status": "human_selected_pending_audit",
+  "draft_evidence_run": "FLT-PHP-03-20260724-1",
+  "verse_renderings": [
+    {
+      "reference": "Phil.3.7",
+      "text": "But the things I once counted as profit, I now write off as a complete loss because of Christ."
+    },
+    {
+      "reference": "Phil.3.8",
+      "text": "Even more, I now consider everything to be a loss compared to the ultimate value of knowing Christ Jesus my Lord. I have given it all up for Him, considering it all waste, so that I can gain Christ"
+    },
+    {
+      "reference": "Phil.3.9",
+      "text": "and belong completely to Him. I do not claim a right standing with God that I crafted by obeying the Law. Instead, I have the standing that comes from God, based on my reliance on Christ—a status received by faith."
+    },
+    {
+      "reference": "Phil.3.10",
+      "text": "My goal is to know Christ intimately, to experience the power that raised Him from the dead, and to share in His sufferings, becoming just like Him in His death,"
+    },
+    {
+      "reference": "Phil.3.11",
+      "text": "so that, somehow, I may also be raised from the dead."
+    }
+  ],
+  "required_reader_notes": [
+    {
+      "reference": "Phil.3.8",
+      "anchors": [
+        "waste"
+      ],
+      "text": "The Greek word (skybalon) refers to worthless refuse and can even mean filth or excrement. Paul uses deliberately forceful language: compared with knowing Christ, everything he once prized has become worthless."
+    },
+    {
+      "reference": "Phil.3.9",
+      "anchors": [
+        "reliance on Christ"
+      ],
+      "text": "The Greek phrase (pistis Christou) can be understood as either “faith in Christ” or “the faithfulness of Christ.” The FLT follows the first understanding here, reinforced by Paul’s concluding phrase, “received by faith.”"
+    },
+    {
+      "reference": "Phil.3.11",
+      "anchors": [
+        "somehow"
+      ],
+      "text": "This word does not necessarily mean Paul doubts his resurrection; it expresses his humble determination to reach resurrection life by sharing fully in Christ’s life, suffering, and death, leaving the exact path in God’s hands."
+    }
+  ],
+  "authority": {
+    "selected_by": "human_editor",
+    "decision_date": "2026-07-25",
+    "decision": "Adopt the five-verse synthesis exactly as supplied and require transparent reader-facing notes for verse 8’s forceful source term, verse 9’s disputed construction, and verse 11’s qualified language.",
+    "editorial_normalization": "None. Preserve the selected wording and punctuation exactly.",
+    "instruction": "Audit this exact selected wording without pre-audit repair. Auditors provide evidence only; the human editor alone decides whether any finding warrants a change."
+  },
+  "finalization_claim": false,
+  "audit_request": {
+    "requested_on": "2026-07-25",
+    "workflow": ".github/workflows/phase4-php3-007-011-candidate-audit.yml",
+    "reason": "Required sealed-candidate audit after common-goal blind drafting and human synthesis.",
+    "trigger": 1
+  },
+  "audit_evidence": null,
+  "remaining_gate": "three_provider_semantic_floor_audit_then_human_acceptance_and_chapter_level_review"
+}
