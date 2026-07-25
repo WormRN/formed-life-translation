@@ -1,6 +1,6 @@
 name: FLT Phase 4 Philippians 3:7-11 candidate audit
 run-name: Philippians 3:7-11 exact human-candidate audit
-# audit request: selected human synthesis, attempt 1
+# audit request: selected human synthesis, attempt 2
 
 on:
   push:
