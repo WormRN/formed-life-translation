@@ -410,3 +410,13 @@ Reopen only if the whole-letter review or later contextual evidence exposes a co
 - **Audit evidence:** The sealed exact candidate passed run 30131378909 with three eligible auditors, zero blocking defects, and a passing semantic floor.
 - **Next gate:** Whole-chapter oral-flow, literary-cohesion, terminology, notes, validation, and freeze review after Philippians 3 is complete.
 
+
+## 2026-07-25 — Philippians 3:7–11 human synthesis retained and accepted
+
+- **Unit:** `PHP-03-007-011`
+- **Decision:** Retain the human editor’s five-verse synthesis exactly as sealed, including verse 11: “so that, somehow, I may also be raised from the dead.”
+- **Audit disposition:** The initial run 30147095111 produced two eligible judgments and one verse 11 objection. The human editor explicitly considered and rejected revision. A subsequent audit of the same sealed candidate, run 30147179126, returned three eligible auditors, zero blocking defects, and a passing semantic floor.
+- **Required notes:** Preserve reader-facing explanations for verse 8 (“waste”), verse 9 (“reliance on Christ”), and verse 11 (“somehow”).
+- **Wording changes after audit:** None.
+- **Next gate:** Whole-chapter oral-flow, literary-cohesion, terminology, note-placement, validation, and freeze review after Philippians 3 is complete. Translation resumes with `PHP-03-012-016`.
+
