@@ -264,6 +264,12 @@ accepted_units:
     audit_run_id: 30131378909
     audit_artifact: "FLT-PHP-03-20260724-1"
 
+  - passage: "Philippians 3:7-11"
+    status: "human editor supplied the exact five-verse synthesis after valid common-goal blind drafting; the same sealed candidate received a clean final audit with three eligible auditors and zero blocking defects; human editor explicitly retained verse 11 unchanged; required reader notes for verses 8, 9, and 11 recorded; chapter-level review remains due"
+    draft_run_id: 30131572818
+    audit_run_id: 30147179126
+    audit_artifact: "FLT-PHP-03-20260725-3"
+
 chapter_closures:
   philippians_1:
     status: "finalized_and_frozen"
