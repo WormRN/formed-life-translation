@@ -56,11 +56,11 @@ current_checkpoint:
   chapter: 3
   current_unit_id: "PHP-03-007-011"
   current_passage: "Philippians 3:7-11"
-  stage: "sealed_candidate_audit"
-  candidate_status: "The human editor selected and sealed an exact Philippians 3:7-11 synthesis. Three required reader notes are attached for verse 8 waste, verse 9 reliance on Christ, and verse 11 somehow. The exact candidate awaits a three-provider semantic-floor audit."
+  stage: "human_audit_review"
+  candidate_status: "The exact Philippians 3:7-11 candidate completed audit run 30147095111. Two auditors found it eligible; one reported a blocking concern that verse 11 could imply doubt about whether Paul will be raised. Verse 8 received nonblocking warnings. Human editorial review is required; no wording has been changed."
   candidate_sealed: true
   latest_accepted_unit: "PHP-03-001-006 (human synthesis passed audit run 30131378909 with three eligible auditors and zero blocking defects; required reader notes recorded)"
-  next_permitted_action: "Run the unit-specific exact-candidate audit for PHP-03-007-011. Require config/latest_audit_run.json to name this unit and sealed candidate, with three eligible auditors, zero blocking defects, and semantic_pass true before asking the human editor for acceptance or advancing."
+  next_permitted_action: "Present the exact audit evidence to the human editor. Await an explicit decision to retain or revise the sealed wording. Do not advance or silently repair. If wording changes, reseal and rerun the three-provider audit."
   process_revalidation:
     reason: "Earlier blind drafting assigned different readability, Greek-fidelity, and balanced missions instead of one common constitutional goal."
     status: "recovery_completed_all_nine_units_process_revalidated"
