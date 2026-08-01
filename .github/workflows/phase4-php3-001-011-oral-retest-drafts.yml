@@ -3,7 +3,7 @@ run-name: Philippians 3:1-11 fresh Engine 2.2 passage-sense drafts
 
 on:
   push:
-    branches: [engine-2.2-passage-sense-gate]
+    branches: [main]
     paths:
       - '.github/workflows/phase4-php3-001-011-oral-retest-drafts.yml'
       - 'docs/architecture/phase-4/PHP-03-001-011_oral-retest-blind-source.json'
@@ -47,17 +47,18 @@ jobs:
           mv phase4-harness/.php3-001-011-oral-retest-config.tmp phase4-harness/.php3-001-011-oral-retest-config.json
           echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
       - name: Draft fresh unit
+        if: github.event_name != 'pull_request'
         id: draft
         run: node phase4-harness/src/chapter-units.js phase4-harness/.php3-001-011-oral-retest-config.json "phase4-harness/runs/${{ steps.run.outputs.run_id }}" docs/architecture/phase-4/PHP-03-001-011_oral-retest-blind-source.json
       - name: Upload blind-draft bundle
-        if: always()
+        if: always() && github.event_name != 'pull_request'
         uses: actions/upload-artifact@v4
         with:
           name: "${{ steps.run.outputs.run_id || 'FLT-PHP-03-SENSE-RETEST-blocked' }}"
           path: phase4-harness/runs/
           retention-days: 30
       - name: Publish machine-readable draft receipt
-        if: always()
+        if: always() && github.event_name != 'pull_request'
         env:
           DRAFT_STEP_OUTCOME: ${{ steps.draft.outcome }}
           ENGINE_RUN_ID: ${{ steps.run.outputs.run_id }}
@@ -107,5 +108,5 @@ jobs:
           git add config/latest_draft_run.json
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "Record Philippians 3:1-11 oral-English retest receipt"
-          git pull --rebase origin "${GITHUB_REF_NAME}"
-          git push origin "HEAD:${GITHUB_REF_NAME}"
+          git pull --rebase origin main
+          git push origin HEAD:main
