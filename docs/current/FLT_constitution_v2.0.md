@@ -463,6 +463,23 @@ The translation process must evaluate:
 
 The paragraph, not merely the sentence, is the primary unit of clarity.
 
+## 30.1 Required Pre-Audit Oral-English Smoothing Gate
+
+Every provisional human-selected translation unit must undergo a source-aware Oral-English Smoothing Pass before its exact wording is sealed for semantic audit.
+
+The gate has four ordered stages:
+
+1. **Listener-only diagnosis.** Reviewers receive only the English and identify concrete one-hearing obstacles. They may not consult the Greek, infer missing source wording, or rewrite the text.
+2. **Source-aware proposals.** Reviewers receive the selected English, anonymous listener reports, Greek source data, governing rules, and relevant Matrix entries. They may propose only targeted repairs to identified comprehension or oral-flow problems.
+3. **Human approval of exact wording.** Every proposed change must be logged, and no change becomes FLT wording until the human editor approves the exact text.
+4. **Exact-candidate audit.** The human-approved wording must pass the Warrant Test and Communication Test through the required semantic-floor audit.
+
+Smoothing is controlled comprehension repair, not general beautification. It may split, combine, reorder, or unpack English; bring the main assertion forward; convert abstract noun phrases into natural verbs; vary English transitions; or move secondary explanation into notes. It must preserve semantic propositions, logical relationships, rhetorical force, meaningful ambiguity, agency and force, key-term continuity, and source traceability.
+
+The smallest faithful repair is preferred. A proposal that silently changes wording, settles a source ambiguity for smoothness, weakens deliberate rhetoric, or changes certainty, agency, or logic must be rejected.
+
+If chapter-level oral review later changes accepted wording, the changed exact candidate returns through this gate and receives a fresh audit of the affected unit.
+
 ---
 
 # Part X — Governance
