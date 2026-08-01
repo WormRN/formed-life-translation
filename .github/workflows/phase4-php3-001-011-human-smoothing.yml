@@ -13,7 +13,7 @@ on:
       - 'phase4-harness/test/smoothing-core.test.js'
 
 permissions: {contents: read}
-concurrency: {group: flt-php3-001-011-human-smoothing, cancel-in-progress: false}
+concurrency: {group: flt-php3-001-011-human-smoothing, cancel-in-progress: true}
 
 jobs:
   smooth:
