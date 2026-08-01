@@ -1,0 +1,129 @@
+{
+  "chapter_id": "PHP-03-ORAL-RETEST",
+  "book": "Philippians",
+  "chapter": 3,
+  "source_edition": "SBLGNT",
+  "tone": "personally emphatic, sharply warning, rhetorically forceful, Christ-centered, and deeply yearning",
+  "target_reader": "religion-naive adults and older adolescents near grade 6",
+  "translation_identity": "firmly dynamic-equivalence, NLT-like in readability but independent",
+  "test_purpose": "Fresh Engine 2.1 oral-English retest of Philippians 3:1-11",
+  "sealed_context": {
+    "prior_flt_wording_present": false,
+    "prior_candidates_present": false,
+    "comparison_translations_present": false,
+    "conversational_drafts_present": false,
+    "instruction": "Translate from the Greek and source-side constraints only. Do not reconstruct, imitate, or refer to any previous FLT wording for Philippians 3."
+  },
+  "governing_rules": [
+    "All three candidates pursue the same constitutional goal; no provider receives a readability, fidelity, or blended specialty.",
+    "Write natural English that a religion-naive adult can follow on one hearing. The main assertion should arrive before the listener loses it.",
+    "Build English sentences and paragraphs rather than preserving Greek clause architecture. Split, combine, reorder, or unpack when comprehension benefits.",
+    "Actively avoid stacked clauses, overloaded breaths, preposition clusters, delayed subjects or main verbs, abstract-noun chains, embedded explanation, and translated-sounding prose.",
+    "Vary English transitions when needed for the ear, but preserve deliberate repetition, escalation, irony, emphasis, and connective logic.",
+    "Preserve every material proposition; cause, contrast, purpose, result, and sequence; meaningful ambiguity; agency, force, certainty, and key-term links.",
+    "The prose serves the reader; notes serve accountability. Do not leave the reading text opaque and expect a footnote to supply material meaning.",
+    "Preserve strong or coarse rhetoric when it carries material force; propose notes for cultural background or disputed constructions.",
+    "No comparison translations, traditional benchmark wording, prior FLT wording, prior candidates, conversation drafts, or sealed human wording may enter blind drafting.",
+    "Record oral-design moves and remaining oral risks; do not claim that a drafting worker has certified its own oral quality."
+  ],
+  "existing_decisions": [
+    "Capitalize pronouns referring to deity.",
+    "Render theological vocabulary contextually in reader-facing English; do not preserve opaque church terms merely because they are traditional.",
+    "Use brothers and sisters when the context addresses the whole church and the Greek plural is inclusive.",
+    "Footnotes may disclose disputed constructions, traditional glosses, cultural force, and strong source-language terms, but may not compensate for material meaning missing from the reading text.",
+    "The human editor alone selects, synthesizes, approves smoothing changes, and finalizes wording."
+  ],
+  "matrix_alerts": [
+    {
+      "lemma": "σάρξ",
+      "status": "high-priority stub; mandatory contextual review",
+      "neutral_range": "body, human descent, human limitation, merely human capability, or the sphere opposed to the Spirit",
+      "instruction": "In verses 3-4, determine from the local contrast what kind of confidence Paul rejects. Do not force one global English equivalent."
+    },
+    {
+      "lemma": "δικαιοσύνη",
+      "status": "high-priority stub; mandatory contextual review",
+      "neutral_range": "righteousness, justice, right conduct, right standing, or God’s own rightness",
+      "instruction": "In verse 9, preserve the contrast between a right status Paul might claim from law observance and the right status that comes from God in connection with faith."
+    },
+    {
+      "lemma": "πίστις",
+      "status": "weighted term; disputed construction in verse 9",
+      "neutral_range": "faith, trust, faithfulness; the phrase pisteōs Christou may be read as faith in Christ or Christ’s faithfulness",
+      "instruction": "Choose a coherent reading in the body text and flag the construction for human review; do not hide the interpretive choice."
+    },
+    {
+      "lemma": "σκύβαλον",
+      "status": "rhetorically strong term",
+      "neutral_range": "refuse, garbage, filth, dung or excrement depending context and register",
+      "instruction": "Preserve Paul’s contemptuous force in adult natural English without using a needlessly genteel abstraction; flag the register decision for notes."
+    }
+  ],
+  "units": [
+    {
+      "unit_id": "PHP-03-001-011-ORAL-RETEST",
+      "passage": "Philippians 3:1-11",
+      "title": "True belonging and the surpassing value of knowing Christ",
+      "known_issues": [
+        "Verse 1 links rejoicing in the Lord, repeated instruction, and the readers' safety. Preserve the relationship without stacking the sentence.",
+        "Verse 2 deliberately repeats the command to watch out and uses the severe insult dogs, the phrase evil workers, and a hostile wordplay that reduces circumcision to mutilation. Preserve the rhetorical force without making the English drumbeat accidentally exhausting.",
+        "Verse 3 explains verse 2 and identifies Paul's group as the true circumcision. Preserve the logical connection, the Spirit-centered worship, boasting in Christ, and rejection of confidence in flesh.",
+        "In verses 3-4, flesh refers contextually to human lineage, religious privilege, status, and achievement. Use coherent reader-facing language without erasing the source link.",
+        "Verses 4-6 form a credential list with repeated category markers. Recreate the accumulating rhetoric in varied natural English without flattening the list or mechanically repeating one transition.",
+        "Verses 7-8 reverse the accounting metaphor from gains to loss and intensify it. Preserve the escalation while giving each English sentence a clear landing.",
+        "The word skubalon in verse 8 is forceful and may refer to refuse, filth, dung, or excrement. Use an appropriate adult register and flag the choice for a note.",
+        "Verse 9 contrasts Paul's own law-derived righteousness with righteousness from God connected with faith. Avoid an abstract-noun and preposition pile that listeners cannot process.",
+        "The phrase dia pisteos Christou in verse 9 may mean faith in Christ or the faithfulness of Christ. Choose a coherent reading and flag the interpretive decision for human review.",
+        "Verse 10 describes relational and experiential knowing: resurrection power, sharing Christ's sufferings, and conformity to His death. Sentence division may help, but preserve the movement.",
+        "Verse 11's ei pos must preserve Paul's humble striving or uncertainty of manner without teaching doubt about God's promise or that resurrection is earned by suffering.",
+        "The eleven verses must cohere as one oral passage. Preserve the movement from warning, to rejected credentials, to reordered values, to knowing Christ."
+      ],
+      "verses": [
+        {
+          "reference": "Phil.3.1",
+          "greek": "Τὸ λοιπόν ἀδελφοί μου χαίρετε ἐν κυρίῳ τὰ αὐτὰ γράφειν ὑμῖν ἐμοὶ μὲν οὐκ ὀκνηρόν ὑμῖν δὲ ἀσφαλές"
+        },
+        {
+          "reference": "Phil.3.2",
+          "greek": "Βλέπετε τοὺς κύνας βλέπετε τοὺς κακοὺς ἐργάτας βλέπετε τὴν κατατομήν"
+        },
+        {
+          "reference": "Phil.3.3",
+          "greek": "ἡμεῖς γάρ ἐσμεν ἡ περιτομή οἱ πνεύματι θεοῦ λατρεύοντες καὶ καυχώμενοι ἐν Χριστῷ Ἰησοῦ καὶ οὐκ ἐν σαρκὶ πεποιθότες"
+        },
+        {
+          "reference": "Phil.3.4",
+          "greek": "καίπερ ἐγὼ ἔχων πεποίθησιν καὶ ἐν σαρκί Εἴ τις δοκεῖ ἄλλος πεποιθέναι ἐν σαρκί ἐγὼ μᾶλλον"
+        },
+        {
+          "reference": "Phil.3.5",
+          "greek": "περιτομῇ ὀκταήμερος ἐκ γένους Ἰσραήλ φυλῆς Βενιαμίν Ἑβραῖος ἐξ Ἑβραίων κατὰ νόμον Φαρισαῖος"
+        },
+        {
+          "reference": "Phil.3.6",
+          "greek": "κατὰ ζῆλος διώκων τὴν ἐκκλησίαν κατὰ δικαιοσύνην τὴν ἐν νόμῳ γενόμενος ἄμεμπτος"
+        },
+        {
+          "reference": "Phil.3.7",
+          "greek": "Ἀλλὰ ἅτινα ἦν μοι κέρδη ταῦτα ἥγημαι διὰ τὸν Χριστὸν ζημίαν"
+        },
+        {
+          "reference": "Phil.3.8",
+          "greek": "ἀλλὰ μενοῦνγε καὶ ἡγοῦμαι πάντα ζημίαν εἶναι διὰ τὸ ὑπερέχον τῆς γνώσεως Χριστοῦ Ἰησοῦ τοῦ κυρίου μου δι’ ὃν τὰ πάντα ἐζημιώθην καὶ ἡγοῦμαι σκύβαλα ἵνα Χριστὸν κερδήσω"
+        },
+        {
+          "reference": "Phil.3.9",
+          "greek": "καὶ εὑρεθῶ ἐν αὐτῷ μὴ ἔχων ἐμὴν δικαιοσύνην τὴν ἐκ νόμου ἀλλὰ τὴν διὰ πίστεως Χριστοῦ τὴν ἐκ θεοῦ δικαιοσύνην ἐπὶ τῇ πίστει"
+        },
+        {
+          "reference": "Phil.3.10",
+          "greek": "τοῦ γνῶναι αὐτὸν καὶ τὴν δύναμιν τῆς ἀναστάσεως αὐτοῦ καὶ κοινωνίαν παθημάτων αὐτοῦ συμμορφιζόμενος τῷ θανάτῳ αὐτοῦ"
+        },
+        {
+          "reference": "Phil.3.11",
+          "greek": "εἴ πως καταντήσω εἰς τὴν ἐξανάστασιν τὴν ἐκ νεκρῶν"
+        }
+      ]
+    }
+  ]
+}
