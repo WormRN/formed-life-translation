@@ -18,6 +18,7 @@ export function buildListenerPrompt(candidate){
 export function buildSourceAwarePrompt(candidate,source,listenerReports){
   const material={
     selected_english:candidate.verse_renderings,
+    selected_reader_notes:candidate.reader_notes||[],
     anonymous_listener_reports:listenerReports,
     greek_source:source.source_data,
     governing_rules:source.governing_rules,
