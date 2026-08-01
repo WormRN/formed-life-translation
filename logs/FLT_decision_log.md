@@ -420,3 +420,19 @@ Reopen only if the whole-letter review or later contextual evidence exposes a co
 - **Wording changes after audit:** None.
 - **Next gate:** Whole-chapter oral-flow, literary-cohesion, terminology, note-placement, validation, and freeze review after Philippians 3 is complete. Translation resumes with `PHP-03-012-016`.
 
+
+
+---
+
+## 2026-08-01 — Philippians 3:1–11 Engine 2.2 unified synthesis accepted
+
+- **Unit:** `PHP-03-001-011`
+- **Status:** accepted as a unit; pending whole-chapter review after Philippians 3 is complete
+- **Decision:** Adopt the human editor’s source-aware smoothed synthesis, including verse 5: “When it came to the Law, I was a Pharisee, committed to obeying it strictly.”
+- **Transparency policy:** Audit the reading text and reader notes together. Notes disclose literal wording, meaningful alternatives, and interpretive reasoning to build critical trust; they do not apologize for or rescue an otherwise deficient translation.
+- **Required notes:** Preserve the notes on verse 2 wordplay; verse 3 covenant identity and “flesh”; verse 5 Pharisee background and literal form; verse 8 “garbage”; verse 9 faith construction; and verse 11 “somehow.”
+- **Engine evidence:** Engine 2.2 supplied a Passage-Sense Resolution Gate before blind A/B/C drafting. The editor synthesis then passed listener-only diagnosis and source-aware smoothing.
+- **Exact audit:** GitHub Actions run 30720117887; three of three auditors eligible; zero blocking defects; every reader note passed.
+- **Warnings accepted as documented dynamic choices:** “because you belong to the Lord” (v.1), “those who do evil” (v.2), “belong completely to Him” (v.9), “the power that raised Him” (v.10), and passive “may also be raised” (v.11).
+- **Supersession:** This unified Engine 2.2 record governs the current wording and notes for 3:1–11 while preserving the earlier split-unit records as historical evidence.
+- **Next gate:** Resume translation with `PHP-03-012-016`. After Philippians 3 is complete, conduct whole-chapter movement, oral-flow, terminology, and note-placement review.
