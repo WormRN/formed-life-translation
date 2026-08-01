@@ -1,0 +1,306 @@
+{
+  "chapter_id": "PHP-03",
+  "book": "Philippians",
+  "chapter": 3,
+  "source_edition": "SBLGNT",
+  "tone": "personally urgent, humble, forward-straining, athletic, confident in Christ, and pastorally unifying",
+  "target_reader": "religion-naive adults and older adolescents near grade 6",
+  "translation_identity": "firmly dynamic-equivalence, NLT-like in readability but independent",
+  "test_purpose": "Fresh Engine 2.2 passage-sense-resolution drafting of Philippians 3:12-16",
+  "sealed_context": {
+    "prior_flt_wording_present": false,
+    "prior_candidates_present": false,
+    "comparison_translations_present": false,
+    "conversational_drafts_present": false,
+    "instruction": "Translate from the Greek and the completed source-side passage-sense brief only. Do not reconstruct, imitate, or refer to previous FLT wording, previous candidates, comparison translations, or conversation drafts.",
+    "editor_benchmark_present": false
+  },
+  "governing_rules": [
+    "Passage-sense resolution precedes English composition. Follow the completed source-side brief and expose genuinely viable alternatives in the review apparatus.",
+    "All three candidates pursue the same constitutional goal; no provider receives a readability, fidelity, or blended specialty.",
+    "Write natural English that a religion-naive adult can follow on one hearing. The main assertion should arrive before the listener loses it.",
+    "Build English sentences and paragraphs rather than preserving Greek clause architecture. Split, combine, reorder, or unpack when comprehension benefits.",
+    "Actively avoid stacked clauses, overloaded breaths, preposition clusters, delayed subjects or main verbs, abstract-noun chains, embedded explanation, and translated-sounding prose.",
+    "Vary English transitions when needed for the ear, but preserve deliberate repetition, escalation, metaphor, emphasis, and connective logic.",
+    "Preserve every material proposition; cause, contrast, purpose, result, and sequence; meaningful ambiguity; agency, force, certainty, and key-term links.",
+    "The prose serves the reader; notes serve accountability. Do not leave the reading text opaque and expect a footnote to supply material meaning.",
+    "Keep candidate alternatives in the review apparatus, not in brackets in the reading text, unless the human editor later decides otherwise.",
+    "Propose notes for literal-source transparency, meaningful word-family links, metaphors hidden by dynamic rendering, and disputed constructions.",
+    "Footnotes disclose translation decisions and establish critical trust; they are not apologies for, or repairs to, an inadequate reading text.",
+    "No comparison translations, traditional benchmark wording, prior FLT wording, prior candidates, editor benchmark, conversation drafts, or sealed human wording may enter blind drafting.",
+    "Record oral-design moves and remaining oral risks; do not claim that a drafting worker has certified its own oral quality."
+  ],
+  "existing_decisions": [
+    "Capitalize pronouns referring to deity.",
+    "Render theological vocabulary contextually in reader-facing English; do not preserve opaque church terms merely because they are traditional.",
+    "Use brothers and sisters when the context addresses the whole church and the Greek plural is inclusive.",
+    "Footnotes may disclose disputed constructions, traditional glosses, cultural force, literal wording, and source-language links, but may not compensate for material meaning missing from the reading text.",
+    "Preserve contextual links across accepted units without importing or reopening their accepted English wording during blind drafting.",
+    "The human editor alone selects, synthesizes, approves smoothing changes, and finalizes wording."
+  ],
+  "matrix_alerts": [
+    {
+      "lemma": "καταλαμβάνω",
+      "status": "passage-specific contextual review",
+      "neutral_range": "take hold of, seize, grasp, attain, comprehend, or make one's own",
+      "instruction": "Preserve the repeated active and passive forms in verses 12-13 as a meaningful link while keeping Christ as the agent who first takes hold of Paul."
+    },
+    {
+      "lemma": "τελειόω / τέλειος",
+      "status": "passage-specific word-family alert",
+      "neutral_range": "bring to completion, reach a goal, make perfect; complete, mature, fully developed",
+      "instruction": "Verse 12 denies completed attainment while verse 15 addresses the mature. Preserve the rhetorical tension in readable English and disclose the shared Greek root in a note."
+    },
+    {
+      "lemma": "διώκω",
+      "status": "passage-specific literary-link alert",
+      "neutral_range": "pursue, chase, press after, or persecute",
+      "instruction": "Use one coherent pursuit expression in verses 12 and 14 and preserve the athletic movement; chapter review should later consider the contrast with Paul's persecution in verse 6."
+    },
+    {
+      "lemma": "φρονέω",
+      "status": "book-level weighted term",
+      "neutral_range": "think, set one's mind, hold an attitude, adopt a mindset, or take a view",
+      "instruction": "In verse 15 express the shared forward-looking posture of verses 12-14, not bare intellectual opinion; preserve the connection with the letter's mindset theme without forcing one English gloss."
+    },
+    {
+      "lemma": "κλῆσις / ἄνω",
+      "status": "passage-specific construction alert",
+      "neutral_range": "call, summons, invitation; upward, above, or heavenly",
+      "instruction": "Preserve God's agency, the upward or heavenly direction, and the relation between call and prize without silently deciding more than the construction warrants."
+    },
+    {
+      "lemma": "στοιχέω",
+      "status": "passage-specific metaphor alert",
+      "neutral_range": "walk in line, keep in step, follow a course, or live consistently",
+      "instruction": "Render the communal call in verse 16 as continued conduct consistent with progress already made; disclose the keep-in-step image if the reading text renders it dynamically."
+    }
+  ],
+  "units": [
+    {
+      "unit_id": "PHP-03-012-016",
+      "passage": "Philippians 3:12-16",
+      "title": "Pressing toward the goal and living in step with present progress",
+      "known_issues": [
+        "Verse 12 continues the goal of verses 10-11 without importing accepted English wording from the prior unit. Paul emphatically denies that he has already obtained the goal or reached completion.",
+        "The object of obtained in verse 12 is unstated. The context points to the preceding goal, completion, resurrection, or the whole Christward aim; do not insert one narrow object without disclosure.",
+        "Verse 12 repeats the take-hold verb and leaves the relation expressed by eph ho open to a purpose or cause reading. Preserve Christ's prior agency and retain the viable alternative in the apparatus.",
+        "Verses 12-14 sustain athletic pursuit imagery through pressing on, straining forward, the goal, and the prize. Recreate a coherent race movement without embellishing it into a detailed scene.",
+        "Verse 13's forgetting does not describe failed memory. It depicts refusing to remain occupied or controlled by what lies behind; the referent should remain broad enough for the context.",
+        "Verse 14 compresses the goal, prize, God's call, upward or heavenly direction, and union with Christ into one phrase. Avoid an abstract genitive pile that a listener cannot process.",
+        "Verse 15 uses the adjective mature or complete from the same word family as the completed or perfected verb Paul denies in verse 12. Natural English may require different words, but the rhetorical link belongs in a note.",
+        "Verse 15 applies Paul's forward-looking mindset to the community and expresses confidence that God will clarify any different thinking. Do not turn the statement into a smug threat or erase God's agency.",
+        "Verse 16 is a compact communal qualification: whatever progress or understanding has already been reached must govern continued conduct. Avoid making spiritual progress sound like earned status.",
+        "The passage must sound humble and urgent rather than self-satisfied: Paul has not arrived, concentrates on one pursuit, and calls mature believers to the same posture.",
+        "Whole-chapter movement and terminology will be reviewed only after Philippians 3 is complete; this unit must not reopen Philippians 3:1-11."
+      ],
+      "verses": [
+        {
+          "reference": "Phil.3.12",
+          "greek": "Οὐχ ὅτι ἤδη ἔλαβον ἢ ἤδη τετελείωμαι διώκω δὲ εἰ καὶ καταλάβω ἐφ’ ᾧ καὶ κατελήμφθην ὑπὸ Χριστοῦ"
+        },
+        {
+          "reference": "Phil.3.13",
+          "greek": "ἀδελφοί ἐγὼ ἐμαυτὸν οὐ λογίζομαι κατειληφέναι ἓν δέ τὰ μὲν ὀπίσω ἐπιλανθανόμενος τοῖς δὲ ἔμπροσθεν ἐπεκτεινόμενος"
+        },
+        {
+          "reference": "Phil.3.14",
+          "greek": "κατὰ σκοπὸν διώκω εἰς τὸ βραβεῖον τῆς ἄνω κλήσεως τοῦ θεοῦ ἐν Χριστῷ Ἰησοῦ"
+        },
+        {
+          "reference": "Phil.3.15",
+          "greek": "ὅσοι οὖν τέλειοι τοῦτο φρονῶμεν καὶ εἴ τι ἑτέρως φρονεῖτε καὶ τοῦτο ὁ θεὸς ὑμῖν ἀποκαλύψει"
+        },
+        {
+          "reference": "Phil.3.16",
+          "greek": "πλὴν εἰς ὃ ἐφθάσαμεν τῷ αὐτῷ στοιχεῖν"
+        }
+      ]
+    }
+  ],
+  "passage_sense_resolution": {
+    "gate_version": "2.2",
+    "status": "complete_for_blind_drafting",
+    "prepared_from": "SBLGNT text, parsed morphology, local discourse, source-language analysis, and governing FLT rules; no comparison translation or prior FLT English",
+    "visibility_attestation": {
+      "source_side_only": true,
+      "prior_flt_wording_absent": true,
+      "prior_candidates_absent": true,
+      "editor_benchmark_absent": true,
+      "comparison_translations_absent": true
+    },
+    "passage_argument": [
+      "Paul qualifies his desire to know Christ and reach resurrection: he has not yet obtained the goal or reached completion, but he keeps pursuing it because Christ first took hold of him.",
+      "He restates his unfinished condition and describes one concentrated pursuit through athletic imagery: releasing what lies behind, stretching toward what lies ahead, and pressing toward the prize bound to God's upward call in Christ.",
+      "He then turns from personal testimony to communal instruction: mature believers should share this humble, forward-looking mindset and trust God to clarify disagreement.",
+      "The unit closes with a stabilizing command: the community must continue living consistently with the progress it has already made."
+    ],
+    "proposition_map": [
+      {
+        "references": ["Phil.3.12"],
+        "statement": "Paul denies that he has already obtained the preceding goal or reached completion; instead he keeps pursuing in order to grasp what Christ's prior grasp of him has made possible or purposed."
+      },
+      {
+        "references": ["Phil.3.13"],
+        "statement": "Addressing the whole church, Paul again denies having taken hold and describes his one concentrated action: leaving what is behind and stretching toward what is ahead."
+      },
+      {
+        "references": ["Phil.3.14"],
+        "statement": "Paul presses toward the goal in pursuit of the prize associated with God's upward or heavenly call in Christ Jesus."
+      },
+      {
+        "references": ["Phil.3.15"],
+        "statement": "All who are mature should share this forward-looking mindset; if some think differently, God will disclose the needed understanding to them."
+      },
+      {
+        "references": ["Phil.3.16"],
+        "statement": "At minimum, the community must keep living in line with the progress or understanding it has already reached."
+      }
+    ],
+    "expressions": [
+      {
+        "sense_id": "php3_12_unstated_object_completion",
+        "references": ["Phil.3.12"],
+        "source_expression": "Οὐχ ὅτι ἤδη ἔλαβον ἢ ἤδη τετελείωμαι",
+        "status": "alternatives_retained",
+        "contextual_function": "An emphatic qualification of verses 10-11: Paul denies both present possession of the goal and completed arrival.",
+        "primary_sense": "I have not already obtained the Christward goal or reached completion.",
+        "viable_alternatives": [
+          "I have not already obtained all this or already been made complete.",
+          "I have not already reached the goal or become perfect."
+        ],
+        "discourse_evidence": "The object of obtained is unstated and reaches back to knowing Christ, resurrection power, shared suffering, conformity to His death, and resurrection, while the race imagery immediately looks ahead.",
+        "reading_text_guidance": "Supply only enough object language for one-hearing clarity and keep the two denials distinct; do not imply that Paul has not yet received Christ or salvation.",
+        "literal_note_guidance": "Disclose that the Greek does not state the object of obtained and that the context points to the goal described in verses 10-11 and developed in verses 13-14.",
+        "choice_risks": "All this preserves breadth but may be vague; the goal is clear but anticipates verse 14; resurrection alone is too narrow.",
+        "human_decision_required": true,
+        "reader_note_required": true,
+        "audit_text_and_note_together": true
+      },
+      {
+        "sense_id": "php3_12_christ_took_hold",
+        "references": ["Phil.3.12", "Phil.3.13"],
+        "source_expression": "καταλάβω ἐφ’ ᾧ καὶ κατελήμφθην ὑπὸ Χριστοῦ / κατειληφέναι",
+        "status": "alternatives_retained",
+        "contextual_function": "Repeated grasping language contrasts Paul's unfinished pursuit with Christ's decisive prior action and can express either purpose or cause through eph ho.",
+        "primary_sense": "I pursue the goal to take hold of that for which Christ took hold of me.",
+        "viable_alternatives": [
+          "I pursue the goal because Christ first took hold of me.",
+          "I seek to make the goal my own because Christ made me His own."
+        ],
+        "discourse_evidence": "The same verb family appears three times across verses 12-13; the passive explicitly names Christ as agent, while eph ho can support purpose or causal force.",
+        "reading_text_guidance": "Preserve Christ's prior initiative and a perceptible take-hold link across verses 12-13, using natural English rather than a physical-sounding seizure scene.",
+        "literal_note_guidance": "Explain that the phrase can mean either that Paul pursues the purpose for which Christ took hold of him or that he pursues because Christ first took hold of him.",
+        "choice_risks": "Purpose preserves the parallel object but can sound as if Christ's purpose is fully specified; cause is natural but weakens the grammatical wordplay.",
+        "human_decision_required": true,
+        "reader_note_required": true,
+        "audit_text_and_note_together": true
+      },
+      {
+        "sense_id": "php3_12_14_pursuit_race",
+        "references": ["Phil.3.12", "Phil.3.13", "Phil.3.14"],
+        "source_expression": "διώκω ... ἐπεκτεινόμενος ... κατὰ σκοπὸν διώκω ... βραβεῖον",
+        "status": "resolved",
+        "contextual_function": "A sustained athletic pursuit image: Paul presses after the goal, stretches forward, and seeks the prize.",
+        "primary_sense": "Paul urgently keeps pressing forward toward a marked goal and its prize.",
+        "viable_alternatives": [],
+        "discourse_evidence": "The repeated pursue verb frames the bodily image of reaching forward and the explicit goal and prize vocabulary.",
+        "reading_text_guidance": "Use coherent forward-motion language in verses 12 and 14 and preserve the strain of verse 13 without adding an unsupported race course, finish line, or victory scene.",
+        "literal_note_guidance": "A note is optional unless the reading text substantially hides the running imagery; whole-chapter review should notice that the same pursue verb described Paul's persecution in verse 6.",
+        "choice_risks": "Press on is concise but may be church jargon; run can over-specify the metaphor; pursue can sound predatory without the goal context.",
+        "human_decision_required": false,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "php3_13_one_thing_behind_ahead",
+        "references": ["Phil.3.13"],
+        "source_expression": "ἓν δέ τὰ μὲν ὀπίσω ἐπιλανθανόμενος τοῖς δὲ ἔμπροσθεν ἐπεκτεινόμενος",
+        "status": "resolved",
+        "contextual_function": "An elliptical declaration of single-minded effort, contrasting disengagement from what lies behind with intense extension toward what lies ahead.",
+        "primary_sense": "I focus on one thing: leaving what is behind and stretching toward what is ahead.",
+        "viable_alternatives": [],
+        "discourse_evidence": "One thing lacks an expressed finite verb, and the paired participles create a balanced backward-forward contrast within the pursuit image.",
+        "reading_text_guidance": "Supply a natural action such as I focus on or this is what I do; keep the past referent broad and do not imply literal amnesia.",
+        "literal_note_guidance": "No note is normally required unless the reading text narrows what lies behind to sins, achievements, credentials, or suffering.",
+        "choice_risks": "Forgetting can be mistaken for failed memory; leaving behind is clearer but slightly softens deliberate non-attention; naming the past over-interprets.",
+        "human_decision_required": false,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "php3_14_upward_call_prize",
+        "references": ["Phil.3.14"],
+        "source_expression": "τὸ βραβεῖον τῆς ἄνω κλήσεως τοῦ θεοῦ ἐν Χριστῷ Ἰησοῦ",
+        "status": "alternatives_retained",
+        "contextual_function": "The prize is bound to God's call in Christ, characterized as upward or heavenly within the athletic movement.",
+        "primary_sense": "the prize connected with God's upward call in Christ Jesus",
+        "viable_alternatives": [
+          "the heavenly prize God calls us to receive through Christ Jesus",
+          "the prize of God's call from above in Christ Jesus"
+        ],
+        "discourse_evidence": "God is the caller, the call exists in Christ, and upward continues the movement toward the eschatological goal; the compact genitives do not fully spell out the direction relation.",
+        "reading_text_guidance": "Unpack the compressed phrase enough for one hearing while preserving God as caller, the prize, the upward or heavenly dimension, and union with Christ.",
+        "literal_note_guidance": "If the reading text chooses heavenly or expands the relation, disclose that the Greek literally speaks of the prize of God's upward call in Christ Jesus.",
+        "choice_risks": "Heavenly is natural but can blur upward movement; calls us upward is vivid but interpretive; call from above shifts the direction toward origin.",
+        "human_decision_required": true,
+        "reader_note_required": true,
+        "audit_text_and_note_together": true
+      },
+      {
+        "sense_id": "php3_15_complete_mature_wordlink",
+        "references": ["Phil.3.12", "Phil.3.15"],
+        "source_expression": "τετελείωμαι / τέλειοι",
+        "status": "resolved",
+        "contextual_function": "A deliberate word-family tension: Paul denies having reached complete perfection yet addresses believers who are mature enough to share that very humility.",
+        "primary_sense": "not yet brought to completion in verse 12, but mature in verse 15",
+        "viable_alternatives": [],
+        "discourse_evidence": "The verb and adjective share the same root within four verses, and the apparent tension supports Paul's argument that mature people recognize they have not arrived.",
+        "reading_text_guidance": "Use natural contextual words for completion and maturity; do not force perfect in both places if it misleads the target reader.",
+        "literal_note_guidance": "Explain that the words translated with completion in verse 12 and maturity in verse 15 come from the same Greek root, highlighting that maturity includes knowing one has not arrived.",
+        "choice_risks": "Different English words hide the rhetoric without a note; perfect in verse 15 can sound sinless or contradict verse 12.",
+        "human_decision_required": false,
+        "reader_note_required": true,
+        "audit_text_and_note_together": true
+      },
+      {
+        "sense_id": "php3_15_shared_mindset_revelation",
+        "references": ["Phil.3.15"],
+        "source_expression": "τοῦτο φρονῶμεν ... εἴ τι ἑτέρως φρονεῖτε καὶ τοῦτο ὁ θεὸς ὑμῖν ἀποκαλύψει",
+        "status": "alternatives_retained",
+        "contextual_function": "Paul calls mature believers to share his forward-looking posture and confidently entrusts any remaining difference in outlook to God's disclosure.",
+        "primary_sense": "Let us share this mindset; if you think differently about anything, God will make the needed truth clear to you.",
+        "viable_alternatives": [
+          "Let us take this view; if you see anything differently, God will reveal that to you as well.",
+          "Let us think this way; God will show you where your thinking still differs."
+        ],
+        "discourse_evidence": "This points back to Paul's humble pursuit in verses 12-14; repeated phroneo concerns outlook, and God remains the explicit agent of future disclosure.",
+        "reading_text_guidance": "Make the shared posture clear, preserve God's agency and Paul's confidence, and avoid making the sentence either vague or threatening.",
+        "literal_note_guidance": "No note is normally required; retain the referent and tone alternatives in the candidate apparatus.",
+        "choice_risks": "The needed truth is clear but supplied; that too is closer but vague; correcting your thinking can sound coercive.",
+        "human_decision_required": true,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "php3_16_keep_in_step",
+        "references": ["Phil.3.16"],
+        "source_expression": "πλὴν εἰς ὃ ἐφθάσαμεν τῷ αὐτῷ στοιχεῖν",
+        "status": "alternatives_retained",
+        "contextual_function": "A limiting, stabilizing conclusion: whatever the believers' present level of progress, they must continue together in conduct consistent with it.",
+        "primary_sense": "Let us keep living in step with the progress we have already made.",
+        "viable_alternatives": [
+          "Let us live up to what we have already attained.",
+          "Let us continue on the same path from the point we have reached."
+        ],
+        "discourse_evidence": "Ephthasamen marks arrival at a present point, while stoichein evokes walking in line or keeping to an ordered course; the first-person plural makes the instruction communal.",
+        "reading_text_guidance": "Use a concrete communal sentence that joins continued conduct to existing progress without implying merit, rank, or final arrival.",
+        "literal_note_guidance": "Explain that the final verb can picture walking in line or keeping in step; Paul calls believers to live consistently with the progress already reached.",
+        "choice_risks": "Live up to can sound merit-based; progress can sound self-improvement; same path adds a path image while preserving the course metaphor.",
+        "human_decision_required": true,
+        "reader_note_required": true,
+        "audit_text_and_note_together": true
+      }
+    ]
+  }
+}
