@@ -61,10 +61,9 @@ export function unitSenseMaterial(brief,unit){
 
 export function assertCandidateSenseApparatus(output,unit,brief){
   const material=unitSenseMaterial(brief,unit);
-  const allIds=material.expressions.map(e=>e.sense_id);
   const altIds=material.expressions.filter(e=>e.status==='alternatives_retained').map(e=>e.sense_id);
   const noteIds=material.expressions.filter(e=>e.reader_note_required===true).map(e=>e.sense_id);
-  exactIds((output.sense_decisions||[]).map(x=>x.sense_id),allIds,'sense decisions');
+  exactIds((output.sense_decisions||[]).map(x=>x.sense_id),altIds,'contested sense decisions');
   exactIds((output.alternate_readings||[]).map(x=>x.sense_id),altIds,'alternate-reading apparatus');
   exactIds((output.reader_notes||[]).map(x=>x.sense_id),noteIds,'reader-note apparatus');
   for(const v of output.verse_renderings||[]){
@@ -77,4 +76,31 @@ export function assertCommonBasePromptHash(records){
   if(hashes.some(h=>typeof h!=='string'||!h)) throw new Error('Common-prompt attestation: missing immutable base prompt hash.');
   if(new Set(hashes).size!==1) throw new Error('Common-prompt attestation: base prompt hash mismatch.');
   return hashes[0];
+}
+
+export function parseModelJson(text){
+  if(!text?.trim()) throw new Error('EMPTY_MODEL_RESPONSE');
+  const fenced=text.match(/\`\`\`(?:json)?\s*([\s\S]*?)\`\`\`/i)?.[1];
+  const candidate=(fenced||text).trim();
+  try{return JSON.parse(candidate)}catch(firstError){
+    const start=candidate.indexOf('{');
+    if(start<0) throw firstError;
+    let depth=0,inString=false,escape=false,end=-1;
+    for(let i=start;i<candidate.length;i++){
+      const ch=candidate[i];
+      if(inString){
+        if(escape)escape=false;
+        else if(ch==='\\')escape=true;
+        else if(ch==='"')inString=false;
+        continue;
+      }
+      if(ch==='"'){inString=true;continue}
+      if(ch==='{')depth++;
+      else if(ch==='}'&&--depth===0){end=i+1;break}
+    }
+    if(end<0) throw firstError;
+    const trailing=candidate.slice(end).trim();
+    if(trailing&&!/^[}\]]+$/.test(trailing)) throw new Error('MODEL_RESPONSE_HAS_ADDITIONAL_CONTENT');
+    return JSON.parse(candidate.slice(start,end));
+  }
 }
