@@ -1,13 +1,250 @@
 {
-  "$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","additionalProperties":false,
-  "required":["verse_renderings","paragraph_rendering","dynamic_moves","oral_design_moves","remaining_oral_risks","risks","human_questions"],
-  "properties":{
-    "verse_renderings":{"type":"array","minItems":1,"items":{"type":"object","additionalProperties":false,"required":["reference","text"],"properties":{"reference":{"type":"string"},"text":{"type":"string","minLength":1}}}},
-    "paragraph_rendering":{"type":"string","minLength":1},
-    "dynamic_moves":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["reference","move","warrant"],"properties":{"reference":{"type":"string"},"move":{"type":"string"},"warrant":{"type":"string"}}}},
-    "oral_design_moves":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["reference","obstacle","move","source_warrant"],"properties":{"reference":{"type":"string"},"obstacle":{"type":"string"},"move":{"type":"string"},"source_warrant":{"type":"string"}}}},
-    "remaining_oral_risks":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["reference","risk"],"properties":{"reference":{"type":"string"},"risk":{"type":"string"}}}},
-    "risks":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["reference","risk"],"properties":{"reference":{"type":"string"},"risk":{"type":"string"}}}},
-    "human_questions":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["reference","question","options"],"properties":{"reference":{"type":"string"},"question":{"type":"string"},"options":{"type":"array","minItems":2,"items":{"type":"string"}}}}}
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "verse_renderings",
+    "paragraph_rendering",
+    "dynamic_moves",
+    "oral_design_moves",
+    "sense_decisions",
+    "alternate_readings",
+    "reader_notes",
+    "remaining_oral_risks",
+    "risks",
+    "human_questions"
+  ],
+  "properties": {
+    "verse_renderings": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "reference",
+          "text"
+        ],
+        "properties": {
+          "reference": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "paragraph_rendering": {
+      "type": "string",
+      "minLength": 1
+    },
+    "dynamic_moves": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "reference",
+          "move",
+          "warrant"
+        ],
+        "properties": {
+          "reference": {
+            "type": "string"
+          },
+          "move": {
+            "type": "string"
+          },
+          "warrant": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "oral_design_moves": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "reference",
+          "obstacle",
+          "move",
+          "source_warrant"
+        ],
+        "properties": {
+          "reference": {
+            "type": "string"
+          },
+          "obstacle": {
+            "type": "string"
+          },
+          "move": {
+            "type": "string"
+          },
+          "source_warrant": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "sense_decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "sense_id",
+          "reference",
+          "primary_rendering_choice",
+          "reason"
+        ],
+        "properties": {
+          "sense_id": {
+            "type": "string"
+          },
+          "reference": {
+            "type": "string"
+          },
+          "primary_rendering_choice": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "alternate_readings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "sense_id",
+          "reference",
+          "primary_reading",
+          "alternative_reading",
+          "tradeoff"
+        ],
+        "properties": {
+          "sense_id": {
+            "type": "string"
+          },
+          "reference": {
+            "type": "string"
+          },
+          "primary_reading": {
+            "type": "string",
+            "minLength": 1
+          },
+          "alternative_reading": {
+            "type": "string",
+            "minLength": 1
+          },
+          "tradeoff": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "reader_notes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "sense_id",
+          "reference",
+          "note",
+          "supports_dynamic_rendering"
+        ],
+        "properties": {
+          "sense_id": {
+            "type": "string"
+          },
+          "reference": {
+            "type": "string"
+          },
+          "note": {
+            "type": "string",
+            "minLength": 1
+          },
+          "supports_dynamic_rendering": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "remaining_oral_risks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "reference",
+          "risk"
+        ],
+        "properties": {
+          "reference": {
+            "type": "string"
+          },
+          "risk": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "risks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "reference",
+          "risk"
+        ],
+        "properties": {
+          "reference": {
+            "type": "string"
+          },
+          "risk": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "human_questions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "reference",
+          "question",
+          "options"
+        ],
+        "properties": {
+          "reference": {
+            "type": "string"
+          },
+          "question": {
+            "type": "string"
+          },
+          "options": {
+            "type": "array",
+            "minItems": 2,
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
   }
 }
