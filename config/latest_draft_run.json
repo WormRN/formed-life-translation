@@ -1,15 +1,24 @@
 {
   "schema_version": 1,
   "repository": "WormRN/formed-life-translation",
-  "workflow_path": ".github/workflows/phase4-php2-025-030-drafts.yml",
-  "unit_id": "PHP-02-025-030",
-  "passage": "Philippians 2:25-30",
-  "engine_run_id": "FLT-PHP-02-20260801-3",
-  "github_run_id": 30676791409,
-  "run_url": "https://github.com/WormRN/formed-life-translation/actions/runs/30676791409",
-  "artifact_name": "FLT-PHP-02-20260801-3",
-  "head_sha": "597c07c2207ed2df5d8acd2097f14f7c25c370f6",
-  "generated_at": "2026-08-01T00:59:09Z",
-  "job_outcome": "failure",
-  "receipt_status": "workflow_failed"
+  "workflow_path": ".github/workflows/phase4-php3-001-011-oral-retest-drafts.yml",
+  "unit_id": "PHP-03-001-011-ORAL-RETEST",
+  "passage": "Philippians 3:1-11",
+  "engine_run_id": "",
+  "github_run_id": 30676925089,
+  "run_url": "https://github.com/WormRN/formed-life-translation/actions/runs/30676925089",
+  "artifact_name": "",
+  "head_sha": "59c70511ad67722202d02f6dcb6b4db131663101",
+  "generated_at": "2026-08-01T01:00:47Z",
+  "job_outcome": "skipped",
+  "receipt_status": "workflow_failed",
+  "common_prompt_sha256": "",
+  "common_prompt_verified": false,
+  "candidate_count": 0,
+  "blindness": {
+    "prior_flt_wording_absent": true,
+    "prior_candidates_absent": true,
+    "comparison_translations_absent": true,
+    "conversation_drafts_absent": true
+  }
 }
