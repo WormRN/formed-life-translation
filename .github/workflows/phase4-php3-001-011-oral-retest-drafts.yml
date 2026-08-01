@@ -32,7 +32,7 @@ jobs:
         id: run
         shell: bash
         run: |
-          run_id="FLT-PHP-03-ORAL-$(date -u +%Y%m%d)-${GITHUB_RUN_NUMBER}"
+          run_id="FLT-PHP-03-$(date -u +%Y%m%d)-${GITHUB_RUN_NUMBER}"
           node phase4-harness/scripts/prepare-run-config.mjs phase4-harness/config.github-actions.json phase4-harness/.php3-001-011-oral-retest-config.json "$run_id"
           jq '.unit_id="PHP-03-001-011-ORAL-RETEST"' phase4-harness/.php3-001-011-oral-retest-config.json > phase4-harness/.php3-001-011-oral-retest-config.tmp
           mv phase4-harness/.php3-001-011-oral-retest-config.tmp phase4-harness/.php3-001-011-oral-retest-config.json
