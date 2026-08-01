@@ -90,7 +90,7 @@ export function parseModelJson(text){
       const ch=candidate[i];
       if(inString){
         if(escape)escape=false;
-        else if(ch==='\\\\')escape=true;
+        else if(ch==='\\')escape=true;
         else if(ch==='"')inString=false;
         continue;
       }
