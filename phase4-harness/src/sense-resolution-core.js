@@ -71,3 +71,10 @@ export function assertCandidateSenseApparatus(output,unit,brief){
     if(/\[(?:alternative|or|literally)\b/i.test(v.text)) throw new Error(`Passage-sense gate: alternatives belong in the review apparatus, not the reading text (${v.reference})`);
   }
 }
+
+export function assertCommonBasePromptHash(records){
+  const hashes=records.map(r=>r.base_prompt_sha256);
+  if(hashes.some(h=>typeof h!=='string'||!h)) throw new Error('Common-prompt attestation: missing immutable base prompt hash.');
+  if(new Set(hashes).size!==1) throw new Error('Common-prompt attestation: base prompt hash mismatch.');
+  return hashes[0];
+}
