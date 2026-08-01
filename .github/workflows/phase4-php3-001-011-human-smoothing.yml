@@ -8,6 +8,8 @@ on:
       - '.github/workflows/phase4-php3-001-011-human-smoothing.yml'
       - 'docs/architecture/phase-4/PHP-03-001-011_human-editor-synthesis-v2.2.json'
       - 'phase4-harness/src/smoothing-core.js'
+      - 'phase4-harness/src/oral-smoothing.js'
+      - 'phase4-harness/schemas/oral-listener-diagnosis.schema.json'
       - 'phase4-harness/test/smoothing-core.test.js'
 
 permissions: {contents: read}
