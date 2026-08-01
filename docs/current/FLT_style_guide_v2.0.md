@@ -675,6 +675,67 @@ When a sentence sounds translated:
 
 The drafting agent may suggest a stiffness revision but may not approve its own revision as having passed the stiffness test.
 
+## 15.4 Unit-Level Oral-English Smoothing Gate
+
+Oral review must not wait until the full chapter is assembled. After the human editor creates a provisional synthesis, the unit enters a bounded Oral-English Smoothing Pass before exact-candidate audit.
+
+The controlling question is:
+
+> What prevents a listener from understanding this naturally on one hearing, and what is the smallest faithful change that removes that obstacle?
+
+This is comprehension repair, not permission to beautify, modernize, intensify, or paraphrase without a concrete problem.
+
+## 15.5 Listener-Only Diagnosis
+
+The first smoothing stage receives only the selected English. It may flag:
+
+- stacked or nested clauses;
+- sentences that exceed a natural breath;
+- clusters of prepositions;
+- delayed subjects, verbs, or main assertions;
+- repetitive sentence openings that fatigue the ear;
+- abstract-noun chains;
+- parenthetical explanation embedded in the reading text;
+- unclear referents;
+- weak sentence landings;
+- accidental repetition;
+- places where the listener loses the paragraph's main point.
+
+It must distinguish deliberate rhetorical repetition from accidental English repetition. It diagnoses friction but does not rewrite the text or guess what the Greek says.
+
+## 15.6 Source-Aware Repair Record
+
+The source-aware stage may propose only targeted repairs. Every proposed change must record:
+
+- current exact wording;
+- identified oral problem;
+- proposed exact wording;
+- form change used;
+- possible meaning risk;
+- source warrant;
+- effect on logic and rhetoric.
+
+Permitted form changes include sentence division or combination, reordering, moving the main assertion forward, replacing an abstract noun phrase with a natural verb, varying an English transition, and moving secondary explanation into a footnote.
+
+A complete proposed verse list must accompany the change record. Any difference not named in the record is a silent change and must be rejected by the harness.
+
+## 15.7 Constitutional Smoothing Checks
+
+Before a smoothed candidate may be sealed, reviewers must check:
+
+1. semantic propositions;
+2. cause, contrast, purpose, result, and sequence;
+3. deliberate repetition, escalation, irony, and emphasis;
+4. meaningful ambiguity;
+5. agency, voice, force, and certainty;
+6. key-term and verbal-link continuity;
+7. traceability to Greek semantic units;
+8. whether an English-only back-translation recovers substantially the same meaning;
+9. copyright independence;
+10. whether the revision is genuinely clearer on a second oral test.
+
+The human editor alone approves exact wording. The approved candidate then receives the independent semantic-floor audit.
+
 ---
 
 # 16. Punctuation and Mechanics
