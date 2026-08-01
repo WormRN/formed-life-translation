@@ -4,12 +4,12 @@
   "workflow_path": ".github/workflows/phase4-php2-025-030-drafts.yml",
   "unit_id": "PHP-02-025-030",
   "passage": "Philippians 2:25-30",
-  "engine_run_id": "FLT-PHP-02-20260801-4",
-  "github_run_id": 30690843754,
-  "run_url": "https://github.com/WormRN/formed-life-translation/actions/runs/30690843754",
-  "artifact_name": "FLT-PHP-02-20260801-4",
-  "head_sha": "0a3bd354e5d7d8b4f8a02730d329affff41c7466",
-  "generated_at": "2026-08-01T07:59:44Z",
+  "engine_run_id": "FLT-PHP-02-20260801-5",
+  "github_run_id": 30691185543,
+  "run_url": "https://github.com/WormRN/formed-life-translation/actions/runs/30691185543",
+  "artifact_name": "FLT-PHP-02-20260801-5",
+  "head_sha": "e2bc0b97ab4fc7584fe3839fd57fa00e6bdcc7f6",
+  "generated_at": "2026-08-01T08:09:20Z",
   "job_outcome": "failure",
   "receipt_status": "workflow_failed"
 }
