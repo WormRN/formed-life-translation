@@ -4,7 +4,7 @@ import path from 'node:path';
 import Ajv2020 from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
 
-export const COMMON_CANDIDATE_MISSION='Produce one independent FLT candidate under the same constitutional goal as every other candidate: communicate the full meaning, logic, tone, discourse movement, and theological force of the Greek in clear, natural, dignified English for a religion-naive adult or older adolescent reading near the sixth-grade level. Dynamic expression is the default; preserve meaningful form and avoid unsupported commentary.';
+export const COMMON_CANDIDATE_MISSION='Produce one independent FLT candidate under the same constitutional goal as every other candidate: communicate the full meaning, logic, tone, discourse movement, and theological force of the Greek in clear, natural, dignified English that a religion-naive adult or older adolescent near the sixth-grade level can follow on one hearing. Build natural English sentences and paragraphs rather than preserving Greek clause architecture. Bring the main assertion forward; split, combine, reorder, or unpack when helpful; avoid stacked clauses, preposition clusters, abstract-noun chains, and translated-sounding prose. Dynamic expression is the default; preserve deliberate rhetoric, meaningful ambiguity, agency, force, and key-term links; avoid unsupported commentary.';
 export const ROLES={
   readability_worker:COMMON_CANDIDATE_MISSION,
   greek_fidelity_worker:COMMON_CANDIDATE_MISSION,
