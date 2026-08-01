@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {assertPassageSenseResolution,assertCandidateSenseApparatus,assertCommonBasePromptHash} from '../src/sense-resolution-core.js';
+import {assertPassageSenseResolution,assertCandidateSenseApparatus,assertCommonBasePromptHash,parseModelJson} from '../src/sense-resolution-core.js';
 
 const chapter=()=>({
   units:[{verses:[{reference:'Phil.3.1'},{reference:'Phil.3.2'}]}],
@@ -22,13 +22,13 @@ test('blocks leaked editor benchmark visibility',()=>{const x=chapter();x.passag
 test('requires unresolved senses to expose viable alternatives',()=>{const x=chapter();x.passage_sense_resolution.expressions[1].viable_alternatives=[];assert.throws(()=>assertPassageSenseResolution(x),/retain alternatives/)});
 test('requires complete candidate sense, alternative, and note apparatus',()=>{
   const x=chapter(),brief=assertPassageSenseResolution(x),unit=x.units[0];
-  const valid={verse_renderings:[{reference:'Phil.3.1',text:'Now rejoice.'},{reference:'Phil.3.2',text:'Watch out.'}],sense_decisions:[{sense_id:'transition'},{sense_id:'wordplay'}],alternate_readings:[{sense_id:'wordplay'}],reader_notes:[{sense_id:'wordplay'}]};
+  const valid={verse_renderings:[{reference:'Phil.3.1',text:'Now rejoice.'},{reference:'Phil.3.2',text:'Watch out.'}],sense_decisions:[{sense_id:'wordplay'}],alternate_readings:[{sense_id:'wordplay'}],reader_notes:[{sense_id:'wordplay'}]};
   assert.doesNotThrow(()=>assertCandidateSenseApparatus(valid,unit,brief));
   assert.throws(()=>assertCandidateSenseApparatus({...valid,alternate_readings:[]},unit,brief),/alternate-reading apparatus/);
 });
 test('keeps bracketed alternatives out of the reading text',()=>{
   const x=chapter(),brief=assertPassageSenseResolution(x),unit=x.units[0];
-  const output={verse_renderings:[{reference:'Phil.3.1',text:'Now rejoice.'},{reference:'Phil.3.2',text:'Watch out. [Alternative: beware.]'}],sense_decisions:[{sense_id:'transition'},{sense_id:'wordplay'}],alternate_readings:[{sense_id:'wordplay'}],reader_notes:[{sense_id:'wordplay'}]};
+  const output={verse_renderings:[{reference:'Phil.3.1',text:'Now rejoice.'},{reference:'Phil.3.2',text:'Watch out. [Alternative: beware.]'}],sense_decisions:[{sense_id:'wordplay'}],alternate_readings:[{sense_id:'wordplay'}],reader_notes:[{sense_id:'wordplay'}]};
   assert.throws(()=>assertCandidateSenseApparatus(output,unit,brief),/review apparatus/);
 });
 
@@ -40,4 +40,12 @@ test('common-goal attestation tolerates provider-specific schema repair prompts'
   ];
   assert.equal(assertCommonBasePromptHash(records),'same-base');
   assert.throws(()=>assertCommonBasePromptHash([...records.slice(0,2),{base_prompt_sha256:'different-base'}]),/base prompt hash mismatch/);
+});
+
+test('parser accepts one complete object with harmless extra closing delimiters',()=>{
+  assert.deepEqual(parseModelJson('{"ok":true}\n}'),{ok:true});
+});
+test('parser rejects additional model content or a second object',()=>{
+  assert.throws(()=>parseModelJson('{"ok":true}\n{"second":true}'),/ADDITIONAL_CONTENT/);
+  assert.throws(()=>parseModelJson('{"ok":'),SyntaxError);
 });
