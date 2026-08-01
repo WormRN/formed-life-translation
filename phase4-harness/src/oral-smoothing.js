@@ -4,6 +4,7 @@ import {fileURLToPath} from 'node:url';
 import Ajv2020 from 'ajv/dist/2020.js';
 import {json,emit,event,requestModel,sha256} from './core.js';
 import {buildListenerPrompt,buildSourceAwarePrompt,assertSmoothingIntegrity,smoothingDecisionBrief} from './smoothing-core.js';
+import {parseModelJson} from './sense-resolution-core.js';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const configPath=path.resolve(process.argv[2]);
@@ -14,7 +15,7 @@ const config=await json(configPath),candidate=await json(candidatePath),source=a
 const ajv=new Ajv2020({allErrors:true});
 const validateDiagnosis=ajv.compile(await json(path.join(root,'schemas/oral-listener-diagnosis.schema.json')));
 const validateProposal=ajv.compile(await json(path.join(root,'schemas/source-aware-smoothing.schema.json')));
-const parse=t=>{if(!t?.trim())throw new Error('EMPTY_MODEL_RESPONSE');return JSON.parse(t.match(/```(?:json)?\s*([\s\S]*?)```/i)?.[1]||t)};
+const parse=parseModelJson;
 
 async function call(worker,stage,prompt,validate,assert=()=>{}){
   let repair='';
