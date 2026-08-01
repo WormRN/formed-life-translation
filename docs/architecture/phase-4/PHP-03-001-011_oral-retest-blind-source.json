@@ -1,20 +1,22 @@
 {
-  "chapter_id": "PHP-03-ORAL-RETEST",
+  "chapter_id": "PHP-03-SENSE-RETEST",
   "book": "Philippians",
   "chapter": 3,
   "source_edition": "SBLGNT",
   "tone": "personally emphatic, sharply warning, rhetorically forceful, Christ-centered, and deeply yearning",
   "target_reader": "religion-naive adults and older adolescents near grade 6",
   "translation_identity": "firmly dynamic-equivalence, NLT-like in readability but independent",
-  "test_purpose": "Fresh Engine 2.1 oral-English retest of Philippians 3:1-11",
+  "test_purpose": "Fresh Engine 2.2 passage-sense-resolution retest of Philippians 3:1-11",
   "sealed_context": {
     "prior_flt_wording_present": false,
     "prior_candidates_present": false,
     "comparison_translations_present": false,
     "conversational_drafts_present": false,
-    "instruction": "Translate from the Greek and source-side constraints only. Do not reconstruct, imitate, or refer to any previous FLT wording for Philippians 3."
+    "instruction": "Translate from the Greek and the completed source-side passage-sense brief only. Do not reconstruct, imitate, or refer to previous FLT wording, previous candidates, the editor benchmark, comparison translations, or conversation drafts.",
+    "editor_benchmark_present": false
   },
   "governing_rules": [
+    "Passage-sense resolution precedes English composition. Follow the completed source-side brief and expose genuinely viable alternatives in the review apparatus.",
     "All three candidates pursue the same constitutional goal; no provider receives a readability, fidelity, or blended specialty.",
     "Write natural English that a religion-naive adult can follow on one hearing. The main assertion should arrive before the listener loses it.",
     "Build English sentences and paragraphs rather than preserving Greek clause architecture. Split, combine, reorder, or unpack when comprehension benefits.",
@@ -22,8 +24,9 @@
     "Vary English transitions when needed for the ear, but preserve deliberate repetition, escalation, irony, emphasis, and connective logic.",
     "Preserve every material proposition; cause, contrast, purpose, result, and sequence; meaningful ambiguity; agency, force, certainty, and key-term links.",
     "The prose serves the reader; notes serve accountability. Do not leave the reading text opaque and expect a footnote to supply material meaning.",
-    "Preserve strong or coarse rhetoric when it carries material force; propose notes for cultural background or disputed constructions.",
-    "No comparison translations, traditional benchmark wording, prior FLT wording, prior candidates, conversation drafts, or sealed human wording may enter blind drafting.",
+    "Keep candidate alternatives in the review apparatus, not in brackets in the reading text, unless the human editor later decides otherwise.",
+    "Preserve strong or coarse rhetoric when it carries material force; propose notes for cultural background, wordplay, literal-source transparency, and disputed constructions.",
+    "No comparison translations, traditional benchmark wording, prior FLT wording, prior candidates, editor benchmark, conversation drafts, or sealed human wording may enter blind drafting.",
     "Record oral-design moves and remaining oral risks; do not claim that a drafting worker has certified its own oral quality."
   ],
   "existing_decisions": [
@@ -61,9 +64,9 @@
   ],
   "units": [
     {
-      "unit_id": "PHP-03-001-011-ORAL-RETEST",
+      "unit_id": "PHP-03-001-011-SENSE-RETEST",
       "passage": "Philippians 3:1-11",
-      "title": "True belonging and the surpassing value of knowing Christ",
+      "title": "True covenant identity, rejected credentials, and knowing Christ",
       "known_issues": [
         "Verse 1 links rejoicing in the Lord, repeated instruction, and the readers' safety. Preserve the relationship without stacking the sentence.",
         "Verse 2 deliberately repeats the command to watch out and uses the severe insult dogs, the phrase evil workers, and a hostile wordplay that reduces circumcision to mutilation. Preserve the rhetorical force without making the English drumbeat accidentally exhausting.",
@@ -125,5 +128,375 @@
         }
       ]
     }
-  ]
+  ],
+  "passage_sense_resolution": {
+    "gate_version": "2.2",
+    "status": "complete_for_blind_drafting",
+    "prepared_from": "SBLGNT text, local discourse, source-language analysis, and governing FLT rules; no comparison translation or prior FLT English",
+    "visibility_attestation": {
+      "source_side_only": true,
+      "prior_flt_wording_absent": true,
+      "prior_candidates_absent": true,
+      "editor_benchmark_absent": true,
+      "comparison_translations_absent": true
+    },
+    "passage_argument": [
+      "Paul first calls the church to rejoice in the Lord and explains that repeating his warning protects them.",
+      "He then reverses his opponents’ identity claims: their demanded circumcision is mere cutting, while the Spirit-worshiping, Christ-confident community is the authentic covenant people.",
+      "Paul proves that he could outperform any rival on ancestry, religious status, observance, and zeal, yet he now treats those former gains as loss because Christ is incomparably more valuable.",
+      "The passage culminates in belonging to Christ, receiving right standing from God rather than manufacturing it through law observance, and knowing Christ through resurrection power, shared suffering, conformity to His death, and hope of resurrection."
+    ],
+    "proposition_map": [
+      {
+        "references": [
+          "Phil.3.1"
+        ],
+        "statement": "Paul calls the whole church to rejoice in the Lord; repeating the same warning does not burden him and protects them."
+      },
+      {
+        "references": [
+          "Phil.3.2"
+        ],
+        "statement": "The church must repeatedly watch out for hostile teachers whom Paul labels dogs, evil workers, and mere cutters of the body."
+      },
+      {
+        "references": [
+          "Phil.3.3"
+        ],
+        "statement": "Paul’s group, not those teachers, bears the identity of the authentic covenant people; they worship by God’s Spirit, boast in Christ, and refuse reliance on merely human grounds."
+      },
+      {
+        "references": [
+          "Phil.3.4"
+        ],
+        "statement": "Paul could rely on those human grounds and has greater reason than any rival to do so."
+      },
+      {
+        "references": [
+          "Phil.3.5"
+        ],
+        "statement": "Paul lists covenant initiation, Israelite ancestry, Benjaminite identity, Hebrew family heritage, and Pharisaic relation to the Law."
+      },
+      {
+        "references": [
+          "Phil.3.6"
+        ],
+        "statement": "Paul’s zeal led him to persecute the church, and his record measured by the Law’s requirements was beyond accusation."
+      },
+      {
+        "references": [
+          "Phil.3.7"
+        ],
+        "statement": "Because of Christ, Paul has reversed his valuation of every item he once entered in the profit column."
+      },
+      {
+        "references": [
+          "Phil.3.8"
+        ],
+        "statement": "He intensifies the claim: everything is loss beside knowing Christ; he has suffered the loss of all things and regards them as contemptible refuse in order to gain Christ."
+      },
+      {
+        "references": [
+          "Phil.3.9"
+        ],
+        "statement": "Paul seeks to be found in union with Christ, rejecting self-derived law righteousness and receiving from God a right status bound up with faith and Christ."
+      },
+      {
+        "references": [
+          "Phil.3.10"
+        ],
+        "statement": "Paul seeks experiential, relational knowledge of Christ through resurrection power, participation in suffering, and conformity to Christ’s death."
+      },
+      {
+        "references": [
+          "Phil.3.11"
+        ],
+        "statement": "Paul’s path is directed toward attaining the resurrection from the dead; the qualifying expression must not be erased or turned into denial of God’s promise."
+      }
+    ],
+    "expressions": [
+      {
+        "sense_id": "php3_transition",
+        "references": [
+          "Phil.3.1"
+        ],
+        "source_expression": "Τὸ λοιπόν",
+        "status": "alternatives_retained",
+        "contextual_function": "A discourse transition that advances the letter and can sometimes sound like a closing formula.",
+        "primary_sense": "And now / as the next point",
+        "viable_alternatives": [
+          "Finally",
+          "As for what remains"
+        ],
+        "discourse_evidence": "Substantial material follows, and Paul uses the phrase again at 4:8; the local function need not announce the letter’s immediate end.",
+        "reading_text_guidance": "Use a brief adult transition that moves the listener forward without falsely promising that the letter is ending.",
+        "literal_note_guidance": "No reader note is normally required; retain the alternative in the candidate apparatus.",
+        "choice_risks": "Finally is familiar but may sound like the closing paragraph; And now is interpretive but fits the ongoing movement.",
+        "human_decision_required": true,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "php3_same_things_safety",
+        "references": [
+          "Phil.3.1"
+        ],
+        "source_expression": "τὰ αὐτὰ γράφειν ... ὑμῖν δὲ ἀσφαλές",
+        "status": "resolved",
+        "contextual_function": "Paul explains why repetition is worthwhile: it is not burdensome to him and gives the readers protection or security.",
+        "primary_sense": "Repeating the warning protects the readers.",
+        "viable_alternatives": [],
+        "discourse_evidence": "The contrast pairs Paul’s lack of reluctance with the readers’ safety and introduces the warning in verse 2.",
+        "reading_text_guidance": "State Paul’s willingness and the protective purpose without stacking both ideas into one breath.",
+        "literal_note_guidance": "No note normally needed.",
+        "choice_risks": "Safety can sound physical unless the warning context is clear; reminder language must not replace the act of writing.",
+        "human_decision_required": false,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "php3_dogs_cutting_wordplay",
+        "references": [
+          "Phil.3.2",
+          "Phil.3.3"
+        ],
+        "source_expression": "τοὺς κύνας ... τὴν κατατομήν / ἡ περιτομή",
+        "status": "resolved",
+        "contextual_function": "A threefold warning ending in hostile wordplay: the opponents’ demanded circumcision is reduced to mutilating cutting, then contrasted with the authentic circumcision community.",
+        "primary_sense": "Dangerous teachers who do evil and reduce covenant circumcision to bodily mutilation.",
+        "viable_alternatives": [],
+        "discourse_evidence": "The repeated βλέπετε creates escalation; κατατομή deliberately resembles and opposes περιτομή in the next clause.",
+        "reading_text_guidance": "Preserve the three warnings, the bodily force, and the verse 2–3 contrast. Do not turn dogs into a neutral label or let verse 3 lose its explanatory connection.",
+        "literal_note_guidance": "Explain that Paul uses a harsh play on the words for circumcision and cutting or mutilation.",
+        "choice_risks": "A very literal mutilators can hide what is being cut; an explanatory paraphrase can lose Paul’s insult and wordplay.",
+        "human_decision_required": false,
+        "reader_note_required": true,
+        "audit_text_and_note_together": true
+      },
+      {
+        "sense_id": "php3_the_circumcision_identity",
+        "references": [
+          "Phil.3.3"
+        ],
+        "source_expression": "ἡμεῖς γάρ ἐσμεν ἡ περιτομή",
+        "status": "alternatives_retained",
+        "contextual_function": "A corporate identity claim: Paul applies the designation of the circumcised covenant people to the Spirit-worshiping, Christ-confident community.",
+        "primary_sense": "We are God’s authentic covenant people.",
+        "viable_alternatives": [
+          "We are the people who truly bear the sign of belonging to God.",
+          "We are the true circumcision."
+        ],
+        "discourse_evidence": "The predicate noun identifies a people, and the following participles characterize that people. Romans 2:28–29 is conceptually parallel, but Philippians 3:3 does not explicitly say heart or inward.",
+        "reading_text_guidance": "Communicate the corporate identity function in the reading text. Do not reduce the claim merely to possessing a physical mark or import the whole inward-circumcision explanation from Romans.",
+        "literal_note_guidance": "Literally, “we are the circumcision.” Circumcision was the physical sign identifying Israel as God’s covenant people. Here Paul applies that identity to those who worship by God’s Spirit, center their confidence in Christ, and do not rely on human ancestry or achievement.",
+        "choice_risks": "Covenant may be unfamiliar; sign language can make the physical mark rather than the people the focus; true circumcision is compact but opaque to religion-naive readers.",
+        "human_decision_required": true,
+        "reader_note_required": true,
+        "audit_text_and_note_together": true
+      },
+      {
+        "sense_id": "php3_boast_in_christ",
+        "references": [
+          "Phil.3.3"
+        ],
+        "source_expression": "καυχώμενοι ἐν Χριστῷ Ἰησοῦ",
+        "status": "alternatives_retained",
+        "contextual_function": "Positive self-location and grounds for confidence centered in Christ, contrasted with confidence in flesh.",
+        "primary_sense": "Take pride in or boast in Christ Jesus.",
+        "viable_alternatives": [
+          "Find our confidence in Christ Jesus",
+          "Find our worth in Christ Jesus"
+        ],
+        "discourse_evidence": "The coordinated clauses contrast Christ-centered boasting with reliance on merely human qualifications.",
+        "reading_text_guidance": "Use natural positive language that retains Christ as the ground of confidence; avoid making the phrase only about private self-esteem.",
+        "literal_note_guidance": "A note may mention the more literal boast in Christ if the reading uses confidence or worth.",
+        "choice_risks": "Worth can narrow the rhetorical idea to self-worth; boast can sound sinful in ordinary English; confidence may weaken public allegiance and pride.",
+        "human_decision_required": true,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "php3_flesh_credentials",
+        "references": [
+          "Phil.3.3",
+          "Phil.3.4"
+        ],
+        "source_expression": "οὐκ ἐν σαρκὶ πεποιθότες / πεποίθησιν ... ἐν σαρκί",
+        "status": "resolved",
+        "contextual_function": "The repeated flesh phrase names merely human grounds of confidence that the credential list immediately defines.",
+        "primary_sense": "Human ancestry, religious privilege, status, observance, and achievement treated as credentials before God.",
+        "viable_alternatives": [],
+        "discourse_evidence": "Verses 5–6 unpack the phrase with circumcision, ancestry, tribal identity, Pharisaic status, zeal, and law performance.",
+        "reading_text_guidance": "Use one coherent reader-facing category such as human credentials or human advantages while allowing the list to supply its contents.",
+        "literal_note_guidance": "If flesh disappears from the reading text, a note may state that Paul literally says confidence in the flesh and defines it here through human ancestry and religious achievement.",
+        "choice_risks": "Flesh can be misunderstood as sinful desire; credentials may sound occupational but becomes clear through the list; ancestry alone is too narrow.",
+        "human_decision_required": false,
+        "reader_note_required": true,
+        "audit_text_and_note_together": true
+      },
+      {
+        "sense_id": "php3_hebrew_of_hebrews",
+        "references": [
+          "Phil.3.5"
+        ],
+        "source_expression": "Ἑβραῖος ἐξ Ἑβραίων",
+        "status": "alternatives_retained",
+        "contextual_function": "A compressed heritage claim inside Paul’s accumulating credential list.",
+        "primary_sense": "A Hebrew born to Hebrew parents / from a Hebrew family.",
+        "viable_alternatives": [
+          "A Hebrew of Hebrews",
+          "A thoroughly Hebrew Israelite"
+        ],
+        "discourse_evidence": "The ἐξ phrase points to origin or family heritage; the list stresses inherited identity as well as personal practice.",
+        "reading_text_guidance": "Preserve family or inherited Hebrew identity. Do not replace it only with true Hebrew, which may erase the parental or cultural claim.",
+        "literal_note_guidance": "No note normally required unless the formal phrase Hebrew of Hebrews is retained for transparency.",
+        "choice_risks": "Hebrew may still be culturally opaque; true Hebrew can imply others are fake and loses the source’s origin language.",
+        "human_decision_required": true,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "php3_law_record",
+        "references": [
+          "Phil.3.5",
+          "Phil.3.6"
+        ],
+        "source_expression": "κατὰ νόμον Φαρισαῖος ... κατὰ δικαιοσύνην τὴν ἐν νόμῳ ... ἄμεμπτος",
+        "status": "resolved",
+        "contextual_function": "Two credential categories: Pharisaic relation to the Law and an externally blameless record measured by the righteousness the Law prescribes.",
+        "primary_sense": "A strict Pharisee whose law-observance record was beyond accusation.",
+        "viable_alternatives": [],
+        "discourse_evidence": "The repeated κατά markers structure the list; ἄμεμπτος claims blamelessness by the stated measure, not sinless perfection or final divine acquittal.",
+        "reading_text_guidance": "Vary English openings for oral flow while preserving the accumulating categories and the Law as the standard. Do not say Paul was morally perfect or already right with God by law.",
+        "literal_note_guidance": "No note normally required; a note may clarify that blameless describes his observable record under the Law’s standards.",
+        "choice_risks": "Right with God overstates the claim; no one could find fault is natural but can sound universal unless the Law standard remains explicit.",
+        "human_decision_required": false,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "php3_accounting_reversal",
+        "references": [
+          "Phil.3.7",
+          "Phil.3.8"
+        ],
+        "source_expression": "κέρδη ... ζημίαν / πάντα ζημίαν",
+        "status": "resolved",
+        "contextual_function": "An accounting metaphor that reverses Paul’s former profit column and intensifies from former advantages to everything.",
+        "primary_sense": "Former gains are now booked as loss because knowing Christ is incomparably valuable.",
+        "viable_alternatives": [],
+        "discourse_evidence": "The plural gains in verse 7 points back to the credentials, then πάντα in verse 8 widens the reversal.",
+        "reading_text_guidance": "Preserve profit/loss imagery and escalation. Give the English clear sentence landings rather than one continuous argument chain.",
+        "literal_note_guidance": "No note normally required.",
+        "choice_risks": "Things I once considered profit can obscure the list connection; complete loss may intensify appropriately but should not erase the accounting metaphor.",
+        "human_decision_required": false,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "php3_lost_all_things",
+        "references": [
+          "Phil.3.8"
+        ],
+        "source_expression": "δι’ ὃν τὰ πάντα ἐζημιώθην",
+        "status": "alternatives_retained",
+        "contextual_function": "A passive statement that Paul has incurred or suffered the loss of all things because of Christ, within a context of deliberate revaluation.",
+        "primary_sense": "For Christ’s sake I have lost everything.",
+        "viable_alternatives": [
+          "I have suffered the loss of everything for Him",
+          "I have given it all up for Him"
+        ],
+        "discourse_evidence": "The verb is passive in form, while the surrounding I consider language shows voluntary allegiance and valuation without requiring this clause itself to state that Paul initiated every loss.",
+        "reading_text_guidance": "Preserve the reality and cost of loss. If voluntary agency is made explicit, flag that interpretive strengthening.",
+        "literal_note_guidance": "A note is optional; the candidate apparatus must expose the passive-versus-voluntary tradeoff.",
+        "choice_risks": "Given it all up adds explicit agency; suffered the loss is accurate but formal; lost everything is natural and leaves agency open.",
+        "human_decision_required": true,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "php3_skubalon",
+        "references": [
+          "Phil.3.8"
+        ],
+        "source_expression": "σκύβαλα",
+        "status": "alternatives_retained",
+        "contextual_function": "A contemptuous valuation of former grounds for confidence as worthless, repulsive refuse.",
+        "primary_sense": "Garbage or refuse.",
+        "viable_alternatives": [
+          "Filth",
+          "Dung",
+          "Waste"
+        ],
+        "discourse_evidence": "The term can denote refuse, excrement, or what is thrown away; the accounting contrast and gain-Christ purpose demand strong contempt.",
+        "reading_text_guidance": "Use forceful adult natural English rather than a genteel abstraction. Preserve dignity without pretending Paul’s word is mild.",
+        "literal_note_guidance": "Explain that Paul uses a strong term for refuse, filth, or dung to show how worthless his former advantages are beside Christ.",
+        "choice_risks": "Waste may be too mild; dung may over-specify one possible referent; garbage is accessible but modern in register.",
+        "human_decision_required": true,
+        "reader_note_required": true,
+        "audit_text_and_note_together": true
+      },
+      {
+        "sense_id": "php3_righteousness_faith",
+        "references": [
+          "Phil.3.9"
+        ],
+        "source_expression": "μὴ ἔχων ἐμὴν δικαιοσύνην ... τὴν διὰ πίστεως Χριστοῦ ... ἐπὶ τῇ πίστει",
+        "status": "alternatives_retained",
+        "contextual_function": "A contrast between self-associated law righteousness and righteousness from God, with two faith expressions and a disputed Christ genitive.",
+        "primary_sense": "Right standing comes from God and is received through reliance on Christ, not crafted through Law observance.",
+        "viable_alternatives": [
+          "Right standing comes through Christ’s faithfulness and is received by faith.",
+          "Righteousness comes through faith in Christ and rests on faith."
+        ],
+        "discourse_evidence": "The law/from-God contrast is clear; πίστεως Χριστοῦ permits an objective reading (faith in Christ) and a subjective reading (Christ’s faithfulness), while ἐπὶ τῇ πίστει explicitly retains faith as the human reception frame.",
+        "reading_text_guidance": "Untangle the logical relations across natural English sentences. Choose a coherent primary reading, preserve from God, and expose the Christ-faithfulness alternative in the review apparatus.",
+        "literal_note_guidance": "Explain that the Greek phrase translated reliance on Christ may also be understood as Christ’s faithfulness; retain the second faith expression rather than collapsing both without notice.",
+        "choice_risks": "Crafted helpfully contrasts sources but may overstate personal manufacture; repeating standing/status creates abstraction; collapsing the two faith phrases can hide a real interpretive issue.",
+        "human_decision_required": true,
+        "reader_note_required": true,
+        "audit_text_and_note_together": true
+      },
+      {
+        "sense_id": "php3_know_christ",
+        "references": [
+          "Phil.3.8",
+          "Phil.3.10"
+        ],
+        "source_expression": "τὸ ὑπερέχον τῆς γνώσεως ... / τοῦ γνῶναι αὐτὸν",
+        "status": "resolved",
+        "contextual_function": "Relational and experiential knowledge of Christ, elaborated through resurrection power, suffering fellowship, and conformity to His death.",
+        "primary_sense": "Know Christ personally and experientially.",
+        "viable_alternatives": [],
+        "discourse_evidence": "Verse 10 unpacks knowing with participation and transformation, not mere information.",
+        "reading_text_guidance": "Natural expansion such as know Christ intimately or truly know Christ is permitted if it does not import emotional detail not carried by the passage.",
+        "literal_note_guidance": "No note normally required.",
+        "choice_risks": "Intimately can sound romantic to some listeners; know about Christ is too weak; experience must not replace relational knowing altogether.",
+        "human_decision_required": false,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "php3_resurrection_qualification",
+        "references": [
+          "Phil.3.11"
+        ],
+        "source_expression": "εἴ πως καταντήσω εἰς τὴν ἐξανάστασιν τὴν ἐκ νεκρῶν",
+        "status": "alternatives_retained",
+        "contextual_function": "A qualified statement of Paul’s movement toward attaining the resurrection, expressing humility or uncertainty about the path or manner without necessarily denying resurrection hope.",
+        "primary_sense": "So that somehow I may attain or share in the resurrection from the dead.",
+        "viable_alternatives": [
+          "In the hope that I may somehow reach the resurrection from the dead.",
+          "So that, one way or another, I may be raised from the dead."
+        ],
+        "discourse_evidence": "εἴ πως supplies a real qualification; the larger passage frames earnest Christ-directed pursuit, while Paul elsewhere expresses confident resurrection hope.",
+        "reading_text_guidance": "Retain the qualification and goal. Do not convert it into certainty the wording does not express, into doubt about God’s promise, or into resurrection earned by suffering.",
+        "literal_note_guidance": "A note may explain that Paul’s somehow expresses humble striving or uncertainty about the path, not necessarily doubt that God will raise those who belong to Christ.",
+        "choice_risks": "May be raised can sound as if Paul doubts participation; attain or reach can sound earned; one way or another can sound casual or indifferent.",
+        "human_decision_required": true,
+        "reader_note_required": true,
+        "audit_text_and_note_together": true
+      }
+    ]
+  }
 }

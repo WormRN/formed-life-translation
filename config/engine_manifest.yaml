@@ -1,12 +1,12 @@
 schema_version: 1
-last_updated: "2026-07-31"
+last_updated: "2026-08-01"
 project:
   name: "Formed Life Translation"
   repository: "WormRN/formed-life-translation"
   source_text: "SBLGNT"
 engine:
   name: "FLT Translation Engine"
-  version: "2.1"
+  version: "2.2"
   phase: 4
   translation_identity: "dynamic equivalence"
   target_reader: "religion-naive adult or older adolescent near a sixth-grade reading level"
@@ -17,6 +17,14 @@ engine:
     C: "Gemini Pro"
   one_hearing_oral_english_required: true
   oral_english_smoothing_gate: true
+  passage_sense_resolution_gate: true
+  passage_sense_sequence:
+    - "map passage argument and verse propositions without drafting English"
+    - "resolve discourse-dependent expressions and retain genuinely viable alternatives"
+    - "separate reading-text guidance from literal-note guidance"
+    - "validate blindness and give all three candidates the identical semantic brief"
+    - "record candidate alternatives in the review apparatus, not the reading text"
+    - "audit reading text and required transparency notes together"
   smoothing_sequence:
     - "listener-only diagnosis"
     - "source-aware logged proposals"
@@ -56,18 +64,19 @@ governing_documents:
   - "docs/current/FLT_contextual_lexical_matrix_v2.0.md"
   - "docs/current/FLT_copyright_independence_policy_v2.0.md"
   - "docs/current/FLT_translation_packet_template_v2.0.md"
+  - "docs/architecture/phase-4/engine-2.2-passage-sense-gate.md"
   - "logs/FLT_decision_log.md"
 
 current_checkpoint:
   book: "Philippians"
   chapter: 3
-  current_unit_id: "PHP-03-001-011-ORAL-RETEST"
+  current_unit_id: "PHP-03-001-011-SENSE-RETEST"
   current_passage: "Philippians 3:1-11"
-  stage: "human_editor_candidate_selection"
-  candidate_status: "Fresh Engine 2.1 blind drafting completed successfully. Three untouched candidates share one verified prompt hash. Prior FLT wording, prior candidates, comparison translations, and conversation drafts were absent. The candidates await human selection or synthesis; the new Oral-English Smoothing Gate follows that provisional synthesis."
+  stage: "engine_2_2_blind_retest_pending"
+  candidate_status: "The pre-Engine 2.2 editor synthesis is preserved as an evaluation-only benchmark. Engine 2.2 passage-sense resolution is implemented on a feature branch. A new source-side brief resolves contextual functions before English composition and retains genuine alternatives in review apparatus. No Engine 2.2 candidate has yet been generated."
   candidate_sealed: false
   latest_accepted_unit: "PHP-03-007-011 remains accepted in the benchmark record; the retest is experimental until the human editor makes a new decision."
-  next_permitted_action: "Present untouched A/B/C results for PHP-03-001-011-ORAL-RETEST: A=Claude Sonnet, B=GPT-5.6 Sol, C=Gemini Pro. Await a provisional human synthesis. Then run listener-only diagnosis and source-aware logged smoothing proposals before the human editor approves exact wording for audit."
+  next_permitted_action: "Run the Engine 2.2 test gate, then draft PHP-03-001-011-SENSE-RETEST from the SBLGNT and completed source-side semantic brief with prior FLT wording, prior candidates, editor benchmark, comparison translations, and conversation drafts absent. Present untouched A/B/C candidates and their alternative-reading and reader-note apparatus."
   process_revalidation:
     reason: "Earlier blind drafting assigned different readability, Greek-fidelity, and balanced missions instead of one common constitutional goal."
     status: "recovery_completed_all_nine_units_process_revalidated"
@@ -206,6 +215,8 @@ current_checkpoint:
     human_acceptance_after_oral_review_pending: false
   active_files:
     blind_source: "docs/architecture/phase-4/PHP-03-001-011_oral-retest-blind-source.json"
+    passage_sense_gate_spec: "docs/architecture/phase-4/engine-2.2-passage-sense-gate.md"
+    editor_benchmark: "docs/architecture/phase-4/PHP-03-001-011_editor-benchmark-pre-engine-2.2.md"
     runner: "phase4-harness/src/chapter-units.js"
     workflow: ".github/workflows/phase4-php3-001-011-oral-retest-drafts.yml"
     human_candidate: "docs/architecture/phase-4/PHP-03-007-011_human-editor-candidate-v01.json"
