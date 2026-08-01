@@ -1,7 +1,13 @@
 {
   "candidate_id": "PHP-03-001-011-HUMAN-SYNTHESIS-V2.2-SMOOTHED",
   "passage": "Philippians 3:1-11",
-  "status": "provisional_human_synthesis_pending_constitutional_audit",
+  "status": "accepted_unit_pending_whole_chapter_review",
+  "audit": {
+    "date": "2026-08-01",
+    "github_run": 30720117887,
+    "result": "three_of_three_eligible_zero_blocks",
+    "reader_notes_audited_with_text": true
+  },
   "verse_renderings": [
     {
       "reference": "Phil.3.1",
