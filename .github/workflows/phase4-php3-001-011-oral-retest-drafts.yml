@@ -1,0 +1,99 @@
+name: FLT Phase 4 Philippians 3:1-11 oral-English retest
+run-name: Philippians 3:1-11 fresh common-goal oral-English drafts
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/phase4-php3-001-011-oral-retest-drafts.yml'
+      - 'docs/architecture/phase-4/PHP-03-001-011_oral-retest-blind-source.json'
+  workflow_dispatch:
+
+permissions: {contents: write}
+concurrency: {group: flt-phase-4-php3-001-011-oral-retest, cancel-in-progress: false}
+
+jobs:
+  draft:
+    name: Fresh common-goal oral-English drafts for Philippians 3:1-11
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: 24, cache: npm, cache-dependency-path: phase4-harness/package-lock.json}
+      - name: Install and test Engine 2.1
+        working-directory: phase4-harness
+        run: npm ci && npm test
+      - name: Create run identity
+        id: run
+        shell: bash
+        run: |
+          run_id="FLT-PHP-03-ORAL-$(date -u +%Y%m%d)-${GITHUB_RUN_NUMBER}"
+          node phase4-harness/scripts/prepare-run-config.mjs phase4-harness/config.github-actions.json phase4-harness/.php3-001-011-oral-retest-config.json "$run_id"
+          jq '.unit_id="PHP-03-001-011-ORAL-RETEST"' phase4-harness/.php3-001-011-oral-retest-config.json > phase4-harness/.php3-001-011-oral-retest-config.tmp
+          mv phase4-harness/.php3-001-011-oral-retest-config.tmp phase4-harness/.php3-001-011-oral-retest-config.json
+          echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
+      - name: Draft fresh unit
+        id: draft
+        run: node phase4-harness/src/chapter-units.js phase4-harness/.php3-001-011-oral-retest-config.json "phase4-harness/runs/${{ steps.run.outputs.run_id }}" docs/architecture/phase-4/PHP-03-001-011_oral-retest-blind-source.json
+      - name: Upload blind-draft bundle
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: "${{ steps.run.outputs.run_id || 'FLT-PHP-03-ORAL-RETEST-blocked' }}"
+          path: phase4-harness/runs/
+          retention-days: 30
+      - name: Publish machine-readable draft receipt
+        if: always()
+        env:
+          DRAFT_STEP_OUTCOME: ${{ steps.draft.outcome }}
+          ENGINE_RUN_ID: ${{ steps.run.outputs.run_id }}
+        shell: bash
+        run: |
+          mkdir -p config
+          generated_at=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          run_url="https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          receipt_status="completed"
+          if [ "$DRAFT_STEP_OUTCOME" != "success" ]; then receipt_status="workflow_failed"; fi
+          provenance="phase4-harness/runs/${ENGINE_RUN_ID}/manifest/chapter-drafting-provenance.json"
+          common_prompt_sha256=""
+          common_prompt_verified=false
+          candidate_count=0
+          if [ -f "$provenance" ]; then
+            common_prompt_sha256=$(jq -r '.common_prompt_sha256 // ""' "$provenance")
+            common_prompt_verified=$(jq -r '.common_prompt_verified // false' "$provenance")
+          fi
+          output_dir="phase4-harness/runs/${ENGINE_RUN_ID}/outputs/units/PHP-03-001-011-ORAL-RETEST"
+          if [ -d "$output_dir" ]; then candidate_count=$(find "$output_dir" -maxdepth 1 -type f -name '*.json' | wc -l); fi
+          if [ "$candidate_count" -ne 3 ] || [ "$common_prompt_verified" != "true" ]; then
+            if [ "$receipt_status" = "completed" ]; then receipt_status="integrity_failed"; fi
+          fi
+          jq -n \
+            --argjson schema_version 1 \
+            --arg repository "$GITHUB_REPOSITORY" \
+            --arg workflow_path ".github/workflows/phase4-php3-001-011-oral-retest-drafts.yml" \
+            --arg unit_id "PHP-03-001-011-ORAL-RETEST" \
+            --arg passage "Philippians 3:1-11" \
+            --arg engine_run_id "$ENGINE_RUN_ID" \
+            --argjson github_run_id "$GITHUB_RUN_ID" \
+            --arg run_url "$run_url" \
+            --arg artifact_name "$ENGINE_RUN_ID" \
+            --arg head_sha "$GITHUB_SHA" \
+            --arg generated_at "$generated_at" \
+            --arg job_outcome "$DRAFT_STEP_OUTCOME" \
+            --arg receipt_status "$receipt_status" \
+            --arg common_prompt_sha256 "$common_prompt_sha256" \
+            --argjson common_prompt_verified "$common_prompt_verified" \
+            --argjson candidate_count "$candidate_count" \
+            '{schema_version:$schema_version,repository:$repository,workflow_path:$workflow_path,unit_id:$unit_id,passage:$passage,engine_run_id:$engine_run_id,github_run_id:$github_run_id,run_url:$run_url,artifact_name:$artifact_name,head_sha:$head_sha,generated_at:$generated_at,job_outcome:$job_outcome,receipt_status:$receipt_status,common_prompt_sha256:$common_prompt_sha256,common_prompt_verified:$common_prompt_verified,candidate_count:$candidate_count,blindness:{prior_flt_wording_absent:true,prior_candidates_absent:true,comparison_translations_absent:true,conversation_drafts_absent:true}}' > config/latest_draft_run.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add config/latest_draft_run.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Record Philippians 3:1-11 oral-English retest receipt"
+          git pull --rebase origin main
+          git push origin HEAD:main
