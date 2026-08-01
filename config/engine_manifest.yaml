@@ -227,7 +227,7 @@ current_checkpoint:
     prior_audit_source: "docs/architecture/phase-4/PHP-03-001-006_audit-source.json"
     prior_audit_workflow: ".github/workflows/phase4-php3-001-006-candidate-audit.yml"
     prior_reader_notes_draft: "docs/architecture/phase-4/PHP-03-001-006_reader-notes-draft-v01.md"
-    latest_draft_receipt: "config/latest_draft_run.json"
+    latest_draft_receipt: "config/latest_php3_engine22_draft_run.json"
     current_unit_brief: "docs/architecture/phase-4/PHP-03-001-006_blind-source.json"
     last_revalidated_candidate: "docs/architecture/phase-4/PHP-01-027-030_human-editor-candidate-v01.json"
     last_revalidated_audit_source: "docs/architecture/phase-4/PHP-01-027-030_audit-source.json"
