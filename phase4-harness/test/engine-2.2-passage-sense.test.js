@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {assertPassageSenseResolution,assertCandidateSenseApparatus} from '../src/sense-resolution-core.js';
+import {assertPassageSenseResolution,assertCandidateSenseApparatus,assertCommonBasePromptHash} from '../src/sense-resolution-core.js';
 
 const chapter=()=>({
   units:[{verses:[{reference:'Phil.3.1'},{reference:'Phil.3.2'}]}],
@@ -30,4 +30,14 @@ test('keeps bracketed alternatives out of the reading text',()=>{
   const x=chapter(),brief=assertPassageSenseResolution(x),unit=x.units[0];
   const output={verse_renderings:[{reference:'Phil.3.1',text:'Now rejoice.'},{reference:'Phil.3.2',text:'Watch out. [Alternative: beware.]'}],sense_decisions:[{sense_id:'transition'},{sense_id:'wordplay'}],alternate_readings:[{sense_id:'wordplay'}],reader_notes:[{sense_id:'wordplay'}]};
   assert.throws(()=>assertCandidateSenseApparatus(output,unit,brief),/review apparatus/);
+});
+
+test('common-goal attestation tolerates provider-specific schema repair prompts',()=>{
+  const records=[
+    {base_prompt_sha256:'same-base',input_sha256:'first-attempt'},
+    {base_prompt_sha256:'same-base',input_sha256:'repair-attempt'},
+    {base_prompt_sha256:'same-base',input_sha256:'another-repair'}
+  ];
+  assert.equal(assertCommonBasePromptHash(records),'same-base');
+  assert.throws(()=>assertCommonBasePromptHash([...records.slice(0,2),{base_prompt_sha256:'different-base'}]),/base prompt hash mismatch/);
 });
