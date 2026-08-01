@@ -1,12 +1,12 @@
 schema_version: 1
-last_updated: "2026-07-24"
+last_updated: "2026-07-31"
 project:
   name: "Formed Life Translation"
   repository: "WormRN/formed-life-translation"
   source_text: "SBLGNT"
 engine:
   name: "FLT Translation Engine"
-  version: "2.0"
+  version: "2.1"
   phase: 4
   translation_identity: "dynamic equivalence"
   target_reader: "religion-naive adult or older adolescent near a sixth-grade reading level"
@@ -15,6 +15,13 @@ engine:
     A: "Claude Sonnet"
     B: "GPT-5.6 Sol"
     C: "Gemini Pro"
+  one_hearing_oral_english_required: true
+  oral_english_smoothing_gate: true
+  smoothing_sequence:
+    - "listener-only diagnosis"
+    - "source-aware logged proposals"
+    - "human approval of exact wording"
+    - "expanded exact-candidate semantic audit"
 
 bootstrap:
   required_entry_file: "docs/START_HERE.md"
@@ -54,13 +61,13 @@ governing_documents:
 current_checkpoint:
   book: "Philippians"
   chapter: 3
-  current_unit_id: "PHP-03-007-011"
-  current_passage: "Philippians 3:7-11"
-  stage: "human_selected_audit_cleared_paused"
-  candidate_status: "The human editor explicitly retained and accepted the exact Philippians 3:7-11 candidate, including verse 11 unchanged. The same sealed candidate has a clean final receipt in audit run 30147179126: three eligible auditors, zero blocking defects, semantic floor passed. Three required reader notes remain attached for the chapter-note pass."
-  candidate_sealed: true
-  latest_accepted_unit: "PHP-03-007-011 (human editor retained the exact synthesis; final audit run 30147179126 passed with three eligible auditors and zero blocking defects; required reader notes recorded)"
-  next_permitted_action: "When work resumes, prepare the blind source for PHP-03-012-016 and launch three independent A/B/C candidates pursuing the identical constitutional goal. Do not reopen PHP-03-007-011 unless the later whole-chapter review exposes a concrete issue."
+  current_unit_id: "PHP-03-001-011-ORAL-RETEST"
+  current_passage: "Philippians 3:1-11"
+  stage: "common_goal_blind_drafting"
+  candidate_status: "A fresh blind retest of Philippians 3:1-11 is launching under Engine 2.1. All prior FLT wording, prior candidates, comparison translations, and conversation drafts are excluded. Three providers receive one identical oral-English constitutional mission."
+  candidate_sealed: false
+  latest_accepted_unit: "PHP-03-007-011 remains accepted in the benchmark record; the retest is experimental until the human editor makes a new decision."
+  next_permitted_action: "Require a completed draft receipt naming PHP-03-001-011-ORAL-RETEST, verify three candidates and one common prompt hash, then present untouched A=Claude Sonnet, B=GPT-5.6 Sol, and C=Gemini Pro. After human synthesis, the Oral-English Smoothing Gate is mandatory before exact-candidate audit."
   process_revalidation:
     reason: "Earlier blind drafting assigned different readability, Greek-fidelity, and balanced missions instead of one common constitutional goal."
     status: "recovery_completed_all_nine_units_process_revalidated"
@@ -195,9 +202,9 @@ current_checkpoint:
     semantic_pass: true
     human_acceptance_after_oral_review_pending: false
   active_files:
-    blind_source: "docs/architecture/phase-4/PHP-03-007-011_blind-source.json"
+    blind_source: "docs/architecture/phase-4/PHP-03-001-011_oral-retest-blind-source.json"
     runner: "phase4-harness/src/chapter-units.js"
-    workflow: ".github/workflows/phase4-php3-007-011-drafts.yml"
+    workflow: ".github/workflows/phase4-php3-001-011-oral-retest-drafts.yml"
     human_candidate: "docs/architecture/phase-4/PHP-03-007-011_human-editor-candidate-v01.json"
     audit_source: "docs/architecture/phase-4/PHP-03-007-011_audit-source.json"
     audit_workflow: ".github/workflows/phase4-php3-007-011-candidate-audit.yml"
@@ -300,3 +307,10 @@ workflow_requirements:
   role_specific_readability_fidelity_balanced_goals_forbidden: true
   exact_candidate_must_be_preserved: true
   publish_latest_audit_receipt: true
+  one_hearing_oral_design_required_in_drafting: true
+  oral_smoothing_before_candidate_audit: true
+  listener_only_diagnosis_must_exclude_source_material: true
+  source_aware_smoothing_changes_must_be_fully_logged: true
+  silent_smoothing_changes_forbidden: true
+  human_must_approve_post_smoothing_exact_text: true
+  expanded_constitutional_audit_checks_required: true
