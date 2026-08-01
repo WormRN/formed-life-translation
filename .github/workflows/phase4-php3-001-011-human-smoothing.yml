@@ -1,0 +1,70 @@
+name: FLT Philippians 3:1-11 exact-text audit
+run-name: Philippians 3:1-11 exact reading-text and reader-note audit
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/phase4-php3-001-011-human-smoothing.yml'
+      - 'docs/architecture/phase-4/PHP-03-001-011_human-editor-synthesis-v2.2.json'
+      - 'phase4-harness/src/smoothing-core.js'
+      - 'phase4-harness/src/oral-smoothing.js'
+      - 'phase4-harness/schemas/oral-listener-diagnosis.schema.json'
+      - 'phase4-harness/schemas/source-aware-smoothing.schema.json'
+      - 'phase4-harness/schemas/human-candidate-audit.schema.json'
+      - 'phase4-harness/test/smoothing-core.test.js'
+      - 'phase4-harness/test/human-candidate-audit.test.js'
+      - 'phase4-harness/src/human-candidate-audit.js'
+
+permissions: {contents: read}
+concurrency: {group: flt-php3-001-011-human-smoothing, cancel-in-progress: true}
+
+jobs:
+  audit:
+    name: Exact reading-text and reader-note constitutional audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: 24, cache: npm, cache-dependency-path: phase4-harness/package-lock.json}
+      - name: Install and test Engine 2.2
+        working-directory: phase4-harness
+        run: npm ci && npm test
+      - name: Create audit identity and source packet
+        id: run
+        shell: bash
+        run: |
+          run_id="FLT-PHP-03-$(date -u +%Y%m%d)-${GITHUB_RUN_NUMBER}"
+          node phase4-harness/scripts/prepare-run-config.mjs phase4-harness/config.github-actions.json phase4-harness/.php3-audit-config.json "$run_id"
+          jq '.unit_id="PHP-03-001-011-EXACT-AUDIT" | .source_packet=".php3-audit-source.json"' phase4-harness/.php3-audit-config.json > phase4-harness/.php3-audit-config.tmp
+          mv phase4-harness/.php3-audit-config.tmp phase4-harness/.php3-audit-config.json
+          jq -n \
+            --slurpfile brief docs/architecture/phase-4/PHP-03-001-011_oral-retest-blind-source.json \
+            --slurpfile parsed data/source/sblgnt_parsed.json \
+            '$brief[0] as $b | $parsed[0] as $p | {
+              source_data: {
+                edition: "SBLGNT",
+                verses: [$b.units[0].verses[] | . as $v | {
+                  reference: $v.reference,
+                  greek: $v.greek,
+                  tokens: $p[$v.reference]
+                }]
+              },
+              governing_rules: $b.governing_rules,
+              matrix_entries: ($b.matrix_alerts + $b.passage_sense_resolution.expressions)
+            }' > phase4-harness/.php3-audit-source.json
+          echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
+      - name: Run exact-text constitutional audit
+        run: node phase4-harness/src/human-candidate-audit.js phase4-harness/.php3-audit-config.json "phase4-harness/runs/${{ steps.run.outputs.run_id }}" docs/architecture/phase-4/PHP-03-001-011_human-editor-synthesis-v2.2.json
+      - name: Upload exact-text audit bundle
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: "${{ steps.run.outputs.run_id || 'FLT-PHP-03-AUDIT-blocked' }}-audit"
+          path: phase4-harness/runs/
+          retention-days: 30

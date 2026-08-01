@@ -4,6 +4,7 @@ import {fileURLToPath} from 'node:url';
 import Ajv2020 from 'ajv/dist/2020.js';
 import {json,emit,event,requestModel,sha256} from './core.js';
 import {buildListenerPrompt,buildSourceAwarePrompt,assertSmoothingIntegrity,smoothingDecisionBrief} from './smoothing-core.js';
+import {parseModelJson} from './sense-resolution-core.js';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const configPath=path.resolve(process.argv[2]);
@@ -14,7 +15,7 @@ const config=await json(configPath),candidate=await json(candidatePath),source=a
 const ajv=new Ajv2020({allErrors:true});
 const validateDiagnosis=ajv.compile(await json(path.join(root,'schemas/oral-listener-diagnosis.schema.json')));
 const validateProposal=ajv.compile(await json(path.join(root,'schemas/source-aware-smoothing.schema.json')));
-const parse=t=>{if(!t?.trim())throw new Error('EMPTY_MODEL_RESPONSE');return JSON.parse(t.match(/```(?:json)?\s*([\s\S]*?)```/i)?.[1]||t)};
+const parse=parseModelJson;
 
 async function call(worker,stage,prompt,validate,assert=()=>{}){
   let repair='';
@@ -40,7 +41,9 @@ async function call(worker,stage,prompt,validate,assert=()=>{}){
 
 const listenerPrompt=buildListenerPrompt(candidate);
 const diagnoses=await Promise.all(config.workers.map(w=>call(w,'listener_only_diagnosis',listenerPrompt,validateDiagnosis,o=>{
-  for(const x of o.verse_observations){const current=candidate.verse_renderings.find(v=>v.reference===x.reference);if(!current||current.text!==x.current_wording)throw new Error(`Listener report wording mismatch for ${x.reference}`)}
+  const allowed=new Set(candidate.verse_renderings.map(v=>v.reference));
+  const seen=new Set();
+  for(const x of o.verse_observations){if(!allowed.has(x.reference))throw new Error(`Unknown listener reference ${x.reference}`);if(seen.has(x.reference))throw new Error(`Duplicate listener reference ${x.reference}`);seen.add(x.reference)}
 })));
 for(const x of diagnoses)await emit(runDir,`outputs/listener-diagnoses/${x.role}.json`,x);
 

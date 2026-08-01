@@ -1,0 +1,108 @@
+{
+  "candidate_id": "PHP-03-001-011-HUMAN-SYNTHESIS-V2.2-SMOOTHED",
+  "passage": "Philippians 3:1-11",
+  "status": "accepted_unit_pending_whole_chapter_review",
+  "audit": {
+    "date": "2026-08-01",
+    "github_run": 30720117887,
+    "result": "three_of_three_eligible_zero_blocks",
+    "reader_notes_audited_with_text": true
+  },
+  "verse_renderings": [
+    {
+      "reference": "Phil.3.1",
+      "text": "And now, my brothers and sisters, rejoice because you belong to the Lord. I do not mind writing these same things to you again. This reminder will help keep you safe."
+    },
+    {
+      "reference": "Phil.3.2",
+      "text": "Watch out for those dogs! Watch out for those who do evil! Watch out for those who insist on cutting the body."
+    },
+    {
+      "reference": "Phil.3.3",
+      "text": "For we are God’s true covenant people. We worship by the Spirit of God, find our confidence in Christ Jesus, and put no confidence in human credentials."
+    },
+    {
+      "reference": "Phil.3.4",
+      "text": "Even so, I myself could rely on human credentials. If anyone else thinks he has reason to trust in them, I have even more."
+    },
+    {
+      "reference": "Phil.3.5",
+      "text": "I was circumcised when I was eight days old. I am an Israelite by birth, a member of the tribe of Benjamin, and a true Hebrew born of Hebrew parents. When it came to the Law, I was a Pharisee, committed to obeying it strictly."
+    },
+    {
+      "reference": "Phil.3.6",
+      "text": "I was so passionate that I fiercely persecuted the church. When it came to the strict behavior required by the Law, no one could find fault with me."
+    },
+    {
+      "reference": "Phil.3.7",
+      "text": "But whatever I once considered profit, I now count as loss because of Christ."
+    },
+    {
+      "reference": "Phil.3.8",
+      "text": "Yes, I consider everything a complete loss because knowing Christ Jesus my Lord is worth far more than anything else. For His sake I have lost everything. I consider it all garbage, so that I can gain Christ"
+    },
+    {
+      "reference": "Phil.3.9",
+      "text": "and belong completely to Him. I do not claim a right standing with God based on my own obedience to the Law. Instead, it comes from God through my reliance on Christ and is received by faith."
+    },
+    {
+      "reference": "Phil.3.10",
+      "text": "My goal is to know Christ intimately. I want to experience the power that raised Him from the dead and share in His sufferings, becoming like Him in His death,"
+    },
+    {
+      "reference": "Phil.3.11",
+      "text": "so that, somehow, I may also be raised from the dead."
+    }
+  ],
+  "reader_notes": [
+    {
+      "note_id": "Phil.3.3-circumcision-identity",
+      "reference": "Phil.3.3",
+      "anchor": "God’s true covenant people",
+      "status": "provisional",
+      "text": "Literally, “we are the circumcision.” Circumcision was the physical sign identifying Israel as God’s covenant people. Here Paul applies that identity to those who worship by God’s Spirit, find their confidence in Christ, and do not rely on human ancestry or achievement."
+    },
+    {
+      "note_id": "Phil.3.2-cutting-wordplay",
+      "reference": "Phil.3.2",
+      "anchor": "cutting the body",
+      "status": "provisional",
+      "text": "Paul uses a harsh play on words here. The term translated “cutting the body” echoes the word for circumcision in the next verse but reduces the opponents’ practice to mutilation."
+    },
+    {
+      "note_id": "Phil.3.3-4-human-credentials",
+      "reference": "Phil.3.3-4",
+      "anchor": "human credentials",
+      "status": "provisional",
+      "text": "Paul literally says that believers “put no confidence in the flesh.” Here “flesh” means human ancestry, religious privilege, status, and achievement—the credentials listed in verses 5–6."
+    },
+    {
+      "note_id": "Phil.3.5-pharisee",
+      "reference": "Phil.3.5",
+      "anchor": "a Pharisee, committed to obeying it strictly",
+      "status": "provisional",
+      "text": "The Greek literally says, “as to the Law, a Pharisee.” Pharisees were known for strict observance of the Law. The reading text makes that background explicit while keeping the focus on Paul’s own commitment."
+    },
+    {
+      "note_id": "Phil.3.8-garbage",
+      "reference": "Phil.3.8",
+      "anchor": "garbage",
+      "status": "provisional",
+      "text": "The Greek word translated “garbage” is a strong term for refuse, filth, or dung. Paul uses it to show how worthless his former advantages are compared with knowing Christ."
+    },
+    {
+      "note_id": "Phil.3.9-reliance-on-Christ",
+      "reference": "Phil.3.9",
+      "anchor": "reliance on Christ",
+      "status": "provisional",
+      "text": "The Greek phrase translated “reliance on Christ” may also mean “Christ’s faithfulness.” The reading text understands it as our faith in Christ while preserving the alternative here."
+    },
+    {
+      "note_id": "Phil.3.11-somehow",
+      "reference": "Phil.3.11",
+      "anchor": "somehow",
+      "status": "provisional",
+      "text": "Paul’s “somehow” expresses humility about the path by which he will reach the resurrection. It does not necessarily mean that he doubts God’s promise to raise those who belong to Christ."
+    }
+  ]
+}

@@ -2,8 +2,8 @@
   "$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","additionalProperties":false,
   "required":["verse_observations","passage_observations","one_hearing_summary"],
   "properties":{
-    "verse_observations":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["reference","current_wording","flags","listener_effect","severity"],"properties":{"reference":{"type":"string"},"current_wording":{"type":"string"},"flags":{"type":"array","minItems":1,"uniqueItems":true,"items":{"enum":["clause_stack","breath_length","preposition_cluster","delayed_core","repetitive_opening","abstract_noun_load","parenthetical_overload","accidental_repetition","unclear_referent","weak_landing","other"]}},"listener_effect":{"type":"string","minLength":1},"severity":{"enum":["low","medium","high"]}}}},
-    "passage_observations":{"type":"array","items":{"type":"string"}},
+    "verse_observations":{"type":"array","maxItems":8,"items":{"type":"object","additionalProperties":false,"required":["reference","flags","listener_effect","severity"],"properties":{"reference":{"type":"string"},"flags":{"type":"array","minItems":1,"uniqueItems":true,"items":{"enum":["clause_stack","breath_length","preposition_cluster","delayed_core","repetitive_opening","abstract_noun_load","parenthetical_overload","accidental_repetition","unclear_referent","weak_landing","other"]}},"listener_effect":{"type":"string","minLength":1,"maxLength":360},"severity":{"enum":["low","medium","high"]}}}},
+    "passage_observations":{"type":"array","maxItems":3,"items":{"type":"string","maxLength":360}},
     "one_hearing_summary":{"type":"string","minLength":1}
   }
 }
