@@ -194,6 +194,42 @@ It focuses on:
 
 It does not automatically reopen every verse-level decision.
 
+## 1.8 Oral-English Smoothing Packet
+
+**Purpose:** Diagnose one-hearing friction in a provisional human synthesis, propose bounded source-aware repairs, and preserve a complete change record before exact-candidate audit.
+
+**English-only stage may see:**
+
+- provisional selected English;
+- target-reader profile;
+- diagnostic categories.
+
+**English-only stage may not see:**
+
+- Greek or parsed data;
+- source notes or Matrix entries;
+- comparison translations;
+- prior model reasoning.
+
+**Source-aware stage may see:**
+
+- provisional selected English;
+- anonymous listener reports;
+- Greek and parsed source data;
+- governing rules;
+- relevant Matrix entries and scoped precedents.
+
+**Required outputs:**
+
+- listener-only diagnosis;
+- complete proposed verse list;
+- exact change log;
+- constitutional smoothing checks;
+- remaining risks;
+- human decision brief.
+
+The packet must declare that no proposal changes FLT wording without exact human approval.
+
 ---
 
 # 2. Core Metadata
@@ -1128,6 +1164,70 @@ No agent output becomes FLT text until this decision is recorded.
 
 ---
 
+# 13A. Oral-English Smoothing Gate
+
+A human synthesis is provisional until this gate is complete.
+
+## 13A.1 Listener-Only Diagnosis
+
+Three independent listeners receive only the selected English. They identify concrete one-hearing friction but do not rewrite the text.
+
+Required output:
+
+```yaml
+listener_diagnosis:
+  verse_observations:
+    - reference:
+      current_wording:
+      flags:
+      listener_effect:
+      severity:
+  passage_observations:
+  one_hearing_summary:
+```
+
+## 13A.2 Source-Aware Proposals
+
+Source-aware smoothers receive the provisional English, anonymous listener diagnoses, Greek source data, governing rules, and relevant Matrix entries. No comparison translation may enter this stage.
+
+Each proposal must provide:
+
+```yaml
+smoothing_proposal:
+  proposed_verse_renderings:
+  changes:
+    - reference:
+      current_wording:
+      oral_problem:
+      proposed_wording:
+      form_change:
+      meaning_risk:
+      source_warrant:
+      logic_and_rhetoric_check:
+  constitutional_checks:
+    - check:
+      outcome: PASS | WARN | BLOCK
+      rationale:
+  remaining_risks:
+  recommendation:
+```
+
+The harness must reject:
+
+- any changed verse missing from the change log;
+- any change-log entry that does not match the selected source wording;
+- any proposed wording that does not match the complete proposed verse list;
+- missing or duplicated constitutional checks;
+- any claim that a machine proposal has become final text.
+
+## 13A.3 Human Approval and Audit Handoff
+
+The human editor may accept, combine, revise, or reject smoothing proposals. The exact approved wording is then sealed. The semantic-floor audit must evaluate that exact wording—not the pre-smoothing synthesis and not an auditor's repair.
+
+A BLOCK in semantic propositions, logic, rhetoric, ambiguity, agency and force, key-term continuity, traceability, or back-translation prevents automatic advancement and returns the issue to the human editor.
+
+---
+
 # 14. Changed-Lines Review
 
 Use this process when a human or stylist alters only part of a stable passage.
@@ -1319,11 +1419,15 @@ PASS | PASS WITH NOTE | REVISE | BLOCK | HUMAN DECISION
 10. Produce provisional synthesis and identify candidates eligible for recommendation.
 11. Run copyright comparison on every candidate still eligible for recommendation.
 12. Finalize the decision brief with copyright findings included.
-13. Human editor decides.
-14. Apply any human-directed changed-lines review.
-15. Log decisions and update the Matrix or Style Guide when warranted.
-16. Run chapter-level literary and oral review.
-17. Mark provisionally complete when the stopping rule is met.
+13. Human editor creates or selects a provisional exact synthesis.
+14. Run the listener-only Oral-English diagnosis.
+15. Run source-aware smoothing proposals with a complete change log and constitutional checks.
+16. Human editor approves the exact post-smoothing wording.
+17. Seal and run the expanded exact-candidate semantic audit.
+18. Resolve any BLOCK or human-only finding; never permit a machine to finalize wording.
+19. Log decisions and update the Matrix or Style Guide when warranted.
+20. Run chapter-level literary and oral review; any wording change returns through changed-lines review, smoothing, and fresh audit.
+21. Mark provisionally complete when the stopping rule is met.
 
 ---
 
