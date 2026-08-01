@@ -10,6 +10,7 @@ on:
       - 'phase4-harness/src/smoothing-core.js'
       - 'phase4-harness/src/oral-smoothing.js'
       - 'phase4-harness/schemas/oral-listener-diagnosis.schema.json'
+      - 'phase4-harness/schemas/source-aware-smoothing.schema.json'
       - 'phase4-harness/test/smoothing-core.test.js'
 
 permissions: {contents: read}
