@@ -524,3 +524,17 @@ Reopen only if the whole-letter review or later contextual evidence exposes a co
 - **Gate status:** Engine 2.2 source-side brief complete for blind drafting.
 - **Required protections:** Equal repeated appeal to both women; recurring `phroneo` mindset link; unidentified loyal partner; honored shared struggle in the good news; book-of-life image; no supplied prior FLT or comparison English.
 - **Next action:** Validate the isolated PR, merge once, and permit exactly one push-triggered blind A/B/C drafting run.
+
+
+---
+
+## 2026-08-02 — Philippians 4:1–3 human synthesis selected
+
+- **Unit:** `PHP-04-001-003`
+- **Decision:** Preserve the human editor’s exact provisional wording for all three verses.
+- **Verse 2 punctuation:** The editor uses a colon after Syntyche, allowing the repeated appeal to conclude before the direct content, “share the same mindset in the Lord.”
+- **Verse 3 structure:** Retain Paul’s single flowing sentence and the relative clause linking the coworkers’ names with the book of life.
+- **Notes status:** Five transparency notes remain proposed; none is treated as approved.
+- **Draft evidence:** Engine 2.2 run 30757547001 produced three blind candidates under one common prompt. Gemini Pro’s malformed authoritative verse-2 field remains disclosed and was not silently repaired.
+- **Provisional copyright heuristic:** `none_obvious`; status `DEFERRED_BATCH`; hard eight-translation API audit still required; `publication_clearance: false`.
+- **Next gate:** Listener-only diagnosis followed by source-aware smoothing proposals. Human approval remains required before constitutional audit.
