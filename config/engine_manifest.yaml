@@ -79,16 +79,16 @@ governing_documents:
 current_checkpoint:
   book: "Philippians"
   chapter: 4
-  current_unit_id: "PHP-04-001-003"
-  current_passage: "Philippians 4:1-3"
-  stage: "human_approved_smoothed_candidate_pending_constitutional_audit"
-  candidate_status: "The human editor approved the listener-driven Philippians 4:3 clarification and all five transparency notes; exact text is sealed for constitutional audit."
-  candidate_sealed: true
-  latest_accepted_unit: "Philippians 3:1-21 finalized and frozen as first-draft text."
-  next_permitted_action: "Run one exact-text and reader-note constitutional audit for PHP-04-001-003. If it passes, accept the unit and prepare the next passage-sense gate."
-  copyright_status: "DEFERRED_BATCH"
-  provisional_heuristic_check: "complete_none_obvious_with_clean_delta"
-  source_gate_status: "passed_for_recorded_blind_draft"
+  current_unit_id: "PHP-04-004-009"
+  current_passage: "Philippians 4:4-9"
+  stage: "previous_unit_accepted_pending_next_passage_sense_gate"
+  candidate_status: "No English candidate exists yet for Philippians 4:4-9."
+  candidate_sealed: false
+  latest_accepted_unit: "Philippians 4:1-3 accepted after Engine 2.2 exact-text and reader-note audit."
+  next_permitted_action: "Prepare and validate the source-side passage-sense gate for PHP-04-004-009 before any blind English drafting."
+  copyright_status: "PENDING_RECORDED_INDEPENDENT_DRAFT"
+  provisional_heuristic_check: "not_yet_applicable"
+  source_gate_status: "pending"
   hard_check_required: true
   publication_clearance: false
   prepublication_requirement: "Run the formal eight-translation New Testament API batch audit through authorized sources, using API.Bible where available and likely the official ESV API separately; resolve findings and re-audit later wording changes."
@@ -262,6 +262,12 @@ current_checkpoint:
     latest_audit_receipt: "config/latest_audit_run.json"
 
 accepted_units:
+  - passage: "Philippians 4:1-3"
+    status: "human-approved smoothed wording and five reader notes passed three eligible Engine 2.2 auditors with zero blocking defects; provisional copyright heuristic and delta check none obvious; pending whole-chapter review"
+    draft_run_id: 30757547001
+    smoothing_run_id: 30762327233
+    audit_run_id: 30763406223
+    audit_artifact: "FLT-PHP-04-20260802-3-audit"
   - passage: "Philippians 1:1-2"
     status: "current FLT reaffirmed after valid common-goal blind drafting; sealed candidate passed three semantic-floor auditors with zero blocking defects; process revalidated"
     draft_run_id: 30073170869
