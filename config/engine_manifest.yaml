@@ -30,6 +30,15 @@ engine:
     - "source-aware logged proposals"
     - "human approval of exact wording"
     - "expanded exact-candidate semantic audit"
+  copyright_protocol:
+    status: "deferred_batch_audit_adopted"
+    heuristic_timing: "after independent wording is recorded"
+    heuristic_scope: "obvious highly distinctive multiword or dynamic interpretive resemblance only"
+    first_draft_status: "DEFERRED_BATCH"
+    hard_audit_timing: "after the New Testament first draft is complete"
+    planned_access: "authorized paid API retrieval through API.Bible where available and likely the official ESV API separately"
+    publication_gate: "HARD_CHECK_COMPLETE required for the exact release text"
+    recheck_after_post_audit_change: true
 
 bootstrap:
   required_entry_file: "docs/START_HERE.md"
@@ -70,13 +79,18 @@ governing_documents:
 current_checkpoint:
   book: "Philippians"
   chapter: 3
-  current_unit_id: "PHP-03-001-021-WHOLE-CHAPTER-REVIEW"
+  current_unit_id: "PHP-03-001-021-FROZEN"
   current_passage: "Philippians 3:1-21"
-  stage: "whole_chapter_review"
-  candidate_status: "All three human-approved units are exact-text audited and compiled byte-for-byte into the corrected 21-verse chapter candidate. The prior unauthorized Philippians 3:20 substitution was repaired and replacement audit 30735375602 passed with three eligible auditors and zero blocks."
-  candidate_sealed: false
-  latest_accepted_unit: "PHP-03-017-021 is accepted pending whole-chapter review; its exact human-approved verse 20 wording was restored and audited in run 30735375602."
-  next_permitted_action: "Run the compiled Philippians 3 whole-chapter listener and source-aware pre-screen. Present concrete chapter-level findings and the full continuous text to the human editor for controlling oral review. Do not freeze or begin chapter 4 until the human editor approves the chapter."
+  stage: "chapter_frozen_first_draft"
+  candidate_status: "Human-approved chapter repairs in verses 9 and 10 and all 18 notes passed final whole-chapter exact-text audit 30739206096 with three eligible auditors and zero blocking defects."
+  candidate_sealed: true
+  latest_accepted_unit: "Philippians 3:1-21 finalized and frozen as first-draft text."
+  next_permitted_action: "Begin Philippians 4 in the next session. Do not reopen Philippians 3 without an explicit human editorial decision."
+  copyright_status: "DEFERRED_BATCH"
+  provisional_heuristic_check: "complete_none_obvious"
+  hard_check_required: true
+  publication_clearance: false
+  prepublication_requirement: "Run the formal eight-translation New Testament API batch audit through authorized sources, using API.Bible where available and likely the official ESV API separately; resolve findings and re-audit later wording changes."
   process_revalidation:
     reason: "Earlier blind drafting assigned different readability, Greek-fidelity, and balanced missions instead of one common constitutional goal."
     status: "recovery_completed_all_nine_units_process_revalidated"
@@ -308,6 +322,13 @@ chapter_closures:
     status: "finalized_and_frozen"
     freeze_file: "docs/architecture/phase-4/FLT_Philippians_2_freeze-v01.md"
     final_repair_audit_run_id: 30126332658
+  philippians_3:
+    status: "finalized_and_frozen_first_draft_copyright_deferred"
+    freeze_file: "docs/architecture/phase-4/FLT_Philippians_3_freeze-v01.md"
+    final_exact_audit_run_id: 30739206096
+    reader_notes_total: 18
+    copyright_status: "DEFERRED_BATCH"
+    publication_clearance: false
 
 audit_retrieval:
   user_run_link_required: false
@@ -336,3 +357,7 @@ workflow_requirements:
   silent_smoothing_changes_forbidden: true
   human_must_approve_post_smoothing_exact_text: true
   expanded_constitutional_audit_checks_required: true
+  provisional_copyright_heuristic_after_recorded_draft: true
+  copyright_hard_check_deferred_to_nt_batch: true
+  copyright_clearance_required_before_publication: true
+  post_hard_audit_wording_changes_require_recheck: true
