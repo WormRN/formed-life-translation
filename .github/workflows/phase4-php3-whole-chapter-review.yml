@@ -18,6 +18,9 @@ concurrency: {group: flt-php3-final-exact-audit, cancel-in-progress: true}
 
 jobs:
   audit:
+    # Final provider evidence is preserved in run 30739206096.
+    # Keep manual dispatch for recovery; record-only edits must not rerun providers.
+    if: github.event_name == 'workflow_dispatch'
     name: Final exact reading-text and reader-note constitutional audit
     runs-on: ubuntu-latest
     timeout-minutes: 45
