@@ -1,0 +1,288 @@
+{
+  "candidate_id": "PHP-03-001-021-WHOLE-CHAPTER-REVIEW-V01",
+  "passage": "Philippians 3:1-21",
+  "status": "finalized_and_frozen_first_draft_copyright_deferred_batch",
+  "compilation_date": "2026-08-02",
+  "authority": {
+    "source_units": [
+      "docs/architecture/phase-4/PHP-03-001-011_human-editor-synthesis-v2.2.json",
+      "docs/architecture/phase-4/PHP-03-012-016_human-editor-synthesis-v2.2.json",
+      "docs/architecture/phase-4/PHP-03-017-021_human-editor-synthesis-v2.2.json"
+    ],
+    "exact_unit_wording_preserved": true,
+    "unit_audit_runs": [
+      30720117887,
+      30732690820,
+      30735375602
+    ],
+    "human_oral_review_required": false,
+    "reviewers_may_propose_but_not_change_wording": true,
+    "human_oral_review_completed": true,
+    "chapter_review_run": 30735739260,
+    "human_approved_repairs": [
+      "Phil.3.9",
+      "Phil.3.10"
+    ],
+    "chapter_frozen": true,
+    "reopening_requires_explicit_human_decision": true
+  },
+  "paragraph_plan": [
+    {
+      "range": "Phil.3.1",
+      "movement": "Transition and call to rejoice"
+    },
+    {
+      "range": "Phil.3.2-6",
+      "movement": "Warning and rejected human credentials"
+    },
+    {
+      "range": "Phil.3.7-11",
+      "movement": "Loss, gain, and knowing Christ"
+    },
+    {
+      "range": "Phil.3.12-16",
+      "movement": "Pressing toward the goal"
+    },
+    {
+      "range": "Phil.3.17-21",
+      "movement": "Two ways of life and heavenly hope"
+    }
+  ],
+  "verse_renderings": [
+    {
+      "reference": "Phil.3.1",
+      "text": "And now, my brothers and sisters, rejoice because you belong to the Lord. I do not mind writing these same things to you again. This reminder will help keep you safe."
+    },
+    {
+      "reference": "Phil.3.2",
+      "text": "Watch out for those dogs! Watch out for those who do evil! Watch out for those who insist on cutting the body."
+    },
+    {
+      "reference": "Phil.3.3",
+      "text": "For we are God’s true covenant people. We worship by the Spirit of God, find our confidence in Christ Jesus, and put no confidence in human credentials."
+    },
+    {
+      "reference": "Phil.3.4",
+      "text": "Even so, I myself could rely on human credentials. If anyone else thinks he has reason to trust in them, I have even more."
+    },
+    {
+      "reference": "Phil.3.5",
+      "text": "I was circumcised when I was eight days old. I am an Israelite by birth, a member of the tribe of Benjamin, and a true Hebrew born of Hebrew parents. When it came to the Law, I was a Pharisee, committed to obeying it strictly."
+    },
+    {
+      "reference": "Phil.3.6",
+      "text": "I was so passionate that I fiercely persecuted the church. When it came to the strict behavior required by the Law, no one could find fault with me."
+    },
+    {
+      "reference": "Phil.3.7",
+      "text": "But whatever I once considered profit, I now count as loss because of Christ."
+    },
+    {
+      "reference": "Phil.3.8",
+      "text": "Yes, I consider everything a complete loss because knowing Christ Jesus my Lord is worth far more than anything else. For His sake I have lost everything. I consider it all garbage, so that I can gain Christ"
+    },
+    {
+      "reference": "Phil.3.9",
+      "text": "and belong completely to Him. My right standing with God does not come from my own obedience to the Law. It comes from God through my reliance on Christ and is received by faith."
+    },
+    {
+      "reference": "Phil.3.10",
+      "text": "My goal is to know Christ intimately. I want to experience the power that raised Him from the dead, share in His sufferings, and become like Him in His death,"
+    },
+    {
+      "reference": "Phil.3.11",
+      "text": "so that, somehow, I may also be raised from the dead."
+    },
+    {
+      "reference": "Phil.3.12",
+      "text": "I do not mean that I have already reached the goal or am already complete. But I keep pressing on to take hold of the purpose for which Christ Jesus first took hold of me."
+    },
+    {
+      "reference": "Phil.3.13",
+      "text": "Brothers and sisters, I do not consider myself to have taken hold of the goal yet. But I focus on one thing: I leave what lies behind and stretch toward what lies ahead."
+    },
+    {
+      "reference": "Phil.3.14",
+      "text": "I press on toward the goal to win the prize that comes with God’s upward call in Christ Jesus."
+    },
+    {
+      "reference": "Phil.3.15",
+      "text": "So all of us who are mature should share this mindset. And if you think differently about anything, God will make even that clear to you."
+    },
+    {
+      "reference": "Phil.3.16",
+      "text": "In any case, we must keep living in a way that matches how far we have already come."
+    },
+    {
+      "reference": "Phil.3.17",
+      "text": "Brothers and sisters, join together in following my example. Pay close attention to those whose lives follow the pattern you see in us."
+    },
+    {
+      "reference": "Phil.3.18",
+      "text": "For I have told you often, and I tell you again now with tears: many people live as enemies of the cross of Christ."
+    },
+    {
+      "reference": "Phil.3.19",
+      "text": "Their end is destruction. Their god is their own appetite. They take pride in what should shame them. Their minds are set on earthly things."
+    },
+    {
+      "reference": "Phil.3.20",
+      "text": "But our citizenship is in heaven, and we eagerly await our Savior from heaven, the Lord Jesus Christ."
+    },
+    {
+      "reference": "Phil.3.21",
+      "text": "He will transform our lowly bodies to be like His glorious body. He will do this by the power that enables Him even to bring everything under His rule."
+    }
+  ],
+  "reader_notes": [
+    {
+      "note_id": "Phil.3.2-cutting-wordplay",
+      "reference": "Phil.3.2",
+      "anchor": "cutting the body",
+      "status": "approved",
+      "text": "Paul uses a harsh play on words here. The term translated “cutting the body” echoes the word for circumcision in the next verse but reduces the opponents’ practice to mutilation."
+    },
+    {
+      "note_id": "Phil.3.3-4-human-credentials",
+      "reference": "Phil.3.3-4",
+      "anchor": "human credentials",
+      "status": "approved",
+      "text": "Paul literally says that believers “put no confidence in the flesh.” Here “flesh” means human ancestry, religious privilege, status, and achievement—the credentials listed in verses 5–6."
+    },
+    {
+      "note_id": "Phil.3.3-circumcision-identity",
+      "reference": "Phil.3.3",
+      "anchor": "God’s true covenant people",
+      "status": "approved",
+      "text": "Literally, “we are the circumcision.” Circumcision was the physical sign identifying Israel as God’s covenant people. Here Paul applies that identity to those who worship by God’s Spirit, find their confidence in Christ, and do not rely on human ancestry or achievement."
+    },
+    {
+      "note_id": "Phil.3.5-pharisee",
+      "reference": "Phil.3.5",
+      "anchor": "a Pharisee, committed to obeying it strictly",
+      "status": "approved",
+      "text": "The Greek literally says, “as to the Law, a Pharisee.” Pharisees were known for strict observance of the Law. The reading text makes that background explicit while keeping the focus on Paul’s own commitment."
+    },
+    {
+      "note_id": "Phil.3.6-14-pursuit-wordplay",
+      "reference": "Phil.3.6,12,14",
+      "anchor": "persecuted … pressing on",
+      "status": "approved",
+      "text": "The Greek uses the same verb for Paul’s former pursuit of the church and his present pursuit of Christ’s goal. He once pursued Christ’s people to harm them; now he pursues the goal Christ has given him."
+    },
+    {
+      "note_id": "Phil.3.8-garbage",
+      "reference": "Phil.3.8",
+      "anchor": "garbage",
+      "status": "approved",
+      "text": "The Greek word translated “garbage” is a strong term for refuse, filth, or dung. Paul uses it to show how worthless his former advantages are compared with knowing Christ."
+    },
+    {
+      "note_id": "Phil.3.9-reliance-on-Christ",
+      "reference": "Phil.3.9",
+      "anchor": "reliance on Christ",
+      "status": "approved",
+      "text": "The Greek phrase translated “reliance on Christ” may also mean “Christ’s faithfulness.” The reading text understands it as our faith in Christ while preserving the alternative here."
+    },
+    {
+      "note_id": "Phil.3.11-somehow",
+      "reference": "Phil.3.11",
+      "anchor": "somehow",
+      "status": "approved",
+      "text": "Paul’s “somehow” expresses humility about the path by which he will reach the resurrection. It does not necessarily mean that he doubts God’s promise to raise those who belong to Christ."
+    },
+    {
+      "note_id": "Phil.3.12-15-complete-mature",
+      "reference": "Phil.3.12-15",
+      "anchor": "complete … mature",
+      "status": "approved",
+      "text": "The words translated “complete” in verse 12 and “mature” in verse 15 come from the same Greek root. Paul creates a deliberate tension: mature believers recognize that they have not yet arrived."
+    },
+    {
+      "note_id": "Phil.3.12-christ-took-hold",
+      "reference": "Phil.3.12",
+      "anchor": "the purpose for which Christ Jesus first took hold of me",
+      "status": "approved",
+      "text": "The Greek repeats a verb meaning “take hold of.” The phrase may mean that Paul pursues the purpose for which Christ took hold of him, as translated here, or that he pursues because Christ took hold of him. The word “first” makes Christ’s prior action explicit."
+    },
+    {
+      "note_id": "Phil.3.12-unstated-goal",
+      "reference": "Phil.3.12",
+      "anchor": "reached the goal",
+      "status": "approved",
+      "text": "The Greek does not state what Paul has not yet obtained. The context points to the goal described in verses 10–11 and developed through the race imagery in verses 13–14."
+    },
+    {
+      "note_id": "Phil.3.14-upward-call",
+      "reference": "Phil.3.14",
+      "anchor": "God’s upward call",
+      "status": "approved",
+      "text": "The Greek compactly speaks of “the prize of God’s upward call in Christ Jesus.” The phrase may describe God’s call drawing believers upward or His heavenly call. The reading text follows the upward-direction sense and expresses the prize as coming with that call."
+    },
+    {
+      "note_id": "Phil.3.16-living-consistently",
+      "reference": "Phil.3.16",
+      "anchor": "living in a way that matches how far we have already come",
+      "status": "approved",
+      "text": "The final Greek verb can picture walking in line or keeping in step. The reading text expresses this as living consistently with the progress believers have already made."
+    },
+    {
+      "note_id": "Phil.3.17-example-pattern",
+      "reference": "Phil.3.17",
+      "anchor": "my example … the pattern you see in us",
+      "status": "approved",
+      "text": "Paul first calls the believers to join one another in imitating him. He then broadens the example from “me” to “us,” including the coworkers who shared this pattern of life."
+    },
+    {
+      "note_id": "Phil.3.19-god-appetite",
+      "reference": "Phil.3.19",
+      "anchor": "Their god is their own appetite",
+      "status": "approved",
+      "text": "The Greek literally says “their god is the belly.” The image can refer broadly to bodily appetites rather than one particular desire or practice."
+    },
+    {
+      "note_id": "Phil.3.20-heavenly-citizenship",
+      "reference": "Phil.3.20",
+      "anchor": "our citizenship is in heaven",
+      "status": "approved",
+      "text": "The Greek uses a civic term that can mean “citizenship” or “commonwealth”—the community and government to which someone belongs."
+    },
+    {
+      "note_id": "Phil.3.21-conformity-link",
+      "reference": "Phil.3.21",
+      "anchor": "to be like His glorious body",
+      "status": "approved",
+      "text": "The Greek expressions in verses 10 and 21 come from the same word family, meaning to share the same form. Paul links becoming like Christ in His death with being made like Him in glory."
+    },
+    {
+      "note_id": "Phil.3.21-lowly-glorious-bodies",
+      "reference": "Phil.3.21",
+      "anchor": "our lowly bodies … His glorious body",
+      "status": "approved",
+      "text": "The Greek more literally contrasts “the body of our lowliness” with Christ’s “body of glory.” This describes the body’s present condition; it does not call the body evil."
+    }
+  ],
+  "copyright_protocol": {
+    "status": "DEFERRED_BATCH",
+    "provisional_heuristic_check": "complete",
+    "heuristic_findings": "none_obvious",
+    "hard_check_required": true,
+    "publication_clearance": false,
+    "required_prepublication_action": "Run the formal eight-translation New Testament batch audit through authorized paid APIs, using API.Bible where available and likely the official ESV API separately."
+  },
+  "final_audit": {
+    "date": "2026-08-02",
+    "engine_run_id": "FLT-PHP-03-20260802-10",
+    "github_run_id": 30739206096,
+    "artifact_id": 8830709468,
+    "artifact_name": "FLT-PHP-03-20260802-10-audit",
+    "artifact_sha256": "78eb2f6e1897f97314bba33fcb099f468813c71880f48aedca467f4b2f6c1a6c",
+    "auditors_total": 3,
+    "eligible_count": 3,
+    "blocking_defects": 0,
+    "warnings": 1,
+    "semantic_pass": true,
+    "notes_passed": 18,
+    "warning_disposition": "Philippians 3:5 'true Hebrew' is a nonblocking observation already considered and retained in the human chapter review; no repair required."
+  }
+}

@@ -1,11 +1,13 @@
 {
   "candidate_id": "PHP-03-001-011-HUMAN-SYNTHESIS-V2.2-SMOOTHED",
   "passage": "Philippians 3:1-11",
-  "status": "accepted_unit_pending_whole_chapter_review",
+  "status": "accepted_with_human_approved_chapter_repairs_and_final_whole_chapter_audit",
   "audit": {
-    "date": "2026-08-01",
-    "github_run": 30720117887,
-    "result": "three_of_three_eligible_zero_blocks",
+    "date": "2026-08-02",
+    "scope": "whole_chapter_exact_text_and_18_reader_notes",
+    "github_run": 30739206096,
+    "engine_run_id": "FLT-PHP-03-20260802-10",
+    "result": "three_of_three_eligible_zero_blocks_one_nonblocking_prior_wording_warning",
     "reader_notes_audited_with_text": true
   },
   "verse_renderings": [
@@ -43,11 +45,11 @@
     },
     {
       "reference": "Phil.3.9",
-      "text": "and belong completely to Him. I do not claim a right standing with God based on my own obedience to the Law. Instead, it comes from God through my reliance on Christ and is received by faith."
+      "text": "and belong completely to Him. My right standing with God does not come from my own obedience to the Law. It comes from God through my reliance on Christ and is received by faith."
     },
     {
       "reference": "Phil.3.10",
-      "text": "My goal is to know Christ intimately. I want to experience the power that raised Him from the dead and share in His sufferings, becoming like Him in His death,"
+      "text": "My goal is to know Christ intimately. I want to experience the power that raised Him from the dead, share in His sufferings, and become like Him in His death,"
     },
     {
       "reference": "Phil.3.11",
@@ -104,5 +106,20 @@
       "status": "provisional",
       "text": "Paul’s “somehow” expresses humility about the path by which he will reach the resurrection. It does not necessarily mean that he doubts God’s promise to raise those who belong to Christ."
     }
-  ]
+  ],
+  "prior_audit": {
+    "date": "2026-08-01",
+    "github_run": 30720117887,
+    "result": "three_of_three_eligible_zero_blocks",
+    "reader_notes_audited_with_text": true
+  },
+  "chapter_review": {
+    "github_run": 30735739260,
+    "human_approval_date": "2026-08-02",
+    "approved_repairs": [
+      "Phil.3.9",
+      "Phil.3.10"
+    ],
+    "chapter_level_note_approved": "Phil.3.6-14-pursuit-wordplay"
+  }
 }

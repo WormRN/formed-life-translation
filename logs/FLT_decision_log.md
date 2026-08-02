@@ -476,3 +476,29 @@ Reopen only if the whole-letter review or later contextual evidence exposes a co
 - **Documented warning:** One auditor noted that “But” expresses the contextual contrast although the Greek connective is formally causal. The wording remains within the semantic floor and proceeds to whole-chapter human review.
 - **Next gate:** Compile the corrected 3:1–21 text and notes for the scheduled whole-chapter movement, oral-flow, terminology, note-placement, validation, and freeze review.
 
+---
+
+## 2026-08-02 — Deferred Batch-Audit Protocol adopted
+
+- **Decision:** Replace unit-by-unit formal eight-translation comparison during first-draft production with a provisional heuristic screen followed by a mandatory New Testament-wide hard audit after the first draft is complete.
+- **Blindness safeguard:** The heuristic screen occurs only after the independent FLT wording is recorded and never enters the blind A/B/C drafting prompt.
+- **Heuristic scope:** Flag only obvious, highly distinctive multiword wording or dynamic interpretive resemblance. A clean result means `none_obvious`, not copyright clearance.
+- **Interim status:** First-draft units and chapters carry `DEFERRED_BATCH`, `hard_check_required: true`, and `publication_clearance: false`.
+- **Hard-audit plan:** Retrieve the eight active comparison translations through authorized paid APIs after first-draft completion—API.Bible where available and likely the official ESV API separately. Verify provider terms, version availability, permitted automated comparison, storage restrictions, and attribution at execution time.
+- **Publication gate:** No FLT public release may proceed until the exact release text is `HARD_CHECK_COMPLETE`; any later wording change requires formal re-audit of the affected passage and context.
+- **Governing documents amended:** `docs/current/FLT_copyright_independence_policy_v2.0.md` and `docs/current/FLT_translation_packet_template_v2.0.md`.
+
+---
+
+## 2026-08-02 — Philippians 3 whole chapter finalized and frozen
+
+- **Chapter:** Philippians 3:1–21
+- **Human-approved repairs:** Verse 9 now states directly that right standing with God does not come from obedience to the Law and comes from God through reliance on Christ; verse 10 now uses the parallel sequence “experience … share … become.”
+- **Human-approved chapter note:** Add the note linking Paul’s former pursuit of the church in verse 6 with his present pressing toward Christ’s goal in verses 12 and 14.
+- **Whole-chapter review:** GitHub Actions run 30735739260 passed movement, oral flow, terminology, note placement, and cumulative-expansion review.
+- **Final exact audit:** GitHub Actions run 30739206096; three auditors eligible; zero blocking defects; all 21 verses and all 18 reader notes passed.
+- **Nonblocking warning:** One auditor observed that “true Hebrew” in verse 5 mildly adds an authenticity signal. The wording was already considered and retained in the human chapter review; the other two auditors passed it cleanly.
+- **Frozen records:** `FLT_Philippians_3_chapter-review-v01.md`, `FLT_Philippians_3_notes-v01.md`, and `FLT_Philippians_3_freeze-v01.md`.
+- **Copyright status:** `DEFERRED_BATCH`; provisional heuristic check `none_obvious`; formal eight-translation API audit required before publication; `publication_clearance: false`.
+- **Next permitted work:** Begin Philippians 4 in the next session. Reopening Philippians 3 requires an explicit human editorial decision.
+

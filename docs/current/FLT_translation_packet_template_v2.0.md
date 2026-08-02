@@ -60,7 +60,7 @@ A Drafting Packet contains:
 - only the minimum literary context required to identify referents, boundaries, and discourse location;
 - relevant Style Guide rules;
 - relevant Matrix entries, limited to approved scope and unresolved cautions;
-- approved FLT precedents that have passed similarity review;
+- approved FLT precedents whose copyright status is recorded and permitted for the current stage; a `DEFERRED_BATCH` precedent may guide first-draft consistency but does not carry publication clearance;
 - identical common-goal drafting instructions and a neutral candidate identifier.
 
 Draft independence is not merely separation from other English drafts. It also requires control of shared interpretive framing.
@@ -157,11 +157,15 @@ It may contain:
 
 It produces alternatives and evidence for the human editor. It does not finalize the translation.
 
-The decision brief may be assembled in two stages:
+Under the Deferred Batch-Audit Protocol, the decision brief is assembled as follows:
 
 1. provisional synthesis identifies the viable candidate or candidates after non-copyright checks;
-2. the Copyright-Independence Checker reviews every candidate still eligible for recommendation;
-3. the final decision brief incorporates those copyright findings before human adjudication.
+2. after the independent wording has been recorded, a provisional heuristic copyright screen flags only obvious distinctive multiword or dynamic interpretive resemblance;
+3. the decision brief records `DEFERRED_BATCH`, any watchlist finding, and the absence of publication clearance;
+4. human adjudication, oral smoothing, semantic audit, and chapter freeze may continue;
+5. the formal eight-translation hard comparison is deferred to the New Testament-wide batch and remains mandatory before publication.
+
+A special packet may still run an earlier formal hard comparison when the human editor directs it or a serious heuristic concern warrants it.
 
 ## 1.6 Changed-Lines Packet
 
@@ -255,6 +259,11 @@ current_status:
 human_editor:
 comparison_blind: true | false
 contains_copyrighted_comparison_text: true | false
+copyright_protocol_status: PROVISIONAL_HEURISTIC_CHECK | DEFERRED_BATCH | HARD_CHECK_COMPLETE
+provisional_heuristic_check: pending | complete | not_applicable
+heuristic_findings: none_obvious | watchlist | human_review_now | not_applicable
+hard_check_required: true | false
+publication_clearance: true | false
 relevant_decision_log_refs:
 parent_packet_id:
 ```
@@ -287,6 +296,8 @@ integrity_checks:
   relevant_precedents_present_or_declared_none: true
   copyrighted_comparison_text_absent_for_blind_stage: true
   unreviewed_flt_text_absent_for_blind_stage: true
+  copyright_protocol_status_present: true
+  publication_clearance_not_claimed_without_hard_check: true
 ```
 
 A failed integrity check blocks the packet from running.
@@ -492,8 +503,10 @@ A precedent may enter a packet only when:
 
 - it has a Decision Log reference;
 - its scope overlaps the active context;
-- its wording has passed required copyright similarity review;
+- its copyright status is recorded and permitted for the current stage;
 - it has not been reopened or superseded.
+
+Before the New Testament-wide hard audit, a precedent with `DEFERRED_BATCH` may guide first-draft consistency when it was independently drafted, human-approved, and provisionally heuristic-checked. It must not be described as copyright-cleared. After the hard audit, publication-bound packets may use only the exact precedent wording covered by `HARD_CHECK_COMPLETE`.
 
 Format:
 
@@ -935,11 +948,30 @@ recommended_actions:
 
 ## 10.7 Copyright-Independence Checker
 
-Runs only after the independent FLT candidate has been recorded.
+Runs only after the independent FLT candidate has been recorded. It operates in one of two declared modes.
 
-This checker may receive the approved comparison set under the Copyright Independence Policy.
+### Provisional heuristic mode
 
-Owns:
+This mode receives no supplied comparison passages. It relies only on general model familiarity and flags obvious, highly distinctive multiword wording or dynamic interpretive resemblance. It may not claim exhaustive coverage, reconstruct comparison passages from memory, or issue copyright clearance.
+
+Required output:
+
+```yaml
+candidate_id:
+draft_commit_or_record:
+mode: PROVISIONAL_HEURISTIC_CHECK
+heuristic_findings: none_obvious | watchlist | human_review_now
+obvious_distinctive_risks:
+independent_path_assessment:
+recommended_action:
+copyright_protocol_status: DEFERRED_BATCH
+hard_check_required: true
+publication_clearance: false
+```
+
+### Formal hard-check mode
+
+This mode may receive the active comparison set through authorized sources under the Copyright Independence Policy. It owns:
 
 - exact overlap;
 - distinctive phrase overlap;
@@ -955,7 +987,10 @@ Required output:
 ```yaml
 candidate_id:
 draft_commit_or_record:
+mode: DEFERRED_HARD_CHECK
+batch_or_run_id:
 comparison_set:
+provider_and_version_ids:
 findings:
 risk_category: green | yellow | orange | red
 distinctive_matches:
@@ -966,7 +1001,11 @@ independent_path_assessment:
 recommended_action:
 human_review_required:
 consultation_log_entry:
+hard_check_status: incomplete | repairs_required | complete
+publication_clearance: false | true
 ```
+
+The planned New Testament-wide audit will retrieve passages through authorized paid APIs after the first draft is complete—API.Bible where available and likely the official ESV API separately. Availability, licensing, automated-comparison permission, version identifiers, storage limits, and attribution requirements must be verified when the audit begins. Complete copyrighted comparison texts must not be committed to the repository; preserve metadata, derived reports, findings, and decisions.
 
 The checker must not rewrite solely to reduce overlap.
 
@@ -1016,7 +1055,8 @@ A candidate cannot proceed to human finalization when:
 - a required Matrix or precedent conflict remains unresolved;
 - a critical ambiguity is silently resolved;
 - a level 4 or 5 variant lacks human decision;
-- the Copyright Checker returns red;
+- a formal hard-check Copyright Checker returns red;
+- a unit intended for publication remains `DEFERRED_BATCH` or lacks `publication_clearance: true`;
 - a human-only issue has been settled by an agent;
 - source or packet integrity is compromised.
 
@@ -1028,7 +1068,8 @@ A candidate returns for revision when:
 - Communication Checker identifies a first-read failure;
 - Discourse Checker identifies a broken argument or paragraph movement;
 - Theological Checker identifies likely distortion;
-- Copyright Checker returns orange unless the human editor explicitly retains and documents the wording.
+- a formal hard-check Copyright Checker returns orange unless the human editor explicitly retains and documents the wording;
+- a provisional heuristic checker returns `human_review_now`, in which case the concern must be addressed or expressly deferred by the human editor while the unit remains `DEFERRED_BATCH`.
 
 ## 11.3 Advisory Findings
 
@@ -1156,6 +1197,8 @@ human_decision:
   matrix_updates:
   decision_log_updates:
   copyright_action:
+  copyright_protocol_status: PROVISIONAL_HEURISTIC_CHECK | DEFERRED_BATCH | HARD_CHECK_COMPLETE
+  publication_clearance: true | false
   further_checks:
   status:
 ```
@@ -1238,6 +1281,8 @@ Required checks:
 2. Does it alter agency, scope, logic, tone, ambiguity, or theological force?
 3. Does it conflict with the Matrix or Decision Log?
 4. Does it create new copyright risk?
+   - Before the hard audit: rerun the provisional heuristic screen and retain `DEFERRED_BATCH`.
+   - After `HARD_CHECK_COMPLETE`: rerun the formal hard check for the changed verse, paragraph, and necessary surrounding context.
 5. Does it improve first-read and oral clarity?
 6. Does it break paragraph flow or repetition?
 7. Does it require a new footnote?
@@ -1301,6 +1346,8 @@ A unit may be marked provisionally complete when:
 8. copyright review status is acceptable for the current stage;
 9. remaining issues are explicitly deferred rather than forgotten.
 
+A first-draft unit or chapter may stop at `DEFERRED_BATCH` with `publication_clearance: false`. No public-release package may pass the stopping rule until the exact release text is `HARD_CHECK_COMPLETE`.
+
 The goal is defensible progress, not exhausted perfection.
 
 ---
@@ -1315,7 +1362,8 @@ Each completed unit must preserve:
 - anonymous cross-critiques;
 - focused checker reports;
 - revision records;
-- copyright consultation record;
+- copyright protocol record, including heuristic status and any watchlist finding;
+- formal copyright consultation record when a hard check has occurred;
 - decision brief;
 - human decision;
 - applicable Decision Log and Matrix update references.
@@ -1350,7 +1398,7 @@ Use this compressed form for an ordinary worker call.
 [Only applicable senses, statuses, scope, restrictions, and unresolved items]
 
 ## Relevant Precedents
-[Only scoped, similarity-cleared precedents]
+[Only scoped precedents whose copyright status is recorded and permitted for this stage; `DEFERRED_BATCH` does not mean publication-cleared]
 
 ## Governing Core
 1. Dynamic expression is the default.
@@ -1417,17 +1465,20 @@ PASS | PASS WITH NOTE | REVISE | BLOCK | HUMAN DECISION
 8. Run focused non-copyright checkers.
 9. Use targeted revision for concrete defects, with no more than two machine revision cycles for the same issue set.
 10. Produce provisional synthesis and identify candidates eligible for recommendation.
-11. Run copyright comparison on every candidate still eligible for recommendation.
-12. Finalize the decision brief with copyright findings included.
-13. Human editor creates or selects a provisional exact synthesis.
-14. Run the listener-only Oral-English diagnosis.
-15. Run source-aware smoothing proposals with a complete change log and constitutional checks.
-16. Human editor approves the exact post-smoothing wording.
-17. Seal and run the expanded exact-candidate semantic audit.
-18. Resolve any BLOCK or human-only finding; never permit a machine to finalize wording.
-19. Log decisions and update the Matrix or Style Guide when warranted.
-20. Run chapter-level literary and oral review; any wording change returns through changed-lines review, smoothing, and fresh audit.
-21. Mark provisionally complete when the stopping rule is met.
+11. After the independent wording is recorded, run the provisional heuristic copyright screen without supplied comparison passages.
+12. Record `DEFERRED_BATCH`, any watchlist finding, `hard_check_required: true`, and `publication_clearance: false`.
+13. Finalize the decision brief with the heuristic finding and deferred status included.
+14. Human editor creates or selects a provisional exact synthesis.
+15. Run the listener-only Oral-English diagnosis.
+16. Run source-aware smoothing proposals with a complete change log and constitutional checks.
+17. Human editor approves the exact post-smoothing wording.
+18. Seal and run the expanded exact-candidate semantic audit.
+19. Resolve any BLOCK or human-only finding; never permit a machine to finalize wording.
+20. Log decisions and update the Matrix or Style Guide when warranted.
+21. Run chapter-level literary and oral review; any wording change returns through changed-lines review, smoothing, and fresh audit.
+22. Freeze the unit or chapter as first-draft text with `DEFERRED_BATCH` when the stopping rule is met.
+23. After the first draft of the New Testament is complete, run the authorized eight-translation API batch audit, resolve and rerun findings, and record `HARD_CHECK_COMPLETE`.
+24. Permit publication only for the exact text carrying `publication_clearance: true`; formally recheck any wording changed after the batch audit.
 
 ---
 
