@@ -1,15 +1,17 @@
 {
   "schema_version": 1,
-  "candidate_id": "PHP-04-001-003-HUMAN-SYNTHESIS-V2.2",
+  "candidate_id": "PHP-04-001-003-HUMAN-SYNTHESIS-V2.2-SMOOTHED",
   "passage": "Philippians 4:1-3",
-  "status": "provisional_human_synthesis_pending_oral_smoothing",
+  "status": "human_approved_smoothed_candidate_pending_constitutional_audit",
   "human_editor_selection": {
     "date": "2026-08-02",
-    "exact_wording_preserved": true,
+    "exact_wording_preserved": false,
     "blind_draft_run": 30757547001,
     "engine_run_id": "FLT-PHP-04-20260802-2",
     "candidate_evidence_count": 3,
-    "disclosed_candidate_defect": "Gemini Pro's authoritative verse-2 field duplicated a fragment; it was preserved as malformed evidence and was not silently repaired or selected."
+    "disclosed_candidate_defect": "Gemini Pro's authoritative verse-2 field duplicated a fragment; it was preserved as malformed evidence and was not silently repaired or selected.",
+    "oral_smoothing_run": 30762327233,
+    "oral_review_decision": "Retain verses 1-2 exactly; adopt the minimal verse-3 clarification; approve all five reader notes."
   },
   "verse_renderings": [
     {
@@ -22,7 +24,7 @@
     },
     {
       "reference": "Phil.4.3",
-      "text": "Yes, and I ask you too, my loyal partner, to help these women. They struggled alongside me in the work of the good news, together with Clement and the rest of my coworkers, whose names are in the book of life."
+      "text": "Yes, and I ask you too, my loyal partner, to help these women. They struggled alongside me in the work of the good news, together with Clement and the rest of my coworkers. The names of all these coworkers are in the book of life."
     }
   ],
   "reader_notes": [
@@ -30,44 +32,45 @@
       "note_id": "Phil.4.1-crown",
       "reference": "Phil.4.1",
       "anchor": "my crown",
-      "status": "proposed",
+      "status": "approved",
       "text": "The Greek pictures a victory wreath. Paul means that the believers themselves are his honor and reward."
     },
     {
       "note_id": "Phil.4.2-equal-appeal-mindset",
       "reference": "Phil.4.2",
       "anchor": "I appeal … I appeal",
-      "status": "proposed",
+      "status": "approved",
       "text": "Paul repeats the same appeal with each woman’s name, placing equal responsibility on both. “Mindset” continues a recurring theme in this letter."
     },
     {
       "note_id": "Phil.4.3-loyal-partner",
       "reference": "Phil.4.3",
       "anchor": "my loyal partner",
-      "status": "proposed",
+      "status": "approved",
       "text": "The Greek literally says “genuine yokefellow.” The person’s identity is unknown, and the expression may possibly be a personal name."
     },
     {
       "note_id": "Phil.4.3-shared-struggle",
       "reference": "Phil.4.3",
       "anchor": "struggled alongside me",
-      "status": "proposed",
+      "status": "approved",
       "text": "The Greek uses the same “struggle together” word used for the whole church’s shared effort in Philippians 1:27."
     },
     {
       "note_id": "Phil.4.3-book-of-life",
       "reference": "Phil.4.3",
       "anchor": "the book of life",
-      "status": "proposed",
+      "status": "approved",
       "text": "This is a biblical image of God’s secure record of those who belong to Him and receive eternal life."
     }
   ],
   "copyright_protocol": {
     "mode": "PROVISIONAL_HEURISTIC_CHECK",
     "status": "DEFERRED_BATCH",
-    "provisional_heuristic_check": "complete",
+    "provisional_heuristic_check": "complete_with_delta",
     "heuristic_findings": "none_obvious",
     "hard_check_required": true,
-    "publication_clearance": false
+    "publication_clearance": false,
+    "delta_check": "none_obvious"
   }
 }
