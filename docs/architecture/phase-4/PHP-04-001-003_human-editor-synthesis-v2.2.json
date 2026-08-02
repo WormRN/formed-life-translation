@@ -2,7 +2,7 @@
   "schema_version": 1,
   "candidate_id": "PHP-04-001-003-HUMAN-SYNTHESIS-V2.2-SMOOTHED",
   "passage": "Philippians 4:1-3",
-  "status": "human_approved_smoothed_candidate_pending_constitutional_audit",
+  "status": "accepted_unit_pending_whole_chapter_review",
   "human_editor_selection": {
     "date": "2026-08-02",
     "exact_wording_preserved": false,
@@ -72,5 +72,14 @@
     "hard_check_required": true,
     "publication_clearance": false,
     "delta_check": "none_obvious"
+  },
+  "audit": {
+    "date": "2026-08-02",
+    "github_run": 30763406223,
+    "result": "three_of_three_eligible_zero_blocks",
+    "reader_notes_audited_with_text": true,
+    "documented_warnings": [
+      "One auditor noted possible narrow recovery of 'all these coworkers'; retained as the human-approved reference to the entire preceding coworker group."
+    ]
   }
 }
