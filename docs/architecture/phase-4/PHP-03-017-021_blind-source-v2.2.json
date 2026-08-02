@@ -1,0 +1,391 @@
+{
+  "chapter_id": "PHP-03",
+  "book": "Philippians",
+  "chapter": 3,
+  "source_edition": "SBLGNT",
+  "tone": "pastorally urgent, tearful, morally contrasting, communally imitative, and confidently hopeful in Christ's return and bodily renewal",
+  "target_reader": "religion-naive adults and older adolescents near grade 6",
+  "translation_identity": "firmly dynamic-equivalence, NLT-like in readability but independent",
+  "test_purpose": "Fresh Engine 2.2 passage-sense-resolution drafting of Philippians 3:17-21",
+  "sealed_context": {
+    "prior_flt_wording_present": false,
+    "prior_candidates_present": false,
+    "comparison_translations_present": false,
+    "conversational_drafts_present": false,
+    "instruction": "Translate from the Greek and the completed source-side passage-sense brief only. Do not reconstruct, imitate, or refer to previous FLT wording, previous candidates, comparison translations, or conversation drafts.",
+    "editor_benchmark_present": false
+  },
+  "governing_rules": [
+    "Passage-sense resolution precedes English composition. Follow the completed source-side brief and expose genuinely viable alternatives in the review apparatus.",
+    "All three candidates pursue the same constitutional goal; no provider receives a readability, fidelity, or blended specialty.",
+    "Write natural English that a religion-naive adult can follow on one hearing. The main assertion should arrive before the listener loses it.",
+    "Build English sentences and paragraphs rather than preserving Greek clause architecture. Split, combine, reorder, or unpack when comprehension benefits.",
+    "Actively avoid stacked clauses, overloaded breaths, preposition clusters, delayed subjects or main verbs, abstract-noun chains, embedded explanation, and translated-sounding prose.",
+    "Vary English transitions when needed for the ear, but preserve deliberate repetition, escalation, metaphor, emphasis, and connective logic.",
+    "Preserve every material proposition; cause, contrast, purpose, result, and sequence; meaningful ambiguity; agency, force, certainty, and key-term links.",
+    "The prose serves the reader; notes serve accountability. Do not leave the reading text opaque and expect a footnote to supply material meaning.",
+    "Keep candidate alternatives in the review apparatus, not in brackets in the reading text, unless the human editor later decides otherwise.",
+    "Propose notes for literal-source transparency, meaningful word-family links, metaphors hidden by dynamic rendering, and disputed constructions.",
+    "Footnotes disclose translation decisions and establish critical trust; they are not apologies for, or repairs to, an inadequate reading text.",
+    "No comparison translations, traditional benchmark wording, prior FLT wording, prior candidates, editor benchmark, conversation drafts, or sealed human wording may enter blind drafting.",
+    "Record oral-design moves and remaining oral risks; do not claim that a drafting worker has certified its own oral quality."
+  ],
+  "existing_decisions": [
+    "Capitalize pronouns referring to deity.",
+    "Render theological vocabulary contextually in reader-facing English; do not preserve opaque church terms merely because they are traditional.",
+    "Use brothers and sisters when the context addresses the whole church and the Greek plural is inclusive.",
+    "Footnotes may disclose disputed constructions, traditional glosses, cultural force, literal wording, and source-language links, but may not compensate for material meaning missing from the reading text.",
+    "Preserve contextual links across accepted units without importing or reopening their accepted English wording during blind drafting.",
+    "The human editor alone selects, synthesizes, approves smoothing changes, and finalizes wording."
+  ],
+  "matrix_alerts": [
+    {
+      "lemma": "συμμιμητής / τύπος",
+      "status": "passage-specific communal-example alert",
+      "neutral_range": "fellow imitator, one who joins in imitating; example, pattern, model, or mark",
+      "instruction": "Preserve the communal invitation to imitate Paul together and his shift from himself to the broader apostolic pattern represented by us."
+    },
+    {
+      "lemma": "περιπατέω",
+      "status": "passage-specific repeated-metaphor alert",
+      "neutral_range": "walk, live, conduct oneself, or follow a way of life",
+      "instruction": "Verses 17-18 contrast two observable ways of life. Use natural conduct language while preserving the repeated contrast."
+    },
+    {
+      "lemma": "κοιλία",
+      "status": "passage-specific disputed-metaphor alert",
+      "neutral_range": "belly, stomach, appetite, or bodily desire",
+      "instruction": "Do not silently narrow the belly image to food, sexual desire, or any named practice. If rendered dynamically, disclose the literal image and its range."
+    },
+    {
+      "lemma": "φρονέω",
+      "status": "book-level weighted term",
+      "neutral_range": "think, set one's mind, hold an attitude, adopt a mindset, or be concerned with",
+      "instruction": "Verse 19 contrasts an earthbound orientation with the forward and heavenly orientation of the surrounding passage; express settled outlook, not a passing thought."
+    },
+    {
+      "lemma": "πολίτευμα",
+      "status": "passage-specific civic-language alert",
+      "neutral_range": "citizenship, commonwealth, civic community, or state",
+      "instruction": "Preserve belonging to heaven and the civic force of the term without implying that embodied earthly life is disposable or that believers escape permanently from creation."
+    },
+    {
+      "lemma": "μετασχηματίζω / σύμμορφος",
+      "status": "passage-specific bodily-transformation and word-family alert",
+      "neutral_range": "transform, change in form; conformed to, sharing the same form, or made like",
+      "instruction": "State clearly that Christ will transform believers' bodies to be like His glorious body, preserving bodily continuity and the literary link with conformity to His death in verse 10."
+    },
+    {
+      "lemma": "ταπείνωσις / δόξα",
+      "status": "passage-specific contrast alert",
+      "neutral_range": "lowliness, humiliation, humble condition; glory, honor, or splendor",
+      "instruction": "Recreate the contrast between the present body's lowly condition and Christ's glorious body without implying that the body itself is evil."
+    },
+    {
+      "lemma": "ὑποτάσσω",
+      "status": "passage-specific sovereignty alert",
+      "neutral_range": "subject, subordinate, bring under rule, or bring under control",
+      "instruction": "Keep Christ as the powerful agent who is able to bring all things under His rule; do not reduce this to impersonal power or mere influence."
+    }
+  ],
+  "units": [
+    {
+      "unit_id": "PHP-03-017-021",
+      "passage": "Philippians 3:17-21",
+      "title": "Examples to follow, earthbound enemies, and heavenly hope",
+      "known_issues": [
+        "Verse 17 begins with a rare compound meaning become fellow imitators of me. Preserve both Paul's exemplary role and the communal force without producing awkward imitation language.",
+        "Verse 17 moves from Paul's singular me to the plural us as the pattern by which other faithful lives can be recognized. Do not collapse the two references into an unnamed generic example.",
+        "Verses 17-18 repeat walk or live to contrast two embodied patterns of conduct. Preserve the contrast even if natural English varies the verb.",
+        "Verse 18 does not identify the people called enemies of Christ's cross. Do not label them as a specific historical group or explain the nature of their opposition beyond the contextual evidence.",
+        "Paul says this while weeping. Preserve his grief so the warning does not sound detached, contemptuous, or triumphant.",
+        "Verse 19 gives four compact descriptions: their end is destruction, their god is the belly, they glory in shame, and their settled attention is earthly. Unpack only enough for one-hearing clarity.",
+        "Their god is the belly is vivid and disputed. Appetite is a likely contextual sense, but the reading must not narrow it to food, sexuality, or any single bodily practice without evidence.",
+        "Glory in their shame describes taking pride in what ought to bring shame. Preserve the moral reversal without making Paul say they consciously recognize it as shameful.",
+        "Verse 20 contrasts their earthly orientation with the believers' heavenly citizenship or commonwealth and expectation of the Savior from there. Preserve the civic belonging and the direction of Christ's arrival.",
+        "Heavenly citizenship must not sound like contempt for embodied life, because verse 21 climaxes with Christ transforming believers' bodies rather than discarding them.",
+        "Verse 21 contrasts the present body's lowly condition with Christ's glorious body. Avoid language that treats physical bodies as morally bad or states more specifically than the source why they are lowly.",
+        "Verse 21 echoes verse 10: believers who become conformed to Christ's death will be made conformed to His glorious body. Preserve the same-form idea in readable English and disclose the source link in a note.",
+        "The final clause grounds bodily transformation in Christ's effective power to bring all things under His rule. Keep the universal scope, Christ's agency, and the force of even.",
+        "Whole-chapter movement and terminology will be reviewed after this final unit is accepted; this unit must not reopen Philippians 3:1-16 during blind drafting."
+      ],
+      "verses": [
+        {
+          "reference": "Phil.3.17",
+          "greek": "Συμμιμηταί μου γίνεσθε ἀδελφοί καὶ σκοπεῖτε τοὺς οὕτω περιπατοῦντας καθὼς ἔχετε τύπον ἡμᾶς"
+        },
+        {
+          "reference": "Phil.3.18",
+          "greek": "πολλοὶ γὰρ περιπατοῦσιν οὓς πολλάκις ἔλεγον ὑμῖν νῦν δὲ καὶ κλαίων λέγω τοὺς ἐχθροὺς τοῦ σταυροῦ τοῦ Χριστοῦ"
+        },
+        {
+          "reference": "Phil.3.19",
+          "greek": "ὧν τὸ τέλος ἀπώλεια ὧν ὁ θεὸς ἡ κοιλία καὶ ἡ δόξα ἐν τῇ αἰσχύνῃ αὐτῶν οἱ τὰ ἐπίγεια φρονοῦντες"
+        },
+        {
+          "reference": "Phil.3.20",
+          "greek": "ἡμῶν γὰρ τὸ πολίτευμα ἐν οὐρανοῖς ὑπάρχει ἐξ οὗ καὶ σωτῆρα ἀπεκδεχόμεθα κύριον Ἰησοῦν Χριστόν"
+        },
+        {
+          "reference": "Phil.3.21",
+          "greek": "ὃς μετασχηματίσει τὸ σῶμα τῆς ταπεινώσεως ἡμῶν σύμμορφον τῷ σώματι τῆς δόξης αὐτοῦ κατὰ τὴν ἐνέργειαν τοῦ δύνασθαι αὐτὸν καὶ ὑποτάξαι αὑτῷ τὰ πάντα"
+        }
+      ]
+    }
+  ],
+  "passage_sense_resolution": {
+    "gate_version": "2.2",
+    "status": "complete_for_blind_drafting",
+    "prepared_from": "SBLGNT text, parsed morphology, local discourse, source-language analysis, and governing FLT rules; no comparison translation or prior FLT English",
+    "visibility_attestation": {
+      "source_side_only": true,
+      "prior_flt_wording_absent": true,
+      "prior_candidates_absent": true,
+      "editor_benchmark_absent": true,
+      "comparison_translations_absent": true
+    },
+    "passage_argument": [
+      "Paul calls the whole church to join in imitating him and to notice people whose lives follow the apostolic pattern they have already seen.",
+      "This discernment is urgent because many people live as enemies of Christ's cross; Paul repeats the warning with tears and describes their destruction, appetite-rule, inverted pride, and earthbound outlook.",
+      "In direct contrast, the believers' civic belonging is in heaven, from which they eagerly await the Lord Jesus Christ as Savior.",
+      "Christ will transform their presently lowly bodies to share the form of His glorious body, exercising the same effective power by which He can bring all things under His rule."
+    ],
+    "proposition_map": [
+      {
+        "references": ["Phil.3.17"],
+        "statement": "Paul commands the brothers and sisters to become fellow imitators of him and to observe those who live according to the apostolic pattern represented by Paul and his coworkers."
+      },
+      {
+        "references": ["Phil.3.18"],
+        "statement": "Many people live in a way that makes them enemies of Christ's cross, a reality Paul has often warned about and now reports again while weeping."
+      },
+      {
+        "references": ["Phil.3.19"],
+        "statement": "These people's end is destruction, their belly functions as their god, their pride rests in what is shameful, and their settled outlook is fixed on earthly things."
+      },
+      {
+        "references": ["Phil.3.20"],
+        "statement": "By contrast, the believers' citizenship or commonwealth exists in heaven, and from there they eagerly await the Savior, the Lord Jesus Christ."
+      },
+      {
+        "references": ["Phil.3.21"],
+        "statement": "Christ will transform believers' bodies in their present lowly condition to be conformed to His glorious body, by the effective power that enables Him even to subject all things to Himself."
+      }
+    ],
+    "expressions": [
+      {
+        "sense_id": "php3_17_fellow_imitators",
+        "references": ["Phil.3.17"],
+        "source_expression": "Συμμιμηταί μου γίνεσθε ἀδελφοί",
+        "status": "alternatives_retained",
+        "contextual_function": "A communal command inviting the whole church to join one another in treating Paul's Christward life as an example.",
+        "primary_sense": "Brothers and sisters, join together in following my example.",
+        "viable_alternatives": [
+          "Brothers and sisters, become fellow imitators of me.",
+          "Brothers and sisters, follow my example together."
+        ],
+        "discourse_evidence": "The compound noun includes a together or fellow element, the plural command addresses the community, and the immediately following instruction expands imitation to other lives shaped by the apostolic pattern.",
+        "reading_text_guidance": "Use natural example language while making the communal force perceptible; do not present Paul as asking for isolated personality imitation or unquestioning hero worship.",
+        "literal_note_guidance": "If the reading text uses follow my example together, a note may disclose that the Greek literally calls the believers fellow imitators of Paul.",
+        "choice_risks": "Imitate is source-transparent but can sound like copying mannerisms; follow my example is natural but can hide the compound's communal force.",
+        "human_decision_required": true,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "php3_17_me_us_pattern",
+        "references": ["Phil.3.17"],
+        "source_expression": "μου ... καθὼς ἔχετε τύπον ἡμᾶς",
+        "status": "alternatives_retained",
+        "contextual_function": "Paul's personal example broadens into the pattern embodied by us, allowing the church to recognize other people who live the same way.",
+        "primary_sense": "Notice those who live this way, following the pattern you have in us.",
+        "viable_alternatives": [
+          "Keep your eyes on those whose lives match the example we gave you.",
+          "Pay attention to those who follow the pattern you see in us."
+        ],
+        "discourse_evidence": "The sentence deliberately moves from singular me to plural us; skopeite calls for attentive observation, and typos presents Paul and his associates as an identifiable pattern.",
+        "reading_text_guidance": "Preserve attentive observation, faithful lives, and the shift to the plural apostolic example; avoid an abstract pattern clause that cannot be followed by ear.",
+        "literal_note_guidance": "A note is appropriate if the reading text smooths the shift: Paul first names himself, then refers to the broader example found in us."
+        ,"choice_risks": "Example we gave is natural but supplies a giving action; pattern you see in us is closer but less conversational; watch can sound suspicious rather than admiring.",
+        "human_decision_required": true,
+        "reader_note_required": true,
+        "audit_text_and_note_together": true
+      },
+      {
+        "sense_id": "php3_17_18_two_ways_of_life",
+        "references": ["Phil.3.17", "Phil.3.18"],
+        "source_expression": "τοὺς οὕτω περιπατοῦντας ... πολλοὶ γὰρ περιπατοῦσιν",
+        "status": "resolved",
+        "contextual_function": "The repeated walking metaphor contrasts observable Christward conduct with the conduct of the cross's enemies.",
+        "primary_sense": "Notice those who live according to the apostolic pattern, because many others live as enemies of Christ's cross.",
+        "viable_alternatives": [],
+        "discourse_evidence": "The same present-tense walk verb occurs on both sides of gar, making the negative examples the reason for watching faithful examples.",
+        "reading_text_guidance": "Preserve the causal connection and the contrast between two ways of living even if English uses live rather than walk.",
+        "literal_note_guidance": "No note is normally required if the contrast remains clear in the reading text.",
+        "choice_risks": "Varying the repeated verb can hide the contrast; repeating walk can sound translated or be mistaken for literal movement.",
+        "human_decision_required": false,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "php3_18_enemies_cross_tears",
+        "references": ["Phil.3.18"],
+        "source_expression": "νῦν δὲ καὶ κλαίων λέγω τοὺς ἐχθροὺς τοῦ σταυροῦ τοῦ Χριστοῦ",
+        "status": "alternatives_retained",
+        "contextual_function": "Paul sorrowfully identifies many people's lived opposition to the saving, self-giving pattern and claims of Christ's cross without specifying their historical identity.",
+        "primary_sense": "I now tell you again with tears: many live as enemies of Christ's cross.",
+        "viable_alternatives": [
+          "Their lives oppose the cross of Christ.",
+          "They live in a way that shows they are enemies of Christ's cross."
+        ],
+        "discourse_evidence": "The accusative enemies completes Paul's reporting verb after the relative clause; repeated walk frames the label as a way of life, and the participle weeping marks grief rather than hostility.",
+        "reading_text_guidance": "Keep Paul's repeated warning, present tears, the many people, and Christ's cross; do not identify the group or define their opposition more narrowly than the text does.",
+        "literal_note_guidance": "Retain the identity and force alternatives in the apparatus; a reader note is needed only if the reading text replaces enemies of Christ's cross with an explanatory paraphrase.",
+        "choice_risks": "Enemies of the cross preserves Paul's image but may be opaque; oppose everything the cross means explains too much; cross-deniers implies a stated denial the text does not name.",
+        "human_decision_required": true,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "php3_19_end_destruction",
+        "references": ["Phil.3.19"],
+        "source_expression": "ὧν τὸ τέλος ἀπώλεια",
+        "status": "resolved",
+        "contextual_function": "The first of four descriptions states the final outcome toward which their way of life leads.",
+        "primary_sense": "Their end is destruction.",
+        "viable_alternatives": [],
+        "discourse_evidence": "Telos marks the outcome or end and apoleia names ruin or destruction; the clause stands first for force before the three character descriptions.",
+        "reading_text_guidance": "State the grave outcome plainly and preserve its initial prominence; do not weaken it to trouble or add an explicit judgment mechanism absent from the clause.",
+        "literal_note_guidance": "No note is normally required.",
+        "choice_risks": "They are headed for destruction is clear but turns the nominal declaration into trajectory; eternal destruction adds a duration not stated here.",
+        "human_decision_required": false,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "php3_19_god_belly",
+        "references": ["Phil.3.19"],
+        "source_expression": "ὧν ὁ θεὸς ἡ κοιλία",
+        "status": "alternatives_retained",
+        "contextual_function": "A deliberately shocking metaphor says that bodily appetite or the belly occupies the ruling place that belongs to God.",
+        "primary_sense": "Their appetite is their god.",
+        "viable_alternatives": [
+          "Their god is their belly.",
+          "They worship their own bodily desires."
+        ],
+        "discourse_evidence": "Koilia literally names the belly or stomach and can extend to appetite; the surrounding clauses depict an earthbound orientation, but the text does not identify one specific appetite or practice.",
+        "reading_text_guidance": "Keep the metaphor's force and their self-ruled appetite while leaving the specific referent broad; do not reduce it to overeating, sex, dietary law, or bodily existence itself.",
+        "literal_note_guidance": "If appetite or desires appears in the reading text, disclose that the Greek literally says their god is the belly and that the image can refer broadly to bodily appetites.",
+        "choice_risks": "Belly is vivid but may sound comic or mean only food; appetite is clear but singularly abstract; bodily desires is broader and more interpretive.",
+        "human_decision_required": true,
+        "reader_note_required": true,
+        "audit_text_and_note_together": true
+      },
+      {
+        "sense_id": "php3_19_glory_shame_earth",
+        "references": ["Phil.3.19"],
+        "source_expression": "ἡ δόξα ἐν τῇ αἰσχύνῃ αὐτῶν οἱ τὰ ἐπίγεια φρονοῦντες",
+        "status": "resolved",
+        "contextual_function": "The final descriptions expose inverted values and a settled orientation toward earthly things, preparing the contrast with heavenly citizenship.",
+        "primary_sense": "They take pride in what should bring them shame, and they set their minds on earthly things.",
+        "viable_alternatives": [],
+        "discourse_evidence": "Glory is located in their shame, while the substantival participle characterizes them as people habitually directing their mindset toward earthly things; verse 20 answers with heavenly belonging.",
+        "reading_text_guidance": "Make the pride-shame reversal understandable without claiming they acknowledge the shame, and express a settled earthbound outlook rather than momentary attention or responsible earthly concern.",
+        "literal_note_guidance": "No note is normally required if both the reversal and the earth-heaven contrast remain visible.",
+        "choice_risks": "What should shame them supplies the moral judgment for clarity; shameful things can imply a narrower list; think only about this world may overstate exclusivity.",
+        "human_decision_required": false,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "php3_20_heavenly_citizenship",
+        "references": ["Phil.3.20"],
+        "source_expression": "ἡμῶν γὰρ τὸ πολίτευμα ἐν οὐρανοῖς ὑπάρχει",
+        "status": "alternatives_retained",
+        "contextual_function": "A sharp communal contrast: unlike the earthbound people just described, the believers' defining civic identity and commonwealth belong in heaven.",
+        "primary_sense": "But our citizenship is in heaven.",
+        "viable_alternatives": [
+          "But we are citizens of heaven.",
+          "But the commonwealth we belong to is in heaven."
+        ],
+        "discourse_evidence": "Politeuma is civic language that can denote citizenship, commonwealth, or political community; the possessive our and following from where emphasize shared belonging and heavenly origin.",
+        "reading_text_guidance": "Use clear civic belonging language and keep the contrast with earthly orientation; do not turn heaven into a merely private destination or imply permanent escape from embodied creation.",
+        "literal_note_guidance": "Explain that the Greek civic term can refer to citizenship or the commonwealth to which someone belongs; the reading text chooses the form clearest in context.",
+        "choice_risks": "Citizenship is familiar but abstract; citizens of heaven is concrete but changes the grammatical image; commonwealth is precise but above the target reading level.",
+        "human_decision_required": true,
+        "reader_note_required": true,
+        "audit_text_and_note_together": true
+      },
+      {
+        "sense_id": "php3_20_savior_from_heaven",
+        "references": ["Phil.3.20"],
+        "source_expression": "ἐξ οὗ καὶ σωτῆρα ἀπεκδεχόμεθα κύριον Ἰησοῦν Χριστόν",
+        "status": "resolved",
+        "contextual_function": "Heavenly belonging becomes active expectation: from heaven the community eagerly awaits the Lord Jesus Christ in His role as Savior.",
+        "primary_sense": "From heaven we eagerly await our Savior, the Lord Jesus Christ.",
+        "viable_alternatives": [],
+        "discourse_evidence": "Ex hou refers back to heaven, apekdechomai conveys eager sustained waiting, and Savior stands predicatively before the full title Lord Jesus Christ.",
+        "reading_text_guidance": "Keep the direction from heaven, active eager waiting, Savior, and the full title; do not reduce the clause to a vague hope or omit Christ's return movement.",
+        "literal_note_guidance": "No note is normally required if the reading text states the direction and expectation clearly.",
+        "choice_risks": "Come from heaven is explicit and natural but supplies the arrival verb; await from heaven can briefly attach the phrase to the believers rather than the Savior.",
+        "human_decision_required": false,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "php3_21_lowly_glorious_bodies",
+        "references": ["Phil.3.21"],
+        "source_expression": "μετασχηματίσει τὸ σῶμα τῆς ταπεινώσεως ἡμῶν σύμμορφον τῷ σώματι τῆς δόξης αὐτοῦ",
+        "status": "alternatives_retained",
+        "contextual_function": "The awaited Savior will transform believers' bodies in their present lowly condition so that they share the form of His body characterized by glory.",
+        "primary_sense": "He will transform our lowly bodies to be like His glorious body.",
+        "viable_alternatives": [
+          "He will change our weak and mortal bodies to be like His glorious body.",
+          "He will transform our bodies in their humble condition to match His body in its glory."
+        ],
+        "discourse_evidence": "The singular body is collective in both halves, lowliness contrasts with glory, and symmorphon states correspondence of form rather than replacement or disposal of the body.",
+        "reading_text_guidance": "State bodily transformation and likeness to Christ's glorious body plainly; preserve continuity, avoid calling the body evil, and do not narrow lowliness beyond weakness, mortality, and present humble condition.",
+        "literal_note_guidance": "If the reading text uses weak or mortal, disclose that the Greek more literally speaks of the body of our lowliness or humiliation in contrast with Christ's body of glory.",
+        "choice_risks": "Lowly bodies is compact but can sound socially inferior; weak and mortal is clear but interpretive; humble condition is accurate but awkward for bodies.",
+        "human_decision_required": true,
+        "reader_note_required": true,
+        "audit_text_and_note_together": true
+      },
+      {
+        "sense_id": "php3_10_21_conformity_link",
+        "references": ["Phil.3.10", "Phil.3.21"],
+        "source_expression": "συμμορφιζόμενος τῷ θανάτῳ αὐτοῦ / σύμμορφον τῷ σώματι τῆς δόξης αὐτοῦ",
+        "status": "resolved",
+        "contextual_function": "A deliberate same-form link carries the chapter from sharing the form of Christ's death to sharing the form of His glorious body.",
+        "primary_sense": "Believers become like Christ in His death and will be made like Him in His bodily glory.",
+        "viable_alternatives": [],
+        "discourse_evidence": "The related symmorph- forms frame suffering and future transformation within the same chapter, moving from Christ's death in verse 10 to His glorious body in verse 21.",
+        "reading_text_guidance": "Use natural likeness language in verse 21; do not force an English cognate if it harms clarity, but preserve the theological movement for chapter review.",
+        "literal_note_guidance": "Explain that the expressions rendered becoming like Him in verse 10 and made like His glorious body in verse 21 share a Greek word-family meaning having the same form.",
+        "choice_risks": "Different English constructions can hide the link; repeated conformed is source-transparent but too technical for the target reader.",
+        "human_decision_required": false,
+        "reader_note_required": true,
+        "audit_text_and_note_together": true
+      },
+      {
+        "sense_id": "php3_21_power_subject_all",
+        "references": ["Phil.3.21"],
+        "source_expression": "κατὰ τὴν ἐνέργειαν τοῦ δύνασθαι αὐτὸν καὶ ὑποτάξαι αὑτῷ τὰ πάντα",
+        "status": "alternatives_retained",
+        "contextual_function": "The final clause grounds the promised bodily transformation in Christ's effective sovereign ability to subject the whole created order to Himself.",
+        "primary_sense": "He will do this by the power that enables Him even to bring everything under His rule.",
+        "viable_alternatives": [
+          "He will use the power by which He can bring all things under His control.",
+          "This will happen through His effective power to subject everything to Himself."
+        ],
+        "discourse_evidence": "Energeia emphasizes power at work, the articular infinitive centers Christ's ability, kai adds climactic force, hypotasai names subjection, and all things gives universal scope.",
+        "reading_text_guidance": "Make the cause of transformation easy to hear while retaining Christ's agency, effective ability, the climactic even, universal scope, and His rule over what is subjected.",
+        "literal_note_guidance": "No note is normally required if all elements remain materially present in clear reading text.",
+        "choice_risks": "The same power overstates identity with a prior power not grammatically named; control is natural but can sound coercive; rule preserves kingship but slightly interprets subjection.",
+        "human_decision_required": true,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      }
+    ]
+  }
+}
