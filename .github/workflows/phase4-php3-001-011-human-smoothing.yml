@@ -21,7 +21,7 @@ concurrency: {group: flt-php3-001-011-human-smoothing, cancel-in-progress: true}
 
 jobs:
   audit:
-    if: github.event.pull_request.head.ref != 'php-03-012-016-human-smoothing'
+    if: github.event.pull_request.head.ref != 'php-03-012-016-human-smoothing' && github.event.pull_request.head.ref != 'php-03-whole-chapter-review'
     name: Exact reading-text and reader-note constitutional audit
     runs-on: ubuntu-latest
     timeout-minutes: 40
