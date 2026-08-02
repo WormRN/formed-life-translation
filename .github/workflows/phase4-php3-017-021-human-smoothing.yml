@@ -2,11 +2,6 @@ name: FLT Philippians 3:17-21 exact-text audit
 run-name: Philippians 3:17-21 exact reading-text and reader-note audit
 
 on:
-  pull_request:
-    branches: [main]
-    paths:
-      - "docs/architecture/phase-4/PHP-03-017-021_human-editor-synthesis-v2.2.json"
-      - ".github/workflows/phase4-php3-017-021-human-smoothing.yml"
   workflow_dispatch:
 
 permissions: {contents: read}
