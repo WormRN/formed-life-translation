@@ -9,9 +9,17 @@
   "heuristic_findings": "none_obvious",
   "obvious_distinctive_risks": [],
   "independent_path_assessment": "The repository preserves a source-side passage-sense gate, one immutable blind prompt, three independent candidates, disclosed malformed candidate evidence, and an exact human synthesis. No obvious highly distinctive multiword dynamic resemblance was noticed.",
-  "recommended_action": "Do not claim copyright clearance. Preserve DEFERRED_BATCH status and include Philippians 4:1-3 in the formal authorized eight-translation New Testament API batch audit.",
+  "recommended_action": "Seal the repaired wording with DEFERRED_BATCH status. Do not claim copyright clearance; include Philippians 4:1-3 in the formal authorized eight-translation New Testament API batch audit.",
   "copyright_protocol_status": "DEFERRED_BATCH",
   "hard_check_required": true,
   "publication_clearance": false,
-  "limitations": "This memory-based screen is deliberately narrow and non-exhaustive. No comparison text was retrieved, reconstructed, quoted, or measured."
+  "limitations": "This memory-based screen is deliberately narrow and non-exhaustive. No comparison text was retrieved, reconstructed, quoted, or measured.",
+  "delta_check": {
+    "performed_on": "2026-08-02",
+    "changed_reference": "Phil.4.3",
+    "changed_text": "The names of all these coworkers are in the book of life.",
+    "heuristic_findings": "none_obvious",
+    "assessment": "The listener-driven clarification introduces no obvious highly distinctive multiword dynamic resemblance. It makes explicit that the women, Clement, and the other coworkers form the honored group.",
+    "required_later_action": "Include the exact final wording in the formal authorized eight-translation New Testament API batch audit."
+  }
 }
