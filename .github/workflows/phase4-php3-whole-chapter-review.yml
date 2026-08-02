@@ -16,6 +16,9 @@ concurrency: {group: flt-php3-whole-chapter-review, cancel-in-progress: true}
 
 jobs:
   review:
+    # The provider review completed in run 30735739260. Preserve manual dispatch
+    # for recovery, but do not spend provider calls on later record-only PR edits.
+    if: github.event_name == 'workflow_dispatch'
     name: Whole-chapter listener and source-aware review
     runs-on: ubuntu-latest
     timeout-minutes: 45
