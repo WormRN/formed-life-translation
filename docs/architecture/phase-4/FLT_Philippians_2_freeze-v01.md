@@ -35,3 +35,17 @@ The human editor authorized removal of the doubled additive “also … too.” 
 - Decision record: `logs/FLT_decision_log.md`
 
 Reopening this chapter requires an explicit human editorial decision. Ordinary work should now proceed to the Philippians 1 chapter-close review before chapter 3 begins.
+
+
+## Deferred copyright protocol record — 2026-08-02
+
+- Provisional heuristic check: complete
+- Heuristic finding: `watchlist`
+- Priority hard-audit references: Philippians 2:21 and 2:30
+- Independent-path assessment: preserved source-side drafting, common-goal blindness, human adjudication, and semantic-audit records remain intact; the watchlist records possible expressive resemblance, not derivation.
+- Formal status: `DEFERRED_BATCH`
+- Hard eight-translation check required: yes
+- Publication clearance: false
+- Machine-readable report: `docs/architecture/phase-4/FLT_Philippians_2_copyright-heuristic-v01.json`
+
+No wording is reopened by this soft screen. The listed verses must receive priority exact, structural, and interpretive comparison during the authorized New Testament batch audit.
