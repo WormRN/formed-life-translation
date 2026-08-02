@@ -1,0 +1,64 @@
+{
+  "candidate_id": "PHP-03-012-016-HUMAN-SYNTHESIS-V2.2-PRESMOOTHING",
+  "passage": "Philippians 3:12-16",
+  "status": "human_editor_synthesis_pending_listener_diagnosis",
+  "verse_renderings": [
+    {
+      "reference": "Phil.3.12",
+      "text": "I do not mean that I have already reached the goal or am already complete. But I keep pressing on to take hold of the purpose for which Christ Jesus took hold of me."
+    },
+    {
+      "reference": "Phil.3.13",
+      "text": "Brothers and sisters, I do not consider myself to have taken hold of it yet. But I focus on one thing: I leave what lies behind and stretch toward what lies ahead."
+    },
+    {
+      "reference": "Phil.3.14",
+      "text": "I press on toward the goal for the prize that comes with God's upward call in Christ Jesus."
+    },
+    {
+      "reference": "Phil.3.15",
+      "text": "So all of us who are mature should share this mindset. And if you think differently about anything, God will make that clear to you too."
+    },
+    {
+      "reference": "Phil.3.16",
+      "text": "In any case, we must keep living in step with the progress we have already made."
+    }
+  ],
+  "reader_notes": [
+    {
+      "note_id": "Phil.3.12-unstated-goal",
+      "reference": "Phil.3.12",
+      "anchor": "reached the goal",
+      "status": "provisional",
+      "text": "The Greek does not state what Paul has not yet obtained. The context points to the goal described in verses 10–11 and developed through the race imagery in verses 13–14."
+    },
+    {
+      "note_id": "Phil.3.12-christ-took-hold",
+      "reference": "Phil.3.12",
+      "anchor": "the purpose for which Christ Jesus took hold of me",
+      "status": "provisional",
+      "text": "The Greek repeats a verb meaning “take hold of.” The phrase may mean either that Paul pursues the purpose for which Christ took hold of him, as translated here, or that he pursues because Christ first took hold of him."
+    },
+    {
+      "note_id": "Phil.3.14-upward-call",
+      "reference": "Phil.3.14",
+      "anchor": "God's upward call",
+      "status": "provisional",
+      "text": "The Greek compactly speaks of “the prize of God's upward call in Christ Jesus.” The phrase may describe God's call drawing believers upward or His heavenly call. The reading text follows the upward-direction sense."
+    },
+    {
+      "note_id": "Phil.3.12-15-complete-mature",
+      "reference": "Phil.3.12-15",
+      "anchor": "complete ... mature",
+      "status": "provisional",
+      "text": "The words translated “complete” in verse 12 and “mature” in verse 15 come from the same Greek root. Paul creates a deliberate tension: mature believers recognize that they have not yet arrived."
+    },
+    {
+      "note_id": "Phil.3.16-living-in-step",
+      "reference": "Phil.3.16",
+      "anchor": "living in step",
+      "status": "provisional",
+      "text": "The final Greek verb can picture walking in line or keeping in step. Paul calls believers to live consistently with the progress they have already made."
+    }
+  ]
+}
