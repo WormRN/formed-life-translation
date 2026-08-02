@@ -1,27 +1,31 @@
 {
   "schema_version": 1,
   "repository": "WormRN/formed-life-translation",
-  "workflow_path": ".github/workflows/phase4-php3-007-011-candidate-audit.yml",
-  "unit_id": "PHP-03-007-011",
-  "passage": "Philippians 3:7-11",
-  "engine_run_id": "FLT-PHP-03-20260725-4",
-  "github_run_id": 30147570445,
-  "run_url": "https://github.com/WormRN/formed-life-translation/actions/runs/30147570445",
-  "artifact_name": "FLT-PHP-03-20260725-4",
+  "workflow_path": ".github/workflows/phase4-php3-017-021-human-smoothing.yml",
+  "unit_id": "PHP-03-017-021-EXACT-AUDIT-REPAIR",
+  "passage": "Philippians 3:17-21",
+  "engine_run_id": "FLT-PHP-03-20260802-4",
+  "github_run_id": 30735375602,
+  "run_url": "https://github.com/WormRN/formed-life-translation/actions/runs/30735375602",
+  "artifact_id": 8829392455,
+  "artifact_name": "FLT-PHP-03-20260802-4-audit",
+  "artifact_sha256": "63ad3321ff6873f2ae2d973c1b1103c374417fd212646070c0cba60ab5ff02ce",
   "artifact_summary_path": "outputs/human-candidate-audit.md",
-  "head_sha": "ad20ab4301e6ad0ab7a4d92c87e186b3051c79f5",
-  "generated_at": "2026-07-25T06:30:30Z",
+  "head_sha": "bfdc4ac2a15d68d00ad4ea1432235fd98c10913c",
+  "generated_at": "2026-08-02T06:10:57Z",
   "job_outcome": "success",
-  "receipt_status": "review_required",
+  "receipt_status": "human_approved_text_audited",
   "audit_evidence": {
     "auditor_total": 3,
-    "eligible_count": 2,
-    "blocking_defects": 1,
-    "semantic_pass": false
+    "eligible_count": 3,
+    "blocking_defects": 0,
+    "warnings": 1,
+    "semantic_pass": true
   },
   "authority": {
     "candidate_was_sealed": true,
-    "human_decision_required": true,
-    "audit_finalizes_candidate": false
+    "human_approved_wording_restored": true,
+    "audit_finalizes_candidate": false,
+    "chapter_review_required": true
   }
 }

@@ -464,3 +464,15 @@ Reopen only if the whole-letter review or later contextual evidence exposes a co
 - **Wording changes after audit:** None.
 - **Next gate:** Conduct the scheduled Philippians 3 whole-chapter movement, oral-flow, terminology, and note-placement review before beginning chapter 4.
 
+---
+
+## 2026-08-02 — Philippians 3:20 exact human wording restored and audited
+
+- **Unit:** `PHP-03-017-021`
+- **Problem repaired:** The prior accepted-unit record and audit used an earlier smoother proposal in verse 20 instead of the human editor’s explicitly approved wording.
+- **Controlling wording:** “But our citizenship is in heaven, and we eagerly await our Savior from heaven, the Lord Jesus Christ.”
+- **Superseded evidence:** Run 30734922684 does not govern exact-text authority for verse 20 because it audited the substituted wording.
+- **Replacement audit:** GitHub Actions run 30735375602; three of three auditors eligible; zero blocking defects; all five reader notes passed.
+- **Documented warning:** One auditor noted that “But” expresses the contextual contrast although the Greek connective is formally causal. The wording remains within the semantic floor and proceeds to whole-chapter human review.
+- **Next gate:** Compile the corrected 3:1–21 text and notes for the scheduled whole-chapter movement, oral-flow, terminology, note-placement, validation, and freeze review.
+
