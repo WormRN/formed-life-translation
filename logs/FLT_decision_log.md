@@ -566,3 +566,16 @@ Reopen only if the whole-letter review or later contextual evidence exposes a co
 - **Documented warning:** One auditor noted that “all these coworkers” might be recovered narrowly. The wording is retained because the preceding sentences identify the women as coworkers alongside Clement and the others; two auditors passed it cleanly, and the warning is nonblocking.
 - **Copyright status:** Provisional heuristic and targeted delta check `none_obvious`; `DEFERRED_BATCH`; hard eight-translation API audit required; `publication_clearance: false`.
 - **Next gate:** Prepare the Engine 2.2 passage-sense resolution for Philippians 4:4–9. Reopen 4:1–3 only for a concrete chapter-level issue or explicit human decision.
+
+
+---
+
+## 2026-08-02 — Philippians 4:4–9 passage-sense gate prepared
+
+- **Unit:** `PHP-04-004-009`
+- **Boundary:** Verses 4–9 form a linked exhortation sequence: rejoice and display gentleness; turn anxiety into thankful prayer; receive guarding peace; direct attention toward moral excellence; and practice the received teaching and example.
+- **Gate status:** Engine 2.2 source-side brief complete for blind drafting.
+- **Required protections:** Preserve repeated rejoicing in the Lord; the broad ethical force of `epieikes`; the meaningful present/eschatological range of “the Lord is near”; the anything/everything anxiety-prayer contrast; prayer, specific request, and thanksgiving; the active guard image; hearts and thoughts; the full virtue list and sustained-attention command; all four learned/received/heard/seen channels; and the peace-of-God/God-of-peace link.
+- **Pastoral boundary:** Do not transform the anxiety command into condemnation of involuntary distress, mental illness, grief, or bodily alarm, and do not promise prayer as a technique that guarantees immediate emotional relief.
+- **Blindness:** No prior FLT wording, comparison translation, prior candidate, editor benchmark, or conversation draft is supplied.
+- **Next action:** Validate the isolated PR, merge once, and permit exactly one push-triggered blind A/B/C drafting run.
