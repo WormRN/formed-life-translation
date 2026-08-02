@@ -1,7 +1,17 @@
 {
   "candidate_id": "PHP-03-012-016-HUMAN-SYNTHESIS-V2.2-SMOOTHED",
   "passage": "Philippians 3:12-16",
-  "status": "human_approved_pending_constitutional_audit",
+  "status": "accepted_unit_pending_whole_chapter_review",
+  "audit": {
+    "date": "2026-08-02",
+    "github_run": 30732690820,
+    "result": "three_of_three_eligible_zero_blocks",
+    "reader_notes_audited_with_text": true,
+    "documented_warnings": [
+      "Phil.3.12 purpose reading and Christ’s prior initiative",
+      "Phil.3.14 relationship between the prize and God’s upward call"
+    ]
+  },
   "verse_renderings": [
     {
       "reference": "Phil.3.12",
@@ -29,35 +39,35 @@
       "note_id": "Phil.3.12-unstated-goal",
       "reference": "Phil.3.12",
       "anchor": "reached the goal",
-      "status": "approved_pending_audit",
+      "status": "provisional",
       "text": "The Greek does not state what Paul has not yet obtained. The context points to the goal described in verses 10–11 and developed through the race imagery in verses 13–14."
     },
     {
       "note_id": "Phil.3.12-christ-took-hold",
       "reference": "Phil.3.12",
       "anchor": "the purpose for which Christ Jesus first took hold of me",
-      "status": "approved_pending_audit",
+      "status": "provisional",
       "text": "The Greek repeats a verb meaning “take hold of.” The phrase may mean that Paul pursues the purpose for which Christ took hold of him, as translated here, or that he pursues because Christ took hold of him. The word “first” makes Christ’s prior action explicit."
     },
     {
       "note_id": "Phil.3.14-upward-call",
       "reference": "Phil.3.14",
       "anchor": "God’s upward call",
-      "status": "approved_pending_audit",
+      "status": "provisional",
       "text": "The Greek compactly speaks of “the prize of God’s upward call in Christ Jesus.” The phrase may describe God’s call drawing believers upward or His heavenly call. The reading text follows the upward-direction sense and expresses the prize as coming with that call."
     },
     {
       "note_id": "Phil.3.12-15-complete-mature",
       "reference": "Phil.3.12-15",
       "anchor": "complete … mature",
-      "status": "approved_pending_audit",
+      "status": "provisional",
       "text": "The words translated “complete” in verse 12 and “mature” in verse 15 come from the same Greek root. Paul creates a deliberate tension: mature believers recognize that they have not yet arrived."
     },
     {
       "note_id": "Phil.3.16-living-consistently",
       "reference": "Phil.3.16",
       "anchor": "living in a way that matches how far we have already come",
-      "status": "approved_pending_audit",
+      "status": "provisional",
       "text": "The final Greek verb can picture walking in line or keeping in step. The reading text expresses this as living consistently with the progress believers have already made."
     }
   ]
