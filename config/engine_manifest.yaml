@@ -81,13 +81,13 @@ current_checkpoint:
   chapter: 4
   current_unit_id: "PHP-04-001-003"
   current_passage: "Philippians 4:1-3"
-  stage: "passage_sense_gate_complete_pending_blind_drafting"
-  candidate_status: "Engine 2.2 source-side passage-sense brief prepared and structurally validated; no English candidate exists yet."
+  stage: "blind_candidates_ready_for_human_editor_review"
+  candidate_status: "Run 30757547001 completed with one verified common prompt, a passed Engine 2.2 passage-sense gate, all blindness attestations true, and three preserved candidates. Gemini's authoritative Phil.4.2 verse field contains a disclosed duplication glitch; its clean paragraph field is preserved separately and no silent repair or rerun has occurred."
   candidate_sealed: false
   latest_accepted_unit: "Philippians 3:1-21 finalized and frozen as first-draft text."
-  next_permitted_action: "Validate and merge the isolated PHP-04-001-003 source packet and workflow once; the main-branch push may launch exactly one blind A/B/C drafting run. Do not reopen Philippians 1-3."
-  copyright_status: "PENDING_RECORDED_INDEPENDENT_DRAFT"
-  provisional_heuristic_check: "not_yet_applicable"
+  next_permitted_action: "Present untouched A/B/C candidates verse by verse, disclose Gemini's Phil.4.2 duplication glitch, provide a provisional editorial synthesis and proposed reader notes, and await the human editor's exact synthesis before listener-only diagnosis."
+  copyright_status: "PENDING_PROVISIONAL_HEURISTIC_AFTER_SYNTHESIS"
+  provisional_heuristic_check: "pending_until_provisional_synthesis_is_recorded"
   source_gate_status: "complete_for_blind_drafting"
   hard_check_required: true
   publication_clearance: false
@@ -221,16 +221,16 @@ current_checkpoint:
     comparison_translations_hidden_from_workers: true
     conversation_drafts_hidden_from_workers: true
   engine_2_2_latest_draft:
-    passage: "Philippians 3:1-11 authoritative passage-sense retest"
-    unit_id: "PHP-03-001-011-SENSE-RETEST"
-    github_run_id: 30691493098
-    engine_run_id: "FLT-PHP-03-20260801-18"
-    artifact_id: 8815846811
-    artifact_name: "FLT-PHP-03-20260801-18"
-    artifact_sha256: "b6a2ab79934a829794867776988ad6ceccd879f8c2b2d45d5796114295bb6b7e"
+    passage: "Philippians 4:1-3"
+    unit_id: "PHP-04-001-003"
+    github_run_id: 30757547001
+    engine_run_id: "FLT-PHP-04-20260802-2"
+    artifact_id: 8836427931
+    artifact_name: "FLT-PHP-04-20260802-2"
+    artifact_sha256: "834a570ea99c5b0e2bfe776ed3bf3d869c2cae2452c85ab9ccaf3f5e4123d700"
     receipt_status: "completed"
     common_goal_verified: true
-    common_prompt_sha256: "0fe5304fa4533fc82100045ff5fde36a96bab96f4a20cd214da3a387ecb52080"
+    common_prompt_sha256: "591877425010c47fb4dcf2ee6aee634b5f006cf3afb0df8b134a1b717d2d2123"
     passage_sense_gate_verified: true
     candidate_count: 3
     prior_flt_wording_hidden_from_workers: true
@@ -238,7 +238,7 @@ current_checkpoint:
     editor_benchmark_hidden_from_workers: true
     comparison_translations_hidden_from_workers: true
     conversation_drafts_hidden_from_workers: true
-    human_editor_benchmark_preserved: "docs/architecture/phase-4/PHP-03-001-011_editor-benchmark-pre-engine-2.2.md"
+    preserved_output_note: "Gemini Phil.4.2 verse_renderings contains a duplicated fragment; paragraph_rendering contains its clean intended sentence. Preserve both and do not silently substitute."
     human_selection_status: "pending"
 
   last_valid_common_goal_unit:
@@ -254,7 +254,7 @@ current_checkpoint:
     passage_sense_gate_spec: "docs/architecture/phase-4/engine-2.2-passage-sense-gate.md"
     runner: "phase4-harness/src/chapter-units.js"
     workflow: ".github/workflows/phase4-php4-001-003-sense-drafts.yml"
-    planned_draft_receipt: "config/latest_php4_001_003_engine22_draft_run.json"
+    latest_draft_receipt: "config/latest_php4_001_003_engine22_draft_run.json"
     latest_frozen_chapter: "docs/architecture/phase-4/FLT_Philippians_3_freeze-v01.md"
     latest_audit_receipt: "config/latest_audit_run.json"
 
