@@ -1,0 +1,262 @@
+{
+  "chapter_id": "PHP-04",
+  "book": "Philippians",
+  "chapter": 4,
+  "source_edition": "SBLGNT",
+  "tone": "deeply affectionate, pastorally direct, peace-seeking, honoring toward coworkers, and grounded in shared belonging to the Lord",
+  "target_reader": "religion-naive adults and older adolescents near grade 6",
+  "translation_identity": "firmly dynamic-equivalence, NLT-like in readability but independent",
+  "test_purpose": "Fresh Engine 2.2 passage-sense-resolution drafting of Philippians 4:1-3",
+  "sealed_context": {
+    "prior_flt_wording_present": false,
+    "prior_candidates_present": false,
+    "comparison_translations_present": false,
+    "conversational_drafts_present": false,
+    "instruction": "Translate from the Greek and the completed source-side passage-sense brief only. Do not reconstruct, imitate, or refer to previous FLT wording, previous candidates, comparison translations, or conversation drafts.",
+    "editor_benchmark_present": false
+  },
+  "governing_rules": [
+    "Passage-sense resolution precedes English composition. Follow the completed source-side brief and expose genuinely viable alternatives in the review apparatus.",
+    "All three candidates pursue the same constitutional goal; no provider receives a readability, fidelity, or blended specialty.",
+    "Write natural English that a religion-naive adult can follow on one hearing. The main assertion should arrive before the listener loses it.",
+    "Build English sentences and paragraphs rather than preserving Greek clause architecture. Split, combine, reorder, or unpack when comprehension benefits.",
+    "Actively avoid stacked clauses, overloaded breaths, preposition clusters, delayed subjects or main verbs, abstract-noun chains, embedded explanation, and translated-sounding prose.",
+    "Vary English transitions when needed for the ear, but preserve deliberate repetition, escalation, metaphor, emphasis, and connective logic.",
+    "Preserve every material proposition; cause, contrast, purpose, result, and sequence; meaningful ambiguity; agency, force, certainty, and key-term links.",
+    "The prose serves the reader; notes serve accountability. Do not leave the reading text opaque and expect a footnote to supply material meaning.",
+    "Keep candidate alternatives in the review apparatus, not in brackets in the reading text, unless the human editor later decides otherwise.",
+    "Propose notes for literal-source transparency, meaningful word-family links, metaphors hidden by dynamic rendering, and disputed constructions.",
+    "Footnotes disclose translation decisions and establish critical trust; they are not apologies for, or repairs to, an inadequate reading text.",
+    "No comparison translations, traditional benchmark wording, prior FLT wording, prior candidates, editor benchmark, conversation drafts, or sealed human wording may enter blind drafting.",
+    "Record oral-design moves and remaining oral risks; do not claim that a drafting worker has certified its own oral quality."
+  ],
+  "existing_decisions": [
+    "Capitalize pronouns referring to deity.",
+    "Render theological vocabulary contextually in reader-facing English; do not preserve opaque church terms merely because they are traditional.",
+    "Use brothers and sisters when the context addresses the whole church and the Greek plural is inclusive.",
+    "Render euangelion as good news in Philippians when it denotes the message or work centered on Jesus.",
+    "Use natural contextual language for phroneo while preserving recurring mindset and outlook links across Philippians.",
+    "Footnotes may disclose disputed constructions, traditional glosses, cultural force, literal wording, and source-language links, but may not compensate for material meaning missing from the reading text.",
+    "Preserve contextual links across accepted units without importing or reopening their accepted English wording during blind drafting.",
+    "The human editor alone selects, synthesizes, approves smoothing changes, and finalizes wording."
+  ],
+  "matrix_alerts": [
+    {
+      "lemma": "ὥστε / οὕτως / στήκω",
+      "status": "passage-specific inferential and steadfastness alert",
+      "neutral_range": "therefore, so then; in this way, thus; stand firm, remain steadfast",
+      "instruction": "Preserve verse 1 as an inference from the preceding heavenly hope and as a command to remain steadfast in the Lord. Keep in this way perceptibly connected to the surrounding pattern without importing prior FLT wording."
+    },
+    {
+      "lemma": "ἀγαπητός / ἐπιπόθητος / χαρά / στέφανος",
+      "status": "passage-specific affection and honor alert",
+      "neutral_range": "beloved, dearly loved; longed for; joy; crown, wreath, honor, or reward",
+      "instruction": "Preserve Paul's unusually warm accumulation of affection and honor without making the sentence sound sentimental, royal, or overloaded."
+    },
+    {
+      "lemma": "παρακαλέω / φρονέω",
+      "status": "book-level appeal and mindset alert",
+      "neutral_range": "urge, appeal to, encourage; think, share an outlook, adopt a mindset, be concerned with, or agree",
+      "instruction": "Preserve Paul's equal repeated appeal to Euodia and Syntyche and the book-level mindset theme. Do not imply that one woman is chiefly at fault or that they must agree about every subject."
+    },
+    {
+      "lemma": "γνήσιος σύζυγος",
+      "status": "passage-specific identity and relationship alert",
+      "neutral_range": "genuine or loyal yokefellow, companion, partner, or possibly the personal name Syzygus",
+      "instruction": "Address one trusted coworker without inventing the person's identity, office, gender beyond the grammar, or relationship to Paul. Preserve the ambiguity in a reader note if the body uses natural partner language."
+    },
+    {
+      "lemma": "συναθλέω / συνεργός / εὐαγγέλιον",
+      "status": "book-level coworker and shared-struggle alert",
+      "neutral_range": "struggle or contend together; coworker; good news or the work of advancing it",
+      "instruction": "Honor the women as proven coworkers who struggled alongside Paul in the work of the good news, preserving the literary link to the church's shared struggle in Philippians 1:27."
+    },
+    {
+      "lemma": "βίβλος ζωῆς",
+      "status": "passage-specific apocalyptic-image alert",
+      "neutral_range": "book of life, register of those who belong to God and receive life",
+      "instruction": "Preserve God's secure recognition of the named coworkers without inventing how, when, or by what earthly mechanism their names were recorded."
+    }
+  ],
+  "units": [
+    {
+      "unit_id": "PHP-04-001-003",
+      "passage": "Philippians 4:1-3",
+      "title": "Stand firm together and help restore agreement",
+      "known_issues": [
+        "Verse 1 begins with an inferential therefore and points back to the heavenly belonging, hope, bodily renewal, and exemplary way of life in 3:17-21. Preserve this consequence without reproducing accepted chapter 3 English.",
+        "In this way modifies stand firm and most naturally points backward to the preceding pattern; it may also introduce the concrete steadfastness that follows. Do not make the reference artificially narrow.",
+        "Paul piles up affectionate forms of address: beloved and longed-for brothers and sisters, my joy and crown, beloved. Preserve the emotional abundance while keeping the main command audible.",
+        "Crown is a metaphor of honor, victory, or reward rather than royal power. A dynamic rendering should preserve the honor and disclose the literal image.",
+        "Verse 2 repeats I appeal to before each woman's name. Preserve equal pastoral address so neither Euodia nor Syntyche is singled out as the primary offender.",
+        "Share the same mindset in the Lord recalls the letter's recurring phroneo language. It calls for Christ-shaped agreement or shared outlook, not necessarily identical opinions on every matter.",
+        "Paul does not describe the dispute or assign blame. Do not invent its subject, severity, history, or solution.",
+        "Verse 3 addresses a genuine yokefellow whose identity is not stated. Do not identify this person as a named historical figure, spouse, pastor, or officeholder.",
+        "Help these women is a present pastoral request, but the following clause honors them as people who struggled alongside Paul in the work of the good news. Avoid patronizing or disciplinary language.",
+        "The shared-struggle verb recalls the communal striving of 1:27. Preserve the active partnership and propose a note for the source-language link.",
+        "Clement and Paul's other coworkers most naturally belong with the group who struggled alongside him. Keep the association clear without overstating the exact syntax.",
+        "Whose names are in the book of life gives assurance and honor to the coworkers as a group. Keep the plural reference clear and explain the image for religion-naive readers.",
+        "Do not let the number of names and descriptive clauses overload verse 3. Natural sentence division is permitted if every relationship remains clear."
+      ],
+      "verses": [
+        {
+          "reference": "Phil.4.1",
+          "greek": "ὥστε ἀδελφοί μου ἀγαπητοὶ καὶ ἐπιπόθητοι χαρὰ καὶ στέφανός μου οὕτως στήκετε ἐν κυρίῳ ἀγαπητοί"
+        },
+        {
+          "reference": "Phil.4.2",
+          "greek": "Εὐοδίαν παρακαλῶ καὶ Συντύχην παρακαλῶ τὸ αὐτὸ φρονεῖν ἐν κυρίῳ"
+        },
+        {
+          "reference": "Phil.4.3",
+          "greek": "ναὶ ἐρωτῶ καὶ σέ γνήσιε σύζυγε συλλαμβάνου αὐταῖς αἵτινες ἐν τῷ εὐαγγελίῳ συνήθλησάν μοι μετὰ καὶ Κλήμεντος καὶ τῶν λοιπῶν συνεργῶν μου ὧν τὰ ὀνόματα ἐν βίβλῳ ζωῆς"
+        }
+      ]
+    }
+  ],
+  "passage_sense_resolution": {
+    "gate_version": "2.2",
+    "status": "complete_for_blind_drafting",
+    "prepared_from": "SBLGNT text, parsed morphology, local and book-level discourse, source-language analysis, and governing FLT rules; no comparison translation or prior FLT English",
+    "visibility_attestation": {
+      "source_side_only": true,
+      "prior_flt_wording_absent": true,
+      "prior_candidates_absent": true,
+      "editor_benchmark_absent": true,
+      "comparison_translations_absent": true
+    },
+    "passage_argument": [
+      "Because of the heavenly hope and faithful pattern just described, Paul affectionately commands the whole church to stand firm in the Lord in this way.",
+      "Paul then appeals equally and individually to Euodia and Syntyche to recover a shared Christ-shaped outlook in the Lord.",
+      "He asks one trusted but unidentified coworker to help the women, while publicly honoring them, Clement, and the other coworkers as fellow strugglers in the work of the good news whose names are in the book of life."
+    ],
+    "proposition_map": [
+      {
+        "references": ["Phil.4.1"],
+        "statement": "As a consequence of the preceding Christward pattern and hope, Paul addresses the believers with intense affection and commands them to stand firm in the Lord in this way."
+      },
+      {
+        "references": ["Phil.4.2"],
+        "statement": "Paul appeals separately and equally to Euodia and Syntyche to share the same mindset in the Lord."
+      },
+      {
+        "references": ["Phil.4.3"],
+        "statement": "Paul asks a loyal but unidentified coworker to help the women, who struggled beside him in the work of the good news together with Clement and his other coworkers, whose names are in the book of life."
+      }
+    ],
+    "expressions": [
+      {
+        "sense_id": "php4_1_inference_stand_this_way",
+        "references": ["Phil.4.1"],
+        "source_expression": "ὥστε ... οὕτως στήκετε ἐν κυρίῳ",
+        "status": "alternatives_retained",
+        "contextual_function": "An inferential transition converts the heavenly hope and observable life-pattern of 3:17-21 into a communal command to remain steadfast in relationship and allegiance to the Lord.",
+        "primary_sense": "Therefore, stand firm in the Lord in this way.",
+        "viable_alternatives": [
+          "So then, remain steadfast in the Lord like this.",
+          "Because of all this, keep standing firm as people who belong to the Lord."
+        ],
+        "discourse_evidence": "Hoste draws an inference from the preceding paragraph; houtos points to the manner just described, and stekete supplies the only main command after the long affectionate address.",
+        "reading_text_guidance": "Make the consequence and command easy to hear, preserve in-this-way force, and do not delay stand firm beyond an overloaded vocative chain.",
+        "literal_note_guidance": "No note is normally required if the inference, steadfastness, and manner reference remain clear.",
+        "choice_risks": "Therefore can sound formal; because of all this is clearer but more explicit; like this may point too narrowly to the nearest clause.",
+        "human_decision_required": true,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "php4_1_affection_crown",
+        "references": ["Phil.4.1"],
+        "source_expression": "ἀδελφοί μου ἀγαπητοὶ καὶ ἐπιπόθητοι χαρὰ καὶ στέφανός μου ... ἀγαπητοί",
+        "status": "alternatives_retained",
+        "contextual_function": "Paul surrounds the command with repeated affection and calls the believers both his joy and his crown, presenting them as his honor and reward.",
+        "primary_sense": "my dear brothers and sisters whom I love and long to see, my joy and crown",
+        "viable_alternatives": [
+          "my dearly loved brothers and sisters, whom I long to see, my joy and my crowning honor",
+          "my dear friends, my joy and reward"
+        ],
+        "discourse_evidence": "Multiple vocatives deliberately accumulate affection; stephanos denotes a crown or victory wreath and functions metaphorically as Paul's honor in the people themselves.",
+        "reading_text_guidance": "Retain the warmth, longing, joy, and honor while using punctuation or sentence architecture that lets the command land clearly.",
+        "literal_note_guidance": "If crown is rendered dynamically, disclose the literal crown or victory-wreath image and explain that Paul regards the believers as his honor and reward.",
+        "choice_risks": "Crown preserves the image but may suggest royalty; reward is clear but can sound transactional; crowning honor is natural but expands the metaphor.",
+        "human_decision_required": true,
+        "reader_note_required": true,
+        "audit_text_and_note_together": true
+      },
+      {
+        "sense_id": "php4_2_equal_appeal_shared_mindset",
+        "references": ["Phil.4.2"],
+        "source_expression": "Εὐοδίαν παρακαλῶ καὶ Συντύχην παρακαλῶ τὸ αὐτὸ φρονεῖν ἐν κυρίῳ",
+        "status": "alternatives_retained",
+        "contextual_function": "Paul repeats the appeal verb with each woman's name, addressing them with equal dignity and calling them back to the letter's Christ-shaped shared outlook.",
+        "primary_sense": "I appeal to Euodia, and I appeal to Syntyche, to share the same mindset in the Lord.",
+        "viable_alternatives": [
+          "I urge Euodia and I urge Syntyche to agree with each other in the Lord.",
+          "I ask Euodia and Syntyche each to have the same Christ-shaped outlook."
+        ],
+        "discourse_evidence": "The repeated parakalo gives balanced emphasis; to auto phronein echoes the same-mind language of 2:2 and the mindset theme elsewhere in the letter; en kyrio frames their unity in belonging to the Lord.",
+        "reading_text_guidance": "Repeat the appeal or otherwise make its equality unmistakable. Express shared outlook or agreement without claiming that every opinion must become identical.",
+        "literal_note_guidance": "Explain that Paul's wording repeats I appeal to with each name and uses the letter's recurring mindset term.",
+        "choice_risks": "Agree is immediately clear but can overgeneralize; same mindset preserves the theme but may sound abstract; Christ-shaped adds an interpretation to in the Lord.",
+        "human_decision_required": true,
+        "reader_note_required": true,
+        "audit_text_and_note_together": true
+      },
+      {
+        "sense_id": "php4_3_genuine_yokefellow",
+        "references": ["Phil.4.3"],
+        "source_expression": "γνήσιε σύζυγε",
+        "status": "alternatives_retained",
+        "contextual_function": "Paul directly addresses one trusted associate and asks that person to help the two women, but gives no unambiguous identity.",
+        "primary_sense": "my loyal partner",
+        "viable_alternatives": [
+          "my true coworker",
+          "my genuine yokefellow",
+          "loyal Syzygus"
+        ],
+        "discourse_evidence": "The singular vocative and second-person pronoun address one person; gnesios signals genuine loyalty, while syzygos literally evokes someone joined under a common yoke and may also be a proper name.",
+        "reading_text_guidance": "Use a natural relational term without identifying the person or implying marriage, office, or social rank.",
+        "literal_note_guidance": "State that the Greek literally addresses a genuine yokefellow or loyal partner; the person's identity is unknown, and the word may possibly be a name.",
+        "choice_risks": "Partner is natural but broad; coworker overlaps a different term later in the verse; yokefellow is opaque; treating Syzygus as a name resolves an uncertainty.",
+        "human_decision_required": true,
+        "reader_note_required": true,
+        "audit_text_and_note_together": true
+      },
+      {
+        "sense_id": "php4_3_honored_women_shared_struggle",
+        "references": ["Phil.4.3"],
+        "source_expression": "συλλαμβάνου αὐταῖς αἵτινες ἐν τῷ εὐαγγελίῳ συνήθλησάν μοι",
+        "status": "resolved",
+        "contextual_function": "The requested mediator is to help the women precisely as honored coworkers who struggled side by side with Paul in the work of the good news.",
+        "primary_sense": "help these women, who struggled alongside me in the work of the good news",
+        "viable_alternatives": [],
+        "discourse_evidence": "The relative clause explains which women and honors their prior shared labor; synathleo is the same shared-struggle verb used of the church's united effort in 1:27.",
+        "reading_text_guidance": "Keep help direct but respectful, and make their courageous partnership more prominent than the unknown details of their disagreement.",
+        "literal_note_guidance": "Explain that the verb for their work with Paul is the same athletic or struggle-together word used in 1:27.",
+        "choice_risks": "Fought beside me may suggest physical combat; worked hard with me can lose the shared-struggle image; good-news work is clear but must not overdefine their exact role.",
+        "human_decision_required": false,
+        "reader_note_required": true,
+        "audit_text_and_note_together": true
+      },
+      {
+        "sense_id": "php4_3_clement_coworkers_book_life",
+        "references": ["Phil.4.3"],
+        "source_expression": "μετὰ καὶ Κλήμεντος καὶ τῶν λοιπῶν συνεργῶν μου ὧν τὰ ὀνόματα ἐν βίβλῳ ζωῆς",
+        "status": "alternatives_retained",
+        "contextual_function": "Paul places the women in the wider company of Clement and his other coworkers and honors the whole group as people whose names stand in the book of life.",
+        "primary_sense": "along with Clement and my other coworkers, whose names are in the book of life",
+        "viable_alternatives": [
+          "together with Clement and the rest of my coworkers. Their names are recorded in the book of life.",
+          "alongside Clement and my other coworkers, whom God has named among those who receive life."
+        ],
+        "discourse_evidence": "Meta associates Clement and the other coworkers with the shared struggle; the masculine plural relative naturally includes the mixed group, and the verbless final clause locates their names in the book of life.",
+        "reading_text_guidance": "Clarify the group reference and allow sentence division for the ear. Preserve the book image in the text or provide an equally clear dynamic rendering without adding a mechanism of salvation.",
+        "literal_note_guidance": "Explain the book of life as a biblical image of God's secure record of those who belong to Him and receive eternal life; do not imply a physical earthly book.",
+        "choice_risks": "Book of life is source-transparent but unexplained; God's record is clear but supplies agency and can sound bureaucratic; receive life may understate the image's assurance.",
+        "human_decision_required": true,
+        "reader_note_required": true,
+        "audit_text_and_note_together": true
+      }
+    ]
+  }
+}
