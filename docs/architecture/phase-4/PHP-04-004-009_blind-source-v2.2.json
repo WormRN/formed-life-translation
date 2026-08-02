@@ -1,0 +1,365 @@
+{
+  "chapter_id": "PHP-04",
+  "book": "Philippians",
+  "chapter": 4,
+  "source_edition": "SBLGNT",
+  "tone": "pastorally urgent yet reassuring, marked by repeated joy, gentleness, thankful prayer, disciplined attention, embodied practice, and the promise of God's peace and presence",
+  "target_reader": "religion-naive adults and older adolescents near grade 6",
+  "translation_identity": "firmly dynamic-equivalence, NLT-like in readability but independent",
+  "test_purpose": "Fresh Engine 2.2 passage-sense-resolution drafting of Philippians 4:4-9",
+  "sealed_context": {
+    "prior_flt_wording_present": false,
+    "prior_candidates_present": false,
+    "comparison_translations_present": false,
+    "conversational_drafts_present": false,
+    "instruction": "Translate from the Greek and the completed source-side passage-sense brief only. Do not reconstruct, imitate, or refer to previous FLT wording, previous candidates, comparison translations, or conversation drafts.",
+    "editor_benchmark_present": false
+  },
+  "governing_rules": [
+    "Passage-sense resolution precedes English composition. Follow the completed source-side brief and expose genuinely viable alternatives in the review apparatus.",
+    "All three candidates pursue the same constitutional goal; no provider receives a readability, fidelity, or blended specialty.",
+    "Write natural English that a religion-naive adult can follow on one hearing. The main assertion should arrive before the listener loses it.",
+    "Build English sentences and paragraphs rather than preserving Greek clause architecture. Split, combine, reorder, or unpack when comprehension benefits.",
+    "Actively avoid stacked clauses, overloaded breaths, preposition clusters, delayed subjects or main verbs, abstract-noun chains, embedded explanation, and translated-sounding prose.",
+    "Vary English transitions when needed for the ear, but preserve deliberate repetition, escalation, metaphor, emphasis, and connective logic.",
+    "Preserve every material proposition; cause, contrast, purpose, result, and sequence; meaningful ambiguity; agency, force, certainty, and key-term links.",
+    "The prose serves the reader; notes serve accountability. Do not leave the reading text opaque and expect a footnote to supply material meaning.",
+    "Keep candidate alternatives in the review apparatus, not in brackets in the reading text, unless the human editor later decides otherwise.",
+    "Propose notes for literal-source transparency, meaningful word-family links, metaphors hidden by dynamic rendering, and disputed constructions.",
+    "Footnotes disclose translation decisions and establish critical trust; they are not apologies for, or repairs to, an inadequate reading text.",
+    "No comparison translations, traditional benchmark wording, prior FLT wording, prior candidates, editor benchmark, conversation drafts, or sealed human wording may enter blind drafting.",
+    "Record oral-design moves and remaining oral risks; do not claim that a drafting worker has certified its own oral quality."
+  ],
+  "existing_decisions": [
+    "Capitalize pronouns referring to deity.",
+    "Render theological vocabulary contextually in reader-facing English; do not preserve opaque church terms merely because they are traditional.",
+    "Use brothers and sisters when the context addresses the whole church and the Greek plural is inclusive.",
+    "Render euangelion as good news in Philippians when it denotes the message or work centered on Jesus.",
+    "Use natural contextual language for phroneo while preserving recurring mindset and outlook links across Philippians.",
+    "Footnotes may disclose disputed constructions, traditional glosses, cultural force, literal wording, and source-language links, but may not compensate for material meaning missing from the reading text.",
+    "Preserve contextual links across accepted units without importing or reopening their accepted English wording during blind drafting.",
+    "The human editor alone selects, synthesizes, approves smoothing changes, and finalizes wording."
+  ],
+  "matrix_alerts": [
+    {
+      "lemma": "χαίρω / ἐν κυρίῳ / πάντοτε",
+      "status": "book-level joy and allegiance alert",
+      "neutral_range": "rejoice, be glad, celebrate; in the Lord; always, at all times",
+      "instruction": "Preserve the repeated command to rejoice and locate that joy in belonging to the Lord. Do not reduce it to a passing feeling, intensify it into constant cheerfulness, or suppress Paul's deliberate repetition."
+    },
+    {
+      "lemma": "ἐπιεικής / ὁ κύριος ἐγγύς",
+      "status": "passage-specific gentleness and nearness alert",
+      "neutral_range": "gentleness, gracious forbearance, reasonableness, considerate restraint; the Lord is near",
+      "instruction": "Choose natural language that expresses yielding, considerate gentleness visible to everyone. Preserve the Lord's nearness without forcing either present spiritual presence or imminent return as the sole sense."
+    },
+    {
+      "lemma": "μεριμνάω / προσευχή / δέησις / εὐχαριστία / αἴτημα",
+      "status": "passage-specific anxiety-prayer contrast alert",
+      "neutral_range": "be anxious or consumed with worry; prayer; specific plea or request; thanksgiving",
+      "instruction": "Preserve the comprehensive contrast: not anxious about anything, but in every situation bringing requests to God through prayer, specific appeal, and thanksgiving. Do not shame sufferers, promise immediate emotional relief, or turn prayer into a technique."
+    },
+    {
+      "lemma": "εἰρήνη θεοῦ / ὑπερέχω πάντα νοῦν / φρουρέω / καρδία / νόημα",
+      "status": "passage-specific peace and guarding-metaphor alert",
+      "neutral_range": "God's peace; surpass every mind or all understanding; guard like a sentry; hearts and thoughts",
+      "instruction": "Present God's peace as the promised result of the prayerful turning in verse 6. Preserve its surpassing character, active guarding force, whole inner-life scope, and location in Christ Jesus without making comprehension itself the enemy."
+    },
+    {
+      "lemma": "ἀληθής / σεμνός / δίκαιος / ἁγνός / προσφιλής / εὔφημος / ἀρετή / ἔπαινος / λογίζομαι",
+      "status": "passage-specific moral-attention list",
+      "neutral_range": "true; honorable or noble; right or just; pure; lovely; commendable or admirable; excellence or virtue; praiseworthy; consider, dwell on, give deliberate attention to",
+      "instruction": "Preserve the repeated whatever structure and the list's moral breadth. Render the final command as sustained, discerning attention, not mere optimism, fantasy, or passive exposure."
+    },
+    {
+      "lemma": "μανθάνω / παραλαμβάνω / ἀκούω / ὁράω / πράσσω / θεὸς τῆς εἰρήνης",
+      "status": "book-level teaching-example-practice and peace alert",
+      "neutral_range": "learn; receive as handed-down instruction; hear; see in someone; practice or put into action; God of peace",
+      "instruction": "Preserve all four channels by which the church received Paul's teaching and example, the command to practice them, and the deliberate movement from the peace of God in verse 7 to the God of peace in verse 9."
+    }
+  ],
+  "units": [
+    {
+      "unit_id": "PHP-04-004-009",
+      "passage": "Philippians 4:4-9",
+      "title": "Rejoice, pray, direct your thoughts, and practice the way of peace",
+      "known_issues": [
+        "Verse 4 repeats rejoice as a deliberate pastoral command and locates the rejoicing in the Lord. Preserve the repetition and relational ground without implying unbroken pleasant emotion.",
+        "Always has comprehensive force but must not be expanded into a psychological promise or accusation against people experiencing grief, anxiety, or illness.",
+        "Verse 5's epieikes has a broad ethical range: gentleness, gracious forbearance, reasonableness, considerate restraint, and a willingness not to insist on every right. Avoid weakness, mere politeness, or vagueness.",
+        "Let your gentleness be known to everyone means it should be publicly evident, not that believers should advertise themselves.",
+        "The Lord is near can point to the Lord's present nearness, His approaching return, or both. Preserve the compact nearness claim and disclose the meaningful range rather than choosing one without necessity.",
+        "Do not be anxious about anything is a real comprehensive command, immediately paired with a comprehensive alternative: in every situation bring requests to God. Do not turn the verse into mental-health condemnation or imply that involuntary distress itself proves disobedience.",
+        "Prayer, supplication, thanksgiving, and requests overlap but jointly picture dependent, specific, grateful approach to God. Natural English may reduce nominal stacking if no component is lost.",
+        "Make your requests known to God does not imply that God lacks information. It describes openly presenting them to Him.",
+        "Verse 7 is the promised consequence of verse 6. Preserve the forward connection: prayerful, thankful dependence is met by God's peace.",
+        "The peace of God that surpasses every mind or all understanding can mean peace beyond human comprehension or peace superior to human calculation. Avoid implying irrationality or forbidding thoughtful understanding.",
+        "Guard is a protective or military image. Preserve active protection of the believers' hearts and thoughts, and consider a transparency note if the image is rendered dynamically.",
+        "Hearts and thoughts together describe the inner person rather than a modern strict division between emotion and intellect.",
+        "In Christ Jesus locates the guarding peace within union, belonging, or relationship to Christ. Do not detach the promise into a generic calming technique.",
+        "Verse 8 deliberately repeats whatever six times before summarizing with excellence and praise. Natural English may manage the repetition, but the accumulating moral scope and final command must remain audible.",
+        "The virtue list is not a command for naive positivity. Truth, moral seriousness, justice, purity, loveliness, commendability, excellence, and praiseworthiness govern what receives sustained attention.",
+        "Logizesthe calls for deliberate consideration, reckoning, or dwelling attention. Avoid both a momentary thought and an unsupported promise that thought alone changes circumstances.",
+        "Verse 9 moves from attention to embodied practice. Preserve learned, received, heard, and seen; Paul appeals to both transmitted teaching and observed example.",
+        "The God of peace will be with you is a promise of divine presence, not merely a repeated description of inner calm. Preserve the deliberate literary link with the peace of God in verse 7."
+      ],
+      "verses": [
+        {
+          "reference": "Phil.4.4",
+          "greek": "Χαίρετε ἐν κυρίῳ πάντοτε πάλιν ἐρῶ χαίρετε"
+        },
+        {
+          "reference": "Phil.4.5",
+          "greek": "τὸ ἐπιεικὲς ὑμῶν γνωσθήτω πᾶσιν ἀνθρώποις ὁ κύριος ἐγγύς"
+        },
+        {
+          "reference": "Phil.4.6",
+          "greek": "μηδὲν μεριμνᾶτε ἀλλ’ ἐν παντὶ τῇ προσευχῇ καὶ τῇ δεήσει μετ’ εὐχαριστίας τὰ αἰτήματα ὑμῶν γνωριζέσθω πρὸς τὸν θεόν"
+        },
+        {
+          "reference": "Phil.4.7",
+          "greek": "καὶ ἡ εἰρήνη τοῦ θεοῦ ἡ ὑπερέχουσα πάντα νοῦν φρουρήσει τὰς καρδίας ὑμῶν καὶ τὰ νοήματα ὑμῶν ἐν Χριστῷ Ἰησοῦ"
+        },
+        {
+          "reference": "Phil.4.8",
+          "greek": "Τὸ λοιπόν ἀδελφοί ὅσα ἐστὶν ἀληθῆ ὅσα σεμνά ὅσα δίκαια ὅσα ἁγνά ὅσα προσφιλῆ ὅσα εὔφημα εἴ τις ἀρετὴ καὶ εἴ τις ἔπαινος ταῦτα λογίζεσθε"
+        },
+        {
+          "reference": "Phil.4.9",
+          "greek": "ἃ καὶ ἐμάθετε καὶ παρελάβετε καὶ ἠκούσατε καὶ εἴδετε ἐν ἐμοί ταῦτα πράσσετε καὶ ὁ θεὸς τῆς εἰρήνης ἔσται μεθ’ ὑμῶν"
+        }
+      ]
+    }
+  ],
+  "passage_sense_resolution": {
+    "gate_version": "2.2",
+    "status": "complete_for_blind_drafting",
+    "prepared_from": "SBLGNT text, parsed morphology, local and book-level discourse, source-language analysis, and governing FLT rules; no comparison translation or prior FLT English",
+    "visibility_attestation": {
+      "source_side_only": true,
+      "prior_flt_wording_absent": true,
+      "prior_candidates_absent": true,
+      "editor_benchmark_absent": true,
+      "comparison_translations_absent": true
+    },
+    "passage_argument": [
+      "Paul commands the church to keep rejoicing in the Lord and to let a gracious, considerate manner become evident to everyone because the Lord is near.",
+      "Instead of being consumed by anxiety, believers are to bring every situation and specific request to God in thankful prayer; God's surpassing peace will then guard their inner lives in Christ Jesus.",
+      "They must give sustained attention to all that is morally true and excellent, then put into practice the teaching and example received from Paul; the God of peace will be with them."
+    ],
+    "proposition_map": [
+      {
+        "references": [
+          "Phil.4.4"
+        ],
+        "statement": "Paul repeatedly commands the church to rejoice always in the Lord."
+      },
+      {
+        "references": [
+          "Phil.4.5"
+        ],
+        "statement": "The church's gracious gentleness is to be evident to everyone, because or in view of the fact that the Lord is near."
+      },
+      {
+        "references": [
+          "Phil.4.6"
+        ],
+        "statement": "They are not to be anxious about anything but, in every situation, are to present their specific requests to God through prayer and plea with thanksgiving."
+      },
+      {
+        "references": [
+          "Phil.4.7"
+        ],
+        "statement": "As a result, God's peace, which surpasses every human mind or all understanding, will actively guard their hearts and thoughts in Christ Jesus."
+      },
+      {
+        "references": [
+          "Phil.4.8"
+        ],
+        "statement": "Paul commands the brothers and sisters to give sustained attention to whatever is true, honorable, right, pure, lovely, commendable, morally excellent, and praiseworthy."
+      },
+      {
+        "references": [
+          "Phil.4.9"
+        ],
+        "statement": "They are to practice what they learned, received, heard, and saw in Paul, and the God of peace will be with them."
+      }
+    ],
+    "expressions": [
+      {
+        "sense_id": "php4_4_rejoice_always_in_lord",
+        "references": [
+          "Phil.4.4"
+        ],
+        "source_expression": "Χαίρετε ἐν κυρίῳ πάντοτε ... χαίρετε",
+        "status": "resolved",
+        "contextual_function": "The repeated plural command renews the letter's joy theme and grounds ongoing communal rejoicing in the Lord rather than in favorable circumstances.",
+        "primary_sense": "Always rejoice because you belong to the Lord; again Paul repeats the command to rejoice.",
+        "viable_alternatives": [],
+        "discourse_evidence": "The command is repeated within the verse for emphasis; en kyrio supplies the sphere or relational ground, and pantote gives comprehensive temporal scope.",
+        "reading_text_guidance": "Retain both commands and make belonging to or relationship with the Lord perceptible without turning joy into compulsory cheerfulness.",
+        "literal_note_guidance": "No note is normally required if the repeated command, always, and in-the-Lord ground remain clear.",
+        "choice_risks": "Rejoice is familiar but may sound ceremonial; be joyful can sound like an involuntary-emotion command; because you belong to the Lord is explanatory but more explicit than the compact phrase.",
+        "human_decision_required": false,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "php4_5_gentleness_everyone",
+        "references": [
+          "Phil.4.5"
+        ],
+        "source_expression": "τὸ ἐπιεικὲς ὑμῶν γνωσθήτω πᾶσιν ἀνθρώποις",
+        "status": "alternatives_retained",
+        "contextual_function": "Paul calls for a recognizable communal manner marked by gracious restraint, consideration, and willingness not to insist on every right.",
+        "primary_sense": "Let everyone see how gentle and considerate you are.",
+        "viable_alternatives": [
+          "Let your gracious forbearance be evident to everyone.",
+          "Make your reasonableness known to all people."
+        ],
+        "discourse_evidence": "The substantival adjective names a quality with a wider range than softness; the passive imperative calls for this quality to become known through observable conduct.",
+        "reading_text_guidance": "Use natural adult English that conveys visible gracious restraint without implying weakness, mere niceness, or self-promotion.",
+        "literal_note_guidance": "Explain that the Greek term can include gentleness, gracious forbearance, reasonableness, and not insisting on every right.",
+        "choice_risks": "Gentleness is clear but narrower; reasonableness can sound intellectual; forbearance is precise but difficult for the target reader; adding considerate may unpack rather than replace the range.",
+        "human_decision_required": true,
+        "reader_note_required": true,
+        "audit_text_and_note_together": true
+      },
+      {
+        "sense_id": "php4_5_lord_near",
+        "references": [
+          "Phil.4.5"
+        ],
+        "source_expression": "ὁ κύριος ἐγγύς",
+        "status": "alternatives_retained",
+        "contextual_function": "The compact declaration grounds the surrounding exhortations in the Lord's nearness, with both present-presence and approaching-return readings contextually viable.",
+        "primary_sense": "The Lord is near.",
+        "viable_alternatives": [
+          "The Lord is close at hand.",
+          "The Lord is coming soon."
+        ],
+        "discourse_evidence": "Engys can be spatial or temporal; the letter anticipates Christ's return while also speaking of life in the Lord, and the verbless clause does not specify one dimension.",
+        "reading_text_guidance": "Preserve near in the reading text unless context later supplies decisive evidence; do not expand one possible sense into the only meaning.",
+        "literal_note_guidance": "State that the Greek may refer to the Lord's present nearness, His approaching return, or both.",
+        "choice_risks": "Near faithfully preserves the ambiguity but may prompt the question near in what sense; coming soon chooses the temporal reading; close to you chooses the spatial or relational reading.",
+        "human_decision_required": true,
+        "reader_note_required": true,
+        "audit_text_and_note_together": true
+      },
+      {
+        "sense_id": "php4_6_anxiety_prayer_thanksgiving",
+        "references": [
+          "Phil.4.6"
+        ],
+        "source_expression": "μηδὲν μεριμνᾶτε ἀλλ’ ἐν παντὶ τῇ προσευχῇ καὶ τῇ δεήσει μετ’ εὐχαριστίας ...",
+        "status": "resolved",
+        "contextual_function": "A comprehensive prohibition against consuming anxiety is paired with a comprehensive alternative: turn every circumstance into dependent, specific, thankful prayer.",
+        "primary_sense": "Do not be anxious about anything; instead, in every situation pray, make your specific requests, and give thanks.",
+        "viable_alternatives": [],
+        "discourse_evidence": "Meden and en panti form an anything/everything contrast; alla marks the replacement; prayer, plea, thanksgiving, and requests jointly describe the church's approach to God.",
+        "reading_text_guidance": "Keep the contrast direct and compassionate. Natural verbs may replace stacked prayer nouns, but prayer, specific request, and thanksgiving must remain.",
+        "literal_note_guidance": "No note is required merely to defend natural sentence restructuring. A pastoral study note may clarify that the command redirects anxiety toward God rather than condemning involuntary distress.",
+        "choice_risks": "Worry is accessible but can sound lighter than anxiety; never worry may overstate psychological control; in every situation clarifies the idiom but must retain total scope.",
+        "human_decision_required": false,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "php4_6_present_requests_to_god",
+        "references": [
+          "Phil.4.6"
+        ],
+        "source_expression": "τὰ αἰτήματα ὑμῶν γνωριζέσθω πρὸς τὸν θεόν",
+        "status": "resolved",
+        "contextual_function": "Believers are to bring their actual requests openly before God as the relational act that replaces anxious self-consumption.",
+        "primary_sense": "Tell God what you need and bring your requests to Him.",
+        "viable_alternatives": [],
+        "discourse_evidence": "The passive imperative of make known governs the requests and pros ton theon directs them toward God; the point is presentation, not supplying unknown information.",
+        "reading_text_guidance": "Use direct relational English without suggesting that God is ignorant or that every request will receive the desired outcome.",
+        "literal_note_guidance": "No note is normally required if requests, God, prayer, and thanksgiving all remain explicit.",
+        "choice_risks": "Tell God what you need is clear but may sound as if He lacks knowledge; present your requests is accurate but formal; ask God for what you need is natural but shifts the grammatical emphasis.",
+        "human_decision_required": false,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "php4_7_surpassing_peace_guards",
+        "references": [
+          "Phil.4.7"
+        ],
+        "source_expression": "ἡ εἰρήνη τοῦ θεοῦ ἡ ὑπερέχουσα πάντα νοῦν φρουρήσει ...",
+        "status": "alternatives_retained",
+        "contextual_function": "God's own peace is the promised consequence and acts as a protective guard over the believers' inner lives within their relationship to Christ.",
+        "primary_sense": "Then God's peace, which surpasses all human understanding, will guard your hearts and thoughts in Christ Jesus.",
+        "viable_alternatives": [
+          "God's peace, greater than any mind can grasp, will protect your whole inner life in Christ Jesus.",
+          "The peace God gives, beyond all human calculation, will stand guard over your hearts and thoughts because you belong to Christ Jesus."
+        ],
+        "discourse_evidence": "Kai links the promise to verse 6; hyperechousa panta noun describes peace as surpassing every mind or understanding; phroureo is protective guard language; hearts and thoughts cover the inner life.",
+        "reading_text_guidance": "Preserve God's agency or source, the surpassing quality, the active guard image, both hearts and thoughts, and the in-Christ location. Sentence division is allowed if the promise remains one coherent result.",
+        "literal_note_guidance": "Explain that guard uses the image of a sentry protecting a city or person. If understanding is used, note only if needed that the phrase can also mean peace beyond human calculation.",
+        "choice_risks": "Passes understanding is compact but traditional and abstract; beyond comprehension can imply irrationality; protect loses the military image; because you belong to Christ clarifies en Christo but expands it.",
+        "human_decision_required": true,
+        "reader_note_required": true,
+        "audit_text_and_note_together": true
+      },
+      {
+        "sense_id": "php4_8_virtue_list_attention",
+        "references": [
+          "Phil.4.8"
+        ],
+        "source_expression": "ὅσα ... ἀληθῆ ... σεμνά ... δίκαια ... ἁγνά ... προσφιλῆ ... εὔφημα ... ἀρετὴ ... ἔπαινος ... λογίζεσθε",
+        "status": "alternatives_retained",
+        "contextual_function": "Paul sets a comprehensive moral filter for sustained communal attention and concludes with a command to reckon with, dwell on, or keep considering such things.",
+        "primary_sense": "Keep your thoughts focused on whatever is true, honorable, right, pure, lovely, commendable, excellent, and worthy of praise.",
+        "viable_alternatives": [
+          "Give careful thought to everything that is true, noble, just, pure, beautiful, admirable, morally excellent, and praiseworthy.",
+          "Let all that is true and good in these ways occupy your thoughts."
+        ],
+        "discourse_evidence": "Six repeated hosa clauses accumulate categories before two summary conditions; the present middle imperative logizesthe calls for continuing deliberate consideration.",
+        "reading_text_guidance": "Keep the list intelligible on one hearing without collapsing its moral range. Preserve sustained, chosen attention and enough repetition or cadence to retain Paul's rhetoric.",
+        "literal_note_guidance": "A note may explain that the final verb means to give sustained, deliberate consideration, not merely to notice something once.",
+        "choice_risks": "Think about is clear but may sound momentary; dwell on conveys duration but can sound obsessive; lovely can be aesthetic or morally attractive; commendable/admirable must not be reduced to popularity.",
+        "human_decision_required": true,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "php4_9_received_example_practice",
+        "references": [
+          "Phil.4.9"
+        ],
+        "source_expression": "ἃ καὶ ἐμάθετε καὶ παρελάβετε καὶ ἠκούσατε καὶ εἴδετε ἐν ἐμοί ταῦτα πράσσετε",
+        "status": "resolved",
+        "contextual_function": "Paul moves from disciplined attention to repeated practice, appealing to both entrusted teaching and his visible example.",
+        "primary_sense": "Keep practicing what you learned, received, heard, and saw in me.",
+        "viable_alternatives": [],
+        "discourse_evidence": "Four coordinated aorist verbs identify distinct channels of reception; the present imperative prassete calls for continuing embodied action.",
+        "reading_text_guidance": "Retain all four verbs if possible and make practice the clear command. Do not reduce Paul's appeal to ideas alone or imply flawless self-exaltation.",
+        "literal_note_guidance": "No note is normally required if transmitted teaching, heard instruction, observed example, and practice remain recoverable.",
+        "choice_risks": "Put into practice is natural but longer; do these things may have an unclear referent; follow my example can collapse the learned and received teaching into observation alone.",
+        "human_decision_required": false,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "php4_9_god_of_peace_with_you",
+        "references": [
+          "Phil.4.9"
+        ],
+        "source_expression": "ὁ θεὸς τῆς εἰρήνης ἔσται μεθ’ ὑμῶν",
+        "status": "resolved",
+        "contextual_function": "Paul promises not only peace as a gift but the presence of the God characterized by and giving peace, deliberately answering the peace-of-God promise in verse 7.",
+        "primary_sense": "And the God of peace will be with you.",
+        "viable_alternatives": [],
+        "discourse_evidence": "The title reverses the genitive relationship from verse 7 and estai meth hymon promises God's accompanying presence.",
+        "reading_text_guidance": "Preserve God of peace and with you so the literary link and stronger promise of divine presence remain audible.",
+        "literal_note_guidance": "Explain the deliberate movement from the peace of God in verse 7 to the God of peace in verse 9 if the link may be missed.",
+        "choice_risks": "The God who gives peace is clearer but weakens the word-order link; you will experience God's peace substitutes a benefit for God's promised presence.",
+        "human_decision_required": false,
+        "reader_note_required": true,
+        "audit_text_and_note_together": true
+      }
+    ]
+  }
+}

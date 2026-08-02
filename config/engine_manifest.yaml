@@ -81,14 +81,14 @@ current_checkpoint:
   chapter: 4
   current_unit_id: "PHP-04-004-009"
   current_passage: "Philippians 4:4-9"
-  stage: "previous_unit_accepted_pending_next_passage_sense_gate"
-  candidate_status: "No English candidate exists yet for Philippians 4:4-9."
+  stage: "passage_sense_gate_complete_pending_blind_drafting"
+  candidate_status: "Engine 2.2 source-side passage-sense brief prepared; no English candidate exists yet."
   candidate_sealed: false
   latest_accepted_unit: "Philippians 4:1-3 accepted after Engine 2.2 exact-text and reader-note audit."
-  next_permitted_action: "Prepare and validate the source-side passage-sense gate for PHP-04-004-009 before any blind English drafting."
+  next_permitted_action: "Validate and merge the isolated PHP-04-004-009 source packet and workflow once; the main-branch push may launch exactly one blind A/B/C drafting run."
   copyright_status: "PENDING_RECORDED_INDEPENDENT_DRAFT"
   provisional_heuristic_check: "not_yet_applicable"
-  source_gate_status: "pending"
+  source_gate_status: "complete_for_blind_drafting"
   hard_check_required: true
   publication_clearance: false
   prepublication_requirement: "Run the formal eight-translation New Testament API batch audit through authorized sources, using API.Bible where available and likely the official ESV API separately; resolve findings and re-audit later wording changes."
@@ -250,14 +250,12 @@ current_checkpoint:
     semantic_pass: true
     human_acceptance_after_oral_review_pending: false
   active_files:
-    blind_source: "docs/architecture/phase-4/PHP-04-001-003_blind-source-v2.2.json"
-    human_synthesis: "docs/architecture/phase-4/PHP-04-001-003_human-editor-synthesis-v2.2.json"
-    copyright_heuristic: "docs/architecture/phase-4/PHP-04-001-003_copyright-heuristic-v01.json"
-    draft_receipt: "config/latest_php4_001_003_engine22_draft_run.json"
-    smoothing_runner: "phase4-harness/src/oral-smoothing.js"
-    smoothing_workflow: ".github/workflows/phase4-php4-001-003-human-smoothing.yml"
-    audit_runner: "phase4-harness/src/human-candidate-audit.js"
-    audit_workflow: ".github/workflows/phase4-php4-001-003-human-smoothing.yml"
+    blind_source: "docs/architecture/phase-4/PHP-04-004-009_blind-source-v2.2.json"
+    passage_sense_gate_spec: "docs/architecture/phase-4/engine-2.2-passage-sense-gate.md"
+    runner: "phase4-harness/src/chapter-units.js"
+    workflow: ".github/workflows/phase4-php4-004-009-sense-drafts.yml"
+    planned_draft_receipt: "config/latest_php4_004_009_engine22_draft_run.json"
+    latest_accepted_unit_record: "docs/architecture/phase-4/PHP-04-001-003_human-editor-synthesis-v2.2.json"
     latest_frozen_chapter: "docs/architecture/phase-4/FLT_Philippians_3_freeze-v01.md"
     latest_audit_receipt: "config/latest_audit_run.json"
 
