@@ -538,3 +538,16 @@ Reopen only if the whole-letter review or later contextual evidence exposes a co
 - **Draft evidence:** Engine 2.2 run 30757547001 produced three blind candidates under one common prompt. Gemini Pro’s malformed authoritative verse-2 field remains disclosed and was not silently repaired.
 - **Provisional copyright heuristic:** `none_obvious`; status `DEFERRED_BATCH`; hard eight-translation API audit still required; `publication_clearance: false`.
 - **Next gate:** Listener-only diagnosis followed by source-aware smoothing proposals. Human approval remains required before constitutional audit.
+
+
+---
+
+## 2026-08-02 — Philippians 4:1–3 smoothed wording and notes approved
+
+- **Unit:** `PHP-04-001-003`
+- **Human decision:** Retain verses 1–2 exactly and adopt the listener-driven clarification in verse 3: “The names of all these coworkers are in the book of life.”
+- **Reason:** The explicit final sentence resolves the oral ambiguity in the participant list and makes clear that Euodia, Syntyche, Clement, and the other coworkers belong to the honored group.
+- **Notes approved:** All five proposed transparency notes are approved: “my crown”; the equal repeated appeal and recurring mindset theme; the unidentified loyal partner; the Philippians 1:27 shared-struggle link; and the book-of-life image.
+- **Oral-smoothing evidence:** GitHub Actions run 30762327233 completed three listener-only diagnoses followed by three source-aware proposals.
+- **Copyright delta:** `none_obvious`; the repaired sentence introduces no obvious highly distinctive multiword dynamic resemblance. Status remains `DEFERRED_BATCH`; hard eight-translation API audit required; `publication_clearance: false`.
+- **Next gate:** Audit the exact three-verse reading text and all five approved notes together. No silent wording repair is authorized.
