@@ -1,7 +1,7 @@
 {
   "candidate_id": "PHP-03-001-021-WHOLE-CHAPTER-REVIEW-V01",
   "passage": "Philippians 3:1-21",
-  "status": "human_approved_final_chapter_candidate_pending_exact_text_and_notes_audit",
+  "status": "finalized_and_frozen_first_draft_copyright_deferred_batch",
   "compilation_date": "2026-08-02",
   "authority": {
     "source_units": [
@@ -22,7 +22,9 @@
     "human_approved_repairs": [
       "Phil.3.9",
       "Phil.3.10"
-    ]
+    ],
+    "chapter_frozen": true,
+    "reopening_requires_explicit_human_decision": true
   },
   "paragraph_plan": [
     {
@@ -267,5 +269,20 @@
     "hard_check_required": true,
     "publication_clearance": false,
     "required_prepublication_action": "Run the formal eight-translation New Testament batch audit through authorized paid APIs, using API.Bible where available and likely the official ESV API separately."
+  },
+  "final_audit": {
+    "date": "2026-08-02",
+    "engine_run_id": "FLT-PHP-03-20260802-10",
+    "github_run_id": 30739206096,
+    "artifact_id": 8830709468,
+    "artifact_name": "FLT-PHP-03-20260802-10-audit",
+    "artifact_sha256": "78eb2f6e1897f97314bba33fcb099f468813c71880f48aedca467f4b2f6c1a6c",
+    "auditors_total": 3,
+    "eligible_count": 3,
+    "blocking_defects": 0,
+    "warnings": 1,
+    "semantic_pass": true,
+    "notes_passed": 18,
+    "warning_disposition": "Philippians 3:5 'true Hebrew' is a nonblocking observation already considered and retained in the human chapter review; no repair required."
   }
 }
