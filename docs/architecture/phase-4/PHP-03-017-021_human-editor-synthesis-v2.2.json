@@ -1,0 +1,71 @@
+{
+  "candidate_id": "PHP-03-017-021-HUMAN-SYNTHESIS-V2.2-SMOOTHED",
+  "passage": "Philippians 3:17-21",
+  "status": "accepted_unit_pending_whole_chapter_review",
+  "audit": {
+    "date": "2026-08-02",
+    "github_run": 30734922684,
+    "result": "three_of_three_eligible_zero_blocks",
+    "reader_notes_audited_with_text": true,
+    "documented_warnings": []
+  },
+  "verse_renderings": [
+    {
+      "reference": "Phil.3.17",
+      "text": "Brothers and sisters, join together in following my example. Pay close attention to those whose lives follow the pattern you see in us."
+    },
+    {
+      "reference": "Phil.3.18",
+      "text": "For I have told you often, and I tell you again now with tears: many people live as enemies of the cross of Christ."
+    },
+    {
+      "reference": "Phil.3.19",
+      "text": "Their end is destruction. Their god is their own appetite. They take pride in what should shame them. Their minds are set on earthly things."
+    },
+    {
+      "reference": "Phil.3.20",
+      "text": "But our citizenship is in heaven, and we eagerly await our Savior, the Lord Jesus Christ, who will come from there."
+    },
+    {
+      "reference": "Phil.3.21",
+      "text": "He will transform our lowly bodies to be like His glorious body. He will do this by the power that enables Him even to bring everything under His rule."
+    }
+  ],
+  "reader_notes": [
+    {
+      "note_id": "Phil.3.17-example-pattern",
+      "reference": "Phil.3.17",
+      "anchor": "my example … the pattern you see in us",
+      "status": "approved",
+      "text": "Paul first calls the believers to join one another in imitating him. He then broadens the example from “me” to “us,” including the coworkers who shared this pattern of life."
+    },
+    {
+      "note_id": "Phil.3.19-god-appetite",
+      "reference": "Phil.3.19",
+      "anchor": "Their god is their own appetite",
+      "status": "approved",
+      "text": "The Greek literally says “their god is the belly.” The image can refer broadly to bodily appetites rather than one particular desire or practice."
+    },
+    {
+      "note_id": "Phil.3.20-heavenly-citizenship",
+      "reference": "Phil.3.20",
+      "anchor": "our citizenship is in heaven",
+      "status": "approved",
+      "text": "The Greek uses a civic term that can mean “citizenship” or “commonwealth”—the community and government to which someone belongs."
+    },
+    {
+      "note_id": "Phil.3.21-lowly-glorious-bodies",
+      "reference": "Phil.3.21",
+      "anchor": "our lowly bodies … His glorious body",
+      "status": "approved",
+      "text": "The Greek more literally contrasts “the body of our lowliness” with Christ’s “body of glory.” This describes the body’s present condition; it does not call the body evil."
+    },
+    {
+      "note_id": "Phil.3.21-conformity-link",
+      "reference": "Phil.3.21",
+      "anchor": "to be like His glorious body",
+      "status": "approved",
+      "text": "The Greek expressions in verses 10 and 21 come from the same word family, meaning to share the same form. Paul links becoming like Christ in His death with being made like Him in glory."
+    }
+  ]
+}

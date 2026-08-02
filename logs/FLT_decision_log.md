@@ -450,3 +450,17 @@ Reopen only if the whole-letter review or later contextual evidence exposes a co
 - **Warnings accepted as documented dynamic choices:** GPT-5.6 Sol marked the purpose reading and Christ’s prior initiative in verse 12, and the expressed relationship between the prize and God’s upward call in verse 14, as defensible but review-worthy. Both alternatives are transparently disclosed in the approved notes. Claude Sonnet and Gemini Pro passed every verse without warning.
 - **Wording changes after audit:** None.
 - **Next gate:** Resume translation with the next Philippians 3 unit. After the chapter is complete, conduct whole-chapter movement, oral-flow, terminology, and note-placement review.
+
+---
+
+## 2026-08-02 — Philippians 3:17–21 Engine 2.2 unit accepted
+
+- **Unit:** `PHP-03-017-021`
+- **Status:** accepted as a unit; Philippians 3 is now complete pending whole-chapter review
+- **Decision:** Adopt the human-approved source-aware smoothed reading text and its five transparency notes exactly as audited.
+- **Transparency policy:** The notes disclose the communal movement from Paul’s example to the shared apostolic pattern, the literal “belly” image, the civic range of “citizenship,” the lowly/glorious bodily contrast, and the conformity word-family link between verses 10 and 21.
+- **Engine evidence:** Engine 2.2 supplied the Passage-Sense Resolution Gate, fresh blind A/B/C drafting under one constitutional goal, human synthesis, listener-only diagnosis, and source-aware minimal-change smoothing.
+- **Exact audit:** GitHub Actions run 30734922684; three of three auditors eligible; zero warnings; zero blocking defects; all five reader notes passed.
+- **Wording changes after audit:** None.
+- **Next gate:** Conduct the scheduled Philippians 3 whole-chapter movement, oral-flow, terminology, and note-placement review before beginning chapter 4.
+
