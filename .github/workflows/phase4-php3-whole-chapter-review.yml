@@ -1,0 +1,93 @@
+name: FLT Philippians 3 whole-chapter review
+run-name: Philippians 3 whole-chapter oral and source-aware pre-screen
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "docs/architecture/phase-4/FLT_Philippians_3_chapter-review-candidate-v01.json"
+      - ".github/workflows/phase4-php3-whole-chapter-review.yml"
+  workflow_dispatch:
+
+permissions: {contents: read}
+concurrency: {group: flt-php3-whole-chapter-review, cancel-in-progress: true}
+
+jobs:
+  review:
+    name: Whole-chapter listener and source-aware review
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: 24, cache: npm, cache-dependency-path: phase4-harness/package-lock.json}
+      - name: Install and test Engine 2.2
+        working-directory: phase4-harness
+        run: npm ci && npm test
+      - name: Validate compiled chapter
+        shell: bash
+        run: |
+          jq -e '
+            (.verse_renderings | length) == 21 and
+            ([.verse_renderings[].reference] == [
+              "Phil.3.1","Phil.3.2","Phil.3.3","Phil.3.4","Phil.3.5","Phil.3.6","Phil.3.7",
+              "Phil.3.8","Phil.3.9","Phil.3.10","Phil.3.11","Phil.3.12","Phil.3.13","Phil.3.14",
+              "Phil.3.15","Phil.3.16","Phil.3.17","Phil.3.18","Phil.3.19","Phil.3.20","Phil.3.21"
+            ]) and
+            (.authority.exact_unit_wording_preserved == true) and
+            (.authority.human_oral_review_required == true)
+          ' docs/architecture/phase-4/FLT_Philippians_3_chapter-review-candidate-v01.json
+      - name: Create review identity and source packet
+        id: run
+        shell: bash
+        run: |
+          run_id="FLT-PHP-03-CHAPTER-$(date -u +%Y%m%d)-${GITHUB_RUN_NUMBER}"
+          node phase4-harness/scripts/prepare-run-config.mjs phase4-harness/config.github-actions.json phase4-harness/.php3-chapter-review-config.json "$run_id"
+          jq '.unit_id="PHP-03-001-021-WHOLE-CHAPTER-REVIEW" | .source_packet=".php3-chapter-review-source.json"' phase4-harness/.php3-chapter-review-config.json > phase4-harness/.php3-chapter-review-config.tmp
+          mv phase4-harness/.php3-chapter-review-config.tmp phase4-harness/.php3-chapter-review-config.json
+          jq -n \
+            --slurpfile b1 docs/architecture/phase-4/PHP-03-001-011_oral-retest-blind-source.json \
+            --slurpfile b2 docs/architecture/phase-4/PHP-03-012-016_blind-source-v2.2.json \
+            --slurpfile b3 docs/architecture/phase-4/PHP-03-017-021_blind-source-v2.2.json \
+            --slurpfile parsed data/source/sblgnt_parsed.json \
+            '($b1[0].units[0].verses + $b2[0].units[0].verses + $b3[0].units[0].verses) as $verses |
+            {
+              source_data: {
+                edition: "SBLGNT",
+                verses: [$verses[] | . as $v | {
+                  reference: $v.reference,
+                  greek: $v.greek,
+                  tokens: $parsed[0][$v.reference]
+                }]
+              },
+              governing_rules: (
+                $b1[0].governing_rules + [
+                  "Review the complete chapter as one literary and oral unit while respecting the human-accepted wording of each component unit.",
+                  "Identify only concrete chapter-level seams: movement across unit boundaries, cumulative repetition, terminology inconsistency, note redundancy or misplacement, and cumulative dynamic over-expansion.",
+                  "A prior unit may be reopened only when a demonstrable chapter-level problem remains after one-hearing review.",
+                  "Human listening and exact wording approval remain controlling; reviewers provide evidence and proposals only."
+                ]
+              ),
+              matrix_entries: (
+                ($b1[0].matrix_alerts // []) +
+                ($b1[0].passage_sense_resolution.expressions // []) +
+                ($b2[0].matrix_alerts // []) +
+                ($b2[0].passage_sense_resolution.expressions // []) +
+                ($b3[0].matrix_alerts // []) +
+                ($b3[0].passage_sense_resolution.expressions // [])
+              )
+            }' > phase4-harness/.php3-chapter-review-source.json
+          echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
+      - name: Run whole-chapter listener and source-aware pre-screen
+        run: node phase4-harness/src/oral-smoothing.js phase4-harness/.php3-chapter-review-config.json "phase4-harness/runs/${{ steps.run.outputs.run_id }}" docs/architecture/phase-4/FLT_Philippians_3_chapter-review-candidate-v01.json phase4-harness/.php3-chapter-review-source.json
+      - name: Upload whole-chapter review bundle
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: "${{ steps.run.outputs.run_id || 'FLT-PHP-03-CHAPTER-REVIEW-blocked' }}"
+          path: phase4-harness/runs/
+          retention-days: 30
