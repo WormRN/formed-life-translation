@@ -45,7 +45,7 @@ jobs:
         id: run
         shell: bash
         run: |
-          run_id="FLT-PHP-03-CHAPTER-$(date -u +%Y%m%d)-${GITHUB_RUN_NUMBER}"
+          run_id="FLT-PHP-03-$(date -u +%Y%m%d)-${GITHUB_RUN_NUMBER}"
           node phase4-harness/scripts/prepare-run-config.mjs phase4-harness/config.github-actions.json phase4-harness/.php3-chapter-review-config.json "$run_id"
           jq '.unit_id="PHP-03-001-021-WHOLE-CHAPTER-REVIEW" | .source_packet=".php3-chapter-review-source.json"' phase4-harness/.php3-chapter-review-config.json > phase4-harness/.php3-chapter-review-config.tmp
           mv phase4-harness/.php3-chapter-review-config.tmp phase4-harness/.php3-chapter-review-config.json
