@@ -502,3 +502,25 @@ Reopen only if the whole-letter review or later contextual evidence exposes a co
 - **Copyright status:** `DEFERRED_BATCH`; provisional heuristic check `none_obvious`; formal eight-translation API audit required before publication; `publication_clearance: false`.
 - **Next permitted work:** Begin Philippians 4 in the next session. Reopening Philippians 3 requires an explicit human editorial decision.
 
+
+
+---
+
+## 2026-08-02 — Retrospective provisional copyright heuristic for Philippians 1–2
+
+- **Protocol:** Memory-based `PROVISIONAL_HEURISTIC_CHECK` only; no comparison passages were supplied, reconstructed, quoted, or measured.
+- **Philippians 1 result:** `watchlist` for 1:5, 1:12, and 1:21 because each contains a familiar, discretionary multiword dynamic solution requiring exact comparison later.
+- **Philippians 2 result:** `watchlist` for 2:21 and 2:30 because their compact or explanatory dynamic solutions are familiar enough to require exact comparison later.
+- **Independence assessment:** The source-side drafting, common-goal blindness, human decisions, and audits remain documented. These findings do not establish derivation and do not reopen the frozen wording.
+- **Status for both chapters:** `DEFERRED_BATCH`; `hard_check_required: true`; `publication_clearance: false`.
+- **Required later action:** Prioritize the listed verses in the authorized eight-translation New Testament API batch audit.
+
+---
+
+## 2026-08-02 — Philippians 4:1–3 passage-sense gate prepared
+
+- **Unit:** `PHP-04-001-003`
+- **Boundary:** Verse 1 carries the inference from 3:17–21; verses 2–3 apply communal steadfastness to the appeal involving Euodia and Syntyche.
+- **Gate status:** Engine 2.2 source-side brief complete for blind drafting.
+- **Required protections:** Equal repeated appeal to both women; recurring `phroneo` mindset link; unidentified loyal partner; honored shared struggle in the good news; book-of-life image; no supplied prior FLT or comparison English.
+- **Next action:** Validate the isolated PR, merge once, and permit exactly one push-triggered blind A/B/C drafting run.

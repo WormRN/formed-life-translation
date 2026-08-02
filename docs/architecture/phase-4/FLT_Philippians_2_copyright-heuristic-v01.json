@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "candidate_id": "PHP-02-001-030-FROZEN",
+  "passage": "Philippians 2:1-30",
+  "draft_commit_or_record": "docs/architecture/phase-4/FLT_Philippians_2_chapter-review-v01.md",
+  "mode": "PROVISIONAL_HEURISTIC_CHECK",
+  "performed_on": "2026-08-02",
+  "comparison_passages_supplied": false,
+  "heuristic_findings": "watchlist",
+  "obvious_distinctive_risks": [
+    {
+      "reference": "Phil.2.21",
+      "flt_wording": "what matters to Jesus Christ",
+      "reason": "This concise dynamic unpacking of a compact source expression is familiar enough to require exact comparison in the hard audit."
+    },
+    {
+      "reference": "Phil.2.30",
+      "flt_wording": "stepping in to give me in person the help that you were too far away to give",
+      "reason": "The verse uses a substantial explanatory restructuring whose combined in-person and distance clarification resembles a familiar modern dynamic solution."
+    }
+  ],
+  "independent_path_assessment": "The repository preserves source-side drafting, common-goal blindness, human adjudication, and semantic audits for the chapter. The watchlist identifies possible expressive resemblance only; it does not show that the wording was derived from another translation.",
+  "recommended_action": "Do not rewrite from memory. Retain the frozen first-draft text and prioritize the listed verses for formal exact, structural, and interpretive comparison during the authorized eight-translation batch audit.",
+  "copyright_protocol_status": "DEFERRED_BATCH",
+  "hard_check_required": true,
+  "publication_clearance": false,
+  "limitations": "This memory-based screen is deliberately narrow and non-exhaustive. No comparison text was retrieved, reconstructed, quoted, or measured."
+}
