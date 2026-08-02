@@ -1,11 +1,14 @@
 {
   "candidate_id": "PHP-03-001-011-HUMAN-SYNTHESIS-V2.2-SMOOTHED",
   "passage": "Philippians 3:1-11",
-  "status": "human_approved_chapter_repairs_pending_final_whole_chapter_audit",
+  "status": "accepted_with_human_approved_chapter_repairs_and_final_whole_chapter_audit",
   "audit": {
-    "status": "superseded_for_exact_text_by_human_approved_chapter_repairs",
-    "prior_github_run": 30720117887,
-    "final_whole_chapter_audit_required": true
+    "date": "2026-08-02",
+    "scope": "whole_chapter_exact_text_and_18_reader_notes",
+    "github_run": 30739206096,
+    "engine_run_id": "FLT-PHP-03-20260802-10",
+    "result": "three_of_three_eligible_zero_blocks_one_nonblocking_prior_wording_warning",
+    "reader_notes_audited_with_text": true
   },
   "verse_renderings": [
     {
