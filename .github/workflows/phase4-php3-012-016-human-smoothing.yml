@@ -1,0 +1,58 @@
+name: FLT Philippians 3:12-16 exact-text audit
+run-name: Philippians 3:12-16 exact reading-text and reader-note audit
+
+on:
+  workflow_dispatch:
+
+permissions: {contents: read}
+concurrency: {group: flt-php3-012-016-exact-audit, cancel-in-progress: true}
+
+jobs:
+  audit:
+    name: Exact reading-text and reader-note constitutional audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: 24, cache: npm, cache-dependency-path: phase4-harness/package-lock.json}
+      - name: Install and test Engine 2.2
+        working-directory: phase4-harness
+        run: npm ci && npm test
+      - name: Create audit identity and source packet
+        id: run
+        shell: bash
+        run: |
+          run_id="FLT-PHP-03-$(date -u +%Y%m%d)-${GITHUB_RUN_NUMBER}"
+          node phase4-harness/scripts/prepare-run-config.mjs phase4-harness/config.github-actions.json phase4-harness/.php3-012-016-audit-config.json "$run_id"
+          jq '.unit_id="PHP-03-012-016-EXACT-AUDIT" | .source_packet=".php3-012-016-audit-source.json"' phase4-harness/.php3-012-016-audit-config.json > phase4-harness/.php3-012-016-audit-config.tmp
+          mv phase4-harness/.php3-012-016-audit-config.tmp phase4-harness/.php3-012-016-audit-config.json
+          jq -n \
+            --slurpfile brief docs/architecture/phase-4/PHP-03-012-016_blind-source-v2.2.json \
+            --slurpfile parsed data/source/sblgnt_parsed.json \
+            '$brief[0] as $b | $parsed[0] as $p | {
+              source_data: {
+                edition: "SBLGNT",
+                verses: [$b.units[0].verses[] | . as $v | {
+                  reference: $v.reference,
+                  greek: $v.greek,
+                  tokens: $p[$v.reference]
+                }]
+              },
+              governing_rules: $b.governing_rules,
+              matrix_entries: ($b.matrix_alerts + $b.passage_sense_resolution.expressions)
+            }' > phase4-harness/.php3-012-016-audit-source.json
+          echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
+      - name: Run exact-text constitutional audit
+        run: node phase4-harness/src/human-candidate-audit.js phase4-harness/.php3-012-016-audit-config.json "phase4-harness/runs/${{ steps.run.outputs.run_id }}" docs/architecture/phase-4/PHP-03-012-016_human-editor-synthesis-v2.2.json
+      - name: Upload exact-text audit bundle
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: "${{ steps.run.outputs.run_id || 'FLT-PHP-03-012-016-AUDIT-blocked' }}-audit"
+          path: phase4-harness/runs/
+          retention-days: 30

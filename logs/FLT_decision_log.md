@@ -436,3 +436,17 @@ Reopen only if the whole-letter review or later contextual evidence exposes a co
 - **Warnings accepted as documented dynamic choices:** “because you belong to the Lord” (v.1), “those who do evil” (v.2), “belong completely to Him” (v.9), “the power that raised Him” (v.10), and passive “may also be raised” (v.11).
 - **Supersession:** This unified Engine 2.2 record governs the current wording and notes for 3:1–11 while preserving the earlier split-unit records as historical evidence.
 - **Next gate:** Resume translation with `PHP-03-012-016`. After Philippians 3 is complete, conduct whole-chapter movement, oral-flow, terminology, and note-placement review.
+
+---
+
+## 2026-08-02 — Philippians 3:12–16 Engine 2.2 unit accepted
+
+- **Unit:** `PHP-03-012-016`
+- **Status:** accepted as a unit; pending whole-chapter review after Philippians 3 is complete
+- **Decision:** Adopt the human-approved source-aware smoothed reading text and its five transparency notes exactly as audited.
+- **Transparency policy:** The notes disclose the unstated object in verse 12, the purpose/causal alternative in verse 12, the upward/heavenly-call alternative in verse 14, the “complete/mature” word-family link, and the walking-in-line image in verse 16. They establish transparency and critical trust; they do not repair an inadequate reading text.
+- **Engine evidence:** Engine 2.2 supplied the Passage-Sense Resolution Gate, fresh blind A/B/C drafting under one constitutional goal, human synthesis, listener-only diagnosis, and source-aware minimal-change smoothing.
+- **Exact audit:** GitHub Actions run 30732690820; three of three auditors eligible; zero blocking defects; all five reader notes passed.
+- **Warnings accepted as documented dynamic choices:** GPT-5.6 Sol marked the purpose reading and Christ’s prior initiative in verse 12, and the expressed relationship between the prize and God’s upward call in verse 14, as defensible but review-worthy. Both alternatives are transparently disclosed in the approved notes. Claude Sonnet and Gemini Pro passed every verse without warning.
+- **Wording changes after audit:** None.
+- **Next gate:** Resume translation with the next Philippians 3 unit. After the chapter is complete, conduct whole-chapter movement, oral-flow, terminology, and note-placement review.
