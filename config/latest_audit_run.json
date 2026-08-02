@@ -1,38 +1,38 @@
 {
   "schema_version": 1,
   "repository": "WormRN/formed-life-translation",
-  "workflow_path": ".github/workflows/phase4-php3-whole-chapter-review.yml",
-  "unit_id": "PHP-03-001-021-FINAL-EXACT-AUDIT",
-  "passage": "Philippians 3:1-21",
-  "engine_run_id": "FLT-PHP-03-20260802-10",
-  "github_run_id": 30739206096,
-  "run_url": "https://github.com/WormRN/formed-life-translation/actions/runs/30739206096",
-  "artifact_id": 8830709468,
-  "artifact_name": "FLT-PHP-03-20260802-10-audit",
-  "artifact_sha256": "78eb2f6e1897f97314bba33fcb099f468813c71880f48aedca467f4b2f6c1a6c",
+  "workflow_path": ".github/workflows/phase4-php4-001-003-human-smoothing.yml",
+  "unit_id": "PHP-04-001-003-EXACT-AUDIT",
+  "passage": "Philippians 4:1-3",
+  "engine_run_id": "FLT-PHP-04-20260802-3",
+  "github_run_id": 30763406223,
+  "run_url": "https://github.com/WormRN/formed-life-translation/actions/runs/30763406223",
+  "artifact_id": 8838178458,
+  "artifact_name": "FLT-PHP-04-20260802-3-audit",
+  "artifact_sha256": "ed88e4f6c69121de27a50c5a68738c9fe7de9cf47ce69a378776870ad1b1faac",
   "artifact_summary_path": "outputs/human-candidate-audit.md",
-  "head_sha": "854f80c1a63a14663c1a8bd7d521e374a406805b",
-  "generated_at": "2026-08-02T08:11:11Z",
+  "head_sha": "d4f7b44a702520e9a656b3c26543dcda71b3739a",
+  "generated_at": "2026-08-02T19:29:00Z",
   "job_outcome": "success",
-  "receipt_status": "whole_chapter_human_approved_text_and_notes_audited",
+  "receipt_status": "human_approved_unit_text_and_notes_audited",
   "audit_evidence": {
     "auditor_total": 3,
     "eligible_count": 3,
     "blocking_defects": 0,
     "warnings": 1,
     "semantic_pass": true,
-    "verse_count": 21,
-    "reader_notes_total": 18,
-    "reader_notes_passed": 18
+    "verse_count": 3,
+    "reader_notes_total": 5,
+    "reader_notes_passed": 5
   },
   "warning_disposition": {
-    "reference": "Phil.3.5",
-    "issue": "One auditor flagged 'true Hebrew' as a mild added authenticity signal.",
-    "decision": "Retain the already-reviewed wording; two auditors passed it cleanly and the warning is nonblocking."
+    "reference": "Phil.4.3",
+    "issue": "One auditor noted that 'all these coworkers' could be read as referring narrowly to Clement and the rest rather than the entire preceding coworker group.",
+    "decision": "Retain the human-approved wording. The sentence identifies the women as those who struggled alongside Paul together with Clement and the other coworkers; 'all these coworkers' refers to that complete group. Two auditors passed the verse cleanly, and the warning is nonblocking."
   },
   "copyright_protocol": {
     "status": "DEFERRED_BATCH",
-    "provisional_heuristic_check": "complete",
+    "provisional_heuristic_check": "complete_with_delta",
     "heuristic_findings": "none_obvious",
     "hard_check_required": true,
     "publication_clearance": false,
@@ -43,7 +43,7 @@
     "exact_human_approved_repairs_audited": true,
     "all_reader_notes_audited": true,
     "audit_finalizes_candidate": false,
-    "human_chapter_freeze_recorded": true,
+    "human_unit_acceptance_recorded": true,
     "reopening_requires_explicit_human_decision": true
   }
 }

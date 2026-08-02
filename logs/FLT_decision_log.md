@@ -524,3 +524,45 @@ Reopen only if the whole-letter review or later contextual evidence exposes a co
 - **Gate status:** Engine 2.2 source-side brief complete for blind drafting.
 - **Required protections:** Equal repeated appeal to both women; recurring `phroneo` mindset link; unidentified loyal partner; honored shared struggle in the good news; book-of-life image; no supplied prior FLT or comparison English.
 - **Next action:** Validate the isolated PR, merge once, and permit exactly one push-triggered blind A/B/C drafting run.
+
+
+---
+
+## 2026-08-02 — Philippians 4:1–3 human synthesis selected
+
+- **Unit:** `PHP-04-001-003`
+- **Decision:** Preserve the human editor’s exact provisional wording for all three verses.
+- **Verse 2 punctuation:** The editor uses a colon after Syntyche, allowing the repeated appeal to conclude before the direct content, “share the same mindset in the Lord.”
+- **Verse 3 structure:** Retain Paul’s single flowing sentence and the relative clause linking the coworkers’ names with the book of life.
+- **Notes status:** Five transparency notes remain proposed; none is treated as approved.
+- **Draft evidence:** Engine 2.2 run 30757547001 produced three blind candidates under one common prompt. Gemini Pro’s malformed authoritative verse-2 field remains disclosed and was not silently repaired.
+- **Provisional copyright heuristic:** `none_obvious`; status `DEFERRED_BATCH`; hard eight-translation API audit still required; `publication_clearance: false`.
+- **Next gate:** Listener-only diagnosis followed by source-aware smoothing proposals. Human approval remains required before constitutional audit.
+
+
+---
+
+## 2026-08-02 — Philippians 4:1–3 smoothed wording and notes approved
+
+- **Unit:** `PHP-04-001-003`
+- **Human decision:** Retain verses 1–2 exactly and adopt the listener-driven clarification in verse 3: “The names of all these coworkers are in the book of life.”
+- **Reason:** The explicit final sentence resolves the oral ambiguity in the participant list and makes clear that Euodia, Syntyche, Clement, and the other coworkers belong to the honored group.
+- **Notes approved:** All five proposed transparency notes are approved: “my crown”; the equal repeated appeal and recurring mindset theme; the unidentified loyal partner; the Philippians 1:27 shared-struggle link; and the book-of-life image.
+- **Oral-smoothing evidence:** GitHub Actions run 30762327233 completed three listener-only diagnoses followed by three source-aware proposals.
+- **Copyright delta:** `none_obvious`; the repaired sentence introduces no obvious highly distinctive multiword dynamic resemblance. Status remains `DEFERRED_BATCH`; hard eight-translation API audit required; `publication_clearance: false`.
+- **Next gate:** Audit the exact three-verse reading text and all five approved notes together. No silent wording repair is authorized.
+
+
+---
+
+## 2026-08-02 — Philippians 4:1–3 Engine 2.2 unit accepted
+
+- **Unit:** `PHP-04-001-003`
+- **Status:** Accepted as a unit; pending whole-chapter review after Philippians 4 is complete.
+- **Decision:** Adopt the human-approved source-aware smoothed reading text and all five transparency notes exactly as audited.
+- **Exact reading:** Verses 1–2 remain as selected. Verse 3 ends, “The names of all these coworkers are in the book of life,” identifying the women, Clement, and the other coworkers as the complete honored group.
+- **Engine evidence:** Blind A/B/C run 30757547001; listener-only/source-aware smoothing run 30762327233; exact constitutional audit run 30763406223.
+- **Audit result:** Three of three auditors eligible; zero blocking defects; all three verses passed the semantic floor; all five reader notes passed.
+- **Documented warning:** One auditor noted that “all these coworkers” might be recovered narrowly. The wording is retained because the preceding sentences identify the women as coworkers alongside Clement and the others; two auditors passed it cleanly, and the warning is nonblocking.
+- **Copyright status:** Provisional heuristic and targeted delta check `none_obvious`; `DEFERRED_BATCH`; hard eight-translation API audit required; `publication_clearance: false`.
+- **Next gate:** Prepare the Engine 2.2 passage-sense resolution for Philippians 4:4–9. Reopen 4:1–3 only for a concrete chapter-level issue or explicit human decision.
