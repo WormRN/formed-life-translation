@@ -1,7 +1,7 @@
 {
   "candidate_id": "PHP-03-017-021-HUMAN-SYNTHESIS-V2.2-EXACT-APPROVED-REPAIR",
   "passage": "Philippians 3:17-21",
-  "status": "human_approved_exact_text_pending_repair_audit",
+  "status": "accepted_unit_pending_whole_chapter_review",
   "repair": {
     "date": "2026-08-02",
     "reason": "The prior repository record substituted an earlier smoother proposal for the human editor’s explicitly approved Philippians 3:20 wording.",
@@ -68,5 +68,18 @@
       "status": "approved",
       "text": "The Greek expressions in verses 10 and 21 come from the same word family, meaning to share the same form. Paul links becoming like Christ in His death with being made like Him in glory."
     }
-  ]
+  ],
+  "audit": {
+    "date": "2026-08-02",
+    "github_run": 30735375602,
+    "engine_run_id": "FLT-PHP-03-20260802-4",
+    "artifact_id": 8829392455,
+    "artifact_name": "FLT-PHP-03-20260802-4-audit",
+    "artifact_sha256": "63ad3321ff6873f2ae2d973c1b1103c374417fd212646070c0cba60ab5ff02ce",
+    "result": "three_of_three_eligible_zero_blocks",
+    "reader_notes_audited_with_text": true,
+    "documented_warnings": [
+      "Phil.3.20 uses the adversative connector “But” where the Greek connective is formally causal; the contextual contrast makes the English move defensible."
+    ]
+  }
 }
