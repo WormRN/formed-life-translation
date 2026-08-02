@@ -1,13 +1,14 @@
 {
-  "candidate_id": "PHP-03-017-021-HUMAN-SYNTHESIS-V2.2-SMOOTHED",
+  "candidate_id": "PHP-03-017-021-HUMAN-SYNTHESIS-V2.2-EXACT-APPROVED-REPAIR",
   "passage": "Philippians 3:17-21",
-  "status": "accepted_unit_pending_whole_chapter_review",
-  "audit": {
+  "status": "human_approved_exact_text_pending_repair_audit",
+  "repair": {
     "date": "2026-08-02",
-    "github_run": 30734922684,
-    "result": "three_of_three_eligible_zero_blocks",
-    "reader_notes_audited_with_text": true,
-    "documented_warnings": []
+    "reason": "The prior repository record substituted an earlier smoother proposal for the human editor’s explicitly approved Philippians 3:20 wording.",
+    "affected_reference": "Phil.3.20",
+    "prior_audit_run": 30734922684,
+    "prior_audit_scope": "Superseded for exact-text authority because it audited the wrong verse 20 wording.",
+    "human_approved_wording_restored": true
   },
   "verse_renderings": [
     {
@@ -24,7 +25,7 @@
     },
     {
       "reference": "Phil.3.20",
-      "text": "But our citizenship is in heaven, and we eagerly await our Savior, the Lord Jesus Christ, who will come from there."
+      "text": "But our citizenship is in heaven, and we eagerly await our Savior from heaven, the Lord Jesus Christ."
     },
     {
       "reference": "Phil.3.21",
