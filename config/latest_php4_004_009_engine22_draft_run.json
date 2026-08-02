@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "repository": "WormRN/formed-life-translation",
+  "workflow_path": ".github/workflows/phase4-php4-004-009-sense-drafts.yml",
+  "unit_id": "PHP-04-004-009",
+  "passage": "Philippians 4:4-9",
+  "engine_run_id": "FLT-PHP-04-20260802-2",
+  "github_run_id": 30763832817,
+  "run_url": "https://github.com/WormRN/formed-life-translation/actions/runs/30763832817",
+  "artifact_name": "FLT-PHP-04-20260802-2",
+  "head_sha": "3438bd5c585b7f0a942a33f8794fd119e37ed265",
+  "generated_at": "2026-08-02T19:40:35Z",
+  "job_outcome": "success",
+  "receipt_status": "completed",
+  "common_prompt_sha256": "b99f577e97ee52d8f5074dfea7129c9375e0f1ed638adb55080a61f767f83f9a",
+  "common_prompt_verified": true,
+  "passage_sense_gate_verified": true,
+  "candidate_count": 3,
+  "blindness": {
+    "prior_flt_wording_absent": true,
+    "prior_candidates_absent": true,
+    "editor_benchmark_absent": true,
+    "comparison_translations_absent": true,
+    "conversation_drafts_absent": true
+  }
+}
