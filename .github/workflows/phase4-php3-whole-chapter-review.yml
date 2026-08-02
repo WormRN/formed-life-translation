@@ -1,5 +1,5 @@
-name: FLT Philippians 3 whole-chapter review
-run-name: Philippians 3 whole-chapter oral and source-aware pre-screen
+name: FLT Philippians 3 final exact-text audit
+run-name: Philippians 3 final reading-text and reader-note audit
 
 on:
   pull_request:
@@ -7,19 +7,18 @@ on:
     paths:
       - "docs/architecture/phase-4/FLT_Philippians_3_chapter-review-candidate-v01.json"
       - ".github/workflows/phase4-php3-whole-chapter-review.yml"
-      - "phase4-harness/src/smoothing-core.js"
-      - "phase4-harness/test/smoothing-core.test.js"
+      - "phase4-harness/src/human-candidate-audit.js"
+      - "phase4-harness/schemas/human-candidate-audit.schema.json"
+      - "phase4-harness/schemas/meaning-reconstruction.schema.json"
+      - "phase4-harness/test/human-candidate-audit.test.js"
   workflow_dispatch:
 
 permissions: {contents: read}
-concurrency: {group: flt-php3-whole-chapter-review, cancel-in-progress: true}
+concurrency: {group: flt-php3-final-exact-audit, cancel-in-progress: true}
 
 jobs:
-  review:
-    # The provider review completed in run 30735739260. Preserve manual dispatch
-    # for recovery, but do not spend provider calls on later record-only PR edits.
-    if: github.event_name == 'workflow_dispatch'
-    name: Whole-chapter listener and source-aware review
+  audit:
+    name: Final exact reading-text and reader-note constitutional audit
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
@@ -44,15 +43,18 @@ jobs:
               "Phil.3.15","Phil.3.16","Phil.3.17","Phil.3.18","Phil.3.19","Phil.3.20","Phil.3.21"
             ]) and
             (.authority.exact_unit_wording_preserved == true) and
-            (.authority.human_oral_review_required == true)
+            (.authority.human_oral_review_completed == true) and
+            (.reader_notes | length) == 18 and
+            (.copyright_protocol.status == "DEFERRED_BATCH") and
+            (.copyright_protocol.publication_clearance == false)
           ' docs/architecture/phase-4/FLT_Philippians_3_chapter-review-candidate-v01.json
-      - name: Create review identity and source packet
+      - name: Create final audit identity and source packet
         id: run
         shell: bash
         run: |
           run_id="FLT-PHP-03-$(date -u +%Y%m%d)-${GITHUB_RUN_NUMBER}"
           node phase4-harness/scripts/prepare-run-config.mjs phase4-harness/config.github-actions.json phase4-harness/.php3-chapter-review-config.json "$run_id"
-          jq '.unit_id="PHP-03-001-021-WHOLE-CHAPTER-REVIEW" | .source_packet=".php3-chapter-review-source.json"' phase4-harness/.php3-chapter-review-config.json > phase4-harness/.php3-chapter-review-config.tmp
+          jq '.unit_id="PHP-03-001-021-FINAL-EXACT-AUDIT" | .source_packet=".php3-chapter-review-source.json"' phase4-harness/.php3-chapter-review-config.json > phase4-harness/.php3-chapter-review-config.tmp
           mv phase4-harness/.php3-chapter-review-config.tmp phase4-harness/.php3-chapter-review-config.json
           jq -n \
             --slurpfile b1 docs/architecture/phase-4/PHP-03-001-011_oral-retest-blind-source.json \
@@ -87,12 +89,12 @@ jobs:
               )
             }' > phase4-harness/.php3-chapter-review-source.json
           echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
-      - name: Run whole-chapter listener and source-aware pre-screen
-        run: node phase4-harness/src/oral-smoothing.js phase4-harness/.php3-chapter-review-config.json "phase4-harness/runs/${{ steps.run.outputs.run_id }}" docs/architecture/phase-4/FLT_Philippians_3_chapter-review-candidate-v01.json phase4-harness/.php3-chapter-review-source.json
-      - name: Upload whole-chapter review bundle
+      - name: Run final exact-text constitutional audit
+        run: node phase4-harness/src/human-candidate-audit.js phase4-harness/.php3-chapter-review-config.json "phase4-harness/runs/${{ steps.run.outputs.run_id }}" docs/architecture/phase-4/FLT_Philippians_3_chapter-review-candidate-v01.json
+      - name: Upload final exact-text audit bundle
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: "${{ steps.run.outputs.run_id || 'FLT-PHP-03-CHAPTER-REVIEW-blocked' }}"
+          name: "${{ steps.run.outputs.run_id || 'FLT-PHP-03-FINAL-AUDIT-blocked' }}-audit"
           path: phase4-harness/runs/
           retention-days: 30
