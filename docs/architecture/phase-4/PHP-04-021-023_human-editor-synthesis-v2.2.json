@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "candidate_id": "PHP-04-021-023-HUMAN-SYNTHESIS-V2.2",
+  "passage": "Philippians 4:21-23",
+  "status": "provisional_human_synthesis_pending_oral_smoothing",
+  "human_editor_selection": {
+    "date": "2026-08-03",
+    "exact_wording_preserved": true,
+    "blind_draft_run": 30788140805,
+    "engine_run_id": "FLT-PHP-04-20260803-2",
+    "candidate_evidence_count": 3,
+    "oral_smoothing_run": null,
+    "oral_review_decision": "pending"
+  },
+  "verse_renderings": [
+    {
+      "reference": "Phil.4.21",
+      "text": "Give my greetings to all of God’s holy people who are united with Christ Jesus. The brothers and sisters who are with me send you their greetings too."
+    },
+    {
+      "reference": "Phil.4.22",
+      "text": "All of God’s holy people here send you their greetings, especially those connected with Caesar’s household."
+    },
+    {
+      "reference": "Phil.4.23",
+      "text": "May the grace of the Lord Jesus Christ dwell with the spirit of you all."
+    }
+  ],
+  "reader_notes": [
+    {
+      "note_id": "Phil.4.21-all-holy-people",
+      "reference": "Phil.4.21",
+      "anchor": "all of God’s holy people",
+      "status": "proposed",
+      "text": "The Greek says “every holy person.” It refers to every believer as someone set apart for God—not to an elite group of unusually virtuous Christians. This term is traditionally translated “saints.”"
+    },
+    {
+      "note_id": "Phil.4.22-caesars-household",
+      "reference": "Phil.4.22",
+      "anchor": "Caesar’s household",
+      "status": "proposed",
+      "text": "Caesar was the Roman emperor. His household could include slaves, freed persons, workers, and officials connected with imperial service—not only his biological family. Paul is referring to believers within that group, not saying that Caesar himself was a believer."
+    },
+    {
+      "note_id": "Phil.4.23-spirit-of-you-all",
+      "reference": "Phil.4.23",
+      "anchor": "the spirit of you all",
+      "status": "proposed",
+      "text": "The Greek uses singular “spirit” with plural “your,” blessing the church collectively. It refers to their shared inward or spiritual life, not to the Holy Spirit."
+    }
+  ],
+  "copyright_protocol": {
+    "mode": "PROVISIONAL_HEURISTIC_CHECK",
+    "status": "DEFERRED_BATCH",
+    "provisional_heuristic_check": "complete",
+    "heuristic_findings": "watchlist",
+    "watchlist_references": [
+      "Phil.4.23"
+    ],
+    "hard_check_required": true,
+    "publication_clearance": false,
+    "delta_check": "not_yet_applicable"
+  }
+}
