@@ -591,3 +591,16 @@ Reopen only if the whole-letter review or later contextual evidence exposes a co
 - **Blindness:** Prior FLT wording, prior candidates, editor benchmark, comparison translations, and conversation drafts were absent.
 - **Candidate mapping:** A — Claude Sonnet; B — GPT-5.6 Sol; C — Gemini Pro.
 - **Next action:** Present A/B/C under each verse and receive the human editor's exact provisional synthesis. Heuristic copyright screening begins only after that independent wording is recorded.
+
+
+---
+
+## 2026-08-02 — Philippians 4:4–9 human synthesis selected
+
+- **Unit:** `PHP-04-004-009`
+- **Decision:** Preserve the human editor’s exact provisional wording for all six verses.
+- **Notable editorial choice:** Verse 5 uses “reasonable and fair” for the broad ethical force of `epieikes`; the proposed note retains the wider range of gentleness, gracious restraint, reasonableness, and willingness not to insist on every right.
+- **Notes status:** Five transparency notes remain proposed; none is treated as approved.
+- **Draft evidence:** Engine 2.2 run 30763832817 produced three blind candidates under one common prompt after a passed passage-sense gate.
+- **Provisional copyright heuristic:** `watchlist` for Philippians 4:6–7 because two familiar dynamic-English expressions merit exact comparison later. This does not establish dependence or reopen the wording. Status remains `DEFERRED_BATCH`; hard eight-translation API audit required; `publication_clearance: false`.
+- **Next gate:** Listener-only diagnosis followed by source-aware minimal-change smoothing. Human approval remains required before constitutional audit.

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "candidate_id": "PHP-04-004-009-HUMAN-SYNTHESIS-V2.2",
+  "passage": "Philippians 4:4-9",
+  "draft_commit_or_record": "docs/architecture/phase-4/PHP-04-004-009_human-editor-synthesis-v2.2.json",
+  "mode": "PROVISIONAL_HEURISTIC_CHECK",
+  "performed_on": "2026-08-02",
+  "comparison_passages_supplied": false,
+  "heuristic_findings": "watchlist",
+  "obvious_distinctive_risks": [
+    {"reference": "Phil.4.6", "wording": "Tell Him what you need, ask for His help, and thank Him.", "reason": "This natural explanatory sequence contains familiar dynamic-English phrasing and should receive exact comparison during the deferred hard audit."},
+    {"reference": "Phil.4.7", "wording": "far beyond anything we can understand", "reason": "This is a familiar dynamic expression of the surpassing-peace clause and should receive exact comparison during the deferred hard audit."}
+  ],
+  "independent_path_assessment": "The repository preserves a source-side passage-sense gate, one immutable blind prompt, three independent candidates, and the human editor’s exact synthesis. The watchlist records familiar dynamic phrasing for later exact comparison; it does not establish derivation or require present rewriting.",
+  "recommended_action": "Proceed to listener-only diagnosis and source-aware smoothing with the exact recorded synthesis. Retain DEFERRED_BATCH status and prioritize Philippians 4:6-7 in the formal authorized eight-translation New Testament API batch audit.",
+  "copyright_protocol_status": "DEFERRED_BATCH",
+  "hard_check_required": true,
+  "publication_clearance": false,
+  "limitations": "This memory-based screen is deliberately narrow and non-exhaustive. No comparison text was retrieved, reconstructed, quoted, or measured."
+}
