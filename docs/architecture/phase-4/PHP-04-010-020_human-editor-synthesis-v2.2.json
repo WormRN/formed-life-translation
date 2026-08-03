@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "candidate_id": "PHP-04-010-020-HUMAN-SYNTHESIS-V2.2",
+  "passage": "Philippians 4:10-20",
+  "status": "provisional_human_synthesis_pending_oral_smoothing",
+  "human_editor_selection": {
+    "date": "2026-08-02",
+    "exact_wording_preserved": true,
+    "blind_draft_run": 30779827098,
+    "engine_run_id": "FLT-PHP-04-20260803-4",
+    "candidate_evidence_count": 3,
+    "oral_smoothing_run": null,
+    "oral_review_decision": "pending"
+  },
+  "verse_renderings": [
+    {
+      "reference": "Phil.4.10",
+      "text": "Now that your care for me has blossomed again, it brings me great joy in the Lord. You had cared all along, but you just had no opportunity to help."
+    },
+    {
+      "reference": "Phil.4.11",
+      "text": "I am not saying this because I am in need. I have learned to be content in whatever circumstances I face."
+    },
+    {
+      "reference": "Phil.4.12",
+      "text": "I know how to live with very little, and I know how to live with plenty. I have learned the secret of living in any situation—whether I am well fed or hungry, whether I have plenty or am in need."
+    },
+    {
+      "reference": "Phil.4.13",
+      "text": "I have strength for all these situations through the one who gives me strength."
+    },
+    {
+      "reference": "Phil.4.14",
+      "text": "Still, you did a good thing by sharing in my hardship."
+    },
+    {
+      "reference": "Phil.4.15",
+      "text": "You Philippians know exactly what happened when I left Macedonia in the early days of the good news. No other church partnered with me in giving and receiving—only you."
+    },
+    {
+      "reference": "Phil.4.16",
+      "text": "Even when I was in Thessalonica, you sent help for my needs more than once."
+    },
+    {
+      "reference": "Phil.4.17",
+      "text": "I am not seeking the gift itself. I want to see the growing spiritual profit that is credited to your account."
+    },
+    {
+      "reference": "Phil.4.18",
+      "text": "Now that I have received everything you sent through Epaphroditus, I have all I need and more. Your gift is a sweet-smelling offering to God—an acceptable sacrifice that pleases Him."
+    },
+    {
+      "reference": "Phil.4.19",
+      "text": "And my God will meet every need of yours from His glorious riches, because you belong to Christ Jesus."
+    },
+    {
+      "reference": "Phil.4.20",
+      "text": "All glory belongs to our God and Father forever and ever. Amen."
+    }
+  ],
+  "reader_notes": [
+    {
+      "note_id": "Phil.4.10-care-blossomed",
+      "reference": "Phil.4.10",
+      "anchor": "care for me has blossomed again",
+      "status": "proposed",
+      "text": "The Greek uses the picture of their concern blooming again. Paul immediately explains that their care had continued; what had been missing was an opportunity to act."
+    },
+    {
+      "note_id": "Phil.4.13-all-situations-strengthener",
+      "reference": "Phil.4.13",
+      "anchor": "all these situations … the one who gives me strength",
+      "status": "proposed",
+      "text": "The Greek says “all things” and “the one who strengthens me.” In context, “all” refers to living with plenty or need, being well fed or hungry. The Greek does not explicitly name Christ in this verse, though the letter’s context points to Him as the source."
+    },
+    {
+      "note_id": "Phil.4.15-16-giving-receiving",
+      "reference": "Phil.4.15-16",
+      "anchor": "giving and receiving",
+      "status": "proposed",
+      "text": "Paul uses accounting language to describe a real partnership. The Philippians repeatedly supported his work, although he does not specify here everything they received through that partnership."
+    },
+    {
+      "note_id": "Phil.4.17-spiritual-profit-account",
+      "reference": "Phil.4.17",
+      "anchor": "growing spiritual profit … credited to your account",
+      "status": "proposed",
+      "text": "The Greek combines fruit and accounting images: Paul wants fruit to increase to their account. “Spiritual profit” explains this as the good produced by their generosity, not a guaranteed material return."
+    },
+    {
+      "note_id": "Phil.4.18-sweet-smelling-offering",
+      "reference": "Phil.4.18",
+      "anchor": "sweet-smelling offering",
+      "status": "proposed",
+      "text": "Paul uses the language of worship and sacrifice. Their gift to him was also an offering that pleased God."
+    },
+    {
+      "note_id": "Phil.4.19-every-need-in-christ",
+      "reference": "Phil.4.19",
+      "anchor": "every need … because you belong to Christ Jesus",
+      "status": "proposed",
+      "text": "The promise concerns needs, not every desire, and appears in a paragraph about the Philippians’ own generosity. The final phrase literally says “in Christ Jesus,” locating God’s provision within their relationship to Christ."
+    }
+  ],
+  "copyright_protocol": {
+    "mode": "PROVISIONAL_HEURISTIC_CHECK",
+    "status": "DEFERRED_BATCH",
+    "provisional_heuristic_check": "complete",
+    "heuristic_findings": "watchlist",
+    "watchlist_references": [
+      "Phil.4.12",
+      "Phil.4.13",
+      "Phil.4.17"
+    ],
+    "hard_check_required": true,
+    "publication_clearance": false,
+    "delta_check": "not_yet_applicable"
+  }
+}
