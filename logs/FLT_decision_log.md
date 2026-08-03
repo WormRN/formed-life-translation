@@ -604,3 +604,17 @@ Reopen only if the whole-letter review or later contextual evidence exposes a co
 - **Draft evidence:** Engine 2.2 run 30763832817 produced three blind candidates under one common prompt after a passed passage-sense gate.
 - **Provisional copyright heuristic:** `watchlist` for Philippians 4:6–7 because two familiar dynamic-English expressions merit exact comparison later. This does not establish dependence or reopen the wording. Status remains `DEFERRED_BATCH`; hard eight-translation API audit required; `publication_clearance: false`.
 - **Next gate:** Listener-only diagnosis followed by source-aware minimal-change smoothing. Human approval remains required before constitutional audit.
+
+---
+
+## 2026-08-02 — Philippians 4:4–9 smoothed wording and notes approved
+
+- **Unit:** `PHP-04-004-009`
+- **Human decision:** Retain verses 4–6 and 9 exactly; adopt the listener-driven sentence divisions in verses 7–8; approve all five transparency notes.
+- **Verse 7:** Bring the guarding promise forward, then state separately that this peace is far beyond anything we can understand.
+- **Verse 8:** Divide the moral-attention list into two balanced sentences while retaining every item, the repeated “whatever” rhythm, and the closing excellence-and-praise summary.
+- **Notes approved:** The range of “reasonable and fair”; the ambiguity of “The Lord is near”; the anything/every-situation prayer contrast; the sentry image and “in Christ Jesus”; and the movement from God’s peace to the God of peace.
+- **Oral-smoothing evidence:** GitHub Actions run 30776281023 completed all six required calls on their first attempt with no duplication.
+- **Copyright delta:** `none_obvious_new_risk`; verse 7 retains its previously recorded watchlist phrase, and verse 8 adds no new watchlist item. Status remains `DEFERRED_BATCH`; hard eight-translation API audit required; `publication_clearance: false`.
+- **Exact authority:** The approved reading text and notes are cryptographically sealed. Any substitution or later change must fail before an audit provider call.
+- **Next gate:** Audit the exact six-verse reading text and all five approved notes together. No silent wording repair is authorized.
