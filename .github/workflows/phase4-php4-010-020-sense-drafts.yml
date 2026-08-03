@@ -18,10 +18,7 @@ on:
       - 'phase4-harness/test/engine-2.2-passage-sense.test.js'
   workflow_dispatch:
 
-permissions:
-  contents: write
-  issues: write
-  pull-requests: read
+permissions: {contents: write}
 concurrency: {group: flt-engine-2-2-php4-010-020-sense-drafts, cancel-in-progress: false}
 
 jobs:
@@ -35,27 +32,10 @@ jobs:
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
     steps:
       - uses: actions/checkout@v4
-      - name: Publish automatic run locator to the merged pull request
+      - name: Record automatic run locator
         if: github.event_name == 'push'
-        env:
-          GH_TOKEN: ${{ github.token }}
         shell: bash
-        run: |
-          run_url="https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
-          pr_number=$(gh api "/repos/${GITHUB_REPOSITORY}/commits/${GITHUB_SHA}/pulls" --jq 'map(select(.base.ref == "main")) | .[0].number // empty')
-          if [ -z "$pr_number" ]; then
-            echo "No merged pull request was associated with ${GITHUB_SHA}; the receipt will still preserve ${run_url}." >> "$GITHUB_STEP_SUMMARY"
-            exit 0
-          fi
-          marker="<!-- flt-run-locator:${GITHUB_RUN_ID} -->"
-          body=$(printf '%s\n\n%s\n\n%s' "$marker" "Engine 2.2 run: [${GITHUB_RUN_ID}](${run_url})" "This link was published automatically so the editor does not need to retrieve it.")
-          existing_id=$(gh api "/repos/${GITHUB_REPOSITORY}/issues/${pr_number}/comments" --paginate --jq ".[] | select(.body | contains(\"${marker}\")) | .id" | head -n 1)
-          if [ -n "$existing_id" ]; then
-            gh api --method PATCH "/repos/${GITHUB_REPOSITORY}/issues/comments/${existing_id}" -f body="$body" >/dev/null
-          else
-            gh api --method POST "/repos/${GITHUB_REPOSITORY}/issues/${pr_number}/comments" -f body="$body" >/dev/null
-          fi
-          echo "Run locator published to PR #${pr_number}: ${run_url}" >> "$GITHUB_STEP_SUMMARY"
+        run: echo "Run URL https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}; the machine-readable receipt will publish this URL to the repository." >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/setup-node@v4
         with: {node-version: 24, cache: npm, cache-dependency-path: phase4-harness/package-lock.json}
       - name: Install and test Engine 2.2
