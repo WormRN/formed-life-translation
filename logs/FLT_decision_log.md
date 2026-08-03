@@ -743,3 +743,17 @@ Reopen only if the whole-letter review or later contextual evidence exposes a co
 - **Blindness:** No prior FLT wording, comparison translation, prior candidate, editor benchmark, or conversation draft is supplied.
 - **Run retrieval:** The workflow records its own run ID and URL in a stable machine-readable receipt.
 - **Next action:** Validate the isolated PR with zero provider calls, merge once, and permit exactly one blind A/B/C drafting run.
+
+
+---
+
+## 2026-08-03 — Philippians 4:21–23 Engine 2.2 blind drafts recorded
+
+- **Run:** GitHub Actions 30788140805; Engine ID `FLT-PHP-04-20260803-2`.
+- **Artifact:** ID 8846022226; SHA-256 `c2623a3f3abf90c22814195bcd9b11b978adaed84c423f3a5c24b89752591f2d`.
+- **Integrity:** One common prompt; passage-sense gate 2.2 passed; prior FLT wording, prior candidates, comparison translations, editor benchmark, and conversation drafts absent; exactly three candidates.
+- **Attempt accounting:** Three attempts, three first-attempt successes, zero retries or duplicated calls; 29,355 recorded token units.
+- **Provider mapping:** Claude Sonnet = A; GPT-5.6 Sol = B; Gemini Pro = C.
+- **Editorial convergence:** All three preserve the reciprocal greeting sequence, inclusive brothers-and-sisters language, the wider imperial-household sense, and an active closing grace blessing.
+- **Open human decisions:** Whether verse 21 should retain God's-people language or use believer; whether verse 22 should preserve Caesar's household or unpack the imperial connection; whether verse 23 should preserve with your spirit or render the communal force as with you all.
+- **Status:** Blind drafting complete. The exact A/B/C candidates and proposed notes await human editor selection or synthesis. The completed drafting trigger is manual-only.
