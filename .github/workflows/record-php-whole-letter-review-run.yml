@@ -7,11 +7,13 @@ on:
     paths:
       - '.github/workflows/record-php-whole-letter-review-run.yml'
       - '.github/workflows/phase4-php-whole-letter-review.yml'
+      - 'phase4-harness/src/whole-letter-review.js'
   push:
     branches: [main]
     paths:
       - '.github/workflows/record-php-whole-letter-review-run.yml'
       - '.github/workflows/phase4-php-whole-letter-review.yml'
+      - 'phase4-harness/src/whole-letter-review.js'
 
 permissions:
   actions: read
