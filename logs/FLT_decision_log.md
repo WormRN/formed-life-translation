@@ -688,3 +688,16 @@ Reopen only if the whole-letter review or later contextual evidence exposes a co
 - **Draft evidence:** Engine 2.2 run 30779827098 produced three blind candidates under one common prompt after a passed passage-sense gate.
 - **Provisional copyright heuristic:** `watchlist` for Philippians 4:12, 4:13, and 4:17 because familiar or distinctive dynamic phrasing merits exact comparison later. This does not establish dependence or reopen the wording. Status remains `DEFERRED_BATCH`; hard eight-translation API audit required; `publication_clearance: false`.
 - **Next gate:** Listener-only diagnosis followed by source-aware minimal-change smoothing. Human approval remains required before constitutional audit.
+
+
+---
+
+## 2026-08-02 — Philippians 4:10–20 oral smoothing completed
+
+- **Unit:** `PHP-04-010-020`
+- **Run:** GitHub Actions run 30783357029; Engine ID `FLT-PHP-04-20260803-2`.
+- **Integrity:** Three listener-only diagnoses and three source-aware smoothing proposals completed. Listener workers saw the selected English only; smoothing workers saw the selected English, anonymous listener reports, Greek source data, governing rules, and matrix entries. No comparison translation was exposed.
+- **Attempt accounting:** Six attempts, six first-attempt successes, zero retries or duplicated calls. Recorded provider token scale: 72,592.
+- **Artifact:** ID 8844424934; SHA-256 `3068866390fc0cafeeaa9ff92988c6ee3289dbe5581f909a3884cb3826d79597`.
+- **Consensus findings:** Verse 17’s “growing spiritual profit … credited to your account” created the strongest one-hearing confusion. Repeated “strength” in verse 13, the density of verse 18, and the opportunity referent in verse 10 also received convergent repair proposals. Verses 11–12, 14–16, and 19–20 do not require change by editorial judgment, though individual workers proposed alternatives for verses 15 and 19.
+- **Status:** Proposals only. Human editor approval of exact post-smoothing text and the six proposed notes is required before sealing and constitutional audit.

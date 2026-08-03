@@ -1,24 +1,7 @@
-name: FLT Philippians 4:10-20 oral smoothing
+name: FLT Philippians 4:10-20 oral smoothing (completed; manual only)
 run-name: Philippians 4:10-20 listener-only diagnosis and source-aware smoothing
 
 on:
-  pull_request:
-    branches: [main]
-    paths:
-      - '.github/workflows/phase4-php4-010-020-human-smoothing.yml'
-      - 'docs/architecture/phase-4/PHP-04-010-020_human-editor-synthesis-v2.2.json'
-      - 'docs/architecture/phase-4/PHP-04-010-020_blind-source-v2.2.json'
-      - 'phase4-harness/src/smoothing-core.js'
-      - 'phase4-harness/src/oral-smoothing.js'
-      - 'phase4-harness/src/run-integrity.js'
-      - 'phase4-harness/schemas/oral-listener-diagnosis.schema.json'
-      - 'phase4-harness/schemas/source-aware-smoothing.schema.json'
-      - 'phase4-harness/test/smoothing-core.test.js'
-      - 'phase4-harness/test/run-integrity.test.js'
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/phase4-php4-010-020-human-smoothing.yml'
   workflow_dispatch:
 
 permissions: {contents: read}
