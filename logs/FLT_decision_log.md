@@ -770,3 +770,16 @@ Reopen only if the whole-letter review or later contextual evidence exposes a co
 - **Draft evidence:** Engine 2.2 run 30788140805 produced three blind candidates under one common prompt after a passed passage-sense gate.
 - **Provisional copyright heuristic:** `watchlist` for Philippians 4:23 because “dwell with the spirit of you all” is a distinctive interpretive combination requiring exact later comparison. No comparison translation was consulted.
 - **Next action:** Run the listener-only diagnoses and source-aware smoothing proposals. The human editor must approve any change before sealing and constitutional audit.
+
+
+---
+
+## 2026-08-03 — Philippians 4:21–23 oral smoothing completed
+
+- **Unit:** `PHP-04-021-023`
+- **Run:** GitHub Actions run 30790727895; Engine ID `FLT-PHP-04-20260803-2`.
+- **Integrity:** Three listener-only diagnoses and three source-aware smoothing proposals completed. Listener workers saw the selected English only; smoothing workers saw the selected English, anonymous listener reports, Greek source data, governing rules, and matrix entries. No comparison translation was exposed.
+- **Attempt accounting:** Six attempts, six first-attempt successes, zero retries or duplicated calls. Recorded provider token scale: 36,147.
+- **Artifact:** ID 8846946848; SHA-256 `2f7f9a233fa1793538b7c3bd5dcd482fcbecb3edb846c33f434cac11879bc163`.
+- **Consensus findings:** All three workers found verse 23’s “dwell with the spirit of you all” difficult or weak as a spoken closing; source-aware review also identified “dwell” as an image absent from the source. Verses 21–22 received milder concerns about repeated greeting formulas and shifting groups, with no consensus that their core wording must change.
+- **Status:** Proposals only. The completed smoothing trigger is manual-only. Human approval of exact post-smoothing text and the three proposed notes is required before sealing and constitutional audit.
