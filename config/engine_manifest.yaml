@@ -79,16 +79,16 @@ governing_documents:
 current_checkpoint:
   book: "Philippians"
   chapter: 4
-  current_unit_id: "PHP-04-004-009"
-  current_passage: "Philippians 4:4-9"
-  stage: "human_smoothed_candidate_sealed_pending_constitutional_audit"
-  candidate_status: "Human editor approved the source-aware smoothed reading and all five reader notes; exact text-and-note seal verified; constitutional audit pending."
-  candidate_sealed: true
-  latest_accepted_unit: "Philippians 4:1-3 accepted after Engine 2.2 exact-text and reader-note audit."
-  next_permitted_action: "Validate the isolated seal-and-audit PR with zero provider calls; merge once so the single main push launches exactly one constitutional audit against the sealed text and notes."
-  copyright_status: "DEFERRED_BATCH"
-  provisional_heuristic_check: "watchlist_phil_4_6_4_7"
-  source_gate_status: "passed_for_recorded_blind_draft"
+  current_unit_id: "PHP-04-010-020"
+  current_passage: "Philippians 4:10-20"
+  stage: "passage_sense_gate_complete_pending_blind_drafting"
+  candidate_status: "Engine 2.2 source-side passage-sense brief prepared and structurally validated; no English candidate exists yet."
+  candidate_sealed: false
+  latest_accepted_unit: "Philippians 4:4-9 accepted after Engine 2.2 exact-text and reader-note audit."
+  next_permitted_action: "Validate and merge the isolated PHP-04-010-020 source packet and workflow once; the single main push may launch exactly one blind A/B/C drafting run. Do not reopen Philippians 4:1-9."
+  copyright_status: "PENDING_RECORDED_INDEPENDENT_DRAFT"
+  provisional_heuristic_check: "not_yet_applicable"
+  source_gate_status: "complete_for_blind_drafting"
   hard_check_required: true
   publication_clearance: false
   prepublication_requirement: "Run the formal eight-translation New Testament API batch audit through authorized sources, using API.Bible where available and likely the official ESV API separately; resolve findings and re-audit later wording changes."
@@ -250,20 +250,22 @@ current_checkpoint:
     semantic_pass: true
     human_acceptance_after_oral_review_pending: false
   active_files:
-    blind_source: "docs/architecture/phase-4/PHP-04-004-009_blind-source-v2.2.json"
-    human_synthesis: "docs/architecture/phase-4/PHP-04-004-009_human-editor-synthesis-v2.2.json"
-    human_candidate_seal: "docs/architecture/phase-4/PHP-04-004-009_human-editor-synthesis-v2.2.seal.json"
-    copyright_heuristic: "docs/architecture/phase-4/PHP-04-004-009_copyright-heuristic-v01.json"
-    draft_receipt: "config/latest_php4_004_009_engine22_draft_run.json"
-    smoothing_runner: "phase4-harness/src/oral-smoothing.js"
-    smoothing_workflow: ".github/workflows/phase4-php4-004-009-human-smoothing.yml"
-    audit_runner: "phase4-harness/src/human-candidate-audit.js"
-    audit_workflow: ".github/workflows/phase4-php4-004-009-human-smoothing.yml"
-    latest_accepted_unit_record: "docs/architecture/phase-4/PHP-04-001-003_human-editor-synthesis-v2.2.json"
+    blind_source: "docs/architecture/phase-4/PHP-04-010-020_blind-source-v2.2.json"
+    passage_sense_gate_spec: "docs/architecture/phase-4/engine-2.2-passage-sense-gate.md"
+    runner: "phase4-harness/src/chapter-units.js"
+    workflow: ".github/workflows/phase4-php4-010-020-sense-drafts.yml"
+    planned_draft_receipt: "config/latest_php4_010_020_engine22_draft_run.json"
+    latest_accepted_unit_record: "docs/architecture/phase-4/PHP-04-004-009_human-editor-synthesis-v2.2.json"
     latest_frozen_chapter: "docs/architecture/phase-4/FLT_Philippians_3_freeze-v01.md"
     latest_audit_receipt: "config/latest_audit_run.json"
 
 accepted_units:
+  - passage: "Philippians 4:4-9"
+    status: "human-approved smoothed wording and five reader notes passed three eligible Engine 2.2 auditors with zero blocking defects; two dynamic-rendering cautions documented and retained; copyright watchlist for verses 6-7; pending whole-chapter review"
+    draft_run_id: 30763832817
+    smoothing_run_id: 30776281023
+    audit_run_id: 30777836549
+    audit_artifact: "FLT-PHP-04-20260803-4-audit"
   - passage: "Philippians 4:1-3"
     status: "human-approved smoothed wording and five reader notes passed three eligible Engine 2.2 auditors with zero blocking defects; provisional copyright heuristic and delta check none obvious; pending whole-chapter review"
     draft_run_id: 30757547001
@@ -375,6 +377,8 @@ workflow_requirements:
   role_specific_readability_fidelity_balanced_goals_forbidden: true
   exact_candidate_must_be_preserved: true
   publish_latest_audit_receipt: true
+  automatic_run_locator_comment_required: true
+  exact_source_gate_and_greek_validation_required: true
   one_hearing_oral_design_required_in_drafting: true
   oral_smoothing_before_candidate_audit: true
   listener_only_diagnosis_must_exclude_source_material: true

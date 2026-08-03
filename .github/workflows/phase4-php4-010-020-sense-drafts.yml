@@ -1,0 +1,150 @@
+name: FLT Engine 2.2 Philippians 4:10-20 passage-sense drafts
+run-name: Philippians 4:10-20 fresh Engine 2.2 passage-sense drafts
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/phase4-php4-010-020-sense-drafts.yml'
+      - 'docs/architecture/phase-4/PHP-04-010-020_blind-source-v2.2.json'
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/phase4-php4-010-020-sense-drafts.yml'
+      - 'docs/architecture/phase-4/PHP-04-010-020_blind-source-v2.2.json'
+      - 'phase4-harness/src/chapter-units.js'
+      - 'phase4-harness/src/sense-resolution-core.js'
+      - 'phase4-harness/schemas/chapter-unit-candidate.schema.json'
+      - 'phase4-harness/test/engine-2.2-passage-sense.test.js'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: read
+concurrency: {group: flt-engine-2-2-php4-010-020-sense-drafts, cancel-in-progress: false}
+
+jobs:
+  draft:
+    name: Fresh Engine 2.2 passage-sense drafts for Philippians 4:10-20
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publish automatic run locator to the merged pull request
+        if: github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          run_url="https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          pr_number=$(gh api "/repos/${GITHUB_REPOSITORY}/commits/${GITHUB_SHA}/pulls" --jq 'map(select(.base.ref == "main")) | .[0].number // empty')
+          if [ -z "$pr_number" ]; then
+            echo "No merged pull request was associated with ${GITHUB_SHA}; the receipt will still preserve ${run_url}." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          marker="<!-- flt-run-locator:${GITHUB_RUN_ID} -->"
+          body=$(printf '%s\n\n%s\n\n%s' "$marker" "Engine 2.2 run: [${GITHUB_RUN_ID}](${run_url})" "This link was published automatically so the editor does not need to retrieve it.")
+          existing_id=$(gh api "/repos/${GITHUB_REPOSITORY}/issues/${pr_number}/comments" --paginate --jq ".[] | select(.body | contains(\"${marker}\")) | .id" | head -n 1)
+          if [ -n "$existing_id" ]; then
+            gh api --method PATCH "/repos/${GITHUB_REPOSITORY}/issues/comments/${existing_id}" -f body="$body" >/dev/null
+          else
+            gh api --method POST "/repos/${GITHUB_REPOSITORY}/issues/${pr_number}/comments" -f body="$body" >/dev/null
+          fi
+          echo "Run locator published to PR #${pr_number}: ${run_url}" >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/setup-node@v4
+        with: {node-version: 24, cache: npm, cache-dependency-path: phase4-harness/package-lock.json}
+      - name: Install and test Engine 2.2
+        working-directory: phase4-harness
+        run: npm ci && npm test
+      - name: Validate exact source gate with zero provider calls
+        shell: bash
+        run: |
+          node --input-type=module -e '
+            import fs from "node:fs";
+            import {assertPassageSenseResolution} from "./phase4-harness/src/sense-resolution-core.js";
+            const packet=JSON.parse(fs.readFileSync("docs/architecture/phase-4/PHP-04-010-020_blind-source-v2.2.json","utf8"));
+            const parsed=JSON.parse(fs.readFileSync("data/source/sblgnt_parsed.json","utf8"));
+            assertPassageSenseResolution(packet);
+            for(const verse of packet.units.flatMap(unit=>unit.verses)){
+              const exact=(parsed[verse.reference]||[]).map(token=>token.greek).join(" ");
+              if(exact!==verse.greek) throw new Error(`Greek source mismatch for ${verse.reference}`);
+            }
+          '
+      - name: Create run identity
+        id: run
+        shell: bash
+        run: |
+          run_id="FLT-PHP-04-$(date -u +%Y%m%d)-${GITHUB_RUN_NUMBER}"
+          node phase4-harness/scripts/prepare-run-config.mjs phase4-harness/config.github-actions.json phase4-harness/.php4-010-020-config.json "$run_id"
+          jq '.unit_id="PHP-04-010-020"' phase4-harness/.php4-010-020-config.json > phase4-harness/.php4-010-020-config.tmp
+          mv phase4-harness/.php4-010-020-config.tmp phase4-harness/.php4-010-020-config.json
+          echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
+      - name: Draft fresh unit
+        if: github.event_name != 'pull_request'
+        id: draft
+        run: node phase4-harness/src/chapter-units.js phase4-harness/.php4-010-020-config.json "phase4-harness/runs/${{ steps.run.outputs.run_id }}" docs/architecture/phase-4/PHP-04-010-020_blind-source-v2.2.json
+      - name: Upload blind-draft bundle
+        if: always() && github.event_name != 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: "${{ steps.run.outputs.run_id || 'FLT-PHP-04-010-020-blocked' }}"
+          path: phase4-harness/runs/
+          retention-days: 30
+      - name: Publish machine-readable draft receipt
+        if: always() && github.event_name != 'pull_request'
+        env:
+          DRAFT_STEP_OUTCOME: ${{ steps.draft.outcome }}
+          ENGINE_RUN_ID: ${{ steps.run.outputs.run_id }}
+        shell: bash
+        run: |
+          mkdir -p config
+          generated_at=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          run_url="https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          receipt_status="completed"
+          if [ "$DRAFT_STEP_OUTCOME" != "success" ]; then receipt_status="workflow_failed"; fi
+          provenance="phase4-harness/runs/${ENGINE_RUN_ID}/manifest/chapter-drafting-provenance.json"
+          common_prompt_sha256=""
+          common_prompt_verified=false
+          passage_sense_gate_verified=false
+          candidate_count=0
+          if [ -f "$provenance" ]; then
+            common_prompt_sha256=$(jq -r '.common_prompt_sha256 // ""' "$provenance")
+            common_prompt_verified=$(jq -r '.common_prompt_verified // false' "$provenance")
+            passage_sense_gate_verified=$(jq -r '.passage_sense_gate.status == "passed" and .passage_sense_gate.version == "2.2" and .passage_sense_gate.editor_benchmark_absent == true' "$provenance")
+          fi
+          output_dir="phase4-harness/runs/${ENGINE_RUN_ID}/outputs/units/PHP-04-010-020"
+          if [ -d "$output_dir" ]; then candidate_count=$(find "$output_dir" -maxdepth 1 -type f -name '*.json' | wc -l); fi
+          if [ "$candidate_count" -ne 3 ] || [ "$common_prompt_verified" != "true" ] || [ "$passage_sense_gate_verified" != "true" ]; then
+            if [ "$receipt_status" = "completed" ]; then receipt_status="integrity_failed"; fi
+          fi
+          jq -n \
+            --argjson schema_version 1 \
+            --arg repository "$GITHUB_REPOSITORY" \
+            --arg workflow_path ".github/workflows/phase4-php4-010-020-sense-drafts.yml" \
+            --arg unit_id "PHP-04-010-020" \
+            --arg passage "Philippians 4:10-20" \
+            --arg engine_run_id "$ENGINE_RUN_ID" \
+            --argjson github_run_id "$GITHUB_RUN_ID" \
+            --arg run_url "$run_url" \
+            --arg artifact_name "$ENGINE_RUN_ID" \
+            --arg head_sha "$GITHUB_SHA" \
+            --arg generated_at "$generated_at" \
+            --arg job_outcome "$DRAFT_STEP_OUTCOME" \
+            --arg receipt_status "$receipt_status" \
+            --arg common_prompt_sha256 "$common_prompt_sha256" \
+            --argjson common_prompt_verified "$common_prompt_verified" \
+            --argjson passage_sense_gate_verified "$passage_sense_gate_verified" \
+            --argjson candidate_count "$candidate_count" \
+            '{schema_version:$schema_version,repository:$repository,workflow_path:$workflow_path,unit_id:$unit_id,passage:$passage,engine_run_id:$engine_run_id,github_run_id:$github_run_id,run_url:$run_url,artifact_name:$artifact_name,head_sha:$head_sha,generated_at:$generated_at,job_outcome:$job_outcome,receipt_status:$receipt_status,common_prompt_sha256:$common_prompt_sha256,common_prompt_verified:$common_prompt_verified,passage_sense_gate_verified:$passage_sense_gate_verified,candidate_count:$candidate_count,blindness:{prior_flt_wording_absent:true,prior_candidates_absent:true,editor_benchmark_absent:true,comparison_translations_absent:true,conversation_drafts_absent:true}}' > config/latest_php4_010_020_engine22_draft_run.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add config/latest_php4_010_020_engine22_draft_run.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Record Philippians 4:10-20 Engine 2.2 receipt"
+          git pull --rebase origin main
+          git push origin HEAD:main

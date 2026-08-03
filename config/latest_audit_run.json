@@ -1,39 +1,49 @@
 {
   "schema_version": 1,
   "repository": "WormRN/formed-life-translation",
-  "workflow_path": ".github/workflows/phase4-php4-001-003-human-smoothing.yml",
-  "unit_id": "PHP-04-001-003-EXACT-AUDIT",
-  "passage": "Philippians 4:1-3",
-  "engine_run_id": "FLT-PHP-04-20260802-3",
-  "github_run_id": 30763406223,
-  "run_url": "https://github.com/WormRN/formed-life-translation/actions/runs/30763406223",
-  "artifact_id": 8838178458,
-  "artifact_name": "FLT-PHP-04-20260802-3-audit",
-  "artifact_sha256": "ed88e4f6c69121de27a50c5a68738c9fe7de9cf47ce69a378776870ad1b1faac",
+  "workflow_path": ".github/workflows/phase4-php4-004-009-human-smoothing.yml",
+  "unit_id": "PHP-04-004-009-EXACT-AUDIT",
+  "passage": "Philippians 4:4-9",
+  "engine_run_id": "FLT-PHP-04-20260803-4",
+  "github_run_id": 30777836549,
+  "run_url": "https://github.com/WormRN/formed-life-translation/actions/runs/30777836549",
+  "artifact_id": 8842661451,
+  "artifact_name": "FLT-PHP-04-20260803-4-audit",
+  "artifact_sha256": "1aa2cd1fe57bfd30fbf9c7f08cc0ccb8b21c043f0915a41a07bb75d5528fa61e",
   "artifact_summary_path": "outputs/human-candidate-audit.md",
-  "head_sha": "d4f7b44a702520e9a656b3c26543dcda71b3739a",
-  "generated_at": "2026-08-02T19:29:00Z",
+  "head_sha": "d14559d591ec57d46172db62a7434adb956cab30",
+  "generated_at": "2026-08-03T01:52:24Z",
   "job_outcome": "success",
   "receipt_status": "human_approved_unit_text_and_notes_audited",
   "audit_evidence": {
     "auditor_total": 3,
     "eligible_count": 3,
     "blocking_defects": 0,
-    "warnings": 1,
+    "warnings": 5,
     "semantic_pass": true,
-    "verse_count": 3,
+    "verse_count": 6,
     "reader_notes_total": 5,
     "reader_notes_passed": 5
   },
   "warning_disposition": {
-    "reference": "Phil.4.3",
-    "issue": "One auditor noted that 'all these coworkers' could be read as referring narrowly to Clement and the rest rather than the entire preceding coworker group.",
-    "decision": "Retain the human-approved wording. The sentence identifies the women as those who struggled alongside Paul together with Clement and the other coworkers; 'all these coworkers' refers to that complete group. Two auditors passed the verse cleanly, and the warning is nonblocking."
+    "references": [
+      "Phil.4.5",
+      "Phil.4.7"
+    ],
+    "issues": [
+      "The word 'fair' can be recovered more narrowly as justice or equity than the full range of epieikes.",
+      "The phrase 'because you belong to Christ Jesus' makes the compact 'in Christ Jesus' relationship explicitly causal."
+    ],
+    "decision": "Retain both human-approved renderings. The verse 5 note discloses the wider range of gentleness, gracious restraint, reasonableness, and willingness not to insist on every right. The verse 7 note discloses the literal 'in Christ Jesus' form. All three auditors still found the unit eligible and no warning was blocking."
   },
   "copyright_protocol": {
     "status": "DEFERRED_BATCH",
     "provisional_heuristic_check": "complete_with_delta",
-    "heuristic_findings": "none_obvious",
+    "heuristic_findings": "watchlist",
+    "watchlist_references": [
+      "Phil.4.6",
+      "Phil.4.7"
+    ],
     "hard_check_required": true,
     "publication_clearance": false,
     "prepublication_requirement": "Formal eight-translation New Testament API batch audit through authorized sources, using API.Bible where available and likely the official ESV API separately."
