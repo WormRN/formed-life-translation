@@ -2,7 +2,8 @@
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import Ajv2020 from 'ajv/dist/2020.js';
-import {json,emit,event,requestModel,sha256} from './core.js';
+import {json,emit,sha256} from './core.js';
+import {executeJsonWorker,attemptAccountingNotice} from './run-integrity.js';
 import {buildListenerPrompt,buildSourceAwarePrompt,assertSmoothingIntegrity,smoothingDecisionBrief} from './smoothing-core.js';
 import {parseModelJson} from './sense-resolution-core.js';
 
@@ -18,25 +19,18 @@ const validateProposal=ajv.compile(await json(path.join(root,'schemas/source-awa
 const parse=parseModelJson;
 
 async function call(worker,stage,prompt,validate,assert=()=>{}){
-  let repair='';
-  for(let attempt=1;attempt<=3;attempt++){
-    const full=`Return complete JSON only. ${repair}\n${prompt}`;
-    const started=new Date(),controller=new AbortController(),timer=setTimeout(()=>controller.abort(),config.timeout_ms||180000);
-    try{
-      const r=await requestModel(worker,full,controller.signal);
-      await emit(runDir,`failures/raw/${stage}/${worker.role}/attempt-${attempt}.txt`,r.text);
-      const output=parse(r.text);
-      if(!validate(output)){repair=`Repair schema errors: ${JSON.stringify(validate.errors)}. Be concise.`;throw new Error(repair)}
-      assert(output);
-      const record={run_id:config.run_id,unit_id:config.unit_id,stage,role:worker.role,attempt,input_sha256:sha256(full),output,provider_provenance:{provider:worker.provider,model:worker.model,request_id:r.id,started_at:started.toISOString(),finished_at:new Date().toISOString(),usage:r.usage}};
-      await event(runDir,{type:`${stage}_complete`,role:worker.role,attempt});
-      return record;
-    }catch(e){
-      if(!repair)repair=`Previous output was incomplete or malformed: ${String(e)}. Be concise and close the JSON.`;
-      await event(runDir,{type:`${stage}_failure`,role:worker.role,attempt,error:String(e)});
-      if(attempt===3)throw e;
-    }finally{clearTimeout(timer)}
-  }
+  return executeJsonWorker({
+    config,
+    runDir,
+    worker,
+    stage,
+    prompt,
+    parse,
+    validate,
+    assert,
+    recordContext:{unit_id:config.unit_id},
+    rawPrefix:`failures/raw/${stage}/${worker.role}`
+  });
 }
 
 const listenerPrompt=buildListenerPrompt(candidate);
@@ -52,5 +46,5 @@ const smoothingPrompt=buildSourceAwarePrompt(candidate,source,anonymous);
 const proposals=await Promise.all(config.workers.map(w=>call(w,'source_aware_smoothing',smoothingPrompt,validateProposal,o=>assertSmoothingIntegrity(candidate,o))));
 for(const x of proposals)await emit(runDir,`outputs/smoothing-proposals/${x.role}.json`,x);
 await emit(runDir,'outputs/oral-smoothing-decision-brief.md',smoothingDecisionBrief(candidate,proposals));
-await emit(runDir,'manifest/oral-smoothing-provenance.json',{run_id:config.run_id,candidate_id:candidate.candidate_id,listener_only_input_sha256:sha256(listenerPrompt),listener_diagnoses:diagnoses.map(x=>x.provider_provenance),source_aware_proposals:proposals.map(x=>x.provider_provenance),visibility:'Listener-only diagnosis saw selected English only. Source-aware proposals saw the selected English, anonymous listener reports, Greek source data, governing rules, and matrix entries. No comparison translation was exposed.',status:'human_smoothing_decision_required'});
+await emit(runDir,'manifest/oral-smoothing-provenance.json',{run_id:config.run_id,candidate_id:candidate.candidate_id,listener_only_input_sha256:sha256(listenerPrompt),listener_diagnoses:diagnoses.map(x=>x.provider_provenance),source_aware_proposals:proposals.map(x=>x.provider_provenance),attempt_accounting:attemptAccountingNotice,validated_worker_checkpoints:['checkpoints/listener_only_diagnosis/','checkpoints/source_aware_smoothing/'],visibility:'Listener-only diagnosis saw selected English only. Source-aware proposals saw the selected English, anonymous listener reports, Greek source data, governing rules, and matrix entries. No comparison translation was exposed.',status:'human_smoothing_decision_required'});
 console.log('Oral-English smoothing proposals complete; human decision required');

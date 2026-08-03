@@ -2,12 +2,17 @@
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import Ajv2020 from 'ajv/dist/2020.js';
-import {json,emit,event,requestModel,sha256} from './core.js';
+import {json,emit,sha256} from './core.js';
+import {executeJsonWorker,attemptAccountingNotice} from './run-integrity.js';
+import {assertHumanCandidateSeal} from './human-candidate-seal.js';
 import {parseModelJson} from './sense-resolution-core.js';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const configPath=path.resolve(process.argv[2]),runDir=path.resolve(process.argv[3]),candidatePath=path.resolve(process.argv[4]);
-const config=await json(configPath),candidate=await json(candidatePath),source=await json(path.resolve(path.dirname(configPath),config.source_packet));
+if(!process.argv[5])throw new Error('A separately recorded human-approved candidate seal is required before constitutional audit.');
+const sealPath=path.resolve(process.argv[5]);
+const config=await json(configPath),candidate=await json(candidatePath),seal=await json(sealPath),source=await json(path.resolve(path.dirname(configPath),config.source_packet));
+const sealedHashes=assertHumanCandidateSeal(candidate,seal);
 const ajv=new Ajv2020({allErrors:true});
 const validateReconstruction=ajv.compile(await json(path.join(root,'schemas/meaning-reconstruction.schema.json')));
 const validateAudit=ajv.compile(await json(path.join(root,'schemas/human-candidate-audit.schema.json')));
@@ -17,7 +22,20 @@ const assertRefs=o=>{const refs=o.map(x=>x.reference);if(JSON.stringify(refs)!==
 const requiredChecks=['semantic_propositions','logical_relationships','rhetorical_structure','meaningful_ambiguity','agency_and_force','key_term_continuity','source_traceability','back_translation','copyright_independence','second_oral_test'];
 const assertAudit=o=>{assertRefs(o.verse_assessments);const notes=o.reader_note_assessments.map(x=>x.note_id);if(JSON.stringify(notes)!==JSON.stringify(expectedNotes))throw new Error(`Reader notes must be ${expectedNotes.join(', ')}`);const checks=o.constitutional_checks.map(x=>x.check);if(JSON.stringify([...checks].sort())!==JSON.stringify([...requiredChecks].sort()))throw new Error('Every constitutional audit check must appear exactly once.');if((o.verse_assessments.some(x=>x.status==='block')||o.reader_note_assessments.some(x=>x.status==='block')||o.constitutional_checks.some(x=>x.outcome==='block'))&&o.overall_eligible)throw new Error('Any block requires overall_eligible false.');};
 const parse=parseModelJson;
-async function call(worker,stage,prompt,validate,assert=()=>{}){let repair='';for(let attempt=1;attempt<=3;attempt++){const full=`Return complete JSON only. ${repair}\n${prompt}`,started=new Date(),controller=new AbortController(),timer=setTimeout(()=>controller.abort(),config.timeout_ms||180000);try{const r=await requestModel(worker,full,controller.signal);await emit(runDir,`failures/raw/${stage}/${worker.role}/attempt-${attempt}.txt`,r.text);const output=parse(r.text);if(!validate(output)){repair=`Repair schema errors: ${JSON.stringify(validate.errors)}. Be concise.`;throw new Error(repair)}assert(output);const record={run_id:config.run_id,unit_id:config.unit_id,stage,role:worker.role,attempt,input_sha256:sha256(full),output,provider_provenance:{provider:worker.provider,model:worker.model,request_id:r.id,started_at:started.toISOString(),finished_at:new Date().toISOString(),usage:r.usage}};await event(runDir,{type:`${stage}_complete`,role:worker.role,attempt});return record}catch(e){if(!repair)repair=`Previous output was incomplete or malformed: ${String(e)}. Be concise and close the JSON.`;await event(runDir,{type:`${stage}_failure`,role:worker.role,attempt,error:String(e)});if(attempt===3)throw e}finally{clearTimeout(timer)}}}
+async function call(worker,stage,prompt,validate,assert=()=>{}){
+  return executeJsonWorker({
+    config,
+    runDir,
+    worker,
+    stage,
+    prompt,
+    parse,
+    validate,
+    assert,
+    recordContext:{unit_id:config.unit_id},
+    rawPrefix:`failures/raw/${stage}/${worker.role}`
+  });
+}
 
 const readerProfile='You are a religion-naive adult reader. You have no Greek text, benchmark, comparison translation, commentary, or model notes. Report only what the English communicates or reasonably implies.';
 const reconstructionPrompt=`${readerProfile} Reconstruct the meaning of each verse and the passage as a whole. Do not evaluate translation quality and do not guess missing source wording. Schema: {"verse_meanings":[{"reference":"Phil.1.1","propositions":["..."],"inferred_relationships":["..."]}],"passage_summary":"...","unclear_phrases":[{"reference":"...","phrase":"...","possible_meanings":["..."]}]}. Include exactly every supplied verse in order. Be concise enough to complete the JSON. ENGLISH ONLY:${JSON.stringify(candidate.verse_renderings)}`;
@@ -34,5 +52,5 @@ let md=`# FLT Phase 4 — Exact Text and Reader-Note Audit\n\n**Candidate:** ${c
 for(const [i,a] of audits.entries()){md+=`### Auditor ${i+1}: ${a.output.overall_eligible?'eligible':'blocked'}\n\n${a.output.overall_statement}\n\n`;for(const v of a.output.verse_assessments.filter(v=>v.status!=='pass'))md+=`- **${v.reference} — ${v.status}:** ${v.findings.map(f=>f.assessment).join(' ')}\n`;for(const n of a.output.reader_note_assessments.filter(n=>n.status!=='pass'))md+=`- **${n.note_id} — ${n.status}:** ${n.assessment}\n`;for(const c of a.output.constitutional_checks.filter(c=>c.outcome!=='pass'))md+=`- **${c.check} — ${c.outcome}:** ${c.rationale}\n`;md+='\n'}
 md+='## Interpretation\n\nEligibility means the candidate remains defensible inside FLT’s semantic floor. Warnings identify documented human choices; they are not automatic demands for more literal wording. Any block requires human review before advancement.\n';
 await emit(runDir,'outputs/human-candidate-audit.md',md);
-await emit(runDir,'manifest/audit-provenance.json',{run_id:config.run_id,candidate_id:candidate.candidate_id,reconstructions:reconstructions.map(x=>x.provider_provenance),audits:audits.map(x=>x.provider_provenance),visibility:'Reconstruction stage sees reading text only. Audit stage sees the exact candidate, its reader notes, anonymous reconstructions, and Greek. No benchmark or comparison translations.',status:'human_audit_review'});
+await emit(runDir,'manifest/audit-provenance.json',{run_id:config.run_id,candidate_id:candidate.candidate_id,reconstructions:reconstructions.map(x=>x.provider_provenance),audits:audits.map(x=>x.provider_provenance),candidate_seal:{path:path.relative(process.cwd(),sealPath),...sealedHashes,seal_sha256:sha256(seal)},attempt_accounting:attemptAccountingNotice,validated_worker_checkpoints:['checkpoints/meaning_reconstruction/','checkpoints/semantic_audit/'],visibility:'Reconstruction stage sees reading text only. Audit stage sees the exact candidate, its reader notes, anonymous reconstructions, and Greek. No benchmark or comparison translations.',status:'human_audit_review'});
 console.log('Human candidate meaning audit complete');
