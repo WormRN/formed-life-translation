@@ -1,40 +1,91 @@
 {
   "schema_version": 1,
-  "candidate_id": "PHP-04-004-009-HUMAN-SYNTHESIS-V2.2",
+  "candidate_id": "PHP-04-004-009-HUMAN-SYNTHESIS-V2.2-SMOOTHED",
   "passage": "Philippians 4:4-9",
-  "status": "provisional_human_synthesis_pending_oral_smoothing",
+  "status": "human_approved_smoothed_candidate_pending_constitutional_audit",
   "human_editor_selection": {
     "date": "2026-08-02",
-    "exact_wording_preserved": true,
+    "exact_wording_preserved": false,
     "blind_draft_run": 30763832817,
-    "engine_run_id": "FLT-PHP-04-20260802-2",
+    "engine_run_id": "FLT-PHP-04-20260803-2",
     "candidate_evidence_count": 3,
-    "oral_smoothing_run": null,
-    "oral_review_decision": "pending"
+    "oral_smoothing_run": 30776281023,
+    "oral_review_decision": "Retain verses 4-6 and 9 exactly; adopt the approved listener-driven sentence divisions in verses 7-8; approve all five reader notes."
   },
   "verse_renderings": [
-    {"reference": "Phil.4.4", "text": "Always rejoice because you belong to the Lord. I will say it again: rejoice!"},
-    {"reference": "Phil.4.5", "text": "Let everyone see how reasonable and fair you are. The Lord is near."},
-    {"reference": "Phil.4.6", "text": "Do not be anxious about anything. Instead, in every situation, pray to God. Tell Him what you need, ask for His help, and thank Him."},
-    {"reference": "Phil.4.7", "text": "Then God’s peace, which is far beyond anything we can understand, will stand guard over your hearts and thoughts because you belong to Christ Jesus."},
-    {"reference": "Phil.4.8", "text": "Finally, brothers and sisters, keep your thoughts focused on whatever is true, whatever is honorable, whatever is right, whatever is pure, whatever is lovely, and whatever is admirable—on anything morally excellent or worthy of praise."},
-    {"reference": "Phil.4.9", "text": "Keep putting into practice everything you learned and received from me, everything you heard me teach and saw me do. Then the God of peace will be with you."}
+    {
+      "reference": "Phil.4.4",
+      "text": "Always rejoice because you belong to the Lord. I will say it again: rejoice!"
+    },
+    {
+      "reference": "Phil.4.5",
+      "text": "Let everyone see how reasonable and fair you are. The Lord is near."
+    },
+    {
+      "reference": "Phil.4.6",
+      "text": "Do not be anxious about anything. Instead, in every situation, pray to God. Tell Him what you need, ask for His help, and thank Him."
+    },
+    {
+      "reference": "Phil.4.7",
+      "text": "Then God’s peace will stand guard over your hearts and thoughts because you belong to Christ Jesus. This peace is far beyond anything we can understand."
+    },
+    {
+      "reference": "Phil.4.8",
+      "text": "Finally, brothers and sisters, keep your thoughts focused on whatever is true, whatever is honorable, and whatever is right. Also focus on whatever is pure, whatever is lovely, and whatever is admirable—on anything morally excellent or worthy of praise."
+    },
+    {
+      "reference": "Phil.4.9",
+      "text": "Keep putting into practice everything you learned and received from me, everything you heard me teach and saw me do. Then the God of peace will be with you."
+    }
   ],
   "reader_notes": [
-    {"note_id": "Phil.4.5-reasonable-fair", "reference": "Phil.4.5", "anchor": "reasonable and fair", "status": "proposed", "text": "The Greek word can include gentleness, gracious restraint, reasonableness, and a willingness not to insist on every right."},
-    {"note_id": "Phil.4.5-lord-near", "reference": "Phil.4.5", "anchor": "The Lord is near", "status": "proposed", "text": "The Greek may refer to the Lord’s present nearness, His approaching return, or both."},
-    {"note_id": "Phil.4.6-anything-every-situation", "reference": "Phil.4.6", "anchor": "anything … every situation", "status": "proposed", "text": "Paul pairs “nothing” with “everything.” Instead of facing anxiety alone, believers are to bring every situation to God through prayer, specific requests, and thanksgiving."},
-    {"note_id": "Phil.4.7-stand-guard", "reference": "Phil.4.7", "anchor": "stand guard", "status": "proposed", "text": "The Greek pictures a sentry actively protecting a city or person. The final phrase literally says “in Christ Jesus,” locating this protection within the believers’ relationship to Christ."},
-    {"note_id": "Phil.4.9-god-of-peace", "reference": "Phil.4.9", "anchor": "the God of peace", "status": "proposed", "text": "Paul deliberately moves from “God’s peace” in verse 7 to “the God of peace” here. The final promise is God’s own presence, not merely a peaceful feeling."}
+    {
+      "note_id": "Phil.4.5-reasonable-fair",
+      "reference": "Phil.4.5",
+      "anchor": "reasonable and fair",
+      "status": "approved",
+      "text": "The Greek word can include gentleness, gracious restraint, reasonableness, and a willingness not to insist on every right."
+    },
+    {
+      "note_id": "Phil.4.5-lord-near",
+      "reference": "Phil.4.5",
+      "anchor": "The Lord is near",
+      "status": "approved",
+      "text": "The Greek may refer to the Lord’s present nearness, His approaching return, or both."
+    },
+    {
+      "note_id": "Phil.4.6-anything-every-situation",
+      "reference": "Phil.4.6",
+      "anchor": "anything … every situation",
+      "status": "approved",
+      "text": "Paul pairs “nothing” with “everything.” Instead of facing anxiety alone, believers are to bring every situation to God through prayer, specific requests, and thanksgiving."
+    },
+    {
+      "note_id": "Phil.4.7-stand-guard",
+      "reference": "Phil.4.7",
+      "anchor": "stand guard",
+      "status": "approved",
+      "text": "The Greek pictures a sentry actively protecting a city or person. The final phrase literally says “in Christ Jesus,” locating this protection within the believers’ relationship to Christ."
+    },
+    {
+      "note_id": "Phil.4.9-god-of-peace",
+      "reference": "Phil.4.9",
+      "anchor": "the God of peace",
+      "status": "approved",
+      "text": "Paul deliberately moves from “God’s peace” in verse 7 to “the God of peace” here. The final promise is God’s own presence, not merely a peaceful feeling."
+    }
   ],
   "copyright_protocol": {
     "mode": "PROVISIONAL_HEURISTIC_CHECK",
     "status": "DEFERRED_BATCH",
-    "provisional_heuristic_check": "complete",
+    "provisional_heuristic_check": "complete_with_delta",
     "heuristic_findings": "watchlist",
-    "watchlist_references": ["Phil.4.6", "Phil.4.7"],
+    "watchlist_references": [
+      "Phil.4.6",
+      "Phil.4.7"
+    ],
     "hard_check_required": true,
     "publication_clearance": false,
-    "delta_check": "not_yet_applicable"
+    "delta_check": "none_obvious_new_risk"
   }
 }
