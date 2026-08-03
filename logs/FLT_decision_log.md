@@ -783,3 +783,18 @@ Reopen only if the whole-letter review or later contextual evidence exposes a co
 - **Artifact:** ID 8846946848; SHA-256 `2f7f9a233fa1793538b7c3bd5dcd482fcbecb3edb846c33f434cac11879bc163`.
 - **Consensus findings:** All three workers found verse 23’s “dwell with the spirit of you all” difficult or weak as a spoken closing; source-aware review also identified “dwell” as an image absent from the source. Verses 21–22 received milder concerns about repeated greeting formulas and shifting groups, with no consensus that their core wording must change.
 - **Status:** Proposals only. The completed smoothing trigger is manual-only. Human approval of exact post-smoothing text and the three proposed notes is required before sealing and constitutional audit.
+
+
+---
+
+## 2026-08-03 — Philippians 4:21–23 exact wording and notes approved
+
+- **Unit:** `PHP-04-021-023`
+- **Human decision:** Retain verses 21–22 exactly and override the smoothing recommendation for verse 23.
+- **Verse 23 override:** “May the grace of the Lord Jesus Christ dwell with the spirit of you all.” The Human Editor judged “dwell” to be a valid and superior dynamic unpacking of the strong associative presence conveyed by `meta`, despite the Greek clause being verbless and “be” being the formal default.
+- **Constitutional rationale:** The override applies the FLT First-Read Clarity Principle while preserving the collective “spirit of you all” construction.
+- **Notes approved:** Every holy person and the traditional term saints (4:21); the wider imperial-service meaning of Caesar’s household (4:22); and the collective human-spirit sense, not the Holy Spirit (4:23).
+- **Oral-smoothing evidence:** Run 30790727895 completed all six calls on their first attempt. Its contrary recommendation is preserved as evidence but does not supersede Human Editor authority.
+- **Copyright delta:** The exact verse 23 wording remains on the existing deferred-comparison watchlist; no new wording was introduced; `publication_clearance: false`.
+- **Exact authority:** The reading text and three notes are cryptographically sealed. Any substitution must fail before an audit provider call.
+- **Next gate:** Audit the exact three-verse text and three approved notes together. No silent repair is authorized.
