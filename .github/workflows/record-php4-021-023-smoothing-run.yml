@@ -6,10 +6,6 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/record-php4-021-023-smoothing-run.yml'
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/record-php4-021-023-smoothing-run.yml'
   workflow_dispatch:
 
 permissions:
@@ -43,14 +39,14 @@ jobs:
           target_id="$(jq -r '.databaseId // empty' <<<"$target_json")"
           test -n "$target_id"
           gh run watch "$target_id" --repo "$GITHUB_REPOSITORY" --exit-status || true
-          gh run view "$target_id" --repo "$GITHUB_REPOSITORY" --json databaseId,number,event,status,conclusion,headSha,url,createdAt,updatedAt > config/latest_php4_010_020_smoothing_run.json
+          gh run view "$target_id" --repo "$GITHUB_REPOSITORY" --json databaseId,number,event,status,conclusion,headSha,url,createdAt,updatedAt > config/latest_php4_021_023_smoothing_run.json
           echo "run_id=$target_id" >> "$GITHUB_OUTPUT"
       - name: Commit stable smoothing receipt
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- config/latest_php4_010_020_smoothing_run.json
+          git add -- config/latest_php4_021_023_smoothing_run.json
           if git diff --cached --quiet; then
             exit 0
           fi
