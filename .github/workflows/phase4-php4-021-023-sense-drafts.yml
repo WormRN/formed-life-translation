@@ -1,21 +1,7 @@
-name: FLT Engine 2.2 Philippians 4:21-23 passage-sense drafts
+name: FLT Engine 2.2 Philippians 4:21-23 passage-sense drafts (completed; manual only)
 run-name: Philippians 4:21-23 fresh Engine 2.2 passage-sense drafts
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/phase4-php4-021-023-sense-drafts.yml'
-      - 'docs/architecture/phase-4/PHP-04-021-023_blind-source-v2.2.json'
-  pull_request:
-    branches: [main]
-    paths:
-      - '.github/workflows/phase4-php4-021-023-sense-drafts.yml'
-      - 'docs/architecture/phase-4/PHP-04-021-023_blind-source-v2.2.json'
-      - 'phase4-harness/src/chapter-units.js'
-      - 'phase4-harness/src/sense-resolution-core.js'
-      - 'phase4-harness/schemas/chapter-unit-candidate.schema.json'
-      - 'phase4-harness/test/engine-2.2-passage-sense.test.js'
   workflow_dispatch:
 
 permissions: {contents: write}
@@ -128,5 +114,4 @@ jobs:
           git commit -m "Record Philippians 4:21-23 Engine 2.2 receipt"
           git pull --rebase origin main
           git push origin HEAD:main
-
 
