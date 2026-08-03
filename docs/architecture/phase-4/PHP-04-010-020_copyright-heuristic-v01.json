@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "candidate_id": "PHP-04-010-020-HUMAN-SYNTHESIS-V2.2",
+  "candidate_id": "PHP-04-010-020-HUMAN-SYNTHESIS-V2.2-SMOOTHED",
   "passage": "Philippians 4:10-20",
   "draft_commit_or_record": "docs/architecture/phase-4/PHP-04-010-020_human-editor-synthesis-v2.2.json",
   "mode": "PROVISIONAL_HEURISTIC_CHECK",
@@ -15,19 +15,37 @@
     },
     {
       "reference": "Phil.4.13",
-      "wording": "I have strength for all these situations through the one who gives me strength",
+      "wording": "I can face all these situations through the one who gives me strength",
       "reason": "This context-limited rendering of a famous verse should receive exact comparison because many modern versions dynamically expand its scope and source."
     },
     {
       "reference": "Phil.4.17",
-      "wording": "the growing spiritual profit that is credited to your account",
+      "wording": "the growing spiritual reward that is being credited to your account",
       "reason": "This distinctive explanatory accounting phrase should receive exact comparison during the deferred hard audit."
     }
   ],
   "independent_path_assessment": "The repository preserves a source-side passage-sense gate, one immutable blind prompt, three independent candidates, and the human editor’s exact synthesis. The watchlist records familiar or distinctive dynamic phrasing for later exact comparison; it does not establish derivation or require present rewriting.",
-  "recommended_action": "Proceed to listener-only diagnosis and source-aware smoothing with the exact recorded synthesis. Retain DEFERRED_BATCH status and prioritize Philippians 4:12, 4:13, and 4:17 in the formal authorized eight-translation New Testament API batch audit.",
+  "recommended_action": "Seal the exact approved smoothed text and notes with DEFERRED_BATCH status. Prioritize Philippians 4:12, 4:13, and 4:17 in the formal authorized eight-translation New Testament API batch audit.",
   "copyright_protocol_status": "DEFERRED_BATCH",
   "hard_check_required": true,
   "publication_clearance": false,
-  "limitations": "This memory-based screen is deliberately narrow and non-exhaustive. No comparison text was retrieved, reconstructed, quoted, or measured."
+  "limitations": "This memory-based screen is deliberately narrow and non-exhaustive. No comparison text was retrieved, reconstructed, quoted, or measured.",
+  "delta_check": {
+    "performed_on": "2026-08-02",
+    "changed_references": [
+      "Phil.4.10",
+      "Phil.4.13",
+      "Phil.4.17",
+      "Phil.4.18"
+    ],
+    "changed_text": [
+      "Now that your care for me has blossomed again, it brings me great joy in the Lord. You had cared all along, but you just had no opportunity to show it.",
+      "I can face all these situations through the one who gives me strength.",
+      "I'm not looking for a gift. I seek the growing spiritual reward that is being credited to your account.",
+      "Now that I have received everything you sent through Epaphroditus, I have all I need and more. Your gift is a sweet-smelling offering to God. It is an acceptable sacrifice that pleases Him."
+    ],
+    "heuristic_findings": "none_obvious_new_risk",
+    "assessment": "The listener-driven repairs in verses 10, 13, and 18 add no obvious highly distinctive multiword resemblance. Verse 17’s human-editor override remains a distinctive explanatory accounting phrase already designated for exact later comparison.",
+    "required_later_action": "Include the exact final wording, with priority review of Philippians 4:12, 4:13, and 4:17, in the formal authorized eight-translation New Testament API batch audit."
+  }
 }

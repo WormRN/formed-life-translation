@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "candidate_id": "PHP-04-010-020-HUMAN-SYNTHESIS-V2.2-SMOOTHED",
+  "passage": "Philippians 4:10-20",
+  "human_approved": true,
+  "approved_by": "human_editor",
+  "approved_at": "2026-08-03T05:02:05.004Z",
+  "reading_text_sha256": "e34ad3a3cf28d4e5b9d059bdfa1251fe51c3d3a2609c3fc388b6dd34c9f15060",
+  "reader_notes_sha256": "c0d8e562cce8691c3b71f313d078aa4a1b91569e6f5da473cf6c9344ef31ea9b",
+  "candidate_material_sha256": "cbdc9af636033e92a6ed5915fb9aa15c56cf31511d6cd0908d81361118362f42",
+  "audit_authority": "Only the candidate whose exact reading-text and reader-note hashes match this seal may enter the constitutional audit."
+}
