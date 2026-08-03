@@ -798,3 +798,16 @@ Reopen only if the whole-letter review or later contextual evidence exposes a co
 - **Copyright delta:** The exact verse 23 wording remains on the existing deferred-comparison watchlist; no new wording was introduced; `publication_clearance: false`.
 - **Exact authority:** The reading text and three notes are cryptographically sealed. Any substitution must fail before an audit provider call.
 - **Next gate:** Audit the exact three-verse text and three approved notes together. No silent repair is authorized.
+
+
+---
+
+## 2026-08-03 — Philippians 4:21–23 exact-text audit reviewed and accepted
+
+- **Sealed candidate:** `PHP-04-021-023-HUMAN-SYNTHESIS-V2.2-SMOOTHED`; reading, three notes, and combined material matched the Human-Editor-approved cryptographic seal.
+- **Run:** GitHub Actions 30792923476; Engine ID `FLT-PHP-04-20260803-4`; artifact 8847753581, SHA-256 `f546ada0f886e4efd415a2c43d90f671fa7ca52cbc27aaf705d5db23990866a1`.
+- **Result:** Two auditors eligible; one auditor blocked verse 23 because “dwell” may add residence or permanence beyond the verbless Greek benediction. Every reader note passed every auditor.
+- **Human Editor disposition:** The block repeats the precise formal objection reviewed before sealing. The Human Editor had already ruled that “dwell” is a valid and superior dynamic unpacking of the strong associative presence conveyed by `meta` under the First-Read Clarity Principle. Under the repository’s authority rules, that explicit final decision overrides the auditor’s evidence. The exact text is retained without repair or rerun.
+- **Other warning:** One eligible auditor cautioned that “all of God’s holy people” slightly reduces the distributive force of “every holy person.” The approved note discloses the literal form; the established FLT wording is retained.
+- **Attempt accounting:** Six recorded attempts, all successful on the first attempt; zero retries or duplicated calls. Recorded provider token scale: 33,725.
+- **Status:** Accepted pending whole-letter review. The audit and locator triggers are manual-only.
