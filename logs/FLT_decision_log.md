@@ -701,3 +701,17 @@ Reopen only if the whole-letter review or later contextual evidence exposes a co
 - **Artifact:** ID 8844424934; SHA-256 `3068866390fc0cafeeaa9ff92988c6ee3289dbe5581f909a3884cb3826d79597`.
 - **Consensus findings:** Verse 17’s “growing spiritual profit … credited to your account” created the strongest one-hearing confusion. Repeated “strength” in verse 13, the density of verse 18, and the opportunity referent in verse 10 also received convergent repair proposals. Verses 11–12, 14–16, and 19–20 do not require change by editorial judgment, though individual workers proposed alternatives for verses 15 and 19.
 - **Status:** Proposals only. Human editor approval of exact post-smoothing text and the six proposed notes is required before sealing and constitutional audit.
+
+
+---
+
+## 2026-08-02 — Philippians 4:10–20 smoothed wording and notes approved
+
+- **Unit:** `PHP-04-010-020`
+- **Human decision:** Adopt the smoothed repairs in verses 10, 13, and 18; retain verses 11–12, 14–16, and 19–20; approve all six transparency notes.
+- **Verse 17 override:** “I'm not looking for a gift. I seek the growing spiritual reward that is being credited to your account.” The human editor restored the theological edge of Paul’s accounting metaphor while keeping the material-return disclaimer in the approved note.
+- **Notes approved:** Renewed care and opportunity (4:10); contextual scope and unnamed strengthener (4:13); giving-and-receiving partnership (4:15–16); fruit/account imagery behind “growing spiritual reward” (4:17); worship-sacrifice imagery (4:18); and the needs/in-Christ scope of provision (4:19).
+- **Oral-smoothing evidence:** Run 30783357029 completed all six calls on their first attempt with no duplication.
+- **Copyright delta:** `none_obvious_new_risk`; verses 12, 13, and 17 remain on the deferred exact-comparison watchlist; `publication_clearance: false`.
+- **Exact authority:** The reading text and notes are cryptographically sealed. Any substitution must fail before an audit provider call.
+- **Next gate:** Audit the exact eleven-verse text and six approved notes together. No silent repair is authorized.
