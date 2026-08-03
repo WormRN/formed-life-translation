@@ -1,3 +1,4 @@
+# Production trigger armed after workflow installation on main.
 name: FLT Philippians 4:10-20 oral smoothing
 run-name: Philippians 4:10-20 listener-only diagnosis and source-aware smoothing
 
