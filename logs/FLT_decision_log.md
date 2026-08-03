@@ -675,3 +675,16 @@ Reopen only if the whole-letter review or later contextual evidence exposes a co
 - **Recorded token scale:** 53,635 provider-reported token units across accepted attempts; 78,363 across all four attempts. Provider tokenizers differ, so these figures are stewardship scale indicators rather than directly interchangeable billing units.
 - **Artifact:** ID 8843291465; SHA-256 `3bddd475b0ca4965d87a0774f6103ad0f15c843e4958cf29dbaf6e8eebf44488`.
 - **Next action:** Present untouched A/B/C candidates under each verse, followed by an editorial synthesis and proposed transparency notes. Copyright heuristic screening begins only after the human editor records an independent provisional synthesis.
+
+
+---
+
+## 2026-08-02 — Philippians 4:10–20 human synthesis selected
+
+- **Unit:** `PHP-04-010-020`
+- **Decision:** Preserve the human editor’s exact provisional wording for all eleven verses.
+- **Notable editorial choices:** Verse 10 retains the source’s blooming-again image while explicitly protecting the Philippians from implied rebuke. Verse 13 limits “all things” to the circumstances of plenty and need named in verses 11–12 and preserves “the one who gives me strength” rather than inserting a name absent from the SBLGNT line. Verse 17 renders the combined fruit-and-account image as “growing spiritual profit … credited to your account.”
+- **Transparency notes:** Six notes are recorded as proposed: renewed care and opportunity (4:10); contextual scope and the unnamed strengthener (4:13); giving-and-receiving partnership (4:15–16); fruit/account imagery behind “spiritual profit” (4:17); worship-sacrifice imagery (4:18); and the needs/in-Christ scope of God’s provision (4:19).
+- **Draft evidence:** Engine 2.2 run 30779827098 produced three blind candidates under one common prompt after a passed passage-sense gate.
+- **Provisional copyright heuristic:** `watchlist` for Philippians 4:12, 4:13, and 4:17 because familiar or distinctive dynamic phrasing merits exact comparison later. This does not establish dependence or reopen the wording. Status remains `DEFERRED_BATCH`; hard eight-translation API audit required; `publication_clearance: false`.
+- **Next gate:** Listener-only diagnosis followed by source-aware minimal-change smoothing. Human approval remains required before constitutional audit.
