@@ -1,8 +1,12 @@
-name: Record Philippians 4:21-23 smoothing run
-run-name: Locate and record the original Philippians 4:21-23 smoothing run
+name: Record Philippians 4:21-23 audit run
+run-name: Locate and record the original Philippians 4:21-23 audit run
 
 on:
   pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/record-php4-021-023-smoothing-run.yml'
+  push:
     branches: [main]
     paths:
       - '.github/workflows/record-php4-021-023-smoothing-run.yml'
@@ -22,7 +26,7 @@ jobs:
 
   record:
     if: github.event_name != 'pull_request'
-    name: Record original smoothing run receipt
+    name: Record constitutional audit receipt
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
@@ -35,20 +39,20 @@ jobs:
         id: locate
         shell: bash
         run: |
-          target_json="$(gh run list --repo "$GITHUB_REPOSITORY" --workflow phase4-php4-021-023-human-smoothing.yml --limit 20 --json databaseId,number,event,status,conclusion,headSha,url,createdAt,updatedAt --jq '[.[] | select(.event == "push")] | sort_by(.number) | last')"
+          target_json="$(gh run list --repo "$GITHUB_REPOSITORY" --workflow phase4-php4-021-023-human-smoothing.yml --limit 20 --json databaseId,number,event,status,conclusion,headSha,url,createdAt,updatedAt --jq '[.[] | select(.event == "push" and .headSha == env.GITHUB_SHA)] | sort_by(.number) | last')"
           target_id="$(jq -r '.databaseId // empty' <<<"$target_json")"
           test -n "$target_id"
           gh run watch "$target_id" --repo "$GITHUB_REPOSITORY" --exit-status || true
-          gh run view "$target_id" --repo "$GITHUB_REPOSITORY" --json databaseId,number,event,status,conclusion,headSha,url,createdAt,updatedAt > config/latest_php4_021_023_smoothing_run.json
+          gh run view "$target_id" --repo "$GITHUB_REPOSITORY" --json databaseId,number,event,status,conclusion,headSha,url,createdAt,updatedAt > config/latest_php4_021_023_audit_run.json
           echo "run_id=$target_id" >> "$GITHUB_OUTPUT"
-      - name: Commit stable smoothing receipt
+      - name: Commit stable audit receipt
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- config/latest_php4_021_023_smoothing_run.json
+          git add -- config/latest_php4_021_023_audit_run.json
           if git diff --cached --quiet; then
             exit 0
           fi
-          git commit -m "Record Philippians 4:21-23 smoothing run ${{ steps.locate.outputs.run_id }}"
+          git commit -m "Record Philippians 4:21-23 audit run ${{ steps.locate.outputs.run_id }}"
           git push origin HEAD:main
