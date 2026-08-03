@@ -61,7 +61,6 @@ export async function executeJsonWorker({
     let response=null;
     let output=null;
     let outcome='request_failed';
-    let caught=null;
     try{
       response=await request(worker,full,controller.signal);
       await emit(runDir,`${rawPrefix}/attempt-${attempt}.txt`,response.text);
@@ -116,7 +115,6 @@ export async function executeJsonWorker({
       await event(runDir,{type:`${stage}_complete`,role:worker.role,attempt,fingerprint});
       return record;
     }catch(error){
-      caught=error;
       if(response)outcome='response_rejected';
       if(!repair)repair=`Previous output was incomplete or malformed: ${String(error)}. Be concise and close the JSON.`;
       await emit(runDir,`manifest/attempts/${stage}/${worker.role}/attempt-${attempt}.json`,{
