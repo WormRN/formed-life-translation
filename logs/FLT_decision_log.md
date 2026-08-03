@@ -648,3 +648,15 @@ Reopen only if the whole-letter review or later contextual evidence exposes a co
 - **Blindness:** No prior FLT wording, comparison translation, prior candidate, editor benchmark, or conversation draft is supplied.
 - **Run retrieval:** The workflow automatically publishes its run URL to the merged source-gate PR and still records the URL in the machine-readable draft receipt.
 - **Next action:** Validate the isolated PR with zero provider calls, merge once, and permit exactly one push-triggered blind A/B/C drafting run.
+
+
+---
+
+## 2026-08-02 — Philippians 4:10–20 run-locator repair
+
+- **Failed run:** GitHub Actions run 30779654846 stopped at the experimental pull-request comment locator because the workflow integration could not query pull requests for the merge commit (`403 Resource not accessible by integration`).
+- **Provider impact:** Zero provider calls; drafting, gate execution, and candidate production were skipped.
+- **Receipt behavior:** The workflow correctly published a failure receipt with an empty Engine ID, zero candidates, and `workflow_failed` status.
+- **Repair:** Remove the denied GitHub API lookup and retain the repository's machine-readable draft receipt as the stable locator. The receipt records the run URL, Engine ID, prompt and gate verification, candidate count, and outcome.
+- **Quality boundary:** No source packet, provider, prompt, model, gate, or translation standard changed.
+- **Authorized next action:** Validate the repair with zero provider calls, then merge once so the workflow performs the originally authorized three blind drafts.

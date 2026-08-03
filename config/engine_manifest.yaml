@@ -377,7 +377,7 @@ workflow_requirements:
   role_specific_readability_fidelity_balanced_goals_forbidden: true
   exact_candidate_must_be_preserved: true
   publish_latest_audit_receipt: true
-  automatic_run_locator_comment_required: true
+  automatic_run_locator_receipt_required: true
   exact_source_gate_and_greek_validation_required: true
   one_hearing_oral_design_required_in_drafting: true
   oral_smoothing_before_candidate_audit: true
