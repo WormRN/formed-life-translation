@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "candidate_id": "PHP-04-021-023-HUMAN-SYNTHESIS-V2.2-SMOOTHED",
+  "passage": "Philippians 4:21-23",
+  "human_approved": true,
+  "approved_by": "human_editor",
+  "approved_at": "2026-08-03T07:11:46.453Z",
+  "reading_text_sha256": "0e41ba53a6fd79cd46b66014e96ecae4e156f2eeb6733f3ec76912ace56d8c65",
+  "reader_notes_sha256": "4f700a69fde5afb6b5d61bb23280363946844b5122d1ace5690b48d200317779",
+  "candidate_material_sha256": "9049272cd9af0a12c0e87d044e875b8c7db4fc3708fee7df11e4d99deca99b95",
+  "audit_authority": "Only the candidate whose exact reading-text and reader-note hashes match this seal may enter the constitutional audit."
+}
