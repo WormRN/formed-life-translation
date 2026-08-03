@@ -141,7 +141,7 @@ export async function executeJsonWorker({
       clearTimeout(timer);
     }
   }
-  throw caught||new Error(`${stage} failed without a recorded attempt`);
+  throw new Error(`${stage} failed without a recorded attempt`);
 }
 
 export const attemptAccountingNotice={
