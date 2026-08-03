@@ -618,3 +618,33 @@ Reopen only if the whole-letter review or later contextual evidence exposes a co
 - **Copyright delta:** `none_obvious_new_risk`; verse 7 retains its previously recorded watchlist phrase, and verse 8 adds no new watchlist item. Status remains `DEFERRED_BATCH`; hard eight-translation API audit required; `publication_clearance: false`.
 - **Exact authority:** The approved reading text and notes are cryptographically sealed. Any substitution or later change must fail before an audit provider call.
 - **Next gate:** Audit the exact six-verse reading text and all five approved notes together. No silent wording repair is authorized.
+
+
+---
+
+## 2026-08-02 — Philippians 4:4–9 accepted after Engine 2.2 audit
+
+- **Unit:** `PHP-04-004-009`
+- **Status:** Accepted as a unit; pending whole-chapter review after Philippians 4 is complete.
+- **Decision:** Adopt the human-approved source-aware smoothed reading text and all five transparency notes exactly as audited.
+- **Engine evidence:** Blind A/B/C run 30763832817; listener-only/source-aware smoothing run 30776281023; exact constitutional audit run 30777836549.
+- **Audit integrity:** The reading text and notes matched the human seal. All six model calls succeeded on their first attempt; no retry or duplicated call occurred.
+- **Audit result:** Three of three auditors eligible; zero blocking defects; all six verses remained within the semantic floor; all five reader notes passed.
+- **Documented cautions:** Auditors noted the narrower justice/equity impression of “fair” in verse 5 and the explicit causal force of “because you belong to Christ Jesus” in verse 7. Both are retained as deliberate dynamic renderings with approved notes disclosing the wider source range and literal form.
+- **Copyright status:** Provisional heuristic watchlist remains for verses 6–7; targeted smoothing delta added no new obvious risk; `DEFERRED_BATCH`; hard eight-translation API audit required; `publication_clearance: false`.
+- **Next gate:** Prepare the Engine 2.2 passage-sense resolution for Philippians 4:10–20. Reopen 4:4–9 only for a concrete chapter-level issue or explicit human decision.
+
+---
+
+## 2026-08-02 — Philippians 4:10–20 passage-sense gate prepared
+
+- **Unit:** `PHP-04-010-020`
+- **Boundary:** Verses 10–20 form one gift-thanksgiving unit: renewed concern, learned contentment, strength for every circumstance, shared hardship and financial partnership, the gift as worship, God's answering provision, and closing praise.
+- **Gate status:** Engine 2.2 source-side brief complete for blind drafting.
+- **Source integrity:** Every Greek verse was matched token-for-token to live-repository SBLGNT blob `45ee05650020ab9a11e9d5316b721e87e7e4cd2c`.
+- **Required protections:** Verse 13 is limited by the plenty-and-need circumstances of verses 11–12; verses 15–17 preserve linked partnership and account imagery without promising purchased favor or prosperity; verse 18 retains the fragrant-sacrifice worship image; verse 19 promises provision for needs rather than every desire and remains located in Christ.
+- **Meaningful alternatives retained:** Renewed-concern image in verse 10; naming Christ versus “the one who strengthens me” in verse 13; giving-and-receiving language in verses 15–16; fruit/account language in verse 17; receipt language in verse 18; the placement of “in glory” in verse 19; and accessible treatment of glory and Amen in verse 20.
+- **Required candidate notes:** Verse 13's contextual scope and exact source form; the giving/receiving account image; fruit increasing to the Philippians' account; and the scope and context of God's provision.
+- **Blindness:** No prior FLT wording, comparison translation, prior candidate, editor benchmark, or conversation draft is supplied.
+- **Run retrieval:** The workflow automatically publishes its run URL to the merged source-gate PR and still records the URL in the machine-readable draft receipt.
+- **Next action:** Validate the isolated PR with zero provider calls, merge once, and permit exactly one push-triggered blind A/B/C drafting run.
