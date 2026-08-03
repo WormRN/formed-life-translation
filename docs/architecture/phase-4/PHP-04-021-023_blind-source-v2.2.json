@@ -1,0 +1,188 @@
+{
+  "chapter_id": "PHP-04",
+  "book": "Philippians",
+  "chapter": 4,
+  "source_edition": "SBLGNT",
+  "tone": "warm, personal, communal, and worshipful, closing the letter with mutual greetings and a grace blessing",
+  "target_reader": "religion-naive adults and older adolescents near grade 6",
+  "translation_identity": "firmly dynamic-equivalence, NLT-like in readability but independent",
+  "test_purpose": "Fresh Engine 2.2 passage-sense-resolution drafting of Philippians 4:21-23",
+  "sealed_context": {
+    "prior_flt_wording_present": false,
+    "prior_candidates_present": false,
+    "comparison_translations_present": false,
+    "conversational_drafts_present": false,
+    "instruction": "Translate from the Greek and the completed source-side passage-sense brief only. Do not reconstruct, imitate, or refer to previous FLT wording, previous candidates, comparison translations, or conversation drafts.",
+    "editor_benchmark_present": false
+  },
+  "governing_rules": [
+    "Passage-sense resolution precedes English composition. Follow the completed source-side brief and expose genuinely viable alternatives in the review apparatus.",
+    "All three candidates pursue the same constitutional goal; no provider receives a readability, fidelity, or blended specialty.",
+    "Write natural English that a religion-naive adult can follow on one hearing. The main assertion should arrive before the listener loses it.",
+    "Build English sentences and paragraphs rather than preserving Greek clause architecture. Split, combine, reorder, or unpack when comprehension benefits.",
+    "Preserve every material proposition; cause, contrast, purpose, result, sequence, meaningful ambiguity, agency, force, certainty, and key-term links.",
+    "Preserve the warm exchange of greetings and the blessing as a genuine letter closing, not as detached administrative information.",
+    "The prose serves the reader; notes serve accountability. Do not leave the reading text opaque and expect a footnote to supply material meaning.",
+    "Keep candidate alternatives in the review apparatus, not in brackets in the reading text, unless the human editor later decides otherwise.",
+    "Propose notes for literal-source transparency, culturally unfamiliar institutions, metaphors hidden by dynamic rendering, and disputed constructions.",
+    "Footnotes disclose translation decisions and establish critical trust; they are not apologies for, or repairs to, an inadequate reading text.",
+    "No comparison translations, traditional benchmark wording, prior FLT wording, prior candidates, editor benchmark, conversation drafts, or sealed human wording may enter blind drafting.",
+    "Record oral-design moves and remaining oral risks; do not claim that a drafting worker has certified its own oral quality."
+  ],
+  "existing_decisions": [
+    "Capitalize pronouns referring to deity.",
+    "Render theological vocabulary contextually in reader-facing English; do not preserve opaque church terms merely because they are traditional.",
+    "Render adelphoi inclusively as brothers and sisters when the context addresses a mixed Christian community.",
+    "Render hagioi contextually for religion-naive readers rather than importing the opaque traditional label saints without explanation.",
+    "Preserve the identity and belonging force of en Christo language in natural English when a spatial reading would mislead.",
+    "Footnotes may disclose disputed constructions, traditional glosses, cultural force, literal wording, and source-language links, but may not compensate for material meaning missing from the reading text.",
+    "Preserve contextual links across accepted units without importing or reopening their accepted English wording during blind drafting.",
+    "The human editor alone selects, synthesizes, approves smoothing changes, and finalizes wording."
+  ],
+  "matrix_alerts": [
+    {
+      "lemma": "ἀσπάζομαι / πᾶς / ἀδελφοί",
+      "status": "closing-greeting, universal-scope, and inclusive-community alert",
+      "neutral_range": "greet, welcome, or convey greetings; every or all; brothers, siblings, or brothers and sisters",
+      "instruction": "Keep the reciprocal greeting sequence personal and audible. Preserve the individual force of greeting every holy person in verse 21, distinguish Paul's nearby coworkers from all believers in verse 22, and use inclusive community language where warranted."
+    },
+    {
+      "lemma": "ἅγιος / ἐν Χριστῷ Ἰησοῦ",
+      "status": "book-level holy-people and belonging-in-Christ alert",
+      "neutral_range": "holy person, one set apart for God, God's holy person or believer; in Christ Jesus or belonging to Christ Jesus",
+      "instruction": "Do not imply canonized religious elites or unusually virtuous Christians. The greeting includes every member of the community as people set apart for God through their relationship to Christ."
+    },
+    {
+      "lemma": "οἱ ἐκ τῆς Καίσαρος οἰκίας",
+      "status": "imperial-household cultural and institutional alert",
+      "neutral_range": "those from Caesar's household, members of the emperor's household, or people connected with imperial household service",
+      "instruction": "Do not restrict the group to Caesar's biological family or claim that Caesar himself was a believer. Preserve the striking fact that believers were present among people attached to the imperial household or its service."
+    },
+    {
+      "lemma": "χάρις / μετὰ τοῦ πνεύματος ὑμῶν",
+      "status": "closing-grace and collective-spirit alert",
+      "neutral_range": "grace, generous favor, or gracious help; with your spirit, with your shared spiritual life, or with you",
+      "instruction": "Preserve the Lord Jesus Christ as the source of grace and the plural communal address. Do not identify the human spirit as the Holy Spirit, add an Amen absent from the SBLGNT text, or reduce the blessing to a casual goodbye."
+    }
+  ],
+  "units": [
+    {
+      "unit_id": "PHP-04-021-023",
+      "passage": "Philippians 4:21-23",
+      "title": "Final greetings and grace",
+      "known_issues": [
+        "The three verses form the letter's closing unit. Verse 21 sends Paul's greeting to every member of the Philippian Christian community and adds greetings from the brothers and sisters who are with him.",
+        "The singular expression 'every holy person' emphasizes each member, while verse 22 broadens to all the holy people with Paul. Do not turn either phrase into a greeting reserved for canonized saints, clergy, or unusually mature Christians.",
+        "The phrase 'in Christ Jesus' identifies the holy people's relationship and belonging rather than their physical location. Natural unpacking is permitted if the Christ-centered identity remains explicit.",
+        "The brothers with Paul may be rendered inclusively as brothers and sisters because the term can designate the mixed Christian community around him. Do not imply that only male relatives or biological brothers send greetings.",
+        "Verse 22 moves from all believers with Paul to a specially mentioned subgroup connected with Caesar's household. Preserve both the comprehensive group and the emphatic special mention.",
+        "Caesar's household was wider than the emperor's biological family and could include slaves, freed persons, employees, and officials attached to imperial service. Do not claim more precision than the phrase permits.",
+        "The reference to Caesar's household does not say that Caesar was a Christian or that the entire imperial household believed. The greeting comes from the believers within that sphere.",
+        "Verse 23 is a blessing, not merely a factual statement. Preserve the grace of the Lord Jesus Christ as active divine favor directed to the readers.",
+        "The Greek uses singular 'spirit' with plural 'your,' addressing the community collectively. A natural plural-address rendering may be used, but a note should disclose the compact literal form if it is substantially unpacked.",
+        "The SBLGNT verse ends with 'your spirit' and contains no final Amen. Do not add one from a different textual tradition."
+      ],
+      "verses": [
+        {"reference": "Phil.4.21", "greek": "Ἀσπάσασθε πάντα ἅγιον ἐν Χριστῷ Ἰησοῦ ἀσπάζονται ὑμᾶς οἱ σὺν ἐμοὶ ἀδελφοί"},
+        {"reference": "Phil.4.22", "greek": "ἀσπάζονται ὑμᾶς πάντες οἱ ἅγιοι μάλιστα δὲ οἱ ἐκ τῆς Καίσαρος οἰκίας"},
+        {"reference": "Phil.4.23", "greek": "ἡ χάρις τοῦ κυρίου Ἰησοῦ Χριστοῦ μετὰ τοῦ πνεύματος ὑμῶν"}
+      ]
+    }
+  ],
+  "passage_sense_resolution": {
+    "gate_version": "2.2",
+    "status": "complete_for_blind_drafting",
+    "prepared_from": "Exact live-repository SBLGNT parsed-source blob 45ee05650020ab9a11e9d5316b721e87e7e4cd2c, local and book-level discourse, source-language analysis, and governing FLT rules; no comparison translation or prior FLT English",
+    "visibility_attestation": {
+      "source_side_only": true,
+      "prior_flt_wording_absent": true,
+      "prior_candidates_absent": true,
+      "editor_benchmark_absent": true,
+      "comparison_translations_absent": true
+    },
+    "passage_argument": [
+      "Paul closes the letter by directing the Philippians to greet every member of their community and by relaying greetings from the brothers and sisters with him.",
+      "He widens the greeting to all God's people where he is, gives special prominence to believers connected with Caesar's household, and ends by blessing the community with the grace of the Lord Jesus Christ."
+    ],
+    "proposition_map": [
+      {"references": ["Phil.4.21"], "statement": "Paul tells the Philippians to greet every holy person who belongs to Christ Jesus, and the brothers and sisters with Paul send their greetings."},
+      {"references": ["Phil.4.22"], "statement": "All the holy people with Paul greet the Philippians, especially the believers connected with Caesar's household."},
+      {"references": ["Phil.4.23"], "statement": "Paul blesses the community so that the grace of the Lord Jesus Christ will be with their collective spirit."}
+    ],
+    "expressions": [
+      {
+        "sense_id": "php4_21_every_holy_person_in_christ",
+        "references": ["Phil.4.21"],
+        "source_expression": "Ἀσπάσασθε πάντα ἅγιον ἐν Χριστῷ Ἰησοῦ",
+        "status": "alternatives_retained",
+        "contextual_function": "Paul begins the close with a personal command that includes each member of the Philippian community and identifies every one of them by relationship to Christ.",
+        "primary_sense": "The Philippians should convey Paul's greeting to every person set apart for God who belongs to Christ Jesus.",
+        "viable_alternatives": [
+          "Use God's holy people language while preserving the singular force by saying every one of God's holy people.",
+          "Use an accessible identity term such as every believer and retain the holy-person source image in a transparency note."
+        ],
+        "discourse_evidence": "The imperative aspasasthe initiates the final greeting exchange; singular panta hagion distributes the greeting to each person; en Christo Iesou identifies the sphere of identity and belonging shared throughout the letter.",
+        "reading_text_guidance": "Make this sound like a warm personal greeting to every member, not a formal salutation to religious elites. Keep the relationship to Christ explicit and avoid awkward translated syntax.",
+        "literal_note_guidance": "If the reading text uses believer or another accessible identity term, explain that the Greek literally calls each person holy or set apart for God and traditionally gives rise to the term saint.",
+        "choice_risks": "Saint can suggest a canonized elite; holy person can suggest exceptional moral achievement; believer can hide the set-apart-for-God image; in Christ can sound spatial to a new reader.",
+        "human_decision_required": true,
+        "reader_note_required": true,
+        "audit_text_and_note_together": true
+      },
+      {
+        "sense_id": "php4_21_brothers_with_paul_send_greetings",
+        "references": ["Phil.4.21"],
+        "source_expression": "ἀσπάζονται ὑμᾶς οἱ σὺν ἐμοὶ ἀδελφοί",
+        "status": "resolved",
+        "contextual_function": "After Paul's own instruction to greet the Philippians, the fellow Christians immediately around him join the exchange by sending their greetings.",
+        "primary_sense": "The brothers and sisters who are with Paul send greetings to the Philippians.",
+        "viable_alternatives": [],
+        "discourse_evidence": "The repeated aspazomai creates reciprocity; the article and syn emoi identify the nearby group with Paul; adelphoi is established Christian family language capable of addressing a mixed community.",
+        "reading_text_guidance": "Use natural inclusive family language and distinguish this nearby group from the wider group of all God's people introduced in verse 22.",
+        "literal_note_guidance": "No note is normally required if brothers and sisters clearly communicates the inclusive Christian-family sense.",
+        "choice_risks": "Brothers alone can sound male-only; friends can erase the family relationship; coworkers may overstate that every person shared Paul's ministry role.",
+        "human_decision_required": false,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "php4_22_all_holy_people_and_caesars_household",
+        "references": ["Phil.4.22"],
+        "source_expression": "πάντες οἱ ἅγιοι μάλιστα δὲ οἱ ἐκ τῆς Καίσαρος οἰκίας",
+        "status": "alternatives_retained",
+        "contextual_function": "Paul expands the greetings from his immediate companions to all believers around him, then highlights the surprising subgroup attached to Caesar's household.",
+        "primary_sense": "All God's holy people with Paul greet the Philippians, especially the believers connected with Caesar's household or imperial service.",
+        "viable_alternatives": [
+          "Preserve Caesar's household in the reading text and explain its broader imperial-service range in a note.",
+          "Unpack the phrase as believers who serve in Caesar's household while noting that the source expression may include varied people attached to imperial service."
+        ],
+        "discourse_evidence": "Pantes broadens the group; malista marks special prominence without excluding the larger whole; hoi ek tes Kaisaros oikias identifies people from or belonging to the emperor's household sphere rather than necessarily his kin.",
+        "reading_text_guidance": "Let the wider greeting and special mention remain distinct. Make the imperial connection intelligible without making Caesar, his family, or the whole establishment Christian.",
+        "literal_note_guidance": "Explain that Caesar's household could include slaves, freed persons, workers, and officials connected with the emperor's service, not only members of his family; the greeting is from believers within that group.",
+        "choice_risks": "Caesar's family is too narrow; palace staff may be too localized; government workers can be too broad and modern; Caesar's household without a note can mislead a religion-naive reader.",
+        "human_decision_required": true,
+        "reader_note_required": true,
+        "audit_text_and_note_together": true
+      },
+      {
+        "sense_id": "php4_23_grace_with_your_collective_spirit",
+        "references": ["Phil.4.23"],
+        "source_expression": "ἡ χάρις τοῦ κυρίου Ἰησοῦ Χριστοῦ μετὰ τοῦ πνεύματος ὑμῶν",
+        "status": "alternatives_retained",
+        "contextual_function": "Paul seals the letter with a blessing that invokes the Lord Jesus Christ's grace upon the readers as one community.",
+        "primary_sense": "May the grace of the Lord Jesus Christ be with the Philippians in their shared inward or spiritual life.",
+        "viable_alternatives": [
+          "Preserve the compact source form with your spirit while allowing the plural your to address the whole community.",
+          "Render the communal force as be with you all and disclose the literal collective-spirit wording in a note."
+        ],
+        "discourse_evidence": "The verbless benediction conventionally carries an implied wish or blessing; charis is sourced in the Lord Jesus Christ; singular pneumatos with plural hymon addresses the community collectively.",
+        "reading_text_guidance": "Make the line sound like an active blessing and retain grace, the full title Lord Jesus Christ, and the communal scope. Do not identify the human spirit as the Holy Spirit or add Amen.",
+        "literal_note_guidance": "If the reading text says with you all or otherwise unpacks the phrase, explain that the Greek literally says with your spirit, using singular spirit with plural your to address the church together.",
+        "choice_risks": "With your spirit may be opaque or mistaken for the Holy Spirit; with you all loses the inward-life image; favor can narrow the theological force of grace; adding Amen follows a textual tradition absent from the SBLGNT line.",
+        "human_decision_required": true,
+        "reader_note_required": true,
+        "audit_text_and_note_together": true
+      }
+    ]
+  }
+}

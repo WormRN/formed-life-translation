@@ -727,3 +727,19 @@ Reopen only if the whole-letter review or later contextual evidence exposes a co
 - **Warnings retained:** Two auditors noted that “reward” may imply earned recompense more strongly than the source explicitly does. The human editor’s verse 17 override is retained with its approved fruit-and-account note and material-return disclaimer. Two auditors also noted that verse 19 makes “in Christ Jesus” explicitly causal; the approved note transparently discloses the literal form.
 - **Attempt accounting:** Seven recorded attempts: six accepted first attempts plus one malformed Gemini reconstruction response followed by one successful retry. Successful siblings were checkpointed and not rerun. Recorded provider token scale: 79,488.
 - **Status:** Accepted pending whole-chapter review. No rerun or repair is required.
+
+
+---
+
+## 2026-08-03 — Philippians 4:21–23 passage-sense gate prepared
+
+- **Unit:** `PHP-04-021-023`
+- **Boundary:** Verses 21–23 form the letter's final unit: Paul's greeting to every believer, greetings from the Christian community with him—including believers connected with Caesar's household—and the closing grace blessing.
+- **Gate status:** Engine 2.2 source-side brief complete for blind drafting.
+- **Source integrity:** Every Greek verse was matched token-for-token to live-repository SBLGNT blob `45ee05650020ab9a11e9d5316b721e87e7e4cd2c`.
+- **Required protections:** The holy-person language includes every believer rather than a canonized elite; the brothers with Paul may be rendered inclusively; Caesar's household is wider than Caesar's biological family and does not imply that Caesar or the whole establishment believed; singular spirit with plural your addresses the church collectively; no final Amen may be imported into the SBLGNT text.
+- **Meaningful alternatives retained:** Every one of God's holy people versus an accessible believer rendering in verse 21; preserving Caesar's household versus unpacking the imperial-service connection in verse 22; preserving with your spirit versus rendering the communal force as with you all in verse 23.
+- **Required candidate notes:** The holy-person image if dynamically replaced; the cultural range of Caesar's household; and the collective-spirit source form if unpacked.
+- **Blindness:** No prior FLT wording, comparison translation, prior candidate, editor benchmark, or conversation draft is supplied.
+- **Run retrieval:** The workflow records its own run ID and URL in a stable machine-readable receipt.
+- **Next action:** Validate the isolated PR with zero provider calls, merge once, and permit exactly one blind A/B/C drafting run.
