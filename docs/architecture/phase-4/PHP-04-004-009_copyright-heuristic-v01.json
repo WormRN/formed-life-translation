@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "candidate_id": "PHP-04-004-009-HUMAN-SYNTHESIS-V2.2",
+  "candidate_id": "PHP-04-004-009-HUMAN-SYNTHESIS-V2.2-SMOOTHED",
   "passage": "Philippians 4:4-9",
   "draft_commit_or_record": "docs/architecture/phase-4/PHP-04-004-009_human-editor-synthesis-v2.2.json",
   "mode": "PROVISIONAL_HEURISTIC_CHECK",
@@ -8,13 +8,35 @@
   "comparison_passages_supplied": false,
   "heuristic_findings": "watchlist",
   "obvious_distinctive_risks": [
-    {"reference": "Phil.4.6", "wording": "Tell Him what you need, ask for His help, and thank Him.", "reason": "This natural explanatory sequence contains familiar dynamic-English phrasing and should receive exact comparison during the deferred hard audit."},
-    {"reference": "Phil.4.7", "wording": "far beyond anything we can understand", "reason": "This is a familiar dynamic expression of the surpassing-peace clause and should receive exact comparison during the deferred hard audit."}
+    {
+      "reference": "Phil.4.6",
+      "wording": "Tell Him what you need, ask for His help, and thank Him.",
+      "reason": "This natural explanatory sequence contains familiar dynamic-English phrasing and should receive exact comparison during the deferred hard audit."
+    },
+    {
+      "reference": "Phil.4.7",
+      "wording": "far beyond anything we can understand",
+      "reason": "This is a familiar dynamic expression of the surpassing-peace clause and should receive exact comparison during the deferred hard audit."
+    }
   ],
   "independent_path_assessment": "The repository preserves a source-side passage-sense gate, one immutable blind prompt, three independent candidates, and the human editor’s exact synthesis. The watchlist records familiar dynamic phrasing for later exact comparison; it does not establish derivation or require present rewriting.",
-  "recommended_action": "Proceed to listener-only diagnosis and source-aware smoothing with the exact recorded synthesis. Retain DEFERRED_BATCH status and prioritize Philippians 4:6-7 in the formal authorized eight-translation New Testament API batch audit.",
+  "recommended_action": "Seal the exact approved smoothed text and notes with DEFERRED_BATCH status. Prioritize Philippians 4:6-7 in the formal authorized eight-translation New Testament API batch audit.",
   "copyright_protocol_status": "DEFERRED_BATCH",
   "hard_check_required": true,
   "publication_clearance": false,
-  "limitations": "This memory-based screen is deliberately narrow and non-exhaustive. No comparison text was retrieved, reconstructed, quoted, or measured."
+  "limitations": "This memory-based screen is deliberately narrow and non-exhaustive. No comparison text was retrieved, reconstructed, quoted, or measured.",
+  "delta_check": {
+    "performed_on": "2026-08-02",
+    "changed_references": [
+      "Phil.4.7",
+      "Phil.4.8"
+    ],
+    "changed_text": [
+      "Then God’s peace will stand guard over your hearts and thoughts because you belong to Christ Jesus. This peace is far beyond anything we can understand.",
+      "Finally, brothers and sisters, keep your thoughts focused on whatever is true, whatever is honorable, and whatever is right. Also focus on whatever is pure, whatever is lovely, and whatever is admirable—on anything morally excellent or worthy of praise."
+    ],
+    "heuristic_findings": "none_obvious_new_risk",
+    "assessment": "The listener-driven sentence divisions add no obvious highly distinctive multiword resemblance. Verse 7 retains its already recorded watchlist phrase; verse 8 introduces no new watchlist item.",
+    "required_later_action": "Include the exact final wording, with priority review of Philippians 4:6-7, in the formal authorized eight-translation New Testament API batch audit."
+  }
 }
