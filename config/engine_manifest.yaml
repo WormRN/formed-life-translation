@@ -81,11 +81,11 @@ current_checkpoint:
   chapter: 4
   current_unit_id: "PHP-04-021-023"
   current_passage: "Philippians 4:21-23"
-  stage: "human_synthesis_recorded_pending_oral_smoothing"
-  candidate_status: "Human editor exact provisional synthesis recorded from Engine 2.2 blind candidates; three reader notes remain proposed."
+  stage: "oral_smoothing_complete_pending_human_editor_decision"
+  candidate_status: "Three listener-only diagnoses and three source-aware smoothing proposals are recorded; exact post-smoothing human decision and note approval remain pending."
   candidate_sealed: false
   latest_accepted_unit: "Philippians 4:10-20 accepted after Engine 2.2 exact-text and reader-note audit."
-  next_permitted_action: "Validate and merge the isolated human-synthesis PR with zero provider calls; the single main push may launch exactly one listener-only/source-aware smoothing run. Human approval remains required before exact-text audit."
+  next_permitted_action: "Present the completed smoothing evidence and exact editorial recommendation; receive the human editor’s final wording and note approval before sealing. Do not rerun smoothing."
   copyright_status: "DEFERRED_BATCH"
   provisional_heuristic_check: "watchlist_phil_4_23"
   source_gate_status: "passed_for_recorded_blind_draft"
@@ -243,7 +243,14 @@ current_checkpoint:
     successful_first_attempts: 3
     retries: 0
     recorded_token_units: 29355
-    human_selection_status: "exact_provisional_synthesis_recorded_pending_oral_smoothing"
+    human_selection_status: "oral_smoothing_complete_pending_exact_human_decision"
+    oral_smoothing_run_id: 30790727895
+    oral_smoothing_engine_run_id: "FLT-PHP-04-20260803-2"
+    oral_smoothing_artifact_id: 8846946848
+    oral_smoothing_artifact_sha256: "2f7f9a233fa1793538b7c3bd5dcd482fcbecb3edb846c33f434cac11879bc163"
+    oral_smoothing_attempts_total: 6
+    oral_smoothing_retries: 0
+    oral_smoothing_recorded_token_units: 36147
 
   last_valid_common_goal_unit:
     passage: "Philippians 3:1-6"
