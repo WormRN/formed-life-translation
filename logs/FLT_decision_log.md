@@ -660,3 +660,18 @@ Reopen only if the whole-letter review or later contextual evidence exposes a co
 - **Repair:** Remove the denied GitHub API lookup and retain the repository's machine-readable draft receipt as the stable locator. The receipt records the run URL, Engine ID, prompt and gate verification, candidate count, and outcome.
 - **Quality boundary:** No source packet, provider, prompt, model, gate, or translation standard changed.
 - **Authorized next action:** Validate the repair with zero provider calls, then merge once so the workflow performs the originally authorized three blind drafts.
+
+
+---
+
+## 2026-08-02 — Philippians 4:10–20 blind candidates completed
+
+- **Unit:** `PHP-04-010-020`
+- **Engine run:** GitHub Actions run 30779827098; Engine ID `FLT-PHP-04-20260803-4`.
+- **Integrity:** One immutable common prompt verified; Engine 2.2 passage-sense gate passed; exactly three candidates produced.
+- **Blindness:** Prior FLT wording, prior candidates, editor benchmark, comparison translations, and conversation drafts were absent.
+- **Candidate mapping:** A — Claude Sonnet; B — GPT-5.6 Sol; C — Gemini Pro.
+- **Attempt accounting:** Four attempts produced three accepted candidates. GPT-5.6 Sol and Gemini Pro succeeded on their first attempts. Claude's first response required schema or integrity repair; its second attempt succeeded. Successful sibling results were checkpointed and were not rerun.
+- **Recorded token scale:** 53,635 provider-reported token units across accepted attempts; 78,363 across all four attempts. Provider tokenizers differ, so these figures are stewardship scale indicators rather than directly interchangeable billing units.
+- **Artifact:** ID 8843291465; SHA-256 `3bddd475b0ca4965d87a0774f6103ad0f15c843e4958cf29dbaf6e8eebf44488`.
+- **Next action:** Present untouched A/B/C candidates under each verse, followed by an editorial synthesis and proposed transparency notes. Copyright heuristic screening begins only after the human editor records an independent provisional synthesis.
