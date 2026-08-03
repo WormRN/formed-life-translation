@@ -22,5 +22,23 @@
     "editor_benchmark_absent": true,
     "comparison_translations_absent": true,
     "conversation_drafts_absent": true
+  },
+  "artifact_id": 8843291465,
+  "artifact_sha256": "3bddd475b0ca4965d87a0774f6103ad0f15c843e4958cf29dbaf6e8eebf44488",
+  "attempt_accounting": {
+    "attempts_total": 4,
+    "accepted_attempts": 3,
+    "rejected_attempts": 1,
+    "rejected_worker": "anthropic/claude-sonnet-5",
+    "rejected_reason": "schema_or_integrity_repair_required",
+    "successful_siblings_rerun": false,
+    "all_attempt_usage_recorded": true,
+    "provider_reported_successful_token_scale": 53635,
+    "provider_reported_all_attempt_token_scale": 78363
+  },
+  "preceding_zero_call_failure": {
+    "github_run_id": 30779654846,
+    "reason": "experimental PR-comment locator denied by GitHub integration before Engine setup",
+    "provider_calls": 0
   }
 }
