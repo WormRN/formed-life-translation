@@ -715,3 +715,15 @@ Reopen only if the whole-letter review or later contextual evidence exposes a co
 - **Copyright delta:** `none_obvious_new_risk`; verses 12, 13, and 17 remain on the deferred exact-comparison watchlist; `publication_clearance: false`.
 - **Exact authority:** The reading text and notes are cryptographically sealed. Any substitution must fail before an audit provider call.
 - **Next gate:** Audit the exact eleven-verse text and six approved notes together. No silent repair is authorized.
+
+
+---
+
+## 2026-08-02 — Philippians 4:10–20 exact-text audit passed
+
+- **Sealed candidate:** `PHP-04-010-020-HUMAN-SYNTHESIS-V2.2-SMOOTHED`; reading, six notes, and combined material matched the human-approved cryptographic seal.
+- **Run:** GitHub Actions 30786077724; Engine ID `FLT-PHP-04-20260803-5`; artifact 8845319224, SHA-256 `8e7bbfc79d434730d8b846c81df84bcf416d8aab902f9ce41e00bd2e8b2714e3`.
+- **Result:** Three of three auditors eligible; zero verse, note, or constitutional-check blocks; every reader note passed.
+- **Warnings retained:** Two auditors noted that “reward” may imply earned recompense more strongly than the source explicitly does. The human editor’s verse 17 override is retained with its approved fruit-and-account note and material-return disclaimer. Two auditors also noted that verse 19 makes “in Christ Jesus” explicitly causal; the approved note transparently discloses the literal form.
+- **Attempt accounting:** Seven recorded attempts: six accepted first attempts plus one malformed Gemini reconstruction response followed by one successful retry. Successful siblings were checkpointed and not rerun. Recorded provider token scale: 79,488.
+- **Status:** Accepted pending whole-chapter review. No rerun or repair is required.

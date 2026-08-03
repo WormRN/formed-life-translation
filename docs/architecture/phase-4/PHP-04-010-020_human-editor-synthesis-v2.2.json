@@ -2,7 +2,7 @@
   "schema_version": 1,
   "candidate_id": "PHP-04-010-020-HUMAN-SYNTHESIS-V2.2-SMOOTHED",
   "passage": "Philippians 4:10-20",
-  "status": "human_approved_smoothed_candidate_pending_constitutional_audit",
+  "status": "accepted_unit_pending_whole_chapter_review",
   "human_editor_selection": {
     "date": "2026-08-02",
     "exact_wording_preserved": false,
@@ -115,5 +115,20 @@
     "hard_check_required": true,
     "publication_clearance": false,
     "delta_check": "none_obvious_new_risk"
+  },
+  "audit": {
+    "date": "2026-08-02",
+    "github_run": 30786077724,
+    "engine_run_id": "FLT-PHP-04-20260803-5",
+    "artifact_id": 8845319224,
+    "artifact_sha256": "8e7bbfc79d434730d8b846c81df84bcf416d8aab902f9ce41e00bd2e8b2714e3",
+    "result": "three_of_three_eligible_zero_blocks",
+    "reader_notes_audited_with_text": true,
+    "attempts_total": 7,
+    "retries": 1,
+    "documented_warnings": [
+      "Two auditors warned that “growing spiritual reward” may suggest earned recompense more strongly than the Greek fruit-and-account image; retained as the human editor’s deliberate theological accounting-metaphor choice, with the approved note excluding a guaranteed material return.",
+      "Two auditors warned that “because you belong to Christ Jesus” makes the compact “in Christ Jesus” relationship explicitly causal; retained as a defensible dynamic rendering with the approved note disclosing the literal form."
+    ]
   }
 }
