@@ -757,3 +757,16 @@ Reopen only if the whole-letter review or later contextual evidence exposes a co
 - **Editorial convergence:** All three preserve the reciprocal greeting sequence, inclusive brothers-and-sisters language, the wider imperial-household sense, and an active closing grace blessing.
 - **Open human decisions:** Whether verse 21 should retain God's-people language or use believer; whether verse 22 should preserve Caesar's household or unpack the imperial connection; whether verse 23 should preserve with your spirit or render the communal force as with you all.
 - **Status:** Blind drafting complete. The exact A/B/C candidates and proposed notes await human editor selection or synthesis. The completed drafting trigger is manual-only.
+
+
+---
+
+## 2026-08-03 — Philippians 4:21–23 human synthesis selected
+
+- **Unit:** `PHP-04-021-023`
+- **Decision:** Preserve the human editor’s exact provisional wording for all three verses.
+- **Notable editorial choices:** Verses 21–22 retain the established FLT language “God’s holy people,” “united with Christ Jesus,” and the broad “connected with Caesar’s household.” Verse 23 deliberately preserves the collective human-spirit expression as “dwell with the spirit of you all,” adding an abiding nuance that the next oral-smoothing stage must test without silently changing it.
+- **Transparency notes:** Three notes are recorded as proposed: every holy person and the traditional term saints (4:21); the broader imperial-service meaning of Caesar’s household (4:22); and the collective human-spirit sense, not the Holy Spirit (4:23).
+- **Draft evidence:** Engine 2.2 run 30788140805 produced three blind candidates under one common prompt after a passed passage-sense gate.
+- **Provisional copyright heuristic:** `watchlist` for Philippians 4:23 because “dwell with the spirit of you all” is a distinctive interpretive combination requiring exact later comparison. No comparison translation was consulted.
+- **Next action:** Run the listener-only diagnoses and source-aware smoothing proposals. The human editor must approve any change before sealing and constitutional audit.
