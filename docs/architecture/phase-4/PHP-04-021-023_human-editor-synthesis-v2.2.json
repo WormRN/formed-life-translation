@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "candidate_id": "PHP-04-021-023-HUMAN-SYNTHESIS-V2.2",
+  "candidate_id": "PHP-04-021-023-HUMAN-SYNTHESIS-V2.2-SMOOTHED",
   "passage": "Philippians 4:21-23",
-  "status": "provisional_human_synthesis_pending_oral_smoothing",
+  "status": "human_approved_smoothed_candidate_pending_constitutional_audit",
   "human_editor_selection": {
     "date": "2026-08-03",
     "exact_wording_preserved": true,
     "blind_draft_run": 30788140805,
     "engine_run_id": "FLT-PHP-04-20260803-2",
     "candidate_evidence_count": 3,
-    "oral_smoothing_run": null,
-    "oral_review_decision": "pending"
+    "oral_smoothing_run": 30790727895,
+    "oral_review_decision": "Retain verses 21-22 exactly; override the smoothing recommendation for verse 23 and retain the exact human synthesis because “dwell” is the Human Editor’s approved dynamic unpacking of the strong associative presence conveyed by meta; approve all three reader notes."
   },
   "verse_renderings": [
     {
@@ -31,34 +31,34 @@
       "note_id": "Phil.4.21-all-holy-people",
       "reference": "Phil.4.21",
       "anchor": "all of God’s holy people",
-      "status": "proposed",
+      "status": "approved",
       "text": "The Greek says “every holy person.” It refers to every believer as someone set apart for God—not to an elite group of unusually virtuous Christians. This term is traditionally translated “saints.”"
     },
     {
       "note_id": "Phil.4.22-caesars-household",
       "reference": "Phil.4.22",
       "anchor": "Caesar’s household",
-      "status": "proposed",
+      "status": "approved",
       "text": "Caesar was the Roman emperor. His household could include slaves, freed persons, workers, and officials connected with imperial service—not only his biological family. Paul is referring to believers within that group, not saying that Caesar himself was a believer."
     },
     {
       "note_id": "Phil.4.23-spirit-of-you-all",
       "reference": "Phil.4.23",
-      "anchor": "the spirit of you all",
-      "status": "proposed",
+      "anchor": "dwell with the spirit of you all",
+      "status": "approved",
       "text": "The Greek uses singular “spirit” with plural “your,” blessing the church collectively. It refers to their shared inward or spiritual life, not to the Holy Spirit."
     }
   ],
   "copyright_protocol": {
     "mode": "PROVISIONAL_HEURISTIC_CHECK",
     "status": "DEFERRED_BATCH",
-    "provisional_heuristic_check": "complete",
+    "provisional_heuristic_check": "complete_with_delta",
     "heuristic_findings": "watchlist",
     "watchlist_references": [
       "Phil.4.23"
     ],
     "hard_check_required": true,
     "publication_clearance": false,
-    "delta_check": "not_yet_applicable"
+    "delta_check": "human_editor_override_retained_on_existing_watchlist"
   }
 }
