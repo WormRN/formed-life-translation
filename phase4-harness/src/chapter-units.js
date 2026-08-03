@@ -2,7 +2,8 @@
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import Ajv2020 from 'ajv/dist/2020.js';
-import {json,emit,event,requestModel,sha256} from './core.js';
+import {json,emit,sha256} from './core.js';
+import {executeJsonWorker,attemptAccountingNotice} from './run-integrity.js';
 import {assertPassageSenseResolution,unitSenseMaterial,assertCandidateSenseApparatus,assertCommonBasePromptHash,parseModelJson} from './sense-resolution-core.js';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
@@ -11,7 +12,29 @@ const config=await json(configPath),chapter=await json(sourcePath);
 const passageSenseBrief=assertPassageSenseResolution(chapter);
 const validate=new Ajv2020({allErrors:true}).compile(await json(path.join(root,'schemas/chapter-unit-candidate.schema.json')));
 const commonMission='Produce one independent FLT candidate under the same constitutional goal as every other candidate: communicate the full meaning, logic, tone, discourse movement, and theological force of the Greek in clear, natural, dignified English that a religion-naive adult can follow on one hearing. Build natural English sentences and paragraphs rather than preserving Greek clause architecture. Dynamic expression is the default; preserve material meaning and avoid unsupported commentary.';
-async function call(worker,unit,prompt){const base_prompt_sha256=sha256(prompt);let repair='';for(let attempt=1;attempt<=3;attempt++){const full=`Return complete JSON only. ${repair}\n${prompt}`,started=new Date(),controller=new AbortController(),timer=setTimeout(()=>controller.abort(),config.timeout_ms||180000);try{const r=await requestModel(worker,full,controller.signal);await emit(runDir,`failures/raw/${unit.unit_id}/${worker.role}/attempt-${attempt}.txt`,r.text);const output=parseModelJson(r.text);if(!validate(output)){repair=`Repair schema errors: ${JSON.stringify(validate.errors)}. Be concise.`;throw new Error(repair)}const refs=output.verse_renderings.map(v=>v.reference),expected=unit.verses.map(v=>v.reference);if(JSON.stringify(refs)!==JSON.stringify(expected)){repair=`Return exactly these verse references in order: ${expected.join(', ')}.`;throw new Error(repair)}assertCandidateSenseApparatus(output,unit,passageSenseBrief);const record={run_id:config.run_id,chapter_id:chapter.chapter_id,unit_id:unit.unit_id,stage:'blind_reader_first_unit_draft',role:worker.role,attempt,base_prompt_sha256,input_sha256:sha256(full),output,provider_provenance:{provider:worker.provider,model:worker.model,request_id:r.id,started_at:started.toISOString(),finished_at:new Date().toISOString(),usage:r.usage}};await event(runDir,{type:'unit_draft_complete',unit_id:unit.unit_id,role:worker.role,attempt});return record}catch(e){if(!repair)repair=`Previous response was incomplete or malformed: ${String(e)}. Close the JSON and be concise.`;await event(runDir,{type:'unit_draft_failure',unit_id:unit.unit_id,role:worker.role,attempt,error:String(e)});if(attempt===3)throw e}finally{clearTimeout(timer)}}}
+async function call(worker,unit,prompt){
+  return executeJsonWorker({
+    config,
+    runDir,
+    worker,
+    stage:'blind_reader_first_unit_draft',
+    prompt,
+    parse:parseModelJson,
+    validate,
+    assert:output=>{
+      const refs=output.verse_renderings.map(v=>v.reference);
+      const expected=unit.verses.map(v=>v.reference);
+      if(JSON.stringify(refs)!==JSON.stringify(expected))throw new Error(`Return exactly these verse references in order: ${expected.join(', ')}.`);
+      assertCandidateSenseApparatus(output,unit,passageSenseBrief);
+    },
+    recordContext:{
+      chapter_id:chapter.chapter_id,
+      unit_id:unit.unit_id,
+      base_prompt_sha256:sha256(prompt)
+    },
+    rawPrefix:`failures/raw/${unit.unit_id}/${worker.role}`
+  });
+}
 
 const provenance=[];
 for(const unit of chapter.units){
@@ -24,5 +47,5 @@ for(const unit of chapter.units){
   for(const [i,x] of results.entries())md+=`## Candidate ${String.fromCharCode(65+i)}\n\n${x.output.verse_renderings.map(v=>`**${v.reference.replace(/^Phil\.\d+\./,'')}** ${v.text}`).join('\n\n')}\n\n`;
   await emit(runDir,`outputs/briefs/${unit.unit_id}.md`,md);
 }
-await emit(runDir,'manifest/chapter-drafting-provenance.json',{run_id:config.run_id,chapter_id:chapter.chapter_id,sealed_unit:chapter.sealed_unit,common_prompt_sha256:assertCommonBasePromptHash(provenance),common_prompt_verified:new Set(provenance.map(x=>x.base_prompt_sha256)).size===1,passage_sense_gate:{version:'2.2',status:'passed',brief_status:passageSenseBrief.status,editor_benchmark_absent:true},provider_calls:provenance.map(x=>x.provider_provenance),visibility:'Each worker saw one Greek unit, project rules, and scoped decisions. Any sealed human wording, benchmarks, and comparison translations were absent.',status:'engine_2_2_passage_sense_drafts_ready_for_human_editing'});
+await emit(runDir,'manifest/chapter-drafting-provenance.json',{run_id:config.run_id,chapter_id:chapter.chapter_id,sealed_unit:chapter.sealed_unit,common_prompt_sha256:assertCommonBasePromptHash(provenance),common_prompt_verified:new Set(provenance.map(x=>x.base_prompt_sha256)).size===1,passage_sense_gate:{version:'2.2',status:'passed',brief_status:passageSenseBrief.status,editor_benchmark_absent:true},provider_calls:provenance.map(x=>x.provider_provenance),attempt_accounting:attemptAccountingNotice,validated_worker_checkpoints:'checkpoints/blind_reader_first_unit_draft/',visibility:'Each worker saw one Greek unit, project rules, and scoped decisions. Any sealed human wording, benchmarks, and comparison translations were absent.',status:'engine_2_2_passage_sense_drafts_ready_for_human_editing'});
 console.log('Blind unit drafting complete');
