@@ -6,10 +6,12 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/record-php-whole-letter-review-run.yml'
+      - '.github/workflows/phase4-php-whole-letter-review.yml'
   push:
     branches: [main]
     paths:
       - '.github/workflows/record-php-whole-letter-review-run.yml'
+      - '.github/workflows/phase4-php-whole-letter-review.yml'
 
 permissions:
   actions: read

@@ -57,7 +57,7 @@ jobs:
         id: run
         shell: bash
         run: |
-          run_id="FLT-PHP-WHOLE-LETTER-$(date -u +%Y%m%d)-${GITHUB_RUN_NUMBER}"
+          run_id="FLT-PHP-00-$(date -u +%Y%m%d)-${GITHUB_RUN_NUMBER}"
           node phase4-harness/scripts/prepare-run-config.mjs phase4-harness/config.github-actions.json phase4-harness/.php-whole-letter-review-config.json "$run_id"
           jq '.unit_id="PHP-01-001-THROUGH-04-023-WHOLE-LETTER-REVIEW" | .source_packet=".php-whole-letter-review-source.json" | .timeout_ms=300000' phase4-harness/.php-whole-letter-review-config.json > phase4-harness/.php-whole-letter-review-config.tmp
           mv phase4-harness/.php-whole-letter-review-config.tmp phase4-harness/.php-whole-letter-review-config.json
