@@ -1,0 +1,332 @@
+{
+  "chapter_id": "PHP-04",
+  "book": "Philippians",
+  "chapter": 4,
+  "source_edition": "SBLGNT",
+  "tone": "warmly grateful yet pastorally careful, moving from renewed gift partnership through learned contentment and shared hardship to worship, divine provision, and praise",
+  "target_reader": "religion-naive adults and older adolescents near grade 6",
+  "translation_identity": "firmly dynamic-equivalence, NLT-like in readability but independent",
+  "test_purpose": "Fresh Engine 2.2 passage-sense-resolution drafting of Philippians 4:10-20",
+  "sealed_context": {
+    "prior_flt_wording_present": false,
+    "prior_candidates_present": false,
+    "comparison_translations_present": false,
+    "conversational_drafts_present": false,
+    "instruction": "Translate from the Greek and the completed source-side passage-sense brief only. Do not reconstruct, imitate, or refer to previous FLT wording, previous candidates, comparison translations, or conversation drafts.",
+    "editor_benchmark_present": false
+  },
+  "governing_rules": [
+    "Passage-sense resolution precedes English composition. Follow the completed source-side brief and expose genuinely viable alternatives in the review apparatus.",
+    "All three candidates pursue the same constitutional goal; no provider receives a readability, fidelity, or blended specialty.",
+    "Write natural English that a religion-naive adult can follow on one hearing. The main assertion should arrive before the listener loses it.",
+    "Build English sentences and paragraphs rather than preserving Greek clause architecture. Split, combine, reorder, or unpack when comprehension benefits.",
+    "Actively avoid stacked clauses, overloaded breaths, preposition clusters, delayed subjects or main verbs, abstract-noun chains, embedded explanation, and translated-sounding prose.",
+    "Vary English transitions when needed for the ear, but preserve deliberate repetition, escalation, metaphor, emphasis, and connective logic.",
+    "Preserve every material proposition; cause, contrast, purpose, result, and sequence; meaningful ambiguity; agency, force, certainty, and key-term links.",
+    "The prose serves the reader; notes serve accountability. Do not leave the reading text opaque and expect a footnote to supply material meaning.",
+    "Keep candidate alternatives in the review apparatus, not in brackets in the reading text, unless the human editor later decides otherwise.",
+    "Propose notes for literal-source transparency, meaningful word-family links, metaphors hidden by dynamic rendering, and disputed constructions.",
+    "Footnotes disclose translation decisions and establish critical trust; they are not apologies for, or repairs to, an inadequate reading text.",
+    "No comparison translations, traditional benchmark wording, prior FLT wording, prior candidates, editor benchmark, conversation drafts, or sealed human wording may enter blind drafting.",
+    "Record oral-design moves and remaining oral risks; do not claim that a drafting worker has certified its own oral quality."
+  ],
+  "existing_decisions": [
+    "Capitalize pronouns referring to deity.",
+    "Render theological vocabulary contextually in reader-facing English; do not preserve opaque church terms merely because they are traditional.",
+    "Render euangelion as good news in Philippians when it denotes the message or work centered on Jesus.",
+    "Use natural contextual language for phroneo while preserving recurring mindset, concern, and outlook links across Philippians.",
+    "Preserve the shared-partnership force of koinonia word-group language across Philippians without forcing one English gloss in every context.",
+    "Footnotes may disclose disputed constructions, traditional glosses, cultural force, literal wording, and source-language links, but may not compensate for material meaning missing from the reading text.",
+    "Preserve contextual links across accepted units without importing or reopening their accepted English wording during blind drafting.",
+    "The human editor alone selects, synthesizes, approves smoothing changes, and finalizes wording."
+  ],
+  "matrix_alerts": [
+    {
+      "lemma": "χαίρω / ἐν κυρίῳ / φρονέω / ἀναθάλλω",
+      "status": "book-level joy, belonging, concern, and renewed-growth alert",
+      "neutral_range": "rejoice or be deeply glad; in the Lord; think, care, be concerned; bloom or flourish again",
+      "instruction": "Preserve Paul's great joy in the Lord and the Philippians' renewed practical concern. Do not imply that their concern itself had died or blame them for a delay when Paul immediately says they lacked opportunity."
+    },
+    {
+      "lemma": "αὐτάρκης / μυέομαι / ταπεινόω / περισσεύω / ὑστερέω",
+      "status": "passage-specific learned-contentment alert",
+      "neutral_range": "content or sufficient in one's circumstances; learn the secret through initiation; be brought low or live with little; have abundance; be in need or lack",
+      "instruction": "Present contentment as learned across changing circumstances, not as native self-sufficiency, emotional numbness, or denial of real hunger and need. Preserve the paired contrasts and the secret-learned movement."
+    },
+    {
+      "lemma": "πάντα ἰσχύω / ἐνδυναμόω",
+      "status": "passage-specific scope and strengthening alert",
+      "neutral_range": "have strength for all these things or circumstances; through or in the one who strengthens me",
+      "instruction": "Bind 'all things' to the full-and-hungry, plenty-and-need circumstances of verses 11-12. Do not turn the statement into unlimited achievement. The SBLGNT wording names 'the one who strengthens me' without an explicit Christ noun in this verse; preserve the personal divine source without silently claiming a different base text."
+    },
+    {
+      "lemma": "συγκοινωνέω / κοινωνέω / λόγος δόσεως καὶ λήμψεως",
+      "status": "book-level partnership and passage-specific accounting alert",
+      "neutral_range": "share together, become a partner; share in giving and receiving; account or matter of credit and debit",
+      "instruction": "Preserve the Philippians' active partnership in Paul's hardship and mission, including the reciprocal giving-and-receiving language. Make the financial support clear without reducing their relationship to a transaction."
+    },
+    {
+      "lemma": "καρπός / πλεονάζω / εἰς λόγον ὑμῶν",
+      "status": "passage-specific fruit and account metaphor alert",
+      "neutral_range": "fruit, result, benefit, or return increasing to your account",
+      "instruction": "Preserve both the moral-spiritual fruit and the accounting link with verse 15. Do not imply that gifts purchase salvation, guarantee material wealth, or earn a mechanical divine return."
+    },
+    {
+      "lemma": "ἀπέχω / πληρόω / ὀσμὴ εὐωδίας / θυσία δεκτή",
+      "status": "passage-specific receipt, abundance, and worship-offering alert",
+      "neutral_range": "receive in full or have all that is due; be filled; fragrant aroma; acceptable sacrifice pleasing to God",
+      "instruction": "Communicate that Paul has received their gift in full and now has abundance. Preserve the living sacrificial-worship image for the gift delivered by Epaphroditus rather than reducing it to a compliment."
+    },
+    {
+      "lemma": "πληρόω πᾶσαν χρείαν / πλοῦτος / δόξα / ἐν Χριστῷ Ἰησοῦ",
+      "status": "passage-specific divine-provision and glory alert",
+      "neutral_range": "fill or supply every need; riches or abundant resources; glory, splendor, honor; in Christ Jesus",
+      "instruction": "Preserve the deliberate answer between the Philippians meeting Paul's need and God meeting theirs. Promise provision for needs, not every desire; retain God's abundant measure and the Christ-centered location without converting the verse into a prosperity guarantee."
+    },
+    {
+      "lemma": "δόξα / εἰς τοὺς αἰῶνας τῶν αἰώνων / ἀμήν",
+      "status": "doxology and eternity alert",
+      "neutral_range": "glory, honor, praise, radiant greatness; forever and ever; amen, truly, let it be so",
+      "instruction": "End the unit as worship directed to our God and Father. Use intelligible adult English while preserving the doxological force, endless duration, and confirming Amen."
+    }
+  ],
+  "units": [
+    {
+      "unit_id": "PHP-04-010-020",
+      "passage": "Philippians 4:10-20",
+      "title": "Gift partnership, learned contentment, God's provision, and praise",
+      "known_issues": [
+        "Verse 10 renews the letter's joy-in-the-Lord theme and uses a plant-growth image for the Philippians' renewed concern. Paul's closing correction explicitly says they had remained concerned but lacked opportunity; do not make the opening sound like resentment or rebuke.",
+        "The repeated phroneo language concerns their practical care for Paul while retaining the letter's wider mindset and shared-outlook resonance.",
+        "Verses 11-12 deny that Paul's gratitude is a disguised plea of desperation, not that he ever experienced real need. His contentment was learned through lack and abundance rather than produced by favorable circumstances.",
+        "Autarkes can sound like Stoic self-sufficiency in English. The paragraph itself locates Paul's ability in the one strengthening him, so do not present independence from God or community as the lesson.",
+        "Verse 12 uses balanced contrasts: brought low and having abundance, well fed and hungry, abundance and need. Preserve the cumulative rhythm without forcing one overloaded English sentence.",
+        "The initiation-language verb in verse 12 supports 'learned the secret' or comparable language. Do not imply esoteric religious knowledge.",
+        "Verse 13's 'all things' is governed by verses 11-12: Paul has strength for every circumstance just named. It does not promise unlimited success, achievement, wealth, or physical ability.",
+        "The SBLGNT says 'through/in the one who strengthens me' in verse 13 and does not include an explicit noun meaning Christ there. Context supports a personal divine giver of strength; a note should disclose the exact source form if the reading text names Christ.",
+        "Verse 14 begins with a concessive correction: Paul's contentment does not make their gift irrelevant. They did well by sharing his hardship.",
+        "The koinonia word group connects their shared hardship and financial partnership with the letter's broader shared work in the good news.",
+        "Verses 15-17 use commercial account language—giving and receiving, fruit or profit increasing to their account—inside a warm partnership relationship. Preserve the linked imagery without making Paul sound coldly transactional.",
+        "At the beginning of the good news refers to the early period of Paul's good-news mission among them, clarified by the time when he left Macedonia. Do not treat 'the gospel' as an unexplained institutional label.",
+        "Once and twice in verse 16 idiomatically means more than once or repeatedly; do not insist on exactly two occasions unless the wording remains natural and warranted.",
+        "Verse 17 contrasts seeking the gift with seeking the fruit that increases to their account. Do not make generosity a way to purchase salvation or guarantee material return.",
+        "Verse 18 includes receipt-like language for receiving in full, then intensifies Paul's abundance. Keep the gift's delivery through Epaphroditus clear.",
+        "The fragrant aroma and acceptable sacrifice in verse 18 are worship images applied to the Philippians' gift. Keep God as the one pleased by the offering; do not imply that Paul is the object of worship.",
+        "Verse 19 answers the Philippians' provision for Paul with God's provision for them. Every need must not become every desire, and God's riches must not become a fixed promise of material prosperity.",
+        "The relationship among according to His riches, in glory, and in Christ Jesus permits more than one natural English arrangement. Preserve God's abundant measure, glory, and the believers' relationship to Christ without overstating one syntactic attachment.",
+        "Verse 20 is a doxology. Glory may require natural unpacking for a religion-naive reader, but the link with glory in verse 19 and the worshipful close must remain audible.",
+        "Amen confirms the praise. It may be retained and taught, or rendered by its affirming force, but it must not disappear without functional replacement."
+      ],
+      "verses": [
+        {"reference": "Phil.4.10", "greek": "Ἐχάρην δὲ ἐν κυρίῳ μεγάλως ὅτι ἤδη ποτὲ ἀνεθάλετε τὸ ὑπὲρ ἐμοῦ φρονεῖν ἐφ’ ᾧ καὶ ἐφρονεῖτε ἠκαιρεῖσθε δέ"},
+        {"reference": "Phil.4.11", "greek": "οὐχ ὅτι καθ’ ὑστέρησιν λέγω ἐγὼ γὰρ ἔμαθον ἐν οἷς εἰμι αὐτάρκης εἶναι"},
+        {"reference": "Phil.4.12", "greek": "οἶδα καὶ ταπεινοῦσθαι οἶδα καὶ περισσεύειν ἐν παντὶ καὶ ἐν πᾶσιν μεμύημαι καὶ χορτάζεσθαι καὶ πεινᾶν καὶ περισσεύειν καὶ ὑστερεῖσθαι"},
+        {"reference": "Phil.4.13", "greek": "πάντα ἰσχύω ἐν τῷ ἐνδυναμοῦντί με"},
+        {"reference": "Phil.4.14", "greek": "πλὴν καλῶς ἐποιήσατε συγκοινωνήσαντές μου τῇ θλίψει"},
+        {"reference": "Phil.4.15", "greek": "Οἴδατε δὲ καὶ ὑμεῖς Φιλιππήσιοι ὅτι ἐν ἀρχῇ τοῦ εὐαγγελίου ὅτε ἐξῆλθον ἀπὸ Μακεδονίας οὐδεμία μοι ἐκκλησία ἐκοινώνησεν εἰς λόγον δόσεως καὶ λήμψεως εἰ μὴ ὑμεῖς μόνοι"},
+        {"reference": "Phil.4.16", "greek": "ὅτι καὶ ἐν Θεσσαλονίκῃ καὶ ἅπαξ καὶ δὶς εἰς τὴν χρείαν μοι ἐπέμψατε"},
+        {"reference": "Phil.4.17", "greek": "οὐχ ὅτι ἐπιζητῶ τὸ δόμα ἀλλὰ ἐπιζητῶ τὸν καρπὸν τὸν πλεονάζοντα εἰς λόγον ὑμῶν"},
+        {"reference": "Phil.4.18", "greek": "ἀπέχω δὲ πάντα καὶ περισσεύω πεπλήρωμαι δεξάμενος παρὰ Ἐπαφροδίτου τὰ παρ’ ὑμῶν ὀσμὴν εὐωδίας θυσίαν δεκτήν εὐάρεστον τῷ θεῷ"},
+        {"reference": "Phil.4.19", "greek": "ὁ δὲ θεός μου πληρώσει πᾶσαν χρείαν ὑμῶν κατὰ τὸ πλοῦτος αὐτοῦ ἐν δόξῃ ἐν Χριστῷ Ἰησοῦ"},
+        {"reference": "Phil.4.20", "greek": "τῷ δὲ θεῷ καὶ πατρὶ ἡμῶν ἡ δόξα εἰς τοὺς αἰῶνας τῶν αἰώνων ἀμήν"}
+      ]
+    }
+  ],
+  "passage_sense_resolution": {
+    "gate_version": "2.2",
+    "status": "complete_for_blind_drafting",
+    "prepared_from": "Exact live-repository SBLGNT parsed-source blob 45ee05650020ab9a11e9d5316b721e87e7e4cd2c, local and book-level discourse, source-language analysis, and governing FLT rules; no comparison translation or prior FLT English",
+    "visibility_attestation": {
+      "source_side_only": true,
+      "prior_flt_wording_absent": true,
+      "prior_candidates_absent": true,
+      "editor_benchmark_absent": true,
+      "comparison_translations_absent": true
+    },
+    "passage_argument": [
+      "Paul rejoices that the Philippians have renewed their practical concern for him, then carefully explains that his gratitude is not a plea born of desperation: he has learned contentment through both lack and abundance because another gives him strength.",
+      "He immediately prevents that contentment from devaluing their gift. They did well by sharing his hardship, continuing a financial and missionary partnership they alone had sustained from the early days of the good news.",
+      "Paul values not merely the gift but the growing fruit credited to them. He receives their support as both full provision for himself and a fragrant offering pleasing to God, then promises that God will meet their needs from His abundance in Christ and closes in worship."
+    ],
+    "proposition_map": [
+      {"references": ["Phil.4.10"], "statement": "Paul greatly rejoices in the Lord that the Philippians' practical concern for him has flourished again, while affirming that they had remained concerned but lacked opportunity."},
+      {"references": ["Phil.4.11"], "statement": "Paul is not expressing gratitude merely because he is in need, for he has learned to be content in whatever circumstances he faces."},
+      {"references": ["Phil.4.12"], "statement": "Paul knows how to live both in low circumstances and in abundance, and he has learned the secret of being full or hungry and having plenty or being in need."},
+      {"references": ["Phil.4.13"], "statement": "Paul has strength for all these circumstances through the one who gives him strength."},
+      {"references": ["Phil.4.14"], "statement": "Nevertheless, the Philippians did well by sharing in Paul's hardship."},
+      {"references": ["Phil.4.15"], "statement": "The Philippians know that when Paul left Macedonia in the early days of the good news, no other church partnered with him in giving and receiving."},
+      {"references": ["Phil.4.16"], "statement": "Even while Paul was in Thessalonica, the Philippians sent help for his need more than once."},
+      {"references": ["Phil.4.17"], "statement": "Paul does not chiefly seek the gift itself but the growing fruit or benefit credited to the Philippians' account."},
+      {"references": ["Phil.4.18"], "statement": "Paul has received their gift through Epaphroditus in full and now has abundance; their gift is a fragrant, acceptable sacrifice pleasing to God."},
+      {"references": ["Phil.4.19"], "statement": "Paul's God will meet every need of the Philippians according to His riches in glory within their relationship to Christ Jesus."},
+      {"references": ["Phil.4.20"], "statement": "Paul directs glory to the believers' God and Father forever and confirms the praise with Amen."}
+    ],
+    "expressions": [
+      {
+        "sense_id": "php4_10_renewed_concern_without_rebuke",
+        "references": ["Phil.4.10"],
+        "source_expression": "Ἐχάρην ... ἐν κυρίῳ μεγάλως ... ἀνεθάλετε τὸ ὑπὲρ ἐμοῦ φρονεῖν ... ἐφρονεῖτε, ἠκαιρεῖσθε δέ",
+        "status": "alternatives_retained",
+        "contextual_function": "Paul opens his explicit thanks with great joy in the Lord, using renewed growth for their revived opportunity to express care, then removes any suggestion that they had stopped caring.",
+        "primary_sense": "Paul is deeply glad in the Lord that the Philippians can once again show their concern for him; they had remained concerned but lacked the opportunity to act.",
+        "viable_alternatives": [
+          "Retain the blooming-again image for their concern, with the immediate qualification that opportunity rather than concern had been absent.",
+          "Render the image by its contextual meaning: their practical support or opportunity to show concern has been renewed."
+        ],
+        "discourse_evidence": "Anethalete evokes renewed growth, but the repeated phroneo and closing ekaireisthe de explicitly affirm continuing concern and identify lack of opportunity as the obstacle; the gift context makes concern practical.",
+        "reading_text_guidance": "Let gratitude, not delayed resentment, control the opening. Make the lack-of-opportunity correction easy to hear, and preserve the in-the-Lord ground of Paul's joy.",
+        "literal_note_guidance": "If the plant image is rendered only by meaning, a note may say that the Greek pictures their concern blooming again while immediately affirming that they had continued to care.",
+        "choice_risks": "At last can sound accusatory; revived your concern can imply the concern had died; renewed your support may reduce concern to money; preserving bloom without help may distract the target reader.",
+        "human_decision_required": true,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "php4_11_12_learned_contentment_in_all_circumstances",
+        "references": ["Phil.4.11", "Phil.4.12"],
+        "source_expression": "οὐχ ὅτι καθ’ ὑστέρησιν λέγω ... ἔμαθον ... αὐτάρκης εἶναι ... ἐν παντὶ καὶ ἐν πᾶσιν μεμύημαι",
+        "status": "resolved",
+        "contextual_function": "Paul distinguishes gratitude from need-driven solicitation and describes contentment as a learned capacity across every kind of material circumstance.",
+        "primary_sense": "Paul is not saying this simply because he lacks something; he has learned to be content and has learned the secret of living through both deprivation and abundance.",
+        "viable_alternatives": [],
+        "discourse_evidence": "Ouch hoti rejects a possible inference from verse 10; gar explains it; emathon and memyemai emphasize learning; the three balanced pairs define the scope of contentment concretely.",
+        "reading_text_guidance": "Use natural adult language for contentment and the learned secret. Preserve real need, all three contrasts, and Paul's steady capacity without presenting self-sufficiency or emotional indifference.",
+        "literal_note_guidance": "No note is normally required if the reading text preserves learned contentment, the secret-learned force, and the full set of material contrasts.",
+        "choice_risks": "I need nothing can contradict the stated hunger and need; self-sufficient imports philosophical independence; whatever happens can become vague unless verse 12 supplies the concrete range; initiated can sound occult or esoteric.",
+        "human_decision_required": false,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "php4_13_all_these_circumstances_through_strengthener",
+        "references": ["Phil.4.13"],
+        "source_expression": "πάντα ἰσχύω ἐν τῷ ἐνδυναμοῦντί με",
+        "status": "alternatives_retained",
+        "contextual_function": "The compact statement climaxes Paul's learned contentment by locating his strength for every circumstance just named in the personal one who strengthens him.",
+        "primary_sense": "Paul has strength to face or endure all the circumstances of plenty and need through the one who strengthens him.",
+        "viable_alternatives": [
+          "Name Christ in the reading text as the contextually identified giver of strength and disclose that the SBLGNT says 'the one who strengthens me.'",
+          "Keep 'the one who gives me strength' in the reading text, preserving the exact SBLGNT form while allowing the letter's Christ-centered context to identify the referent."
+        ],
+        "discourse_evidence": "Panta gathers the paired circumstances in verse 12; ischyo denotes having strength or capability for them; the articular participle names the personal source of strength, while this SBLGNT line contains no explicit Christ noun.",
+        "reading_text_guidance": "Make the limited contextual scope unmistakable without reducing the verse to bare survival. Preserve dependence on the personal giver of strength and the verse's confident, memorable force.",
+        "literal_note_guidance": "Explain that 'all things' refers to the full-and-hungry, plenty-and-need situations just named; if Christ is named, also disclose that the Greek text here literally says 'the one who strengthens me.'",
+        "choice_risks": "I can do anything invites unlimited-achievement readings; endure everything may understate active capability; every circumstance is clear but less forceful; naming Christ is contextually strong but more explicit than the SBLGNT wording in this verse.",
+        "human_decision_required": true,
+        "reader_note_required": true,
+        "audit_text_and_note_together": true
+      },
+      {
+        "sense_id": "php4_14_shared_hardship_despite_contentment",
+        "references": ["Phil.4.14"],
+        "source_expression": "πλὴν καλῶς ἐποιήσατε συγκοινωνήσαντές μου τῇ θλίψει",
+        "status": "resolved",
+        "contextual_function": "Paul adds a warm concessive correction so his contentment will not be heard as dismissing the gift: their action was good because it made them partners in his hardship.",
+        "primary_sense": "Even so, the Philippians did well by sharing with Paul in his trouble.",
+        "viable_alternatives": [],
+        "discourse_evidence": "Plen turns from verses 11-13; kalos epoiesate commends their action; synkoinonesantes uses partnership language and takes Paul's thlipsis as the shared sphere.",
+        "reading_text_guidance": "Use a clear concessive transition, retain Paul's approval, and express active solidarity rather than mere sympathy or detached donation.",
+        "literal_note_guidance": "No note is normally required if the partnership-in-hardship force is clear and remains connected to the following gift history.",
+        "choice_risks": "But can sound like contradiction rather than qualification; helped me can lose shared partnership; financial trouble is too narrow because thlipsis names broader hardship.",
+        "human_decision_required": false,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "php4_15_16_giving_receiving_partnership",
+        "references": ["Phil.4.15", "Phil.4.16"],
+        "source_expression": "ἐν ἀρχῇ τοῦ εὐαγγελίου ... οὐδεμία ... ἐκκλησία ἐκοινώνησεν εἰς λόγον δόσεως καὶ λήμψεως ... καὶ ἅπαξ καὶ δὶς ... ἐπέμψατε",
+        "status": "alternatives_retained",
+        "contextual_function": "Paul recalls the Philippians as the only church that entered sustained reciprocal financial partnership with him in the early period of the good news, including repeated help in Thessalonica.",
+        "primary_sense": "From the early days of the good news, when Paul left Macedonia, the Philippians alone partnered with him in giving and receiving and sent help for his needs more than once in Thessalonica.",
+        "viable_alternatives": [
+          "Preserve the account-like phrase 'giving and receiving' in the reading text and explain the financial-partnership image in a note.",
+          "Render the contextual function as reciprocal financial partnership in the reading text while preserving giving-and-receiving language in a note."
+        ],
+        "discourse_evidence": "The temporal clauses locate the history; koinoneo names partnership; logos doseos kai lempseos is account or transaction language with reciprocal terms; verse 16 supplies concrete repeated sending for Paul's need.",
+        "reading_text_guidance": "Keep the Philippians' unique and repeated support clear, retain the good-news mission link, and make the reciprocal partnership intelligible without inventing the precise form of what they received.",
+        "literal_note_guidance": "Explain that Paul uses accounting language for 'giving and receiving' to describe a real partnership, not a cold commercial transaction; the text does not specify the exact return they received.",
+        "choice_risks": "Shared in giving and receiving is traceable but opaque; supported my ministry can erase reciprocity; spiritual benefits may be plausible but are not specified; twice can overfix an idiom that commonly means more than once.",
+        "human_decision_required": true,
+        "reader_note_required": true,
+        "audit_text_and_note_together": true
+      },
+      {
+        "sense_id": "php4_17_fruit_increasing_to_account",
+        "references": ["Phil.4.17"],
+        "source_expression": "οὐχ ὅτι ἐπιζητῶ τὸ δόμα ... τὸν καρπὸν τὸν πλεονάζοντα εἰς λόγον ὑμῶν",
+        "status": "alternatives_retained",
+        "contextual_function": "Paul redirects attention from his desire for another gift to the growing moral-spiritual fruit or benefit that their generosity places to their account, extending verse 15's accounting imagery.",
+        "primary_sense": "Paul is not seeking the gift itself; he wants the fruit produced by their generosity to keep increasing to their account.",
+        "viable_alternatives": [
+          "Preserve fruit and account together, letting a note explain the joined agricultural and accounting images.",
+          "Render the result as a growing benefit or credit for the Philippians while retaining the literal images in a note."
+        ],
+        "discourse_evidence": "The repeated epizeto creates direct contrast; karpos can denote result or benefit; pleonazonta marks increase; eis logon hymon returns to the account language of verse 15.",
+        "reading_text_guidance": "Make Paul's concern for their spiritual benefit clear without promising material profit, purchased favor, or a mechanical reward. Preserve enough imagery or note transparency to keep the verse linked with verse 15.",
+        "literal_note_guidance": "Explain that Paul combines fruit and accounting language: their generosity produces a growing benefit credited to them, without specifying a material return.",
+        "choice_risks": "Profit can sound commercial or material; reward may overstate the mechanism; blessing can be vague or prosperity-coded; account is unfamiliar unless the surrounding financial metaphor is made clear.",
+        "human_decision_required": true,
+        "reader_note_required": true,
+        "audit_text_and_note_together": true
+      },
+      {
+        "sense_id": "php4_18_full_receipt_and_fragrant_sacrifice",
+        "references": ["Phil.4.18"],
+        "source_expression": "ἀπέχω ... πάντα καὶ περισσεύω, πεπλήρωμαι ... ὀσμὴν εὐωδίας, θυσίαν δεκτήν, εὐάρεστον τῷ θεῷ",
+        "status": "alternatives_retained",
+        "contextual_function": "Paul acknowledges full receipt and abundance after receiving their gift through Epaphroditus, then interprets the gift as a fragrant, acceptable sacrifice pleasing to God.",
+        "primary_sense": "Paul has received everything in full and has more than enough; the gift brought by Epaphroditus is a fragrant offering, an acceptable sacrifice that pleases God.",
+        "viable_alternatives": [
+          "Use ordinary receipt language such as 'I have received everything in full' before preserving the sacrifice image.",
+          "Emphasize abundance in natural language and disclose in a note that the opening can function like a receipt acknowledging full payment."
+        ],
+        "discourse_evidence": "Apecho panta can acknowledge receipt in full; perisseuo and pepleromai intensify sufficiency; the three appositional descriptions apply worship and sacrifice language to the received gift; para Epaphroditou identifies the carrier.",
+        "reading_text_guidance": "Keep the receipt and abundance sequence easy to hear, name Epaphroditus's delivery clearly, and preserve God as the one pleased by the living worship image.",
+        "literal_note_guidance": "A note may explain that Paul's opening can sound like a receipt stating that he has received payment in full; if the fragrant-sacrifice image is substantially unpacked, disclose its literal form.",
+        "choice_risks": "I have everything can sound absolute beyond the gift context; paid in full can imply debt settlement; needs met may weaken abundance; spiritual sacrifice can import a label absent from the verse.",
+        "human_decision_required": true,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "php4_19_god_supplies_every_need_from_riches",
+        "references": ["Phil.4.19"],
+        "source_expression": "ὁ ... θεός μου πληρώσει πᾶσαν χρείαν ὑμῶν κατὰ τὸ πλοῦτος αὐτοῦ ἐν δόξῃ ἐν Χριστῷ Ἰησοῦ",
+        "status": "alternatives_retained",
+        "contextual_function": "Paul answers the Philippians' provision for his need with confident assurance that his God will supply every need of theirs from the measure of His own abundance in glory and in Christ Jesus.",
+        "primary_sense": "Paul's God will meet every need of the Philippians according to His glorious riches within their relationship to Christ Jesus.",
+        "viable_alternatives": [
+          "Treat 'in glory' as describing God's riches: He supplies every need according to His riches in glory, in Christ Jesus.",
+          "Treat 'in glory' adverbially in natural English: God will gloriously meet every need from His riches because they belong to Christ Jesus."
+        ],
+        "discourse_evidence": "De links the promise to their gift; the repeated need and fill language answers verse 18; kata expresses measure or correspondence; en doxe may relate closely to riches or supply; en Christo Iesou locates the promise in Christ.",
+        "reading_text_guidance": "Promise provision for every need, not gratification of every desire. Preserve God's abundant measure, the glory element, and the Christ-centered location without making material prosperity or a particular syntactic attachment certain.",
+        "literal_note_guidance": "Explain that the promise concerns needs, not every desire, and arises in a paragraph about generous partnership; if the English chooses one arrangement of 'in glory,' note the other viable attachment only if it materially affects understanding.",
+        "choice_risks": "Everything you want is unsupported; all your needs can be heard as an unconditional prosperity formula if detached from context; glorious riches is natural but chooses an attachment; because you belong to Christ makes the relation explicit but shifts compact sphere language toward cause.",
+        "human_decision_required": true,
+        "reader_note_required": true,
+        "audit_text_and_note_together": true
+      },
+      {
+        "sense_id": "php4_20_glory_forever_amen",
+        "references": ["Phil.4.20"],
+        "source_expression": "τῷ ... θεῷ καὶ πατρὶ ἡμῶν ἡ δόξα εἰς τοὺς αἰῶνας τῶν αἰώνων, ἀμήν",
+        "status": "alternatives_retained",
+        "contextual_function": "Paul answers divine provision with a compact doxology that directs eternal glory to the believers' God and Father and seals the praise with Amen.",
+        "primary_sense": "All glory, honor, and praise belong to our God and Father forever and ever; Amen affirms that worship.",
+        "viable_alternatives": [
+          "Retain 'glory' in the reading text so verse 20 echoes verse 19, relying on context or a brief note for its worshipful force.",
+          "Render glory by the accessible worship language 'honor and praise' while preserving the glory link in a note or study layer."
+        ],
+        "discourse_evidence": "The fronted dative identifies God and Father as the recipient or possessor of doxa; the doubled ages idiom expresses endless duration; amen confirms the doxology.",
+        "reading_text_guidance": "Let the paragraph end as direct, memorable worship in adult natural English. Preserve our God and Father, endless duration, and an audible affirmation.",
+        "literal_note_guidance": "If glory is unpacked as honor and praise, a note may preserve the source term and its link with verse 19. If Amen is retained, a brief first-use note may say that it affirms, 'This is true' or 'Let it be so.'",
+        "choice_risks": "Glory may be opaque church vocabulary; may glory be can sound archaic; honor and praise can narrow radiant greatness; omitting Amen loses the confirming close.",
+        "human_decision_required": true,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      }
+    ]
+  }
+}
