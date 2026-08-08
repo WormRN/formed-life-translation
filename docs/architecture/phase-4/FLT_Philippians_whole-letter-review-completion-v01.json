@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "review_id": "PHP-01-001-THROUGH-04-023-WHOLE-LETTER-REVIEW",
+  "status": "completed_evidence_frozen",
+  "accepted_run": {
+    "run_id": 30795801547,
+    "url": "https://github.com/WormRN/formed-life-translation/actions/runs/30795801547",
+    "artifact_id": 8848912232,
+    "artifact_sha256": "9bf5c6339fe1a451a8cc058ec1bc3931d68dc7049cc566f0981a86f94d713919",
+    "valid_reports": 6,
+    "blocking_defects": 0,
+    "chapters_1_2_engine_2_2_compatible": true
+  },
+  "recovery_history": [
+    {
+      "run_id": 30794692986,
+      "outcome": "failed_preflight",
+      "provider_attempts": 0,
+      "cause": "invalid run identity"
+    },
+    {
+      "run_id": 30794856780,
+      "outcome": "failed_contract",
+      "provider_attempts": 5,
+      "cause": "listener prompt omitted explicit JSON contract"
+    },
+    {
+      "run_id": 30795131119,
+      "outcome": "partial_checkpoint",
+      "provider_attempts": 11,
+      "valid_checkpoints": 5,
+      "cause": "Claude cross-letter range/reference schema mismatch"
+    },
+    {
+      "run_id": 30795801547,
+      "outcome": "success",
+      "provider_attempts": 3,
+      "reused_checkpoints": 5,
+      "cause": "final missing Claude source review recovered"
+    }
+  ],
+  "total_recorded_provider_attempts": 19,
+  "scripture_changed": false,
+  "notes_changed": false,
+  "copyright_status": "DEFERRED_BATCH",
+  "publication_clearance": false,
+  "human_editor_decisions_pending": [
+    "Confirm source-faithful Phil.2.30-3.2 transition",
+    "Decide whether Phil.3.5-6 needs a list-level background note",
+    "Reaffirm approved interpretive choices at Phil.4.17 and Phil.4.23"
+  ],
+  "workflow_disposition": "archived_manual_noop",
+  "provider_calls_authorized": false,
+  "recorded_at": "2026-08-08"
+}
