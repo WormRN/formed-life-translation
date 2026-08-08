@@ -58,7 +58,7 @@ export async function haltTask(runDir,details){
 export function validateCircuitBreakerConfig(config){
   const workerLimit=config.max_attempts??MAX_WORKER_ATTEMPTS;
   const taskLimit=config.task_max_attempts??MAX_TASK_ATTEMPTS;
-  if(!config.task_id)throw new Error('Preflight: task_id is required for cumulative attempt accounting.');
+  if(!config.task_id||config.task_id==='HUMAN_AUTHORIZATION_REQUIRED')throw new Error('Preflight: an explicitly authorized task_id is required for cumulative attempt accounting.');
   if(!Number.isInteger(workerLimit)||workerLimit<1||workerLimit>MAX_WORKER_ATTEMPTS)throw new Error(`Preflight: max_attempts must be 1-${MAX_WORKER_ATTEMPTS}.`);
   if(!Number.isInteger(taskLimit)||taskLimit<1||taskLimit>MAX_TASK_ATTEMPTS)throw new Error(`Preflight: task_max_attempts must be 1-${MAX_TASK_ATTEMPTS}.`);
   if(taskLimit<workerLimit)throw new Error('Preflight: task_max_attempts cannot be below max_attempts.');
