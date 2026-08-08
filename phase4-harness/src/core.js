@@ -46,7 +46,7 @@ export async function requestModel(worker,bodyText,signal){
   else if(worker.provider==='anthropic'){url='https://api.anthropic.com/v1/messages';headers['x-api-key']=key;headers['anthropic-version']='2023-06-01';body={model:worker.model,max_tokens:12000,messages:[{role:'user',content:bodyText}]};parse=j=>({text:(j.content||[]).map(x=>x.text||'').join(''),id:j.id,usage:j.usage||{}})}
   else if(worker.provider==='google'){url=`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(worker.model)}:generateContent?key=${encodeURIComponent(key)}`;body={contents:[{parts:[{text:bodyText}]}],generationConfig:{responseMimeType:'application/json'}};parse=j=>({text:j.candidates?.[0]?.content?.parts?.map(x=>x.text||'').join('')||'',id:j.responseId||null,usage:j.usageMetadata||{}})}
   else throw Object.assign(new Error(`Unsupported provider ${worker.provider}`),{retryable:false});
-  const res=await fetch(url,{method:'POST',headers,body:JSON.stringify(body),signal}); if(!res.ok)throw Object.assign(new Error(`${worker.provider} HTTP ${res.status}: ${(await res.text()).slice(0,500)}`),{retryable:res.status===408||res.status===429||res.status>=500});return parse(await res.json());
+  const res=await fetch(url,{method:'POST',headers,body:JSON.stringify(body),signal}); if(!res.ok)throw Object.assign(new Error(`${worker.provider} HTTP ${res.status}: ${(await res.text()).slice(0,500)}`),{httpStatus:res.status,retryable:res.status===408||res.status===429||res.status>=500});return parse(await res.json());
 }
 async function request(worker,packet,signal){return requestModel(worker,prompt(packet),signal);}
 export async function runWorker({worker,packet,runDir,maxAttempts,timeoutMs,validate}){
