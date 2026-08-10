@@ -116,6 +116,24 @@
     "publication_clearance": true,
     "completed_at": "2026-08-10"
   },
+  "exact_text_constitutional_reapproval": {
+    "scope": [
+      "Phil.1.6",
+      "Phil.2.13",
+      "Phil.2.30"
+    ],
+    "human_editor_wording_binding": true,
+    "source": "SBLGNT parsed source",
+    "context_checked": [
+      "Phil.1.3-11",
+      "Phil.2.12-18",
+      "Phil.2.25-3.2"
+    ],
+    "fidelity_blocks": 0,
+    "clarity_blocks": 0,
+    "wording_proposals": 0,
+    "status": "passed"
+  },
   "text_frozen": true,
   "human_editor_authority": true,
   "public_release_authorized": true,
