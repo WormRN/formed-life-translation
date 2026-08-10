@@ -811,3 +811,18 @@ Reopen only if the whole-letter review or later contextual evidence exposes a co
 - **Other warning:** One eligible auditor cautioned that “all of God’s holy people” slightly reduces the distributive force of “every holy person.” The approved note discloses the literal form; the established FLT wording is retained.
 - **Attempt accounting:** Six recorded attempts, all successful on the first attempt; zero retries or duplicated calls. Recorded provider token scale: 33,725.
 - **Status:** Accepted pending whole-letter review. The audit and locator triggers are manual-only.
+
+
+---
+
+## 2026-08-10 — Philippians hard copyright check completed and RC1 frozen
+
+- **Book:** Philippians 1:1–4:23.
+- **Human Editor authority:** The Human Editor rejected broad copyright-polish rewrites that diminished previously approved text and issued binding surgical dispositions.
+- **Exact changes:** Phil. 1:6 changes only “finished” to “completely finished”; Phil. 2:13 reads, “For God is at work in all of you. He gives you both the desire and the power to live in a way that pleases Him.”; Phil. 2:30 reads, “His work for Christ nearly cost him his life. He stepped in to serve me in person when distance kept you from doing so.”
+- **Explicit retentions:** Phil. 3:17 remains unchanged. Every other verse remains unchanged, including all previously approved Human Editor overrides.
+- **Hard-check dispositions:** All nine orange findings and all fourteen yellow findings were adjudicated. Retention decisions preserve independently recorded, source-constrained, or demonstrably superior FLT wording rather than degrading the translation to manufacture difference.
+- **Focused recheck:** Phil. 1:6 within 1:3–11, Phil. 2:13 within 2:12–18, and Phil. 2:30 within 2:25–3:2 were rechecked against NLT, NIV, CSB, ESV, NASB, CEV, GNT, and The Message. No unresolved red or orange finding remains.
+- **Status:** `HARD_CHECK_COMPLETE`.
+- **Publication clearance:** `true` for the exact Philippians v0.9 RC1 text. Any later wording change requires the focused recheck required by Copyright Independence Policy v2.0.
+- **Next checkpoint:** Colossians 1:1–14 passage-sense resolution gate. Philippians remains closed unless the Human Editor explicitly reopens it.
