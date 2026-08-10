@@ -19,6 +19,7 @@ Date: 2026-08-10
 - Whole-letter review: run 30795801547; six valid reports; zero blocking defects.
 - Reading text: 104 verses; exactly three Human Editor-authorized surgical revisions after the hard check.
 - Reader notes: 53, including the new Phil. 3:5–6 note.
+- Exact-text constitutional reapproval: the three changed readings were checked against the live SBLGNT morphology, their immediate discourse contexts, and the governing FLT clarity/fidelity rules; all three passed with no block and no wording proposal.
 - Formal eight-version hard check: complete; 0 red findings; all orange and yellow findings adjudicated by the Human Editor.
 - Focused recheck: Phil. 1:6 in 1:3–11, Phil. 2:13 in 2:12–18, and Phil. 2:30 in 2:25–3:2; no unresolved orange or red finding remains.
 - Copyright status: `HARD_CHECK_COMPLETE`; publication clearance is true for this exact RC1 text.
