@@ -1,0 +1,76 @@
+name: FLT Engine 2.2 Colossians 1:1-14 blind candidates
+run-name: Colossians 1:1-14 authorized blind A/B/C batch
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_sha:
+        description: Immutable main-branch commit containing the reviewed packet and workflow
+        required: true
+        type: string
+      task_id:
+        description: Authorized task identity
+        required: true
+        default: COL-01-001-014-BLIND-DRAFT-BATCH-01
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: flt-col-01-001-014-blind-batch-01
+  cancel-in-progress: false
+
+jobs:
+  draft:
+    name: Three blind Engine 2.2 candidates for Colossians 1:1-14
+    if: inputs.task_id == 'COL-01-001-014-BLIND-DRAFT-BATCH-01'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.target_sha }}
+      - name: Verify immutable authorization and source-only preflight
+        shell: bash
+        env:
+          TARGET_SHA: ${{ inputs.target_sha }}
+          TASK_ID: ${{ inputs.task_id }}
+        run: |
+          test "$(git rev-parse HEAD)" = "$TARGET_SHA"
+          test "$TASK_ID" = "COL-01-001-014-BLIND-DRAFT-BATCH-01"
+          jq -e '.status == "passed_zero_provider_calls" and .task_id == "COL-01-001-014-BLIND-DRAFT-BATCH-01" and .authorized_provider_tasks == 3 and .task_max_attempts == 8' config/COL-01-001-014_blind-draft-preflight-v01.json
+          jq -e '.chapter_id == "COL-01" and .units[0].unit_id == "COL-01-001-014" and (.units[0].verses | length) == 14 and .passage_sense_resolution.gate_version == "2.2" and .passage_sense_resolution.status == "complete_for_blind_drafting" and .passage_sense_resolution.visibility_attestation.source_side_only == true and .passage_sense_resolution.visibility_attestation.prior_flt_wording_absent == true and .passage_sense_resolution.visibility_attestation.prior_candidates_absent == true and .passage_sense_resolution.visibility_attestation.editor_benchmark_absent == true and .passage_sense_resolution.visibility_attestation.comparison_translations_absent == true' docs/architecture/phase-4/COL-01-001-014_blind-source-v2.2.json
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: phase4-harness/package-lock.json
+      - name: Install and test Engine 2.2
+        working-directory: phase4-harness
+        run: npm ci && npm test
+      - name: Create bounded run identity
+        id: run
+        shell: bash
+        env:
+          TASK_ID: ${{ inputs.task_id }}
+        run: |
+          run_id="FLT-COL-01-$(date -u +%Y%m%d)-${GITHUB_RUN_NUMBER}"
+          node phase4-harness/scripts/prepare-run-config.mjs phase4-harness/config.github-actions.json phase4-harness/.col1-001-014-config.json "$run_id"
+          jq --arg task_id "$TASK_ID" '.unit_id="COL-01-001-014" | .source_packet="../docs/architecture/phase-4/COL-01-001-014_blind-source-v2.2.json" | .task_id=$task_id | .max_attempts=2 | .task_max_attempts=8 | .timeout_ms=300000' phase4-harness/.col1-001-014-config.json > phase4-harness/.col1-001-014-config.tmp
+          mv phase4-harness/.col1-001-014-config.tmp phase4-harness/.col1-001-014-config.json
+          echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
+      - name: Run exactly three blind candidate tasks
+        id: draft
+        run: node phase4-harness/src/chapter-units.js phase4-harness/.col1-001-014-config.json "phase4-harness/runs/${{ steps.run.outputs.run_id }}" docs/architecture/phase-4/COL-01-001-014_blind-source-v2.2.json
+      - name: Upload blind-candidate bundle and attempt ledger
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: "${{ steps.run.outputs.run_id || 'FLT-COL-01-001-014-blocked' }}"
+          path: phase4-harness/runs/
+          retention-days: 30
