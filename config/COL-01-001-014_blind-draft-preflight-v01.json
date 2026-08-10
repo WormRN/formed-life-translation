@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "task_id": "COL-01-001-014-BLIND-DRAFT-BATCH-01",
+  "unit_id": "COL-01-001-014",
+  "passage": "Colossians 1:1-14",
+  "engine_version": "2.2",
+  "status": "passed_zero_provider_calls",
+  "provider_calls_made": 0,
+  "authorized_provider_tasks": 3,
+  "expected_providers": [
+    {"candidate": "A", "provider": "anthropic", "model": "claude-sonnet-5"},
+    {"candidate": "B", "provider": "openai", "model": "gpt-5.6-sol"},
+    {"candidate": "C", "provider": "google", "model": "gemini-3.1-pro-preview"}
+  ],
+  "max_attempts_per_worker": 2,
+  "task_max_attempts": 8,
+  "production_trigger": "workflow_dispatch_only",
+  "immutable_target_sha_required": true,
+  "pull_request_provider_secrets_available": false,
+  "blindness": {
+    "prior_flt_wording_absent": true,
+    "prior_candidates_absent": true,
+    "editor_benchmark_absent": true,
+    "comparison_translations_absent": true,
+    "conversation_drafts_absent": true
+  },
+  "checks": {
+    "source_verse_count": 14,
+    "passage_sense_gate_complete": true,
+    "common_candidate_mission": true,
+    "schema_validation_enabled": true,
+    "fenced_json_parser_enabled": true,
+    "persistent_attempt_ledger_enabled": true,
+    "checkpoint_fingerprints_enabled": true,
+    "worker_ceiling_enabled": true,
+    "task_ceiling_enabled": true,
+    "philippians_workflows_untouched": true
+  },
+  "human_authorization": {
+    "received": true,
+    "authorized_actions": ["create_feature_branch", "commit_packet_and_workflow", "open_pull_request", "merge_pull_request", "dispatch_first_blind_batch"],
+    "authorized_at": "2026-08-10"
+  }
+}
