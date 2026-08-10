@@ -811,3 +811,18 @@ Reopen only if the whole-letter review or later contextual evidence exposes a co
 - **Other warning:** One eligible auditor cautioned that “all of God’s holy people” slightly reduces the distributive force of “every holy person.” The approved note discloses the literal form; the established FLT wording is retained.
 - **Attempt accounting:** Six recorded attempts, all successful on the first attempt; zero retries or duplicated calls. Recorded provider token scale: 33,725.
 - **Status:** Accepted pending whole-letter review. The audit and locator triggers are manual-only.
+
+
+---
+
+## 2026-08-10 — Philippians hard copyright check completed and RC1 frozen
+
+- **Human Editor authority:** The Human Editor rejected broad Phase-1-style rewrites prompted solely by copyright flags and ordered surgical resolution of the final orange findings.
+- **Philippians 1:6:** Retain the accepted FLT sentence and change only `finished` to `completely finished`: “I am certain that God, who began this good work in you, will continue it until it is completely finished on the day Christ Jesus returns.”
+- **Philippians 2:13:** Adopt exactly: “For God is at work in all of you. He gives you both the desire and the power to live in a way that pleases Him.”
+- **Philippians 2:30:** Adopt exactly: “His work for Christ nearly cost him his life. He stepped in to serve me in person when distance kept you from doing so.”
+- **Philippians 3:17:** Retain the accepted FLT text unchanged.
+- **All other wording:** Retain unchanged. No other orange or yellow finding authorizes a textual change.
+- **Focused hard recheck:** Limited to Philippians 1:6 in 1:3–11, 2:13 in 2:12–18, and 2:30 in 2:25–3:2 against the established NLT, NIV, CSB, ESV, NASB, CEV, GNT, and MSG comparison set. The surgical revisions remove the avoidable concentrated resemblance identified by O1, O4, and O5. No unresolved red or orange finding remains.
+- **Status:** `HARD_CHECK_COMPLETE`.
+- **Freeze:** The exact 104-verse reading text is frozen as Philippians v0.9 RC1. Any later wording change requires a new focused hard recheck.
