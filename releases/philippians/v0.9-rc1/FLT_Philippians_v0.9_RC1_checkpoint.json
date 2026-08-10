@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "release_candidate": "Philippians v0.9 RC1",
+  "status": "release_candidate_frozen_hard_check_complete",
+  "source_commit": "646dc048fd56a6a1c9047fd9d7dd1d2dccd06653",
+  "passage": "Philippians 1:1-4:23",
+  "verse_count": 104,
+  "reader_note_count": 53,
+  "decisions": [
+    {
+      "reference": "Phil.2.30-3.2",
+      "decision": "retain",
+      "rationale": "Keep the abrupt transition exactly as written because it is source-faithful to Paul’s shift in tone."
+    },
+    {
+      "reference": "Phil.3.5-6",
+      "decision": "add_transparency_note",
+      "note_id": "Phil.3.5-6-jewish-credentials"
+    },
+    {
+      "reference": "Phil.4.17",
+      "decision": "reaffirm_human_editor_override",
+      "text": "I'm not looking for a gift. I seek the growing spiritual reward that is being credited to your account."
+    },
+    {
+      "reference": "Phil.4.23",
+      "decision": "reaffirm_human_editor_override",
+      "text": "May the grace of the Lord Jesus Christ dwell with the spirit of you all."
+    },
+    {
+      "reference": "Phil.1.6",
+      "decision": "surgical_revision",
+      "text": "I am certain that God, who began this good work in you, will continue it until it is completely finished on the day Christ Jesus returns."
+    },
+    {
+      "reference": "Phil.2.13",
+      "decision": "surgical_revision",
+      "text": "For God is at work in all of you. He gives you both the desire and the power to live in a way that pleases Him."
+    },
+    {
+      "reference": "Phil.2.30",
+      "decision": "surgical_revision",
+      "text": "His work for Christ nearly cost him his life. He stepped in to serve me in person when distance kept you from doing so."
+    },
+    {
+      "reference": "Phil.3.17",
+      "decision": "retain_unchanged"
+    }
+  ],
+  "whole_letter_review": {
+    "run_id": 30795801547,
+    "valid_reports": 6,
+    "blocking_defects": 0
+  },
+  "copyright_audit": {
+    "schema_version": 1,
+    "audit_id": "FLT-PHP-COPYRIGHT-HEURISTIC-20260808-1",
+    "passage": "Philippians 1:1-4:23",
+    "exact_input_candidate_id": "PHP-01-001-THROUGH-04-023-WHOLE-LETTER-REVIEW-INPUT-V01",
+    "mode": "PROVISIONAL_HEURISTIC_CHECK",
+    "bounded_scope": {
+      "comparison_passages_supplied": false,
+      "comparison_passages_reconstructed_or_quoted": false,
+      "external_translation_api_calls": 0,
+      "paid_model_provider_calls": 0,
+      "permitted_outcomes": [
+        "none_obvious",
+        "watchlist",
+        "human_review_now"
+      ]
+    },
+    "outcome": "watchlist",
+    "human_review_now_findings": [],
+    "watchlist": [
+      "Phil.1.5",
+      "Phil.1.12",
+      "Phil.1.21",
+      "Phil.2.21",
+      "Phil.2.30",
+      "Phil.4.6-7",
+      "Phil.4.12-13",
+      "Phil.4.17",
+      "Phil.4.23"
+    ],
+    "whole_letter_assessment": "The consolidated screen preserves the unit-level watchlist. It identifies no additional conspicuous or sustained resemblance requiring immediate Human Editor action and recommends no wording change.",
+    "new_note_assessment": {
+      "note_id": "Phil.3.5-6-jewish-credentials",
+      "outcome": "none_obvious_new_risk"
+    },
+    "copyright_protocol_status": "DEFERRED_BATCH",
+    "hard_check_required": true,
+    "publication_clearance": false,
+    "disclaimer": "This heuristic is a memory-based risk screen, not a formal comparison, legal opinion, or publication clearance.",
+    "completed_at": "2026-08-08"
+  },
+  "final_hard_check": {
+    "completion_id": "FLT-PHP-HARD-COPYRIGHT-20260810-2",
+    "status": "HARD_CHECK_COMPLETE",
+    "comparison_set": [
+      "NLT",
+      "NIV",
+      "CSB",
+      "ESV",
+      "NASB",
+      "CEV",
+      "GNT",
+      "MSG"
+    ],
+    "changed_verses_rechecked": [
+      "Phil.1.6",
+      "Phil.2.13",
+      "Phil.2.30"
+    ],
+    "unresolved_red": 0,
+    "unresolved_orange": 0,
+    "publication_clearance": true,
+    "completed_at": "2026-08-10"
+  },
+  "exact_text_constitutional_reapproval": {
+    "scope": [
+      "Phil.1.6",
+      "Phil.2.13",
+      "Phil.2.30"
+    ],
+    "human_editor_wording_binding": true,
+    "source": "SBLGNT parsed source",
+    "context_checked": [
+      "Phil.1.3-11",
+      "Phil.2.12-18",
+      "Phil.2.25-3.2"
+    ],
+    "fidelity_blocks": 0,
+    "clarity_blocks": 0,
+    "wording_proposals": 0,
+    "status": "passed"
+  },
+  "text_frozen": true,
+  "human_editor_authority": true,
+  "public_release_authorized": true,
+  "tag_requested": "philippians-v0.9.0-rc1",
+  "created_at": "2026-08-08"
+}
