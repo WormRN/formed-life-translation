@@ -25,6 +25,20 @@
     "Phil.2.30": "His work for Christ nearly cost him his life. He stepped in to serve me in person when distance kept you from doing so."
   },
   "unchanged_confirmed": ["Phil.3.17", "all other verses"],
+  "exact_text_constitutional_reapproval": {
+    "source": "SBLGNT parsed source",
+    "scope": ["Phil.1.6", "Phil.2.13", "Phil.2.30"],
+    "context_checked": ["Phil.1.3-11", "Phil.2.12-18", "Phil.2.25-3.2"],
+    "result": "pass",
+    "fidelity_blocks": 0,
+    "clarity_blocks": 0,
+    "wording_proposals": 0,
+    "findings": {
+      "Phil.1.6": "The completion force of epiteleo is preserved; 'completely finished' is an emphatic natural-English realization.",
+      "Phil.2.13": "God's working, willing, acting, and pleasing purpose are preserved; plural 'all of you' retains the communal scope, and 'live in a way' coheres with the surrounding conduct commands.",
+      "Phil.2.30": "Christ's work, nearness to death, personal life-risk, and Epaphroditus supplying the Philippians' distance-created service gap are preserved."
+    }
+  },
   "focused_recheck": {
     "date": "2026-08-10",
     "scope": ["Phil.1.3-11", "Phil.2.12-18", "Phil.2.25-3.2"],
