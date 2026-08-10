@@ -77,21 +77,21 @@ governing_documents:
   - "logs/FLT_decision_log.md"
 
 current_checkpoint:
-  book: "Philippians"
-  chapter: 4
-  current_unit_id: "PHP-04-021-023"
-  current_passage: "Philippians 4:21-23"
-  stage: "accepted_pending_whole_letter_review"
-  candidate_status: "Exact text and three reader notes audited; two auditors eligible, one verse 23 added-meaning block explicitly overridden by the Human Editor’s prior final decision; accepted pending whole-letter review."
-  candidate_sealed: true
-  latest_accepted_unit: "Philippians 4:21-23 accepted after Engine 2.2 exact-text and reader-note audit with one documented Human Editor override."
-  next_permitted_action: "Begin the planned whole-letter review and retrospective Engine 2.2 certification of chapters 1-2. Do not rerun or repair Philippians 4:21-23 unless the Human Editor reopens it."
-  copyright_status: "DEFERRED_BATCH"
-  provisional_heuristic_check: "watchlist_phil_4_23"
-  source_gate_status: "passed_for_recorded_blind_draft"
-  hard_check_required: true
-  publication_clearance: false
-  prepublication_requirement: "Run the formal eight-translation New Testament API batch audit through authorized sources, using API.Bible where available and likely the official ESV API separately; resolve findings and re-audit later wording changes."
+  book: "Colossians"
+  chapter: 1
+  current_unit_id: "COL-01-001-014"
+  current_passage: "Colossians 1:1-14"
+  stage: "awaiting_passage_sense_resolution_gate"
+  candidate_status: "No Colossians candidate exists. Philippians v0.9 RC1 is frozen with HARD_CHECK_COMPLETE."
+  candidate_sealed: false
+  latest_accepted_unit: "Philippians 1:1-4:23 frozen as v0.9 RC1 after whole-letter review, Human Editor adjudication, and focused eight-version copyright recheck."
+  next_permitted_action: "Prepare the Colossians 1:1-14 passage-sense resolution gate from the live SBLGNT source. Do not reopen Philippians unless the Human Editor authorizes a later wording change."
+  copyright_status: "HARD_CHECK_COMPLETE_FOR_PHILIPPIANS_V0_9_RC1"
+  provisional_heuristic_check: "not_started_for_colossians"
+  source_gate_status: "not_started_for_colossians_1_1_14"
+  hard_check_required: false
+  publication_clearance: true
+  prepublication_requirement: "Any wording change to the frozen Philippians v0.9 RC1 text requires a focused hard recheck of the affected verse, paragraph, and surrounding context."
   process_revalidation:
     reason: "Earlier blind drafting assigned different readability, Greek-fidelity, and balanced missions instead of one common constitutional goal."
     status: "recovery_completed_all_nine_units_process_revalidated"
@@ -428,3 +428,20 @@ workflow_requirements:
   copyright_hard_check_deferred_to_nt_batch: true
   copyright_clearance_required_before_publication: true
   post_hard_audit_wording_changes_require_recheck: true
+
+
+philippians_v0_9_rc1:
+  status: "HARD_CHECK_COMPLETE"
+  passage: "Philippians 1:1-4:23"
+  verse_count: 104
+  reader_note_count: 53
+  human_editor_surgical_revisions: ["Phil.1.6", "Phil.2.13", "Phil.2.30"]
+  retained_orange_disposition: ["Phil.1.5-6", "Phil.1.12", "Phil.2.6", "Phil.3.12", "Phil.3.17", "Phil.4.6-7", "Phil.4.9"]
+  formal_comparison_set: ["NLT", "NIV", "CSB", "ESV", "NASB", "CEV", "GNT", "MSG"]
+  focused_recheck_scopes: ["Phil.1.3-11", "Phil.2.12-18", "Phil.2.25-3.2"]
+  unresolved_red: 0
+  unresolved_orange: 0
+  publication_clearance: true
+  release_candidate: "philippians-v0.9.0-rc1"
+  exact_checkpoint: "releases/philippians-v0.9-rc1/FLT_Philippians_v0.9_RC1_checkpoint.json"
+  hard_check_record: "docs/architecture/phase-4/FLT_Philippians_hard-copyright-completion-v02.json"
