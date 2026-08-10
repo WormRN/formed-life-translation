@@ -1,0 +1,48 @@
+{
+  "schema_version": 2,
+  "audit_id": "FLT-PHP-HARD-COPYRIGHT-20260809-1",
+  "completion_id": "FLT-PHP-HARD-COPYRIGHT-20260810-2",
+  "passage": "Philippians 1:1-4:23",
+  "status": "HARD_CHECK_COMPLETE",
+  "publication_clearance": true,
+  "comparison_set": ["NLT", "NIV", "CSB", "ESV", "NASB", "CEV", "GNT", "MSG"],
+  "initial_findings": {"red": 0, "orange": 9, "yellow": 14},
+  "human_editor_dispositions": {
+    "O1_Phil_1_5_6": "retain Phil.1.5; in Phil.1.6 change only 'finished' to 'completely finished'",
+    "O2_Phil_1_12": "retain unchanged",
+    "O3_Phil_2_6": "retain unchanged",
+    "O4_Phil_2_13": "adopt exact Human Editor wording",
+    "O5_Phil_2_30": "adopt exact Human Editor wording",
+    "O6_Phil_3_12": "retain unchanged",
+    "O7_Phil_3_17": "retain unchanged",
+    "O8_Phil_4_6_7": "retain unchanged",
+    "O9_Phil_4_9": "retain unchanged",
+    "yellow_findings": "retain all unchanged"
+  },
+  "changed_verses": {
+    "Phil.1.6": "I am certain that God, who began this good work in you, will continue it until it is completely finished on the day Christ Jesus returns.",
+    "Phil.2.13": "For God is at work in all of you. He gives you both the desire and the power to live in a way that pleases Him.",
+    "Phil.2.30": "His work for Christ nearly cost him his life. He stepped in to serve me in person when distance kept you from doing so."
+  },
+  "unchanged_confirmed": ["Phil.3.17", "all other verses"],
+  "focused_recheck": {
+    "date": "2026-08-10",
+    "scope": ["Phil.1.3-11", "Phil.2.12-18", "Phil.2.25-3.2"],
+    "comparison_versions_checked": 8,
+    "unresolved_red": 0,
+    "unresolved_orange": 0,
+    "result": "complete",
+    "notes": {
+      "Phil.1.6": "Human Editor retained the independently recorded FLT sentence and made one surgical completion-wording change. Similarity is source-constrained and the retained wording was expressly adjudicated; no wider single-version dependence was found in the paragraph.",
+      "Phil.2.13": "The collective 'all of you' and 'live in a way' expression preserve the approved communal and life-conduct sense. Remaining desire/power/pleasing language is strongly constrained by the Greek and dispersed among multiple translations.",
+      "Phil.2.30": "The two-sentence form and distance/person service explanation are independently expressed and do not reproduce the implicated NLT or NIV sentence design."
+    }
+  },
+  "comparison_sources": {
+    "NLT_NIV_CSB_ESV_NASB_CEV_GNT": "Bible Hub parallel displays",
+    "MSG": "Bible Gateway normal passage display",
+    "comparison_corpus_retained": false
+  },
+  "human_editor_authority": true,
+  "completed_at": "2026-08-10"
+}
