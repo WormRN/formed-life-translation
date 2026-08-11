@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "manifest_revision": 14,
+  "manifest_revision": 15,
   "last_updated": "2026-08-11",
   "unit": {
     "unit_id": "COL-01-001-014",
@@ -28,20 +28,19 @@
     "circuit_breaker_spec": "docs/architecture/phase-4/FLT_Autonomous_Circuit_Breaker_v1.md"
   },
   "state": {
-    "status": "running",
-    "phase": "human_editor_smoothing_running",
-    "active_job_id": "COL-01-001-014-HUMAN-SMOOTHING-01",
+    "status": "blocked",
+    "phase": "oral_smoothing_halted",
+    "active_job_id": null,
     "active_run_id": "31521483950",
     "translation_allowed": false,
     "candidate_generation_allowed": false,
-    "provider_dispatch_allowed": true,
+    "provider_dispatch_allowed": false,
     "github_workflow_dispatch_allowed": false,
     "translation_artifact_mutation_allowed": false,
-    "next_permitted_action": "await verified oral-smoothing completion or exact cancel"
+    "next_permitted_action": "inspect verified smoothing halt evidence; Human Editor unlock required for any retry"
   },
   "allowed_actions": [
     "flt status COL-01-001-014",
-    "flt cancel COL-01-001-014 --job COL-01-001-014-HUMAN-SMOOTHING-01 --expected-revision 14",
     "read_only_repository_inspection"
   ],
   "forbidden_actions": [
@@ -120,7 +119,7 @@
     "COL-01-001-014-HUMAN-SMOOTHING-01": {
       "idempotency_key": "flt:2.2:COL-01-001-014:human-smoothing:01",
       "job_type": "listener_only_and_source_aware_smoothing",
-      "status": "running",
+      "status": "blocked",
       "authorization_id": "HE-COL-01-001-014-SEAL-SMOOTH-20260811",
       "authorized_by": "human_editor",
       "authorization_scope": "record_exact_human_editor_selection_and_execute_next_required_engine22_smoothing_step",
