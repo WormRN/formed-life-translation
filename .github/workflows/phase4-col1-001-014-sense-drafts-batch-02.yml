@@ -102,7 +102,7 @@ jobs:
           node phase4-harness/scripts/prepare-run-config.mjs phase4-harness/config.github-actions.json /tmp/col.json FLT-COL-01-20260810-1
           npm --prefix phase4-harness ci
           npm --prefix phase4-harness test
-          node -e "import('ajv').then(()=>process.exit(0)).catch(()=>process.exit(1))" --input-type=module
+          (cd phase4-harness && node --input-type=module -e "import('ajv').then(()=>process.exit(0)).catch(()=>process.exit(1))")
 
   claim_running:
     if: >-
