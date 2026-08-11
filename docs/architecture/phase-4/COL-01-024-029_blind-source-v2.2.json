@@ -1,0 +1,224 @@
+{
+  "chapter_id": "COL-01",
+  "book": "Colossians",
+  "chapter": 1,
+  "source_edition": "SBLGNT",
+  "tone": "pastoral, sacrificial, revelatory, mission-focused, and strenuous",
+  "target_reader": "religion-naive adults and older adolescents near grade 6",
+  "translation_identity": "firmly dynamic-equivalence, NLT-like in readability but independent",
+  "test_purpose": "Fresh Engine 2.2 passage-sense-resolution preparation of Colossians 1:24-29",
+  "sealed_context": {
+    "prior_flt_wording_present": false,
+    "prior_candidates_present": false,
+    "comparison_translations_present": false,
+    "conversational_drafts_present": false,
+    "editor_benchmark_present": false,
+    "instruction": "Translate from the SBLGNT and this source-side passage-sense brief only. Do not reconstruct, imitate, or refer to accepted Colossians wording, previous candidates, comparison translations, or conversation drafts."
+  },
+  "governing_rules": [
+    "Passage-sense resolution precedes English composition. Follow the completed source-side brief and expose genuinely viable alternatives in the review apparatus.",
+    "All three candidates pursue the same constitutional goal; no provider receives a readability, fidelity, or blended specialty.",
+    "Write natural English that a religion-naive adult can follow on one hearing; restructure Greek clauses freely while preserving material meaning.",
+    "Do not imply that Christ's atoning suffering was deficient when translating Colossians 1:24; preserve Paul's claim that his present sufferings participate in or fill out the afflictions connected with Christ for the sake of Christ's body.",
+    "Render opaque institutional or theological vocabulary by meaning where possible, but preserve important biblical images and links.",
+    "Preserve the hidden-now-revealed movement of the mystery language and its Gentile scope.",
+    "Preserve the repeated every-person language in verse 28 as rhetorical emphasis without producing mechanical English.",
+    "Preserve the effort/power contrast in verse 29: Paul toils and struggles, yet the effective power working in him is God's/Christ's.",
+    "Under the FLT note architecture, [rn] aids ordinary-reader comprehension, [tn] records source transparency for Study/Scholarly editions, and [dl] remains internal only.",
+    "No prior FLT wording, comparison translation, editor benchmark, or conversation draft may enter blind drafting."
+  ],
+  "existing_decisions": [
+    "Capitalize pronouns referring to deity.",
+    "Use clear reader-facing English for theological vocabulary while preserving consequential theological anchors.",
+    "Render church vocabulary by meaning when a traditional label would be opaque.",
+    "Footnote concerns must be classified as [rn], [tn], or [dl] rather than automatically inserted into the standard reading edition.",
+    "The Human Editor alone selects, synthesizes, approves smoothing changes, resolves retained alternatives, and finalizes wording."
+  ],
+  "matrix_alerts": [
+    {"lemma":"ἀνταναπληρόω / θλῖψις","status":"high-risk theological expression","neutral_range":"fill up in turn/complete what remains; affliction, distress, suffering","instruction":"Do not suggest deficiency in Christ's atoning death; keep Paul's own embodied suffering for the church central and expose the major interpretive alternatives."},
+    {"lemma":"οἰκονομία","status":"contextual review","neutral_range":"stewardship, administration, entrusted commission","instruction":"Prefer an understandable entrusted-service sense over an opaque institutional term."},
+    {"lemma":"πληρόω τὸν λόγον","status":"contextual review","neutral_range":"fulfill, complete, bring to full expression the word/message","instruction":"Do not imply Paul completes Scripture canonically; preserve the sense of carrying out God's word/message in his commission."},
+    {"lemma":"μυστήριον","status":"weighted theological term","neutral_range":"secret or divine plan once hidden and now revealed","instruction":"Avoid a modern puzzle/mystery sense; preserve the hidden-then-revealed movement."},
+    {"lemma":"Χριστὸς ἐν ὑμῖν","status":"meaningful ambiguity","neutral_range":"Christ in you (plural); Christ among you","instruction":"Retain both viable individual/corporate or among-the-Gentiles readings for Human Editor review."},
+    {"lemma":"τέλειος","status":"religion-naive vocabulary","neutral_range":"complete, mature, brought to intended goal","instruction":"Do not imply sinless perfection if context supports maturity/completeness."},
+    {"lemma":"κοπιάω / ἀγωνίζομαι / ἐνέργεια","status":"rhetorical-force link","neutral_range":"toil; struggle/strive; effective working/power","instruction":"Preserve Paul's strenuous effort and the stronger divine energy working powerfully in him."}
+  ],
+  "units": [
+    {
+      "unit_id": "COL-01-024-029",
+      "passage": "Colossians 1:24-29",
+      "title": "Paul's suffering, stewardship, revealed mystery, and labor for maturity in Christ",
+      "known_issues": [
+        "Verse 24 is the principal theological pressure point: 'what is lacking in Christ's afflictions' must not be allowed to sound as though Christ's atoning death was insufficient.",
+        "The body/church link continues from verse 18 and helps identify Paul's suffering as ministry for Christ's people.",
+        "Verse 25 combines Paul's servant role, an entrusted stewardship/commission from God, and the difficult phrase about fulfilling/completing God's word.",
+        "Verses 26-27 define the mystery as something hidden for ages and generations but now revealed, especially among the Gentiles; modern English 'mystery' may suggest a puzzle rather than a revealed divine secret/plan.",
+        "Christ in you/among you in verse 27 is genuinely open enough to require review apparatus rather than silent premature resolution.",
+        "Verse 28 repeats every person three times and moves through proclamation, warning/admonition, teaching, wisdom, and the purpose of presenting everyone mature/complete in Christ.",
+        "Verse 29 deliberately joins Paul's exhausting labor and struggle to the effective divine power operating powerfully in him."
+      ],
+      "verses": [
+        {"reference":"Col.1.24","greek":"Νῦν χαίρω ἐν τοῖς παθήμασιν ὑπὲρ ὑμῶν καὶ ἀνταναπληρῶ τὰ ὑστερήματα τῶν θλίψεων τοῦ Χριστοῦ ἐν τῇ σαρκί μου ὑπὲρ τοῦ σώματος αὐτοῦ, ὅ ἐστιν ἡ ἐκκλησία,"},
+        {"reference":"Col.1.25","greek":"ἧς ἐγενόμην ἐγὼ διάκονος κατὰ τὴν οἰκονομίαν τοῦ θεοῦ τὴν δοθεῖσάν μοι εἰς ὑμᾶς πληρῶσαι τὸν λόγον τοῦ θεοῦ,"},
+        {"reference":"Col.1.26","greek":"τὸ μυστήριον τὸ ἀποκεκρυμμένον ἀπὸ τῶν αἰώνων καὶ ἀπὸ τῶν γενεῶν—νῦν δὲ ἐφανερώθη τοῖς ἁγίοις αὐτοῦ,"},
+        {"reference":"Col.1.27","greek":"οἷς ἠθέλησεν ὁ θεὸς γνωρίσαι τί τὸ πλοῦτος τῆς δόξης τοῦ μυστηρίου τούτου ἐν τοῖς ἔθνεσιν, ὅ ἐστιν Χριστὸς ἐν ὑμῖν, ἡ ἐλπὶς τῆς δόξης·"},
+        {"reference":"Col.1.28","greek":"ὃν ἡμεῖς καταγγέλλομεν νουθετοῦντες πάντα ἄνθρωπον καὶ διδάσκοντες πάντα ἄνθρωπον ἐν πάσῃ σοφίᾳ, ἵνα παραστήσωμεν πάντα ἄνθρωπον τέλειον ἐν Χριστῷ·"},
+        {"reference":"Col.1.29","greek":"εἰς ὃ καὶ κοπιῶ ἀγωνιζόμενος κατὰ τὴν ἐνέργειαν αὐτοῦ τὴν ἐνεργουμένην ἐν ἐμοὶ ἐν δυνάμει."}
+      ]
+    }
+  ],
+  "passage_sense_resolution": {
+    "gate_version": "2.2",
+    "status": "complete_for_blind_drafting",
+    "visibility_attestation": {
+      "source_side_only": true,
+      "prior_flt_wording_absent": true,
+      "prior_candidates_absent": true,
+      "editor_benchmark_absent": true,
+      "comparison_translations_absent": true
+    },
+    "passage_argument": [
+      "Paul rejoices in suffering for the Colossians and for Christ's body, the church, understanding his costly ministry as participation in the afflictions associated with Christ and His people.",
+      "Paul's ministry is an entrusted stewardship from God whose message is the once-hidden but now-revealed mystery, richly disclosed among the Gentiles as Christ in/among them, the hope of glory.",
+      "Paul proclaims Christ, warns and teaches every person toward maturity in Christ, laboring strenuously with the powerful divine energy working in him."
+    ],
+    "proposition_map": [
+      {"references":["Col.1.24"],"proposition":"Paul now rejoices in sufferings for the Colossians and fills up in his own body what remains of the afflictions associated with Christ for the sake of Christ's body, the church."},
+      {"references":["Col.1.25"],"proposition":"Paul became a servant of the church according to God's stewardship/commission entrusted to him for the Colossians, in order to fulfill or bring God's word/message to full expression."},
+      {"references":["Col.1.26"],"proposition":"That word/message concerns the mystery hidden from ages and generations but now revealed to God's holy people."},
+      {"references":["Col.1.27"],"proposition":"God chose to make known among the Gentiles the glorious riches of this mystery: Christ in/among them, the hope of glory."},
+      {"references":["Col.1.28"],"proposition":"Paul and his coworkers proclaim Christ, warning and teaching every person with all wisdom so that they may present every person mature/complete in Christ."},
+      {"references":["Col.1.29"],"proposition":"Paul toils and struggles toward this goal according to the powerful divine energy effectively working in him."}
+    ],
+    "expressions": [
+      {
+        "sense_id":"COL1-AFFLICTIONS-CHRIST",
+        "references":["Col.1.24"],
+        "source_expression":"ἀνταναπληρῶ τὰ ὑστερήματα τῶν θλίψεων τοῦ Χριστοῦ",
+        "status":"alternatives_retained",
+        "contextual_function":"Paul interprets his apostolic suffering for the church in relation to Christ's afflictions without discussing insufficiency in Christ's atoning death.",
+        "primary_sense":"Paul's present sufferings fill out the afflictions still to be borne in Christ-related ministry for His body, the church; they do not supplement a deficient atonement.",
+        "viable_alternatives":["Paul fills up in his own ministry suffering what remains of the afflictions belonging to Christ's mission/body","Paul participates in the eschatological or messianic afflictions that remain before God's purposes are complete"],
+        "discourse_evidence":"The suffering is explicitly in Paul's own flesh and for Christ's body, the church; the preceding passage has already grounded reconciliation in the Son's physical death and blood of the cross.",
+        "reading_text_guidance":"Use clear English that keeps Paul's suffering, its representative relation to Christ, and its benefit for the church while avoiding any implication that the cross failed to accomplish reconciliation.",
+        "literal_note_guidance":"[rn] Explain that Paul's phrase about what is 'lacking' in Christ's afflictions refers to sufferings still borne in Christ's service/by His people, not a deficiency in Christ's saving death.",
+        "choice_risks":"A bare literal rendering can sound heretical or imply deficient atonement; an over-explanation can settle a debated interpretation too narrowly.",
+        "human_decision_required":true,
+        "reader_note_required":true,
+        "audit_text_and_note_together":true
+      },
+      {
+        "sense_id":"COL1-STEWARDSHIP",
+        "references":["Col.1.25"],
+        "source_expression":"κατὰ τὴν οἰκονομίαν τοῦ θεοῦ τὴν δοθεῖσάν μοι",
+        "status":"resolved",
+        "contextual_function":"describes Paul's ministry as an entrusted responsibility from God for the benefit of the Colossians",
+        "primary_sense":"God entrusted Paul with a stewardship/commission of service directed toward them",
+        "viable_alternatives":[],
+        "discourse_evidence":"The phrase explains how Paul became a servant and specifies that the responsibility was given to him for them.",
+        "reading_text_guidance":"Render the entrusted commission naturally; avoid opaque administrative jargon.",
+        "literal_note_guidance":"[tn] A study note may identify the underlying stewardship/administration term if useful.",
+        "choice_risks":"Office-like language can obscure the personal divine entrustment.",
+        "human_decision_required":false,
+        "reader_note_required":false,
+        "audit_text_and_note_together":false
+      },
+      {
+        "sense_id":"COL1-FULFILL-WORD",
+        "references":["Col.1.25","Col.1.26"],
+        "source_expression":"πληρῶσαι τὸν λόγον τοῦ θεοῦ, τὸ μυστήριον",
+        "status":"alternatives_retained",
+        "contextual_function":"states the purpose of Paul's entrusted ministry in relation to God's word/message, immediately identified with the once-hidden mystery",
+        "primary_sense":"Paul is commissioned to carry God's message to its intended full proclamation/fulfillment among those to whom he is sent",
+        "viable_alternatives":["fulfill God's word in the sense of carrying out the commission","fully proclaim or bring God's message to full expression"],
+        "discourse_evidence":"The appositional mystery in verse 26 supplies the content of the word, and verses 27-28 emphasize making it known and proclaiming Christ.",
+        "reading_text_guidance":"Avoid wording that suggests Paul completes the biblical canon or fixes an incomplete divine message.",
+        "literal_note_guidance":"[tn] Explain the literal fulfill/complete language and its contextual link to Paul's entrusted proclamation.",
+        "choice_risks":"'Complete God's word' can be misunderstood canonically; 'preach' alone may erase the fulfill/fullness wordplay.",
+        "human_decision_required":true,
+        "reader_note_required":false,
+        "audit_text_and_note_together":false
+      },
+      {
+        "sense_id":"COL1-MYSTERY",
+        "references":["Col.1.26","Col.1.27"],
+        "source_expression":"τὸ μυστήριον ... νῦν δὲ ἐφανερώθη",
+        "status":"resolved",
+        "contextual_function":"names a divine reality/plan formerly concealed but now disclosed by God",
+        "primary_sense":"a divine secret or plan once hidden across ages and generations but now revealed",
+        "viable_alternatives":[],
+        "discourse_evidence":"Paul explicitly contrasts being hidden in prior ages and generations with being revealed now.",
+        "reading_text_guidance":"If 'mystery' is retained, context must immediately prevent the modern puzzle/detective sense; otherwise render the hidden-and-revealed meaning naturally.",
+        "literal_note_guidance":"[tn] If dynamically rendered, identify the traditional term 'mystery' in the study layer.",
+        "choice_risks":"Modern 'mystery' can suggest something unknowable even after revelation; over-paraphrase can erase a major Pauline term.",
+        "human_decision_required":false,
+        "reader_note_required":false,
+        "audit_text_and_note_together":false
+      },
+      {
+        "sense_id":"COL1-CHRIST-IN-AMONG-YOU",
+        "references":["Col.1.27"],
+        "source_expression":"Χριστὸς ἐν ὑμῖν",
+        "status":"alternatives_retained",
+        "contextual_function":"identifies the revealed mystery in relation to Gentile believers using a plural second-person construction",
+        "primary_sense":"Christ is present in/among the Gentile believers, constituting their hope of glory",
+        "viable_alternatives":["Christ in you, emphasizing indwelling with a plural audience","Christ among you, emphasizing Christ's presence among Gentiles/the community"],
+        "discourse_evidence":"The immediately preceding phrase highlights the mystery among the Gentiles and the pronoun is plural.",
+        "reading_text_guidance":"Choose one natural reading for the body text but expose the viable in/among alternative to the Human Editor.",
+        "literal_note_guidance":"[tn] Record that the Greek preposition with plural 'you' can support both in you and among you in this context.",
+        "choice_risks":"'In you' may be heard only individualistically; 'among you' may understate indwelling language familiar from Pauline theology.",
+        "human_decision_required":true,
+        "reader_note_required":false,
+        "audit_text_and_note_together":false
+      },
+      {
+        "sense_id":"COL1-HOPE-GLORY",
+        "references":["Col.1.27"],
+        "source_expression":"ἡ ἐλπὶς τῆς δόξης",
+        "status":"resolved",
+        "contextual_function":"describes Christ in/among believers as the basis or content of confident expectation of glory",
+        "primary_sense":"Christ's presence grounds the confident hope of future glory",
+        "viable_alternatives":[],
+        "discourse_evidence":"Hope is linked to the revealed Christ-centered mystery and echoes the letter's earlier hope language.",
+        "reading_text_guidance":"Preserve the hope/glory connection without turning hope into uncertainty.",
+        "literal_note_guidance":"[tn] Study apparatus may explain glory if the reading text requires unpacking.",
+        "choice_risks":"Ordinary 'hope' can sound doubtful; adding certainty too aggressively can over-explain.",
+        "human_decision_required":false,
+        "reader_note_required":false,
+        "audit_text_and_note_together":false
+      },
+      {
+        "sense_id":"COL1-EVERY-PERSON-MATURE",
+        "references":["Col.1.28"],
+        "source_expression":"πάντα ἄνθρωπον ... πάντα ἄνθρωπον ... πάντα ἄνθρωπον τέλειον",
+        "status":"resolved",
+        "contextual_function":"threefold repetition universalizes Paul's pastoral aim and builds rhetorical emphasis",
+        "primary_sense":"Paul's proclamation, warning, and teaching are directed to every person so that every person may be presented mature/complete in Christ",
+        "viable_alternatives":[],
+        "discourse_evidence":"The same phrase is repeated three times across the means and purpose clauses.",
+        "reading_text_guidance":"Preserve or functionally recreate the threefold universal emphasis; render τέλειος as mature/complete rather than sinlessly perfect unless context demands otherwise.",
+        "literal_note_guidance":"No standard reader note is required if the body text communicates maturity clearly.",
+        "choice_risks":"Eliminating repetition weakens Paul's emphasis; 'perfect' misleads many religion-naive readers.",
+        "human_decision_required":false,
+        "reader_note_required":false,
+        "audit_text_and_note_together":false
+      },
+      {
+        "sense_id":"COL1-TOIL-DIVINE-ENERGY",
+        "references":["Col.1.29"],
+        "source_expression":"κοπιῶ ἀγωνιζόμενος κατὰ τὴν ἐνέργειαν αὐτοῦ τὴν ἐνεργουμένην ἐν ἐμοὶ ἐν δυνάμει",
+        "status":"resolved",
+        "contextual_function":"closes the paragraph by joining Paul's strenuous personal effort with the effective divine power operating in him",
+        "primary_sense":"Paul works to exhaustion and struggles according to the divine energy that powerfully works in him",
+        "viable_alternatives":[],
+        "discourse_evidence":"The cognate energy/working repetition intensifies the contrast and cooperation between Paul's labor and divine enablement.",
+        "reading_text_guidance":"Use vigorous but natural English; retain both Paul's real effort and the stronger divine power at work in him.",
+        "literal_note_guidance":"[tn] A study note may preserve the repeated energy/working lexical link if English variation is needed.",
+        "choice_risks":"Flattening to 'work hard' loses struggle and divine agency; language that removes Paul's effort also distorts the verse.",
+        "human_decision_required":false,
+        "reader_note_required":false,
+        "audit_text_and_note_together":false
+      }
+    ]
+  }
+}
