@@ -1,19 +1,33 @@
-name: FLT Colossians 1:15-23 final exact-candidate audit bootstrap
+name: FLT Colossians 1:15-23 final exact-candidate audit
+run-name: Colossians 1:15-23 final English reconstruction and semantic-floor audit
 
 on:
   pull_request:
     branches: [main]
     paths:
       - '.github/workflows/phase4-col1-015-023-final-exact-audit.yml'
-      - 'docs/architecture/phase-4/COL-01-015-023_human-final-v2.2.json'
-      - 'docs/architecture/phase-4/COL-01-015-023_human-final-seal-v2.2.json'
-      - 'config/passages/COL-01-015-023.json'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/phase4-col1-015-023-final-exact-audit.yml'
 
-permissions: {contents: read}
+permissions:
+  contents: write
+
+concurrency:
+  group: flt-col-01-015-023-final-exact-audit
+  cancel-in-progress: false
+
+env:
+  TASK_ID: COL-01-015-023-EXACT-AUDIT-01
+  AUTHORIZATION_ID: HE-COL-01-015-023-REPAIR-AUDIT-20260811
+  LAUNCH_NONCE: HE-COL-01-015-023-EXACT-AUDIT-20260811-01
+  EXPECTED_MANIFEST_REVISION: '7'
 
 jobs:
   validate:
-    name: Bootstrap repaired exact-candidate audit — zero provider calls
+    if: github.event_name == 'pull_request'
+    name: Validate repaired exact-candidate audit with zero provider calls
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -23,13 +37,145 @@ jobs:
           node-version: 24
           cache: npm
           cache-dependency-path: phase4-harness/package-lock.json
-      - name: Validate repaired candidate, seal, manifest, source, and harness
+      - name: Validate seal, manifest, source and harness
         shell: bash
         run: |
           set -euo pipefail
-          jq -e '.manifest_revision == 7 and .state.status == "ready" and .jobs["COL-01-015-023-EXACT-AUDIT-01"].status == "authorized_ready" and .jobs["COL-01-015-023-EXACT-AUDIT-01"].provider_attempts_used == 0 and .jobs["COL-01-015-023-EXACT-AUDIT-01"].checkpoints_to_restore == 0' config/passages/COL-01-015-023.json
-          jq -e '.candidate_id == "COL-01-015-023-HUMAN-FINAL-V2.2" and .status == "human_approved_post_smoothing_candidate_pending_exact_semantic_audit" and (.verse_renderings|length)==9' docs/architecture/phase-4/COL-01-015-023_human-final-v2.2.json
-          jq -e '.candidate_id == "COL-01-015-023-HUMAN-FINAL-V2.2" and .human_approved == true and .reading_text_sha256 == "9da7948c974dcf904b41d2abd50eceb8e18b3a27fb3d09c1e20b48441d02f2f1" and .candidate_material_sha256 == "dab9f28e76686d82ee9d9dead9df440cd03a64176a0b81c5d5cbfb48e84c95a4"' docs/architecture/phase-4/COL-01-015-023_human-final-seal-v2.2.json
-          jq -e '.units[0].unit_id == "COL-01-015-023" and (.units[0].verses|length)==9 and .passage_sense_resolution.status == "complete_for_blind_drafting"' docs/architecture/phase-4/COL-01-015-023_blind-source-v2.2.json
+          jq -e --arg task "$TASK_ID" --arg auth "$AUTHORIZATION_ID" --arg nonce "$LAUNCH_NONCE" --argjson rev "$EXPECTED_MANIFEST_REVISION" '.manifest_revision==$rev and .unit.unit_id=="COL-01-015-023" and .unit.engine_version=="2.2" and .state.status=="ready" and .state.active_job_id==null and .state.provider_dispatch_allowed==true and .jobs[$task].status=="authorized_ready" and .jobs[$task].authorization_id==$auth and .jobs[$task].provider_attempts_used==0 and .jobs[$task].checkpoints_to_restore==0 and .jobs[$task].max_attempts_per_worker==2 and .jobs[$task].task_max_attempts==8 and .jobs[$task].launch.nonce==$nonce and .jobs[$task].launch.status=="armed" and .jobs[$task].launch.expected_manifest_revision==$rev' config/passages/COL-01-015-023.json
+          jq -e '.candidate_id=="COL-01-015-023-HUMAN-FINAL-V2.2" and .status=="human_approved_post_smoothing_candidate_pending_exact_semantic_audit" and (.verse_renderings|length)==9' docs/architecture/phase-4/COL-01-015-023_human-final-v2.2.json
+          jq -e '.candidate_id=="COL-01-015-023-HUMAN-FINAL-V2.2" and .human_approved==true and .reading_text_sha256=="9da7948c974dcf904b41d2abd50eceb8e18b3a27fb3d09c1e20b48441d02f2f1" and .candidate_material_sha256=="dab9f28e76686d82ee9d9dead9df440cd03a64176a0b81c5d5cbfb48e84c95a4"' docs/architecture/phase-4/COL-01-015-023_human-final-seal-v2.2.json
           npm --prefix phase4-harness ci
           npm --prefix phase4-harness test
+
+  claim_running:
+    if: >-
+      github.event_name == 'push' &&
+      !startsWith(github.event.head_commit.message, 'Record Colossians 1:15-23 final audit running state') &&
+      !startsWith(github.event.head_commit.message, 'Record Colossians 1:15-23 final audit completion') &&
+      !startsWith(github.event.head_commit.message, 'Record Colossians 1:15-23 final audit halt')
+    name: Claim one-shot final audit launch
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    outputs:
+      target_sha: ${{ steps.claim.outputs.target_sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: phase4-harness/package-lock.json
+      - name: Credential-free final audit gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          jq -e --arg task "$TASK_ID" --arg auth "$AUTHORIZATION_ID" --arg nonce "$LAUNCH_NONCE" --argjson rev "$EXPECTED_MANIFEST_REVISION" '.manifest_revision==$rev and .state.status=="ready" and .state.active_job_id==null and .jobs[$task].status=="authorized_ready" and .jobs[$task].authorization_id==$auth and .jobs[$task].provider_attempts_used==0 and .jobs[$task].checkpoints_to_restore==0 and .jobs[$task].launch.nonce==$nonce and .jobs[$task].launch.status=="armed" and .jobs[$task].launch.consumed_run_id==null' config/passages/COL-01-015-023.json
+          npm --prefix phase4-harness ci
+          npm --prefix phase4-harness test
+      - name: Atomically consume audit nonce and record running state
+        id: claim
+        shell: bash
+        run: |
+          set -euo pipefail
+          jq --arg task "$TASK_ID" --arg run "$GITHUB_RUN_ID" --arg nonce "$LAUNCH_NONCE" '.manifest_revision=8 | .state.status="running" | .state.phase="final_exact_candidate_audit_running" | .state.active_job_id=$task | .state.active_run_id=$run | .state.provider_dispatch_allowed=true | .state.github_workflow_dispatch_allowed=false | .state.next_permitted_action="await verified final exact-candidate audit completion or exact cancel" | .allowed_actions=["flt status COL-01-015-023","flt cancel COL-01-015-023 --job COL-01-015-023-EXACT-AUDIT-01 --expected-revision 8","read_only_repository_inspection"] | .jobs[$task].status="running" | .jobs[$task].dispatch_confirmed=true | .jobs[$task].remote_run_id=$run | .jobs[$task].retry_allowed=false | .jobs[$task].launch.status="consumed" | .jobs[$task].launch.consumed_run_id=$run | .jobs[$task].launch.consumed_nonce=$nonce' config/passages/COL-01-015-023.json > /tmp/manifest.json
+          mv /tmp/manifest.json config/passages/COL-01-015-023.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- config/passages/COL-01-015-023.json
+          git commit -m "Record Colossians 1:15-23 final audit running state ${GITHUB_RUN_ID}"
+          git push origin HEAD:main
+          echo "target_sha=$GITHUB_SHA" >> "$GITHUB_OUTPUT"
+
+  audit:
+    needs: claim_running
+    if: needs.claim_running.result == 'success'
+    name: Final English reconstruction and Greek semantic-floor audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.claim_running.outputs.target_sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: phase4-harness/package-lock.json
+      - name: Install and test Engine 2.2
+        run: npm --prefix phase4-harness ci && npm --prefix phase4-harness test
+      - name: Create bounded audit config and source packet
+        id: run
+        shell: bash
+        run: |
+          set -euo pipefail
+          run_id="FLT-COL-01-$(date -u +%Y%m%d)-${GITHUB_RUN_NUMBER}"
+          node phase4-harness/scripts/prepare-run-config.mjs phase4-harness/config.github-actions.json phase4-harness/.col1-015-023-final-audit-config.json "$run_id"
+          jq --arg task "$TASK_ID" '.unit_id="COL-01-015-023" | .task_id=$task | .source_packet=".col1-015-023-final-audit-source.json" | .max_attempts=2 | .task_max_attempts=8 | .timeout_ms=300000' phase4-harness/.col1-015-023-final-audit-config.json > /tmp/audit-config.json
+          mv /tmp/audit-config.json phase4-harness/.col1-015-023-final-audit-config.json
+          jq -n --slurpfile brief docs/architecture/phase-4/COL-01-015-023_blind-source-v2.2.json --slurpfile parsed data/source/sblgnt_parsed.json '$brief[0] as $b | $parsed[0] as $p | {source_data:{edition:"SBLGNT",verses:[$b.units[0].verses[] | . as $v | {reference:$v.reference,greek:$v.greek,tokens:$p[$v.reference]}]},governing_rules:$b.governing_rules,matrix_entries:($b.matrix_alerts + $b.passage_sense_resolution.expressions)}' > phase4-harness/.col1-015-023-final-audit-source.json
+          echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
+      - name: Run sealed exact-candidate audit
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node phase4-harness/src/human-candidate-audit.js phase4-harness/.col1-015-023-final-audit-config.json "phase4-harness/runs/${{ steps.run.outputs.run_id }}" docs/architecture/phase-4/COL-01-015-023_human-final-v2.2.json docs/architecture/phase-4/COL-01-015-023_human-final-seal-v2.2.json
+      - name: Upload final audit bundle
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: "${{ steps.run.outputs.run_id || 'FLT-COL-01-015-023-final-audit-blocked' }}-final-audit"
+          path: phase4-harness/runs/
+          retention-days: 30
+
+  record_completion:
+    needs: [claim_running, audit]
+    if: needs.claim_running.result == 'success' && needs.audit.result == 'success'
+    name: Record final audit completion for Human Editor acceptance
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Advance durable state to awaiting Human Editor
+        shell: bash
+        run: |
+          set -euo pipefail
+          git pull --ff-only origin main
+          jq -e --arg task "$TASK_ID" --arg run "$GITHUB_RUN_ID" '.manifest_revision==8 and .state.status=="running" and .state.active_job_id==$task and .state.active_run_id==$run' config/passages/COL-01-015-023.json
+          jq --arg task "$TASK_ID" --arg run "$GITHUB_RUN_ID" '.manifest_revision=9 | .state.status="awaiting_human_editor" | .state.phase="final_exact_candidate_audit_complete_pending_acceptance" | .state.active_job_id=null | .state.active_run_id=$run | .state.provider_dispatch_allowed=false | .state.github_workflow_dispatch_allowed=false | .state.next_permitted_action="retrieve verified final exact-audit artifact; if no blocks, apply Human Editor acceptance and advance to Colossians 1:24-29" | .allowed_actions=["flt status COL-01-015-023","retrieve verified final exact-audit artifact","read_only_repository_inspection"] | .jobs[$task].status="awaiting_human_editor" | .jobs[$task].remote_run_id=$run' config/passages/COL-01-015-023.json > /tmp/manifest.json
+          mv /tmp/manifest.json config/passages/COL-01-015-023.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- config/passages/COL-01-015-023.json
+          git commit -m "Record Colossians 1:15-23 final audit completion ${GITHUB_RUN_ID}"
+          git push origin HEAD:main
+
+  record_halt:
+    needs: [claim_running, audit]
+    if: always() && needs.claim_running.result == 'success' && needs.audit.result != 'success'
+    name: Record final audit halted state
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Advance durable state to blocked
+        shell: bash
+        run: |
+          set -euo pipefail
+          git pull --ff-only origin main
+          jq -e --arg task "$TASK_ID" --arg run "$GITHUB_RUN_ID" '.manifest_revision==8 and .state.status=="running" and .state.active_job_id==$task and .state.active_run_id==$run' config/passages/COL-01-015-023.json
+          jq --arg task "$TASK_ID" --arg run "$GITHUB_RUN_ID" '.manifest_revision=9 | .state.status="blocked" | .state.phase="final_exact_candidate_audit_halted" | .state.active_job_id=null | .state.active_run_id=$run | .state.provider_dispatch_allowed=false | .state.github_workflow_dispatch_allowed=false | .state.next_permitted_action="inspect verified final audit halt evidence; Human Editor unlock required for any retry" | .allowed_actions=["flt status COL-01-015-023","read_only_repository_inspection"] | .jobs[$task].status="blocked" | .jobs[$task].remote_run_id=$run | .jobs[$task].retry_allowed=false' config/passages/COL-01-015-023.json > /tmp/manifest.json
+          mv /tmp/manifest.json config/passages/COL-01-015-023.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- config/passages/COL-01-015-023.json
+          git commit -m "Record Colossians 1:15-23 final audit halt ${GITHUB_RUN_ID}"
+          git push origin HEAD:main
