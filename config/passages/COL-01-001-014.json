@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "manifest_revision": 20,
+  "manifest_revision": 21,
   "last_updated": "2026-08-11",
   "unit": {
     "unit_id": "COL-01-001-014",
@@ -27,20 +27,20 @@
     "circuit_breaker_spec": "docs/architecture/phase-4/FLT_Autonomous_Circuit_Breaker_v1.md"
   },
   "state": {
-    "status": "running",
-    "phase": "final_exact_candidate_audit_running",
-    "active_job_id": "COL-01-001-014-EXACT-AUDIT-01",
+    "status": "awaiting_human_editor",
+    "phase": "final_exact_candidate_audit_complete_pending_acceptance",
+    "active_job_id": null,
     "active_run_id": "31526453016",
     "translation_allowed": false,
     "candidate_generation_allowed": false,
-    "provider_dispatch_allowed": true,
+    "provider_dispatch_allowed": false,
     "github_workflow_dispatch_allowed": false,
     "translation_artifact_mutation_allowed": false,
-    "next_permitted_action": "await verified final exact-candidate audit completion or exact cancel"
+    "next_permitted_action": "retrieve verified final exact-audit artifact; if no blocks, apply already-supplied Human Editor acceptance"
   },
   "allowed_actions": [
     "flt status COL-01-001-014",
-    "flt cancel COL-01-001-014 --job COL-01-001-014-EXACT-AUDIT-01 --expected-revision 20",
+    "retrieve verified final exact-audit artifact",
     "read_only_repository_inspection"
   ],
   "forbidden_actions": [
@@ -86,7 +86,7 @@
     "COL-01-001-014-EXACT-AUDIT-01": {
       "idempotency_key": "flt:2.2:COL-01-001-014:exact-audit:01",
       "job_type": "english_reconstruction_and_semantic_floor_exact_candidate_audit",
-      "status": "running",
+      "status": "awaiting_human_editor",
       "authorization_id": "HE-COL-01-001-014-FINAL-ACCEPT-20260811",
       "authorized_by": "human_editor",
       "authorization_scope": "audit exact post-smoothing Human Editor final text as required final Engine 2.2 gate before terminal acceptance",
