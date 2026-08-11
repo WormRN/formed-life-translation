@@ -1,14 +1,17 @@
 # Autonomous Circuit Breaker v1
 
-**Authority:** Human Editor approved 2026-08-08.  
-**Purpose:** Prevent a provider, workflow, or external-service failure from becoming an unbounded autonomous recovery loop.
+**Authority:** Human Editor approved 2026-08-08; manifest-authorized one-shot push launch approved 2026-08-10.  
+**Purpose:** Prevent a provider, workflow, or external-service failure from becoming an unbounded autonomous recovery loop while allowing the primary assistant to launch an exactly authorized job without requiring the Human Editor to operate GitHub.
 
 ## Production authorization
 
-1. Every paid workflow must use `workflow_dispatch` only. A pull request, push, merge, workflow-file repair, or receipt write must never launch a provider call.
-2. A production dispatch must identify an immutable commit SHA, an explicit task ID, and the authorized task budget.
-3. A failed production task is halted. No workflow-level relaunch, rerun, or recovery call is authorized without an explicit Human Editor unlock naming that task and failed operation.
-4. Completed Philippians workflows are archived. A new task requires a new Human-Editor-authorized workflow or an explicitly reviewed reactivation PR.
+1. Paid workflows may use either `workflow_dispatch` or a manifest-authorized one-shot `push` trigger. A push-triggered paid job is permitted only when the default-branch passage manifest already names the exact job as `authorized_ready`, contains the exact Human Editor authorization ID, records a passed zero-provider-call preflight, permits provider/workflow dispatch, and carries a unique armed launch nonce for that job.
+2. Pull-request validation jobs must make zero provider calls and must not receive provider secrets. A PR or unmerged branch is never authoritative execution state.
+3. For a manifest-authorized one-shot push launch, the first job must be credential-free and must atomically advance the authoritative manifest from `ready` to `running`, recording the exact job ID and GitHub run ID before any provider job is eligible to receive provider credentials. If that state claim cannot be written and verified, the provider job must not run.
+4. A production launch must identify an immutable commit SHA, an explicit task ID, an authorization ID, a manifest revision, and the authorized task budget.
+5. A unique launch nonce is single-use. Once the manifest leaves `ready` or the nonce is marked consumed, later pushes must not launch that job again.
+6. A failed production task is halted. No workflow-level relaunch, rerun, or recovery call is authorized without an explicit Human Editor unlock naming that task and failed operation.
+7. Completed Philippians workflows remain archived. A new task requires a new Human-Editor-authorized workflow or an explicitly reviewed reactivation PR.
 
 ## Provider budget
 
@@ -59,18 +62,19 @@ A valid unlock must name:
 
 ## Zero-provider-call preflight
 
-Before a paid workflow can be dispatched, validation must confirm:
+Before a paid workflow can be launched, validation must confirm:
 
-- run ID and explicit task ID;
-- immutable commit SHA;
+- explicit task ID, authorization ID, and manifest revision;
+- immutable commit identity or an immutable push commit supplied by GitHub;
 - prompt and schema share one tested output contract;
 - fenced JSON parsing;
 - accepted aliases and normalization rules;
 - mocked outputs pass every schema and semantic assertion;
 - two-attempt worker and eight-attempt task ceilings;
 - restored checkpoint fingerprints and persistent task ledger;
-- manual-only production trigger;
-- no provider secrets are available to pull-request validation jobs; and
+- the exact production trigger mode (`workflow_dispatch` or manifest-authorized one-shot `push`);
+- for one-shot push launch, an armed unique launch nonce and a credential-free state-claim gate that writes `running` before provider secrets are exposed;
+- no provider secrets are available to pull-request validation jobs or the state-claim gate; and
 - a zero-provider-call preflight receipt exists.
 
-No preflight repair commit may itself launch production.
+A preflight repair PR must itself make zero provider calls. A merge may launch production only when the exact job is already authorized in the default-branch manifest and the merge is the intentionally armed one-shot launch event.
