@@ -57,8 +57,8 @@ bootstrap:
 execution_control:
   model: "passage_manifest_state_machine_v1"
   state_machine_spec: "docs/architecture/phase-4/passage-manifest-state-machine-v1.md"
-  current_unit_id: "COL-01-015-023"
-  current_passage_manifest: "config/passages/COL-01-015-023.json"
+  current_unit_id: "COL-01-024-029"
+  current_passage_manifest: "config/passages/COL-01-024-029.json"
   default_branch_state_is_authoritative: true
   chat_history_is_authoritative: false
   branch_and_pull_request_state_is_proposed_only: true
@@ -103,19 +103,19 @@ governing_documents:
 current_checkpoint:
   book: "Colossians"
   chapter: 1
-  current_unit_id: "COL-01-001-014"
-  current_passage: "Colossians 1:1-14"
-  stage: "architecture_repair_paused"
-  candidate_status: "No candidate wording is recognized as current. Batch 01 is quarantined with an unknown terminal outcome; Batch 02 is proposed but not authorized."
+  current_unit_id: "COL-01-024-029"
+  current_passage: "Colossians 1:24-29"
+  stage: "passage_sense_complete_pending_blind_draft_authorization"
+  candidate_status: "No English candidate exists; Engine 2.2 source-side Passage-Sense Resolution Gate is complete. Blind A/B/C drafting requires a separate Human Editor authorization."
   candidate_sealed: false
-  latest_accepted_unit: "Philippians 4:21-23 remains accepted within frozen Philippians v0.9 RC1."
-  next_permitted_action: "Execute only flt status COL-01-001-014 from a clean chat, then flt resume COL-01-001-014 --dry-run --expected-revision 1 if the status report is correct."
+  latest_accepted_unit: "Colossians 1:15-23 accepted after repaired exact candidate passed 3 of 3 semantic-floor auditors with zero blocking defects."
+  next_permitted_action: "Human Editor may review the Colossians 1:24-29 source packet and separately authorize a blind A/B/C drafting job."
   copyright_status: "not_applicable_before_candidate_drafting"
   provisional_heuristic_check: "not_started"
-  source_gate_status: "complete_for_blind_drafting_but_dispatch_paused"
+  source_gate_status: "complete_for_blind_drafting"
   hard_check_required: true
   publication_clearance: false
-  prepublication_requirement: "Complete the ordinary FLT editorial and copyright gates after an exact candidate exists; no Colossians candidate currently exists in durable state."
+  prepublication_requirement: "Complete ordinary FLT editorial gates and deferred hard copyright audit before publication."
   process_revalidation:
     reason: "Earlier blind drafting assigned different readability, Greek-fidelity, and balanced missions instead of one common constitutional goal."
     status: "recovery_completed_all_nine_units_process_revalidated"
@@ -305,6 +305,12 @@ current_checkpoint:
     latest_audit_receipt: "config/latest_audit_run.json"
 
 accepted_units:
+  - passage: "Colossians 1:15-23"
+    status: "Human Editor repaired structural smoothing accepted after final exact-candidate audit: three eligible auditors, zero blocking defects; [rn] notes required at verses 15 and 16, [tn] at verse 19, and [dl] conditional precedent at verse 23; copyright hard check deferred to NT batch."
+    draft_run_id: 31532978974
+    smoothing_run_id: 31539928210
+    audit_run_id: 31543353525
+    audit_artifact: "FLT-COL-01-20260811-3-final-audit"
   - passage: "Colossians 1:1-14"
     status: "ACCEPTED after final Engine 2.2 audit with documented Human Editor note-layer override; [tn]/[rn]/[dl] backlog routed under the Footnote Architecture Process Addendum"
     draft_run_id: 31458938652
