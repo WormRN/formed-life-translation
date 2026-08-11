@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "manifest_revision": 3,
+  "manifest_revision": 4,
   "last_updated": "2026-08-10",
   "unit": {
     "unit_id": "COL-01-001-014",
@@ -28,7 +28,7 @@
   },
   "state": {
     "status": "ready",
-    "phase": "blind_draft_batch_02_authorized_dispatch",
+    "phase": "blind_draft_batch_02_auto_launch_armed",
     "active_job_id": null,
     "active_run_id": null,
     "translation_allowed": false,
@@ -36,18 +36,20 @@
     "provider_dispatch_allowed": true,
     "github_workflow_dispatch_allowed": true,
     "translation_artifact_mutation_allowed": false,
-    "next_permitted_action": "authorized_dispatch COL-01-001-014-BLIND-DRAFT-BATCH-02 --authorization-id HE-COL-BATCH-02 --expected-revision 3"
+    "next_permitted_action": "merge armed Batch 02 auto-launch change; credential-free gate must claim running before provider calls"
   },
   "allowed_actions": [
     "flt status COL-01-001-014",
-    "authorized_dispatch COL-01-001-014-BLIND-DRAFT-BATCH-02 --authorization-id HE-COL-BATCH-02 --expected-revision 3",
-    "flt cancel COL-01-001-014 --job COL-01-001-014-BLIND-DRAFT-BATCH-02 --expected-revision 3",
+    "merge armed Batch 02 auto-launch change",
+    "flt cancel COL-01-001-014 --job COL-01-001-014-BLIND-DRAFT-BATCH-02 --expected-revision 4",
     "read_only_repository_inspection"
   ],
   "forbidden_actions": [
     "translate_colossians_outside_authorized_workflow",
     "generate_candidate_wording_outside_authorized_workflow",
     "dispatch_any_job_other_than_COL-01-001-014-BLIND-DRAFT-BATCH-02",
+    "provider_calls_before_running_state_claim",
+    "reuse_consumed_launch_nonce",
     "modify_translation_artifacts_before_verified_job_completion",
     "modify_or_reopen_philippians",
     "resume_or_rerun_quarantined_job",
@@ -73,7 +75,7 @@
       "status": "authorized_ready",
       "authorization_id": "HE-COL-BATCH-02",
       "authorized_by": "human_editor",
-      "authorization_scope": "exact_job_resume_and_dispatch",
+      "authorization_scope": "exact_job_resume_dispatch_and_one_shot_auto_launch",
       "dispatch_allowed": true,
       "preflight_status": "passed_zero_provider_calls",
       "preflight_receipt": "config/COL-01-001-014_blind-draft-preflight-v02.json",
@@ -82,12 +84,23 @@
       "task_max_attempts": 8,
       "remote_run_id": null,
       "dispatch_confirmed": false,
+      "launch": {
+        "mode": "manifest_authorized_one_shot_push",
+        "nonce": "HE-COL-BATCH-02-AUTO-20260810-01",
+        "status": "armed",
+        "armed_by": "human_editor",
+        "authorization_id": "HE-COL-BATCH-02",
+        "expected_manifest_revision": 4,
+        "consumed_run_id": null
+      },
       "activation_requirements": [
         "clean_resume_test_passed",
         "explicit_human_editor_authorization_for_exact_job_id",
         "matching_manifest_revision",
         "no_active_job",
         "fresh_zero_provider_call_preflight",
+        "unique_armed_launch_nonce",
+        "credential_free_gate_claims_running_before_provider_credentials",
         "workflow_validates_this_passage_manifest_before_provider_credentials_are_available"
       ]
     }
@@ -106,7 +119,7 @@
     ],
     "permitted_transitions": [
       {"from": "paused", "to": "ready", "command": "flt resume", "dispatches": 0},
-      {"from": "ready", "to": "running", "command": "authorized dispatch", "requires_exact_job_authorization": true},
+      {"from": "ready", "to": "running", "command": "authorized dispatch or armed one-shot push state claim", "requires_exact_job_authorization": true},
       {"from": "running", "to": "awaiting_human_editor", "command": "verified job completion"},
       {"from": "awaiting_human_editor", "to": "completed", "command": "human editor acceptance"},
       {"from": "ready", "to": "cancel_requested", "command": "flt cancel"},
@@ -130,6 +143,8 @@
     "A quarantined, cancelled, or completed job can never be resumed or rerun.",
     "Status and dry-run commands make zero provider calls and zero workflow dispatches.",
     "Resume changes paused to ready only; dispatch is a separate authorized transition.",
+    "A manifest-authorized one-shot push must claim running durably before provider credentials are exposed.",
+    "A launch nonce is single-use and cannot launch after the manifest leaves ready.",
     "One failed interactive repository or Actions connection ends that controller operation without an agent-driven retry loop.",
     "A separately authorized provider job retains the Autonomous Circuit Breaker v1 attempt and halt rules.",
     "Remote uncertainty pauses work and is never converted into an inferred result.",
