@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "manifest_revision": 15,
+  "manifest_revision": 16,
   "last_updated": "2026-08-11",
   "unit": {
     "unit_id": "COL-01-001-014",
@@ -28,19 +28,21 @@
     "circuit_breaker_spec": "docs/architecture/phase-4/FLT_Autonomous_Circuit_Breaker_v1.md"
   },
   "state": {
-    "status": "blocked",
-    "phase": "oral_smoothing_halted",
+    "status": "ready",
+    "phase": "human_editor_smoothing_taskid_repair_armed",
     "active_job_id": null,
-    "active_run_id": "31521483950",
+    "active_run_id": null,
     "translation_allowed": false,
     "candidate_generation_allowed": false,
-    "provider_dispatch_allowed": false,
-    "github_workflow_dispatch_allowed": false,
+    "provider_dispatch_allowed": true,
+    "github_workflow_dispatch_allowed": true,
     "translation_artifact_mutation_allowed": false,
-    "next_permitted_action": "inspect verified smoothing halt evidence; Human Editor unlock required for any retry"
+    "next_permitted_action": "validate and merge the authorized task_id repair; one-shot push may relaunch exactly COL-01-001-014-HUMAN-SMOOTHING-01"
   },
   "allowed_actions": [
     "flt status COL-01-001-014",
+    "validate and merge authorized task_id repair for COL-01-001-014-HUMAN-SMOOTHING-01",
+    "flt cancel COL-01-001-014 --job COL-01-001-014-HUMAN-SMOOTHING-01 --expected-revision 16",
     "read_only_repository_inspection"
   ],
   "forbidden_actions": [
@@ -51,6 +53,7 @@
     "reuse_consumed_launch_nonce",
     "modify_human_editor_selected_text_without_explicit_human_approval",
     "restore_checkpoints_from_blind_draft_failures",
+    "restore_checkpoints_from_failed_smoothing_run_31521483950",
     "modify_or_reopen_philippians",
     "resume_or_rerun_quarantined_job",
     "infer_state_or_authorization_from_chat_history",
@@ -87,22 +90,8 @@
       "provider_attempts_used": 4,
       "checkpoints_to_restore": 0,
       "prior_failed_runs": [
-        {
-          "run_id": "31457299123",
-          "failed_operation": "prepare-run-config run-ID validation",
-          "provider_calls_made": 0,
-          "checkpoints_created": 0,
-          "launch_nonce": "HE-COL-BATCH-02-AUTO-20260810-01"
-        },
-        {
-          "run_id": "31458004896",
-          "failed_operation": "chapter-units dependency load before provider calls",
-          "failure_code": "ERR_MODULE_NOT_FOUND",
-          "failure_detail": "ajv unavailable because draft job omitted npm ci",
-          "provider_calls_made": 0,
-          "checkpoints_created": 0,
-          "launch_nonce": "HE-COL-BATCH-02-AUTO-20260810-02"
-        }
+        {"run_id":"31457299123","failed_operation":"prepare-run-config run-ID validation","provider_calls_made":0,"checkpoints_created":0,"launch_nonce":"HE-COL-BATCH-02-AUTO-20260810-01"},
+        {"run_id":"31458004896","failed_operation":"chapter-units dependency load before provider calls","failure_code":"ERR_MODULE_NOT_FOUND","failure_detail":"ajv unavailable because draft job omitted npm ci","provider_calls_made":0,"checkpoints_created":0,"launch_nonce":"HE-COL-BATCH-02-AUTO-20260810-02"}
       ],
       "launch": {
         "mode": "manifest_authorized_one_shot_push",
@@ -119,111 +108,70 @@
     "COL-01-001-014-HUMAN-SMOOTHING-01": {
       "idempotency_key": "flt:2.2:COL-01-001-014:human-smoothing:01",
       "job_type": "listener_only_and_source_aware_smoothing",
-      "status": "blocked",
-      "authorization_id": "HE-COL-01-001-014-SEAL-SMOOTH-20260811",
+      "status": "authorized_ready",
+      "authorization_id": "HE-COL-01-001-014-SMOOTH-TASKID-UNLOCK-20260811",
       "authorized_by": "human_editor",
-      "authorization_scope": "record_exact_human_editor_selection_and_execute_next_required_engine22_smoothing_step",
+      "authorization_scope": "repair missing task_id preflight, authorize one repaired launch, authorize standard provider spending, restore zero checkpoints",
       "dispatch_allowed": true,
       "workflow": ".github/workflows/phase4-col1-001-014-human-smoothing.yml",
       "max_attempts_per_worker": 2,
       "task_max_attempts": 8,
-      "remote_run_id": "31521483950",
-      "dispatch_confirmed": true,
+      "remote_run_id": null,
+      "dispatch_confirmed": false,
       "provider_attempts_used": 0,
       "checkpoints_to_restore": 0,
+      "prior_failed_runs": [
+        {
+          "run_id": "31521483950",
+          "failed_operation": "circuit-breaker preflight before provider request",
+          "failure_code": "MISSING_TASK_ID",
+          "failure_detail": "bounded smoothing run config did not set task_id before oral-smoothing.js",
+          "provider_calls_made": 0,
+          "provider_attempts_used": 0,
+          "checkpoints_created": 0,
+          "launch_nonce": "HE-COL-01-001-014-SMOOTH-20260811-01"
+        }
+      ],
       "launch": {
         "mode": "manifest_authorized_one_shot_push",
-        "nonce": "HE-COL-01-001-014-SMOOTH-20260811-01",
-        "status": "consumed",
+        "nonce": "HE-COL-01-001-014-SMOOTH-20260811-02",
+        "status": "armed",
         "armed_by": "human_editor",
-        "authorization_id": "HE-COL-01-001-014-SEAL-SMOOTH-20260811",
-        "expected_manifest_revision": 13,
-        "consumed_run_id": "31521483950",
-        "consumed_nonce": "HE-COL-01-001-014-SMOOTH-20260811-01"
+        "authorization_id": "HE-COL-01-001-014-SMOOTH-TASKID-UNLOCK-20260811",
+        "expected_manifest_revision": 16,
+        "consumed_run_id": null,
+        "consumed_nonce": null
       },
       "activation_requirements": [
-        "exact Human Editor wording selection recorded",
-        "awaiting_human_editor_to_ready handoff uses new distinct job ID",
-        "matching manifest revision",
+        "exact Human Editor wording selection remains recorded and unchanged",
+        "failed run 31521483950 verified zero provider calls and zero checkpoints",
+        "bounded smoothing run config sets task_id to COL-01-001-014-HUMAN-SMOOTHING-01 before oral-smoothing.js",
+        "matching manifest revision 16",
         "no active job",
-        "zero-call PR validation",
-        "unique armed launch nonce",
+        "fresh zero-provider-call PR validation",
+        "zero checkpoint restore",
+        "unique armed launch nonce HE-COL-01-001-014-SMOOTH-20260811-02",
         "credential-free state claim before provider credentials",
         "2-per-worker and 8-per-task ceilings"
       ],
-      "retry_allowed": false
+      "retry_allowed": true
     }
   },
   "state_machine": {
-    "states": [
-      "paused",
-      "ready",
-      "running",
-      "awaiting_human_editor",
-      "completed",
-      "cancel_requested",
-      "cancel_unverified",
-      "cancelled",
-      "blocked"
-    ],
+    "states": ["paused","ready","running","awaiting_human_editor","completed","cancel_requested","cancel_unverified","cancelled","blocked"],
     "permitted_transitions": [
-      {
-        "from": "paused",
-        "to": "ready",
-        "command": "flt resume",
-        "dispatches": 0
-      },
-      {
-        "from": "ready",
-        "to": "running",
-        "command": "authorized dispatch or armed one-shot push state claim",
-        "requires_exact_job_authorization": true
-      },
-      {
-        "from": "running",
-        "to": "awaiting_human_editor",
-        "command": "verified job completion"
-      },
-      {
-        "from": "awaiting_human_editor",
-        "to": "ready",
-        "command": "explicit Human Editor selection/decision plus authorization of a new distinct next-stage job",
-        "dispatches": 0
-      },
-      {
-        "from": "awaiting_human_editor",
-        "to": "completed",
-        "command": "human editor acceptance when no further required editorial job remains"
-      },
-      {
-        "from": "ready",
-        "to": "cancel_requested",
-        "command": "flt cancel"
-      },
-      {
-        "from": "running",
-        "to": "cancel_requested",
-        "command": "flt cancel"
-      },
-      {
-        "from": "cancel_requested",
-        "to": "cancelled",
-        "command": "verified external cancellation"
-      },
-      {
-        "from": "cancel_requested",
-        "to": "cancel_unverified",
-        "command": "external status unavailable"
-      }
+      {"from":"paused","to":"ready","command":"flt resume","dispatches":0},
+      {"from":"ready","to":"running","command":"authorized dispatch or armed one-shot push state claim","requires_exact_job_authorization":true},
+      {"from":"running","to":"awaiting_human_editor","command":"verified job completion"},
+      {"from":"awaiting_human_editor","to":"ready","command":"explicit Human Editor selection/decision plus authorization of a new distinct next-stage job","dispatches":0},
+      {"from":"awaiting_human_editor","to":"completed","command":"human editor acceptance when no further required editorial job remains"},
+      {"from":"blocked","to":"ready","command":"explicit Human Editor unlock for the exact blocked job after verified halt evidence; preserve cumulative ledger and checkpoints","dispatches":0},
+      {"from":"ready","to":"cancel_requested","command":"flt cancel"},
+      {"from":"running","to":"cancel_requested","command":"flt cancel"},
+      {"from":"cancel_requested","to":"cancelled","command":"verified external cancellation"},
+      {"from":"cancel_requested","to":"cancel_unverified","command":"external status unavailable"}
     ],
-    "forbidden_transitions": [
-      "paused_to_running",
-      "paused_to_completed",
-      "quarantined_to_ready",
-      "quarantined_to_running",
-      "cancelled_to_running",
-      "completed_to_running"
-    ]
+    "forbidden_transitions": ["paused_to_running","paused_to_completed","quarantined_to_ready","quarantined_to_running","cancelled_to_running","completed_to_running"]
   },
   "invariants": [
     "Only the copy on the default branch is authoritative.",
@@ -231,6 +179,7 @@
     "Every logical provider job has a stable job ID and idempotency key.",
     "A quarantined, cancelled, or completed job can never be resumed or rerun.",
     "A Human Editor next-stage handoff must use a new distinct job ID.",
+    "A blocked job may return to ready only under an explicit Human Editor unlock that preserves cumulative attempt accounting and validated checkpoints.",
     "Status and dry-run commands make zero provider calls and zero workflow dispatches.",
     "A manifest-authorized one-shot push must claim running durably before provider credentials are exposed.",
     "A launch nonce is single-use and cannot launch after the manifest leaves ready.",
@@ -247,6 +196,6 @@
     "provider_calls_verified": true,
     "active_run_possible_at_last_check": false,
     "cancellation_issued": false,
-    "reason": "Blind Draft Batch 02 completed successfully in run 31458938652; exact Human Editor selection is now the authoritative editorial input."
+    "reason": "Blind Draft Batch 02 completed successfully in run 31458938652; exact Human Editor selection remains recorded. Smoothing run 31521483950 halted before any provider request because task_id was missing from the bounded run config."
   }
 }

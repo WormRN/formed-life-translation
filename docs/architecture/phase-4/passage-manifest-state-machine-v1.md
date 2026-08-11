@@ -26,11 +26,12 @@ Chat history, memory, attachments, handoff prompts, and UI status indicators are
 | `running` | `awaiting_human_editor` | Verified job completion and durable receipt | 0 |
 | `awaiting_human_editor` | `ready` | Explicit Human Editor selection/decision plus authorization of a new distinct next-stage job | 0 |
 | `awaiting_human_editor` | `completed` | Explicit Human Editor acceptance when no further required editorial job remains | 0 |
+| `blocked` | `ready` | Explicit Human Editor unlock for the exact blocked job after verified halt evidence, preserving cumulative ledger and validated checkpoints | 0 |
 | `ready` or `running` | `cancel_requested` | Exact `flt cancel` | 0 provider calls |
 | `cancel_requested` | `cancelled` | Verified remote cancellation | 0 |
 | `cancel_requested` | `cancel_unverified` | Remote status unavailable after one attempt | 0 |
 
-No command may jump directly from `paused` to `running`. Resume and dispatch are deliberately separate operations. The `awaiting_human_editor` to `ready` handoff may arm only a new distinct job ID; it may not reuse, resume, or rerun the completed job that produced the Human Editor checkpoint.
+No command may jump directly from `paused` to `running`. Resume and dispatch are deliberately separate operations. The `awaiting_human_editor` to `ready` handoff may arm only a new distinct job ID; it may not reuse, resume, or rerun the completed job that produced the Human Editor checkpoint. A `blocked` to `ready` recovery is not a fresh budget: it requires an exact Human Editor unlock for the blocked task, preserves the task's cumulative attempt ledger, restores only explicitly authorized validated checkpoints, and uses a fresh launch nonce.
 
 ## Revision and idempotency
 
@@ -55,6 +56,10 @@ A live resume requires the exact unit ID, exact proposed job ID, matching revisi
 ### Human-editor next-stage handoff
 
 When a completed provider job is `awaiting_human_editor`, an explicit Human Editor wording selection or decision may arm a new distinct next-stage job and transition the passage back to `ready`, provided the authorization is scoped to that new job, the prior job remains terminal/non-reusable, no active job exists, and the new workflow passes the ordinary credential-free dispatch gate.
+
+### Human-editor blocked-job unlock
+
+When a task is `blocked`, recovery to `ready` requires an explicit Human Editor unlock naming the exact task and failed operation, the additional attempt allowance, whether provider spending is authorized, and which checkpoint/ledger state must be restored. Recovery must preserve cumulative provider-attempt accounting, must not reuse the consumed launch nonce, and must pass a fresh zero-provider-call preflight before any provider credential is exposed.
 
 ### Cancel
 
