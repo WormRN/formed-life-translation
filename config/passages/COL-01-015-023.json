@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "manifest_revision": 3,
+  "manifest_revision": 4,
   "last_updated": "2026-08-11",
   "unit": {
     "unit_id": "COL-01-015-023",
@@ -18,34 +18,38 @@
   },
   "artifacts": {
     "source_packet": "docs/architecture/phase-4/COL-01-015-023_blind-source-v2.2.json",
+    "human_editor_synthesis": "docs/architecture/phase-4/COL-01-015-023_human-editor-synthesis-v2.2.json",
     "footnote_architecture": "docs/current/FLT_footnote_architecture_process_addendum_v2.0.md",
     "librarian_backlog": "logs/FLT_librarian_backlog.md",
-    "authorized_workflow": ".github/workflows/phase4-col1-015-023-sense-drafts.yml",
+    "draft_workflow": ".github/workflows/phase4-col1-015-023-sense-drafts.yml",
+    "smoothing_workflow": ".github/workflows/phase4-col1-015-023-human-smoothing.yml",
     "state_machine_spec": "docs/architecture/phase-4/passage-manifest-state-machine-v1.md",
     "circuit_breaker_spec": "docs/architecture/phase-4/FLT_Autonomous_Circuit_Breaker_v1.md"
   },
   "state": {
-    "status": "awaiting_human_editor",
-    "phase": "blind_draft_complete",
+    "status": "ready",
+    "phase": "human_editor_exact_selection_recorded_smoothing_armed",
     "active_job_id": null,
-    "active_run_id": "31532978974",
-    "translation_allowed": true,
+    "active_run_id": null,
+    "translation_allowed": false,
     "candidate_generation_allowed": false,
-    "provider_dispatch_allowed": false,
-    "github_workflow_dispatch_allowed": false,
+    "provider_dispatch_allowed": true,
+    "github_workflow_dispatch_allowed": true,
     "translation_artifact_mutation_allowed": false,
-    "next_permitted_action": "retrieve verified blind-candidate artifact and present untouched A/B/C candidates verse by verse"
+    "next_permitted_action": "merge zero-call validated smoothing activation; one-shot push may launch exactly COL-01-015-023-HUMAN-SMOOTHING-01"
   },
   "allowed_actions": [
     "flt status COL-01-015-023",
-    "retrieve verified blind-candidate artifact",
+    "merge validated smoothing activation",
+    "flt cancel COL-01-015-023 --job COL-01-015-023-HUMAN-SMOOTHING-01 --expected-revision 4",
     "read_only_repository_inspection"
   ],
   "forbidden_actions": [
-    "expose_COL-01-001-014_accepted_English_to_blind_workers",
-    "dispatch_any_job_other_than_COL-01-015-023-BLIND-DRAFT-01",
+    "modify_human_editor_selected_text_without_explicit_human_approval",
+    "dispatch_any_job_other_than_COL-01-015-023-HUMAN-SMOOTHING-01",
     "provider_calls_before_running_state_claim",
     "reuse_consumed_launch_nonce",
+    "resume_or_rerun_completed_draft_job",
     "modify_or_reopen_COL-01-001-014",
     "modify_or_reopen_philippians",
     "automatic_connection_retry"
@@ -54,37 +58,54 @@
     "COL-01-015-023-BLIND-DRAFT-01": {
       "idempotency_key": "flt:2.2:COL-01-015-023:blind-draft:01",
       "job_type": "blind_candidate_batch",
-      "status": "awaiting_human_editor",
+      "status": "completed_human_editor_selection_recorded",
       "authorization_id": "HE-COL-01-015-023-START-20260811",
+      "remote_run_id": "31532978974",
+      "dispatch_confirmed": true,
+      "retry_allowed": false
+    },
+    "COL-01-015-023-HUMAN-SMOOTHING-01": {
+      "idempotency_key": "flt:2.2:COL-01-015-023:human-smoothing:01",
+      "job_type": "listener_only_and_source_aware_smoothing",
+      "status": "authorized_ready",
+      "authorization_id": "HE-COL-01-015-023-SEAL-SMOOTH-20260811",
       "authorized_by": "human_editor",
-      "authorization_scope": "prepare source packet and run exactly three common-goal blind A/B/C candidates for Colossians 1:15-23 under standard circuit-breaker ceilings",
+      "authorization_scope": "seal exact Human Editor synthesis and run listener-only diagnosis plus source-aware smoothing proposals without changing sealed wording",
       "dispatch_allowed": true,
-      "workflow": ".github/workflows/phase4-col1-015-023-sense-drafts.yml",
+      "workflow": ".github/workflows/phase4-col1-015-023-human-smoothing.yml",
       "max_attempts_per_worker": 2,
       "task_max_attempts": 8,
       "provider_attempts_used": 0,
       "checkpoints_to_restore": 0,
-      "dispatch_confirmed": true,
-      "remote_run_id": "31532978974",
+      "dispatch_confirmed": false,
+      "remote_run_id": null,
       "launch": {
         "mode": "manifest_authorized_one_shot_push",
-        "nonce": "HE-COL-01-015-023-AUTO-20260811-01",
-        "status": "consumed",
+        "nonce": "HE-COL-01-015-023-SMOOTH-20260811-01",
+        "status": "armed",
         "armed_by": "human_editor",
-        "authorization_id": "HE-COL-01-015-023-START-20260811",
-        "expected_manifest_revision": 1,
-        "consumed_run_id": "31532978974",
-        "consumed_nonce": "HE-COL-01-015-023-AUTO-20260811-01"
+        "authorization_id": "HE-COL-01-015-023-SEAL-SMOOTH-20260811",
+        "expected_manifest_revision": 4,
+        "consumed_run_id": null
       },
-      "retry_allowed": false
+      "retry_allowed": true
     }
   },
+  "editorial_decisions": {
+    "sealed_candidate_id": "COL-01-015-023-HUMAN-SYNTHESIS-V2.2",
+    "sealed_candidate_status": "human_editor_exact_selection_pending_oral_smoothing",
+    "christ_hymn_visual_block": "Col.1.15-20",
+    "librarian_backlog_logged": true
+  },
   "invariants": [
-    "Only the default-branch copy is authoritative once the engine manifest points to this unit.",
-    "Blind workers receive source-side material only and never accepted English from the previous unit.",
-    "Candidate A, B, and C pursue one identical constitutional goal.",
+    "Only the default-branch copy is authoritative.",
+    "At most one active job may exist for this unit.",
+    "Completed draft job IDs cannot be reused.",
+    "The exact Human Editor selected text cannot be altered by smoothing workers.",
+    "Smoothing workers return diagnoses and proposals only.",
     "Provider attempts remain governed by Autonomous Circuit Breaker v1.",
-    "Footnote concerns are classified [rn], [tn], or [dl] under the governing addendum.",
-    "The previous unit COL-01-001-014 remains terminal and accepted."
+    "Footnote concerns are classified [rn], [tn], or [dl].",
+    "COL-01-001-014 remains terminal and accepted.",
+    "Philippians v0.9 RC1 remains frozen."
   ]
 }

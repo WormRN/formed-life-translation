@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "candidate_id": "COL-01-015-023-HUMAN-SYNTHESIS-V2.2",
+  "unit_id": "COL-01-015-023",
+  "passage": "Colossians 1:15-23",
+  "engine_version": "2.2",
+  "status": "human_editor_exact_selection_pending_oral_smoothing",
+  "human_editor": "David L. Davis",
+  "human_editor_date": "2026-08-11",
+  "source_draft_run_id": "31532978974",
+  "human_editor_selection": {
+    "exact_wording_preserved": true,
+    "visual_formatting_preserved": true,
+    "christ_hymn_block": "Col.1.15-20",
+    "prose_block": "Col.1.21-23"
+  },
+  "verse_renderings": [
+    {"reference":"Col.1.15","text":"The Son is the image of the invisible God, the firstborn over all creation."},
+    {"reference":"Col.1.16","text":"For everything was created in Him: everything in heaven and on earth, everything seen and unseen, every throne, dominion, ruler, and authority. Everything was created through Him and for Him."},
+    {"reference":"Col.1.17","text":"He himself comes before everything, and everything holds together in Him."},
+    {"reference":"Col.1.18","text":"And He is the head of the body—and the body is the church. He is the beginning, the firstborn from among the dead, so that He Himself would be first in everything."},
+    {"reference":"Col.1.19","text":"For God was pleased to have all His fullness live in the Son,"},
+    {"reference":"Col.1.20","text":"and through the Son to bring everything back to Himself— everything on earth and everything in heaven— making peace through His blood, poured out on the cross."},
+    {"reference":"Col.1.21","text":"Once you were strangers to God. You were enemies in the ways you thought and lived."},
+    {"reference":"Col.1.22","text":"But now God has brought you back to Himself through the death suffered by the Son in His physical body, so that He could present you to Himself as holy, without fault, and beyond accusation."},
+    {"reference":"Col.1.23","text":"He will present you this way if you continue in the faith—firmly grounded, steady, never shifting away from the hope the good news brought you when you first heard it. That good news has been announced throughout the whole creation under heaven, and I, Paul, became its servant."}
+  ],
+  "reader_notes": [],
+  "backlog_requirements": [
+    {"reference":"Col.1.15","tag":"rn","topic":"firstborn rank and authority"},
+    {"reference":"Col.1.16","tag":"rn","topic":"cosmic or spiritual powers"},
+    {"reference":"Col.1.19","tag":"tn","topic":"fullness deliberately undefined here"},
+    {"reference":"Col.1.23","tag":"dl","topic":"conditional ei ge rendered as if you continue"}
+  ],
+  "copyright_independence": {
+    "status": "DEFERRED_BATCH",
+    "human_editor_reports_prior_copyright_evasions": true,
+    "hard_check_required_before_publication": true
+  }
+}
