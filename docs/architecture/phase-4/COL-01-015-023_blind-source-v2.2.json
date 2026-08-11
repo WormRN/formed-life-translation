@@ -1,0 +1,233 @@
+{
+  "chapter_id": "COL-01",
+  "book": "Colossians",
+  "chapter": 1,
+  "source_edition": "SBLGNT",
+  "tone": "exalted, cosmic, Christ-centered, reconciling, and pastorally exhortative",
+  "target_reader": "religion-naive adults and older adolescents near grade 6",
+  "translation_identity": "firmly dynamic-equivalence, NLT-like in readability but independent",
+  "test_purpose": "Fresh Engine 2.2 passage-sense-resolution drafting of Colossians 1:15-23",
+  "sealed_context": {
+    "prior_flt_wording_present": false,
+    "prior_candidates_present": false,
+    "comparison_translations_present": false,
+    "conversational_drafts_present": false,
+    "editor_benchmark_present": false,
+    "instruction": "Translate from the Greek and this source-side passage-sense brief only. Do not reconstruct, imitate, or refer to accepted Colossians wording, previous candidates, comparison translations, or conversation drafts."
+  },
+  "governing_rules": [
+    "Passage-sense resolution precedes English composition. Follow the completed source-side brief and expose genuinely viable alternatives in the review apparatus.",
+    "All three candidates pursue the same constitutional goal; no provider receives a readability, fidelity, or blended specialty.",
+    "Write natural English that a religion-naive adult can follow on one hearing. Build English sentences rather than preserving the long Greek period mechanically.",
+    "Preserve every material proposition, cause, purpose, result, condition, agency, force, theological assertion, and deliberate repetition.",
+    "Do not make firstborn language imply that the Son is part of the created order; context immediately grounds His supremacy in His role as creator and preexistent sustainer.",
+    "Preserve the repeated cosmic scope of all things while preventing the English from becoming a monotonous list.",
+    "Do not flatten body/head, firstborn, fullness, reconciliation, peace, blood/cross, alienation, holiness, faith, or hope without source warrant.",
+    "The reading text carries meaning. Under the FLT note architecture, [rn] aids ordinary-reader comprehension, [tn] records source transparency for Study/Scholarly editions, and [dl] remains internal only.",
+    "A transparency issue alone must not force literal wording into the sixth-grade reading text.",
+    "No prior FLT wording, comparison translation, editor benchmark, or conversation draft may enter blind drafting."
+  ],
+  "existing_decisions": [
+    "Capitalize pronouns referring to deity.",
+    "Use clear reader-facing English for theological vocabulary while preserving consequential theological anchors.",
+    "Render church vocabulary by meaning when a traditional label would be opaque.",
+    "Footnote concerns must be classified as [rn], [tn], or [dl] rather than automatically inserted into the standard reading edition.",
+    "The Human Editor alone selects, synthesizes, approves smoothing changes, resolves retained alternatives, and finalizes wording."
+  ],
+  "matrix_alerts": [
+    {"lemma":"πρωτότοκος","status":"contextual review","neutral_range":"firstborn; one holding firstborn rank or priority","instruction":"Preserve the firstborn image and its supremacy force; do not imply the Son is the first creature."},
+    {"lemma":"κτίζω / κτίσις","status":"key-term link","neutral_range":"create, creation, created order","instruction":"Keep clear that all created reality exists in/through/for the Son and distinguish that from the Son Himself."},
+    {"lemma":"πλήρωμα","status":"weighted theological term","neutral_range":"fullness, full measure, totality","instruction":"Do not assign a more specific theological content than this context warrants; expose the subject/agency issue in the apparatus."},
+    {"lemma":"ἀποκαταλλάσσω","status":"weighted theological term","neutral_range":"reconcile, restore a broken relationship, bring back into peace","instruction":"Use understandable language while preserving divine initiative and the cosmic scope of reconciliation."},
+    {"lemma":"πίστις / ἐλπίς","status":"continuity alert","neutral_range":"faith/trust; hope/confident expectation","instruction":"Preserve the condition of continuing in faith and the link to hope from the good news without importing accepted English from the previous unit."},
+    {"lemma":"διάκονος","status":"contextual function","neutral_range":"servant, helper, minister, one who serves","instruction":"Render Paul's role in relation to the proclaimed good news by contextual function rather than opaque title."
+    }
+  ],
+  "units": [
+    {
+      "unit_id": "COL-01-015-023",
+      "passage": "Colossians 1:15-23",
+      "title": "The supremacy of the Son, cosmic reconciliation, and the Colossians' continued faith",
+      "known_issues": [
+        "Verses 15-20 form an exalted Christ-centered sequence with repeated all-things language and tightly linked reasons; English may divide sentences but must preserve the cumulative force.",
+        "Firstborn in verses 15 and 18 carries rank/priority and an inheritance-like image; verse 16 explicitly excludes reading verse 15 as making the Son a creature.",
+        "Verse 16's thrones, dominions, rulers, and authorities are examples of invisible created powers; avoid speculative identification not supplied by the passage.",
+        "Verse 17 says the Son exists before all things and that all things cohere or hold together in Him.",
+        "Verse 18 shifts from cosmic creation to the church while retaining supremacy language; head/body and beginning/firstborn imagery belong together.",
+        "Verse 19 leaves a grammatical/theological question about the implied subject of was pleased and the force of all the fullness; retain the source claim without importing later doctrinal formulas into the reading text.",
+        "Verse 20 connects reconciliation and peace to the blood of the Son's cross and extends the scope to things on earth and in heaven; do not turn cosmic reconciliation into an unsupported claim of universal salvation.",
+        "Verses 21-22 move from cosmic reconciliation to the Colossians personally: formerly alienated and hostile, now reconciled through the Son's physical death with the purpose of presenting them holy, blameless, and beyond accusation.",
+        "Verse 23 uses εἴ γε, a real conditional expression whose rhetorical force can be rendered if indeed / provided that / if you continue; avoid either weakening the condition or making salvation depend on meritorious effort beyond Paul's statement.",
+        "The proclamation to every creature under heaven is rhetorical/cosmic mission language; preserve its force without adding historical explanation in the body text."
+      ],
+      "verses": [
+        {"reference":"Col.1.15","greek":"ὅς ἐστιν εἰκὼν τοῦ θεοῦ τοῦ ἀοράτου, πρωτότοκος πάσης κτίσεως"},
+        {"reference":"Col.1.16","greek":"ὅτι ἐν αὐτῷ ἐκτίσθη τὰ πάντα ἐν τοῖς οὐρανοῖς καὶ ἐπὶ τῆς γῆς, τὰ ὁρατὰ καὶ τὰ ἀόρατα, εἴτε θρόνοι εἴτε κυριότητες εἴτε ἀρχαὶ εἴτε ἐξουσίαι· τὰ πάντα δι’ αὐτοῦ καὶ εἰς αὐτὸν ἔκτισται"},
+        {"reference":"Col.1.17","greek":"καὶ αὐτός ἐστιν πρὸ πάντων καὶ τὰ πάντα ἐν αὐτῷ συνέστηκεν"},
+        {"reference":"Col.1.18","greek":"καὶ αὐτός ἐστιν ἡ κεφαλὴ τοῦ σώματος τῆς ἐκκλησίας· ὅς ἐστιν ἀρχή, πρωτότοκος ἐκ τῶν νεκρῶν, ἵνα γένηται ἐν πᾶσιν αὐτὸς πρωτεύων"},
+        {"reference":"Col.1.19","greek":"ὅτι ἐν αὐτῷ εὐδόκησεν πᾶν τὸ πλήρωμα κατοικῆσαι"},
+        {"reference":"Col.1.20","greek":"καὶ δι’ αὐτοῦ ἀποκαταλλάξαι τὰ πάντα εἰς αὐτόν, εἰρηνοποιήσας διὰ τοῦ αἵματος τοῦ σταυροῦ αὐτοῦ, δι’ αὐτοῦ εἴτε τὰ ἐπὶ τῆς γῆς εἴτε τὰ ἐν τοῖς οὐρανοῖς"},
+        {"reference":"Col.1.21","greek":"Καὶ ὑμᾶς ποτε ὄντας ἀπηλλοτριωμένους καὶ ἐχθροὺς τῇ διανοίᾳ ἐν τοῖς ἔργοις τοῖς πονηροῖς"},
+        {"reference":"Col.1.22","greek":"νυνὶ δὲ ἀποκατήλλαξεν ἐν τῷ σώματι τῆς σαρκὸς αὐτοῦ διὰ τοῦ θανάτου παραστῆσαι ὑμᾶς ἁγίους καὶ ἀμώμους καὶ ἀνεγκλήτους κατενώπιον αὐτοῦ"},
+        {"reference":"Col.1.23","greek":"εἴ γε ἐπιμένετε τῇ πίστει τεθεμελιωμένοι καὶ ἑδραῖοι καὶ μὴ μετακινούμενοι ἀπὸ τῆς ἐλπίδος τοῦ εὐαγγελίου οὗ ἠκούσατε, τοῦ κηρυχθέντος ἐν πάσῃ κτίσει τῇ ὑπὸ τὸν οὐρανόν, οὗ ἐγενόμην ἐγὼ Παῦλος διάκονος"}
+      ]
+    }
+  ],
+  "passage_sense_resolution": {
+    "gate_version": "2.2",
+    "status": "complete_for_blind_drafting",
+    "visibility_attestation": {
+      "source_side_only": true,
+      "prior_flt_wording_absent": true,
+      "prior_candidates_absent": true,
+      "editor_benchmark_absent": true,
+      "comparison_translations_absent": true
+    },
+    "passage_argument": [
+      "The Son has absolute supremacy because He makes the invisible God known, stands over creation, is the agent and goal of all creation, precedes and sustains all things, and leads the church and the new creation.",
+      "God's reconciling purpose reaches its climax through the Son's cross: peace is made through His blood and the formerly alienated Colossians are reconciled through His physical death.",
+      "The reconciliation aims at presenting the Colossians holy and blameless before God and is accompanied by Paul's call that they remain established in faith and unmoved from the hope announced in the good news."
+    ],
+    "proposition_map": [
+      {"references":["Col.1.15"],"proposition":"The Son is the visible image of the invisible God and the firstborn over/with respect to all creation."},
+      {"references":["Col.1.16"],"proposition":"All created reality, visible and invisible including every kind of power, was created in Him, through Him, and for Him."},
+      {"references":["Col.1.17"],"proposition":"He exists before all things and all things hold together in Him."},
+      {"references":["Col.1.18"],"proposition":"He is head of the church, the beginning and firstborn from the dead, so that He may hold first place in everything."},
+      {"references":["Col.1.19"],"proposition":"All the fullness was pleased to dwell in Him / it pleased the implied divine subject that all fullness dwell in Him."},
+      {"references":["Col.1.20"],"proposition":"Through the Son God/fullness reconciles all things to Himself, making peace through the blood of His cross, with cosmic scope."},
+      {"references":["Col.1.21"],"proposition":"The Colossians were formerly alienated and hostile in mind as shown in evil deeds."},
+      {"references":["Col.1.22"],"proposition":"Now they have been reconciled through the Son's physical body by death in order to be presented holy, blameless, and beyond accusation before Him."},
+      {"references":["Col.1.23"],"proposition":"They are to continue in faith, firmly established and unmoved from gospel hope; the good news has been proclaimed throughout creation and Paul became its servant."}
+    ],
+    "expressions": [
+      {
+        "sense_id":"COL1-FIRSTBORN-CREATION",
+        "references":["Col.1.15","Col.1.16"],
+        "source_expression":"πρωτότοκος πάσης κτίσεως",
+        "status":"alternatives_retained",
+        "contextual_function":"rank and priority language using the firstborn image in relation to the whole created order",
+        "primary_sense":"the Son holds firstborn rank and supremacy with respect to all creation, not membership as the first created being",
+        "viable_alternatives":["firstborn of all creation with the genitive left formally open","firstborn over all creation as an interpretive rendering of rank"],
+        "discourse_evidence":"Verse 16 immediately gives the reason: all things were created in, through, and for Him, while verse 17 places Him before all things.",
+        "reading_text_guidance":"Preserve the firstborn image if possible and make its supremacy force clear without stating or implying that the Son is created.",
+        "literal_note_guidance":"[tn] Explain the genitive construction and that firstborn can carry rank/priority; note the contextual argument from verses 16-17.",
+        "choice_risks":"A bare modern firstborn may imply chronological createdness; an over-explicit paraphrase can erase Paul's image.",
+        "human_decision_required":true,
+        "reader_note_required":false,
+        "audit_text_and_note_together":false
+      },
+      {
+        "sense_id":"COL1-CREATION-IN-THROUGH-FOR",
+        "references":["Col.1.16","Col.1.17"],
+        "source_expression":"ἐν αὐτῷ ... δι’ αὐτοῦ καὶ εἰς αὐτόν ... ἐν αὐτῷ συνέστηκεν",
+        "status":"resolved",
+        "contextual_function":"a cumulative set of relations describing the Son's relation to creation",
+        "primary_sense":"all creation exists by reference to the Son: created in Him, through His agency, toward/for Him as goal, and continuing to cohere in Him",
+        "viable_alternatives":[],
+        "discourse_evidence":"The repeated αὐτός/αὐτοῦ and τὰ πάντα form the core rhetorical structure of verses 16-17.",
+        "reading_text_guidance":"Use natural English but preserve the distinct through and for relationships and the sustaining/cohering claim of verse 17.",
+        "literal_note_guidance":"[tn] A study note may expose the repeated prepositions if dynamic English varies them.",
+        "choice_risks":"Collapsing the relations into generic creator language loses Paul's cumulative force.",
+        "human_decision_required":false,
+        "reader_note_required":false,
+        "audit_text_and_note_together":false
+      },
+      {
+        "sense_id":"COL1-FIRSTBORN-DEAD",
+        "references":["Col.1.18"],
+        "source_expression":"ἀρχή, πρωτότοκος ἐκ τῶν νεκρῶν ... πρωτεύων",
+        "status":"resolved",
+        "contextual_function":"new-creation and supremacy language tied to resurrection",
+        "primary_sense":"His resurrection makes Him the beginning and firstborn from among the dead so that He holds first place in everything",
+        "viable_alternatives":[],
+        "discourse_evidence":"The purpose clause explicitly states the intended supremacy result, πρωτεύων in everything.",
+        "reading_text_guidance":"Keep resurrection priority and supremacy connected; preserve firstborn imagery unless natural English requires modest unpacking.",
+        "literal_note_guidance":"[tn] Note the deliberate link between firstborn in verses 15 and 18 if the English varies.",
+        "choice_risks":"Rendering only 'first to rise' may erase rank/supremacy; rendering only 'supreme' may erase resurrection imagery.",
+        "human_decision_required":false,
+        "reader_note_required":false,
+        "audit_text_and_note_together":false
+      },
+      {
+        "sense_id":"COL1-FULLNESS-SUBJECT",
+        "references":["Col.1.19","Col.1.20"],
+        "source_expression":"ἐν αὐτῷ εὐδόκησεν πᾶν τὸ πλήρωμα κατοικῆσαι καὶ δι’ αὐτοῦ ἀποκαταλλάξαι",
+        "status":"alternatives_retained",
+        "contextual_function":"grounds Christ's supremacy and reconciliation in the dwelling of all fullness in Him",
+        "primary_sense":"all the fullness dwells in the Son by divine good pleasure and the reconciliation that follows proceeds through Him",
+        "viable_alternatives":["treat all the fullness grammatically as the subject that was pleased to dwell","supply God as the implied personal subject: God was pleased to have all fullness dwell in Him"],
+        "discourse_evidence":"Greek permits the fullness to function as subject, while the wider paragraph and parallel in Colossians 2:9 give strong theological context without requiring an explicit subject insertion here.",
+        "reading_text_guidance":"Do not force a technical definition of fullness; choose clear English that preserves divine fullness dwelling in the Son and the causal movement into reconciliation.",
+        "literal_note_guidance":"[tn] Disclose the grammatical alternatives if the reading text supplies God as subject or personifies fullness.",
+        "choice_risks":"Supplying God is clarifying but interpretive; personifying 'fullness was pleased' may be opaque to target readers.",
+        "human_decision_required":true,
+        "reader_note_required":false,
+        "audit_text_and_note_together":false
+      },
+      {
+        "sense_id":"COL1-RECONCILE-ALL",
+        "references":["Col.1.20"],
+        "source_expression":"ἀποκαταλλάξαι τὰ πάντα ... εἰρηνοποιήσας διὰ τοῦ αἵματος τοῦ σταυροῦ αὐτοῦ",
+        "status":"resolved",
+        "contextual_function":"cosmic reconciliation and peace-making through the Son's cross",
+        "primary_sense":"God's reconciling action through the Son encompasses the created order and establishes peace through the Son's sacrificial death",
+        "viable_alternatives":[],
+        "discourse_evidence":"The all-things refrain from creation is repeated in reconciliation, while verses 21-22 immediately apply reconciliation personally to the Colossians.",
+        "reading_text_guidance":"Keep cosmic scope, peace, blood, and cross/death together; do not expand cosmic reconciliation into an explicit claim that every creature is finally saved.",
+        "literal_note_guidance":"[tn] A study note may distinguish cosmic reconciliation from later theological claims about universal salvation.",
+        "choice_risks":"Over-universalizing exceeds the verse; reducing reconciliation to human forgiveness loses the cosmic frame.",
+        "human_decision_required":false,
+        "reader_note_required":false,
+        "audit_text_and_note_together":false
+      },
+      {
+        "sense_id":"COL1-BODY-OF-FLESH",
+        "references":["Col.1.22"],
+        "source_expression":"ἐν τῷ σώματι τῆς σαρκὸς αὐτοῦ διὰ τοῦ θανάτου",
+        "status":"resolved",
+        "contextual_function":"emphasizes the Son's embodied death as the means of reconciliation",
+        "primary_sense":"reconciliation occurred through the Son's real physical body in death",
+        "viable_alternatives":[],
+        "discourse_evidence":"The phrase intensifies bodily reality before διὰ τοῦ θανάτου and contrasts with any purely spiritualized account of reconciliation.",
+        "reading_text_guidance":"Use ordinary English such as physical body/His body and death; preserve the embodied force without awkwardly duplicating body and flesh.",
+        "literal_note_guidance":"[tn] Note the emphatic source wording 'body of His flesh' if the English naturally says physical body.",
+        "choice_risks":"Dropping bodily force weakens the claim; literal 'body of flesh' sounds translated and may confuse.",
+        "human_decision_required":false,
+        "reader_note_required":false,
+        "audit_text_and_note_together":false
+      },
+      {
+        "sense_id":"COL1-IF-INDEED",
+        "references":["Col.1.23"],
+        "source_expression":"εἴ γε ἐπιμένετε τῇ πίστει",
+        "status":"alternatives_retained",
+        "contextual_function":"conditional continuation tied to the presentation goal of verse 22",
+        "primary_sense":"Paul states continued, stable faith as a real condition within his pastoral assurance/exhortation",
+        "viable_alternatives":["if indeed you continue in the faith","provided that you continue in the faith","if you continue in the faith"],
+        "discourse_evidence":"The conditional directly follows the purpose of presenting them holy and is elaborated by founded, steadfast, and not moved away from gospel hope.",
+        "reading_text_guidance":"Use natural conditional English with genuine force; do not erase the condition or convert it into a statement that perseverance merits reconciliation.",
+        "literal_note_guidance":"[tn] Explain εἴ γε and the rhetorical assurance/condition range if a more idiomatic English conditional is chosen.",
+        "choice_risks":"'As long as' may sound meritorious; omitting the conditional materially changes Paul's logic.",
+        "human_decision_required":true,
+        "reader_note_required":false,
+        "audit_text_and_note_together":false
+      },
+      {
+        "sense_id":"COL1-PROCLAIMED-CREATION",
+        "references":["Col.1.23"],
+        "source_expression":"τοῦ κηρυχθέντος ἐν πάσῃ κτίσει τῇ ὑπὸ τὸν οὐρανόν",
+        "status":"resolved",
+        "contextual_function":"rhetorically declares the universal scope of gospel proclamation",
+        "primary_sense":"the good news is proclaimed throughout the created world under heaven",
+        "viable_alternatives":[],
+        "discourse_evidence":"The phrase echoes the earlier cosmic scope of creation and reinforces the worldwide gospel horizon already established in the letter.",
+        "reading_text_guidance":"Preserve the sweeping force in understandable English without adding a historical explanation or statistical claim.",
+        "literal_note_guidance":"[tn] A study note may explain the rhetorical/cosmic idiom if readers take it as a modern statistical assertion.",
+        "choice_risks":"Over-literal modern quantification misreads the rhetoric; weakening to 'many places' loses its force.",
+        "human_decision_required":false,
+        "reader_note_required":false,
+        "audit_text_and_note_together":false
+      }
+    ]
+  }
+}
