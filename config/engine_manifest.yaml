@@ -1,5 +1,5 @@
 schema_version: 1
-last_updated: "2026-08-10"
+last_updated: "2026-08-11"
 project:
   name: "Formed Life Translation"
   repository: "WormRN/formed-life-translation"
@@ -57,8 +57,8 @@ bootstrap:
 execution_control:
   model: "passage_manifest_state_machine_v1"
   state_machine_spec: "docs/architecture/phase-4/passage-manifest-state-machine-v1.md"
-  current_unit_id: "COL-01-001-014"
-  current_passage_manifest: "config/passages/COL-01-001-014.json"
+  current_unit_id: "COL-01-015-023"
+  current_passage_manifest: "config/passages/COL-01-015-023.json"
   default_branch_state_is_authoritative: true
   chat_history_is_authoritative: false
   branch_and_pull_request_state_is_proposed_only: true
@@ -92,6 +92,7 @@ governing_documents:
   - "docs/current/FLT_translation_philosophy_revision_brief_v2.0.md"
   - "docs/current/FLT_constitution_v2.0.md"
   - "docs/current/FLT_style_guide_v2.0.md"
+  - "docs/current/FLT_footnote_architecture_process_addendum_v2.0.md"
   - "docs/current/FLT_contextual_lexical_matrix_v2.0.md"
   - "docs/current/FLT_copyright_independence_policy_v2.0.md"
   - "docs/current/FLT_translation_packet_template_v2.0.md"
@@ -294,8 +295,8 @@ current_checkpoint:
     semantic_pass: true
     human_acceptance_after_oral_review_pending: false
   active_files:
-    passage_manifest: "config/passages/COL-01-001-014.json"
-    blind_source: "docs/architecture/phase-4/COL-01-001-014_blind-source-v2.2.json"
+    passage_manifest: "config/passages/COL-01-015-023.json"
+    blind_source: "docs/architecture/phase-4/COL-01-015-023_blind-source-v2.2.json"
     historical_preflight: "config/COL-01-001-014_blind-draft-preflight-v01.json"
     quarantined_workflow: ".github/workflows/phase4-col1-001-014-sense-drafts.yml"
     state_machine_spec: "docs/architecture/phase-4/passage-manifest-state-machine-v1.md"
@@ -304,6 +305,12 @@ current_checkpoint:
     latest_audit_receipt: "config/latest_audit_run.json"
 
 accepted_units:
+  - passage: "Colossians 1:1-14"
+    status: "ACCEPTED after final Engine 2.2 audit with documented Human Editor note-layer override; [tn]/[rn]/[dl] backlog routed under the Footnote Architecture Process Addendum"
+    draft_run_id: 31458938652
+    smoothing_run_id: 31522547468
+    audit_run_id: 31526453016
+    audit_artifact: "FLT-COL-01-20260811-3-final-audit"
   - passage: "Philippians 4:21-23"
     status: "human-approved exact wording and three reader notes audited; two auditors eligible; one verse 23 added-meaning block transparently documented and overridden under Human Editor authority; all notes passed; verse 21 distributive-force warning retained; copyright watchlist for verse 23; pending whole-letter review"
     draft_run_id: 30788140805
