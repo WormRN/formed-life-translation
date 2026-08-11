@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "manifest_revision": 8,
+  "manifest_revision": 9,
   "last_updated": "2026-08-10",
   "unit": {
     "unit_id": "COL-01-001-014",
@@ -27,20 +27,19 @@
     "circuit_breaker_spec": "docs/architecture/phase-4/FLT_Autonomous_Circuit_Breaker_v1.md"
   },
   "state": {
-    "status": "running",
-    "phase": "blind_draft_batch_02_repaired_running",
-    "active_job_id": "COL-01-001-014-BLIND-DRAFT-BATCH-02",
+    "status": "blocked",
+    "phase": "blind_draft_batch_02_halted",
+    "active_job_id": null,
     "active_run_id": "31458004896",
     "translation_allowed": false,
-    "candidate_generation_allowed": true,
-    "provider_dispatch_allowed": true,
+    "candidate_generation_allowed": false,
+    "provider_dispatch_allowed": false,
     "github_workflow_dispatch_allowed": false,
     "translation_artifact_mutation_allowed": false,
-    "next_permitted_action": "await verified repaired Batch 02 completion or exact cancel"
+    "next_permitted_action": "inspect verified Batch 02 halt evidence; Human Editor unlock required for any retry"
   },
   "allowed_actions": [
     "flt status COL-01-001-014",
-    "flt cancel COL-01-001-014 --job COL-01-001-014-BLIND-DRAFT-BATCH-02 --expected-revision 8",
     "read_only_repository_inspection"
   ],
   "forbidden_actions": [
@@ -72,7 +71,7 @@
     "COL-01-001-014-BLIND-DRAFT-BATCH-02": {
       "idempotency_key": "flt:2.2:COL-01-001-014:blind-draft:02",
       "job_type": "blind_candidate_batch",
-      "status": "running",
+      "status": "blocked",
       "authorization_id": "HE-COL-BATCH-02",
       "authorized_by": "human_editor",
       "authorization_scope": "exact_job_repair_relaunch_and_provider_spending",
