@@ -1,65 +1,96 @@
-# FLT Engine 2.0 — Start Here
+# FLT Engine 2.2 — Start Here
 
 **Repository:** `WormRN/formed-life-translation`  
-**Authority:** This file is the required entry point for every new FLT chat or agent session.  
-**Machine state:** `config/engine_manifest.yaml`  
-**Latest audit receipt:** `config/latest_audit_run.json` when present.
+**Authority:** Required entry point for every new FLT chat or agent session  
+**Engine configuration and project history:** `config/engine_manifest.yaml`  
+**Current execution state:** the passage manifest named by `execution_control.current_passage_manifest`  
+**Latest audit receipt:** `config/latest_audit_run.json` when relevant
 
 ## Mandatory bootstrap
 
-Before proposing a translation, launching a workflow, interpreting an audit, or recording a decision:
+Before proposing a translation, launching a workflow, interpreting an audit, recording a decision, or reporting project status:
 
-1. Read this file completely.
-2. Read `config/engine_manifest.yaml`.
-3. Verify live access to this repository and confirm the manifest reports Engine 2.0.
-4. Read every governing document listed in the manifest that is relevant to the next action.
-5. Read the current unit's exact candidate/source/workflow files listed in the manifest.
-6. State the verified checkpoint before continuing.
+1. Read root `AGENTS.md` completely.
+2. Read this file completely.
+3. Read `config/engine_manifest.yaml`.
+4. Read the current passage manifest named by `execution_control.current_passage_manifest`.
+5. Verify that the unit ID and engine version agree across both manifests.
+6. Read only the governing documents and exact unit files required for the next permitted action.
+7. Report the verified unit, passage-manifest revision, state, active job, authorization, and next permitted action.
 
-If these files cannot be retrieved, **stop** and report that repository continuity has not been established. Do not reconstruct the engine from chat memory, uploaded Version 1 files, or generic translation preferences.
+If any required file cannot be retrieved, is internally inconsistent, or conflicts with another authoritative repository file, stop and report the conflict. Do not reconstruct continuity from chat memory, uploaded Version 1 files, handoff prose, prior agent claims, or generic translation preferences.
+
+## Two manifest layers
+
+`config/engine_manifest.yaml` defines the engine, governing documents, accepted history, and pointer to the current unit.
+
+The current passage manifest under `config/passages/` records mutable execution state for one unit: phase, revision, permissions, job IDs, authorization, remote run identity, and next action.
+
+For execution status, the passage manifest on the default branch is authoritative. Branches and open pull requests contain proposed state only.
 
 ## Authority boundary
 
-The human editor owns every translation decision.
+The Human Editor owns every translation decision.
 
-- The human editor selects wording, authorizes repairs, accepts or rejects audit findings, and finalizes units.
-- The primary assistant is the orchestration boss. It routes packets, launches workers and checkers, preserves blindness, verifies evidence, and prepares decision briefs.
-- The orchestration boss may recommend wording, but it may not silently substitute its preference for the human editor's selection.
-- Worker models and checker models provide evidence only. Their drafts, classifications, warnings, and eligibility judgments are not verdicts.
-- A human-selected candidate is sealed for audit. It must be submitted exactly as selected unless the human editor explicitly authorizes a change.
-- If the human editor says “run the appropriate checks,” “send this through the next phase,” or equivalent language, perform the Engine 2.0 checkpoint workflow. A boss-only editorial review is not a substitute and must be clearly labeled if separately requested.
-- Auditors may identify omissions, additions, ambiguity, theological risk, communication problems, or possible repairs. They may not repair, accept, reject, or finalize the candidate.
+- The Human Editor selects wording, authorizes exact jobs and transitions, accepts or rejects audit findings, and finalizes units.
+- The primary assistant orchestrates the engine and may recommend wording, but may not silently substitute its preference for the Human Editor's selection.
+- Workers and auditors provide evidence only.
+- A human-selected candidate is sealed for audit and must remain exact unless the Human Editor explicitly authorizes a change.
+- The Human Editor is not GitHub middleware. Connected repository tools perform authorized GitHub work. If a connector lacks a required operation, stop that operation and report the boundary.
+
+## Control commands
+
+`flt status` is read-only and must not connect to Actions merely to establish local repository state.
+
+`flt resume --dry-run` reports a proposed transition without writes, provider calls, workflow dispatches, or translation wording.
+
+A live `flt resume` may move `paused` to `ready` only after exact authorization and a matching passage-manifest revision. Resume never dispatches.
+
+`flt cancel` requires an exact known job ID. It never cancels an unidentified run and never retries an external cancellation automatically.
+
+Provider dispatch is a separate operation and is forbidden unless the default-branch passage manifest marks the exact job `authorized_ready` and every dispatch precondition passes.
+
+After a valid dispatch, provider-attempt ceilings, checkpoint recovery, and halt records remain governed by `docs/architecture/phase-4/FLT_Autonomous_Circuit_Breaker_v1.md`.
 
 ## Translation workflow
 
-For each new unit:
+For each authorized new unit:
 
 1. Prepare one blind source packet from the SBLGNT and governing documents.
-2. Generate three independent candidates from the same constitutional goal:
+2. Complete the Passage-Sense Resolution Gate before English drafting.
+3. Generate three independent candidates from the same constitutional goal:
    - Candidate A — Claude Sonnet
    - Candidate B — GPT-5.6 Sol
    - Candidate C — Gemini Pro
-3. Keep the candidates blind from one another, prior approved English, and comparison translations.
-4. Present the untouched A/B/C candidates verse by verse.
-5. The human editor produces or selects the editor candidate.
-6. Seal that exact candidate and run independent reader reconstructions plus semantic-floor audits.
-7. Return evidence and severity classifications to the human editor.
-8. Record acceptance or repair only after an explicit human decision.
+4. Keep the candidates blind from one another, prior approved English, comparison translations, editor benchmarks, and conversation drafts.
+5. Present untouched A/B/C candidates verse by verse.
+6. The Human Editor produces or selects the editor candidate.
+7. Seal that exact candidate and run independent reader reconstructions plus semantic-floor audits.
+8. Return evidence and severity classifications to the Human Editor.
+9. Record acceptance or repair only after an explicit human decision.
 
-Do not replace this common-goal A/B/C process with separate readability, fidelity, and blended translation goals.
+Do not replace the common-goal A/B/C process with separate readability, fidelity, and blended missions.
+
+## Failure behavior
+
+- One failed interactive repository or Actions connection ends that controller operation.
+- Record or report remote status as unknown; never infer success, failure, or activity.
+- Never enter an automatic retry loop.
+- Continue only safe actions explicitly permitted by the passage manifest.
+- A UI animation is not evidence of a remote job.
+- Quarantined, cancelled, and completed job IDs are terminal and cannot be resumed or rerun.
 
 ## Audit retrieval without user-supplied links
 
-The user should not normally have to copy a GitHub Actions run URL into the chat.
+When an audit receipt exists:
 
 1. Read `config/latest_audit_run.json`.
-2. Use its repository, workflow path, run ID, run URL, artifact name, job outcome, auditor counts, and semantic-pass field to retrieve and verify the evidence.
-3. Treat a successful Actions job as transport/execution success only. A semantic pass requires the recorded audit evidence; it does not finalize the translation.
-4. If the receipt says an audit is still pending or failed, report that state accurately.
-5. Ask the user for a run link only after repository-based and connected-GitHub retrieval are genuinely unavailable.
+2. Use its recorded run ID, URL, artifact, outcome, auditor counts, and semantic-pass fields.
+3. Treat Actions success as transport/execution success only; semantic pass requires the recorded audit evidence.
+4. Ask the Human Editor for a run link only if repository-based retrieval is genuinely unavailable and the requested task cannot safely stop.
 
-Every new exact-candidate audit workflow must publish or update `config/latest_audit_run.json` after it completes.
+Every new exact-candidate audit workflow must publish or update `config/latest_audit_run.json` after completion.
 
 ## Current work
 
-The manifest is authoritative for the current passage, stage, file paths, accepted units, and next permitted action. Update the manifest whenever the project advances to a new unit or stage.
+The current passage manifest is authoritative for the active unit and next permitted action. At the architectural-repair checkpoint, Colossians translation, candidate generation, provider calls, and workflow dispatch are forbidden until the clean resume test passes and the Human Editor separately authorizes an exact new job.
