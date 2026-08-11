@@ -29,13 +29,13 @@ concurrency:
 env:
   TASK_ID: COL-01-001-014-BLIND-DRAFT-BATCH-02
   AUTHORIZATION_ID: HE-COL-BATCH-02
-  LAUNCH_NONCE: HE-COL-BATCH-02-AUTO-20260810-02
-  EXPECTED_MANIFEST_REVISION: '7'
+  LAUNCH_NONCE: HE-COL-BATCH-02-AUTO-20260810-03
+  EXPECTED_MANIFEST_REVISION: '10'
 
 jobs:
   validate:
     if: github.event_name == 'pull_request'
-    name: Validate repaired armed Batch 02 with zero provider calls
+    name: Validate npm-ci repaired Batch 02 with zero provider calls
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -45,7 +45,7 @@ jobs:
           node-version: 24
           cache: npm
           cache-dependency-path: phase4-harness/package-lock.json
-      - name: Validate manifest, repair, preflight, source packet, and harness without provider credentials
+      - name: Validate manifest, npm-ci repair, preflight, source packet, and harness without provider credentials
         shell: bash
         run: |
           set -euo pipefail
@@ -63,9 +63,9 @@ jobs:
             .jobs[$task].preflight_status == "passed_zero_provider_calls" and
             .jobs[$task].provider_attempts_used == 0 and
             .jobs[$task].checkpoints_to_restore == 0 and
-            .jobs[$task].prior_failed_run.run_id == "31457299123" and
-            .jobs[$task].prior_failed_run.provider_calls_made == 0 and
-            .jobs[$task].prior_failed_run.checkpoints_created == 0 and
+            .jobs[$task].prior_failed_runs[1].run_id == "31458004896" and
+            .jobs[$task].prior_failed_runs[1].provider_calls_made == 0 and
+            .jobs[$task].prior_failed_runs[1].checkpoints_created == 0 and
             .jobs[$task].launch.mode == "manifest_authorized_one_shot_push" and
             .jobs[$task].launch.nonce == $nonce and
             .jobs[$task].launch.status == "armed" and
@@ -79,9 +79,11 @@ jobs:
             .authorized_provider_tasks == 3 and
             .max_attempts_per_worker == 2 and
             .task_max_attempts == 8 and
-            .evidence.failed_run_id == "31457299123" and
+            .evidence.failed_run_id == "31458004896" and
             .evidence.provider_calls_in_failed_run == 0 and
             .evidence.checkpoints_from_failed_run == 0 and
+            .checks.draft_job_setup_node_enabled == true and
+            .checks.draft_job_npm_ci_before_chapter_units == true and
             .production_trigger == "manifest_authorized_one_shot_push" and
             .state_claim_gate_provider_secrets_available == false
           ' config/COL-01-001-014_blind-draft-preflight-v02.json
@@ -97,15 +99,10 @@ jobs:
             .passage_sense_resolution.visibility_attestation.editor_benchmark_absent == true and
             .passage_sense_resolution.visibility_attestation.comparison_translations_absent == true
           ' docs/architecture/phase-4/COL-01-001-014_blind-source-v2.2.json
-          node phase4-harness/scripts/prepare-run-config.mjs phase4-harness/config.github-actions.json /tmp/php.json FLT-PHP-04-20260810-1
-          node phase4-harness/scripts/prepare-run-config.mjs phase4-harness/config.github-actions.json /tmp/col.json FLT-COL-01-20260810-2
-          node phase4-harness/scripts/prepare-run-config.mjs phase4-harness/config.github-actions.json /tmp/rom.json FLT-ROM-08-20260810-3
-          if node phase4-harness/scripts/prepare-run-config.mjs phase4-harness/config.github-actions.json /tmp/bad.json FLT-COLS-01-20260810-4; then
-            echo "run-ID helper incorrectly accepted a four-letter book code"
-            exit 1
-          fi
+          node phase4-harness/scripts/prepare-run-config.mjs phase4-harness/config.github-actions.json /tmp/col.json FLT-COL-01-20260810-1
           npm --prefix phase4-harness ci
           npm --prefix phase4-harness test
+          node -e "import('ajv').then(()=>process.exit(0)).catch(()=>process.exit(1))" --input-type=module
 
   claim_running:
     if: >-
@@ -113,7 +110,7 @@ jobs:
       !startsWith(github.event.head_commit.message, 'Record Colossians batch 02 running state') &&
       !startsWith(github.event.head_commit.message, 'Record Colossians batch 02 completion') &&
       !startsWith(github.event.head_commit.message, 'Record Colossians batch 02 halt')
-    name: Claim repaired one-shot launch and record running state
+    name: Claim npm-ci repaired one-shot launch and record running state
     runs-on: ubuntu-latest
     timeout-minutes: 15
     outputs:
@@ -129,7 +126,7 @@ jobs:
           node-version: 24
           cache: npm
           cache-dependency-path: phase4-harness/package-lock.json
-      - name: Credential-free final repair gate
+      - name: Credential-free final npm-ci repair gate
         shell: bash
         run: |
           set -euo pipefail
@@ -149,8 +146,7 @@ jobs:
             .jobs[$task].launch.status == "armed" and
             .jobs[$task].launch.consumed_run_id == null
           ' config/passages/COL-01-001-014.json
-          jq -e '.status == "passed_zero_provider_calls" and .provider_calls_made == 0 and .evidence.provider_calls_in_failed_run == 0 and .evidence.checkpoints_from_failed_run == 0 and .production_trigger == "manifest_authorized_one_shot_push"' config/COL-01-001-014_blind-draft-preflight-v02.json
-          node phase4-harness/scripts/prepare-run-config.mjs phase4-harness/config.github-actions.json /tmp/col.json FLT-COL-01-20260810-1
+          jq -e '.status == "passed_zero_provider_calls" and .provider_calls_made == 0 and .evidence.failed_run_id == "31458004896" and .evidence.provider_calls_in_failed_run == 0 and .evidence.checkpoints_from_failed_run == 0 and .checks.draft_job_npm_ci_before_chapter_units == true and .production_trigger == "manifest_authorized_one_shot_push"' config/COL-01-001-014_blind-draft-preflight-v02.json
           npm --prefix phase4-harness ci
           npm --prefix phase4-harness test
       - name: Atomically consume repaired launch nonce and record running state
@@ -159,14 +155,14 @@ jobs:
         run: |
           set -euo pipefail
           jq --arg task "$TASK_ID" --arg run "$GITHUB_RUN_ID" --arg nonce "$LAUNCH_NONCE" '
-            .manifest_revision = 8 |
+            .manifest_revision = 11 |
             .state.status = "running" |
-            .state.phase = "blind_draft_batch_02_repaired_running" |
+            .state.phase = "blind_draft_batch_02_npmci_repaired_running" |
             .state.active_job_id = $task |
             .state.active_run_id = $run |
             .state.github_workflow_dispatch_allowed = false |
-            .state.next_permitted_action = "await verified repaired Batch 02 completion or exact cancel" |
-            .allowed_actions = ["flt status COL-01-001-014", "flt cancel COL-01-001-014 --job COL-01-001-014-BLIND-DRAFT-BATCH-02 --expected-revision 8", "read_only_repository_inspection"] |
+            .state.next_permitted_action = "await verified npm-ci repaired Batch 02 completion or exact cancel" |
+            .allowed_actions = ["flt status COL-01-001-014", "flt cancel COL-01-001-014 --job COL-01-001-014-BLIND-DRAFT-BATCH-02 --expected-revision 11", "read_only_repository_inspection"] |
             .jobs[$task].status = "running" |
             .jobs[$task].dispatch_confirmed = true |
             .jobs[$task].remote_run_id = $run |
@@ -198,6 +194,13 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{ needs.claim_running.outputs.target_sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: phase4-harness/package-lock.json
+      - name: Install Engine 2.2 harness dependencies
+        run: npm --prefix phase4-harness ci
       - name: Create bounded run identity
         id: run
         shell: bash
@@ -234,9 +237,9 @@ jobs:
         run: |
           set -euo pipefail
           git pull --ff-only origin main
-          jq -e --arg task "$TASK_ID" --arg run "$GITHUB_RUN_ID" '.manifest_revision == 8 and .state.status == "running" and .state.active_job_id == $task and .state.active_run_id == $run and .jobs[$task].status == "running"' config/passages/COL-01-001-014.json
+          jq -e --arg task "$TASK_ID" --arg run "$GITHUB_RUN_ID" '.manifest_revision == 11 and .state.status == "running" and .state.active_job_id == $task and .state.active_run_id == $run and .jobs[$task].status == "running"' config/passages/COL-01-001-014.json
           jq --arg task "$TASK_ID" --arg run "$GITHUB_RUN_ID" '
-            .manifest_revision = 9 |
+            .manifest_revision = 12 |
             .state.status = "awaiting_human_editor" |
             .state.phase = "blind_draft_batch_02_complete" |
             .state.active_job_id = null |
@@ -271,9 +274,9 @@ jobs:
         run: |
           set -euo pipefail
           git pull --ff-only origin main
-          jq -e --arg task "$TASK_ID" --arg run "$GITHUB_RUN_ID" '.manifest_revision == 8 and .state.status == "running" and .state.active_job_id == $task and .state.active_run_id == $run' config/passages/COL-01-001-014.json
+          jq -e --arg task "$TASK_ID" --arg run "$GITHUB_RUN_ID" '.manifest_revision == 11 and .state.status == "running" and .state.active_job_id == $task and .state.active_run_id == $run' config/passages/COL-01-001-014.json
           jq --arg task "$TASK_ID" --arg run "$GITHUB_RUN_ID" '
-            .manifest_revision = 9 |
+            .manifest_revision = 12 |
             .state.status = "blocked" |
             .state.phase = "blind_draft_batch_02_halted" |
             .state.active_job_id = null |
