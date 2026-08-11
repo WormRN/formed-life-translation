@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "candidate_id": "COL-01-015-023-HUMAN-FINAL-V2.2",
+  "passage": "Colossians 1:15-23",
+  "human_approved": true,
+  "approved_by": "human_editor",
+  "approved_at": "2026-08-11T17:34:00-05:00",
+  "reading_text_sha256": "9da7948c974dcf904b41d2abd50eceb8e18b3a27fb3d09c1e20b48441d02f2f1",
+  "reader_notes_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "candidate_material_sha256": "dab9f28e76686d82ee9d9dead9df440cd03a64176a0b81c5d5cbfb48e84c95a4",
+  "audit_authority": "Only the candidate whose exact reading-text and reader-note hashes match this seal may enter the constitutional audit."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "candidate_id": "COL-01-015-023-HUMAN-FINAL-V2.2",
+  "passage": "Colossians 1:15-23",
+  "status": "human_approved_post_smoothing_candidate_pending_exact_semantic_audit",
+  "human_editor_selection": {
+    "date": "2026-08-11",
+    "exact_wording_preserved": true,
+    "blind_draft_run": 31532978974,
+    "oral_smoothing_run": 31539928210,
+    "oral_review_decision": "Human Editor authorized structural smoothing after the Sealed-Candidate Audit, including fronted in-Him phrasing, explicit Son agency in verse 20, and the retained if-you-continue conditional in verse 23."
+  },
+  "verse_renderings": [
+    {"reference":"Col.1.15","text":"The Son is the image of the invisible God, the firstborn over all creation."},
+    {"reference":"Col.1.16","text":"For in Him everything was created: everything in heaven and on earth, everything seen and unseen, every throne and dominion, every ruler and authority. Everything was created through Him and for Him."},
+    {"reference":"Col.1.17","text":"He Himself comes before everything, and in Him everything holds together."},
+    {"reference":"Col.1.18","text":"And He is the head of the body, which is the church. He is the beginning, the firstborn from among the dead, so that in everything He would be first."},
+    {"reference":"Col.1.19","text":"For God was pleased to have all His fullness live in the Son,"},
+    {"reference":"Col.1.20","text":"and through the Son to bring everything back to Himself—everything on earth and everything in heaven. God made peace through the blood the Son poured out on the cross."},
+    {"reference":"Col.1.21","text":"Once you were strangers to God, enemies in your own thinking, and your evil actions showed it."},
+    {"reference":"Col.1.22","text":"But now God has brought you back to Himself through the Son's death in His own physical body. He did this to present you to Himself holy, without fault, and beyond accusation—"},
+    {"reference":"Col.1.23","text":"and He will present you this way if you continue in the faith: firmly grounded, steady, never shifting away from the hope you were given when you first heard the good news. That good news has been announced throughout the whole creation under heaven, and I, Paul, became its servant."}
+  ],
+  "reader_notes": [],
+  "editorial_requirements": [
+    {"reference":"Col.1.15","tag":"rn","topic":"firstborn rank and authority","status":"required_pending_librarian_draft"},
+    {"reference":"Col.1.16","tag":"rn","topic":"cosmic or spiritual powers","status":"required_pending_librarian_draft"},
+    {"reference":"Col.1.19","tag":"tn","topic":"fullness deliberately undefined here pending Colossians 2:9","status":"pending_librarian_draft"},
+    {"reference":"Col.1.23","tag":"dl","topic":"conditional ei ge rendered as if you continue rather than imperative you must","status":"confirmed_human_editor_precedent"}
+  ],
+  "copyright_protocol": {"mode":"DEFERRED_BATCH","status":"DEFERRED_BATCH","hard_check_required":true,"publication_clearance":false}
+}
