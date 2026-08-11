@@ -1,5 +1,5 @@
 schema_version: 1
-last_updated: "2026-08-02"
+last_updated: "2026-08-10"
 project:
   name: "Formed Life Translation"
   repository: "WormRN/formed-life-translation"
@@ -46,11 +46,33 @@ bootstrap:
   prohibit_chat_memory_reconstruction: true
   prohibit_version_1_substitution: true
   required_read_order:
+    - "AGENTS.md"
     - "docs/START_HERE.md"
     - "config/engine_manifest.yaml"
-    - "config/latest_audit_run.json"
+    - "current passage manifest named by execution_control.current_passage_manifest"
+    - "config/latest_audit_run.json when relevant"
     - "relevant governing documents"
     - "current unit files"
+
+execution_control:
+  model: "passage_manifest_state_machine_v1"
+  state_machine_spec: "docs/architecture/phase-4/passage-manifest-state-machine-v1.md"
+  current_unit_id: "COL-01-001-014"
+  current_passage_manifest: "config/passages/COL-01-001-014.json"
+  default_branch_state_is_authoritative: true
+  chat_history_is_authoritative: false
+  branch_and_pull_request_state_is_proposed_only: true
+  interactive_repository_or_actions_connection_attempt_limit: 1
+  agent_driven_retry_loop_forbidden: true
+  provider_request_retries_governed_by_circuit_breaker: true
+  status_requires_actions_connection: false
+  human_editor_is_github_middleware: false
+  commands:
+    status: "read_only"
+    resume_dry_run: "read_only"
+    resume_live: "paused_to_ready_only"
+    cancel: "exact_known_job_only"
+    dispatch: "separate_exact_job_authorization_required"
 
 authority:
   final_decision_maker: "human_editor"
@@ -74,24 +96,25 @@ governing_documents:
   - "docs/current/FLT_copyright_independence_policy_v2.0.md"
   - "docs/current/FLT_translation_packet_template_v2.0.md"
   - "docs/architecture/phase-4/engine-2.2-passage-sense-gate.md"
+  - "docs/architecture/phase-4/FLT_Autonomous_Circuit_Breaker_v1.md"
   - "logs/FLT_decision_log.md"
 
 current_checkpoint:
-  book: "Philippians"
-  chapter: 4
-  current_unit_id: "PHP-04-021-023"
-  current_passage: "Philippians 4:21-23"
-  stage: "accepted_pending_whole_letter_review"
-  candidate_status: "Exact text and three reader notes audited; two auditors eligible, one verse 23 added-meaning block explicitly overridden by the Human Editor’s prior final decision; accepted pending whole-letter review."
-  candidate_sealed: true
-  latest_accepted_unit: "Philippians 4:21-23 accepted after Engine 2.2 exact-text and reader-note audit with one documented Human Editor override."
-  next_permitted_action: "Begin the planned whole-letter review and retrospective Engine 2.2 certification of chapters 1-2. Do not rerun or repair Philippians 4:21-23 unless the Human Editor reopens it."
-  copyright_status: "DEFERRED_BATCH"
-  provisional_heuristic_check: "watchlist_phil_4_23"
-  source_gate_status: "passed_for_recorded_blind_draft"
+  book: "Colossians"
+  chapter: 1
+  current_unit_id: "COL-01-001-014"
+  current_passage: "Colossians 1:1-14"
+  stage: "architecture_repair_paused"
+  candidate_status: "No candidate wording is recognized as current. Batch 01 is quarantined with an unknown terminal outcome; Batch 02 is proposed but not authorized."
+  candidate_sealed: false
+  latest_accepted_unit: "Philippians 4:21-23 remains accepted within frozen Philippians v0.9 RC1."
+  next_permitted_action: "Execute only flt status COL-01-001-014 from a clean chat, then flt resume COL-01-001-014 --dry-run --expected-revision 1 if the status report is correct."
+  copyright_status: "not_applicable_before_candidate_drafting"
+  provisional_heuristic_check: "not_started"
+  source_gate_status: "complete_for_blind_drafting_but_dispatch_paused"
   hard_check_required: true
   publication_clearance: false
-  prepublication_requirement: "Run the formal eight-translation New Testament API batch audit through authorized sources, using API.Bible where available and likely the official ESV API separately; resolve findings and re-audit later wording changes."
+  prepublication_requirement: "Complete the ordinary FLT editorial and copyright gates after an exact candidate exists; no Colossians candidate currently exists in durable state."
   process_revalidation:
     reason: "Earlier blind drafting assigned different readability, Greek-fidelity, and balanced missions instead of one common constitutional goal."
     status: "recovery_completed_all_nine_units_process_revalidated"
@@ -271,17 +294,12 @@ current_checkpoint:
     semantic_pass: true
     human_acceptance_after_oral_review_pending: false
   active_files:
-    blind_source: "docs/architecture/phase-4/PHP-04-021-023_blind-source-v2.2.json"
-    human_synthesis: "docs/architecture/phase-4/PHP-04-021-023_human-editor-synthesis-v2.2.json"
-    copyright_heuristic: "docs/architecture/phase-4/PHP-04-021-023_copyright-heuristic-v01.json"
-    draft_receipt: "config/latest_php4_021_023_engine22_draft_run.json"
-    smoothing_runner: "phase4-harness/src/oral-smoothing.js"
-    smoothing_workflow: ".github/workflows/phase4-php4-021-023-human-smoothing.yml"
-    human_candidate_seal: "docs/architecture/phase-4/PHP-04-021-023_human-editor-synthesis-v2.2.seal.json"
-    audit_runner: "phase4-harness/src/human-candidate-audit.js"
-    audit_workflow: ".github/workflows/phase4-php4-021-023-human-smoothing.yml"
-    audit_receipt: "config/latest_php4_021_023_audit_run.json"
-    latest_accepted_unit_record: "docs/architecture/phase-4/PHP-04-010-020_human-editor-synthesis-v2.2.json"
+    passage_manifest: "config/passages/COL-01-001-014.json"
+    blind_source: "docs/architecture/phase-4/COL-01-001-014_blind-source-v2.2.json"
+    historical_preflight: "config/COL-01-001-014_blind-draft-preflight-v01.json"
+    quarantined_workflow: ".github/workflows/phase4-col1-001-014-sense-drafts.yml"
+    state_machine_spec: "docs/architecture/phase-4/passage-manifest-state-machine-v1.md"
+    latest_accepted_unit_record: "docs/architecture/phase-4/PHP-04-021-023_human-editor-synthesis-v2.2.json"
     latest_frozen_chapter: "docs/architecture/phase-4/FLT_Philippians_3_freeze-v01.md"
     latest_audit_receipt: "config/latest_audit_run.json"
 
