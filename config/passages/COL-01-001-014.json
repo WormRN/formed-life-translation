@@ -1,72 +1,190 @@
 {
   "schema_version": "1.0.0",
-  "manifest_revision": 19,
+  "manifest_revision": 20,
   "last_updated": "2026-08-11",
-  "unit": {"unit_id":"COL-01-001-014","book":"Colossians","passage":"Colossians 1:1-14","source_edition":"SBLGNT","engine_version":"2.2"},
-  "authority": {"state_source":"this_file_on_default_branch","human_editor":"David L. Davis","chat_history_authoritative":false,"historical_preflight_authorization_reusable":false,"conflict_policy":"stop_and_report"},
+  "unit": {
+    "unit_id": "COL-01-001-014",
+    "book": "Colossians",
+    "passage": "Colossians 1:1-14",
+    "source_edition": "SBLGNT",
+    "engine_version": "2.2"
+  },
+  "authority": {
+    "state_source": "this_file_on_default_branch",
+    "human_editor": "David L. Davis",
+    "chat_history_authoritative": false,
+    "historical_preflight_authorization_reusable": false,
+    "conflict_policy": "stop_and_report"
+  },
   "artifacts": {
-    "source_packet":"docs/architecture/phase-4/COL-01-001-014_blind-source-v2.2.json",
-    "human_editor_synthesis":"docs/architecture/phase-4/COL-01-001-014_human-editor-synthesis-v2.2.json",
-    "human_editor_final":"docs/architecture/phase-4/COL-01-001-014_human-final-v2.2.json",
-    "human_editor_final_seal":"docs/architecture/phase-4/COL-01-001-014_human-final-seal-v2.2.json",
-    "smoothing_workflow":".github/workflows/phase4-col1-001-014-human-smoothing.yml",
-    "final_audit_workflow":".github/workflows/phase4-col1-001-014-final-exact-audit.yml",
-    "state_machine_spec":"docs/architecture/phase-4/passage-manifest-state-machine-v1.md",
-    "circuit_breaker_spec":"docs/architecture/phase-4/FLT_Autonomous_Circuit_Breaker_v1.md"
+    "source_packet": "docs/architecture/phase-4/COL-01-001-014_blind-source-v2.2.json",
+    "human_editor_synthesis": "docs/architecture/phase-4/COL-01-001-014_human-editor-synthesis-v2.2.json",
+    "human_editor_final": "docs/architecture/phase-4/COL-01-001-014_human-final-v2.2.json",
+    "human_editor_final_seal": "docs/architecture/phase-4/COL-01-001-014_human-final-seal-v2.2.json",
+    "smoothing_workflow": ".github/workflows/phase4-col1-001-014-human-smoothing.yml",
+    "final_audit_workflow": ".github/workflows/phase4-col1-001-014-final-exact-audit.yml",
+    "state_machine_spec": "docs/architecture/phase-4/passage-manifest-state-machine-v1.md",
+    "circuit_breaker_spec": "docs/architecture/phase-4/FLT_Autonomous_Circuit_Breaker_v1.md"
   },
   "state": {
-    "status":"ready",
-    "phase":"human_final_text_sealed_exact_audit_armed",
-    "active_job_id":null,
-    "active_run_id":null,
-    "translation_allowed":false,
-    "candidate_generation_allowed":false,
-    "provider_dispatch_allowed":true,
-    "github_workflow_dispatch_allowed":true,
-    "translation_artifact_mutation_allowed":false,
-    "next_permitted_action":"merge zero-call validated final exact-audit handoff; one-shot push may launch exactly COL-01-001-014-EXACT-AUDIT-01"
+    "status": "running",
+    "phase": "final_exact_candidate_audit_running",
+    "active_job_id": "COL-01-001-014-EXACT-AUDIT-01",
+    "active_run_id": "31526453016",
+    "translation_allowed": false,
+    "candidate_generation_allowed": false,
+    "provider_dispatch_allowed": true,
+    "github_workflow_dispatch_allowed": false,
+    "translation_artifact_mutation_allowed": false,
+    "next_permitted_action": "await verified final exact-candidate audit completion or exact cancel"
   },
-  "allowed_actions":["flt status COL-01-001-014","merge validated final exact-audit handoff","flt cancel COL-01-001-014 --job COL-01-001-014-EXACT-AUDIT-01 --expected-revision 19","read_only_repository_inspection"],
-  "forbidden_actions":["modify_human_editor_final_text_without_explicit_human_approval","dispatch_any_job_other_than_COL-01-001-014-EXACT-AUDIT-01","provider_calls_before_running_state_claim","reuse_consumed_launch_nonce","resume_or_rerun_completed_or_quarantined_jobs","modify_or_reopen_philippians","automatic_connection_retry"],
+  "allowed_actions": [
+    "flt status COL-01-001-014",
+    "flt cancel COL-01-001-014 --job COL-01-001-014-EXACT-AUDIT-01 --expected-revision 20",
+    "read_only_repository_inspection"
+  ],
+  "forbidden_actions": [
+    "modify_human_editor_final_text_without_explicit_human_approval",
+    "dispatch_any_job_other_than_COL-01-001-014-EXACT-AUDIT-01",
+    "provider_calls_before_running_state_claim",
+    "reuse_consumed_launch_nonce",
+    "resume_or_rerun_completed_or_quarantined_jobs",
+    "modify_or_reopen_philippians",
+    "automatic_connection_retry"
+  ],
   "jobs": {
-    "COL-01-001-014-BLIND-DRAFT-BATCH-01":{"idempotency_key":"flt:2.2:COL-01-001-014:blind-draft:01","job_type":"blind_candidate_batch","status":"quarantined_unknown_terminal","resume_allowed":false,"retry_allowed":false},
-    "COL-01-001-014-BLIND-DRAFT-BATCH-02":{"idempotency_key":"flt:2.2:COL-01-001-014:blind-draft:02","job_type":"blind_candidate_batch","status":"completed_human_editor_selection_recorded","remote_run_id":"31458938652","provider_attempts_used":4,"retry_allowed":false},
-    "COL-01-001-014-HUMAN-SMOOTHING-01":{"idempotency_key":"flt:2.2:COL-01-001-014:human-smoothing:01","job_type":"listener_only_and_source_aware_smoothing","status":"completed_human_editor_decision_recorded","remote_run_id":"31522547468","prior_failed_runs":[{"run_id":"31521483950","failure_code":"MISSING_TASK_ID","provider_calls_made":0,"checkpoints_created":0}],"retry_allowed":false},
+    "COL-01-001-014-BLIND-DRAFT-BATCH-01": {
+      "idempotency_key": "flt:2.2:COL-01-001-014:blind-draft:01",
+      "job_type": "blind_candidate_batch",
+      "status": "quarantined_unknown_terminal",
+      "resume_allowed": false,
+      "retry_allowed": false
+    },
+    "COL-01-001-014-BLIND-DRAFT-BATCH-02": {
+      "idempotency_key": "flt:2.2:COL-01-001-014:blind-draft:02",
+      "job_type": "blind_candidate_batch",
+      "status": "completed_human_editor_selection_recorded",
+      "remote_run_id": "31458938652",
+      "provider_attempts_used": 4,
+      "retry_allowed": false
+    },
+    "COL-01-001-014-HUMAN-SMOOTHING-01": {
+      "idempotency_key": "flt:2.2:COL-01-001-014:human-smoothing:01",
+      "job_type": "listener_only_and_source_aware_smoothing",
+      "status": "completed_human_editor_decision_recorded",
+      "remote_run_id": "31522547468",
+      "prior_failed_runs": [
+        {
+          "run_id": "31521483950",
+          "failure_code": "MISSING_TASK_ID",
+          "provider_calls_made": 0,
+          "checkpoints_created": 0
+        }
+      ],
+      "retry_allowed": false
+    },
     "COL-01-001-014-EXACT-AUDIT-01": {
-      "idempotency_key":"flt:2.2:COL-01-001-014:exact-audit:01",
-      "job_type":"english_reconstruction_and_semantic_floor_exact_candidate_audit",
-      "status":"authorized_ready",
-      "authorization_id":"HE-COL-01-001-014-FINAL-ACCEPT-20260811",
-      "authorized_by":"human_editor",
-      "authorization_scope":"audit exact post-smoothing Human Editor final text as required final Engine 2.2 gate before terminal acceptance",
-      "dispatch_allowed":true,
-      "workflow":".github/workflows/phase4-col1-001-014-final-exact-audit.yml",
-      "max_attempts_per_worker":2,
-      "task_max_attempts":8,
-      "remote_run_id":null,
-      "dispatch_confirmed":false,
-      "provider_attempts_used":0,
-      "checkpoints_to_restore":0,
-      "launch":{"mode":"manifest_authorized_one_shot_push","nonce":"HE-COL-01-001-014-EXACT-AUDIT-20260811-01","status":"armed","armed_by":"human_editor","authorization_id":"HE-COL-01-001-014-FINAL-ACCEPT-20260811","expected_manifest_revision":19,"consumed_run_id":null},
-      "retry_allowed":true
+      "idempotency_key": "flt:2.2:COL-01-001-014:exact-audit:01",
+      "job_type": "english_reconstruction_and_semantic_floor_exact_candidate_audit",
+      "status": "running",
+      "authorization_id": "HE-COL-01-001-014-FINAL-ACCEPT-20260811",
+      "authorized_by": "human_editor",
+      "authorization_scope": "audit exact post-smoothing Human Editor final text as required final Engine 2.2 gate before terminal acceptance",
+      "dispatch_allowed": true,
+      "workflow": ".github/workflows/phase4-col1-001-014-final-exact-audit.yml",
+      "max_attempts_per_worker": 2,
+      "task_max_attempts": 8,
+      "remote_run_id": "31526453016",
+      "dispatch_confirmed": true,
+      "provider_attempts_used": 0,
+      "checkpoints_to_restore": 0,
+      "launch": {
+        "mode": "manifest_authorized_one_shot_push",
+        "nonce": "HE-COL-01-001-014-EXACT-AUDIT-20260811-01",
+        "status": "consumed",
+        "armed_by": "human_editor",
+        "authorization_id": "HE-COL-01-001-014-FINAL-ACCEPT-20260811",
+        "expected_manifest_revision": 19,
+        "consumed_run_id": "31526453016",
+        "consumed_nonce": "HE-COL-01-001-014-EXACT-AUDIT-20260811-01"
+      },
+      "retry_allowed": false
     }
   },
   "editorial_decisions": {
-    "final_text_status":"human_approved_pending_required_exact_audit",
-    "joy_scope_precedent":{"reference":"Col.1.11-12","source":"μετὰ χαρᾶς","decision":"attach forward to thanksgiving in verse 12","status":"confirmed"},
-    "study_footnote_requirement":{"reference":"Col.1.14","owner":"Librarian","topic":"redemption/ransom","status":"required_pending_generation"}
+    "final_text_status": "human_approved_pending_required_exact_audit",
+    "joy_scope_precedent": {
+      "reference": "Col.1.11-12",
+      "source": "μετὰ χαρᾶς",
+      "decision": "attach forward to thanksgiving in verse 12",
+      "status": "confirmed"
+    },
+    "study_footnote_requirement": {
+      "reference": "Col.1.14",
+      "owner": "Librarian",
+      "topic": "redemption/ransom",
+      "status": "required_pending_generation"
+    }
   },
   "state_machine": {
-    "states":["paused","ready","running","awaiting_human_editor","completed","cancel_requested","cancel_unverified","cancelled","blocked"],
-    "permitted_transitions":[
-      {"from":"paused","to":"ready","command":"flt resume","dispatches":0},
-      {"from":"ready","to":"running","command":"authorized dispatch or armed one-shot push state claim","requires_exact_job_authorization":true},
-      {"from":"running","to":"awaiting_human_editor","command":"verified job completion"},
-      {"from":"awaiting_human_editor","to":"ready","command":"explicit Human Editor decision plus authorization of required next-stage job","dispatches":0},
-      {"from":"awaiting_human_editor","to":"completed","command":"explicit Human Editor acceptance when no further required editorial job remains"},
-      {"from":"blocked","to":"ready","command":"explicit Human Editor unlock preserving attempt accounting and checkpoints","dispatches":0}
+    "states": [
+      "paused",
+      "ready",
+      "running",
+      "awaiting_human_editor",
+      "completed",
+      "cancel_requested",
+      "cancel_unverified",
+      "cancelled",
+      "blocked"
+    ],
+    "permitted_transitions": [
+      {
+        "from": "paused",
+        "to": "ready",
+        "command": "flt resume",
+        "dispatches": 0
+      },
+      {
+        "from": "ready",
+        "to": "running",
+        "command": "authorized dispatch or armed one-shot push state claim",
+        "requires_exact_job_authorization": true
+      },
+      {
+        "from": "running",
+        "to": "awaiting_human_editor",
+        "command": "verified job completion"
+      },
+      {
+        "from": "awaiting_human_editor",
+        "to": "ready",
+        "command": "explicit Human Editor decision plus authorization of required next-stage job",
+        "dispatches": 0
+      },
+      {
+        "from": "awaiting_human_editor",
+        "to": "completed",
+        "command": "explicit Human Editor acceptance when no further required editorial job remains"
+      },
+      {
+        "from": "blocked",
+        "to": "ready",
+        "command": "explicit Human Editor unlock preserving attempt accounting and checkpoints",
+        "dispatches": 0
+      }
     ]
   },
-  "invariants":["Only the default-branch copy is authoritative.","At most one active job may exist for this unit.","Every provider job has a stable ID and idempotency key.","Terminal or quarantined job IDs cannot be reused.","The exact Human Editor final text and seal cannot be altered by auditors.","Provider attempts remain governed by Autonomous Circuit Breaker v1.","Philippians v0.9 RC1 remains frozen."],
-  "triage":{"reason":"Human Editor approved final post-smoothing wording on 2026-08-11; Engine 2.2 requires one expanded exact-candidate semantic audit before terminal acceptance and transition to the next unit."}
+  "invariants": [
+    "Only the default-branch copy is authoritative.",
+    "At most one active job may exist for this unit.",
+    "Every provider job has a stable ID and idempotency key.",
+    "Terminal or quarantined job IDs cannot be reused.",
+    "The exact Human Editor final text and seal cannot be altered by auditors.",
+    "Provider attempts remain governed by Autonomous Circuit Breaker v1.",
+    "Philippians v0.9 RC1 remains frozen."
+  ],
+  "triage": {
+    "reason": "Human Editor approved final post-smoothing wording on 2026-08-11; Engine 2.2 requires one expanded exact-candidate semantic audit before terminal acceptance and transition to the next unit."
+  }
 }
