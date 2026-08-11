@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "manifest_revision": 6,
+  "manifest_revision": 7,
   "last_updated": "2026-08-10",
   "unit": {
     "unit_id": "COL-01-001-014",
@@ -27,19 +27,21 @@
     "circuit_breaker_spec": "docs/architecture/phase-4/FLT_Autonomous_Circuit_Breaker_v1.md"
   },
   "state": {
-    "status": "blocked",
-    "phase": "blind_draft_batch_02_halted",
+    "status": "ready",
+    "phase": "blind_draft_batch_02_repaired_auto_launch_armed",
     "active_job_id": null,
-    "active_run_id": "31457299123",
+    "active_run_id": null,
     "translation_allowed": false,
-    "candidate_generation_allowed": false,
-    "provider_dispatch_allowed": false,
-    "github_workflow_dispatch_allowed": false,
+    "candidate_generation_allowed": true,
+    "provider_dispatch_allowed": true,
+    "github_workflow_dispatch_allowed": true,
     "translation_artifact_mutation_allowed": false,
-    "next_permitted_action": "inspect verified Batch 02 halt evidence; Human Editor unlock required for any retry"
+    "next_permitted_action": "merge repaired Batch 02 auto-launch change; credential-free gate must claim running before provider calls"
   },
   "allowed_actions": [
     "flt status COL-01-001-014",
+    "merge repaired Batch 02 auto-launch change",
+    "flt cancel COL-01-001-014 --job COL-01-001-014-BLIND-DRAFT-BATCH-02 --expected-revision 7",
     "read_only_repository_inspection"
   ],
   "forbidden_actions": [
@@ -48,6 +50,7 @@
     "dispatch_any_job_other_than_COL-01-001-014-BLIND-DRAFT-BATCH-02",
     "provider_calls_before_running_state_claim",
     "reuse_consumed_launch_nonce",
+    "restore_checkpoints_from_failed_run_31457299123",
     "modify_translation_artifacts_before_verified_job_completion",
     "modify_or_reopen_philippians",
     "resume_or_rerun_quarantined_job",
@@ -70,39 +73,48 @@
     "COL-01-001-014-BLIND-DRAFT-BATCH-02": {
       "idempotency_key": "flt:2.2:COL-01-001-014:blind-draft:02",
       "job_type": "blind_candidate_batch",
-      "status": "blocked",
+      "status": "authorized_ready",
       "authorization_id": "HE-COL-BATCH-02",
       "authorized_by": "human_editor",
-      "authorization_scope": "exact_job_resume_dispatch_and_one_shot_auto_launch",
+      "authorization_scope": "exact_job_repair_relaunch_and_provider_spending",
       "dispatch_allowed": true,
       "preflight_status": "passed_zero_provider_calls",
       "preflight_receipt": "config/COL-01-001-014_blind-draft-preflight-v02.json",
       "workflow": ".github/workflows/phase4-col1-001-014-sense-drafts-batch-02.yml",
       "max_attempts_per_worker": 2,
       "task_max_attempts": 8,
-      "remote_run_id": "31457299123",
-      "dispatch_confirmed": true,
+      "remote_run_id": null,
+      "dispatch_confirmed": false,
+      "provider_attempts_used": 0,
+      "checkpoints_to_restore": 0,
+      "prior_failed_run": {
+        "run_id": "31457299123",
+        "failed_operation": "prepare-run-config run-ID validation",
+        "provider_calls_made": 0,
+        "checkpoints_created": 0,
+        "launch_nonce": "HE-COL-BATCH-02-AUTO-20260810-01"
+      },
       "launch": {
         "mode": "manifest_authorized_one_shot_push",
-        "nonce": "HE-COL-BATCH-02-AUTO-20260810-01",
-        "status": "consumed",
+        "nonce": "HE-COL-BATCH-02-AUTO-20260810-02",
+        "status": "armed",
         "armed_by": "human_editor",
         "authorization_id": "HE-COL-BATCH-02",
-        "expected_manifest_revision": 4,
-        "consumed_run_id": "31457299123",
-        "consumed_nonce": "HE-COL-BATCH-02-AUTO-20260810-01"
+        "expected_manifest_revision": 7,
+        "consumed_run_id": null
       },
       "activation_requirements": [
-        "clean_resume_test_passed",
-        "explicit_human_editor_authorization_for_exact_job_id",
+        "exact_human_editor_unlock_for_prepare_run_config_failure",
+        "run_id_helper_accepts_standard_three_letter_book_codes",
         "matching_manifest_revision",
         "no_active_job",
-        "fresh_zero_provider_call_preflight",
+        "fresh_zero_provider_call_repair_preflight",
+        "zero_checkpoint_restore",
         "unique_armed_launch_nonce",
         "credential_free_gate_claims_running_before_provider_credentials",
         "workflow_validates_this_passage_manifest_before_provider_credentials_are_available"
       ],
-      "retry_allowed": false
+      "retry_allowed": true
     }
   },
   "state_machine": {
@@ -118,48 +130,14 @@
       "blocked"
     ],
     "permitted_transitions": [
-      {
-        "from": "paused",
-        "to": "ready",
-        "command": "flt resume",
-        "dispatches": 0
-      },
-      {
-        "from": "ready",
-        "to": "running",
-        "command": "authorized dispatch or armed one-shot push state claim",
-        "requires_exact_job_authorization": true
-      },
-      {
-        "from": "running",
-        "to": "awaiting_human_editor",
-        "command": "verified job completion"
-      },
-      {
-        "from": "awaiting_human_editor",
-        "to": "completed",
-        "command": "human editor acceptance"
-      },
-      {
-        "from": "ready",
-        "to": "cancel_requested",
-        "command": "flt cancel"
-      },
-      {
-        "from": "running",
-        "to": "cancel_requested",
-        "command": "flt cancel"
-      },
-      {
-        "from": "cancel_requested",
-        "to": "cancelled",
-        "command": "verified external cancellation"
-      },
-      {
-        "from": "cancel_requested",
-        "to": "cancel_unverified",
-        "command": "external status unavailable"
-      }
+      {"from": "paused", "to": "ready", "command": "flt resume", "dispatches": 0},
+      {"from": "ready", "to": "running", "command": "authorized dispatch or armed one-shot push state claim", "requires_exact_job_authorization": true},
+      {"from": "running", "to": "awaiting_human_editor", "command": "verified job completion"},
+      {"from": "awaiting_human_editor", "to": "completed", "command": "human editor acceptance"},
+      {"from": "ready", "to": "cancel_requested", "command": "flt cancel"},
+      {"from": "running", "to": "cancel_requested", "command": "flt cancel"},
+      {"from": "cancel_requested", "to": "cancelled", "command": "verified external cancellation"},
+      {"from": "cancel_requested", "to": "cancel_unverified", "command": "external status unavailable"}
     ],
     "forbidden_transitions": [
       "paused_to_running",
@@ -179,6 +157,7 @@
     "Resume changes paused to ready only; dispatch is a separate authorized transition.",
     "A manifest-authorized one-shot push must claim running durably before provider credentials are exposed.",
     "A launch nonce is single-use and cannot launch after the manifest leaves ready.",
+    "A failed pre-provider launch consumes no provider attempt and restores no checkpoint unless durable evidence says otherwise.",
     "One failed interactive repository or Actions connection ends that controller operation without an agent-driven retry loop.",
     "A separately authorized provider job retains the Autonomous Circuit Breaker v1 attempt and halt rules.",
     "Remote uncertainty pauses work and is never converted into an inferred result.",

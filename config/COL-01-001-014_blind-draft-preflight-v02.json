@@ -4,7 +4,8 @@
   "unit_id": "COL-01-001-014",
   "passage": "Colossians 1:1-14",
   "engine_version": "2.2",
-  "manifest_revision_validated": 3,
+  "manifest_revision_validated": 6,
+  "repair_target_manifest_revision": 7,
   "authorization_id": "HE-COL-BATCH-02",
   "status": "passed_zero_provider_calls",
   "provider_calls_made": 0,
@@ -28,7 +29,11 @@
     "conversation_drafts_absent": true
   },
   "checks": {
-    "default_branch_manifest_status_ready": true,
+    "exact_job_unlock_received": true,
+    "failed_run_provider_calls_verified_zero": true,
+    "failed_run_checkpoints_verified_zero": true,
+    "run_id_helper_accepts_standard_three_letter_book_codes": true,
+    "default_branch_manifest_repair_target_ready": true,
     "exact_job_authorized_ready": true,
     "authorization_id_matches": true,
     "no_active_job": true,
@@ -44,21 +49,29 @@
     "manifest_authorized_one_shot_push": true,
     "credential_free_state_claim_before_provider_job": true,
     "launch_nonce_required": true,
-    "harness_unchanged_since_validated_batch_01_preflight": true,
     "source_packet_unchanged_since_validated_batch_01_preflight": true,
     "philippians_workflows_untouched": true
   },
   "evidence": {
-    "validated_default_branch_commit": "476c6de519bfbace63dd5dd01c264ee8092868e1",
+    "failed_run_id": "31457299123",
+    "failed_operation": "prepare-run-config run-ID validation",
+    "failure_cause": "Helper accepted only FLT-PHP run IDs and rejected the valid Colossians FLT-COL run ID before candidate generation.",
+    "provider_calls_in_failed_run": 0,
+    "checkpoints_from_failed_run": 0,
+    "repair": "prepare-run-config now accepts FLT-[A-Z]{3}-CC-YYYYMMDD-RUN identifiers.",
     "source_packet_commit": "e5f1205fe1d1a1ae930deed11b56f3cfbe71d811",
-    "historical_push_mechanism": "Earlier FLT production workflows used pull_request for zero-call validation and push to main for the paid job; this mechanism is restored only behind the passage-manifest one-shot authorization gate.",
     "historical_preflight_reference_only": "config/COL-01-001-014_blind-draft-preflight-v01.json"
   },
   "human_authorization": {
     "received": true,
     "authorization_id": "HE-COL-BATCH-02",
     "authorized_job_id": "COL-01-001-014-BLIND-DRAFT-BATCH-02",
-    "authorized_actions": ["live_resume", "fresh_zero_provider_call_preflight", "authorized_dispatch_if_preflight_passes", "restore_agent_launchable_automation_for_exact_batch_02"],
+    "authorized_actions": [
+      "repair_prepare_run_config_three_letter_book_codes",
+      "one_repaired_manifest_authorized_launch",
+      "provider_spending_under_existing_two_per_worker_eight_per_task_ceiling",
+      "restore_no_checkpoints"
+    ],
     "authorized_at": "2026-08-10"
   }
 }
