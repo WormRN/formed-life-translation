@@ -24,12 +24,13 @@ Chat history, memory, attachments, handoff prompts, and UI status indicators are
 | `paused` | `ready` | Authorized live `flt resume` | 0 |
 | `ready` | `running` | Separately authorized dispatch for the exact job | At most the manifest limit |
 | `running` | `awaiting_human_editor` | Verified job completion and durable receipt | 0 |
-| `awaiting_human_editor` | `completed` | Explicit Human Editor acceptance | 0 |
+| `awaiting_human_editor` | `ready` | Explicit Human Editor selection/decision plus authorization of a new distinct next-stage job | 0 |
+| `awaiting_human_editor` | `completed` | Explicit Human Editor acceptance when no further required editorial job remains | 0 |
 | `ready` or `running` | `cancel_requested` | Exact `flt cancel` | 0 provider calls |
 | `cancel_requested` | `cancelled` | Verified remote cancellation | 0 |
 | `cancel_requested` | `cancel_unverified` | Remote status unavailable after one attempt | 0 |
 
-No command may jump directly from `paused` to `running`. Resume and dispatch are deliberately separate operations.
+No command may jump directly from `paused` to `running`. Resume and dispatch are deliberately separate operations. The `awaiting_human_editor` to `ready` handoff may arm only a new distinct job ID; it may not reuse, resume, or rerun the completed job that produced the Human Editor checkpoint.
 
 ## Revision and idempotency
 
@@ -50,6 +51,10 @@ A proposed state transition becomes authoritative only after it is merged to the
 ### Live resume
 
 A live resume requires the exact unit ID, exact proposed job ID, matching revision, no active job, and Human Editor authorization scoped to that job. It may only propose `paused` to `ready`; it never dispatches.
+
+### Human-editor next-stage handoff
+
+When a completed provider job is `awaiting_human_editor`, an explicit Human Editor wording selection or decision may arm a new distinct next-stage job and transition the passage back to `ready`, provided the authorization is scoped to that new job, the prior job remains terminal/non-reusable, no active job exists, and the new workflow passes the ordinary credential-free dispatch gate.
 
 ### Cancel
 

@@ -1,0 +1,33 @@
+name: FLT Colossians 1:1-14 Human Editor smoothing bootstrap
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/phase4-col1-001-014-human-smoothing.yml'
+      - 'docs/architecture/phase-4/COL-01-001-014_human-editor-synthesis-v2.2.json'
+      - 'config/passages/COL-01-001-014.json'
+      - 'docs/architecture/phase-4/passage-manifest-state-machine-v1.md'
+
+permissions: {contents: read}
+
+jobs:
+  validate:
+    name: Bootstrap validation only — zero provider calls
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: phase4-harness/package-lock.json
+      - name: Validate sealed Human Editor selection and Engine 2.2 harness
+        shell: bash
+        run: |
+          set -euo pipefail
+          jq -e '.candidate_id == "COL-01-001-014-HUMAN-SYNTHESIS-V2.2" and .human_editor_selection.exact_wording_preserved == true and (.verse_renderings | length) == 14' docs/architecture/phase-4/COL-01-001-014_human-editor-synthesis-v2.2.json
+          jq -e '.manifest_revision == 13 and .unit.unit_id == "COL-01-001-014" and .state.status == "ready" and .jobs["COL-01-001-014-HUMAN-SMOOTHING-01"].status == "authorized_ready"' config/passages/COL-01-001-014.json
+          npm --prefix phase4-harness ci
+          npm --prefix phase4-harness test

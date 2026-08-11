@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "candidate_id": "COL-01-001-014-HUMAN-SYNTHESIS-V2.2",
+  "passage": "Colossians 1:1-14",
+  "status": "human_editor_exact_selection_pending_oral_smoothing",
+  "human_editor_selection": {
+    "date": "2026-08-11",
+    "exact_wording_preserved": true,
+    "blind_draft_run": 31458938652,
+    "engine_run_id": "FLT-COL-01-20260811-7",
+    "candidate_evidence_count": 3,
+    "oral_smoothing_run": null,
+    "oral_review_decision": "pending"
+  },
+  "verse_renderings": [
+    {"reference":"Col.1.1","text":"This letter is from Paul, an apostle of Christ Jesus by God's will, and from Timothy our brother."},
+    {"reference":"Col.1.2","text":"We are writing to the holy and faithful brothers and sisters in Colossae who belong to Christ. May God our Father give you grace and peace."},
+    {"reference":"Col.1.3","text":"We always thank God, the Father of our Lord Jesus Christ, when we pray for you,"},
+    {"reference":"Col.1.4","text":"because we have heard that you trust Christ Jesus and love all of God's holy people."},
+    {"reference":"Col.1.5","text":"Your trust and love come from the hope God has kept safe for you in heaven. You first heard about that hope in the true message—the good news."},
+    {"reference":"Col.1.6","text":"This good news has reached you. It is bearing fruit and growing all over the world, just as it has among you from the day you heard it and truly understood God's grace."},
+    {"reference":"Col.1.7","text":"You learned the good news from Epaphras, our dear fellow servant. He faithfully serves Christ on our behalf."},
+    {"reference":"Col.1.8","text":"He also told us about the love the Spirit has produced in you."},
+    {"reference":"Col.1.9","text":"That is why, from the day we heard about you, we have not stopped praying for you. We keep asking God to fill you with the knowledge of what He wants, with all the wisdom and understanding His Spirit gives,"},
+    {"reference":"Col.1.10","text":"so that you will live in a way that honors the Lord and pleases Him in every way: bearing fruit in every good work and growing as you come to know God better."},
+    {"reference":"Col.1.11","text":"We pray that His glorious might will make you strong in every way, so that you can endure anything and remain patient with others."},
+    {"reference":"Col.1.12","text":"Joyfully give thanks to the Father, who has made you fit to share in the inheritance of His holy people in the light."},
+    {"reference":"Col.1.13","text":"He rescued us from the rule of darkness and brought us into the kingdom of the Son He loves."},
+    {"reference":"Col.1.14","text":"In the Son we have been set free: our sins are forgiven."}
+  ],
+  "reader_notes": [],
+  "copyright_protocol": {
+    "mode": "DEFERRED_BATCH",
+    "status": "DEFERRED_BATCH",
+    "hard_check_required": true,
+    "publication_clearance": false
+  }
+}
