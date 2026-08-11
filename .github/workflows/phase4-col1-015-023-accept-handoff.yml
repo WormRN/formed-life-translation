@@ -1,0 +1,108 @@
+name: FLT Colossians 1:15-23 acceptance and 1:24-29 handoff
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/phase4-col1-015-023-accept-handoff.yml'
+      - 'config/passages/COL-01-015-023.json'
+      - 'config/passages/COL-01-024-029.json'
+      - 'config/latest_audit_run.json'
+      - 'docs/architecture/phase-4/COL-01-024-029_blind-source-v2.2.json'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/phase4-col1-015-023-accept-handoff.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: flt-col-01-015-023-accept-handoff
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    if: github.event_name == 'pull_request'
+    name: Validate acceptance and next source gate — zero provider calls
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: phase4-harness/package-lock.json
+      - name: Validate terminal unit, receipt, new manifest, source gate, and harness
+        shell: bash
+        run: |
+          set -euo pipefail
+          jq -e '.manifest_revision==10 and .state.status=="completed" and .editorial_decisions.final_text_status=="ACCEPTED" and .jobs["COL-01-015-023-EXACT-AUDIT-01"].eligible_count==3 and .jobs["COL-01-015-023-EXACT-AUDIT-01"].blocking_defects==0 and .jobs["COL-01-015-023-EXACT-AUDIT-01"].semantic_pass==true' config/passages/COL-01-015-023.json
+          jq -e '.github_run_id==31543353525 and .audit_evidence.eligible_count==3 and .audit_evidence.blocking_defects==0 and .audit_evidence.semantic_pass==true and .artifact_sha256=="d548726b410d1cc048cc688a8718648777d5768ac9c91b0607bfb0662829d12d"' config/latest_audit_run.json
+          jq -e '.manifest_revision==1 and .unit.unit_id=="COL-01-024-029" and .state.status=="ready" and .state.candidate_generation_allowed==false and .state.provider_dispatch_allowed==false and (.jobs|length)==0 and .source_gate.status=="complete_for_blind_drafting"' config/passages/COL-01-024-029.json
+          npm --prefix phase4-harness ci
+          npm --prefix phase4-harness test
+          node --input-type=module -e "import fs from 'node:fs'; import {assertPassageSenseResolution} from './phase4-harness/src/sense-resolution-core.js'; const p=JSON.parse(fs.readFileSync('docs/architecture/phase-4/COL-01-024-029_blind-source-v2.2.json','utf8')); assertPassageSenseResolution(p); if(p.units[0].unit_id!=='COL-01-024-029'||p.units[0].verses.length!==6) process.exit(2);"
+
+  handoff:
+    if: >-
+      github.event_name == 'push' &&
+      !startsWith(github.event.head_commit.message, 'Advance engine pointer to Colossians 1:24-29')
+    name: Advance engine pointer with zero provider calls
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Validate merged acceptance and next source gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          jq -e '.manifest_revision==10 and .state.status=="completed" and .editorial_decisions.final_text_status=="ACCEPTED"' config/passages/COL-01-015-023.json
+          jq -e '.manifest_revision==1 and .state.status=="ready" and .state.provider_dispatch_allowed==false and .source_gate.status=="complete_for_blind_drafting"' config/passages/COL-01-024-029.json
+          npm --prefix phase4-harness ci
+          npm --prefix phase4-harness test
+          node --input-type=module -e "import fs from 'node:fs'; import {assertPassageSenseResolution} from './phase4-harness/src/sense-resolution-core.js'; assertPassageSenseResolution(JSON.parse(fs.readFileSync('docs/architecture/phase-4/COL-01-024-029_blind-source-v2.2.json','utf8')));"
+      - name: Patch authoritative engine pointer and accepted history
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          p=Path('config/engine_manifest.yaml')
+          s=p.read_text()
+          old='  current_unit_id: "COL-01-015-023"\n  current_passage_manifest: "config/passages/COL-01-015-023.json"'
+          new='  current_unit_id: "COL-01-024-029"\n  current_passage_manifest: "config/passages/COL-01-024-029.json"'
+          if old not in s:
+              raise SystemExit('engine pointer precondition not found')
+          s=s.replace(old,new,1)
+          checkpoint=re.compile(r'(current_checkpoint:\n)(.*?)(\n  process_revalidation:)',re.S)
+          m=checkpoint.search(s)
+          if not m:
+              raise SystemExit('current_checkpoint section not found')
+          replacement='''current_checkpoint:\n  book: "Colossians"\n  chapter: 1\n  current_unit_id: "COL-01-024-029"\n  current_passage: "Colossians 1:24-29"\n  stage: "passage_sense_complete_pending_blind_draft_authorization"\n  candidate_status: "No English candidate exists; Engine 2.2 source-side Passage-Sense Resolution Gate is complete. Blind A/B/C drafting requires a separate Human Editor authorization."\n  candidate_sealed: false\n  latest_accepted_unit: "Colossians 1:15-23 accepted after repaired exact candidate passed 3 of 3 semantic-floor auditors with zero blocking defects."\n  next_permitted_action: "Human Editor may review the Colossians 1:24-29 source packet and separately authorize a blind A/B/C drafting job."\n  copyright_status: "not_applicable_before_candidate_drafting"\n  provisional_heuristic_check: "not_started"\n  source_gate_status: "complete_for_blind_drafting"\n  hard_check_required: true\n  publication_clearance: false\n  prepublication_requirement: "Complete ordinary FLT editorial gates and deferred hard copyright audit before publication."'''
+          s=s[:m.start()]+replacement+m.group(3)+s[m.end():]
+          marker='accepted_units:\n'
+          entry='''  - passage: "Colossians 1:15-23"\n    status: "Human Editor repaired structural smoothing accepted after final exact-candidate audit: three eligible auditors, zero blocking defects; [rn] notes required at verses 15 and 16, [tn] at verse 19, and [dl] conditional precedent at verse 23; copyright hard check deferred to NT batch."\n    draft_run_id: 31532978974\n    smoothing_run_id: 31539928210\n    audit_run_id: 31543353525\n    audit_artifact: "FLT-COL-01-20260811-3-final-audit"\n'''
+          if '  - passage: "Colossians 1:15-23"\n' not in s:
+              if marker not in s:
+                  raise SystemExit('accepted_units marker not found')
+              s=s.replace(marker,marker+entry,1)
+          p.write_text(s)
+          PY
+          grep -Fq 'current_unit_id: "COL-01-024-029"' config/engine_manifest.yaml
+          grep -Fq 'current_passage_manifest: "config/passages/COL-01-024-029.json"' config/engine_manifest.yaml
+          grep -Fq 'passage: "Colossians 1:15-23"' config/engine_manifest.yaml
+      - name: Commit authoritative handoff
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- config/engine_manifest.yaml
+          git commit -m "Advance engine pointer to Colossians 1:24-29"
+          git push origin HEAD:main

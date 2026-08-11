@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "manifest_revision": 1,
+  "last_updated": "2026-08-11",
+  "unit": {
+    "unit_id": "COL-01-024-029",
+    "book": "Colossians",
+    "passage": "Colossians 1:24-29",
+    "source_edition": "SBLGNT",
+    "engine_version": "2.2"
+  },
+  "authority": {
+    "state_source": "this_file_on_default_branch",
+    "human_editor": "David L. Davis",
+    "chat_history_authoritative": false,
+    "historical_preflight_authorization_reusable": false,
+    "conflict_policy": "stop_and_report"
+  },
+  "artifacts": {
+    "source_packet": "docs/architecture/phase-4/COL-01-024-029_blind-source-v2.2.json",
+    "footnote_architecture": "docs/current/FLT_footnote_architecture_process_addendum_v2.0.md",
+    "librarian_backlog": "logs/FLT_librarian_backlog.md",
+    "state_machine_spec": "docs/architecture/phase-4/passage-manifest-state-machine-v1.md",
+    "circuit_breaker_spec": "docs/architecture/phase-4/FLT_Autonomous_Circuit_Breaker_v1.md"
+  },
+  "state": {
+    "status": "ready",
+    "phase": "passage_sense_complete_pending_blind_draft_authorization",
+    "active_job_id": null,
+    "active_run_id": null,
+    "translation_allowed": true,
+    "candidate_generation_allowed": false,
+    "provider_dispatch_allowed": false,
+    "github_workflow_dispatch_allowed": false,
+    "translation_artifact_mutation_allowed": false,
+    "next_permitted_action": "Human Editor may authorize a new distinct blind A/B/C drafting job for COL-01-024-029 after reviewing or accepting the completed passage-sense packet"
+  },
+  "allowed_actions": [
+    "flt status COL-01-024-029",
+    "read_only_repository_inspection"
+  ],
+  "forbidden_actions": [
+    "generate_blind_candidates_without_separate_human_editor_authorization",
+    "provider_calls_without_exact_authorized_job",
+    "expose_prior_accepted_Colossians_English_to_blind_workers",
+    "modify_or_reopen_COL-01-015-023",
+    "modify_or_reopen_COL-01-001-014",
+    "modify_or_reopen_philippians",
+    "automatic_connection_retry"
+  ],
+  "jobs": {},
+  "source_gate": {
+    "status": "complete_for_blind_drafting",
+    "gate_version": "2.2",
+    "source_side_only": true,
+    "prior_flt_wording_absent": true,
+    "prior_candidates_absent": true,
+    "editor_benchmark_absent": true,
+    "comparison_translations_absent": true,
+    "high_risk_expression": "Col.1.24 what is lacking in Christ's afflictions",
+    "human_review_alternatives": [
+      "COL1-AFFLICTIONS-CHRIST",
+      "COL1-FULFILL-WORD",
+      "COL1-CHRIST-IN-AMONG-YOU"
+    ]
+  },
+  "invariants": [
+    "Only the default-branch copy is authoritative after the engine pointer advances to this unit.",
+    "The Passage-Sense Resolution Gate is complete before English drafting.",
+    "Blind A/B/C drafting requires a separate exact Human Editor authorization and one common constitutional goal.",
+    "No accepted Colossians English may enter blind drafting.",
+    "Provider attempts remain governed by Autonomous Circuit Breaker v1.",
+    "COL-01-001-014 and COL-01-015-023 remain terminal and accepted.",
+    "Philippians v0.9 RC1 remains frozen."
+  ]
+}

@@ -1,57 +1,45 @@
 {
   "schema_version": 1,
   "repository": "WormRN/formed-life-translation",
-  "workflow_path": ".github/workflows/phase4-php4-004-009-human-smoothing.yml",
-  "unit_id": "PHP-04-004-009-EXACT-AUDIT",
-  "passage": "Philippians 4:4-9",
-  "engine_run_id": "FLT-PHP-04-20260803-4",
-  "github_run_id": 30777836549,
-  "run_url": "https://github.com/WormRN/formed-life-translation/actions/runs/30777836549",
-  "artifact_id": 8842661451,
-  "artifact_name": "FLT-PHP-04-20260803-4-audit",
-  "artifact_sha256": "1aa2cd1fe57bfd30fbf9c7f08cc0ccb8b21c043f0915a41a07bb75d5528fa61e",
+  "workflow_path": ".github/workflows/phase4-col1-015-023-final-exact-audit.yml",
+  "unit_id": "COL-01-015-023-EXACT-AUDIT-01",
+  "passage": "Colossians 1:15-23",
+  "engine_run_id": "FLT-COL-01-20260811-3",
+  "github_run_id": 31543353525,
+  "run_url": "https://github.com/WormRN/formed-life-translation/actions/runs/31543353525",
+  "artifact_id": 9121586449,
+  "artifact_name": "FLT-COL-01-20260811-3-final-audit",
+  "artifact_sha256": "d548726b410d1cc048cc688a8718648777d5768ac9c91b0607bfb0662829d12d",
   "artifact_summary_path": "outputs/human-candidate-audit.md",
-  "head_sha": "d14559d591ec57d46172db62a7434adb956cab30",
-  "generated_at": "2026-08-03T01:52:24Z",
+  "generated_at": "2026-08-11",
   "job_outcome": "success",
-  "receipt_status": "human_approved_unit_text_and_notes_audited",
+  "receipt_status": "human_editor_repaired_exact_candidate_audited_and_accepted",
   "audit_evidence": {
     "auditor_total": 3,
     "eligible_count": 3,
     "blocking_defects": 0,
-    "warnings": 5,
     "semantic_pass": true,
-    "verse_count": 6,
-    "reader_notes_total": 5,
-    "reader_notes_passed": 5
+    "verse_count": 9,
+    "provider_attempts_used": 6,
+    "task_attempt_ceiling": 8,
+    "retries": 0
   },
   "warning_disposition": {
-    "references": [
-      "Phil.4.5",
-      "Phil.4.7"
-    ],
+    "references": ["Col.1.19", "Col.1.23"],
     "issues": [
-      "The word 'fair' can be recovered more narrowly as justice or equity than the full range of epieikes.",
-      "The phrase 'because you belong to Christ Jesus' makes the compact 'in Christ Jesus' relationship explicitly causal."
+      "Verse 19 resolves the grammatically open subject of was pleased as God.",
+      "Verse 23 adds first in when you first heard the good news as a minor discourse clarification."
     ],
-    "decision": "Retain both human-approved renderings. The verse 5 note discloses the wider range of gentleness, gracious restraint, reasonableness, and willingness not to insist on every right. The verse 7 note discloses the literal 'in Christ Jesus' form. All three auditors still found the unit eligible and no warning was blocking."
+    "decision": "Both warnings are nonblocking. The Human Editor retains the exact repaired wording after a 3-of-3 eligible semantic-floor audit."
   },
   "copyright_protocol": {
     "status": "DEFERRED_BATCH",
-    "provisional_heuristic_check": "complete_with_delta",
-    "heuristic_findings": "watchlist",
-    "watchlist_references": [
-      "Phil.4.6",
-      "Phil.4.7"
-    ],
     "hard_check_required": true,
-    "publication_clearance": false,
-    "prepublication_requirement": "Formal eight-translation New Testament API batch audit through authorized sources, using API.Bible where available and likely the official ESV API separately."
+    "publication_clearance": false
   },
   "authority": {
     "candidate_was_sealed": true,
     "exact_human_approved_repairs_audited": true,
-    "all_reader_notes_audited": true,
     "audit_finalizes_candidate": false,
     "human_unit_acceptance_recorded": true,
     "reopening_requires_explicit_human_decision": true

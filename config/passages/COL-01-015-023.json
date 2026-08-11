@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "manifest_revision": 9,
+  "manifest_revision": 10,
   "last_updated": "2026-08-11",
   "unit": {
     "unit_id": "COL-01-015-023",
@@ -26,12 +26,13 @@
     "draft_workflow": ".github/workflows/phase4-col1-015-023-sense-drafts.yml",
     "smoothing_workflow": ".github/workflows/phase4-col1-015-023-human-smoothing.yml",
     "final_audit_workflow": ".github/workflows/phase4-col1-015-023-final-exact-audit.yml",
+    "final_audit_artifact": "FLT-COL-01-20260811-3-final-audit",
     "state_machine_spec": "docs/architecture/phase-4/passage-manifest-state-machine-v1.md",
     "circuit_breaker_spec": "docs/architecture/phase-4/FLT_Autonomous_Circuit_Breaker_v1.md"
   },
   "state": {
-    "status": "awaiting_human_editor",
-    "phase": "final_exact_candidate_audit_complete_pending_acceptance",
+    "status": "completed",
+    "phase": "human_editor_accepted_after_clean_exact_audit",
     "active_job_id": null,
     "active_run_id": "31543353525",
     "translation_allowed": false,
@@ -39,20 +40,16 @@
     "provider_dispatch_allowed": false,
     "github_workflow_dispatch_allowed": false,
     "translation_artifact_mutation_allowed": false,
-    "next_permitted_action": "retrieve verified final exact-audit artifact; if no blocks, apply Human Editor acceptance and advance to Colossians 1:24-29"
+    "next_permitted_action": "none for this terminal unit; engine may advance to COL-01-024-029"
   },
   "allowed_actions": [
     "flt status COL-01-015-023",
-    "retrieve verified final exact-audit artifact",
     "read_only_repository_inspection"
   ],
   "forbidden_actions": [
-    "modify_human_editor_final_text_without_explicit_human_approval",
-    "dispatch_any_job_other_than_COL-01-015-023-EXACT-AUDIT-01",
-    "provider_calls_before_running_state_claim",
+    "modify_or_reopen_this_accepted_unit_without_explicit_human_editor_authorization",
+    "reuse_any_completed_job_id",
     "reuse_consumed_launch_nonce",
-    "resume_or_rerun_completed_draft_job",
-    "resume_or_rerun_completed_smoothing_job",
     "modify_or_reopen_COL-01-001-014",
     "modify_or_reopen_philippians",
     "automatic_connection_retry"
@@ -79,46 +76,45 @@
     "COL-01-015-023-EXACT-AUDIT-01": {
       "idempotency_key": "flt:2.2:COL-01-015-023:exact-audit:01",
       "job_type": "english_reconstruction_and_semantic_floor_exact_candidate_audit",
-      "status": "awaiting_human_editor",
+      "status": "completed_human_editor_acceptance_recorded",
       "authorization_id": "HE-COL-01-015-023-REPAIR-AUDIT-20260811",
-      "authorized_by": "human_editor",
-      "authorization_scope": "audit the exact Human Editor repaired post-smoothing text for Colossians 1:15-23; if clean, permit Human Editor acceptance and advance to Colossians 1:24-29",
-      "dispatch_allowed": true,
-      "workflow": ".github/workflows/phase4-col1-015-023-final-exact-audit.yml",
-      "max_attempts_per_worker": 2,
-      "task_max_attempts": 8,
-      "provider_attempts_used": 0,
-      "checkpoints_to_restore": 0,
       "remote_run_id": "31543353525",
       "dispatch_confirmed": true,
-      "launch": {
-        "mode": "manifest_authorized_one_shot_push",
-        "nonce": "HE-COL-01-015-023-EXACT-AUDIT-20260811-01",
-        "status": "consumed",
-        "armed_by": "human_editor",
-        "authorization_id": "HE-COL-01-015-023-REPAIR-AUDIT-20260811",
-        "expected_manifest_revision": 7,
-        "consumed_run_id": "31543353525",
-        "consumed_nonce": "HE-COL-01-015-023-EXACT-AUDIT-20260811-01"
-      },
+      "provider_attempts_used": 6,
+      "auditor_total": 3,
+      "eligible_count": 3,
+      "blocking_defects": 0,
+      "semantic_pass": true,
+      "artifact_id": 9121586449,
+      "artifact_name": "FLT-COL-01-20260811-3-final-audit",
+      "artifact_sha256": "d548726b410d1cc048cc688a8718648777d5768ac9c91b0607bfb0662829d12d",
       "retry_allowed": false
     }
   },
   "editorial_decisions": {
     "sealed_candidate_id": "COL-01-015-023-HUMAN-FINAL-V2.2",
-    "sealed_candidate_status": "human_approved_post_smoothing_candidate_pending_exact_semantic_audit",
+    "final_text_status": "ACCEPTED",
+    "accepted_by": "human_editor",
+    "accepted_date": "2026-08-11",
     "christ_hymn_visual_block": "Col.1.15-20",
     "librarian_backlog_logged": true,
-    "repair_authorized": true,
-    "repair_summary": "Human Editor structural smoothing fronted in-Him phrasing, clarified Son agency in verse 20, tightened verses 21-23, and retained the if-you-continue conditional."
+    "exact_audit_result": {
+      "github_run_id": 31543353525,
+      "eligible_count": 3,
+      "blocking_defects": 0,
+      "semantic_pass": true,
+      "attempts_used": 6,
+      "nonblocking_warnings": [
+        "Col.1.19 resolves the grammatically open subject of was pleased as God; retained by Human Editor.",
+        "Col.1.23 says when you first heard the good news although the Greek says which you heard; retained as minor discourse clarification."
+      ]
+    }
   },
   "invariants": [
     "Only the default-branch copy is authoritative.",
-    "At most one active job may exist for this unit.",
-    "Completed draft and smoothing job IDs cannot be reused.",
-    "The exact Human Editor final text and seal cannot be altered by auditors.",
-    "Provider attempts remain governed by Autonomous Circuit Breaker v1.",
-    "Footnote concerns are classified [rn], [tn], or [dl].",
+    "This unit is terminally accepted and cannot be reopened without explicit Human Editor authorization.",
+    "The exact Human Editor final text and seal remain immutable historical evidence.",
+    "Footnote concerns remain classified [rn], [tn], or [dl].",
     "COL-01-001-014 remains terminal and accepted.",
     "Philippians v0.9 RC1 remains frozen."
   ]
