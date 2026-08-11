@@ -1,0 +1,35 @@
+name: FLT Colossians 1:15-23 final exact-candidate audit bootstrap
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/phase4-col1-015-023-final-exact-audit.yml'
+      - 'docs/architecture/phase-4/COL-01-015-023_human-final-v2.2.json'
+      - 'docs/architecture/phase-4/COL-01-015-023_human-final-seal-v2.2.json'
+      - 'config/passages/COL-01-015-023.json'
+
+permissions: {contents: read}
+
+jobs:
+  validate:
+    name: Bootstrap repaired exact-candidate audit — zero provider calls
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: phase4-harness/package-lock.json
+      - name: Validate repaired candidate, seal, manifest, source, and harness
+        shell: bash
+        run: |
+          set -euo pipefail
+          jq -e '.manifest_revision == 7 and .state.status == "ready" and .jobs["COL-01-015-023-EXACT-AUDIT-01"].status == "authorized_ready" and .jobs["COL-01-015-023-EXACT-AUDIT-01"].provider_attempts_used == 0 and .jobs["COL-01-015-023-EXACT-AUDIT-01"].checkpoints_to_restore == 0' config/passages/COL-01-015-023.json
+          jq -e '.candidate_id == "COL-01-015-023-HUMAN-FINAL-V2.2" and .status == "human_approved_post_smoothing_candidate_pending_exact_semantic_audit" and (.verse_renderings|length)==9' docs/architecture/phase-4/COL-01-015-023_human-final-v2.2.json
+          jq -e '.candidate_id == "COL-01-015-023-HUMAN-FINAL-V2.2" and .human_approved == true and .reading_text_sha256 == "9da7948c974dcf904b41d2abd50eceb8e18b3a27fb3d09c1e20b48441d02f2f1" and .candidate_material_sha256 == "dab9f28e76686d82ee9d9dead9df440cd03a64176a0b81c5d5cbfb48e84c95a4"' docs/architecture/phase-4/COL-01-015-023_human-final-seal-v2.2.json
+          jq -e '.units[0].unit_id == "COL-01-015-023" and (.units[0].verses|length)==9 and .passage_sense_resolution.status == "complete_for_blind_drafting"' docs/architecture/phase-4/COL-01-015-023_blind-source-v2.2.json
+          npm --prefix phase4-harness ci
+          npm --prefix phase4-harness test
