@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "manifest_revision": 1,
+  "manifest_revision": 2,
   "last_updated": "2026-08-10",
   "unit": {
     "unit_id": "COL-01-001-014",
@@ -25,8 +25,8 @@
     "circuit_breaker_spec": "docs/architecture/phase-4/FLT_Autonomous_Circuit_Breaker_v1.md"
   },
   "state": {
-    "status": "paused",
-    "phase": "clean_resume_test",
+    "status": "ready",
+    "phase": "blind_draft_batch_02_preflight",
     "active_job_id": null,
     "active_run_id": null,
     "translation_allowed": false,
@@ -34,19 +34,19 @@
     "provider_dispatch_allowed": false,
     "github_workflow_dispatch_allowed": false,
     "translation_artifact_mutation_allowed": false,
-    "next_permitted_action": "flt status COL-01-001-014"
+    "next_permitted_action": "fresh zero-provider-call preflight for COL-01-001-014-BLIND-DRAFT-BATCH-02"
   },
   "allowed_actions": [
     "flt status COL-01-001-014",
-    "flt resume COL-01-001-014 --dry-run --expected-revision 1",
+    "fresh_zero_provider_call_preflight COL-01-001-014-BLIND-DRAFT-BATCH-02",
     "read_only_repository_inspection"
   ],
   "forbidden_actions": [
-    "translate_colossians",
-    "generate_candidate_wording",
-    "call_providers",
-    "dispatch_github_actions",
-    "modify_translation_artifacts",
+    "translate_colossians_before_dispatch",
+    "generate_candidate_wording_before_dispatch",
+    "call_providers_before_preflight",
+    "dispatch_github_actions_before_preflight",
+    "modify_translation_artifacts_before_verified_job_completion",
     "modify_or_reopen_philippians",
     "resume_or_rerun_quarantined_job",
     "infer_state_or_authorization_from_chat_history",
@@ -68,9 +68,12 @@
     "COL-01-001-014-BLIND-DRAFT-BATCH-02": {
       "idempotency_key": "flt:2.2:COL-01-001-014:blind-draft:02",
       "job_type": "blind_candidate_batch",
-      "status": "proposed_not_authorized",
-      "authorization_id": null,
+      "status": "authorized_ready",
+      "authorization_id": "HE-COL-BATCH-02",
+      "authorized_by": "human_editor",
+      "authorization_scope": "exact_job_and_resume_transition",
       "dispatch_allowed": false,
+      "preflight_status": "pending",
       "activation_requirements": [
         "clean_resume_test_passed",
         "explicit_human_editor_authorization_for_exact_job_id",
