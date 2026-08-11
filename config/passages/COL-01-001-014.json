@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0.0",
+  "manifest_revision": 1,
+  "last_updated": "2026-08-10",
+  "unit": {
+    "unit_id": "COL-01-001-014",
+    "book": "Colossians",
+    "passage": "Colossians 1:1-14",
+    "source_edition": "SBLGNT",
+    "engine_version": "2.2"
+  },
+  "authority": {
+    "state_source": "this_file_on_default_branch",
+    "human_editor": "David L. Davis",
+    "chat_history_authoritative": false,
+    "historical_preflight_authorization_reusable": false,
+    "conflict_policy": "stop_and_report"
+  },
+  "artifacts": {
+    "source_packet": "docs/architecture/phase-4/COL-01-001-014_blind-source-v2.2.json",
+    "source_packet_commit": "e5f1205fe1d1a1ae930deed11b56f3cfbe71d811",
+    "historical_preflight": "config/COL-01-001-014_blind-draft-preflight-v01.json",
+    "quarantined_workflow": ".github/workflows/phase4-col1-001-014-sense-drafts.yml",
+    "state_machine_spec": "docs/architecture/phase-4/passage-manifest-state-machine-v1.md",
+    "circuit_breaker_spec": "docs/architecture/phase-4/FLT_Autonomous_Circuit_Breaker_v1.md"
+  },
+  "state": {
+    "status": "paused",
+    "phase": "clean_resume_test",
+    "active_job_id": null,
+    "active_run_id": null,
+    "translation_allowed": false,
+    "candidate_generation_allowed": false,
+    "provider_dispatch_allowed": false,
+    "github_workflow_dispatch_allowed": false,
+    "translation_artifact_mutation_allowed": false,
+    "next_permitted_action": "flt status COL-01-001-014"
+  },
+  "allowed_actions": [
+    "flt status COL-01-001-014",
+    "flt resume COL-01-001-014 --dry-run --expected-revision 1",
+    "read_only_repository_inspection"
+  ],
+  "forbidden_actions": [
+    "translate_colossians",
+    "generate_candidate_wording",
+    "call_providers",
+    "dispatch_github_actions",
+    "modify_translation_artifacts",
+    "modify_or_reopen_philippians",
+    "resume_or_rerun_quarantined_job",
+    "infer_state_or_authorization_from_chat_history",
+    "automatic_connection_retry"
+  ],
+  "jobs": {
+    "COL-01-001-014-BLIND-DRAFT-BATCH-01": {
+      "idempotency_key": "flt:2.2:COL-01-001-014:blind-draft:01",
+      "job_type": "blind_candidate_batch",
+      "status": "quarantined_unknown_terminal",
+      "dispatch_confirmed": false,
+      "remote_run_id": null,
+      "provider_calls_made": "unknown",
+      "resume_allowed": false,
+      "retry_allowed": false,
+      "authorization_reusable": false,
+      "quarantine_reason": "The failed chat could not verify manual dispatch. Any possible run is terminal under the workflow's 40-minute timeout, but its outcome is not durable state."
+    },
+    "COL-01-001-014-BLIND-DRAFT-BATCH-02": {
+      "idempotency_key": "flt:2.2:COL-01-001-014:blind-draft:02",
+      "job_type": "blind_candidate_batch",
+      "status": "proposed_not_authorized",
+      "authorization_id": null,
+      "dispatch_allowed": false,
+      "activation_requirements": [
+        "clean_resume_test_passed",
+        "explicit_human_editor_authorization_for_exact_job_id",
+        "matching_manifest_revision",
+        "no_active_job",
+        "fresh_zero_provider_call_preflight",
+        "workflow_validates_this_passage_manifest_before_provider_credentials_are_available"
+      ]
+    }
+  },
+  "state_machine": {
+    "states": [
+      "paused",
+      "ready",
+      "running",
+      "awaiting_human_editor",
+      "completed",
+      "cancel_requested",
+      "cancel_unverified",
+      "cancelled",
+      "blocked"
+    ],
+    "permitted_transitions": [
+      {"from": "paused", "to": "ready", "command": "flt resume", "dispatches": 0},
+      {"from": "ready", "to": "running", "command": "authorized dispatch", "requires_exact_job_authorization": true},
+      {"from": "running", "to": "awaiting_human_editor", "command": "verified job completion"},
+      {"from": "awaiting_human_editor", "to": "completed", "command": "human editor acceptance"},
+      {"from": "ready", "to": "cancel_requested", "command": "flt cancel"},
+      {"from": "running", "to": "cancel_requested", "command": "flt cancel"},
+      {"from": "cancel_requested", "to": "cancelled", "command": "verified external cancellation"},
+      {"from": "cancel_requested", "to": "cancel_unverified", "command": "external status unavailable"}
+    ],
+    "forbidden_transitions": [
+      "paused_to_running",
+      "paused_to_completed",
+      "quarantined_to_ready",
+      "quarantined_to_running",
+      "cancelled_to_running",
+      "completed_to_running"
+    ]
+  },
+  "invariants": [
+    "Only the copy on the default branch is authoritative.",
+    "At most one active job may exist for this unit.",
+    "Every logical provider job has a stable job ID and idempotency key.",
+    "A quarantined, cancelled, or completed job can never be resumed or rerun.",
+    "Status and dry-run commands make zero provider calls and zero workflow dispatches.",
+    "Resume changes paused to ready only; dispatch is a separate authorized transition.",
+    "One failed interactive repository or Actions connection ends that controller operation without an agent-driven retry loop.",
+    "A separately authorized provider job retains the Autonomous Circuit Breaker v1 attempt and halt rules.",
+    "Remote uncertainty pauses work and is never converted into an inferred result.",
+    "Philippians v0.9 RC1 remains frozen outside this unit's state machine."
+  ],
+  "triage": {
+    "failed_attempt_commit": "e5f1205fe1d1a1ae930deed11b56f3cfbe71d811",
+    "failed_attempt_pull_request": 48,
+    "workflow_timeout_minutes": 40,
+    "manual_dispatch_observed": false,
+    "provider_calls_verified": false,
+    "active_run_possible_at_last_check": false,
+    "cancellation_issued": false,
+    "reason": "No exact active run ID existed, and any possible run was already terminal by timeout."
+  }
+}
