@@ -1,0 +1,38 @@
+name: FLT Colossians 1:15-23 Human Editor smoothing bootstrap
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/phase4-col1-015-023-human-smoothing.yml'
+      - 'docs/architecture/phase-4/COL-01-015-023_human-editor-synthesis-v2.2.json'
+      - 'config/passages/COL-01-015-023.json'
+      - 'logs/FLT_librarian_backlog.md'
+
+permissions: {contents: read}
+
+jobs:
+  validate:
+    name: Bootstrap sealed-candidate smoothing validation — zero provider calls
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: phase4-harness/package-lock.json
+      - name: Validate candidate, backlog, manifest, source packet, and Engine 2.2 harness
+        shell: bash
+        run: |
+          set -euo pipefail
+          jq -e '.manifest_revision == 4 and .state.status == "ready" and .jobs["COL-01-015-023-HUMAN-SMOOTHING-01"].status == "authorized_ready" and .jobs["COL-01-015-023-HUMAN-SMOOTHING-01"].provider_attempts_used == 0 and .jobs["COL-01-015-023-HUMAN-SMOOTHING-01"].checkpoints_to_restore == 0' config/passages/COL-01-015-023.json
+          jq -e '.candidate_id == "COL-01-015-023-HUMAN-SYNTHESIS-V2.2" and .status == "human_editor_exact_selection_pending_oral_smoothing" and .human_editor_selection.exact_wording_preserved == true and (.verse_renderings|length) == 9 and .verse_renderings[0].reference == "Col.1.15" and .verse_renderings[8].reference == "Col.1.23"' docs/architecture/phase-4/COL-01-015-023_human-editor-synthesis-v2.2.json
+          grep -Fq '[rn]` **Col.1.15' logs/FLT_librarian_backlog.md
+          grep -Fq '[rn]` **Col.1.16' logs/FLT_librarian_backlog.md
+          grep -Fq '[tn]` **Col.1.19' logs/FLT_librarian_backlog.md
+          grep -Fq '[dl]` **Col.1.23' logs/FLT_librarian_backlog.md
+          jq -e '.chapter_id == "COL-01" and .units[0].unit_id == "COL-01-015-023" and (.units[0].verses|length) == 9 and .passage_sense_resolution.status == "complete_for_blind_drafting"' docs/architecture/phase-4/COL-01-015-023_blind-source-v2.2.json
+          npm --prefix phase4-harness ci
+          npm --prefix phase4-harness test
