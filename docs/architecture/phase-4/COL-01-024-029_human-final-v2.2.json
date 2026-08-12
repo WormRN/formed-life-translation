@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "candidate_id": "COL-01-024-029-HUMAN-FINAL-V2.2",
+  "unit_id": "COL-01-024-029",
+  "passage": "Colossians 1:24-29",
+  "engine_version": "2.2",
+  "status": "human_editor_final_repair_pending_exact_audit",
+  "human_editor": "David L. Davis",
+  "human_editor_date": "2026-08-12",
+  "source_draft_run_id": "31549129083",
+  "smoothing_run_id": "31565776509",
+  "human_editor_selection": {
+    "exact_wording_preserved": true,
+    "repairs_authorized_after_smoothing": true
+  },
+  "verse_renderings": [
+    {
+      "reference": "Col.1.24",
+      "text": "Right now I am glad to suffer for you. I am taking my turn to physically supply what is missing from Christ's sufferings, on behalf of His body, the church."
+    },
+    {
+      "reference": "Col.1.25",
+      "text": "I became a servant of that church when God entrusted me with a task for your benefit: to bring you His message in full."
+    },
+    {
+      "reference": "Col.1.26",
+      "text": "That message is the secret plan God kept hidden for ages and generations, but has now revealed to His holy people."
+    },
+    {
+      "reference": "Col.1.27",
+      "text": "God wanted His people to know how dazzlingly rich this secret is among all the nations. The secret is this: Christ is in you, and He is your hope of sharing in His glory."
+    },
+    {
+      "reference": "Col.1.28",
+      "text": "We preach Christ. With all wisdom, we warn and teach every person, so that we may present every person complete in Christ."
+    },
+    {
+      "reference": "Col.1.29",
+      "text": "That is why I labor and compete, with the energy He powerfully works within me."
+    }
+  ],
+  "reader_notes": [],
+  "backlog_requirements": [
+    {
+      "reference": "Col.1.24",
+      "tag": "rn",
+      "topic": "what is missing from Christ's sufferings"
+    },
+    {
+      "reference": "Col.1.27",
+      "tag": "rn",
+      "topic": "all the nations refers to Gentiles"
+    },
+    {
+      "reference": "Col.1.27",
+      "tag": "tn",
+      "topic": "viable alternative Christ is among you"
+    },
+    {
+      "reference": "Col.1.24",
+      "tag": "dl",
+      "topic": "antanapleroo taking my turn anti-prefix rationale"
+    },
+    {
+      "reference": "Col.1.26",
+      "tag": "dl",
+      "topic": "mysterion secret plan standard"
+    },
+    {
+      "reference": "Col.1.28",
+      "tag": "dl",
+      "topic": "teleios complete rather than mature"
+    }
+  ],
+  "copyright_independence": {
+    "status": "DEFERRED_BATCH",
+    "hard_check_required_before_publication": true
+  }
+}
