@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0.0",
+  "candidate_id": "COL-01-024-029-HUMAN-FINAL-V2.2",
+  "unit_id": "COL-01-024-029",
+  "algorithm": "sha256",
+  "candidate_file": "docs/architecture/phase-4/COL-01-024-029_human-final-v2.2.json",
+  "candidate_sha256": "bccf58910379b2460dd770508c84eb400b971bd9b2780df24922aa51f74f40da",
+  "sealed_by": "human_editor",
+  "sealed_date": "2026-08-12",
+  "status": "sealed_pending_exact_audit"
+}
