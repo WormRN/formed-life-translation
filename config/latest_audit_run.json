@@ -1,47 +1,17 @@
 {
-  "schema_version": 1,
-  "repository": "WormRN/formed-life-translation",
-  "workflow_path": ".github/workflows/phase4-col1-015-023-final-exact-audit.yml",
-  "unit_id": "COL-01-015-023-EXACT-AUDIT-01",
-  "passage": "Colossians 1:15-23",
-  "engine_run_id": "FLT-COL-01-20260811-3",
-  "github_run_id": 31543353525,
-  "run_url": "https://github.com/WormRN/formed-life-translation/actions/runs/31543353525",
-  "artifact_id": 9121586449,
-  "artifact_name": "FLT-COL-01-20260811-3-final-audit",
-  "artifact_sha256": "d548726b410d1cc048cc688a8718648777d5768ac9c91b0607bfb0662829d12d",
-  "artifact_summary_path": "outputs/human-candidate-audit.md",
-  "generated_at": "2026-08-11",
-  "job_outcome": "success",
-  "receipt_status": "human_editor_repaired_exact_candidate_audited_and_accepted",
-  "audit_evidence": {
-    "auditor_total": 3,
-    "eligible_count": 3,
-    "blocking_defects": 0,
-    "semantic_pass": true,
-    "verse_count": 9,
-    "provider_attempts_used": 6,
-    "task_attempt_ceiling": 8,
-    "retries": 0
-  },
-  "warning_disposition": {
-    "references": ["Col.1.19", "Col.1.23"],
-    "issues": [
-      "Verse 19 resolves the grammatically open subject of was pleased as God.",
-      "Verse 23 adds first in when you first heard the good news as a minor discourse clarification."
-    ],
-    "decision": "Both warnings are nonblocking. The Human Editor retains the exact repaired wording after a 3-of-3 eligible semantic-floor audit."
-  },
-  "copyright_protocol": {
-    "status": "DEFERRED_BATCH",
-    "hard_check_required": true,
-    "publication_clearance": false
-  },
-  "authority": {
-    "candidate_was_sealed": true,
-    "exact_human_approved_repairs_audited": true,
-    "audit_finalizes_candidate": false,
-    "human_unit_acceptance_recorded": true,
-    "reopening_requires_explicit_human_decision": true
-  }
+  "schema_version": "1.0.0",
+  "unit_id": "COL-01-024-029",
+  "passage": "Colossians 1:24-29",
+  "chapter": "Colossians 1",
+  "github_run_id": 31570445398,
+  "engine_run_id": "FLT-COL-01-20260812-4",
+  "artifact_name": "FLT-COL-01-20260812-4-final-audit",
+  "outcome": "completed",
+  "auditor_total": 3,
+  "eligible_count": 3,
+  "blocking_defects": 0,
+  "semantic_pass": true,
+  "attempts_used": 6,
+  "human_editor_acceptance_recorded": true,
+  "chapter_1_complete": true
 }
