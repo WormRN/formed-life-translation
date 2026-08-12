@@ -63,7 +63,7 @@ jobs:
           echo "${PRIOR_ARTIFACT_SHA256}  /tmp/prior.zip" | sha256sum -c -
           mkdir -p /tmp/prior && unzip -q /tmp/prior.zip -d /tmp/prior
           prior_root="$(find /tmp/prior -mindepth 1 -maxdepth 1 -type d | head -1)"
-          run_id="FLT-COL-01-RECOVERY-PREFLIGHT-${GITHUB_RUN_ID}"
+          run_id="FLT-COL-01-$(date -u +%Y%m%d)-${GITHUB_RUN_NUMBER}"
           node phase4-harness/scripts/prepare-run-config.mjs phase4-harness/config.github-actions.json /tmp/recovery-config.json "$run_id"
           jq --arg task "$TASK_ID" '.unit_id="COL-01-024-029" | .source_packet="../docs/architecture/phase-4/COL-01-024-029_blind-source-v2.2.json" | .task_id=$task | .max_attempts=2 | .task_max_attempts=8 | .timeout_ms=300000' /tmp/recovery-config.json > /tmp/recovery-config2.json
           node phase4-harness/scripts/recover-col1-024-029.mjs /tmp/recovery-config2.json /tmp/recovery-preflight docs/architecture/phase-4/COL-01-024-029_blind-source-v2.2.json "$prior_root" --preflight-only
@@ -155,7 +155,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          run_id="FLT-COL-01-$(date -u +%Y%m%d)-${GITHUB_RUN_NUMBER}-recovery"
+          run_id="FLT-COL-01-$(date -u +%Y%m%d)-${GITHUB_RUN_NUMBER}"
           node phase4-harness/scripts/prepare-run-config.mjs phase4-harness/config.github-actions.json phase4-harness/.col1-024-029-recovery-config.json "$run_id"
           jq --arg task "$TASK_ID" '.unit_id="COL-01-024-029" | .source_packet="../docs/architecture/phase-4/COL-01-024-029_blind-source-v2.2.json" | .task_id=$task | .max_attempts=2 | .task_max_attempts=8 | .timeout_ms=300000' phase4-harness/.col1-024-029-recovery-config.json > /tmp/config.json
           mv /tmp/config.json phase4-harness/.col1-024-029-recovery-config.json
