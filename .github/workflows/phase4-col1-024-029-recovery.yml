@@ -68,7 +68,7 @@ jobs:
           test -f "$prior_root/failures/raw/COL-01-024-029/balanced_worker/attempt-2.txt"
           jq -e '.attempts_used==5 and (.reservations|length)==5 and .reservations[4].sequence==5 and .reservations[4].role=="greek_fidelity_worker"' "$prior_root/manifest/task-attempt-budget.json"
           test ! -f "$prior_root/manifest/attempts/blind_reader_first_unit_draft/greek_fidelity_worker/attempt-2.json"
-          node --input-type=module <<'NODE' "$prior_root"
+          node --input-type=module - "$prior_root" <<'NODE'
           import fs from 'node:fs';
           import Ajv2020 from 'ajv/dist/2020.js';
           import {assertPassageSenseResolution,assertCandidateSenseApparatus,parseModelJson} from './phase4-harness/src/sense-resolution-core.js';
