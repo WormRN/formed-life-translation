@@ -20,13 +20,15 @@ Before proposing a translation, launching a workflow, interpreting an audit, rec
 
 If any required file cannot be retrieved, is internally inconsistent, or conflicts with another authoritative repository file, stop and report the conflict. Do not reconstruct continuity from chat memory, uploaded Version 1 files, handoff prose, prior agent claims, or generic translation preferences.
 
+**Repository protocol amendment:** The Human Editor's 2026-08-12 repository-write amendment in `AGENTS.md` and `docs/architecture/phase-4/passage-manifest-state-machine-v1.md` supersedes older FLT conventions requiring feature branches for routine unit finalization. It also supersedes the legacy one-attempt manifest value **only for deterministic repository file-write path/SHA recovery**. The stricter one-failure behavior still applies to Actions/control uncertainty unless a more specific governing rule authorizes otherwise.
+
 ## Two manifest layers
 
 `config/engine_manifest.yaml` defines the engine, governing documents, accepted history, and pointer to the current unit.
 
 The current passage manifest under `config/passages/` records mutable execution state for one unit: phase, revision, permissions, job IDs, authorization, remote run identity, and next action.
 
-For execution status, the passage manifest on the default branch is authoritative. Branches and open pull requests contain proposed state only.
+For execution status, the passage manifest on the default branch is authoritative. Branches and open pull requests contain proposed state only. Routine Human Editor-authorized unit finalization does not require an FLT feature branch; it becomes authoritative when the authorized change is committed to the default branch.
 
 ## Authority boundary
 
@@ -73,10 +75,11 @@ Do not replace the common-goal A/B/C process with separate readability, fidelity
 
 ## Failure behavior
 
-- One failed interactive repository or Actions connection ends that controller operation.
-- Record or report remote status as unknown; never infer success, failure, or activity.
-- Never enter an automatic retry loop.
-- Continue only safe actions explicitly permitted by the passage manifest.
+- For **repository file writes only**, a deterministic 404, stale-SHA, or pathing error may be auto-recovered by re-reading the canonical path/default-branch SHA and retrying the exact authorized write, up to **three total attempts**.
+- File-write recovery may not alter the Human Editor's wording, broaden scope, create adjacent work, dispatch providers, or reset any provider budget.
+- After three failed file-write attempts, halt that write and report the exact limitation.
+- For provider dispatch, workflow dispatch, cancellation, live Actions-control uncertainty, PR creation uncertainty, or other non-file-write interactive control failures, preserve the conservative one-failure halt behavior unless a more specific governing rule says otherwise.
+- Record or report remote status as unknown when remote control state is uncertain; never infer success, failure, or activity.
 - A UI animation is not evidence of a remote job.
 - Quarantined, cancelled, and completed job IDs are terminal and cannot be resumed or rerun.
 
@@ -93,4 +96,4 @@ Every new exact-candidate audit workflow must publish or update `config/latest_a
 
 ## Current work
 
-The current passage manifest is authoritative for the active unit and next permitted action. At the architectural-repair checkpoint, Colossians translation, candidate generation, provider calls, and workflow dispatch are forbidden until the clean resume test passes and the Human Editor separately authorizes an exact new job.
+The current passage manifest is authoritative for the active unit and next permitted action. Terminal units must not be reopened or rerun merely because an older engine checkpoint summary is stale; update the checkpoint separately when authorized.
