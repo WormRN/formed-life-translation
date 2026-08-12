@@ -22,6 +22,8 @@ If any required file cannot be retrieved, is internally inconsistent, or conflic
 
 **Repository protocol amendment:** The Human Editor's 2026-08-12 repository-write amendment in `AGENTS.md` and `docs/architecture/phase-4/passage-manifest-state-machine-v1.md` supersedes older FLT conventions requiring feature branches for routine unit finalization. It also supersedes the legacy one-attempt manifest value **only for deterministic repository file-write path/SHA recovery**. The stricter one-failure behavior still applies to Actions/control uncertainty unless a more specific governing rule authorizes otherwise.
 
+**Complete-package audit amendment:** A terminal Exact-Candidate Semantic Audit must audit the complete Human Editor-authorized package. When required note or override material exists, naked reading text is not a valid terminal audit object. The package must include the exact reading text, all applicable drafted `[rn]` and `[tn]` notes required for that audit, and all binding Executive/Human Editor Overrides. The credential-free preflight must reject a package missing any required component before provider credentials are exposed.
+
 ## Two manifest layers
 
 `config/engine_manifest.yaml` defines the engine, governing documents, accepted history, and pointer to the current unit.
@@ -67,7 +69,7 @@ For each authorized new unit:
 4. Keep the candidates blind from one another, prior approved English, comparison translations, editor benchmarks, and conversation drafts.
 5. Present untouched A/B/C candidates verse by verse.
 6. The Human Editor produces or selects the editor candidate.
-7. Seal that exact candidate and run independent reader reconstructions plus semantic-floor audits.
+7. Seal that exact candidate together with every required drafted Reader Note, Transparency Note, and binding Human Editor/Executive Override; run independent reader reconstructions plus semantic-floor audits on that complete package.
 8. Return evidence and severity classifications to the Human Editor.
 9. Record acceptance or repair only after an explicit human decision.
 
@@ -92,7 +94,7 @@ When an audit receipt exists:
 3. Treat Actions success as transport/execution success only; semantic pass requires the recorded audit evidence.
 4. Ask the Human Editor for a run link only if repository-based retrieval is genuinely unavailable and the requested task cannot safely stop.
 
-Every new exact-candidate audit workflow must publish or update `config/latest_audit_run.json` after completion.
+Every new exact-candidate audit workflow must publish or update `config/latest_audit_run.json` after completion and identify the package components actually audited.
 
 ## Current work
 
