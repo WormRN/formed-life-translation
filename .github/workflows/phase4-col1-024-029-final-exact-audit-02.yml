@@ -1,0 +1,298 @@
+name: FLT Colossians 1:24-29 corrected-package exact audit
+run-name: Colossians 1:24-29 corrected package exact semantic audit
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/phase4-col1-024-029-final-exact-audit-02.yml'
+      - 'docs/architecture/phase-4/COL-01-024-029_human-final-v2.2.json'
+      - 'docs/architecture/phase-4/COL-01-024-029_human-final-seal-v2.2.json'
+      - 'logs/decision-log/COL-01-028-executive-override-20260812.md'
+      - 'config/passages/COL-01-024-029.json'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/phase4-col1-024-029-final-exact-audit-02.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: flt-col-01-024-029-corrected-package-exact-audit
+  cancel-in-progress: false
+
+env:
+  TASK_ID: COL-01-024-029-EXACT-AUDIT-02
+  AUTHORIZATION_ID: HE-COL-01-024-029-CORRECTED-PACKAGE-AUDIT-20260812
+  LAUNCH_NONCE: HE-COL-01-024-029-EXACT-AUDIT-20260812-02
+  EXPECTED_MANIFEST_REVISION: '14'
+  CANDIDATE_FILE: docs/architecture/phase-4/COL-01-024-029_human-final-v2.2.json
+  SEAL_FILE: docs/architecture/phase-4/COL-01-024-029_human-final-seal-v2.2.json
+  DECISION_FILE: logs/decision-log/COL-01-028-executive-override-20260812.md
+
+jobs:
+  validate:
+    if: github.event_name == 'pull_request'
+    name: Validate corrected package with zero provider calls
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: phase4-harness/package-lock.json
+      - name: Validate notes, override, seal, manifest, and Engine 2.2
+        shell: bash
+        run: |
+          set -euo pipefail
+          jq -e --arg task "$TASK_ID" --arg auth "$AUTHORIZATION_ID" --arg nonce "$LAUNCH_NONCE" --argjson rev "$EXPECTED_MANIFEST_REVISION" '
+            .manifest_revision==$rev and .unit.unit_id=="COL-01-024-029" and .state.status=="ready" and
+            .state.active_job_id==null and .state.provider_dispatch_allowed==true and .state.github_workflow_dispatch_allowed==true and
+            .jobs[$task].status=="authorized_ready" and .jobs[$task].authorization_id==$auth and .jobs[$task].provider_attempts_used==0 and
+            .jobs[$task].task_max_attempts==8 and .jobs[$task].max_attempts_per_worker==2 and
+            .jobs[$task].launch.nonce==$nonce and .jobs[$task].launch.status=="armed" and .jobs[$task].launch.expected_manifest_revision==$rev and
+            .editorial_decisions.sealed_reading_text_sha256=="223a581afcfcfd1c612f0f1aab87dddd0b6ca89a342ea7276c070a7523d5da9c"
+          ' config/passages/COL-01-024-029.json
+          jq -e '
+            .candidate_id=="COL-01-024-029-HUMAN-FINAL-V2.2" and (.verse_renderings|length)==6 and (.reader_notes|length)==2 and
+            .reader_notes[0].note_id=="COL-01-024-RN-01" and .reader_notes[1].note_id=="COL-01-027-RN-01" and
+            (.human_editor_overrides|length)==1 and .human_editor_overrides[0].reference=="Col.1.28" and
+            .verse_renderings[0].text=="Right now I am glad to suffer for you. I am taking my turn to physically supply what is missing from Christ's sufferings, on behalf of His body, the church." and
+            .verse_renderings[4].text=="We preach Christ. With all wisdom, we warn and teach every person, so that we may present every person complete in Christ."
+          ' "$CANDIDATE_FILE"
+          grep -Fq 'surface repetition are overruled' "$DECISION_FILE"
+          npm --prefix phase4-harness ci
+          npm --prefix phase4-harness test
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import {assertHumanCandidateSeal} from './phase4-harness/src/human-candidate-seal.js';
+          const c=JSON.parse(fs.readFileSync(process.env.CANDIDATE_FILE,'utf8'));
+          const s=JSON.parse(fs.readFileSync(process.env.SEAL_FILE,'utf8'));
+          const h=assertHumanCandidateSeal(c,s);
+          if(h.reading_text_sha256!=="223a581afcfcfd1c612f0f1aab87dddd0b6ca89a342ea7276c070a7523d5da9c") throw new Error('reading text changed');
+          console.log('corrected package seal verified',h);
+          NODE
+
+  claim_running:
+    if: github.event_name == 'push'
+    name: Claim one-shot corrected-package exact audit before credentials
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    outputs:
+      target_sha: ${{ steps.claim.outputs.target_sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: phase4-harness/package-lock.json
+      - name: Credential-free corrected-package gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          jq -e --arg task "$TASK_ID" --arg auth "$AUTHORIZATION_ID" --arg nonce "$LAUNCH_NONCE" --argjson rev "$EXPECTED_MANIFEST_REVISION" '
+            .manifest_revision==$rev and .state.status=="ready" and .state.active_job_id==null and
+            .jobs[$task].status=="authorized_ready" and .jobs[$task].authorization_id==$auth and .jobs[$task].provider_attempts_used==0 and
+            .jobs[$task].launch.nonce==$nonce and .jobs[$task].launch.status=="armed" and .jobs[$task].launch.consumed_run_id==null
+          ' config/passages/COL-01-024-029.json
+          npm --prefix phase4-harness ci
+          npm --prefix phase4-harness test
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import {assertHumanCandidateSeal} from './phase4-harness/src/human-candidate-seal.js';
+          const c=JSON.parse(fs.readFileSync(process.env.CANDIDATE_FILE,'utf8'));
+          const s=JSON.parse(fs.readFileSync(process.env.SEAL_FILE,'utf8'));
+          assertHumanCandidateSeal(c,s);
+          if(c.reader_notes.length!==2) throw new Error('two reader notes required');
+          if(c.human_editor_overrides?.[0]?.reference!=="Col.1.28") throw new Error('Col.1.28 override required');
+          NODE
+      - name: Atomically consume audit nonce and record running state
+        id: claim
+        shell: bash
+        run: |
+          set -euo pipefail
+          jq --arg task "$TASK_ID" --arg run "$GITHUB_RUN_ID" --arg nonce "$LAUNCH_NONCE" '
+            .manifest_revision=15 |
+            .state.status="running" |
+            .state.phase="corrected_package_exact_audit_running" |
+            .state.active_job_id=$task |
+            .state.active_run_id=$run |
+            .state.github_workflow_dispatch_allowed=false |
+            .state.next_permitted_action="await verified corrected-package exact-audit completion or exact cancel" |
+            .jobs[$task].status="running" |
+            .jobs[$task].dispatch_confirmed=true |
+            .jobs[$task].remote_run_id=$run |
+            .jobs[$task].retry_allowed=false |
+            .jobs[$task].launch.status="consumed" |
+            .jobs[$task].launch.consumed_run_id=$run |
+            .jobs[$task].launch.consumed_nonce=$nonce
+          ' config/passages/COL-01-024-029.json > config/passages/COL-01-024-029.json.tmp
+          mv config/passages/COL-01-024-029.json.tmp config/passages/COL-01-024-029.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add config/passages/COL-01-024-029.json
+          git commit -m "Record Colossians 1:24-29 corrected audit running state ${GITHUB_RUN_ID}"
+          git push origin HEAD:main
+          echo "target_sha=$GITHUB_SHA" >> "$GITHUB_OUTPUT"
+
+  audit:
+    needs: claim_running
+    if: needs.claim_running.result == 'success'
+    name: Corrected-package English reconstruction and Greek semantic-floor audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    outputs:
+      semantic_pass: ${{ steps.result.outputs.semantic_pass }}
+      eligible_count: ${{ steps.result.outputs.eligible_count }}
+      attempts_used: ${{ steps.result.outputs.attempts_used }}
+      engine_run_id: ${{ steps.identity.outputs.run_id }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.claim_running.outputs.target_sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: phase4-harness/package-lock.json
+      - name: Install and test Engine 2.2
+        run: npm --prefix phase4-harness ci && npm --prefix phase4-harness test
+      - name: Create corrected-package audit identity and source packet
+        id: identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          run_id="FLT-COL-01-$(date -u +%Y%m%d)-${GITHUB_RUN_NUMBER}"
+          node phase4-harness/scripts/prepare-run-config.mjs phase4-harness/config.github-actions.json phase4-harness/.col1-024-029-exact-audit-02-config.json "$run_id"
+          jq --arg task "$TASK_ID" '.unit_id=$task | .task_id=$task | .source_packet=".col1-024-029-exact-audit-02-source.json" | .max_attempts=2 | .task_max_attempts=8' phase4-harness/.col1-024-029-exact-audit-02-config.json > phase4-harness/.tmp
+          mv phase4-harness/.tmp phase4-harness/.col1-024-029-exact-audit-02-config.json
+          jq -n --slurpfile brief docs/architecture/phase-4/COL-01-024-029_blind-source-v2.2.json --slurpfile parsed data/source/sblgnt_parsed.json '
+            $brief[0] as $b | $parsed[0] as $p |
+            {source_data:{edition:"SBLGNT",verses:[$b.units[0].verses[] | . as $v | {reference:$v.reference,greek:$v.greek,tokens:$p[$v.reference]}]},
+             governing_rules:($b.governing_rules + ["Binding Human Editor override for Col.1.28: English may use one shared object in ‘warn and teach every person’ rather than reproducing the first two Greek every-person phrases separately. Do not warn or block solely for missing surface-form repetition; block only for actual material meaning loss, addition, or misleading meaning."]),
+             matrix_entries:($b.matrix_alerts + $b.passage_sense_resolution.expressions + [{reference:"Col.1.28",status:"binding_human_editor_override",decision:"The shared English object every person applies to both warn and teach; the final present every person remains explicit.",audit_instruction:"Do not penalize surface repetition loss alone; evaluate whether universal scope is materially preserved."}])}
+          ' > phase4-harness/.col1-024-029-exact-audit-02-source.json
+          echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
+      - name: Run corrected-package exact Human Candidate audit
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node phase4-harness/src/human-candidate-audit.js phase4-harness/.col1-024-029-exact-audit-02-config.json "phase4-harness/runs/${{ steps.identity.outputs.run_id }}" "$CANDIDATE_FILE" "$SEAL_FILE"
+      - name: Summarize semantic result and attempt ledger
+        id: result
+        shell: bash
+        run: |
+          set -euo pipefail
+          run_dir="phase4-harness/runs/${{ steps.identity.outputs.run_id }}"
+          eligible_count="$(find "$run_dir/outputs/audits" -name '*.json' -type f -print0 | xargs -0 -r jq -r '.output.overall_eligible' | grep -c '^true$' || true)"
+          if [ "$eligible_count" = "3" ]; then semantic_pass=true; else semantic_pass=false; fi
+          ledger="$run_dir/manifest/task-attempt-budget.json"
+          if [ -f "$ledger" ]; then attempts_used="$(jq '.reservations|length' "$ledger")"; else attempts_used=0; fi
+          echo "semantic_pass=$semantic_pass" >> "$GITHUB_OUTPUT"
+          echo "eligible_count=$eligible_count" >> "$GITHUB_OUTPUT"
+          echo "attempts_used=$attempts_used" >> "$GITHUB_OUTPUT"
+      - name: Upload corrected-package exact-audit bundle
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: "${{ steps.identity.outputs.run_id || 'FLT-COL-01-024-029-EXACT-AUDIT-02-blocked' }}-final-audit"
+          path: phase4-harness/runs/
+          retention-days: 30
+
+  record_pass:
+    needs: [claim_running, audit]
+    if: needs.audit.result == 'success' && needs.audit.outputs.semantic_pass == 'true'
+    name: Accept Colossians 1:24-29 and complete Chapter 1
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Record terminal ACCEPTED state
+        shell: bash
+        run: |
+          set -euo pipefail
+          git pull --ff-only origin main
+          jq -e --arg task "$TASK_ID" --arg run "$GITHUB_RUN_ID" '.manifest_revision==15 and .state.status=="running" and .state.active_job_id==$task and .state.active_run_id==$run' config/passages/COL-01-024-029.json
+          jq --arg task "$TASK_ID" --arg run "$GITHUB_RUN_ID" --arg engine '${{ needs.audit.outputs.engine_run_id }}' --argjson attempts '${{ needs.audit.outputs.attempts_used }}' '
+            .manifest_revision=16 |
+            .state.status="completed" |
+            .state.phase="human_editor_accepted_after_clean_corrected_package_exact_audit" |
+            .state.active_job_id=null |
+            .state.active_run_id=$run |
+            .state.translation_allowed=false |
+            .state.provider_dispatch_allowed=false |
+            .state.github_workflow_dispatch_allowed=false |
+            .state.translation_artifact_mutation_allowed=false |
+            .state.next_permitted_action="none for this terminal unit; Colossians chapter 1 complete" |
+            .allowed_actions=["flt status COL-01-024-029","read_only_repository_inspection"] |
+            .jobs[$task].status="completed_human_editor_acceptance_recorded" |
+            .jobs[$task].provider_attempts_used=$attempts |
+            .jobs[$task].provider_attempts_remaining=(8-$attempts) |
+            .jobs[$task].auditor_total=3 |
+            .jobs[$task].eligible_count=3 |
+            .jobs[$task].blocking_defects=0 |
+            .jobs[$task].semantic_pass=true |
+            .jobs[$task].retry_allowed=false |
+            .editorial_decisions.acceptance_status="ACCEPTED" |
+            .editorial_decisions.chapter_1_status="ACCEPTED" |
+            .editorial_decisions.accepted_by="human_editor" |
+            .editorial_decisions.accepted_date="2026-08-12" |
+            .editorial_decisions.exact_audit_result={github_run_id:($run|tonumber),engine_run_id:$engine,eligible_count:3,blocking_defects:0,semantic_pass:true,attempts_used:$attempts,package:"reading text + two Human Editor-approved Reader Notes + Col.1.28 binding override"}
+          ' config/passages/COL-01-024-029.json > config/passages/COL-01-024-029.json.tmp
+          mv config/passages/COL-01-024-029.json.tmp config/passages/COL-01-024-029.json
+          jq -n --arg run "$GITHUB_RUN_ID" --arg engine '${{ needs.audit.outputs.engine_run_id }}' --argjson attempts '${{ needs.audit.outputs.attempts_used }}' '{schema_version:"1.0.0",unit_id:"COL-01-024-029",passage:"Colossians 1:24-29",chapter:"Colossians 1",github_run_id:($run|tonumber),engine_run_id:$engine,artifact_name:($engine+"-final-audit"),outcome:"completed",auditor_total:3,eligible_count:3,blocking_defects:0,semantic_pass:true,attempts_used:$attempts,human_editor_acceptance_recorded:true,chapter_1_complete:true}' > config/latest_audit_run.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add config/passages/COL-01-024-029.json config/latest_audit_run.json
+          git commit -m "Accept Colossians 1:24-29 and complete chapter 1 after corrected audit ${GITHUB_RUN_ID}"
+          git push origin HEAD:main
+
+  record_review:
+    needs: [claim_running, audit]
+    if: always() && needs.claim_running.result == 'success' && (needs.audit.result != 'success' || needs.audit.outputs.semantic_pass != 'true')
+    name: Record corrected-package audit review or halt state
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Return unit to Human Editor or blocked state
+        shell: bash
+        run: |
+          set -euo pipefail
+          git pull --ff-only origin main
+          jq --arg task "$TASK_ID" --arg run "$GITHUB_RUN_ID" --arg result '${{ needs.audit.result }}' --argjson eligible '${{ needs.audit.outputs.eligible_count || '0' }}' --argjson attempts '${{ needs.audit.outputs.attempts_used || '0' }}' '
+            .manifest_revision=16 |
+            .state.status=(if $result=="success" then "awaiting_human_editor" else "blocked" end) |
+            .state.phase=(if $result=="success" then "corrected_package_exact_audit_has_blocks_pending_human_editor" else "corrected_package_exact_audit_halted" end) |
+            .state.active_job_id=null |
+            .state.active_run_id=$run |
+            .state.provider_dispatch_allowed=false |
+            .state.github_workflow_dispatch_allowed=false |
+            .state.next_permitted_action="inspect verified corrected-package exact-audit evidence; Human Editor decision required" |
+            .jobs[$task].status=(if $result=="success" then "awaiting_human_editor" else "blocked" end) |
+            .jobs[$task].provider_attempts_used=$attempts |
+            .jobs[$task].provider_attempts_remaining=(8-$attempts) |
+            .jobs[$task].auditor_total=3 |
+            .jobs[$task].eligible_count=$eligible |
+            .jobs[$task].semantic_pass=false |
+            .jobs[$task].retry_allowed=false
+          ' config/passages/COL-01-024-029.json > config/passages/COL-01-024-029.json.tmp
+          mv config/passages/COL-01-024-029.json.tmp config/passages/COL-01-024-029.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add config/passages/COL-01-024-029.json
+          git commit -m "Record Colossians 1:24-29 corrected audit review state ${GITHUB_RUN_ID}"
+          git push origin HEAD:main
