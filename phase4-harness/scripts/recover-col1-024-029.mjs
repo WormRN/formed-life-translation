@@ -10,7 +10,8 @@ import {assertPassageSenseResolution,unitSenseMaterial,assertCandidateSenseAppar
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const [configArg,runArg,sourceArg,priorArg]=process.argv.slice(2);
-if(!priorArg)throw new Error('usage: recover-col1-024-029.mjs <config> <runDir> <source> <priorArtifactDir>');
+const preflightOnly=process.argv.includes('--preflight-only');
+if(!priorArg)throw new Error('usage: recover-col1-024-029.mjs <config> <runDir> <source> <priorArtifactDir> [--preflight-only]');
 const configPath=path.resolve(configArg),runDir=path.resolve(runArg),sourcePath=path.resolve(sourceArg),priorDir=path.resolve(priorArg);
 const config=await json(configPath),chapter=await json(sourcePath);
 validateCircuitBreakerConfig(config);
@@ -31,7 +32,6 @@ const assertOutput=output=>{
 };
 const unwrap=value=>Array.isArray(value)&&value.length===1?value[0]:value;
 
-// Reconcile the authoritative halt evidence to four confirmed provider calls.
 const priorLedger=await json(path.join(priorDir,'manifest/task-attempt-budget.json'));
 const priorAttemptsDir=path.join(priorDir,'manifest/attempts/blind_reader_first_unit_draft');
 const greekAttempt2=path.join(priorAttemptsDir,'greek_fidelity_worker/attempt-2.json');
@@ -40,7 +40,6 @@ if(priorLedger.attempts_used!==5||priorLedger.reservations?.[4]?.role!=='greek_f
 const reconciledLedger={...priorLedger,attempts_used:4,reservations:priorLedger.reservations.slice(0,4),reconciliation:{released_orphan_sequence:5,reason:'No matching attempt record/provider response; balanced-worker halt won concurrent race',authorized_by:'HE-COL-01-024-029-RECOVER-20260811'}};
 await emit(runDir,'manifest/task-attempt-budget.json',reconciledLedger);
 
-// Preserve the already validated readability checkpoint without a provider call.
 const readabilityCheckpoint=await json(path.join(priorDir,'checkpoints/blind_reader_first_unit_draft/readability_worker.json'));
 assertOutput(readabilityCheckpoint.record.output);
 if(readabilityCheckpoint.record.base_prompt_sha256!==baseHash)throw new Error('Readability checkpoint common prompt hash mismatch');
@@ -48,7 +47,6 @@ const readability={...readabilityCheckpoint.record,resumed_from_checkpoint:true,
 await emit(runDir,'checkpoints/blind_reader_first_unit_draft/readability_worker.json',readabilityCheckpoint);
 await event(runDir,{type:'blind_reader_first_unit_draft_checkpoint_resumed',role:'readability_worker',from_run:'31545365297'});
 
-// Recover the balanced worker's complete second response by unwrapping its one-element array.
 const balancedRaw=await readFile(path.join(priorDir,'failures/raw/COL-01-024-029/balanced_worker/attempt-2.txt'),'utf8');
 const balancedOutput=unwrap(parseModelJson(balancedRaw));
 assertOutput(balancedOutput);
@@ -59,7 +57,12 @@ const balancedFingerprint=workerCallFingerprint({stage:'blind_reader_first_unit_
 await emit(runDir,'checkpoints/blind_reader_first_unit_draft/balanced_worker.json',{schema_version:1,fingerprint:balancedFingerprint,validated_at:new Date().toISOString(),record:balanced});
 await event(runDir,{type:'blind_reader_first_unit_draft_response_recovered',role:'balanced_worker',from_run:'31545365297',provider_calls_added:0});
 
-// Make exactly one final provider call: greek_fidelity_worker attempt 2 of 2.
+if(preflightOnly){
+  await emit(runDir,'manifest/recovery-preflight.json',{schema_version:1,status:'pass',task_id:config.task_id,base_prompt_sha256:baseHash,reconciled_attempts_used:4,readability_checkpoint_valid:true,balanced_singleton_array_valid:true,provider_attempts_reserved:0,provider_calls_made:0});
+  console.log('Recovery preflight passed with zero provider calls');
+  process.exit(0);
+}
+
 const greekWorker=config.workers.find(w=>w.role==='greek_fidelity_worker');
 const taskAttempt=await reserveProviderAttempt({config,runDir,stage:'blind_reader_first_unit_draft',role:'greek_fidelity_worker'});
 if(taskAttempt!==5)throw new Error(`Recovery expected cumulative task attempt 5, got ${taskAttempt}`);
