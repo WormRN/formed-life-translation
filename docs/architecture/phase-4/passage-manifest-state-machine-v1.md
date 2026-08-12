@@ -79,7 +79,17 @@ Before provider credentials are available, every production workflow must valida
 - idempotency key is not terminal or quarantined;
 - provider and attempt ceilings match the approved job.
 
-A workflow that cannot pass this gate must expose no provider credentials and make no provider calls.
+For a **terminal Exact-Candidate Semantic Audit**, the credential-free gate must additionally validate the complete package:
+
+- the exact Human Editor-approved reading text is present and matches its seal;
+- every drafted Reader Note (`[rn]`) and Transparency Note (`[tn]`) marked required/applicable for the terminal audit is present in the candidate package and represented in the seal;
+- every formally logged Executive/Human Editor Override applicable to the audited wording is bundled or referenced as a binding audit constraint;
+- the auditor common prompt explicitly instructs all auditors to judge the whole package—reading text, notes, and binding overrides—for semantic, theological, source-traceability, readability, and constitutional fidelity;
+- the audit receipt identifies the exact package components actually audited.
+
+A terminal audit may not dispatch providers against naked reading text when required note or override material exists. A missing required package component is a packaging failure and produces no valid terminal semantic verdict. Notes may resolve an intentional reading-layer ambiguity, but they may not excuse a reading text that materially contradicts the source or governing Constitution. Binding overrides suppress only the issue actually adjudicated; distinct material semantic defects remain blockable.
+
+A workflow that cannot pass its applicable gate must expose no provider credentials and make no provider calls.
 
 ## Repository file-write recovery
 
