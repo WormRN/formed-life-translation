@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "manifest_revision": 13,
+  "manifest_revision": 14,
   "last_updated": "2026-08-12",
   "unit": {
     "unit_id": "COL-01-024-029",
@@ -25,7 +25,9 @@
     "smoothing_workflow": ".github/workflows/phase4-col1-024-029-human-smoothing.yml",
     "human_editor_final": "docs/architecture/phase-4/COL-01-024-029_human-final-v2.2.json",
     "human_editor_final_seal": "docs/architecture/phase-4/COL-01-024-029_human-final-seal-v2.2.json",
-    "final_audit_workflow": ".github/workflows/phase4-col1-024-029-final-exact-audit.yml",
+    "prior_final_audit_workflow": ".github/workflows/phase4-col1-024-029-final-exact-audit.yml",
+    "final_audit_workflow": ".github/workflows/phase4-col1-024-029-final-exact-audit-02.yml",
+    "decision_log_override": "logs/decision-log/COL-01-028-executive-override-20260812.md",
     "prior_halt_run_id": "31545365297",
     "prior_halt_artifact_id": 9122291043,
     "prior_halt_artifact_name": "FLT-COL-01-20260811-2",
@@ -36,28 +38,29 @@
     "circuit_breaker_spec": "docs/architecture/phase-4/FLT_Autonomous_Circuit_Breaker_v1.md"
   },
   "state": {
-    "status": "awaiting_human_editor",
-    "phase": "final_exact_audit_has_blocks_pending_human_editor",
+    "status": "ready",
+    "phase": "corrected_package_sealed_pending_exact_audit",
     "active_job_id": null,
     "active_run_id": "31569014387",
     "translation_allowed": true,
     "candidate_generation_allowed": false,
-    "provider_dispatch_allowed": false,
-    "github_workflow_dispatch_allowed": false,
+    "provider_dispatch_allowed": true,
+    "github_workflow_dispatch_allowed": true,
     "translation_artifact_mutation_allowed": false,
-    "next_permitted_action": "inspect verified final exact-audit evidence; Human Editor decision required"
+    "next_permitted_action": "dispatch exactly COL-01-024-029-EXACT-AUDIT-02 after zero-provider validation"
   },
   "allowed_actions": [
     "flt status COL-01-024-029",
-    "dispatch COL-01-024-029-EXACT-AUDIT-01 with authorization HE-COL-01-024-029-FINAL-AUDIT-20260812 at revision 11",
+    "dispatch COL-01-024-029-EXACT-AUDIT-02 with authorization HE-COL-01-024-029-CORRECTED-PACKAGE-AUDIT-20260812 at revision 14",
     "read_only_repository_inspection"
   ],
   "forbidden_actions": [
     "rerun_blind_candidate_workers",
     "rerun_exhausted_smoothing_job",
+    "reuse_completed_exact_audit_01",
     "reuse_consumed_launch_nonce",
-    "modify_sealed_human_editor_final_without_explicit_authorization",
-    "exceed_eight_total_exact_audit_attempts",
+    "modify_exact_reading_text_without_explicit_human_editor_authorization",
+    "exceed_eight_total_exact_audit_02_attempts",
     "modify_or_reopen_COL-01-015-023",
     "modify_or_reopen_COL-01-001-014",
     "modify_or_reopen_philippians",
@@ -88,43 +91,58 @@
     "COL-01-024-029-EXACT-AUDIT-01": {
       "idempotency_key": "flt:2.2:COL-01-024-029:exact-audit:01",
       "job_type": "english_reconstruction_and_semantic_floor_exact_candidate_audit",
-      "status": "awaiting_human_editor",
+      "status": "completed_human_editor_packaging_diagnosis_recorded",
       "authorization_id": "HE-COL-01-024-029-FINAL-AUDIT-20260812",
-      "authorized_by": "human_editor",
-      "authorization_scope": "audit the exact repaired Human Editor final text through English-only meaning reconstruction and Greek semantic-floor review; no wording mutation; on clean semantic pass record unit accepted",
-      "dispatch_allowed": true,
-      "workflow": ".github/workflows/phase4-col1-024-029-final-exact-audit.yml",
-      "max_attempts_per_worker": 2,
-      "task_max_attempts": 8,
+      "dispatch_allowed": false,
       "provider_attempts_used": 6,
       "provider_attempts_remaining": 2,
-      "checkpoints_to_restore": 0,
-      "dispatch_confirmed": true,
-      "retry_allowed": false,
-      "launch": {
-        "mode": "manifest_authorized_one_shot_push",
-        "nonce": "HE-COL-01-024-029-EXACT-AUDIT-20260812-01",
-        "status": "consumed",
-        "armed_by": "human_editor",
-        "authorization_id": "HE-COL-01-024-029-FINAL-AUDIT-20260812",
-        "expected_manifest_revision": 11,
-        "consumed_run_id": "31569014387",
-        "consumed_nonce": "HE-COL-01-024-029-EXACT-AUDIT-20260812-01"
-      },
       "remote_run_id": "31569014387",
       "auditor_total": 3,
       "eligible_count": 0,
-      "semantic_pass": false
+      "semantic_pass": false,
+      "retry_allowed": false,
+      "disposition": "superseded for acceptance purposes because required reader notes were omitted from the audited package; evidence retained"
+    },
+    "COL-01-024-029-EXACT-AUDIT-02": {
+      "idempotency_key": "flt:2.2:COL-01-024-029:exact-audit:02",
+      "job_type": "corrected_package_english_reconstruction_and_semantic_floor_exact_candidate_audit",
+      "status": "authorized_ready",
+      "authorization_id": "HE-COL-01-024-029-CORRECTED-PACKAGE-AUDIT-20260812",
+      "authorized_by": "human_editor",
+      "authorization_scope": "audit the unchanged Human Editor reading text together with the two approved Reader Notes and binding Col.1.28 English-compression override; no wording mutation; on zero-block 3-of-3 semantic pass record unit and Colossians chapter 1 accepted",
+      "dispatch_allowed": true,
+      "workflow": ".github/workflows/phase4-col1-024-029-final-exact-audit-02.yml",
+      "max_attempts_per_worker": 2,
+      "task_max_attempts": 8,
+      "provider_attempts_used": 0,
+      "provider_attempts_remaining": 8,
+      "checkpoints_to_restore": 0,
+      "dispatch_confirmed": false,
+      "retry_allowed": false,
+      "launch": {
+        "mode": "manifest_authorized_one_shot_push",
+        "nonce": "HE-COL-01-024-029-EXACT-AUDIT-20260812-02",
+        "status": "armed",
+        "armed_by": "human_editor",
+        "authorization_id": "HE-COL-01-024-029-CORRECTED-PACKAGE-AUDIT-20260812",
+        "expected_manifest_revision": 14,
+        "consumed_run_id": null,
+        "consumed_nonce": null
+      }
     }
   },
   "editorial_decisions": {
     "sealed_candidate_id": "COL-01-024-029-HUMAN-FINAL-V2.2",
-    "sealed_candidate_sha256": "bccf58910379b2460dd770508c84eb400b971bd9b2780df24922aa51f74f40da",
+    "sealed_reading_text_sha256": "223a581afcfcfd1c612f0f1aab87dddd0b6ca89a342ea7276c070a7523d5da9c",
+    "sealed_reader_notes_sha256": "733a29a81213d96b89f6626d27b7be0edefebeb9eed5aa54ce851a29eb6ba5b8",
+    "sealed_candidate_material_sha256": "f7d061ec12bbd71b85902676b59a80a7c12e27b652c1e801b065e66df1bec146",
     "sealed_by": "human_editor",
     "sealed_date": "2026-08-12",
     "librarian_backlog_logged": true,
+    "reader_notes_attached": ["COL-01-024-RN-01", "COL-01-027-RN-01"],
+    "col_1_28_executive_override": "binding: compress first two every-person repetitions into a shared English object; surface-repetition-only objections are overruled",
     "smoothing_decision": "Human Editor accepted structural repairs with explicit overrides in Col.1.24 and Col.1.28.",
-    "acceptance_status": "pending_final_exact_audit"
+    "acceptance_status": "pending_corrected_package_exact_audit"
   },
   "source_gate": {
     "status": "complete_for_blind_drafting",
@@ -143,10 +161,11 @@
   },
   "invariants": [
     "Only the default-branch copy is authoritative.",
-    "The Human Editor final candidate is sealed and must remain exact through final audit.",
-    "The exact audit may report evidence but may not mutate wording.",
+    "The Human Editor reading text is unchanged from exact-audit-01 and its reading-text hash must remain identical.",
+    "The corrected package adds exactly two Human Editor-approved Reader Notes and a binding Col.1.28 override flag.",
+    "Exact-audit-01 remains historical evidence and may not be retried or reused for acceptance.",
+    "Exact-audit-02 has an independent eight-attempt ceiling with at most two attempts per worker.",
     "No blind candidate worker or exhausted smoothing worker may be rerun.",
-    "The exact-audit task ceiling is eight provider attempts with at most two attempts per worker.",
     "COL-01-001-014 and COL-01-015-023 remain terminal and accepted.",
     "Philippians v0.9 RC1 remains frozen."
   ]
