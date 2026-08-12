@@ -20,11 +20,22 @@ If any required file is missing, invalid, stale, or contradictory, stop and repo
 - The Human Editor is not a GitHub operator or middleware. Use the connected repository tools for authorized repository work. If a required capability is unavailable, report the boundary and stop that operation; do not ask the Human Editor to shuttle code, URLs, SHAs, or buttons between systems.
 - Philippians v0.9 RC1 is frozen. Do not modify, reopen, rerun, or reconstruct it unless the Human Editor explicitly authorizes that exact action.
 - Never translate, generate candidate wording, call providers, dispatch a workflow, or mutate translation artifacts unless the current passage manifest permits that exact action and job ID.
-- For an interactive repository or Actions control operation, stop after the first failed connection and report `remote_status: unknown`. Never enter an agent-driven retry loop.
 - Once an exact provider job is durably authorized and dispatched, its internal request attempts remain governed by `docs/architecture/phase-4/FLT_Autonomous_Circuit_Breaker_v1.md`; do not broaden or reset those budgets.
 - Never resume or rerun a quarantined, cancelled, or completed job.
 - A historical preflight receipt or old chat authorization is not current authorization.
 - A UI animation is not evidence that a remote job is active.
+
+## Repository write protocol — Human Editor amendment 2026-08-12
+
+This section supersedes older FLT repository conventions that required feature branches for routine unit finalization and that stopped every repository file-write operation after the first deterministic 404/path error.
+
+- **Routine unit finalization is direct-to-default-branch.** Once the Human Editor has explicitly authorized the exact wording/state change, accepted candidate files, passage-manifest updates, seals, Decision/Librarian logs, and audit receipts may be committed directly to the default branch. FLT itself does not require a feature branch or PR for those routine unit-finalization writes.
+- Feature branches remain permitted for architecture/governance changes, broad refactors, experimental work, or when an external publishing capability imposes a branch/PR requirement.
+- **Repository file-write auto-recovery:** for a repository contents write/update that returns a deterministic `404`, stale-SHA, or pathing error, the Controller may autonomously re-read the intended canonical path, sync the latest default-branch blob/commit SHA, correct the path or expected SHA, and retry the same authorized write.
+- The Controller may make **up to three total repository file-write attempts for that exact authorized write**. It must not broaden the file scope, alter Human Editor wording, create adjacent work, or reset provider budgets while recovering.
+- If three file-write attempts fail, or the failure is not a deterministic path/SHA/file-write error, halt that write and report the exact boundary.
+- This three-attempt file-write recovery rule **does not apply to provider dispatch, workflow dispatch, cancellation, live Actions-control uncertainty, PR creation uncertainty, or provider request attempts**. Those remain governed by their specific safety rules and the circuit breaker.
+- The legacy `execution_control.interactive_repository_or_actions_connection_attempt_limit: 1` value in an older engine manifest is deprecated for deterministic repository **file-write** recovery. It continues to describe the conservative default for Actions/control operations unless a newer governing file says otherwise.
 
 ## FLT control commands
 
@@ -40,7 +51,7 @@ Report the exact proposed transition and every unmet precondition. Make no repos
 
 ### `flt resume <UNIT_ID> --job <JOB_ID> --authorization-id <ID> --expected-revision <REVISION>`
 
-A live resume is permitted only when the passage manifest allows it, the revision matches, no job is active, and the Human Editor has authorized that exact job and transition. Resume may move only `paused` to `ready`; it does not dispatch providers or workflows. The durable transition must be proposed through an authorized repository change and becomes authoritative only when merged to the default branch.
+A live resume is permitted only when the passage manifest allows it, the revision matches, no job is active, and the Human Editor has authorized that exact job and transition. Resume may move only `paused` to `ready`; it does not dispatch providers or workflows. The durable transition becomes authoritative only when committed to the default branch.
 
 ### `flt cancel <UNIT_ID> --job <JOB_ID> --expected-revision <REVISION>`
 
