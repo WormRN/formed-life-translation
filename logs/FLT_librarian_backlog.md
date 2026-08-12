@@ -28,3 +28,14 @@ Source: Human Editor synthesis directive of 2026-08-11 following blind A/B/C dra
 - `[rn]` **Col.1.16 — thrones, dominions, rulers, and authorities.** Explain for ordinary readers that these terms refer to cosmic or spiritual powers within the created order, not earthly politicians. **Visibility:** standard reading editions and above. **Status:** required, pending Librarian draft.
 - `[tn]` **Col.1.19 — fullness.** Record that the reading text deliberately leaves “fullness” undefined here; Paul later explicitly connects the concept with deity in Colossians 2:9. **Visibility:** Study/Scholarly only. **Status:** pending Librarian draft.
 - `[dl]` **Col.1.23 — conditional εἴ γε.** Human Editor deliberately renders the condition as “if you continue” rather than the imperative “you must,” balancing the grammatical assumption/condition with pastoral naturalness while retaining genuine conditional force. **Visibility:** repository only. **Status:** confirmed precedent.
+
+## Colossians 1:24–29
+
+Source: Human Editor sealed-candidate directive of 2026-08-12 following recovered blind A/B/C drafting run `31549129083`.
+
+- `[rn]` **Col.1.24 — supplying what is missing from Christ's sufferings.** REQUIRED: Explain that this wording does not mean Christ's cross was deficient; it refers to the ongoing, expected afflictions the church must endure in history. **Visibility:** standard reading editions and above. **Status:** required, pending Librarian draft.
+- `[rn]` **Col.1.27 — all the nations / Gentiles.** Explain that “all the nations” refers to the Gentiles—the nations outside the Jewish law—and marks a major theological shift in God's secret plan. **Visibility:** standard reading editions and above. **Status:** required, pending Librarian draft.
+- `[tn]` **Col.1.27 — Christ in / among you.** Record the viable alternative reading “Christ is among you” alongside the Human Editor's chosen reading “Christ is in you.” **Visibility:** Study/Scholarly only. **Status:** pending Librarian draft.
+- `[dl]` **Col.1.24 — ἀνταναπληρῶ / taking my turn.** Human Editor translates *antanaplērō* with focus on the *anti-* prefix (“taking my turn”) to preserve the expression's difficulty without implying deficiency in Christ's saving work. **Visibility:** repository only. **Status:** confirmed precedent.
+- `[dl]` **Col.1.26 — μυστήριον / secret plan.** Human Editor locks “secret plan” as the standard FLT rendering for *mystērion* in this context. **Visibility:** repository only. **Status:** confirmed precedent.
+- `[dl]` **Col.1.28 — τέλειος / complete.** Human Editor renders *teleios* as “complete” rather than “mature” to anticipate and counter the Colossian claim that Christ was insufficient. **Visibility:** repository only. **Status:** confirmed precedent.

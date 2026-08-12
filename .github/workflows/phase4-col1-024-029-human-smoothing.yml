@@ -1,0 +1,269 @@
+name: FLT Colossians 1:24-29 Human Editor smoothing
+run-name: Colossians 1:24-29 listener-only diagnosis and source-aware smoothing
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/phase4-col1-024-029-human-smoothing.yml'
+      - 'docs/architecture/phase-4/COL-01-024-029_human-editor-synthesis-v2.2.json'
+      - 'docs/architecture/phase-4/COL-01-024-029_human-editor-synthesis-seal-v2.2.json'
+      - 'config/passages/COL-01-024-029.json'
+      - 'logs/FLT_librarian_backlog.md'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/phase4-col1-024-029-human-smoothing.yml'
+
+permissions:
+  contents: write
+
+env:
+  TASK_ID: COL-01-024-029-HUMAN-SMOOTHING-01
+  AUTHORIZATION_ID: HE-COL-01-024-029-SEAL-SMOOTH-20260812
+  LAUNCH_NONCE: HE-COL-01-024-029-SMOOTH-20260812-01
+  EXPECTED_MANIFEST_REVISION: '8'
+  CANDIDATE_FILE: docs/architecture/phase-4/COL-01-024-029_human-editor-synthesis-v2.2.json
+  SEAL_FILE: docs/architecture/phase-4/COL-01-024-029_human-editor-synthesis-seal-v2.2.json
+
+jobs:
+  validate:
+    if: github.event_name == 'pull_request'
+    name: Validate sealed-candidate smoothing gate with zero provider calls
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: phase4-harness/package-lock.json
+      - name: Validate authorization, exact seal, notes, source packet, and Engine 2.2
+        shell: bash
+        run: |
+          set -euo pipefail
+          jq -e --arg task "$TASK_ID" --arg auth "$AUTHORIZATION_ID" --arg nonce "$LAUNCH_NONCE" --argjson rev "$EXPECTED_MANIFEST_REVISION" '
+            .manifest_revision==$rev and .unit.unit_id=="COL-01-024-029" and .unit.engine_version=="2.2" and
+            .state.status=="ready" and .state.active_job_id==null and .state.provider_dispatch_allowed==true and .state.github_workflow_dispatch_allowed==true and
+            .jobs[$task].status=="authorized_ready" and .jobs[$task].authorization_id==$auth and .jobs[$task].dispatch_allowed==true and
+            .jobs[$task].max_attempts_per_worker==2 and .jobs[$task].task_max_attempts==8 and .jobs[$task].provider_attempts_used==0 and .jobs[$task].checkpoints_to_restore==0 and
+            .jobs[$task].launch.nonce==$nonce and .jobs[$task].launch.status=="armed" and .jobs[$task].launch.expected_manifest_revision==$rev and .jobs[$task].launch.consumed_run_id==null
+          ' config/passages/COL-01-024-029.json
+          jq -e '.candidate_id=="COL-01-024-029-HUMAN-SYNTHESIS-V2.2" and .status=="human_editor_exact_selection_pending_oral_smoothing" and .human_editor_selection.exact_wording_preserved==true and (.verse_renderings|length)==6 and .verse_renderings[0].reference=="Col.1.24" and .verse_renderings[5].reference=="Col.1.29"' "$CANDIDATE_FILE"
+          expected="$(jq -r '.candidate_sha256' "$SEAL_FILE")"
+          actual="$(sha256sum "$CANDIDATE_FILE" | awk '{print $1}')"
+          test "$expected" = "$actual"
+          test "$expected" = "8566994be640dca86bb96eb1db673de8e372ec99f2f5d53a60bd8b00509ba89b"
+          grep -Fq '[rn]` **Col.1.24' logs/FLT_librarian_backlog.md
+          grep -Fq '[rn]` **Col.1.27' logs/FLT_librarian_backlog.md
+          grep -Fq '[tn]` **Col.1.27' logs/FLT_librarian_backlog.md
+          grep -Fq '[dl]` **Col.1.24' logs/FLT_librarian_backlog.md
+          grep -Fq '[dl]` **Col.1.26' logs/FLT_librarian_backlog.md
+          grep -Fq '[dl]` **Col.1.28' logs/FLT_librarian_backlog.md
+          jq -e '.chapter_id=="COL-01" and .units[0].unit_id=="COL-01-024-029" and (.units[0].verses|length)==6 and .passage_sense_resolution.status=="complete_for_blind_drafting"' docs/architecture/phase-4/COL-01-024-029_blind-source-v2.2.json
+          npm --prefix phase4-harness ci
+          npm --prefix phase4-harness test
+
+  claim_running:
+    if: >-
+      github.event_name == 'push' &&
+      !startsWith(github.event.head_commit.message, 'Record Colossians 1:24-29 smoothing running state') &&
+      !startsWith(github.event.head_commit.message, 'Record Colossians 1:24-29 smoothing completion') &&
+      !startsWith(github.event.head_commit.message, 'Record Colossians 1:24-29 smoothing halt')
+    name: Claim one-shot Human Editor smoothing launch
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    outputs:
+      target_sha: ${{ steps.claim.outputs.target_sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: phase4-harness/package-lock.json
+      - name: Credential-free final smoothing gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          jq -e --arg task "$TASK_ID" --arg auth "$AUTHORIZATION_ID" --arg nonce "$LAUNCH_NONCE" --argjson rev "$EXPECTED_MANIFEST_REVISION" '
+            .manifest_revision==$rev and .state.status=="ready" and .state.active_job_id==null and .state.provider_dispatch_allowed==true and
+            .jobs[$task].status=="authorized_ready" and .jobs[$task].authorization_id==$auth and .jobs[$task].provider_attempts_used==0 and .jobs[$task].checkpoints_to_restore==0 and
+            .jobs[$task].launch.nonce==$nonce and .jobs[$task].launch.status=="armed" and .jobs[$task].launch.consumed_run_id==null
+          ' config/passages/COL-01-024-029.json
+          expected="$(jq -r '.candidate_sha256' "$SEAL_FILE")"
+          actual="$(sha256sum "$CANDIDATE_FILE" | awk '{print $1}')"
+          test "$expected" = "$actual"
+          npm --prefix phase4-harness ci
+          npm --prefix phase4-harness test
+      - name: Atomically consume nonce and record running state
+        id: claim
+        shell: bash
+        run: |
+          set -euo pipefail
+          jq --arg task "$TASK_ID" --arg run "$GITHUB_RUN_ID" --arg nonce "$LAUNCH_NONCE" '
+            .manifest_revision=9 |
+            .state.status="running" |
+            .state.phase="human_editor_smoothing_running" |
+            .state.active_job_id=$task |
+            .state.active_run_id=$run |
+            .state.provider_dispatch_allowed=true |
+            .state.github_workflow_dispatch_allowed=false |
+            .state.next_permitted_action="await verified oral-smoothing completion or exact cancel" |
+            .allowed_actions=["flt status COL-01-024-029","flt cancel COL-01-024-029 --job COL-01-024-029-HUMAN-SMOOTHING-01 --expected-revision 9","read_only_repository_inspection"] |
+            .jobs[$task].status="running" |
+            .jobs[$task].dispatch_confirmed=true |
+            .jobs[$task].remote_run_id=$run |
+            .jobs[$task].retry_allowed=false |
+            .jobs[$task].launch.status="consumed" |
+            .jobs[$task].launch.consumed_run_id=$run |
+            .jobs[$task].launch.consumed_nonce=$nonce
+          ' config/passages/COL-01-024-029.json > /tmp/manifest.json
+          mv /tmp/manifest.json config/passages/COL-01-024-029.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- config/passages/COL-01-024-029.json
+          git commit -m "Record Colossians 1:24-29 smoothing running state ${GITHUB_RUN_ID}"
+          git push origin HEAD:main
+          echo "target_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+  smooth:
+    needs: claim_running
+    if: needs.claim_running.result == 'success'
+    name: Listener-only diagnosis and source-aware smoothing
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    outputs:
+      attempts_used: ${{ steps.ledger.outputs.attempts_used }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.claim_running.outputs.target_sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: phase4-harness/package-lock.json
+      - name: Install and test Engine 2.2
+        run: npm --prefix phase4-harness ci && npm --prefix phase4-harness test
+      - name: Create smoothing identity and source packet
+        id: run
+        shell: bash
+        run: |
+          set -euo pipefail
+          run_id="FLT-COL-01-$(date -u +%Y%m%d)-${GITHUB_RUN_NUMBER}"
+          node phase4-harness/scripts/prepare-run-config.mjs phase4-harness/config.github-actions.json phase4-harness/.col1-024-029-smoothing-config.json "$run_id"
+          jq --arg task "$TASK_ID" '.unit_id=$task | .task_id=$task | .source_packet=".col1-024-029-smoothing-source.json" | .max_attempts=2 | .task_max_attempts=8' phase4-harness/.col1-024-029-smoothing-config.json > /tmp/config.json
+          mv /tmp/config.json phase4-harness/.col1-024-029-smoothing-config.json
+          jq -n --slurpfile brief docs/architecture/phase-4/COL-01-024-029_blind-source-v2.2.json --slurpfile parsed data/source/sblgnt_parsed.json '$brief[0] as $b | $parsed[0] as $p | {source_data:{edition:"SBLGNT",verses:[$b.units[0].verses[] | . as $v | {reference:$v.reference,greek:$v.greek,tokens:$p[$v.reference]}]},governing_rules:$b.governing_rules,matrix_entries:($b.matrix_alerts + $b.passage_sense_resolution.expressions)}' > phase4-harness/.col1-024-029-smoothing-source.json
+          echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
+      - name: Run listener-only diagnosis and source-aware smoothing
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node phase4-harness/src/oral-smoothing.js phase4-harness/.col1-024-029-smoothing-config.json "phase4-harness/runs/${{ steps.run.outputs.run_id }}" "$CANDIDATE_FILE" phase4-harness/.col1-024-029-smoothing-source.json
+      - name: Capture circuit-breaker ledger
+        id: ledger
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          ledger="phase4-harness/runs/${{ steps.run.outputs.run_id }}/manifest/task-attempt-budget.json"
+          if test -f "$ledger"; then
+            echo "attempts_used=$(jq -r '.attempts_used' "$ledger")" >> "$GITHUB_OUTPUT"
+          else
+            echo "attempts_used=0" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Upload oral-smoothing bundle
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: "${{ steps.run.outputs.run_id || 'FLT-COL-01-024-029-SMOOTHING-blocked' }}-oral-smoothing"
+          path: phase4-harness/runs/
+          retention-days: 30
+
+  record_completion:
+    needs: [claim_running, smooth]
+    if: needs.claim_running.result == 'success' && needs.smooth.result == 'success'
+    name: Record smoothing completion for Human Editor review
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Advance durable state to awaiting Human Editor
+        shell: bash
+        run: |
+          set -euo pipefail
+          git pull --ff-only origin main
+          jq -e --arg task "$TASK_ID" --arg run "$GITHUB_RUN_ID" '.manifest_revision==9 and .state.status=="running" and .state.active_job_id==$task and .state.active_run_id==$run' config/passages/COL-01-024-029.json
+          jq --arg task "$TASK_ID" --arg run "$GITHUB_RUN_ID" --argjson attempts '${{ needs.smooth.outputs.attempts_used }}' '
+            .manifest_revision=10 |
+            .state.status="awaiting_human_editor" |
+            .state.phase="oral_smoothing_complete_pending_human_editor" |
+            .state.active_job_id=null |
+            .state.active_run_id=$run |
+            .state.candidate_generation_allowed=false |
+            .state.provider_dispatch_allowed=false |
+            .state.github_workflow_dispatch_allowed=false |
+            .state.next_permitted_action="retrieve verified oral-smoothing artifact and present diagnoses/proposals without changing sealed Human Editor text" |
+            .allowed_actions=["flt status COL-01-024-029","retrieve verified oral-smoothing artifact","read_only_repository_inspection"] |
+            .jobs[$task].status="awaiting_human_editor" |
+            .jobs[$task].provider_attempts_used=$attempts |
+            .jobs[$task].provider_attempts_remaining=(8-$attempts) |
+            .jobs[$task].remote_run_id=$run |
+            .jobs[$task].retry_allowed=false
+          ' config/passages/COL-01-024-029.json > /tmp/manifest.json
+          mv /tmp/manifest.json config/passages/COL-01-024-029.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- config/passages/COL-01-024-029.json
+          git commit -m "Record Colossians 1:24-29 smoothing completion ${GITHUB_RUN_ID}"
+          git push origin HEAD:main
+
+  record_halt:
+    needs: [claim_running, smooth]
+    if: always() && needs.claim_running.result == 'success' && needs.smooth.result != 'success'
+    name: Record smoothing halted state
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Advance durable state to blocked
+        shell: bash
+        run: |
+          set -euo pipefail
+          git pull --ff-only origin main
+          attempts='${{ needs.smooth.outputs.attempts_used }}'
+          test -n "$attempts" || attempts=0
+          jq --arg task "$TASK_ID" --arg run "$GITHUB_RUN_ID" --argjson attempts "$attempts" '
+            .manifest_revision=10 |
+            .state.status="blocked" |
+            .state.phase="oral_smoothing_halted" |
+            .state.active_job_id=null |
+            .state.active_run_id=$run |
+            .state.candidate_generation_allowed=false |
+            .state.provider_dispatch_allowed=false |
+            .state.github_workflow_dispatch_allowed=false |
+            .state.next_permitted_action="inspect verified smoothing halt evidence; Human Editor unlock required for any retry" |
+            .allowed_actions=["flt status COL-01-024-029","read_only_repository_inspection"] |
+            .jobs[$task].status="blocked" |
+            .jobs[$task].provider_attempts_used=$attempts |
+            .jobs[$task].provider_attempts_remaining=(8-$attempts) |
+            .jobs[$task].retry_allowed=false
+          ' config/passages/COL-01-024-029.json > /tmp/manifest.json
+          mv /tmp/manifest.json config/passages/COL-01-024-029.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- config/passages/COL-01-024-029.json
+          git commit -m "Record Colossians 1:24-29 smoothing halt ${GITHUB_RUN_ID}"
+          git push origin HEAD:main
