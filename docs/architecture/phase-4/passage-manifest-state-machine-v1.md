@@ -33,11 +33,13 @@ Chat history, memory, attachments, handoff prompts, and UI status indicators are
 
 No command may jump directly from `paused` to `running`. Resume and dispatch are deliberately separate operations. The `awaiting_human_editor` to `ready` handoff may arm only a new distinct job ID; it may not reuse, resume, or rerun the completed job that produced the Human Editor checkpoint. A `blocked` to `ready` recovery is not a fresh budget: it requires an exact Human Editor unlock for the blocked task, preserves the task's cumulative attempt ledger, restores only explicitly authorized validated checkpoints, and uses a fresh launch nonce.
 
-## Revision and idempotency
+## Revision, idempotency, and repository publication
 
-Every state-changing request names the expected manifest revision. A mismatch stops the operation. Each logical provider job has one stable job ID and idempotency key. Quarantined, cancelled, and completed job IDs are terminal and cannot be reused.
+Every state-changing request names the expected manifest revision. A mismatch stops the logical state transition until the Controller refreshes the authoritative default-branch state. Each logical provider job has one stable job ID and idempotency key. Quarantined, cancelled, and completed job IDs are terminal and cannot be reused.
 
-A proposed state transition becomes authoritative only after it is merged to the default branch. Branch contents and open pull requests are proposals, not live engine state.
+A state transition becomes authoritative only when committed to the repository's default branch. Branch contents and open pull requests are proposals, not live engine state.
+
+**Human Editor repository-protocol amendment — 2026-08-12:** FLT does **not** require a feature branch or pull request for routine unit finalization. Once the Human Editor has explicitly authorized the exact wording/state change, the Controller may write accepted candidate files, seals, passage manifests, Librarian/Decision logs, and audit receipts directly to the default branch. Architecture/governance work, broad refactors, experiments, or external publishing-tool requirements may still use feature branches.
 
 ## Command contracts
 
@@ -51,7 +53,7 @@ A proposed state transition becomes authoritative only after it is merged to the
 
 ### Live resume
 
-A live resume requires the exact unit ID, exact proposed job ID, matching revision, no active job, and Human Editor authorization scoped to that job. It may only propose `paused` to `ready`; it never dispatches.
+A live resume requires the exact unit ID, exact proposed job ID, matching revision, no active job, and Human Editor authorization scoped to that job. It may only move `paused` to `ready`; it never dispatches.
 
 ### Human-editor next-stage handoff
 
@@ -79,6 +81,25 @@ Before provider credentials are available, every production workflow must valida
 
 A workflow that cannot pass this gate must expose no provider credentials and make no provider calls.
 
+## Repository file-write recovery
+
+For repository **file writes/updates only**, the Controller may recover automatically from a deterministic 404, pathing error, or stale blob/commit SHA without requiring a new Human Editor message.
+
+1. Re-read the canonical path and current default-branch file/blob/commit SHA.
+2. Correct only the path or expected SHA needed to perform the same already-authorized write.
+3. Retry that exact write.
+4. Permit no more than **three total attempts** for the exact write operation.
+
+Recovery must not change the authorized translation wording, broaden file scope, create adjacent work, dispatch providers, alter job identity, reset a circuit-breaker ledger, or reuse a consumed nonce.
+
+After the third failed file-write attempt, halt that write and report the exact limitation.
+
+This recovery rule does **not** apply to workflow/provider dispatch, cancellation, live Actions-control uncertainty, PR creation uncertainty, or provider request attempts. Those remain subject to their existing one-shot control rules or the Autonomous Circuit Breaker as applicable.
+
 ## Failure behavior
 
-One failed interactive repository or Actions connection ends that controller operation. The agent reports the exact limitation and continues only with actions explicitly allowed without that connection. It never asks the Human Editor to mediate between ChatGPT and GitHub. This does not reset or replace the bounded provider-request policy inside an already authorized job.
+A failed **Actions/control** operation whose remote state is uncertain ends that controller operation unless a more specific governing rule authorizes recovery. Report the exact limitation and `remote_status: unknown`; do not infer success or enter an uncontrolled retry loop.
+
+A deterministic **repository file-write** 404/path/SHA failure is governed instead by the bounded three-attempt repository file-write recovery protocol above.
+
+The Controller never asks the Human Editor to mediate between ChatGPT and GitHub. These outer-controller rules do not reset or replace the bounded provider-request policy inside an already authorized job.
