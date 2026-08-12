@@ -37,6 +37,19 @@ This section supersedes older FLT repository conventions that required feature b
 - This three-attempt file-write recovery rule **does not apply to provider dispatch, workflow dispatch, cancellation, live Actions-control uncertainty, PR creation uncertainty, or provider request attempts**. Those remain governed by their specific safety rules and the circuit breaker.
 - The legacy `execution_control.interactive_repository_or_actions_connection_attempt_limit: 1` value in an older engine manifest is deprecated for deterministic repository **file-write** recovery. It continues to describe the conservative default for Actions/control operations unless a newer governing file says otherwise.
 
+## Complete-package exact-audit protocol — Human Editor Amendment 3, 2026-08-12
+
+The terminal Exact-Candidate Semantic Audit evaluates the **complete Human Editor-authorized package**, not naked reading text whenever required note or override material exists.
+
+- Before a terminal exact audit, the Controller must assemble and seal the exact reading text together with **all drafted Reader Notes (`[rn]`) and Transparency Notes (`[tn]`) that apply to the unit and are intended to accompany or govern interpretation of the candidate**, plus every formally logged Executive/Human Editor Override applicable to that wording.
+- If the Passage-Sense gate, Librarian backlog, candidate metadata, Decision Log, or Human Editor directive marks a note as required for the terminal package, the credential-free audit preflight must verify that the drafted note is actually present. A required-but-missing drafted note makes the package ineligible for provider dispatch.
+- The Controller must not substitute a backlog placeholder for a drafted note when the note itself is required to disambiguate the reading text. The actual approved/drafted note text must be bundled.
+- Auditor prompts must explicitly identify the object under review as **reading text + bundled `[rn]`/`[tn]` notes + binding Executive Overrides** and require theological, semantic, source-traceability, readability, and constitutional evaluation of the package as a whole.
+- A note may clarify an ambiguity the reading text intentionally leaves for the note layer, but notes may not be used to excuse a reading text that materially contradicts the source or the FLT Constitution.
+- Formally logged Executive Overrides are binding constraints on preference-level or already-adjudicated issues. Auditors may still block for a distinct material meaning loss, addition, contradiction, or misleading implication not actually covered by the override.
+- The candidate seal/audit receipt must identify the bundled package components sufficiently to prove which reading text, notes, and overrides were audited.
+- An exact audit that omits a required package component is a **packaging failure, not valid terminal semantic evidence**, and cannot by itself finalize or reject the candidate.
+
 ## FLT control commands
 
 These phrases are controller commands. They are not permission to perform adjacent work.
