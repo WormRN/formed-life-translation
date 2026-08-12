@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "manifest_revision": 10,
+  "manifest_revision": 11,
   "last_updated": "2026-08-12",
   "unit": {
     "unit_id": "COL-01-024-029",
@@ -23,6 +23,9 @@
     "human_editor_synthesis": "docs/architecture/phase-4/COL-01-024-029_human-editor-synthesis-v2.2.json",
     "human_editor_synthesis_seal": "docs/architecture/phase-4/COL-01-024-029_human-editor-synthesis-seal-v2.2.json",
     "smoothing_workflow": ".github/workflows/phase4-col1-024-029-human-smoothing.yml",
+    "human_editor_final": "docs/architecture/phase-4/COL-01-024-029_human-final-v2.2.json",
+    "human_editor_final_seal": "docs/architecture/phase-4/COL-01-024-029_human-final-seal-v2.2.json",
+    "final_audit_workflow": ".github/workflows/phase4-col1-024-029-final-exact-audit.yml",
     "prior_halt_run_id": "31545365297",
     "prior_halt_artifact_id": 9122291043,
     "prior_halt_artifact_name": "FLT-COL-01-20260811-2",
@@ -33,27 +36,28 @@
     "circuit_breaker_spec": "docs/architecture/phase-4/FLT_Autonomous_Circuit_Breaker_v1.md"
   },
   "state": {
-    "status": "awaiting_human_editor",
-    "phase": "oral_smoothing_complete_pending_human_editor",
+    "status": "ready",
+    "phase": "human_editor_final_repair_sealed_pending_exact_audit",
     "active_job_id": null,
     "active_run_id": "31565776509",
     "translation_allowed": true,
     "candidate_generation_allowed": false,
-    "provider_dispatch_allowed": false,
-    "github_workflow_dispatch_allowed": false,
+    "provider_dispatch_allowed": true,
+    "github_workflow_dispatch_allowed": true,
     "translation_artifact_mutation_allowed": false,
-    "next_permitted_action": "retrieve verified oral-smoothing artifact and present diagnoses/proposals without changing sealed Human Editor text"
+    "next_permitted_action": "dispatch exactly COL-01-024-029-EXACT-AUDIT-01 with Human Editor authorization HE-COL-01-024-029-FINAL-AUDIT-20260812"
   },
   "allowed_actions": [
     "flt status COL-01-024-029",
-    "retrieve verified oral-smoothing artifact",
+    "dispatch COL-01-024-029-EXACT-AUDIT-01 with authorization HE-COL-01-024-029-FINAL-AUDIT-20260812 at revision 11",
     "read_only_repository_inspection"
   ],
   "forbidden_actions": [
     "rerun_blind_candidate_workers",
+    "rerun_exhausted_smoothing_job",
     "reuse_consumed_launch_nonce",
-    "modify_sealed_human_editor_candidate_without_explicit_authorization",
-    "exceed_eight_total_smoothing_task_attempts",
+    "modify_sealed_human_editor_final_without_explicit_authorization",
+    "exceed_eight_total_exact_audit_attempts",
     "modify_or_reopen_COL-01-015-023",
     "modify_or_reopen_COL-01-001-014",
     "modify_or_reopen_philippians",
@@ -65,61 +69,58 @@
       "job_type": "blind_candidate_batch_recovery",
       "status": "completed_human_editor_selection_recorded",
       "authorization_id": "HE-COL-01-024-029-RECOVER-20260811",
-      "authorized_by": "human_editor",
-      "authorization_scope": "recover the halted blind A/B/C batch without rerunning successful work: preserve readability checkpoint, normalize balanced worker singleton-array response without a call, and allow greek_fidelity_worker one second-and-final provider attempt",
       "dispatch_allowed": false,
-      "workflow": ".github/workflows/phase4-col1-024-029-recovery.yml",
-      "max_attempts_per_worker": 2,
-      "task_max_attempts": 8,
       "provider_attempts_used": 5,
-      "provider_attempts_remaining": 3,
-      "checkpoints_to_restore": 0,
-      "restored_checkpoints": [
-        "readability_worker validated checkpoint from run 31545365297",
-        "balanced_worker attempt-2 response normalized from one-element array and revalidated with zero provider calls"
-      ],
-      "prior_remote_run_id": "31545365297",
       "remote_run_id": "31549129083",
-      "recovery_completed_run_id": "31549129083",
-      "dispatch_confirmed": true,
       "retry_allowed": false
     },
     "COL-01-024-029-HUMAN-SMOOTHING-01": {
       "idempotency_key": "flt:2.2:COL-01-024-029:human-smoothing:01",
       "job_type": "listener_only_and_source_aware_smoothing",
-      "status": "awaiting_human_editor",
+      "status": "completed_human_editor_decision_recorded",
       "authorization_id": "HE-COL-01-024-029-SEAL-SMOOTH-20260812",
-      "authorized_by": "human_editor",
-      "authorization_scope": "audit the exact sealed Human Editor candidate using listener-only diagnosis followed by source-aware logged smoothing proposals; do not mutate sealed wording",
-      "dispatch_allowed": true,
-      "workflow": ".github/workflows/phase4-col1-024-029-human-smoothing.yml",
-      "max_attempts_per_worker": 2,
-      "task_max_attempts": 8,
+      "dispatch_allowed": false,
       "provider_attempts_used": 8,
       "provider_attempts_remaining": 0,
+      "remote_run_id": "31565776509",
+      "retry_allowed": false
+    },
+    "COL-01-024-029-EXACT-AUDIT-01": {
+      "idempotency_key": "flt:2.2:COL-01-024-029:exact-audit:01",
+      "job_type": "english_reconstruction_and_semantic_floor_exact_candidate_audit",
+      "status": "authorized_ready",
+      "authorization_id": "HE-COL-01-024-029-FINAL-AUDIT-20260812",
+      "authorized_by": "human_editor",
+      "authorization_scope": "audit the exact repaired Human Editor final text through English-only meaning reconstruction and Greek semantic-floor review; no wording mutation; on clean semantic pass record unit accepted",
+      "dispatch_allowed": true,
+      "workflow": ".github/workflows/phase4-col1-024-029-final-exact-audit.yml",
+      "max_attempts_per_worker": 2,
+      "task_max_attempts": 8,
+      "provider_attempts_used": 0,
+      "provider_attempts_remaining": 8,
       "checkpoints_to_restore": 0,
-      "dispatch_confirmed": true,
+      "dispatch_confirmed": false,
       "retry_allowed": false,
       "launch": {
         "mode": "manifest_authorized_one_shot_push",
-        "nonce": "HE-COL-01-024-029-SMOOTH-20260812-01",
-        "status": "consumed",
+        "nonce": "HE-COL-01-024-029-EXACT-AUDIT-20260812-01",
+        "status": "armed",
         "armed_by": "human_editor",
-        "authorization_id": "HE-COL-01-024-029-SEAL-SMOOTH-20260812",
-        "expected_manifest_revision": 8,
-        "consumed_run_id": "31565776509",
-        "consumed_nonce": "HE-COL-01-024-029-SMOOTH-20260812-01"
-      },
-      "remote_run_id": "31565776509"
+        "authorization_id": "HE-COL-01-024-029-FINAL-AUDIT-20260812",
+        "expected_manifest_revision": 11,
+        "consumed_run_id": null,
+        "consumed_nonce": null
+      }
     }
   },
   "editorial_decisions": {
-    "sealed_candidate_id": "COL-01-024-029-HUMAN-SYNTHESIS-V2.2",
-    "sealed_candidate_sha256": "8566994be640dca86bb96eb1db673de8e372ec99f2f5d53a60bd8b00509ba89b",
+    "sealed_candidate_id": "COL-01-024-029-HUMAN-FINAL-V2.2",
+    "sealed_candidate_sha256": "bccf58910379b2460dd770508c84eb400b971bd9b2780df24922aa51f74f40da",
     "sealed_by": "human_editor",
     "sealed_date": "2026-08-12",
     "librarian_backlog_logged": true,
-    "acceptance_status": "pending_sealed_candidate_audit"
+    "smoothing_decision": "Human Editor accepted structural repairs with explicit overrides in Col.1.24 and Col.1.28.",
+    "acceptance_status": "pending_final_exact_audit"
   },
   "source_gate": {
     "status": "complete_for_blind_drafting",
@@ -138,10 +139,10 @@
   },
   "invariants": [
     "Only the default-branch copy is authoritative.",
-    "The Human Editor candidate is sealed and must remain exact through smoothing evidence collection.",
-    "The smoothing stage may diagnose and propose but may not mutate the sealed candidate.",
-    "No blind candidate worker may be rerun.",
-    "The smoothing task ceiling is eight provider attempts with at most two attempts per worker.",
+    "The Human Editor final candidate is sealed and must remain exact through final audit.",
+    "The exact audit may report evidence but may not mutate wording.",
+    "No blind candidate worker or exhausted smoothing worker may be rerun.",
+    "The exact-audit task ceiling is eight provider attempts with at most two attempts per worker.",
     "COL-01-001-014 and COL-01-015-023 remain terminal and accepted.",
     "Philippians v0.9 RC1 remains frozen."
   ]
