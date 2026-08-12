@@ -4,10 +4,9 @@
   "passage": "Colossians 1:24-29",
   "human_approved": true,
   "approved_by": "human_editor",
-  "approved_at": "2026-08-12T01:04:00-05:00",
+  "approved_at": "2026-08-12T01:23:00-05:00",
   "reading_text_sha256": "223a581afcfcfd1c612f0f1aab87dddd0b6ca89a342ea7276c070a7523d5da9c",
-  "reader_notes_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-  "candidate_material_sha256": "617fcfa9efb9772607f2c5579476abb560ae57cb22b5e4e4244872bf60f74b75",
-  "candidate_file_sha256": "bccf58910379b2460dd770508c84eb400b971bd9b2780df24922aa51f74f40da",
+  "reader_notes_sha256": "733a29a81213d96b89f6626d27b7be0edefebeb9eed5aa54ce851a29eb6ba5b8",
+  "candidate_material_sha256": "f7d061ec12bbd71b85902676b59a80a7c12e27b652c1e801b065e66df1bec146",
   "audit_authority": "Only the candidate whose exact reading-text and reader-note hashes match this seal may enter the constitutional audit."
 }
