@@ -4,15 +4,26 @@
   "unit_id": "COL-01-024-029",
   "passage": "Colossians 1:24-29",
   "engine_version": "2.2",
-  "status": "human_editor_final_repair_pending_exact_audit",
+  "status": "human_editor_final_repair_with_reader_notes_pending_exact_audit",
   "human_editor": "David L. Davis",
   "human_editor_date": "2026-08-12",
   "source_draft_run_id": "31549129083",
   "smoothing_run_id": "31565776509",
+  "prior_exact_audit_run_id": "31569014387",
   "human_editor_selection": {
     "exact_wording_preserved": true,
-    "repairs_authorized_after_smoothing": true
+    "repairs_authorized_after_smoothing": true,
+    "reader_notes_authorized_after_packaging_audit": true
   },
+  "human_editor_overrides": [
+    {
+      "reference": "Col.1.28",
+      "issue": "threefold repetition of every person",
+      "decision": "compress the first two occurrences into 'warn and teach every person' while retaining the final 'present every person'",
+      "status": "binding_human_editor_override",
+      "rationale": "English grammar distributes 'every person' naturally across both coordinated verbs; repeating it after both verbs is unnecessarily mechanical for FLT readability. Audit objections based solely on omission of the Greek threefold surface repetition are overruled."
+    }
+  ],
   "verse_renderings": [
     {
       "reference": "Col.1.24",
@@ -39,38 +50,30 @@
       "text": "That is why I labor and compete, with the energy He powerfully works within me."
     }
   ],
-  "reader_notes": [],
-  "backlog_requirements": [
+  "reader_notes": [
     {
+      "note_id": "COL-01-024-RN-01",
       "reference": "Col.1.24",
-      "tag": "rn",
-      "topic": "what is missing from Christ's sufferings"
+      "anchor": "what is missing from Christ's sufferings",
+      "status": "human_editor_approved",
+      "text": "What is missing from Christ's sufferings does not mean His death on the cross was incomplete or not enough to save us. It refers to the ongoing hardships and persecution that the church (Christ's body) must continue to face in this world, which Paul is glad to take his share of."
     },
     {
+      "note_id": "COL-01-027-RN-01",
       "reference": "Col.1.27",
-      "tag": "rn",
-      "topic": "all the nations refers to Gentiles"
-    },
-    {
-      "reference": "Col.1.27",
-      "tag": "tn",
-      "topic": "viable alternative Christ is among you"
-    },
-    {
-      "reference": "Col.1.24",
-      "tag": "dl",
-      "topic": "antanapleroo taking my turn anti-prefix rationale"
-    },
-    {
-      "reference": "Col.1.26",
-      "tag": "dl",
-      "topic": "mysterion secret plan standard"
-    },
-    {
-      "reference": "Col.1.28",
-      "tag": "dl",
-      "topic": "teleios complete rather than mature"
+      "anchor": "all the nations",
+      "status": "human_editor_approved",
+      "text": "In the Old Testament, God's special promises were mostly focused on the Jewish people. The 'secret' now revealed is that God has opened His family to everyone in the entire world (the Gentiles or all the nations) through Jesus."
     }
+  ],
+  "backlog_requirements": [
+    {"reference":"Col.1.24","tag":"rn","topic":"what is missing from Christ's sufferings","status":"fulfilled_in_candidate_package"},
+    {"reference":"Col.1.27","tag":"rn","topic":"all the nations refers to Gentiles","status":"fulfilled_in_candidate_package"},
+    {"reference":"Col.1.27","tag":"tn","topic":"viable alternative Christ is among you"},
+    {"reference":"Col.1.24","tag":"dl","topic":"antanapleroo taking my turn anti-prefix rationale"},
+    {"reference":"Col.1.26","tag":"dl","topic":"mysterion secret plan standard"},
+    {"reference":"Col.1.28","tag":"dl","topic":"teleios complete rather than mature"},
+    {"reference":"Col.1.28","tag":"dl","topic":"Human Editor override: English compression of threefold every-person repetition"}
   ],
   "copyright_independence": {
     "status": "DEFERRED_BATCH",
