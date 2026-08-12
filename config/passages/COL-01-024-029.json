@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "manifest_revision": 14,
+  "manifest_revision": 15,
   "last_updated": "2026-08-12",
   "unit": {
     "unit_id": "COL-01-024-029",
@@ -38,16 +38,16 @@
     "circuit_breaker_spec": "docs/architecture/phase-4/FLT_Autonomous_Circuit_Breaker_v1.md"
   },
   "state": {
-    "status": "ready",
-    "phase": "corrected_package_sealed_pending_exact_audit",
-    "active_job_id": null,
-    "active_run_id": "31569014387",
+    "status": "running",
+    "phase": "corrected_package_exact_audit_running",
+    "active_job_id": "COL-01-024-029-EXACT-AUDIT-02",
+    "active_run_id": "31570445398",
     "translation_allowed": true,
     "candidate_generation_allowed": false,
     "provider_dispatch_allowed": true,
-    "github_workflow_dispatch_allowed": true,
+    "github_workflow_dispatch_allowed": false,
     "translation_artifact_mutation_allowed": false,
-    "next_permitted_action": "dispatch exactly COL-01-024-029-EXACT-AUDIT-02 after zero-provider validation"
+    "next_permitted_action": "await verified corrected-package exact-audit completion or exact cancel"
   },
   "allowed_actions": [
     "flt status COL-01-024-029",
@@ -106,7 +106,7 @@
     "COL-01-024-029-EXACT-AUDIT-02": {
       "idempotency_key": "flt:2.2:COL-01-024-029:exact-audit:02",
       "job_type": "corrected_package_english_reconstruction_and_semantic_floor_exact_candidate_audit",
-      "status": "authorized_ready",
+      "status": "running",
       "authorization_id": "HE-COL-01-024-029-CORRECTED-PACKAGE-AUDIT-20260812",
       "authorized_by": "human_editor",
       "authorization_scope": "audit the unchanged Human Editor reading text together with the two approved Reader Notes and binding Col.1.28 English-compression override; no wording mutation; on zero-block 3-of-3 semantic pass record unit and Colossians chapter 1 accepted",
@@ -117,18 +117,19 @@
       "provider_attempts_used": 0,
       "provider_attempts_remaining": 8,
       "checkpoints_to_restore": 0,
-      "dispatch_confirmed": false,
+      "dispatch_confirmed": true,
       "retry_allowed": false,
       "launch": {
         "mode": "manifest_authorized_one_shot_push",
         "nonce": "HE-COL-01-024-029-EXACT-AUDIT-20260812-02",
-        "status": "armed",
+        "status": "consumed",
         "armed_by": "human_editor",
         "authorization_id": "HE-COL-01-024-029-CORRECTED-PACKAGE-AUDIT-20260812",
         "expected_manifest_revision": 14,
-        "consumed_run_id": null,
-        "consumed_nonce": null
-      }
+        "consumed_run_id": "31570445398",
+        "consumed_nonce": "HE-COL-01-024-029-EXACT-AUDIT-20260812-02"
+      },
+      "remote_run_id": "31570445398"
     }
   },
   "editorial_decisions": {
@@ -139,7 +140,10 @@
     "sealed_by": "human_editor",
     "sealed_date": "2026-08-12",
     "librarian_backlog_logged": true,
-    "reader_notes_attached": ["COL-01-024-RN-01", "COL-01-027-RN-01"],
+    "reader_notes_attached": [
+      "COL-01-024-RN-01",
+      "COL-01-027-RN-01"
+    ],
     "col_1_28_executive_override": "binding: compress first two every-person repetitions into a shared English object; surface-repetition-only objections are overruled",
     "smoothing_decision": "Human Editor accepted structural repairs with explicit overrides in Col.1.24 and Col.1.28.",
     "acceptance_status": "pending_corrected_package_exact_audit"
