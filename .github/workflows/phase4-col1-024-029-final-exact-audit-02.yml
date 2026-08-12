@@ -56,12 +56,13 @@ jobs:
             .jobs[$task].launch.nonce==$nonce and .jobs[$task].launch.status=="armed" and .jobs[$task].launch.expected_manifest_revision==$rev and
             .editorial_decisions.sealed_reading_text_sha256=="223a581afcfcfd1c612f0f1aab87dddd0b6ca89a342ea7276c070a7523d5da9c"
           ' config/passages/COL-01-024-029.json
-          jq -e '
+          V24="Right now I am glad to suffer for you. I am taking my turn to physically supply what is missing from Christ's sufferings, on behalf of His body, the church."
+          V28="We preach Christ. With all wisdom, we warn and teach every person, so that we may present every person complete in Christ."
+          jq -e --arg v24 "$V24" --arg v28 "$V28" '
             .candidate_id=="COL-01-024-029-HUMAN-FINAL-V2.2" and (.verse_renderings|length)==6 and (.reader_notes|length)==2 and
             .reader_notes[0].note_id=="COL-01-024-RN-01" and .reader_notes[1].note_id=="COL-01-027-RN-01" and
             (.human_editor_overrides|length)==1 and .human_editor_overrides[0].reference=="Col.1.28" and
-            .verse_renderings[0].text=="Right now I am glad to suffer for you. I am taking my turn to physically supply what is missing from Christ's sufferings, on behalf of His body, the church." and
-            .verse_renderings[4].text=="We preach Christ. With all wisdom, we warn and teach every person, so that we may present every person complete in Christ."
+            .verse_renderings[0].text==$v24 and .verse_renderings[4].text==$v28
           ' "$CANDIDATE_FILE"
           grep -Fq 'surface repetition are overruled' "$DECISION_FILE"
           npm --prefix phase4-harness ci
