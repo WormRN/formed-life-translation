@@ -48,7 +48,7 @@ for(const unit of chapter.units){
   assertCommonBasePromptHash(results);
   for(const x of results){await emit(runDir,`outputs/units/${unit.unit_id}/${x.role}.json`,x);provenance.push(x)}
   let md=`# ${unit.passage} — Blind Reader-First Candidates\n\n**Status:** Human editing required; no candidate is approved.\n\n`;
-  for(const [i,x] of results.entries())md+=`## Candidate ${String.fromCharCode(65+i)}\n\n${x.output.verse_renderings.map(v=>`**${v.reference.replace(/^Phil\.\d+\./,'')}** ${v.text}`).join('\n\n')}\n\n`;
+  for(const [i,x] of results.entries())md+=`## Candidate ${String.fromCharCode(65+i)}\n\n${x.output.verse_renderings.map(v=>`**${v.reference.split('.').at(-1)}** ${v.text}`).join('\n\n')}\n\n`;
   await emit(runDir,`outputs/briefs/${unit.unit_id}.md`,md);
 }
 await emit(runDir,'manifest/chapter-drafting-provenance.json',{run_id:config.run_id,chapter_id:chapter.chapter_id,sealed_unit:chapter.sealed_unit,common_prompt_sha256:assertCommonBasePromptHash(provenance),common_prompt_verified:new Set(provenance.map(x=>x.base_prompt_sha256)).size===1,passage_sense_gate:{version:'2.2',status:'passed',brief_status:passageSenseBrief.status,editor_benchmark_absent:true},provider_calls:provenance.map(x=>x.provider_provenance),attempt_accounting:attemptAccountingNotice,validated_worker_checkpoints:'checkpoints/blind_reader_first_unit_draft/',visibility:'Each worker saw one Greek unit, project rules, and scoped decisions. Any sealed human wording, benchmarks, and comparison translations were absent.',status:'engine_2_2_passage_sense_drafts_ready_for_human_editing'});
