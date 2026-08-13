@@ -1,0 +1,76 @@
+{
+  "chapter_id": "COL-02",
+  "book": "Colossians",
+  "chapter": 2,
+  "source_edition": "SBLGNT",
+  "tone": "pastoral, urgent, Christ-centered, protective, and confident",
+  "target_reader": "religion-naive adults and older adolescents near grade 6",
+  "translation_identity": "firmly dynamic-equivalence, NLT-like in readability but independent",
+  "test_purpose": "Human Editor-approved source-side packet for Colossians 2:1-5 with post-draft lexical precedents for smoothing and exact audit",
+  "sealed_context": {
+    "prior_flt_wording_present": false,
+    "prior_candidates_present": false,
+    "comparison_translations_present": false,
+    "conversational_drafts_present": false,
+    "editor_benchmark_present": false,
+    "instruction": "Use only the Greek, the source-side sense brief, and the Human Editor lexical locks. Do not use comparison translations."
+  },
+  "governing_rules": [
+    "Preserve the Human Editor lexical locks in matrix_alerts.",
+    "Use struggle-language for the Col.1.29-2.1 agōnizomai/agōn bridge.",
+    "Use hidden for the Col.1.26-2.3 apokryptō/apokryphos link.",
+    "Use in person for sarx in the Col.2.1/2.5 embodied-presence bracket.",
+    "Use bound together for symbibazō in Col.2.2.",
+    "Use secret plan for mystērion in the approved Colossians sense.",
+    "In Col.2.2 Christ identifies God's secret plan.",
+    "In Col.2.3 hidden must not imply elite-only access.",
+    "In Col.2.4 the deception sounds convincing.",
+    "In Col.2.5 preserve absence in person versus presence in spirit."
+  ],
+  "matrix_alerts": [
+    {"lemma":"ἀγών","status":"approved","approved_rendering":"struggle / struggling","approved_scope":"Col.2.1 linked to Col.1.29 ἀγωνίζομαι -> struggle"},
+    {"lemma":"μυστήριον","status":"approved","approved_rendering":"secret plan","approved_scope":"Colossians hidden-now-revealed sense"},
+    {"lemma":"ἀπόκρυφος","status":"approved","approved_rendering":"hidden","approved_scope":"Col.2.3 linked to Col.1.26"},
+    {"lemma":"σάρξ","status":"approved","approved_rendering":"in person","approved_scope":"Col.2.1 and Col.2.5"},
+    {"lemma":"συμβιβάζω","status":"approved","approved_rendering":"bind together / bound together","approved_scope":"Col.2.2"}
+  ],
+  "units": [{
+    "unit_id": "COL-02-001-005",
+    "passage": "Colossians 2:1-5",
+    "matrix_alerts": [
+      {"lemma":"ἀγών","status":"approved","approved_rendering":"struggle / struggling","approved_scope":"Col.2.1 linked to Col.1.29 ἀγωνίζομαι -> struggle"},
+      {"lemma":"μυστήριον","status":"approved","approved_rendering":"secret plan","approved_scope":"Colossians hidden-now-revealed sense"},
+      {"lemma":"ἀπόκρυφος","status":"approved","approved_rendering":"hidden","approved_scope":"Col.2.3 linked to Col.1.26"},
+      {"lemma":"σάρξ","status":"approved","approved_rendering":"in person","approved_scope":"Col.2.1 and Col.2.5"},
+      {"lemma":"συμβιβάζω","status":"approved","approved_rendering":"bind together / bound together","approved_scope":"Col.2.2"}
+    ],
+    "verses": [
+      {"reference":"Col.2.1","greek":"Θέλω γὰρ ὑμᾶς εἰδέναι ἡλίκον ἀγῶνα ἔχω ὑπὲρ ὑμῶν καὶ τῶν ἐν Λαοδικείᾳ καὶ ὅσοι οὐχ ἑόρακαν τὸ πρόσωπόν μου ἐν σαρκί,"},
+      {"reference":"Col.2.2","greek":"ἵνα παρακληθῶσιν αἱ καρδίαι αὐτῶν συμβιβασθέντες ἐν ἀγάπῃ καὶ εἰς πᾶν πλοῦτος τῆς πληροφορίας τῆς συνέσεως, εἰς ἐπίγνωσιν τοῦ μυστηρίου τοῦ θεοῦ, Χριστοῦ,"},
+      {"reference":"Col.2.3","greek":"ἐν ᾧ εἰσιν πάντες οἱ θησαυροὶ τῆς σοφίας καὶ γνώσεως ἀπόκρυφοι."},
+      {"reference":"Col.2.4","greek":"Τοῦτο λέγω, ἵνα μηδεὶς ὑμᾶς παραλογίζηται ἐν πιθανολογίᾳ."},
+      {"reference":"Col.2.5","greek":"εἰ γὰρ καὶ τῇ σαρκὶ ἄπειμι, ἀλλὰ τῷ πνεύματι σὺν ὑμῖν εἰμι, χαίρων καὶ βλέπων ὑμῶν τὴν τάξιν καὶ τὸ στερέωμα τῆς εἰς Χριστὸν πίστεως ὑμῶν."}
+    ]
+  }],
+  "passage_sense_resolution": {
+    "gate_version": "2.2",
+    "status": "complete_for_blind_drafting",
+    "visibility_attestation": {"source_side_only":true,"prior_flt_wording_absent":true,"prior_candidates_absent":true,"editor_benchmark_absent":true,"comparison_translations_absent":true},
+    "passage_argument": [
+      "Paul struggles for these believers so they may be strengthened, united in love, and know Christ with confident understanding.",
+      "Because all true wisdom and knowledge are found in Christ, Paul warns against persuasive deception and rejoices in their stable trust."
+    ],
+    "proposition_map": [
+      {"references":["Col.2.1"],"proposition":"Paul struggles intensely for the readers and others who have not met him in person."},
+      {"references":["Col.2.2"],"proposition":"He wants their hearts strengthened and bound together in love as they gain confident understanding and know God's secret plan, Christ."},
+      {"references":["Col.2.3"],"proposition":"Every treasure of wisdom and knowledge lies hidden in Christ."},
+      {"references":["Col.2.4"],"proposition":"Paul warns them against being persuaded into falsehood by convincing arguments."},
+      {"references":["Col.2.5"],"proposition":"Though absent in person, Paul is with them in spirit and rejoices in their order and firm trust in Christ."}
+    ],
+    "expressions": [
+      {"sense_id":"COL2-LEXICAL-LOCKS","references":["Col.2.1","Col.2.2","Col.2.3","Col.2.5"],"source_expression":"ἀγών / συμβιβάζω / ἀπόκρυφος / σάρξ","status":"resolved","contextual_function":"preserves the Human Editor-approved lexical and discourse links","primary_sense":"struggle; bound together; hidden; in person in their approved local scopes","viable_alternatives":[],"discourse_evidence":"The locks preserve explicit local discourse links and contextual senses in Colossians 1:29-2:5.","reading_text_guidance":"Apply the unit-scoped lexical locks without exporting them globally.","literal_note_guidance":"No reader note is required solely for these locks.","choice_risks":"Do not generalize the local sarx or symbibazō senses beyond this context.","human_decision_required":false,"reader_note_required":false,"audit_text_and_note_together":false},
+      {"sense_id":"COL2-MYSTERION","references":["Col.2.2"],"source_expression":"τοῦ μυστηρίου τοῦ θεοῦ, Χριστοῦ","status":"resolved","contextual_function":"identifies God's secret plan with Christ","primary_sense":"God's secret plan, Christ Himself","viable_alternatives":[],"discourse_evidence":"The SBLGNT appositional reading is followed by the claim that all treasures are in Christ.","reading_text_guidance":"Use secret plan and identify Christ clearly.","literal_note_guidance":"Transparency note should identify the SBLGNT basis and expanded variants.","choice_risks":"Do not make Christ one item inside a larger secret system.","human_decision_required":false,"reader_note_required":false,"audit_text_and_note_together":false},
+      {"sense_id":"COL2-TAXIS-STEREOMA","references":["Col.2.5"],"source_expression":"τὴν τάξιν καὶ τὸ στερέωμα","status":"resolved","contextual_function":"praises ordered community life and firmness of trust","primary_sense":"order or discipline and stable firmness","viable_alternatives":[],"discourse_evidence":"The two terms describe complementary aspects of the community's ordered and stable condition.","reading_text_guidance":"Disciplined and firmly are acceptable dynamic renderings.","literal_note_guidance":"A Study/Transparency note may mention possible military imagery without claiming exclusive military meanings.","choice_risks":"Do not overdevelop military imagery in the reading text.","human_decision_required":false,"reader_note_required":false,"audit_text_and_note_together":false}
+    ]
+  }
+}

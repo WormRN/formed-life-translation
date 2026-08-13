@@ -1,156 +1,48 @@
 {
   "schema_version": "1.0.0",
-  "manifest_revision": 9,
+  "manifest_revision": 10,
   "last_updated": "2026-08-13",
-  "unit": {
-    "unit_id": "COL-02-001-005",
-    "book": "Colossians",
-    "passage": "Colossians 2:1-5",
-    "source_edition": "SBLGNT",
-    "engine_version": "2.2"
-  },
-  "authority": {
-    "state_source": "this_file_on_default_branch",
-    "human_editor": "David L. Davis",
-    "chat_history_authoritative": false,
-    "historical_preflight_authorization_reusable": false,
-    "conflict_policy": "stop_and_report"
-  },
+  "unit": {"unit_id":"COL-02-001-005","book":"Colossians","passage":"Colossians 2:1-5","source_edition":"SBLGNT","engine_version":"2.2"},
+  "authority": {"state_source":"this_file_on_default_branch","human_editor":"David L. Davis","chat_history_authoritative":false,"historical_preflight_authorization_reusable":false,"conflict_policy":"stop_and_report"},
   "artifacts": {
-    "source_packet": "docs/architecture/phase-4/COL-02-001-005_blind-source-v2.2.json",
-    "recovered_candidate_bundle": "docs/architecture/phase-4/COL-02-001-005_blind-candidates-recovered-v2.2.json",
-    "draft_workflow": ".github/workflows/phase4-sense-drafts.yml",
-    "contextual_lexical_matrix": "docs/current/FLT_contextual_lexical_matrix_v2.0.md",
-    "state_machine_spec": "docs/architecture/phase-4/passage-manifest-state-machine-v1.md",
-    "circuit_breaker_spec": "docs/architecture/phase-4/FLT_Autonomous_Circuit_Breaker_v1.md"
+    "source_packet":"docs/architecture/phase-4/COL-02-001-005_smoothing-source-v2.2_blind-source-v2.2.json",
+    "recovered_candidate_bundle":"docs/architecture/phase-4/COL-02-001-005_blind-candidates-recovered-v2.2.json",
+    "human_editor_synthesis":"docs/architecture/phase-4/COL-02-001-005_human-editor-synthesis-v2.2.json",
+    "human_editor_synthesis_seal":"docs/architecture/phase-4/COL-02-001-005_human-editor-synthesis-seal-v2.2.json",
+    "contextual_lexical_matrix":"docs/current/FLT_contextual_lexical_matrix_v2.0.md",
+    "contextual_lexical_matrix_override":"docs/current/FLT_contextual_lexical_matrix_colossians_overrides_v2.0.md",
+    "draft_workflow":".github/workflows/phase4-sense-drafts.yml",
+    "smoothing_workflow":".github/workflows/phase4-human-smoothing.yml",
+    "exact_audit_workflow":".github/workflows/phase4-exact-audit.yml",
+    "state_machine_spec":"docs/architecture/phase-4/passage-manifest-state-machine-v1.md",
+    "circuit_breaker_spec":"docs/architecture/phase-4/FLT_Autonomous_Circuit_Breaker_v1.md"
   },
-  "state": {
-    "status": "awaiting_human_editor",
-    "phase": "blind_draft_complete_after_deterministic_no_provider_recovery",
-    "active_job_id": null,
-    "active_run_id": "31674368604",
-    "translation_allowed": true,
-    "candidate_generation_allowed": false,
-    "provider_dispatch_allowed": false,
-    "github_workflow_dispatch_allowed": false,
-    "translation_artifact_mutation_allowed": false,
-    "next_permitted_action": "present recovered untouched A/B/C candidate renderings and receive Human Editor selection or synthesis"
-  },
-  "allowed_actions": [
-    "flt status COL-02-001-005",
-    "retrieve recovered blind-candidate bundle",
-    "Human Editor candidate selection or synthesis",
-    "read_only_repository_inspection"
-  ],
-  "forbidden_actions": [
-    "use comparison translations in blind drafting",
-    "expose accepted Colossians wording to blind workers",
-    "reuse a consumed launch nonce",
-    "rerun successful blind workers",
-    "make another provider call for this blind-draft batch without a distinct Human Editor authorization",
-    "modify or reopen terminal Colossians chapter 1 units",
-    "modify or reopen Philippians v0.9 RC1"
-  ],
+  "state": {"status":"ready","phase":"human_editor_synthesis_sealed_smoothing_authorized","active_job_id":null,"active_run_id":"31674368604","translation_allowed":true,"candidate_generation_allowed":false,"provider_dispatch_allowed":true,"github_workflow_dispatch_allowed":true,"translation_artifact_mutation_allowed":false,"next_permitted_action":"dispatch COL-02-001-005-SMOOTH-01 through phase4-human-smoothing.yml using the exact Human Editor synthesis"},
+  "allowed_actions":["flt status COL-02-001-005","dispatch COL-02-001-005-SMOOTH-01","read_only_repository_inspection"],
+  "forbidden_actions":["rerun successful blind workers","change the sealed Human Editor synthesis during smoothing","use comparison translations","reuse a consumed nonce","modify Philippians v0.9 RC1"],
   "jobs": {
-    "COL-02-001-005-BLIND-DRAFT-01": {
-      "idempotency_key": "flt:2.2:COL-02-001-005:blind-draft:01",
-      "job_type": "blind_candidate_batch",
-      "status": "blocked_zero_provider_workflow_setup_failure",
-      "authorization_id": "HE-COL-02-001-005-BLIND-DRAFT-20260813",
-      "authorized_by": "human_editor",
-      "dispatch_allowed": false,
-      "workflow": ".github/workflows/phase4-sense-drafts.yml",
-      "provider_attempts_used": 0,
-      "provider_attempts_remaining": 8,
-      "retry_allowed": false,
-      "halt_reason": "parameterized run-id helper rejected the unit-specific run id before any provider task began",
-      "launch": {
-        "mode": "automatic_manifest_push_dispatch",
-        "nonce": "HE-COL-02-001-005-SENSE-DRAFT-20260813-01",
-        "status": "consumed",
-        "expected_manifest_revision": 3,
-        "consumed_run_id": "31674227604",
-        "consumed_nonce": "HE-COL-02-001-005-SENSE-DRAFT-20260813-01"
-      },
-      "remote_run_id": "31674227604"
-    },
-    "COL-02-001-005-BLIND-DRAFT-02": {
-      "idempotency_key": "flt:2.2:COL-02-001-005:blind-draft:02",
-      "job_type": "blind_candidate_batch",
-      "status": "awaiting_human_editor_recovered",
-      "authorization_id": "HE-COL-02-001-005-AUTO-RECOVERY-20260813",
-      "authorized_by": "human_editor",
-      "dispatch_allowed": false,
-      "workflow": ".github/workflows/phase4-sense-drafts.yml",
-      "max_attempts_per_worker": 2,
-      "task_max_attempts": 8,
-      "provider_attempts_used": 6,
-      "provider_attempts_remaining": 2,
-      "checkpoints_to_restore": 0,
-      "dispatch_confirmed": true,
-      "retry_allowed": false,
-      "recovery_artifact": "docs/architecture/phase-4/COL-02-001-005_blind-candidates-recovered-v2.2.json",
-      "recovery_basis": "Candidate A attempt 2 was a complete valid reading response rejected solely by an over-strict resolved-sense apparatus validator; validator repaired in commit 145571382bdcb3311568dd181937e79874669906 and A promoted unchanged without a new provider call. Candidates B and C are their accepted attempt-2 checkpoints.",
-      "source_artifact_id": 9170976374,
-      "source_artifact_sha256": "9de1bb011db0b81aa16d0bf8b72b4746d21335cf0188520c6be924b18b48b4cb",
-      "candidate_output_sha256": {
-        "A": "822398ccb9332b17702c50ca8d2819c2d98b4691a88ca85b43cd5d011b947f32",
-        "B": "a4d923e00c4b2fd9f4009f6512fcd15673f283045d447b25ddc2c3f48c76acc8",
-        "C": "14cbae36f1cf35647377d9fe8f48a7b8798ea8a304bb726a9c41f792db578cda"
-      },
-      "launch": {
-        "mode": "automatic_manifest_push_dispatch",
-        "nonce": "HE-COL-02-001-005-SENSE-DRAFT-20260813-02",
-        "status": "consumed",
-        "expected_manifest_revision": 6,
-        "consumed_run_id": "31674368604",
-        "consumed_nonce": "HE-COL-02-001-005-SENSE-DRAFT-20260813-02"
-      },
-      "remote_run_id": "31674368604"
+    "COL-02-001-005-BLIND-DRAFT-01":{"status":"blocked_zero_provider_workflow_setup_failure","provider_attempts_used":0,"retry_allowed":false,"remote_run_id":"31674227604"},
+    "COL-02-001-005-BLIND-DRAFT-02":{"status":"completed_recovered_for_human_editor","provider_attempts_used":6,"provider_attempts_remaining":2,"retry_allowed":false,"remote_run_id":"31674368604","source_artifact_id":9170976374},
+    "COL-02-001-005-SMOOTH-01": {
+      "idempotency_key":"flt:2.2:COL-02-001-005:human-smoothing:01",
+      "job_type":"listener_only_and_source_aware_smoothing",
+      "status":"authorized_ready",
+      "authorization_id":"HE-COL-02-001-005-SMOOTH-20260813",
+      "authorized_by":"human_editor",
+      "authorization_scope":"Run listener-only diagnosis and source-aware smoothing against the exact Human Editor synthesis without modifying it; preserve Human Editor lexical overrides and notes as governing package metadata.",
+      "dispatch_allowed":true,
+      "workflow":".github/workflows/phase4-human-smoothing.yml",
+      "max_attempts_per_worker":2,
+      "task_max_attempts":8,
+      "provider_attempts_used":0,
+      "provider_attempts_remaining":8,
+      "checkpoints_to_restore":0,
+      "dispatch_confirmed":false,
+      "retry_allowed":false,
+      "launch":{"mode":"automatic_manifest_push_dispatch","nonce":"HE-COL-02-001-005-SMOOTH-20260813-01","status":"armed","armed_by":"human_editor","authorization_id":"HE-COL-02-001-005-SMOOTH-20260813","expected_manifest_revision":10,"consumed_run_id":null,"consumed_nonce":null}
     }
   },
-  "source_gate": {
-    "status": "complete_for_blind_drafting",
-    "gate_version": "2.2",
-    "source_side_only": true,
-    "prior_flt_wording_absent": true,
-    "prior_candidates_absent": true,
-    "editor_benchmark_absent": true,
-    "comparison_translations_absent": true,
-    "human_editor_approved": true,
-    "human_editor_approval_date": "2026-08-13",
-    "locked_matrix_alerts_required": [
-      "μυστήριον -> secret plan within the approved Colossians hidden-now-revealed sense",
-      "ἀγών -> contest in direct continuity with Col.1.29 ἀγωνίζομαι -> compete"
-    ]
-  },
-  "editorial_decisions": {
-    "candidate_status": "three_blind_candidates_available",
-    "human_editor_selection": null,
-    "acceptance_status": "not_started"
-  },
-  "recovery_history": [
-    {
-      "run_id": "31674227604",
-      "job_id": "COL-02-001-005-BLIND-DRAFT-01",
-      "provider_attempts_used": 0,
-      "reason": "unit-specific run id rejected by stale shared helper regex"
-    },
-    {
-      "run_id": "31674368604",
-      "job_id": "COL-02-001-005-BLIND-DRAFT-02",
-      "provider_attempts_used": 6,
-      "reason": "candidate A complete second response rejected only by over-strict resolved-sense apparatus validator; B and C accepted",
-      "recovery": "deterministic no-provider promotion of A attempt 2 after validator repair; no additional provider call"
-    }
-  ],
-  "invariants": [
-    "Only the default-branch copy is authoritative.",
-    "The approved Passage-Sense packet is source-side only and contains no prior FLT wording, candidate wording, comparison translations, or editor benchmark wording.",
-    "All three workers received the same constitutional mission and the same unit-scoped matrix_alerts.",
-    "The locked Matrix preflight passed before provider credentials were exposed.",
-    "The Colossians 1 lexical precedents for mystērion -> secret plan and agōnizomai/agōn -> compete/contest governed the blind payload.",
-    "Exactly six provider attempts were consumed in the recovered blind-draft batch; no provider call was made during deterministic recovery.",
-    "The Human Editor alone selects or synthesizes candidate wording."
-  ]
+  "source_gate":{"status":"complete_for_blind_drafting","gate_version":"2.2","human_editor_approved":true,"human_editor_approval_date":"2026-08-13","human_editor_lexical_override_date":"2026-08-13","locked_matrix_alerts_required":["μυστήριον -> secret plan","ἀγωνίζομαι / ἀγών -> struggle / struggling for Col.1.29-2.1","ἀποκρύπτω / ἀπόκρυφος -> hidden for Col.1.26 and 2.3","σάρξ -> in person for Col.2.1 and 2.5","συμβιβάζω -> bind together / bound together for Col.2.2"]},
+  "editorial_decisions":{"candidate_status":"human_editor_synthesis_sealed","human_editor_selection":"exact synthesis recorded 2026-08-13","note_package_status":"two transparency notes attached and required for terminal package audit","matrix_override_status":"Human Editor Colossians override layer is binding over conflicting older base-Matrix entries","acceptance_status":"not_started"},
+  "invariants":["Only the default-branch copy is authoritative.","The Human Editor synthesis is sealed and smoothing may propose but not silently modify wording.","The Colossians Matrix override layer supersedes conflicting older compete/contest language in the base Matrix.","The terminal exact audit must include the exact text, both TN-tagged notes, and the binding Human Editor lexical override.","The Human Editor alone selects or changes wording."]
 }
