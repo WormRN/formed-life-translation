@@ -1,0 +1,108 @@
+name: FLT Engine 2.2 automatic Phase 4 dispatcher
+run-name: "Automatic Phase 4 dispatch from ${{ github.sha }}"
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'config/passages/*.json'
+
+permissions:
+  contents: read
+  actions: write
+
+concurrency:
+  group: flt-phase4-auto-dispatch-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  dispatch_armed_jobs:
+    name: Resolve changed manifests and dispatch exactly armed Phase 4 jobs
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Locate changed passage manifests
+        id: changed
+        shell: bash
+        run: |
+          set -euo pipefail
+          before='${{ github.event.before }}'
+          after='${{ github.sha }}'
+          if [[ "$before" =~ ^0+$ ]]; then
+            git ls-tree -r --name-only "$after" -- 'config/passages/*.json' > /tmp/changed-manifests.txt
+          else
+            git diff --name-only "$before" "$after" -- 'config/passages/*.json' > /tmp/changed-manifests.txt
+          fi
+          cat /tmp/changed-manifests.txt
+
+      - name: Dispatch each exactly armed authorized job
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          while IFS= read -r manifest; do
+            test -n "$manifest" || continue
+            test -f "$manifest" || continue
+
+            # Workflow-owned running/completion/halt commits also touch manifests.
+            # They must no-op here because no launch remains both armed and authorized_ready.
+            count="$(jq '[.jobs | to_entries[] | select(
+              .value.status=="authorized_ready" and
+              .value.dispatch_allowed==true and
+              .value.launch.status=="armed" and
+              .value.launch.consumed_run_id==null
+            )] | length' "$manifest")"
+
+            if [ "$count" = "0" ]; then
+              echo "No armed job in $manifest; safe no-op."
+              continue
+            fi
+            if [ "$count" != "1" ]; then
+              echo "Expected exactly one armed job in $manifest; found $count" >&2
+              exit 2
+            fi
+
+            unit="$(jq -er '.unit.unit_id' "$manifest")"
+            state="$(jq -er '.state.status' "$manifest")"
+            provider_ok="$(jq -r '.state.provider_dispatch_allowed' "$manifest")"
+            workflow_ok="$(jq -r '.state.github_workflow_dispatch_allowed' "$manifest")"
+            test "$state" = "ready"
+            test "$provider_ok" = "true"
+            test "$workflow_ok" = "true"
+
+            task="$(jq -er '.jobs | to_entries[] | select(.value.status=="authorized_ready" and .value.dispatch_allowed==true and .value.launch.status=="armed" and .value.launch.consumed_run_id==null) | .key' "$manifest")"
+            authorization="$(jq -er --arg task "$task" '.jobs[$task].authorization_id' "$manifest")"
+            revision="$(jq -er '.manifest_revision' "$manifest")"
+            expected="$(jq -er --arg task "$task" '.jobs[$task].launch.expected_manifest_revision' "$manifest")"
+            test "$revision" = "$expected"
+            source_path="$(jq -er '.artifacts.source_packet' "$manifest")"
+            workflow_path="$(jq -er --arg task "$task" '.jobs[$task].workflow' "$manifest")"
+            workflow="${workflow_path##*/}"
+
+            case "$workflow" in
+              phase4-sense-drafts.yml|phase4-human-smoothing.yml|phase4-exact-audit.yml) ;;
+              *) echo "Refusing unauthorized Phase 4 workflow: $workflow" >&2; exit 2 ;;
+            esac
+
+            payload="$(jq -n \
+              --arg ref main \
+              --arg unit "$unit" \
+              --arg task "$task" \
+              --arg auth "$authorization" \
+              --arg manifest "$manifest" \
+              --arg source "$source_path" \
+              --argjson rev "$revision" \
+              '{ref:$ref,inputs:{unit_id:$unit,task_id:$task,authorization_id:$auth,expected_manifest_revision:$rev,passage_manifest_path:$manifest,blind_source_path:$source}}')"
+
+            echo "Dispatching $workflow for $unit task $task at manifest revision $revision"
+            printf '%s\n' "$payload" | gh api \
+              --method POST \
+              "repos/${GITHUB_REPOSITORY}/actions/workflows/${workflow}/dispatches" \
+              --input -
+          done < /tmp/changed-manifests.txt
