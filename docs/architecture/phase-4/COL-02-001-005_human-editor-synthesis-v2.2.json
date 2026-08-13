@@ -1,0 +1,29 @@
+{
+  "schema_version":"1.0.0",
+  "candidate_id":"COL-02-001-005-HUMAN-SYNTHESIS-V2.2",
+  "unit_id":"COL-02-001-005",
+  "passage":"Colossians 2:1-5",
+  "engine_version":"2.2",
+  "status":"human_editor_exact_selection_pending_oral_smoothing",
+  "human_editor":"David L. Davis",
+  "human_editor_date":"2026-08-13",
+  "source_draft_run_id":"31674368604",
+  "human_editor_selection":{"exact_wording_preserved":true},
+  "human_editor_overrides":[
+    {"reference":"Col.2.1","issue":"prior compete/contest lexical lock","decision":"Supersede the prior compete/contest lock with struggle/struggling, retroactive to Col.1.29.","status":"binding_human_editor_override","rationale":"The Human Editor prefers natural struggle-language while preserving the cognate lexical link across Col.1.29-2.1."}
+  ],
+  "verse_renderings":[
+    {"reference":"Col.2.1","text":"I want you to know how hard I am struggling for you, the believers in Laodicea, and for everyone who has never met me in person."},
+    {"reference":"Col.2.2","text":"My goal is that their hearts will be stronger and stronger, and bound together in love. Then they will possess the rich confidence that comes from full understanding as they come to know God's secret plan, which is Christ Himself."},
+    {"reference":"Col.2.3","text":"In Him every treasure of wisdom and knowledge lies hidden."},
+    {"reference":"Col.2.4","text":"I am telling you this so that no one can talk you into believing something false, no matter how convincing the argument sounds."},
+    {"reference":"Col.2.5","text":"Even though I am not there in person, I am with you in spirit, and I am glad to see how disciplined your lives are and how firmly you trust in Christ."}
+  ],
+  "reader_notes":[
+    {"note_id":"COL-02-002-TN-01","reference":"Col.2.2","anchor":"God's secret plan, which is Christ Himself","status":"human_editor_authorized_transparency_note","text":"The SBLGNT text reads ‘God’s secret plan, Christ,’ identifying Christ Himself as the secret plan. Some manuscripts expand the wording here, but FLT follows the shorter SBLGNT text."},
+    {"note_id":"COL-02-005-TN-01","reference":"Col.2.5","anchor":"disciplined ... firmly","status":"human_editor_authorized_transparency_note","text":"The Greek words translated ‘disciplined’ and ‘firmly’ can suggest an ordered, solid formation. Taxis can describe order or arranged ranks, while stereōma means firmness or stability. The imagery can sound military, but neither word is limited to military settings."}
+  ],
+  "note_routing":{"COL-02-002-TN-01":"tn","COL-02-005-TN-01":"tn"},
+  "matrix_override_file":"docs/current/FLT_contextual_lexical_matrix_colossians_overrides_v2.0.md",
+  "copyright_independence":{"status":"DEFERRED_BATCH","hard_check_required_before_publication":true}
+}
