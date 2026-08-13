@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "engine_version": "2.2",
+  "unit_id": "COL-02-001-005",
+  "passage": "Colossians 2:1-5",
+  "source_run_id": 31674368604,
+  "source_artifact_id": 9170976374,
+  "source_artifact_name": "FLT-COL-02-001-005-20260813-2-blind-candidates",
+  "source_artifact_sha256": "9de1bb011db0b81aa16d0bf8b72b4746d21335cf0188520c6be924b18b48b4cb",
+  "provider_attempts_used": 6,
+  "provider_attempts_remaining": 2,
+  "recovery_type": "deterministic_no_provider_recovery",
+  "recovery_reason": "Candidate A's complete second provider response was rejected solely because the prior apparatus validator incorrectly required sense_decisions to equal the empty contested-sense set. The validator was repaired in commit 145571382bdcb3311568dd181937e79874669906 to allow explanatory decisions for known resolved expressions while still requiring every genuinely contested expression and forbidding unknown sense ids. Candidate A's reading text is promoted unchanged from its already-paid second response; no additional provider call was made.",
+  "blindness_attestation": {
+    "common_mission": true,
+    "prior_flt_wording_hidden": true,
+    "comparison_translations_hidden": true,
+    "editor_benchmark_hidden": true,
+    "unit_matrix_alerts_enforced_before_provider_credentials": true
+  },
+  "candidates": {
+    "A": {
+      "provenance": "recovered unchanged from candidate_a provider attempt 2",
+      "output_sha256": "822398ccb9332b17702c50ca8d2819c2d98b4691a88ca85b43cd5d011b947f32",
+      "verse_renderings": [
+        {"reference":"Col.2.1","text":"I want you to know how hard I am contesting on your behalf—for you, for the believers in Laodicea, and for everyone who has never met me face to face."},
+        {"reference":"Col.2.2","text":"My goal is that their hearts will be strengthened and knit together in love, so that they reach the full wealth of confident understanding and come to know God's secret plan—Christ himself."},
+        {"reference":"Col.2.3","text":"In Christ are hidden all the treasures of wisdom and knowledge."},
+        {"reference":"Col.2.4","text":"I tell you this so that no one will deceive you with arguments that merely sound persuasive."},
+        {"reference":"Col.2.5","text":"For even though I am not there with you in body, I am with you in spirit, rejoicing to see your good order and the firmness of your trust in Christ."}
+      ]
+    },
+    "B": {
+      "provenance": "accepted candidate_b checkpoint from provider attempt 2",
+      "output_sha256": "a4d923e00c4b2fd9f4009f6512fcd15673f283045d447b25ddc2c3f48c76acc8",
+      "verse_renderings": [
+        {"reference":"Col.2.1","text":"I want you to know how intensely I am engaged in this contest for you, for the believers in Laodicea, and for all the others who have never met me personally."},
+        {"reference":"Col.2.2","text":"My purpose is for them to grow strong at heart and be united in love. Then they will possess the rich confidence that comes from full understanding, as they come to know God's secret plan—Christ Himself."},
+        {"reference":"Col.2.3","text":"All the treasures of wisdom and knowledge are stored in Him."},
+        {"reference":"Col.2.4","text":"I am telling you this so that no one will mislead you with arguments that sound convincing."},
+        {"reference":"Col.2.5","text":"Although I am physically away from you, I am with you in spirit. I am glad to see how well ordered your life together is and how firmly you trust in Christ."}
+      ]
+    },
+    "C": {
+      "provenance": "accepted candidate_c checkpoint from provider attempt 2",
+      "output_sha256": "14cbae36f1cf35647377d9fe8f48a7b8798ea8a304bb726a9c41f792db578cda",
+      "verse_renderings": [
+        {"reference":"Col.2.1","text":"I want you to know how great a contest I am engaged in for you, for the believers in Laodicea, and for all who have never met me personally."},
+        {"reference":"Col.2.2","text":"My goal is that their inner lives will be strengthened and that they will be joined together in love. I want them to have the rich confidence of complete understanding, so they can truly know God's secret plan, which is Christ himself."},
+        {"reference":"Col.2.3","text":"In him, all the treasures of wisdom and knowledge are stored safely."},
+        {"reference":"Col.2.4","text":"I am telling you this so that no one will deceive you with clever, persuasive-sounding arguments."},
+        {"reference":"Col.2.5","text":"For even though I am physically absent, I am right there with you in spirit. I rejoice as I observe your good order and the solid firmness of your trust in Christ."}
+      ]
+    }
+  },
+  "human_editor_status": "awaiting_human_editor_selection_or_synthesis"
+}
