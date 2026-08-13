@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "manifest_revision": 2,
+  "manifest_revision": 3,
   "last_updated": "2026-08-13",
   "unit": {
     "unit_id": "COL-02-001-005",
@@ -72,7 +72,7 @@
         "status": "armed",
         "armed_by": "human_editor",
         "authorization_id": "HE-COL-02-001-005-BLIND-DRAFT-20260813",
-        "expected_manifest_revision": 2,
+        "expected_manifest_revision": 3,
         "consumed_run_id": null,
         "consumed_nonce": null
       }
