@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "manifest_revision": 3,
+  "manifest_revision": 4,
   "last_updated": "2026-08-13",
   "unit": {
     "unit_id": "COL-02-001-005",
@@ -24,20 +24,20 @@
     "circuit_breaker_spec": "docs/architecture/phase-4/FLT_Autonomous_Circuit_Breaker_v1.md"
   },
   "state": {
-    "status": "ready",
-    "phase": "passage_sense_complete_blind_draft_authorized_auto_dispatch",
-    "active_job_id": null,
-    "active_run_id": null,
+    "status": "running",
+    "phase": "blind_draft_running",
+    "active_job_id": "COL-02-001-005-BLIND-DRAFT-01",
+    "active_run_id": "31674227604",
     "translation_allowed": true,
     "candidate_generation_allowed": true,
     "provider_dispatch_allowed": true,
-    "github_workflow_dispatch_allowed": true,
+    "github_workflow_dispatch_allowed": false,
     "translation_artifact_mutation_allowed": false,
-    "next_permitted_action": "automatic dispatcher must dispatch COL-02-001-005-BLIND-DRAFT-01 through .github/workflows/phase4-sense-drafts.yml from this manifest update"
+    "next_permitted_action": "await verified COL-02-001-005 blind A/B/C completion or exact cancel"
   },
   "allowed_actions": [
     "flt status COL-02-001-005",
-    "automatic dispatch COL-02-001-005-BLIND-DRAFT-01",
+    "flt cancel COL-02-001-005 --job COL-02-001-005-BLIND-DRAFT-01 --expected-revision 4",
     "read_only_repository_inspection"
   ],
   "forbidden_actions": [
@@ -53,7 +53,7 @@
     "COL-02-001-005-BLIND-DRAFT-01": {
       "idempotency_key": "flt:2.2:COL-02-001-005:blind-draft:01",
       "job_type": "blind_candidate_batch",
-      "status": "authorized_ready",
+      "status": "running",
       "authorization_id": "HE-COL-02-001-005-BLIND-DRAFT-20260813",
       "authorized_by": "human_editor",
       "authorization_scope": "Generate exactly three independent common-mission blind A/B/C candidates for Colossians 2:1-5 from the Human Editor-approved Passage-Sense packet under Engine 2.2, with unit-scoped locked Matrix alerts enforced.",
@@ -64,18 +64,19 @@
       "provider_attempts_used": 0,
       "provider_attempts_remaining": 8,
       "checkpoints_to_restore": 0,
-      "dispatch_confirmed": false,
+      "dispatch_confirmed": true,
       "retry_allowed": false,
       "launch": {
         "mode": "automatic_manifest_push_dispatch",
         "nonce": "HE-COL-02-001-005-SENSE-DRAFT-20260813-01",
-        "status": "armed",
+        "status": "consumed",
         "armed_by": "human_editor",
         "authorization_id": "HE-COL-02-001-005-BLIND-DRAFT-20260813",
         "expected_manifest_revision": 3,
-        "consumed_run_id": null,
-        "consumed_nonce": null
-      }
+        "consumed_run_id": "31674227604",
+        "consumed_nonce": "HE-COL-02-001-005-SENSE-DRAFT-20260813-01"
+      },
+      "remote_run_id": "31674227604"
     }
   },
   "source_gate": {
