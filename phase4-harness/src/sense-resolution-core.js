@@ -7,6 +7,44 @@ const exactIds=(actual,expected,label)=>{
   const a=[...actual].sort(),e=[...expected].sort();
   if(JSON.stringify(a)!==JSON.stringify(e)) throw new Error(`Passage-sense gate: ${label} must cover exactly ${e.join(', ')}; received ${a.join(', ')}`);
 };
+const normalizeLemma=value=>String(value||'').normalize('NFC').trim().toLocaleLowerCase('el-GR');
+const splitLemmaList=value=>String(value||'').split(/\s*(?:\/|,|;)\s*/).map(normalizeLemma).filter(Boolean);
+
+export function lockedMatrixLemmas(matrixMarkdown){
+  if(typeof matrixMarkdown!=='string'||!matrixMarkdown.trim()) throw new Error('Locked Matrix preflight: governing Matrix Markdown is required.');
+  const entryHeading=/^#{2,3}\s+([^\n·]+?)\s+·[^\n]*$/gm;
+  const matches=[...matrixMarkdown.matchAll(entryHeading)];
+  const locked=new Set();
+  for(let i=0;i<matches.length;i++){
+    const start=matches[i].index;
+    const end=i+1<matches.length?matches[i+1].index:matrixMarkdown.length;
+    const block=matrixMarkdown.slice(start,end);
+    const isLocked=/\*\*Entry status:\*\*\s*approved\b/i.test(block)||/\*\*Sense status:\*\*\s*approved\b/i.test(block);
+    if(isLocked) for(const lemma of splitLemmaList(matches[i][1])) locked.add(lemma);
+  }
+  return locked;
+}
+
+export function assertLockedMatrixAlerts(chapter,{matrixMarkdown,sourceLemmaIndex}={}){
+  const locked=lockedMatrixLemmas(matrixMarkdown);
+  if(!sourceLemmaIndex||typeof sourceLemmaIndex!=='object') throw new Error('Locked Matrix preflight: parsed SBLGNT lemma index is required.');
+  for(const unit of chapter.units||[]){
+    if(!Array.isArray(unit.matrix_alerts)) throw new Error(`Locked Matrix preflight: unit ${unit.unit_id||'unknown'} matrix_alerts array is required.`);
+    const alerted=new Set(unit.matrix_alerts.flatMap(alert=>splitLemmaList(alert?.lemma)));
+    const present=new Set();
+    for(const verse of unit.verses||[]){
+      const tokens=sourceLemmaIndex[verse.reference];
+      if(!Array.isArray(tokens)) throw new Error(`Locked Matrix preflight: parsed SBLGNT source missing ${verse.reference}.`);
+      for(const token of tokens){
+        const lemma=normalizeLemma(token?.lemma);
+        if(lemma&&locked.has(lemma)) present.add(lemma);
+      }
+    }
+    const missing=[...present].filter(lemma=>!alerted.has(lemma)).sort();
+    if(missing.length) throw new Error(`Locked Matrix preflight: unit ${unit.unit_id||'unknown'} is missing matrix_alerts for locked lemmas: ${missing.join(', ')}.`);
+  }
+  return true;
+}
 
 export function assertPassageSenseResolution(chapter){
   const brief=chapter.passage_sense_resolution;
