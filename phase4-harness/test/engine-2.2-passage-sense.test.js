@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {assertPassageSenseResolution,assertCandidateSenseApparatus,assertCommonBasePromptHash,parseModelJson} from '../src/sense-resolution-core.js';
+import {assertPassageSenseResolution,assertLockedMatrixAlerts,lockedMatrixLemmas,assertCandidateSenseApparatus,assertCommonBasePromptHash,parseModelJson} from '../src/sense-resolution-core.js';
 
 const chapter=()=>({
   units:[{verses:[{reference:'Phil.3.1'},{reference:'Phil.3.2'}]}],
@@ -20,6 +20,29 @@ test('accepts a complete source-side Engine 2.2 brief',()=>assert.doesNotThrow((
 test('blocks drafting without a passage-sense brief',()=>assert.throws(()=>assertPassageSenseResolution({units:[]}),/brief is required/));
 test('blocks leaked editor benchmark visibility',()=>{const x=chapter();x.passage_sense_resolution.visibility_attestation.editor_benchmark_absent=false;assert.throws(()=>assertPassageSenseResolution(x),/editor_benchmark_absent/)});
 test('requires unresolved senses to expose viable alternatives',()=>{const x=chapter();x.passage_sense_resolution.expressions[1].viable_alternatives=[];assert.throws(()=>assertPassageSenseResolution(x),/retain alternatives/)});
+
+test('locked Matrix parser treats approved entries or approved senses as binding',()=>{
+  const matrix=`## μυστήριον · mystērion\n\n**Entry status:** approved\n\n---\n\n## δοῦλος · doulos\n\n**Entry status:** working\n\n### Sense 1 — service\n\n**Sense status:** approved\n\n---\n\n## πλήρωμα · plērōma\n\n**Entry status:** working\n`;
+  assert.deepEqual([...lockedMatrixLemmas(matrix)].sort(),['δοῦλος','μυστήριον']);
+});
+
+test('locked Matrix preflight blocks a unit missing an alert for a locked Greek lemma',()=>{
+  const matrix=`## μυστήριον · mystērion\n\n**Entry status:** approved\n\n---\n\n## πλήρωμα · plērōma\n\n**Entry status:** working\n`;
+  const source={'Col.2.2':[{lemma:'μυστήριον'},{lemma:'πλήρωμα'}]};
+  const valid={units:[{unit_id:'COL-02-001-005',matrix_alerts:[{lemma:'μυστήριον'}],verses:[{reference:'Col.2.2'}]}]};
+  assert.doesNotThrow(()=>assertLockedMatrixAlerts(valid,{matrixMarkdown:matrix,sourceLemmaIndex:source}));
+  const missing={units:[{unit_id:'COL-02-001-005',matrix_alerts:[],verses:[{reference:'Col.2.2'}]}]};
+  assert.throws(()=>assertLockedMatrixAlerts(missing,{matrixMarkdown:matrix,sourceLemmaIndex:source}),/missing matrix_alerts for locked lemmas: μυστήριον/);
+});
+
+test('locked Matrix preflight requires unit-scoped matrix_alerts and canonical parsed source',()=>{
+  const matrix=`## μυστήριον · mystērion\n\n**Entry status:** approved\n`;
+  const noAlerts={units:[{unit_id:'COL-02-001-005',verses:[{reference:'Col.2.2'}]}]};
+  assert.throws(()=>assertLockedMatrixAlerts(noAlerts,{matrixMarkdown:matrix,sourceLemmaIndex:{'Col.2.2':[{lemma:'μυστήριον'}]}}),/matrix_alerts array is required/);
+  const missingSource={units:[{unit_id:'COL-02-001-005',matrix_alerts:[],verses:[{reference:'Col.2.2'}]}]};
+  assert.throws(()=>assertLockedMatrixAlerts(missingSource,{matrixMarkdown:matrix,sourceLemmaIndex:{}}),/parsed SBLGNT source missing Col\.2\.2/);
+});
+
 test('requires complete candidate sense, alternative, and note apparatus',()=>{
   const x=chapter(),brief=assertPassageSenseResolution(x),unit=x.units[0];
   const valid={verse_renderings:[{reference:'Phil.3.1',text:'Now rejoice.'},{reference:'Phil.3.2',text:'Watch out.'}],sense_decisions:[{sense_id:'wordplay'}],alternate_readings:[{sense_id:'wordplay'}],reader_notes:[{sense_id:'wordplay'}]};
