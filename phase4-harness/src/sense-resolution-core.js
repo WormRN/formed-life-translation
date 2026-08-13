@@ -7,6 +7,15 @@ const exactIds=(actual,expected,label)=>{
   const a=[...actual].sort(),e=[...expected].sort();
   if(JSON.stringify(a)!==JSON.stringify(e)) throw new Error(`Passage-sense gate: ${label} must cover exactly ${e.join(', ')}; received ${a.join(', ')}`);
 };
+const requireIdsWithin=(actual,required,allowed,label)=>{
+  const a=[...actual],r=[...required],allow=new Set(allowed);
+  if(new Set(a).size!==a.length) throw new Error(`Passage-sense gate: ${label} contains duplicate sense ids`);
+  const unknown=a.filter(id=>!allow.has(id)).sort();
+  if(unknown.length) throw new Error(`Passage-sense gate: ${label} contains unknown sense ids: ${unknown.join(', ')}`);
+  const present=new Set(a);
+  const missing=r.filter(id=>!present.has(id)).sort();
+  if(missing.length) throw new Error(`Passage-sense gate: ${label} is missing required contested sense ids: ${missing.join(', ')}`);
+};
 const normalizeLemma=value=>String(value||'').normalize('NFC').trim().toLocaleLowerCase('el-GR');
 const splitLemmaList=value=>String(value||'').split(/\s*(?:\/|,|;)\s*/).map(normalizeLemma).filter(Boolean);
 
@@ -99,9 +108,12 @@ export function unitSenseMaterial(brief,unit){
 
 export function assertCandidateSenseApparatus(output,unit,brief){
   const material=unitSenseMaterial(brief,unit);
+  const allIds=material.expressions.map(e=>e.sense_id);
   const altIds=material.expressions.filter(e=>e.status==='alternatives_retained').map(e=>e.sense_id);
   const noteIds=material.expressions.filter(e=>e.reader_note_required===true).map(e=>e.sense_id);
-  exactIds((output.sense_decisions||[]).map(x=>x.sense_id),altIds,'contested sense decisions');
+  // Workers may explain choices for already-resolved expressions. Every genuinely contested
+  // sense must still be represented, and no unknown sense id may enter the apparatus.
+  requireIdsWithin((output.sense_decisions||[]).map(x=>x.sense_id),altIds,allIds,'sense-decision apparatus');
   exactIds((output.alternate_readings||[]).map(x=>x.sense_id),altIds,'alternate-reading apparatus');
   exactIds((output.reader_notes||[]).map(x=>x.sense_id),noteIds,'reader-note apparatus');
   for(const v of output.verse_renderings||[]){
