@@ -6,9 +6,9 @@ import addFormats from 'ajv-formats';
 
 export const COMMON_CANDIDATE_MISSION='Produce one independent FLT candidate under the same constitutional goal as every other candidate: communicate the full meaning, logic, tone, discourse movement, and theological force of the Greek in clear, natural, dignified English that a religion-naive adult or older adolescent near the sixth-grade level can follow on one hearing. Build natural English sentences and paragraphs rather than preserving Greek clause architecture. Bring the main assertion forward; split, combine, reorder, or unpack when helpful; avoid stacked clauses, preposition clusters, abstract-noun chains, and translated-sounding prose. Dynamic expression is the default; preserve deliberate rhetoric, meaningful ambiguity, agency, force, and key-term links; avoid unsupported commentary.';
 export const ROLES={
-  readability_worker:COMMON_CANDIDATE_MISSION,
-  greek_fidelity_worker:COMMON_CANDIDATE_MISSION,
-  balanced_worker:COMMON_CANDIDATE_MISSION
+  candidate_a:COMMON_CANDIDATE_MISSION,
+  candidate_b:COMMON_CANDIDATE_MISSION,
+  candidate_c:COMMON_CANDIDATE_MISSION
 };
 export const sha256=v=>createHash('sha256').update(typeof v==='string'?v:JSON.stringify(v)).digest('hex');
 export async function json(file){return JSON.parse(await readFile(file,'utf8'));}
@@ -38,7 +38,8 @@ export async function emit(base,relative,data){const file=path.join(base,relativ
 export async function event(base,event){await mkdir(path.join(base,'manifest'),{recursive:true});await appendFile(path.join(base,'manifest/event_log.jsonl'),JSON.stringify({...event,at:new Date().toISOString()})+'\n');}
 
 function extractJson(text){const fenced=text.match(/```(?:json)?\s*([\s\S]*?)```/i);return JSON.parse(fenced?fenced[1]:text);}
-function prompt(packet){return `You are an FLT drafting worker. Return JSON only, matching this shape: {"proposed_rendering":"...","verse_renderings":[{"reference":"Phil.1.12","text":"..."}],"significant_decisions":[{"reference":"...","decision":"...","rationale":"..."}],"risks":[{"reference":"...","kind":"meaning_loss|added_meaning|too_loose|too_literal|oral_flow|theological|other","detail":"..."}],"human_only_questions":[{"reference":"...","question":"..."}]}. Include exactly Philippians 1:12 through 1:18 in verse_renderings. Never claim final authority.\n\nROLE PACKET:\n${JSON.stringify(packet)}`;}
+export function expectedReferences(sourceData){const refs=(sourceData?.verses||[]).map(v=>v.reference);if(!refs.length||refs.some(x=>!x))throw new Error('Source data must provide an ordered verse reference list.');return refs;}
+function prompt(packet){const refs=expectedReferences(packet.source_data);return `You are an FLT drafting worker. Return JSON only, matching this shape: {"proposed_rendering":"...","verse_renderings":[{"reference":"${refs[0]}","text":"..."}],"significant_decisions":[{"reference":"...","decision":"...","rationale":"..."}],"risks":[{"reference":"...","kind":"meaning_loss|added_meaning|too_loose|too_literal|oral_flow|theological|other","detail":"..."}],"human_only_questions":[{"reference":"...","question":"..."}]}. Include exactly these verse references in order: ${refs.join(', ')}. Never claim final authority.\n\nROLE PACKET:\n${JSON.stringify(packet)}`;}
 export async function requestModel(worker,bodyText,signal){
   const key=process.env[worker.api_key_env]; if(!key) throw Object.assign(new Error(`Missing ${worker.api_key_env}`),{retryable:false});
   let url,headers={'content-type':'application/json'},body,parse;
@@ -53,15 +54,15 @@ export async function runWorker({worker,packet,runDir,maxAttempts,timeoutMs,vali
   const packetHash=sha256(packet); const rawDir=`failures/raw/${worker.role}`;
   for(let attempt=1;attempt<=maxAttempts;attempt++){
     const started=new Date(); const controller=new AbortController(); const timer=setTimeout(()=>controller.abort(),timeoutMs);
-    try{const response=await request(worker,packet,controller.signal);await emit(runDir,`${rawDir}/attempt-${attempt}.txt`,response.text);const output=extractJson(response.text);if(!validate(output))throw Object.assign(new Error(`Schema: ${JSON.stringify(validate.errors)}`),{retryable:true});assertVerseSequence(output);const finished=new Date();const envelope={run_id:packet.run_id,unit_id:packet.unit_id,role:worker.role,attempt,status:'complete',input_packet_sha256:packetHash,output,self_finalization_claim:false,created_at:finished.toISOString(),provider_provenance:{provider:worker.provider,model:worker.model,request_id:response.id,started_at:started.toISOString(),finished_at:finished.toISOString(),latency_ms:finished-started,usage:response.usage},warnings:[],raw_output_path:`${rawDir}/attempt-${attempt}.txt`};await event(runDir,{type:'worker_complete',role:worker.role,attempt,packet_sha256:packetHash});return envelope}
+    try{const response=await request(worker,packet,controller.signal);await emit(runDir,`${rawDir}/attempt-${attempt}.txt`,response.text);const output=extractJson(response.text);if(!validate(output))throw Object.assign(new Error(`Schema: ${JSON.stringify(validate.errors)}`),{retryable:true});assertVerseSequence(output,expectedReferences(packet.source_data));const finished=new Date();const envelope={run_id:packet.run_id,unit_id:packet.unit_id,role:worker.role,attempt,status:'complete',input_packet_sha256:packetHash,output,self_finalization_claim:false,created_at:finished.toISOString(),provider_provenance:{provider:worker.provider,model:worker.model,request_id:response.id,started_at:started.toISOString(),finished_at:finished.toISOString(),latency_ms:finished-started,usage:response.usage},warnings:[],raw_output_path:`${rawDir}/attempt-${attempt}.txt`};await event(runDir,{type:'worker_complete',role:worker.role,attempt,packet_sha256:packetHash});return envelope}
     catch(error){await event(runDir,{type:'worker_failure',role:worker.role,attempt,retryable:error.retryable!==false,error:String(error)});if(error.retryable===false||attempt===maxAttempts)throw error}
     finally{clearTimeout(timer)}
   }
 }
-export function assertVerseSequence(output){const expected=Array.from({length:7},(_,i)=>`Phil.1.${i+12}`);const actual=output.verse_renderings.map(v=>v.reference);if(JSON.stringify(actual)!==JSON.stringify(expected))throw Object.assign(new Error(`Verse sequence must be exactly ${expected.join(', ')}`),{retryable:true});}
-export function decisionBrief(outputs){
-  let md=`# FLT Phase 4 — Human Decision Brief\n\n**Unit:** Philippians 1:12–18  \n**Status:** Human choice required; no wording is finalized.\n\n`;
-  for(const o of outputs){const rendering=o.output.verse_renderings.map(v=>`**${v.reference.replace('Phil.1.','')}** ${v.text}`).join('\n\n');md+=`## ${o.role.replaceAll('_',' ')}\n\n${rendering}\n\n`;}
+export function assertVerseSequence(output,expected){if(!Array.isArray(expected)||!expected.length)throw new Error('Expected verse references are required.');const actual=output.verse_renderings.map(v=>v.reference);if(JSON.stringify(actual)!==JSON.stringify(expected))throw Object.assign(new Error(`Verse sequence must be exactly ${expected.join(', ')}`),{retryable:true});}
+export function decisionBrief(outputs,{unitId,passage}){
+  let md=`# FLT Phase 4 — Human Decision Brief\n\n**Unit:** ${passage||unitId}  \n**Status:** Human choice required; no wording is finalized.\n\n`;
+  for(const o of outputs){const rendering=o.output.verse_renderings.map(v=>`**${v.reference.split('.').at(-1)}** ${v.text}`).join('\n\n');md+=`## ${o.role.replaceAll('_',' ')}\n\n${rendering}\n\n`;}
   const questions=outputs.flatMap(o=>o.output.human_only_questions.map(q=>({...q,role:o.role})));
   md+='## Decisions requiring attention\n\n';md+=questions.length?questions.map((q,i)=>`${i+1}. **${q.reference} (${q.role})** — ${q.question}`).join('\n'):'No worker marked a human-only question. Compare the three renderings verse by verse and select a base candidate before synthesis.';
   md+='\n\n## Human action\n\nChoose a base rendering, record any verse-level choices, or return the unit for controlled revision. The harness will not select or silently merge a final text.\n';return md;

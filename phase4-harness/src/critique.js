@@ -13,7 +13,8 @@ const schema=await json(path.join(root,'schemas/critique.schema.json'));
 const validate=new Ajv2020({allErrors:true}).compile(schema);
 const drafts=Object.fromEntries(await Promise.all(config.workers.map(async w=>[w.role,await json(path.join(runDir,`outputs/drafts/${w.role}.json`))])));
 const parse=t=>{if(!t?.trim())throw new Error('EMPTY_MODEL_RESPONSE');const candidate=t.match(/```(?:json)?\s*([\s\S]*?)```/i)?.[1]||t;try{return JSON.parse(candidate)}catch(e){throw new Error(`MALFORMED_OR_TRUNCATED_JSON: ${e.message}`)}};
-const shape='Return JSON only: {"scope":"self|cross","strengths":["..."],"findings":[{"draft_label":"...","reference":"Phil.1.12","severity":"must_revise|should_consider|minor","category":"semantic_coverage|readability|discourse|meaningful_form|theological_restraint|matrix_precedent|oral_flow|other","finding":"...","recommendation":"..."}],"human_only_questions":[{"reference":"...","question":"..."}]}. Never produce a replacement translation or claim final authority.';
+const exampleRef=source.source_data?.verses?.[0]?.reference||'BOOK.CHAPTER.VERSE';
+const shape=`Return JSON only: {"scope":"self|cross","strengths":["..."],"findings":[{"draft_label":"...","reference":"${exampleRef}","severity":"must_revise|should_consider|minor","category":"semantic_coverage|readability|discourse|meaningful_form|theological_restraint|matrix_precedent|oral_flow|other","finding":"...","recommendation":"..."}],"human_only_questions":[{"reference":"...","question":"..."}]}. Never produce a replacement translation or claim final authority.`;
 
 async function call(worker,stage,payload){
   let repair='';

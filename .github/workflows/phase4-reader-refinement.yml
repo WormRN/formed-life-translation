@@ -1,19 +1,14 @@
 name: FLT Phase 4 reader-first refinement
 
 on:
-  push:
-    branches: [main]
-    paths: ['.github/workflows/phase4-reader-refinement.yml']
   workflow_dispatch:
     inputs:
       artifact_id:
         description: Completed ensemble artifact
         required: true
-        default: '8433634100'
       parent_run_id:
         description: Completed ensemble run ID
         required: true
-        default: 'FLT-PHP-01-20260718-901'
 
 permissions: {contents: read, actions: read}
 concurrency: {group: flt-phase-4-reader-refinement, cancel-in-progress: false}
@@ -46,12 +41,12 @@ jobs:
       - name: Recover ensemble evidence
         shell: bash
         run: |
-          mkdir -p /tmp/p && gh api "/repos/${GITHUB_REPOSITORY}/actions/artifacts/${{ inputs.artifact_id || '8433634100' }}/zip" > /tmp/p.zip
+          mkdir -p /tmp/p && gh api "/repos/${GITHUB_REPOSITORY}/actions/artifacts/${{ inputs.artifact_id }}/zip" > /tmp/p.zip
           unzip -q /tmp/p.zip -d /tmp/p
           src=$(find /tmp/p -mindepth 1 -maxdepth 1 -type d | head -1); test -d "$src/outputs/syntheses"
           target="phase4-harness/runs/${{ steps.run.outputs.run_id }}"; mkdir -p "$target/evidence" "$target/manifest"
           cp -R "$src/outputs/syntheses" "$target/evidence/syntheses"
-          jq -n --arg run_id '${{ steps.run.outputs.run_id }}' --arg parent '${{ inputs.parent_run_id || 'FLT-PHP-01-20260718-901' }}' --arg artifact '${{ inputs.artifact_id || '8433634100' }}' '{run_id:$run_id,parent_run_id:$parent,parent_artifact_id:$artifact,status:"reader_refinement_initialized"}' > "$target/manifest/recovery.json"
+          jq -n --arg run_id '${{ steps.run.outputs.run_id }}' --arg parent '${{ inputs.parent_run_id }}' --arg artifact '${{ inputs.artifact_id }}' '{run_id:$run_id,parent_run_id:$parent,parent_artifact_id:$artifact,status:"reader_refinement_initialized"}' > "$target/manifest/recovery.json"
       - name: Run reader-first refinement
         run: node phase4-harness/src/reader-refinement.js phase4-harness/.reader-config.json "phase4-harness/runs/${{ steps.run.outputs.run_id }}"
       - name: Upload refinement bundle

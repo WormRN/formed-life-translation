@@ -7,7 +7,7 @@ import {executeJsonWorker} from '../src/run-integrity.js';
 import {classifyHttpStatus,validateCircuitBreakerConfig} from '../src/circuit-breaker.js';
 import {createHumanCandidateSeal,assertHumanCandidateSeal} from '../src/human-candidate-seal.js';
 
-const worker={role:'readability_worker',provider:'anthropic',model:'test-model'};
+const worker={role:'readability_worker',provider:'anthropic',model:'test-model',resolved_snapshot:'test-model-20260812',snapshot_status:'provider_pinned_snapshot'};
 const config={run_id:'TEST-RUN',task_id:'TEST-TASK',unit_id:'TEST-UNIT',max_attempts:2,task_max_attempts:8,timeout_ms:1000};
 const parse=text=>JSON.parse(text);
 const validate=value=>{
@@ -15,7 +15,7 @@ const validate=value=>{
   return value?.ok===true;
 };
 
-test('records rejected usage, checkpoints a valid worker, and resumes without another call',async()=>{
+test('records rejected usage, model snapshot provenance, checkpoints a valid worker, and resumes without another call',async()=>{
   const runDir=await mkdtemp(path.join(os.tmpdir(),'flt-integrity-'));
   let calls=0;
   const request=async()=>{
@@ -28,8 +28,13 @@ test('records rejected usage, checkpoints a valid worker, and resumes without an
     const first=await executeJsonWorker({config,runDir,worker,stage:'test_stage',prompt:'immutable prompt',parse,validate,request});
     assert.equal(first.output.ok,true);
     assert.equal(calls,2);
+    assert.equal(first.provider_provenance.model,'test-model');
+    assert.equal(first.provider_provenance.resolved_snapshot,'test-model-20260812');
+    assert.equal(first.provider_provenance.snapshot_status,'provider_pinned_snapshot');
     const rejected=JSON.parse(await readFile(path.join(runDir,'manifest/attempts/test_stage/readability_worker/attempt-1.json'),'utf8'));
     assert.equal(rejected.outcome,'response_rejected');
+    assert.equal(rejected.resolved_snapshot,'test-model-20260812');
+    assert.equal(rejected.snapshot_status,'provider_pinned_snapshot');
     assert.deepEqual(rejected.usage,{input_tokens:10,output_tokens:2});
 
     const resumed=await executeJsonWorker({
@@ -38,6 +43,7 @@ test('records rejected usage, checkpoints a valid worker, and resumes without an
     });
     assert.equal(resumed.resumed_from_checkpoint,true);
     assert.equal(resumed.provider_provenance.request_id,'good-response');
+    assert.equal(resumed.provider_provenance.resolved_snapshot,'test-model-20260812');
   }finally{
     await rm(runDir,{recursive:true,force:true});
   }
@@ -53,6 +59,22 @@ test('rejects a checkpoint when the immutable prompt changes',async()=>{
     assert.equal(calls,2);
     assert.equal(changed.resumed_from_checkpoint,undefined);
     assert.equal(changed.provider_provenance.request_id,'response-2');
+  }finally{
+    await rm(runDir,{recursive:true,force:true});
+  }
+});
+
+test('rejects a checkpoint when resolved model snapshot metadata changes',async()=>{
+  const runDir=await mkdtemp(path.join(os.tmpdir(),'flt-integrity-'));
+  let calls=0;
+  const request=async()=>({text:'{"ok":true}',id:`response-${++calls}`,usage:{input_tokens:1,output_tokens:1}});
+  try{
+    await executeJsonWorker({config,runDir,worker,stage:'snapshot_stage',prompt:'same prompt',parse,validate,request});
+    const changedWorker={...worker,resolved_snapshot:'test-model-20260813'};
+    const changed=await executeJsonWorker({config,runDir,worker:changedWorker,stage:'snapshot_stage',prompt:'same prompt',parse,validate,request});
+    assert.equal(calls,2);
+    assert.equal(changed.resumed_from_checkpoint,undefined);
+    assert.equal(changed.provider_provenance.resolved_snapshot,'test-model-20260813');
   }finally{
     await rm(runDir,{recursive:true,force:true});
   }

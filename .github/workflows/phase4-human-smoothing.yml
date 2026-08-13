@@ -1,0 +1,297 @@
+name: FLT Engine 2.2 parameterized Human Editor smoothing
+run-name: "${{ inputs.unit_id }} human smoothing — ${{ inputs.task_id }}"
+
+on:
+  workflow_dispatch:
+    inputs:
+      unit_id:
+        description: Passage unit id, e.g. COL-02-001-005
+        required: true
+        type: string
+      task_id:
+        description: Authorized manifest job id
+        required: true
+        type: string
+      authorization_id:
+        description: Human Editor authorization id
+        required: true
+        type: string
+      expected_manifest_revision:
+        description: Manifest revision that must be armed for this launch
+        required: true
+        type: number
+      passage_manifest_path:
+        description: Authoritative passage manifest path
+        required: true
+        type: string
+      blind_source_path:
+        description: Passage-Sense blind source packet path
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: "flt-${{ inputs.unit_id }}-human-smoothing"
+  cancel-in-progress: false
+
+env:
+  UNIT_ID: ${{ inputs.unit_id }}
+  TASK_ID: ${{ inputs.task_id }}
+  AUTHORIZATION_ID: ${{ inputs.authorization_id }}
+  EXPECTED_MANIFEST_REVISION: ${{ inputs.expected_manifest_revision }}
+  PASSAGE_MANIFEST_PATH: ${{ inputs.passage_manifest_path }}
+  BLIND_SOURCE_PATH: ${{ inputs.blind_source_path }}
+  CANDIDATE_FILE: docs/architecture/phase-4/${{ inputs.unit_id }}_human-editor-synthesis-v2.2.json
+  SEAL_FILE: docs/architecture/phase-4/${{ inputs.unit_id }}_human-editor-synthesis-seal-v2.2.json
+
+jobs:
+  claim_running:
+    name: Credential-free claim of armed Human Editor smoothing launch
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    outputs:
+      target_sha: ${{ steps.claim.outputs.target_sha }}
+      running_revision: ${{ steps.claim.outputs.running_revision }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: phase4-harness/package-lock.json
+      - name: Credential-free authorization, exact seal, source, and circuit-breaker preflight
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REF" = "refs/heads/main"
+          case "$PASSAGE_MANIFEST_PATH" in config/passages/*.json) ;; *) echo "invalid passage_manifest_path" >&2; exit 2;; esac
+          case "$BLIND_SOURCE_PATH" in docs/architecture/phase-4/*_blind-source-v2.2.json) ;; *) echo "invalid blind_source_path" >&2; exit 2;; esac
+          test -f "$PASSAGE_MANIFEST_PATH"
+          test -f "$BLIND_SOURCE_PATH"
+          test -f "$CANDIDATE_FILE"
+          test -f "$SEAL_FILE"
+          nonce="$(jq -er --arg task "$TASK_ID" '.jobs[$task].launch.nonce | select(type=="string" and length>0)' "$PASSAGE_MANIFEST_PATH")"
+          jq -e --arg unit "$UNIT_ID" --arg task "$TASK_ID" --arg auth "$AUTHORIZATION_ID" --arg nonce "$nonce" --argjson rev "$EXPECTED_MANIFEST_REVISION" '
+            .manifest_revision==$rev and
+            .unit.unit_id==$unit and .unit.engine_version=="2.2" and
+            .state.status=="ready" and .state.active_job_id==null and
+            .state.provider_dispatch_allowed==true and .state.github_workflow_dispatch_allowed==true and
+            .jobs[$task].status=="authorized_ready" and
+            .jobs[$task].job_type=="listener_only_and_source_aware_smoothing" and
+            .jobs[$task].authorization_id==$auth and .jobs[$task].dispatch_allowed==true and
+            .jobs[$task].provider_attempts_used==0 and .jobs[$task].checkpoints_to_restore==0 and
+            .jobs[$task].max_attempts_per_worker==2 and .jobs[$task].task_max_attempts==8 and
+            .jobs[$task].launch.nonce==$nonce and .jobs[$task].launch.status=="armed" and
+            .jobs[$task].launch.expected_manifest_revision==$rev and
+            .jobs[$task].launch.consumed_run_id==null and
+            ((.jobs[$task].launch.authorization_id // $auth)==$auth)
+          ' "$PASSAGE_MANIFEST_PATH"
+          jq -e --arg unit "$UNIT_ID" '
+            .unit_id==$unit and .engine_version=="2.2" and
+            (.human_editor_selection.exact_wording_preserved==true) and
+            (.verse_renderings|type=="array" and length>0)
+          ' "$CANDIDATE_FILE"
+          expected="$(jq -er '.candidate_sha256' "$SEAL_FILE")"
+          actual="$(sha256sum "$CANDIDATE_FILE" | awk '{print $1}')"
+          test "$expected" = "$actual"
+          jq -e --arg unit "$UNIT_ID" '
+            .passage_sense_resolution.status=="complete_for_blind_drafting" and
+            (.units|length)==1 and .units[0].unit_id==$unit
+          ' "$BLIND_SOURCE_PATH"
+          npm --prefix phase4-harness ci
+          npm --prefix phase4-harness test
+      - name: Consume nonce and record durable smoothing running state before credentials
+        id: claim
+        shell: bash
+        run: |
+          set -euo pipefail
+          nonce="$(jq -r --arg task "$TASK_ID" '.jobs[$task].launch.nonce' "$PASSAGE_MANIFEST_PATH")"
+          running_revision=$((EXPECTED_MANIFEST_REVISION + 1))
+          jq --arg unit "$UNIT_ID" --arg task "$TASK_ID" --arg run "$GITHUB_RUN_ID" --arg nonce "$nonce" --argjson next "$running_revision" '
+            .manifest_revision=$next |
+            .state.status="running" |
+            .state.phase="human_editor_smoothing_running" |
+            .state.active_job_id=$task |
+            .state.active_run_id=$run |
+            .state.provider_dispatch_allowed=true |
+            .state.github_workflow_dispatch_allowed=false |
+            .state.next_permitted_action="await verified oral-smoothing completion or exact cancel" |
+            .allowed_actions=[("flt status "+$unit),("flt cancel "+$unit+" --job "+$task+" --expected-revision "+($next|tostring)),"read_only_repository_inspection"] |
+            .jobs[$task].status="running" |
+            .jobs[$task].dispatch_confirmed=true |
+            .jobs[$task].remote_run_id=$run |
+            .jobs[$task].retry_allowed=false |
+            .jobs[$task].launch.status="consumed" |
+            .jobs[$task].launch.consumed_run_id=$run |
+            .jobs[$task].launch.consumed_nonce=$nonce
+          ' "$PASSAGE_MANIFEST_PATH" > /tmp/manifest.json
+          mv /tmp/manifest.json "$PASSAGE_MANIFEST_PATH"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- "$PASSAGE_MANIFEST_PATH"
+          git commit -m "Record ${UNIT_ID} smoothing running state ${GITHUB_RUN_ID}"
+          git push origin HEAD:main
+          echo "target_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          echo "running_revision=$running_revision" >> "$GITHUB_OUTPUT"
+
+  smooth:
+    needs: claim_running
+    if: needs.claim_running.result == 'success'
+    name: Listener-only diagnosis and source-aware smoothing
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    outputs:
+      attempts_used: ${{ steps.ledger.outputs.attempts_used }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.claim_running.outputs.target_sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: phase4-harness/package-lock.json
+      - name: Install and test Engine 2.2
+        run: npm --prefix phase4-harness ci && npm --prefix phase4-harness test
+      - name: Create bounded smoothing identity and source packet
+        id: run
+        shell: bash
+        run: |
+          set -euo pipefail
+          run_id="FLT-${UNIT_ID}-$(date -u +%Y%m%d)-${GITHUB_RUN_NUMBER}"
+          node phase4-harness/scripts/prepare-run-config.mjs phase4-harness/config.github-actions.json phase4-harness/.parameterized-smoothing-config.json "$run_id"
+          jq --arg unit "$UNIT_ID" --arg task "$TASK_ID" '
+            .unit_id=$unit | .task_id=$task | .source_packet=".parameterized-smoothing-source.json" |
+            .max_attempts=2 | .task_max_attempts=8
+          ' phase4-harness/.parameterized-smoothing-config.json > /tmp/config.json
+          mv /tmp/config.json phase4-harness/.parameterized-smoothing-config.json
+          jq -n --arg unit "$UNIT_ID" --slurpfile brief "$BLIND_SOURCE_PATH" --slurpfile parsed data/source/sblgnt_parsed.json '
+            $brief[0] as $b | $parsed[0] as $p |
+            ($b.units[] | select(.unit_id==$unit)) as $u |
+            {source_data:{edition:"SBLGNT",verses:[$u.verses[] | . as $v | {reference:$v.reference,greek:$v.greek,tokens:$p[$v.reference]}]},
+             governing_rules:$b.governing_rules,
+             matrix_entries:($b.matrix_alerts + $b.passage_sense_resolution.expressions)}
+          ' > phase4-harness/.parameterized-smoothing-source.json
+          echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
+      - name: Run listener-only diagnosis and source-aware smoothing
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node phase4-harness/src/oral-smoothing.js phase4-harness/.parameterized-smoothing-config.json "phase4-harness/runs/${{ steps.run.outputs.run_id }}" "$CANDIDATE_FILE" phase4-harness/.parameterized-smoothing-source.json
+      - name: Capture attempt-ledger reservations
+        id: ledger
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          ledger="phase4-harness/runs/${{ steps.run.outputs.run_id }}/manifest/task-attempt-budget.json"
+          if test -f "$ledger"; then
+            echo "attempts_used=$(jq -r '.reservations|length' "$ledger")" >> "$GITHUB_OUTPUT"
+          else
+            echo "attempts_used=0" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Upload oral-smoothing bundle and attempt ledger
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: "${{ steps.run.outputs.run_id || inputs.unit_id }}-oral-smoothing"
+          path: phase4-harness/runs/
+          retention-days: 30
+
+  record_completion:
+    needs: [claim_running, smooth]
+    if: needs.claim_running.result == 'success' && needs.smooth.result == 'success'
+    name: Record smoothing completion for Human Editor review
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Advance durable state to awaiting Human Editor
+        shell: bash
+        run: |
+          set -euo pipefail
+          git pull --ff-only origin main
+          running_revision='${{ needs.claim_running.outputs.running_revision }}'
+          completion_revision=$((running_revision + 1))
+          attempts='${{ needs.smooth.outputs.attempts_used }}'
+          test -n "$attempts" || attempts=0
+          jq -e --arg task "$TASK_ID" --arg run "$GITHUB_RUN_ID" --argjson rev "$running_revision" '
+            .manifest_revision==$rev and .state.status=="running" and .state.active_job_id==$task and .state.active_run_id==$run
+          ' "$PASSAGE_MANIFEST_PATH"
+          jq --arg unit "$UNIT_ID" --arg task "$TASK_ID" --arg run "$GITHUB_RUN_ID" --argjson rev "$completion_revision" --argjson attempts "$attempts" '
+            .manifest_revision=$rev |
+            .state.status="awaiting_human_editor" |
+            .state.phase="oral_smoothing_complete_pending_human_editor" |
+            .state.active_job_id=null |
+            .state.active_run_id=$run |
+            .state.candidate_generation_allowed=false |
+            .state.provider_dispatch_allowed=false |
+            .state.github_workflow_dispatch_allowed=false |
+            .state.next_permitted_action="retrieve verified oral-smoothing artifact and present diagnoses/proposals without changing sealed Human Editor text" |
+            .allowed_actions=[("flt status "+$unit),"retrieve verified oral-smoothing artifact","read_only_repository_inspection"] |
+            .jobs[$task].status="awaiting_human_editor" |
+            .jobs[$task].provider_attempts_used=$attempts |
+            .jobs[$task].provider_attempts_remaining=(8-$attempts) |
+            .jobs[$task].remote_run_id=$run |
+            .jobs[$task].retry_allowed=false
+          ' "$PASSAGE_MANIFEST_PATH" > /tmp/manifest.json
+          mv /tmp/manifest.json "$PASSAGE_MANIFEST_PATH"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- "$PASSAGE_MANIFEST_PATH"
+          git commit -m "Record ${UNIT_ID} smoothing completion ${GITHUB_RUN_ID}"
+          git push origin HEAD:main
+
+  record_halt:
+    needs: [claim_running, smooth]
+    if: always() && needs.claim_running.result == 'success' && needs.smooth.result != 'success'
+    name: Record smoothing halted state
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Advance durable state to blocked
+        shell: bash
+        run: |
+          set -euo pipefail
+          git pull --ff-only origin main
+          running_revision='${{ needs.claim_running.outputs.running_revision }}'
+          halt_revision=$((running_revision + 1))
+          attempts='${{ needs.smooth.outputs.attempts_used }}'
+          test -n "$attempts" || attempts=0
+          jq -e --arg task "$TASK_ID" --arg run "$GITHUB_RUN_ID" --argjson rev "$running_revision" '
+            .manifest_revision==$rev and .state.status=="running" and .state.active_job_id==$task and .state.active_run_id==$run
+          ' "$PASSAGE_MANIFEST_PATH"
+          jq --arg unit "$UNIT_ID" --arg task "$TASK_ID" --arg run "$GITHUB_RUN_ID" --argjson rev "$halt_revision" --argjson attempts "$attempts" '
+            .manifest_revision=$rev |
+            .state.status="blocked" |
+            .state.phase="oral_smoothing_halted" |
+            .state.active_job_id=null |
+            .state.active_run_id=$run |
+            .state.candidate_generation_allowed=false |
+            .state.provider_dispatch_allowed=false |
+            .state.github_workflow_dispatch_allowed=false |
+            .state.next_permitted_action="inspect verified smoothing halt evidence; Human Editor unlock required for any retry" |
+            .allowed_actions=[("flt status "+$unit),"read_only_repository_inspection"] |
+            .jobs[$task].status="blocked" |
+            .jobs[$task].provider_attempts_used=$attempts |
+            .jobs[$task].provider_attempts_remaining=(8-$attempts) |
+            .jobs[$task].remote_run_id=$run |
+            .jobs[$task].retry_allowed=false
+          ' "$PASSAGE_MANIFEST_PATH" > /tmp/manifest.json
+          mv /tmp/manifest.json "$PASSAGE_MANIFEST_PATH"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- "$PASSAGE_MANIFEST_PATH"
+          git commit -m "Record ${UNIT_ID} smoothing halt ${GITHUB_RUN_ID}"
+          git push origin HEAD:main

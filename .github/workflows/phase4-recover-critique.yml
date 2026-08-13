@@ -6,11 +6,9 @@ on:
       artifact_id:
         description: Source drafting artifact ID
         required: true
-        default: '8432702157'
       parent_run_id:
         description: Immutable parent run ID
         required: true
-        default: 'FLT-PHP-01-20260718-104'
 
 permissions:
   contents: read
