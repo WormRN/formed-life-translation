@@ -1,0 +1,310 @@
+{
+  "chapter_id": "COL-02",
+  "book": "Colossians",
+  "chapter": 2,
+  "source_edition": "SBLGNT",
+  "tone": "pastoral, urgent, Christ-centered, protective, and confident",
+  "target_reader": "religion-naive adults and older adolescents near grade 6",
+  "translation_identity": "firmly dynamic-equivalence, NLT-like in readability but independent",
+  "test_purpose": "Human Editor-approved Engine 2.2 passage-sense-resolution packet for Colossians 2:1-5",
+  "sealed_context": {
+    "prior_flt_wording_present": false,
+    "prior_candidates_present": false,
+    "comparison_translations_present": false,
+    "conversational_drafts_present": false,
+    "editor_benchmark_present": false,
+    "instruction": "Translate from the SBLGNT and this source-side passage-sense brief only. Do not reconstruct, imitate, or refer to accepted Colossians wording, previous candidates, comparison translations, or conversation drafts."
+  },
+  "governing_rules": [
+    "Passage-sense resolution precedes English composition. Follow the completed source-side brief and expose genuinely viable alternatives only in the review apparatus.",
+    "All three candidates pursue the same constitutional goal; no provider receives a readability, fidelity, or blended specialty.",
+    "Write natural English that a religion-naive adult can follow on one hearing; restructure Greek clauses freely while preserving material meaning, logic, tone, and theological force.",
+    "Preserve the direct lexical bridge from Colossians 1:29 agōnizomai to Colossians 2:1 agōn; the approved local continuity is compete -> contest unless a material contextual reason requires escalation.",
+    "Preserve the Colossians hidden-now-revealed sense of mystērion; the approved rendering within this scope is secret plan, not modern puzzle-language.",
+    "In 2:2, Christ identifies or focuses God's secret plan in the SBLGNT reading; do not make Christ merely one item inside a larger esoteric system.",
+    "In 2:3, all treasures of wisdom and knowledge are located in Christ; hidden must not imply that spiritual elites possess inaccessible secret knowledge.",
+    "In 2:4, the danger is plausible, persuasive-sounding argument, not merely obvious falsehood.",
+    "In 2:5, preserve bodily absence versus personal/spiritual solidarity without implying literal remote travel or automatically identifying Paul's spirit with the Holy Spirit.",
+    "Do not reconstruct a complete Colossian false-teaching system beyond what this passage itself states.",
+    "Under the FLT note architecture, [rn] aids ordinary-reader comprehension, [tn] records source transparency for Study/Scholarly editions, and [dl] remains internal only.",
+    "No prior FLT wording, comparison translation, editor benchmark, or conversation draft may enter blind drafting."
+  ],
+  "existing_decisions": [
+    "Capitalize pronouns referring to deity.",
+    "Use clear reader-facing English for theological vocabulary while preserving consequential theological anchors.",
+    "The Human Editor alone selects, synthesizes, approves smoothing changes, resolves retained alternatives, and finalizes wording.",
+    "Colossians lexical precedent: mystērion in the hidden-now-revealed divine-plan sense -> secret plan.",
+    "Colossians lexical continuity precedent: agōnizomai in 1:29 -> compete and cognate agōn in 2:1 -> contest."
+  ],
+  "matrix_alerts": [
+    {
+      "lemma": "ἀγών",
+      "status": "approved Colossians lexical-continuity lock",
+      "neutral_range": "contest, competition, struggle, conflict, intense effort",
+      "approved_scope": "Col.2.1 in direct continuity with Col.1.29",
+      "approved_rendering": "contest",
+      "instruction": "Preserve the cognate bridge from Col.1.29 compete to Col.2.1 contest; do not flatten to generic struggle unless a material contextual conflict is explicitly surfaced for Human Editor review."
+    },
+    {
+      "lemma": "μυστήριον",
+      "status": "approved Colossians hidden-now-revealed sense lock",
+      "neutral_range": "secret, hidden matter, divine purpose once concealed and now disclosed",
+      "approved_scope": "Colossians contexts carrying the Col.1.26-27 hidden-now-revealed divine-plan sense",
+      "approved_rendering": "secret plan",
+      "instruction": "Use secret plan within this approved Colossians sense; avoid mystery when it suggests an unsolved puzzle or esoteric knowledge."
+    }
+  ],
+  "units": [
+    {
+      "unit_id": "COL-02-001-005",
+      "passage": "Colossians 2:1-5",
+      "title": "Paul's contest for confident understanding in Christ and protection from persuasive deception",
+      "known_issues": [
+        "Verse 1 deliberately continues the agōnizomai/agōn word-family bridge across the chapter boundary.",
+        "Verse 2 is syntactically dense: strengthened hearts, unity in love, the wealth of assured understanding, and knowledge of God's secret plan identified with Christ must remain intelligible.",
+        "Verse 2 has meaningful textual variation around the phrase identifying God's secret plan with Christ; workers translate the SBLGNT reading supplied here rather than expanded variants.",
+        "Verse 3 makes Christ the locus of all treasures of wisdom and knowledge; hidden must not create an elite-secret-knowledge implication.",
+        "Verse 4 warns against reasoning or speech that sounds persuasive enough to mislead.",
+        "Verse 5 contrasts bodily absence with Paul's personal/spiritual solidarity and joins good order with firmness of trust directed toward Christ."
+      ],
+      "matrix_alerts": [
+        {
+          "lemma": "ἀγών",
+          "status": "approved Colossians lexical-continuity lock",
+          "neutral_range": "contest, competition, struggle, conflict, intense effort",
+          "approved_scope": "Col.2.1 in direct continuity with Col.1.29",
+          "approved_rendering": "contest",
+          "instruction": "Preserve the cognate bridge from Col.1.29 compete to Col.2.1 contest; do not flatten to generic struggle unless a material contextual conflict is explicitly surfaced for Human Editor review."
+        },
+        {
+          "lemma": "μυστήριον",
+          "status": "approved Colossians hidden-now-revealed sense lock",
+          "neutral_range": "secret, hidden matter, divine purpose once concealed and now disclosed",
+          "approved_scope": "Colossians contexts carrying the Col.1.26-27 hidden-now-revealed divine-plan sense",
+          "approved_rendering": "secret plan",
+          "instruction": "Use secret plan within this approved Colossians sense; avoid mystery when it suggests an unsolved puzzle or esoteric knowledge."
+        }
+      ],
+      "verses": [
+        {
+          "reference": "Col.2.1",
+          "greek": "Θέλω γὰρ ὑμᾶς εἰδέναι ἡλίκον ἀγῶνα ἔχω ὑπὲρ ὑμῶν καὶ τῶν ἐν Λαοδικείᾳ καὶ ὅσοι οὐχ ἑόρακαν τὸ πρόσωπόν μου ἐν σαρκί,"
+        },
+        {
+          "reference": "Col.2.2",
+          "greek": "ἵνα παρακληθῶσιν αἱ καρδίαι αὐτῶν συμβιβασθέντες ἐν ἀγάπῃ καὶ εἰς πᾶν πλοῦτος τῆς πληροφορίας τῆς συνέσεως, εἰς ἐπίγνωσιν τοῦ μυστηρίου τοῦ θεοῦ, Χριστοῦ,"
+        },
+        {
+          "reference": "Col.2.3",
+          "greek": "ἐν ᾧ εἰσιν πάντες οἱ θησαυροὶ τῆς σοφίας καὶ γνώσεως ἀπόκρυφοι."
+        },
+        {
+          "reference": "Col.2.4",
+          "greek": "Τοῦτο λέγω, ἵνα μηδεὶς ὑμᾶς παραλογίζηται ἐν πιθανολογίᾳ."
+        },
+        {
+          "reference": "Col.2.5",
+          "greek": "εἰ γὰρ καὶ τῇ σαρκὶ ἄπειμι, ἀλλὰ τῷ πνεύματι σὺν ὑμῖν εἰμι, χαίρων καὶ βλέπων ὑμῶν τὴν τάξιν καὶ τὸ στερέωμα τῆς εἰς Χριστὸν πίστεως ὑμῶν."
+        }
+      ]
+    }
+  ],
+  "passage_sense_resolution": {
+    "gate_version": "2.2",
+    "status": "complete_for_blind_drafting",
+    "visibility_attestation": {
+      "source_side_only": true,
+      "prior_flt_wording_absent": true,
+      "prior_candidates_absent": true,
+      "editor_benchmark_absent": true,
+      "comparison_translations_absent": true
+    },
+    "passage_argument": [
+      "Paul explains the magnitude of his demanding ministry concern for the Colossians, Laodiceans, and other believers who have not met him personally.",
+      "His purpose is that they be strengthened and united in love, reaching the rich confidence of genuine understanding and knowledge of God's secret plan, Christ.",
+      "All true treasures of wisdom and knowledge are found in Christ, which grounds Paul's warning against plausible deception and his joy over their present ordered, firm trust in Christ despite his bodily absence."
+    ],
+    "proposition_map": [
+      {
+        "references": ["Col.2.1"],
+        "proposition": "Paul wants the readers to know how great a contest or strenuous ministry struggle he has for them, the believers in Laodicea, and all who have not seen him face to face physically."
+      },
+      {
+        "references": ["Col.2.2"],
+        "proposition": "Paul's purpose is that their inner lives be strengthened and that they be brought together in love, reaching the full wealth of assured understanding and knowledge of God's secret plan, Christ."
+      },
+      {
+        "references": ["Col.2.3"],
+        "proposition": "In Christ are all the treasures of wisdom and knowledge, hidden or stored there."
+      },
+      {
+        "references": ["Col.2.4"],
+        "proposition": "Paul says this so that no one will mislead them through plausible or persuasive-sounding argument."
+      },
+      {
+        "references": ["Col.2.5"],
+        "proposition": "Although Paul is absent bodily, he is personally or spiritually present with them, rejoicing as he observes their good order and the firmness of their trust directed toward Christ."
+      }
+    ],
+    "expressions": [
+      {
+        "sense_id": "COL2-AGON-CONTINUITY",
+        "references": ["Col.2.1"],
+        "source_expression": "ἡλίκον ἀγῶνα ἔχω",
+        "status": "resolved",
+        "contextual_function": "continues the strenuous ministry-exertion word family from agōnizomai in Col.1.29 into the noun agōn in Col.2.1",
+        "primary_sense": "the demanding contest or struggle Paul is engaged in on behalf of these churches",
+        "viable_alternatives": [],
+        "discourse_evidence": "The noun immediately follows the cognate verb in Col.1.29 and describes Paul's ministry concern for believers he has not met personally.",
+        "reading_text_guidance": "Use the approved local rendering contest in a natural sentence while preserving the magnitude of Paul's exertion.",
+        "literal_note_guidance": "Normally no note is required; a study note may mention the cognate compete/contest link if useful.",
+        "choice_risks": "Generic struggle can unnecessarily erase the deliberate cross-chapter lexical bridge; overdeveloped athletic imagery can add details not present in the source.",
+        "human_decision_required": false,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "COL2-UNMET-BELIEVERS",
+        "references": ["Col.2.1"],
+        "source_expression": "ὅσοι οὐχ ἑόρακαν τὸ πρόσωπόν μου ἐν σαρκί",
+        "status": "resolved",
+        "contextual_function": "extends Paul's pastoral concern to believers who have not encountered him face to face",
+        "primary_sense": "those who have not met or seen Paul personally in embodied presence",
+        "viable_alternatives": [],
+        "discourse_evidence": "Seeing Paul's face in flesh contrasts ordinary physical acquaintance with his concern for distant believers.",
+        "reading_text_guidance": "Use immediate natural English such as not met me personally or an equivalent; do not imply visionary seeing.",
+        "literal_note_guidance": "No note normally required.",
+        "choice_risks": "A wooden face/flesh rendering may obscure ordinary personal acquaintance.",
+        "human_decision_required": false,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "COL2-HEARTS-STRENGTHENED",
+        "references": ["Col.2.2"],
+        "source_expression": "ἵνα παρακληθῶσιν αἱ καρδίαι αὐτῶν συμβιβασθέντες ἐν ἀγάπῃ",
+        "status": "resolved",
+        "contextual_function": "states the strengthening and communal unity Paul seeks for them",
+        "primary_sense": "their inner lives are strengthened or encouraged as they are joined together in love",
+        "viable_alternatives": [],
+        "discourse_evidence": "The purpose clause joins strengthened hearts with being brought together in love before moving toward assured understanding.",
+        "reading_text_guidance": "Do not reduce hearts to feelings alone or encouragement to soothing consolation; make the communal love connection clear.",
+        "literal_note_guidance": "No note normally required.",
+        "choice_risks": "Emotional-only English can understate strengthening; abstract clause stacking can hide Paul's purpose.",
+        "human_decision_required": false,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "COL2-ASSURED-UNDERSTANDING",
+        "references": ["Col.2.2"],
+        "source_expression": "πᾶν πλοῦτος τῆς πληροφορίας τῆς συνέσεως",
+        "status": "resolved",
+        "contextual_function": "describes the rich result or fullness of settled understanding Paul wants for the community",
+        "primary_sense": "the full wealth of confident or assured understanding",
+        "viable_alternatives": [],
+        "discourse_evidence": "The phrase intensifies understanding with both wealth and fullness/assurance before the movement to knowing God's secret plan.",
+        "reading_text_guidance": "Do not treat plērophoria as information; communicate settled confidence or assurance naturally.",
+        "literal_note_guidance": "No note normally required.",
+        "choice_risks": "Flattening the intensifiers loses Paul's lavish rhetoric; overly formal assurance terminology may be opaque.",
+        "human_decision_required": false,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "COL2-MYSTERY-CHRIST",
+        "references": ["Col.2.2"],
+        "source_expression": "τοῦ μυστηρίου τοῦ θεοῦ, Χριστοῦ",
+        "status": "resolved",
+        "contextual_function": "identifies or focuses God's formerly hidden divine plan in Christ",
+        "primary_sense": "God's secret plan is identified with or centered in Christ",
+        "viable_alternatives": [],
+        "discourse_evidence": "The SBLGNT reading places Christ in apposition to God's secret plan, and verse 3 immediately locates all treasures of wisdom and knowledge in Him.",
+        "reading_text_guidance": "Apply the approved secret plan rendering and make Christ's identifying or focal relation clear without inventing an esoteric system.",
+        "literal_note_guidance": "[tn] Candidate: note that SBLGNT reads God's secret plan, Christ, while other textual traditions contain expanded wording.",
+        "choice_risks": "Puzzle-language or wording that makes Christ one secret item among many would distort the paragraph's Christ-centered logic.",
+        "human_decision_required": false,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "COL2-HIDDEN-TREASURES",
+        "references": ["Col.2.3"],
+        "source_expression": "ἐν ᾧ εἰσιν πάντες οἱ θησαυροὶ τῆς σοφίας καὶ γνώσεως ἀπόκρυφοι",
+        "status": "resolved",
+        "contextual_function": "grounds the paragraph's claim that true wisdom and knowledge are located in Christ rather than in competing claims",
+        "primary_sense": "all treasures of wisdom and knowledge are hidden or stored in Christ",
+        "viable_alternatives": [],
+        "discourse_evidence": "The antecedent of en hō is Christ from verse 2, and verse 4 immediately turns to protection from persuasive deception.",
+        "reading_text_guidance": "Keep Christ as the locus of all true wisdom and knowledge; do not make hidden imply inaccessible elite knowledge.",
+        "literal_note_guidance": "No note normally required unless the final English creates an elite-secret implication.",
+        "choice_risks": "An abstract mystery antecedent can blur Christ's centrality; secret-knowledge connotations can reverse Paul's argument.",
+        "human_decision_required": false,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "COL2-PERSUASIVE-DECEPTION",
+        "references": ["Col.2.4"],
+        "source_expression": "παραλογίζηται ἐν πιθανολογίᾳ",
+        "status": "resolved",
+        "contextual_function": "names the danger Paul is guarding against: misleading reasoning delivered in convincing-sounding speech",
+        "primary_sense": "deceive or mislead by plausible, persuasive argument",
+        "viable_alternatives": [],
+        "discourse_evidence": "The warning follows Paul's Christ-centered wisdom claim and concerns reasoning or speech whose persuasive quality can mislead.",
+        "reading_text_guidance": "Make the convincing-sounding nature of the deception apparent in the reading text rather than reducing it to generic lies.",
+        "literal_note_guidance": "No note normally required.",
+        "choice_risks": "Generic deceive loses the rhetorical danger; overtechnical argument terminology may exceed the target reader.",
+        "human_decision_required": false,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "COL2-BODILY-ABSENT-SPIRIT-PRESENT",
+        "references": ["Col.2.5"],
+        "source_expression": "τῇ σαρκὶ ἄπειμι, ἀλλὰ τῷ πνεύματι σὺν ὑμῖν εἰμι",
+        "status": "resolved",
+        "contextual_function": "contrasts Paul's physical distance with his continuing personal or spiritual solidarity with the community",
+        "primary_sense": "Paul is absent bodily but remains with them in spirit or personal solidarity",
+        "viable_alternatives": [],
+        "discourse_evidence": "The explicit flesh/spirit contrast concerns Paul's own absence and presence in relation to the readers.",
+        "reading_text_guidance": "Do not automatically identify Paul's spirit with the Holy Spirit or imply literal remote supernatural travel.",
+        "literal_note_guidance": "A note is optional only if final English in spirit proves misleading in listener testing.",
+        "choice_risks": "Capitalizing Spirit or overexplaining supernatural presence can add meaning; wooden flesh language can distract.",
+        "human_decision_required": false,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      },
+      {
+        "sense_id": "COL2-ORDER-FIRMNESS",
+        "references": ["Col.2.5"],
+        "source_expression": "τὴν τάξιν καὶ τὸ στερέωμα τῆς εἰς Χριστὸν πίστεως ὑμῶν",
+        "status": "resolved",
+        "contextual_function": "describes the community's ordered condition and the stability of its trust directed toward Christ",
+        "primary_sense": "their good order and the firmness or stability of their trust in Christ",
+        "viable_alternatives": [],
+        "discourse_evidence": "The coordinated nouns praise the community's ordered state and solidity; the directional phrase eis Christon points their pistis toward Christ.",
+        "reading_text_guidance": "Communicate order and stable trust naturally; military coloring is possible but not required, and pistis here is the believers' trust directed toward Christ.",
+        "literal_note_guidance": "No note normally required.",
+        "choice_risks": "Overmilitarizing adds imagery; treating the phrase as Christ's faithfulness reverses the directional relation.",
+        "human_decision_required": false,
+        "reader_note_required": false,
+        "audit_text_and_note_together": false
+      }
+    ],
+    "reading_text_vs_literal_note": [
+      {
+        "references": ["Col.2.2"],
+        "reading_text_goal": "Make the progression toward confident knowledge of God's secret plan, Christ, intelligible on first hearing.",
+        "literal_note_goal": "A [tn] may preserve the SBLGNT appositional form and acknowledge textual variation without burdening the standard reading text."
+      },
+      {
+        "references": ["Col.2.5"],
+        "reading_text_goal": "Communicate physical absence and personal/spiritual solidarity naturally.",
+        "literal_note_goal": "Only if needed, a [tn] may preserve the flesh/spirit wording behind a more natural reading."
+      }
+    ],
+    "human_review_items": [],
+    "candidate_common_brief": "Preserve Paul's intense personal contest for believers he has not met; his purpose of strengthening them and uniting them in love; the movement from understanding to confident knowledge of God's secret plan identified as Christ; the claim that every treasure of true wisdom and knowledge is found in Christ; the warning against convincing-sounding deception; and Paul's joy over their ordered, stable trust despite his bodily absence. Apply the locked Colossians lexical precedents for agōn -> contest and mystērion -> secret plan. Do not imply esoteric knowledge accessible only to elites. Do not reconstruct a specific false-teaching system beyond what the passage itself states. Make the causal and purpose relationships intelligible on a first hearing while preserving the Christ-centered logic."
+  }
+}
