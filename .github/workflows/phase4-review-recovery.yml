@@ -1,20 +1,14 @@
 name: FLT Phase 4 resume ensemble review
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/phase4-review-recovery.yml'
   workflow_dispatch:
     inputs:
       artifact_id:
         description: Partial ensemble artifact ID
         required: true
-        default: '8433591152'
       parent_run_id:
         description: Partial ensemble run ID
         required: true
-        default: 'FLT-PHP-01-20260718-803'
 
 permissions:
   contents: read
@@ -57,7 +51,7 @@ jobs:
         shell: bash
         run: |
           mkdir -p /tmp/parent-artifact
-          gh api -H 'Accept: application/vnd.github+json' "/repos/${GITHUB_REPOSITORY}/actions/artifacts/${{ inputs.artifact_id || '8433591152' }}/zip" > /tmp/parent.zip
+          gh api -H 'Accept: application/vnd.github+json' "/repos/${GITHUB_REPOSITORY}/actions/artifacts/${{ inputs.artifact_id }}/zip" > /tmp/parent.zip
           unzip -q /tmp/parent.zip -d /tmp/parent-artifact
           source_dir=$(find /tmp/parent-artifact -mindepth 1 -maxdepth 1 -type d | head -n 1)
           test -d "$source_dir/outputs/drafts"
@@ -68,7 +62,7 @@ jobs:
           cp -R "$source_dir/outputs" "$target/outputs"
           if test -d "$source_dir/failures"; then cp -R "$source_dir/failures" "$target/failures"; fi
           cp "$source_dir/manifest/event_log.jsonl" "$target/manifest/event_log.jsonl"
-          jq -n --arg run_id '${{ steps.review.outputs.run_id }}' --arg parent '${{ inputs.parent_run_id || 'FLT-PHP-01-20260718-803' }}' --arg artifact '${{ inputs.artifact_id || '8433591152' }}' --arg workflow_run '${{ github.run_id }}' '{run_id:$run_id,parent_run_id:$parent,parent_artifact_id:$artifact,workflow_run:$workflow_run,reused_material:["validated drafts and critiques","three focused checks","three independent syntheses","available blind evaluations"],excluded_material:["benchmark wording","comparison translations","human wording preferences"],status:"ensemble_resume_initialized"}' > "$target/manifest/review_recovery.json"
+          jq -n --arg run_id '${{ steps.review.outputs.run_id }}' --arg parent '${{ inputs.parent_run_id }}' --arg artifact '${{ inputs.artifact_id }}' --arg workflow_run '${{ github.run_id }}' '{run_id:$run_id,parent_run_id:$parent,parent_artifact_id:$artifact,workflow_run:$workflow_run,reused_material:["validated drafts and critiques","three focused checks","three independent syntheses","available blind evaluations"],excluded_material:["benchmark wording","comparison translations","human wording preferences"],status:"ensemble_resume_initialized"}' > "$target/manifest/review_recovery.json"
       - name: Resume ensemble review
         run: node phase4-harness/src/review.js phase4-harness/.review-config.json "phase4-harness/runs/${{ steps.review.outputs.run_id }}" --resume
       - name: Upload recovered review bundle
