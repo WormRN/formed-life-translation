@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "manifest_revision": 1,
+  "manifest_revision": 2,
   "last_updated": "2026-08-13",
   "unit": {
     "unit_id": "COL-02-001-005",
@@ -25,7 +25,7 @@
   },
   "state": {
     "status": "ready",
-    "phase": "passage_sense_complete_blind_draft_authorized",
+    "phase": "passage_sense_complete_blind_draft_authorized_auto_dispatch",
     "active_job_id": null,
     "active_run_id": null,
     "translation_allowed": true,
@@ -33,11 +33,11 @@
     "provider_dispatch_allowed": true,
     "github_workflow_dispatch_allowed": true,
     "translation_artifact_mutation_allowed": false,
-    "next_permitted_action": "dispatch COL-02-001-005-BLIND-DRAFT-01 through .github/workflows/phase4-sense-drafts.yml with exact manifest revision 1 and authorized inputs"
+    "next_permitted_action": "automatic dispatcher must dispatch COL-02-001-005-BLIND-DRAFT-01 through .github/workflows/phase4-sense-drafts.yml from this manifest update"
   },
   "allowed_actions": [
     "flt status COL-02-001-005",
-    "dispatch COL-02-001-005-BLIND-DRAFT-01",
+    "automatic dispatch COL-02-001-005-BLIND-DRAFT-01",
     "read_only_repository_inspection"
   ],
   "forbidden_actions": [
@@ -67,12 +67,12 @@
       "dispatch_confirmed": false,
       "retry_allowed": false,
       "launch": {
-        "mode": "workflow_dispatch",
+        "mode": "automatic_manifest_push_dispatch",
         "nonce": "HE-COL-02-001-005-SENSE-DRAFT-20260813-01",
         "status": "armed",
         "armed_by": "human_editor",
         "authorization_id": "HE-COL-02-001-005-BLIND-DRAFT-20260813",
-        "expected_manifest_revision": 1,
+        "expected_manifest_revision": 2,
         "consumed_run_id": null,
         "consumed_nonce": null
       }
