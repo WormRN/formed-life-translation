@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "manifest_revision": 6,
+  "manifest_revision": 7,
   "last_updated": "2026-08-13",
   "unit": {
     "unit_id": "COL-02-001-005",
@@ -24,20 +24,20 @@
     "circuit_breaker_spec": "docs/architecture/phase-4/FLT_Autonomous_Circuit_Breaker_v1.md"
   },
   "state": {
-    "status": "ready",
-    "phase": "blind_draft_reauthorized_after_zero_provider_workflow_setup_halt",
-    "active_job_id": null,
-    "active_run_id": "31674227604",
+    "status": "running",
+    "phase": "blind_draft_running",
+    "active_job_id": "COL-02-001-005-BLIND-DRAFT-02",
+    "active_run_id": "31674368604",
     "translation_allowed": true,
     "candidate_generation_allowed": true,
     "provider_dispatch_allowed": true,
-    "github_workflow_dispatch_allowed": true,
+    "github_workflow_dispatch_allowed": false,
     "translation_artifact_mutation_allowed": false,
-    "next_permitted_action": "automatic dispatcher must dispatch COL-02-001-005-BLIND-DRAFT-02 through .github/workflows/phase4-sense-drafts.yml"
+    "next_permitted_action": "await verified COL-02-001-005 blind A/B/C completion or exact cancel"
   },
   "allowed_actions": [
     "flt status COL-02-001-005",
-    "automatic dispatch COL-02-001-005-BLIND-DRAFT-02",
+    "flt cancel COL-02-001-005 --job COL-02-001-005-BLIND-DRAFT-02 --expected-revision 7",
     "read_only_repository_inspection"
   ],
   "forbidden_actions": [
@@ -83,7 +83,7 @@
     "COL-02-001-005-BLIND-DRAFT-02": {
       "idempotency_key": "flt:2.2:COL-02-001-005:blind-draft:02",
       "job_type": "blind_candidate_batch",
-      "status": "authorized_ready",
+      "status": "running",
       "authorization_id": "HE-COL-02-001-005-AUTO-RECOVERY-20260813",
       "authorized_by": "human_editor",
       "authorization_scope": "Recover from the verified zero-provider workflow-setup halt, then generate exactly three independent common-mission blind A/B/C candidates for Colossians 2:1-5 from the already approved Passage-Sense packet, with locked Matrix alerts enforced.",
@@ -94,18 +94,19 @@
       "provider_attempts_used": 0,
       "provider_attempts_remaining": 8,
       "checkpoints_to_restore": 0,
-      "dispatch_confirmed": false,
+      "dispatch_confirmed": true,
       "retry_allowed": false,
       "launch": {
         "mode": "automatic_manifest_push_dispatch",
         "nonce": "HE-COL-02-001-005-SENSE-DRAFT-20260813-02",
-        "status": "armed",
+        "status": "consumed",
         "armed_by": "human_editor",
         "authorization_id": "HE-COL-02-001-005-AUTO-RECOVERY-20260813",
         "expected_manifest_revision": 6,
-        "consumed_run_id": null,
-        "consumed_nonce": null
-      }
+        "consumed_run_id": "31674368604",
+        "consumed_nonce": "HE-COL-02-001-005-SENSE-DRAFT-20260813-02"
+      },
+      "remote_run_id": "31674368604"
     }
   },
   "source_gate": {
