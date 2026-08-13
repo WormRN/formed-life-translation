@@ -715,6 +715,478 @@ The following terms are registered but not yet sufficiently worked. The swarm mu
 
 ---
 
+# 7A. Colossians Lexical Continuity Entries
+
+## μυστήριον · mystērion
+
+**Internal lemma ID:** FLT-GRC-MYSTERION  
+**Strong’s:** G3466  
+**Entry status:** approved  
+**Last reviewed:** 2026-08-12  
+**Human editor:** David L. Davis
+
+**Semantic range.** Secret, hidden matter, mystery, or divine purpose once concealed and then disclosed, according to context.
+
+**Historical / cultural considerations.** The English word *mystery* commonly suggests an unsolved puzzle, while the Colossians context emphasizes something formerly hidden and now revealed: established from the passage’s own discourse.  
+**Theological significance.** In Colossians the term names God’s formerly hidden purpose now disclosed in Christ and among the nations; opaque puzzle-language would weaken that movement.
+
+**Default posture.** Sense-dependent.
+
+### Sense 1 — God’s formerly hidden and now revealed purpose in Christ
+
+**Sense status:** approved  
+**Definition:** God’s purpose or plan that was hidden in earlier ages and is now made known in Christ.  
+**Recognition cues:** Hidden/revealed language; God as the revealer; Christ as the content or center; Gentile/nations scope.  
+**Approved renderings:** `secret plan`.  
+**Restricted renderings:** `mystery` when it suggests an unsolved puzzle; explanations that add content beyond what the local discourse states.  
+**In-text clarification boundary:** The reading text may communicate that the plan was secret/hidden and is now revealed; fuller theological explanation belongs in notes or the study layer.  
+**Footnote triggers:** A transparency note may preserve the traditional rendering `mystery` where useful.  
+**Literary / discourse links:** Col.1.26–27; carry the hidden-now-revealed concept forward when μυστήριον recurs in Colossians 2.  
+**Evidence basis:**
+- lexical: secret/hidden matter or purpose;
+- syntactic: identified by the appositional hidden-now-revealed clause in Col.1.26–27;
+- discourse: Paul immediately explains the secret plan in relation to Christ and the nations;
+- historical: — pending —;
+- theological: Christ-centered disclosure to the nations;
+- precedent: Librarian backlog `[dl]` Col.1.26, confirmed precedent.
+
+**Confidence:** high  
+**Approved scope:** Colossians contexts carrying the Col.1.26–27 hidden-now-revealed divine-plan sense.  
+**Decision Log references:** `logs/FLT_librarian_backlog.md` — `[dl]` Col.1.26 μυστήριον / secret plan.  
+**Worked examples:** Col.1.26 — `secret plan`.  
+**Exceptions / unresolved questions:** A materially different sense outside this scope requires fresh classification.
+
+**Cross-sense cautions.** Do not turn `secret plan` into a universal mechanical gloss outside the approved sense and scope.
+
+**Lemma-family links.** — pending —
+
+**Global unresolved questions.** Scope outside the Colossians hidden/revealed discourse remains open.
+
+---
+
+## τέλειος · teleios
+
+**Internal lemma ID:** FLT-GRC-TELEIOS  
+**Strong’s:** G5046  
+**Entry status:** approved  
+**Last reviewed:** 2026-08-12  
+**Human editor:** David L. Davis
+
+**Semantic range.** Complete, mature, fully developed, or brought to an intended goal, according to context.
+
+**Historical / cultural considerations.** — pending —  
+**Theological significance.** In Colossians 1:28 the choice participates in the letter’s argument about sufficiency in Christ; `mature` may understate the completeness emphasis adopted by the Human Editor.
+
+**Default posture.** Sense-dependent.
+
+### Sense 1 — Complete in Christ
+
+**Sense status:** approved  
+**Definition:** Brought to the intended completeness or full goal in relation to Christ.  
+**Recognition cues:** Col.1.28 purpose clause; presentation of every person in Christ; nearby argument about Christ’s sufficiency.  
+**Approved renderings:** `complete`.  
+**Restricted renderings:** `mature` in this approved scope; `perfect` where it would suggest sinless perfection not warranted by the context.  
+**In-text clarification boundary:** Preserve the completeness claim without adding a doctrinal explanation to the reading text.  
+**Footnote triggers:** Optional transparency note if a traditional `mature` or `perfect` rendering requires explanation.  
+**Literary / discourse links:** Col.1.28 and the developing Colossians argument about completeness/sufficiency in Christ.  
+**Evidence basis:**
+- lexical: complete, mature, fully developed;
+- syntactic: predicate complement with every person presented in Christ;
+- discourse: anticipates the sufficiency/completeness concerns developed in Colossians 2;
+- historical: — pending —;
+- theological: Christ’s sufficiency;
+- precedent: Librarian backlog `[dl]` Col.1.28 and binding Human Editor override record.
+
+**Confidence:** high  
+**Approved scope:** Col.1.28 and directly continuous Colossians contexts where this completeness-in-Christ sense governs.  
+**Decision Log references:** `logs/FLT_librarian_backlog.md` — `[dl]` Col.1.28 τέλειος / complete; `logs/decision-log/COL-01-028-executive-override-20260812.md`.  
+**Worked examples:** Col.1.28 — `complete in Christ`.  
+**Exceptions / unresolved questions:** Other τέλειος senses and other books require separate review.
+
+**Cross-sense cautions.** The approved Colossians rendering does not make `complete` an automatic gloss for every τέλειος occurrence.
+
+**Lemma-family links.** τελειόω and related completion language.
+
+**Global unresolved questions.** Scope beyond the Colossians completeness-in-Christ argument remains open.
+
+---
+
+## ἀνταναπληρόω · antanaplēroō
+
+**Internal lemma ID:** FLT-GRC-ANTANAPLEROO  
+**Strong’s:** G466  
+**Entry status:** approved  
+**Last reviewed:** 2026-08-12  
+**Human editor:** David L. Davis
+
+**Semantic range.** Fill up in turn, fill up correspondingly, supply one’s part in what remains, or complete in relation to another, according to context.
+
+**Historical / cultural considerations.** The reciprocal/representative force associated with the compound is interpretively important in Col.1.24 but should not be made to carry more than the passage warrants: possible to probable.  
+**Theological significance.** A rendering that sounds like Paul repairs a deficiency in Christ’s saving work would materially mislead the reader.
+
+**Default posture.** Sense-dependent.
+
+### Sense 1 — Paul taking his turn in the afflictions borne in Christ’s service
+
+**Sense status:** approved  
+**Definition:** Paul presents his present suffering as his own turn or share in the afflictions still borne for Christ’s body, not as supplementation of a deficient atonement.  
+**Recognition cues:** Col.1.24; Paul’s own flesh; suffering for Christ’s body, the church; prior reconciliation through Christ’s death already established in Col.1.20–22.  
+**Approved renderings:** `taking my turn` within the Human Editor’s Col.1.24 construction.  
+**Restricted renderings:** Any wording implying Christ’s cross or saving work was deficient; a smoothing that erases the difficulty of Paul’s expression.  
+**In-text clarification boundary:** Preserve Paul’s difficult claim while avoiding a false deficiency implication; explanatory theology belongs in the required reader note.  
+**Footnote triggers:** Required `[rn]` at Col.1.24 explaining that Christ’s cross was not deficient and that ongoing afflictions are in view.  
+**Literary / discourse links:** Col.1.20–22 reconciliation; Col.1.24 suffering for the body/church.  
+**Evidence basis:**
+- lexical: compound filling/completing language with reciprocal or corresponding force;
+- syntactic: first-person verb governing what remains of Christ’s afflictions;
+- discourse: Paul’s bodily suffering is explicitly for the church after Christ’s reconciling death has been affirmed;
+- historical: — pending —;
+- theological: distinction between ongoing ministry suffering and Christ’s sufficient saving work;
+- precedent: Librarian backlog `[dl]` Col.1.24, confirmed precedent.
+
+**Confidence:** high for the Human Editor’s approved Col.1.24 rendering; interpretive details beyond it remain debated.  
+**Approved scope:** Col.1.24.  
+**Decision Log references:** `logs/FLT_librarian_backlog.md` — `[dl]` Col.1.24 ἀνταναπληρῶ / taking my turn.  
+**Worked examples:** Col.1.24 — Human Editor rendering uses `taking my turn`.  
+**Exceptions / unresolved questions:** The broader scholarly interpretation of “what is lacking in Christ’s afflictions” remains note-layer material rather than a lexical lock beyond the approved wording.
+
+**Cross-sense cautions.** Do not generalize the Col.1.24 theological resolution beyond its passage-specific scope.
+
+**Lemma-family links.** ἀναπληρόω; πληρόω.
+
+**Global unresolved questions.** No additional New Testament occurrence currently establishes a broader FLT precedent.
+
+---
+
+## ἀγωνίζομαι · agōnizomai
+
+**Internal lemma ID:** FLT-GRC-AGONIZOMAI  
+**Strong’s:** G75  
+**Entry status:** approved  
+**Last reviewed:** 2026-08-12  
+**Human editor:** David L. Davis
+
+**Semantic range.** Compete, contend, struggle, strive, or exert oneself intensely, often with athletic or contest imagery.
+
+**Historical / cultural considerations.** Athletic-contest imagery is available in the word family and is useful when the discourse links verb and noun: established lexical background; exact imagery remains context-sensitive.  
+**Theological significance.** The main concern is literary continuity: generic `struggle` can hide the direct family link between Col.1.29 and Col.2.1.
+
+**Default posture.** Sense-dependent.
+
+### Sense 1 — Paul’s strenuous ministry exertion
+
+**Sense status:** approved  
+**Definition:** Paul exerts himself like a competitor in the demanding work of ministry.  
+**Recognition cues:** Col.1.29; paired with κοπιάω; followed by the cognate noun ἀγών in Col.2.1.  
+**Approved renderings:** `compete`.  
+**Restricted renderings:** Generic `struggle` or `strive` when it unnecessarily erases the deliberate lexical link to ἀγών in Col.2.1.  
+**In-text clarification boundary:** Preserve the exertion/contest image without inventing a detailed athletic scene.  
+**Footnote triggers:** Normally none; study note optional if the lexical link needs explanation.  
+**Literary / discourse links:** Direct word-family bridge from Col.1.29 ἀγωνίζομαι to Col.2.1 ἀγών.  
+**Evidence basis:**
+- lexical: compete/contend/strive;
+- syntactic: participle describing Paul’s labor;
+- discourse: immediate transition to the cognate noun in Col.2.1;
+- historical: athletic-contest background;
+- theological: ministry exertion under divine power;
+- precedent: Librarian backlog `[dl]` agonizomai / agon, confirmed precedent.
+
+**Confidence:** high  
+**Approved scope:** Col.1.29 and its direct lexical continuity into Col.2.1.  
+**Decision Log references:** `logs/FLT_librarian_backlog.md` — `[dl]` agonizomai / agon → compete / contest.  
+**Worked examples:** Col.1.29 — `compete`.  
+**Exceptions / unresolved questions:** Other contexts may require `strive`, `fight`, or another rendering after fresh sense classification.
+
+**Cross-sense cautions.** Do not force athletic language where a different contextual function governs.
+
+**Lemma-family links.** ἀγών.
+
+**Global unresolved questions.** Scope beyond the Col.1.29–2.1 bridge remains open.
+
+---
+
+## ἀγών · agōn
+
+**Internal lemma ID:** FLT-GRC-AGON  
+**Strong’s:** G73  
+**Entry status:** approved  
+**Last reviewed:** 2026-08-12  
+**Human editor:** David L. Davis
+
+**Semantic range.** Contest, competition, struggle, conflict, or intense effort.
+
+**Historical / cultural considerations.** The noun can evoke an athletic contest but also broader conflict or struggle; the immediate cognate link to ἀγωνίζομαι is the controlling continuity consideration in Col.2.1: established.  
+**Theological significance.** Preserving the family link lets the reader hear that Paul’s Col.2.1 concern continues the strenuous ministry exertion named in Col.1.29.
+
+**Default posture.** Sense-dependent.
+
+### Sense 1 — The contest of Paul’s ministry for the churches
+
+**Sense status:** approved  
+**Definition:** The demanding contest or struggle Paul is engaged in on behalf of the Colossians and related believers.  
+**Recognition cues:** Col.2.1; immediate continuation from ἀγωνίζομαι in Col.1.29; Paul’s ministry for people he has not seen face to face.  
+**Approved renderings:** `contest`.  
+**Restricted renderings:** A generic rendering that unnecessarily severs the lexical bridge to `compete` in Col.1.29.  
+**In-text clarification boundary:** Preserve the contest/exertion image without adding details not supplied by the passage.  
+**Footnote triggers:** Normally none; study note optional for the cognate link.  
+**Literary / discourse links:** Col.1.29 `compete` → Col.2.1 `contest`.  
+**Evidence basis:**
+- lexical: contest, struggle, conflict;
+- syntactic: noun describing what Paul has for/on behalf of the readers;
+- discourse: immediate cognate continuation across the chapter boundary;
+- historical: contest imagery;
+- theological: pastoral/ministry exertion;
+- precedent: Librarian backlog `[dl]` agonizomai / agon, confirmed precedent.
+
+**Confidence:** high  
+**Approved scope:** Col.2.1 in direct continuity with Col.1.29.  
+**Decision Log references:** `logs/FLT_librarian_backlog.md` — `[dl]` agonizomai / agon → compete / contest.  
+**Worked examples:** Col.2.1 — approved lexical rendering `contest`; final verse wording remains subject to the ordinary Human Editor workflow.  
+**Exceptions / unresolved questions:** This lexical precedent does not pre-approve any complete English sentence for Col.2.1.
+
+**Cross-sense cautions.** Do not treat `contest` as a universal gloss for every ἀγών occurrence.
+
+**Lemma-family links.** ἀγωνίζομαι.
+
+**Global unresolved questions.** Scope beyond the Col.1.29–2.1 bridge remains open.
+
+---
+
+## πλήρωμα · plērōma
+
+**Internal lemma ID:** FLT-GRC-PLEROMA  
+**Strong’s:** G4138  
+**Entry status:** working  
+**Last reviewed:** 2026-08-12  
+**Human editor:** David L. Davis
+
+**Semantic range.** Fullness, that which fills, full measure, totality, or completeness, according to context.
+
+**Historical / cultural considerations.** Claims that πλήρωμα carries a fixed technical meaning in every Colossians occurrence are disputed and must not be assumed.  
+**Theological significance.** Col.1.19 deliberately leaves the content of the fullness underdefined in the reading text; Col.2.9 later explicitly connects the fullness language with deity.
+
+**Default posture.** Sense-dependent.
+
+### Sense 1 — The fullness dwelling in the Son
+
+**Sense status:** working  
+**Definition:** The fullness that God was pleased to have dwell in the Son; Col.1.19 itself does not fully define the content before Col.2.9 clarifies the concept.  
+**Recognition cues:** Col.1.19; dwelling language; continuation to Col.2.9.  
+**Approved renderings:** `fullness` is the recorded Col.1.19 reading anchor; no rendering is yet approved for Col.2.9.  
+**Restricted renderings:** Do not define the Col.1.19 fullness more narrowly than the Human Editor’s accepted reading and required `[tn]`; do not import Col.2.9 wording backward as though Col.1.19 explicitly stated it.  
+**In-text clarification boundary:** Leave `fullness` undefined in Col.1.19; surface the forward clarification in the study note rather than the reading text.  
+**Footnote triggers:** `[tn]` Col.1.19: record that the reading text deliberately leaves “fullness” undefined because Paul explicitly connects the concept with deity in Col.2.9.  
+**Literary / discourse links:** Mandatory forward link Col.1.19 → Col.2.9.  
+**Evidence basis:**
+- lexical: fullness/full measure;
+- syntactic: subject/complement relationship in the dwelling clause;
+- discourse: Col.2.9 supplies the explicit deity connection;
+- historical: disputed technical-background claims should not control prematurely;
+- theological: Christological sufficiency and deity;
+- precedent: accepted Col.1.19 reading and Librarian backlog `[tn]`.
+
+**Confidence:** moderate; the forward discourse link is high confidence, while the exact Col.2.9 rendering remains open.  
+**Approved scope:** none beyond the accepted Col.1.19 wording; Col.2.9 requires fresh Human Editor resolution.  
+**Decision Log references:** `logs/FLT_librarian_backlog.md` — `[tn]` Col.1.19 fullness.  
+**Worked examples:** Col.1.19 — `For God was pleased to have all His fullness live in the Son,`  
+**Exceptions / unresolved questions:** Exact sense and English rendering at Col.2.9 remain open and must surface this forward link during drafting.
+
+**Cross-sense cautions.** Do not treat `fullness` as a technical code word with a fixed imported definition.
+
+**Lemma-family links.** πληρόω and related filling/completion language.
+
+**Global unresolved questions.** Col.2.9 is the next required adjudication point.
+
+---
+
+## κεφαλή · kephalē
+
+**Internal lemma ID:** FLT-GRC-KEPHALE  
+**Strong’s:** G2776  
+**Entry status:** working  
+**Last reviewed:** 2026-08-12  
+**Human editor:** David L. Davis
+
+**Semantic range.** Head; literally the physical head and metaphorically a leading, governing, originating, or relational head, according to context.
+
+**Historical / cultural considerations.** The exact force of metaphorical `head` language is debated in some contexts; no single abstract theory should be imposed automatically.  
+**Theological significance.** In Colossians the head/body image carries Christological and ecclesial force and recurs as an argument link.
+
+**Default posture.** Retain-and-teach where the body image remains understandable; classify the metaphor contextually.
+
+### Sense 1 — Christ as head of His body, the church
+
+**Sense status:** working  
+**Definition:** Christ is presented as the head in an organic head/body relation to the church.  
+**Recognition cues:** Explicit σώμα pairing; church identified as the body; recurrence in Col.2.19.  
+**Approved renderings:** `head` is the recorded Col.1.18 reading anchor; Col.2.19 remains open.  
+**Restricted renderings:** Do not reduce the image to a single abstract gloss such as `leader`, `source`, or `authority` before the local discourse is weighed.  
+**In-text clarification boundary:** Preserve the head/body image when natural English allows; explanation of metaphorical implications belongs in notes or study material.  
+**Footnote triggers:** As needed when the metaphor’s force becomes an interpretive issue.  
+**Literary / discourse links:** Mandatory forward link Col.1.18 → Col.2.19; coordinate with σώμα.  
+**Evidence basis:**
+- lexical: head;
+- syntactic: κεφαλή paired with σώμα;
+- discourse: church/body identification in Col.1.18 and recurrence in Col.2.19;
+- historical: disputed metaphor theories require caution;
+- theological: Christ/church relation;
+- precedent: accepted Col.1.18 reading.
+
+**Confidence:** moderate  
+**Approved scope:** none beyond the accepted Col.1.18 wording; Col.2.19 requires fresh classification.  
+**Decision Log references:** accepted Col.1.18 Human Editor final; no separate `[dl]` lock recorded.  
+**Worked examples:** Col.1.18 — `He is the head of the body, which is the church.`  
+**Exceptions / unresolved questions:** Exact contextual force at Col.2.19 remains open.
+
+**Cross-sense cautions.** Preserve the image before reducing it to an abstract relation.
+
+**Lemma-family links.** σώμα.
+
+**Global unresolved questions.** Col.2.19 is the next explicit recurrence requiring review.
+
+---
+
+## σῶμα · sōma
+
+**Internal lemma ID:** FLT-GRC-SOMA  
+**Strong’s:** G4983  
+**Entry status:** working  
+**Last reviewed:** 2026-08-12  
+**Human editor:** David L. Davis
+
+**Semantic range.** Body, physical body, embodied person, or metaphorical corporate body, according to context.
+
+**Historical / cultural considerations.** — pending —  
+**Theological significance.** Colossians uses physical-body language and the church-as-body image in distinct but nearby ways; they must not be collapsed.
+
+**Default posture.** Sense-dependent.
+
+### Sense 1 — The church as Christ’s body
+
+**Sense status:** working  
+**Definition:** The church described through the body metaphor in relation to Christ as its head.  
+**Recognition cues:** Explicit κεφαλή pairing; church identification; recurrence in Col.2.19.  
+**Approved renderings:** `body` is the recorded Col.1.18 reading anchor; Col.2.19 remains open.  
+**Restricted renderings:** Do not flatten the corporate-body image to `group`, `community`, or another abstraction when the image carries the argument.  
+**In-text clarification boundary:** The reading text may identify the body as the church where the source does so.  
+**Footnote triggers:** Normally none unless the metaphor requires explanation.  
+**Literary / discourse links:** Mandatory forward link Col.1.18 → Col.2.19; coordinate with κεφαλή.  
+**Evidence basis:**
+- lexical: body;
+- syntactic: σώμα identified with the church and paired with κεφαλή;
+- discourse: organic Christ/church image recurs in Col.2.19;
+- historical: — pending —;
+- theological: ecclesiology and Christology;
+- precedent: accepted Col.1.18 reading.
+
+**Confidence:** high for the image; exact Col.2.19 English remains open.  
+**Approved scope:** none beyond the accepted Col.1.18 wording; Col.2.19 requires fresh classification.  
+**Decision Log references:** accepted Col.1.18 Human Editor final; no separate `[dl]` lock recorded.  
+**Worked examples:** Col.1.18 — `the body, which is the church`.  
+**Exceptions / unresolved questions:** Physical-body uses must be classified separately.
+
+**Cross-sense cautions.** Do not conflate the corporate church-body sense with physical body senses in Colossians.
+
+**Lemma-family links.** κεφαλή.
+
+**Global unresolved questions.** Col.2.19 is the next explicit corporate-body recurrence requiring review.
+
+---
+
+## εἰκών · eikōn
+
+**Internal lemma ID:** FLT-GRC-EIKON  
+**Strong’s:** G1504  
+**Entry status:** working  
+**Last reviewed:** 2026-08-12  
+**Human editor:** David L. Davis
+
+**Semantic range.** Image, likeness, representation, or visible manifestation, according to context.
+
+**Historical / cultural considerations.** Image language may draw on scriptural creation imagery and wider representation concepts; the controlling force in Col.1.15 must be determined from the passage rather than a single background theory.  
+**Theological significance.** Col.1.15 is a major Christological statement about the Son in relation to the invisible God.
+
+**Default posture.** Retain-and-teach unless the image becomes opaque in a new context.
+
+### Sense 1 — The Son as image of the invisible God
+
+**Sense status:** working  
+**Definition:** The Son is identified as the image of the God who is invisible; the image term participates in the passage’s presentation of His relation to God and creation.  
+**Recognition cues:** Col.1.15; paired immediately with πρωτότοκος and followed by creation-through-Him claims.  
+**Approved renderings:** `image` is the recorded Col.1.15 reading anchor.  
+**Restricted renderings:** Do not reduce the term to `copy`, imply that the Son is merely similar to God, or expand the reading text into a doctrinal paraphrase.  
+**In-text clarification boundary:** Retain the image claim in the reading text; fuller Christological explanation belongs in notes/study material.  
+**Footnote triggers:** As needed for Christological clarification; no separate required note is presently recorded for εἰκών itself.  
+**Literary / discourse links:** Coordinate with πρωτότοκος and the whole Col.1.15–20 Christological block; carry the claim forward as conceptual context for Colossians 2.  
+**Evidence basis:**
+- lexical: image/representation;
+- syntactic: predicate description of the Son;
+- discourse: immediately followed by creation and supremacy claims;
+- historical: multiple possible backgrounds;
+- theological: relation of the Son to God and creation;
+- precedent: accepted Col.1.15 reading.
+
+**Confidence:** moderate  
+**Approved scope:** none beyond the accepted Col.1.15 wording; later conceptual use requires contextual review.  
+**Decision Log references:** accepted Col.1.15 Human Editor final.  
+**Worked examples:** Col.1.15 — `The Son is the image of the invisible God`.  
+**Exceptions / unresolved questions:** How much explanatory force belongs to εἰκών itself rather than the surrounding Christological discourse remains open.
+
+**Cross-sense cautions.** Do not import all implications of later theological formulations into the bare lexical item.
+
+**Lemma-family links.** — pending —
+
+**Global unresolved questions.** Later New Testament image contexts require separate classification.
+
+---
+
+## πρωτότοκος · prōtotokos
+
+**Internal lemma ID:** FLT-GRC-PROTOTOKOS  
+**Strong’s:** G4416  
+**Entry status:** working  
+**Last reviewed:** 2026-08-12  
+**Human editor:** David L. Davis
+
+**Semantic range.** Firstborn; first in birth order, or a title carrying priority, rank, inheritance, or preeminence, according to context.
+
+**Historical / cultural considerations.** Firstborn language can carry rank and inheritance significance beyond chronological birth order: established; exact force remains context-dependent.  
+**Theological significance.** In Col.1.15 the term must not be allowed to imply that the Son is a created being; the required reader note explicitly addresses rank and authority.
+
+**Default posture.** Retain-and-teach where the biblical image remains understandable.
+
+### Sense 1 — The Son’s firstborn rank and authority over creation
+
+**Sense status:** working  
+**Definition:** In Col.1.15 the firstborn title presents the Son with supreme rank, priority, and heir-like authority over creation rather than identifying Him as the first created thing.  
+**Recognition cues:** Genitive relation to all creation; following explanation that all things were created in/through/for Him and that He is before all things; required `[rn]`.  
+**Approved renderings:** `firstborn over all creation` is the recorded Col.1.15 reading anchor.  
+**Restricted renderings:** Any rendering or explanation that implies the Son is part of the created order or that reduces the term to chronological birth order.  
+**In-text clarification boundary:** Retain `firstborn` in the reading text with its relational phrase; the rank-and-authority explanation belongs in the required reader note.  
+**Footnote triggers:** Required `[rn]` Col.1.15 explaining supreme rank, priority, and heir-like authority and stating that the term does not mean the Son is a created thing.  
+**Literary / discourse links:** Col.1.15–20 Christological block; second πρωτότοκος use at Col.1.18 (`firstborn from among the dead`); conceptual continuity into Colossians 2.  
+**Evidence basis:**
+- lexical: firstborn with chronological and rank-related uses;
+- syntactic: `firstborn over all creation` in the accepted reading’s contextual resolution;
+- discourse: all creation is immediately said to be created in/through/for the Son, and He precedes all things;
+- historical: firstborn rank/inheritance background;
+- theological: Son’s supremacy and non-creature status;
+- precedent: required Librarian backlog `[rn]` Col.1.15 and accepted Human Editor final.
+
+**Confidence:** high for the Col.1.15 contextual constraint; broader lexical policy remains working.  
+**Approved scope:** none beyond the accepted Col.1.15 wording and required note; other πρωτότοκος contexts require separate classification.  
+**Decision Log references:** `logs/FLT_librarian_backlog.md` — `[rn]` Col.1.15 firstborn rank and authority.  
+**Worked examples:** Col.1.15 — `the firstborn over all creation`.  
+**Exceptions / unresolved questions:** Col.1.18 `firstborn from among the dead` carries a distinct contextual relation and should not be collapsed into the Col.1.15 sense.
+
+**Cross-sense cautions.** Do not make rank-language a one-size-fits-all gloss for every occurrence of πρωτότοκος.
+
+**Lemma-family links.** — pending —
+
+**Global unresolved questions.** Other firstborn contexts remain open.
+
+---
+
 # 8. Amendment and Growth
 
 The Matrix grows passage by passage.
