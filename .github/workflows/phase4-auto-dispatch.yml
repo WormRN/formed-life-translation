@@ -90,6 +90,8 @@ jobs:
               *) echo "Refusing unauthorized Phase 4 workflow: $workflow" >&2; exit 2 ;;
             esac
 
+            # GitHub's workflow-dispatch REST API requires input values to be strings,
+            # even when the target workflow declares a typed number input.
             payload="$(jq -n \
               --arg ref main \
               --arg unit "$unit" \
@@ -97,7 +99,7 @@ jobs:
               --arg auth "$authorization" \
               --arg manifest "$manifest" \
               --arg source "$source_path" \
-              --argjson rev "$revision" \
+              --arg rev "$revision" \
               '{ref:$ref,inputs:{unit_id:$unit,task_id:$task,authorization_id:$auth,expected_manifest_revision:$rev,passage_manifest_path:$manifest,blind_source_path:$source}}')"
 
             echo "Dispatching $workflow for $unit task $task at manifest revision $revision"
