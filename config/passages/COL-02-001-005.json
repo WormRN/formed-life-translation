@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "manifest_revision": 13,
+  "manifest_revision": 14,
   "last_updated": "2026-08-13",
   "unit": {
     "unit_id": "COL-02-001-005",
@@ -37,20 +37,20 @@
     "circuit_breaker_spec": "docs/architecture/phase-4/FLT_Autonomous_Circuit_Breaker_v1.md"
   },
   "state": {
-    "status": "ready",
-    "phase": "human_editor_terminal_package_sealed_exact_audit_authorized",
-    "active_job_id": null,
-    "active_run_id": "31763747874",
+    "status": "running",
+    "phase": "final_exact_audit_running",
+    "active_job_id": "COL-02-001-005-EXACT-AUDIT-01",
+    "active_run_id": "31764022182",
     "translation_allowed": true,
     "candidate_generation_allowed": false,
     "provider_dispatch_allowed": true,
-    "github_workflow_dispatch_allowed": true,
+    "github_workflow_dispatch_allowed": false,
     "translation_artifact_mutation_allowed": false,
-    "next_permitted_action": "dispatch COL-02-001-005-EXACT-AUDIT-01 through phase4-exact-audit.yml against the exact complete Human Editor package"
+    "next_permitted_action": "await verified final exact-audit completion or exact cancel"
   },
   "allowed_actions": [
     "flt status COL-02-001-005",
-    "dispatch COL-02-001-005-EXACT-AUDIT-01",
+    "flt cancel COL-02-001-005 --job COL-02-001-005-EXACT-AUDIT-01 --expected-revision 14",
     "read_only_repository_inspection"
   ],
   "forbidden_actions": [
@@ -106,7 +106,7 @@
     "COL-02-001-005-EXACT-AUDIT-01": {
       "idempotency_key": "flt:2.2:COL-02-001-005:exact-audit:01",
       "job_type": "complete_package_semantic_floor_exact_candidate_audit",
-      "status": "authorized_ready",
+      "status": "running",
       "authorization_id": "HE-COL-02-001-005-TERMINAL-AUDIT-20260813",
       "authorized_by": "human_editor",
       "authorization_scope": "Audit the exact Human Editor terminal reading text together with both approved transparency notes and the binding local Col.2.1 fighting override; do not alter Col.1.29; on a clean 3-of-3 zero-block semantic pass record terminal Human Editor acceptance.",
@@ -117,18 +117,19 @@
       "provider_attempts_used": 0,
       "provider_attempts_remaining": 8,
       "checkpoints_to_restore": 0,
-      "dispatch_confirmed": false,
+      "dispatch_confirmed": true,
       "retry_allowed": false,
       "launch": {
         "mode": "automatic_manifest_push_dispatch",
         "nonce": "HE-COL-02-001-005-EXACT-AUDIT-20260813-01",
-        "status": "armed",
+        "status": "consumed",
         "armed_by": "human_editor",
         "authorization_id": "HE-COL-02-001-005-TERMINAL-AUDIT-20260813",
         "expected_manifest_revision": 13,
-        "consumed_run_id": null,
-        "consumed_nonce": null
-      }
+        "consumed_run_id": "31764022182",
+        "consumed_nonce": "HE-COL-02-001-005-EXACT-AUDIT-20260813-01"
+      },
+      "remote_run_id": "31764022182"
     }
   },
   "source_gate": {
