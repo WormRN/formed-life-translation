@@ -57,8 +57,8 @@ bootstrap:
 execution_control:
   model: "passage_manifest_state_machine_v1"
   state_machine_spec: "docs/architecture/phase-4/passage-manifest-state-machine-v1.md"
-  current_unit_id: "COL-02-001-005"
-  current_passage_manifest: "config/passages/COL-02-001-005.json"
+  current_unit_id: "COL-02-006-015"
+  current_passage_manifest: "config/passages/COL-02-006-015.json"
   default_branch_state_is_authoritative: true
   chat_history_is_authoritative: false
   branch_and_pull_request_state_is_proposed_only: true
@@ -103,13 +103,13 @@ governing_documents:
 current_checkpoint:
   book: "Colossians"
   chapter: 2
-  current_unit_id: "COL-02-001-005"
-  current_passage: "Colossians 2:1-5"
-  stage: "human_editor_terminal_text_pending_smoothing_and_exact_audit"
-  candidate_status: "Human Editor terminal text selected and packaged on PR #74; default-branch passage manifest remains authoritative until merge."
+  current_unit_id: "COL-02-006-015"
+  current_passage: "Colossians 2:6-15"
+  stage: "blind_drafting_authorized"
+  candidate_status: "Colossians 2:6-15 Passage-Sense packet approved; blind draft armed under the authoritative passage manifest."
   candidate_sealed: true
   latest_accepted_unit: "Colossians 1:24-29 accepted after corrected complete-package exact audit; Chapter 1 is terminal and must remain unchanged."
-  next_permitted_action: "Merge the Human Editor-authorized Colossians 2:1-5 terminal package and allow the automatic manifest dispatcher to launch the authorized smoothing job."
+  next_permitted_action: "Allow the automatic manifest dispatcher to launch the exactly armed Colossians 2:6-15 blind-draft job; then await Human Editor candidate adjudication."
   copyright_status: "DEFERRED_BATCH"
   provisional_heuristic_check: "not_started"
   source_gate_status: "complete_for_blind_drafting"
@@ -295,8 +295,8 @@ current_checkpoint:
     semantic_pass: true
     human_acceptance_after_oral_review_pending: false
   active_files:
-    passage_manifest: "config/passages/COL-02-001-005.json"
-    blind_source: "docs/architecture/phase-4/COL-02-001-005_smoothing-source-v2.2_blind-source-v2.2.json"
+    passage_manifest: "config/passages/COL-02-006-015.json"
+    blind_source: "docs/architecture/phase-4/COL-02-006-015_approved-blind-source-v2.2.json"
     historical_preflight: "config/COL-01-001-014_blind-draft-preflight-v01.json"
     quarantined_workflow: ".github/workflows/phase4-col1-001-014-sense-drafts.yml"
     state_machine_spec: "docs/architecture/phase-4/passage-manifest-state-machine-v1.md"
