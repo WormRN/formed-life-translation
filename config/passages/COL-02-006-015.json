@@ -2,191 +2,20 @@
   "schema_version": "1.0.0",
   "manifest_revision": 5,
   "last_updated": "2026-08-14",
-  "unit": {
-    "unit_id": "COL-02-006-015",
-    "book": "Colossians",
-    "passage": "Colossians 2:6-15",
-    "source_edition": "SBLGNT",
-    "engine_version": "2.2"
-  },
-  "authority": {
-    "state_source": "this_file_on_default_branch",
-    "human_editor": "David L. Davis",
-    "chat_history_authoritative": false,
-    "historical_preflight_authorization_reusable": false,
-    "conflict_policy": "stop_and_report"
-  },
-  "artifacts": {
-    "source_packet": "docs/architecture/phase-4/COL-02-006-015_approved_blind-source-v2.2.json",
-    "human_editor_passage_sense_rulings": "docs/architecture/phase-4/COL-02-006-015_passage-sense-rulings-v2.2.md",
-    "contextual_lexical_matrix": "docs/current/FLT_contextual_lexical_matrix_v2.0.md",
-    "contextual_lexical_matrix_override": "docs/current/FLT_contextual_lexical_matrix_colossians_overrides_v2.0.md",
-    "unit_matrix_overlay": "docs/current/FLT_contextual_lexical_matrix_colossians_2_6_15_v2.0.md",
-    "draft_workflow": ".github/workflows/phase4-sense-drafts.yml",
-    "smoothing_workflow": ".github/workflows/phase4-human-smoothing.yml",
-    "exact_audit_workflow": ".github/workflows/phase4-exact-audit.yml",
-    "state_machine_spec": "docs/architecture/phase-4/passage-manifest-state-machine-v1.md",
-    "circuit_breaker_spec": "docs/architecture/phase-4/FLT_Autonomous_Circuit_Breaker_v1.md"
-  },
-  "state": {
-    "status": "ready",
-    "phase": "passage_sense_complete_blind_drafting_authorized_recovery_after_zero_provider_note_schema_failure",
-    "active_job_id": null,
-    "active_run_id": null,
-    "translation_allowed": true,
-    "candidate_generation_allowed": true,
-    "provider_dispatch_allowed": true,
-    "github_workflow_dispatch_allowed": true,
-    "translation_artifact_mutation_allowed": true,
-    "next_permitted_action": "automatic manifest-push dispatcher may launch exactly COL-02-006-015-BLIND-DRAFT-04"
-  },
-  "allowed_actions": [
-    "flt status COL-02-006-015",
-    "automatic dispatch of COL-02-006-015-BLIND-DRAFT-04 only",
-    "read_only_repository_inspection"
-  ],
-  "forbidden_actions": [
-    "dispatch BLIND-DRAFT-01 or BLIND-DRAFT-02 again",
-    "expose comparison translations to blind workers",
-    "use prior FLT English or conversational drafts as worker input",
-    "resolve contested stoicheia beyond the Human Editor underdetermined ruling",
-    "present the Col.2.12 faith-genitive or Col.2.15 en auto antecedent as settled",
-    "drop any member of the buried-with / raised-with / made-alive-with Christ chain",
-    "shift the working subject between God and Christ mid-sentence in Col.2.13-15",
-    "invent a corpus-level pler- family policy",
-    "rerun successful siblings",
-    "reuse a consumed nonce",
-    "modify terminal Colossians 2:1-5",
-    "modify terminal Colossians chapter 1 units",
-    "modify Philippians v0.9 RC1"
-  ],
+  "dispatch_trigger": "repository_api_after_one_shot_note_schema_repair",
+  "unit": {"unit_id":"COL-02-006-015","book":"Colossians","passage":"Colossians 2:6-15","source_edition":"SBLGNT","engine_version":"2.2"},
+  "authority": {"state_source":"this_file_on_default_branch","human_editor":"David L. Davis","chat_history_authoritative":false,"historical_preflight_authorization_reusable":false,"conflict_policy":"stop_and_report"},
+  "artifacts": {"source_packet":"docs/architecture/phase-4/COL-02-006-015_approved_blind-source-v2.2.json","human_editor_passage_sense_rulings":"docs/architecture/phase-4/COL-02-006-015_passage-sense-rulings-v2.2.md","contextual_lexical_matrix":"docs/current/FLT_contextual_lexical_matrix_v2.0.md","contextual_lexical_matrix_override":"docs/current/FLT_contextual_lexical_matrix_colossians_overrides_v2.0.md","unit_matrix_overlay":"docs/current/FLT_contextual_lexical_matrix_colossians_2_6_15_v2.0.md","draft_workflow":".github/workflows/phase4-sense-drafts.yml","smoothing_workflow":".github/workflows/phase4-human-smoothing.yml","exact_audit_workflow":".github/workflows/phase4-exact-audit.yml","state_machine_spec":"docs/architecture/phase-4/passage-manifest-state-machine-v1.md","circuit_breaker_spec":"docs/architecture/phase-4/FLT_Autonomous_Circuit_Breaker_v1.md"},
+  "state": {"status":"ready","phase":"passage_sense_complete_blind_drafting_authorized_recovery_after_zero_provider_note_schema_failure","active_job_id":null,"active_run_id":null,"translation_allowed":true,"candidate_generation_allowed":true,"provider_dispatch_allowed":true,"github_workflow_dispatch_allowed":true,"translation_artifact_mutation_allowed":true,"next_permitted_action":"automatic manifest-push dispatcher may launch exactly COL-02-006-015-BLIND-DRAFT-04"},
+  "allowed_actions": ["flt status COL-02-006-015","automatic dispatch of COL-02-006-015-BLIND-DRAFT-04 only","read_only_repository_inspection"],
+  "forbidden_actions": ["dispatch BLIND-DRAFT-01 or BLIND-DRAFT-02 again","expose comparison translations to blind workers","use prior FLT English or conversational drafts as worker input","resolve contested stoicheia beyond the Human Editor underdetermined ruling","present the Col.2.12 faith-genitive or Col.2.15 en auto antecedent as settled","drop any member of the buried-with / raised-with / made-alive-with Christ chain","shift the working subject between God and Christ mid-sentence in Col.2.13-15","invent a corpus-level pler- family policy","rerun successful siblings","reuse a consumed nonce","modify terminal Colossians 2:1-5","modify terminal Colossians chapter 1 units","modify Philippians v0.9 RC1"],
   "jobs": {
-    "COL-02-006-015-BLIND-DRAFT-01": {
-      "idempotency_key": "flt:2.2:COL-02-006-015:blind-draft:01",
-      "job_type": "blind_candidate_passage_sense_drafting",
-      "status": "blocked_zero_provider_preflight_path_contract_failure",
-      "authorization_id": "HE-COL-02-006-015-BLIND-DRAFT-20260814",
-      "dispatch_allowed": false,
-      "provider_attempts_used": 0,
-      "remote_run_id": "31776021443",
-      "retry_allowed": false
-    },
-    "COL-02-006-015-BLIND-DRAFT-02": {
-      "idempotency_key": "flt:2.2:COL-02-006-015:blind-draft:02",
-      "job_type": "blind_candidate_passage_sense_drafting",
-      "status": "blocked_zero_provider_preflight_proposition_reference_schema_failure",
-      "authorization_id": "HE-COL-02-006-015-BLIND-DRAFT-RECOVERY-20260814",
-      "dispatch_allowed": false,
-      "provider_attempts_used": 0,
-      "remote_run_id": "31776254049",
-      "failure": "Passage-Sense proposition map used range labels instead of exact verse reference IDs; nonce not consumed and no provider accessed",
-      "retry_allowed": false
-    },
-    "COL-02-006-015-BLIND-DRAFT-03": {
-      "idempotency_key": "flt:2.2:COL-02-006-015:blind-draft:03",
-      "job_type": "blind_candidate_passage_sense_drafting",
-      "status": "blocked_zero_provider_preflight_note_schema_failure",
-      "authorization_id": "HE-COL-02-006-015-BLIND-DRAFT-SCHEMA-RECOVERY-20260814",
-      "authorized_by": "human_editor",
-      "authorization_scope": "Deterministic zero-provider recovery after proposition-reference schema rejection. Generate exactly three blind common-goal candidates from the unchanged Human Editor-approved source-side rulings. Comparison translations remain excluded until post-draft Decision-Brief advisory checking.",
-      "dispatch_allowed": false,
-      "workflow": ".github/workflows/phase4-sense-drafts.yml",
-      "max_attempts_per_worker": 2,
-      "task_max_attempts": 8,
-      "provider_attempts_used": 0,
-      "provider_attempts_remaining": 8,
-      "candidate_a_attempts_used": 0,
-      "candidate_b_attempts_used": 0,
-      "candidate_c_attempts_used": 0,
-      "checkpoints_to_restore": 0,
-      "dispatch_confirmed": false,
-      "retry_allowed": false,
-      "launch": {
-        "mode": "automatic_manifest_push_dispatch",
-        "nonce": "HE-COL-02-006-015-BLIND-DRAFT-20260814-03",
-        "status": "armed",
-        "armed_by": "human_editor",
-        "authorization_id": "HE-COL-02-006-015-BLIND-DRAFT-SCHEMA-RECOVERY-20260814",
-        "expected_manifest_revision": 4,
-        "consumed_run_id": null
-      },
-      "remote_run_id": "31776431733",
-      "failure": "Passage-Sense expression audit_text_and_note_together was true on senses without required notes; nonce not consumed and no provider accessed"
-    },
-    "COL-02-006-015-BLIND-DRAFT-04": {
-      "idempotency_key": "flt:2.2:COL-02-006-015:blind-draft:04",
-      "job_type": "blind_candidate_passage_sense_drafting",
-      "status": "authorized_ready",
-      "authorization_id": "HE-COL-02-006-015-BLIND-DRAFT-NOTE-SCHEMA-RECOVERY-20260814",
-      "authorized_by": "human_editor",
-      "authorization_scope": "Deterministic zero-provider recovery after Passage-Sense note-audit schema rejection. Generate exactly three blind common-goal candidates from the unchanged Human Editor-approved source-side rulings. Comparison translations remain excluded until post-draft Decision-Brief advisory checking.",
-      "dispatch_allowed": true,
-      "workflow": ".github/workflows/phase4-sense-drafts.yml",
-      "max_attempts_per_worker": 2,
-      "task_max_attempts": 8,
-      "provider_attempts_used": 0,
-      "provider_attempts_remaining": 8,
-      "candidate_a_attempts_used": 0,
-      "candidate_b_attempts_used": 0,
-      "candidate_c_attempts_used": 0,
-      "checkpoints_to_restore": 0,
-      "dispatch_confirmed": false,
-      "retry_allowed": false,
-      "launch": {
-        "mode": "automatic_manifest_push_dispatch",
-        "nonce": "HE-COL-02-006-015-BLIND-DRAFT-20260814-04",
-        "status": "armed",
-        "armed_by": "human_editor",
-        "authorization_id": "HE-COL-02-006-015-BLIND-DRAFT-NOTE-SCHEMA-RECOVERY-20260814",
-        "expected_manifest_revision": 5,
-        "consumed_run_id": null
-      }
-    }
+    "COL-02-006-015-BLIND-DRAFT-01": {"idempotency_key":"flt:2.2:COL-02-006-015:blind-draft:01","job_type":"blind_candidate_passage_sense_drafting","status":"blocked_zero_provider_preflight_path_contract_failure","authorization_id":"HE-COL-02-006-015-BLIND-DRAFT-20260814","dispatch_allowed":false,"provider_attempts_used":0,"remote_run_id":"31776021443","retry_allowed":false},
+    "COL-02-006-015-BLIND-DRAFT-02": {"idempotency_key":"flt:2.2:COL-02-006-015:blind-draft:02","job_type":"blind_candidate_passage_sense_drafting","status":"blocked_zero_provider_preflight_proposition_reference_schema_failure","authorization_id":"HE-COL-02-006-015-BLIND-DRAFT-RECOVERY-20260814","dispatch_allowed":false,"provider_attempts_used":0,"remote_run_id":"31776254049","failure":"Passage-Sense proposition map used range labels instead of exact verse reference IDs; nonce not consumed and no provider accessed","retry_allowed":false},
+    "COL-02-006-015-BLIND-DRAFT-03": {"idempotency_key":"flt:2.2:COL-02-006-015:blind-draft:03","job_type":"blind_candidate_passage_sense_drafting","status":"blocked_zero_provider_preflight_note_schema_failure","authorization_id":"HE-COL-02-006-015-BLIND-DRAFT-SCHEMA-RECOVERY-20260814","authorized_by":"human_editor","authorization_scope":"Deterministic zero-provider recovery after proposition-reference schema rejection. Generate exactly three blind common-goal candidates from the unchanged Human Editor-approved source-side rulings. Comparison translations remain excluded until post-draft Decision-Brief advisory checking.","dispatch_allowed":false,"workflow":".github/workflows/phase4-sense-drafts.yml","max_attempts_per_worker":2,"task_max_attempts":8,"provider_attempts_used":0,"provider_attempts_remaining":8,"candidate_a_attempts_used":0,"candidate_b_attempts_used":0,"candidate_c_attempts_used":0,"checkpoints_to_restore":0,"dispatch_confirmed":false,"retry_allowed":false,"launch":{"mode":"automatic_manifest_push_dispatch","nonce":"HE-COL-02-006-015-BLIND-DRAFT-20260814-03","status":"armed","armed_by":"human_editor","authorization_id":"HE-COL-02-006-015-BLIND-DRAFT-SCHEMA-RECOVERY-20260814","expected_manifest_revision":4,"consumed_run_id":null},"remote_run_id":"31776431733","failure":"Passage-Sense expression audit_text_and_note_together was true on senses without required notes; nonce not consumed and no provider accessed"},
+    "COL-02-006-015-BLIND-DRAFT-04": {"idempotency_key":"flt:2.2:COL-02-006-015:blind-draft:04","job_type":"blind_candidate_passage_sense_drafting","status":"authorized_ready","authorization_id":"HE-COL-02-006-015-BLIND-DRAFT-NOTE-SCHEMA-RECOVERY-20260814","authorized_by":"human_editor","authorization_scope":"Deterministic zero-provider recovery after Passage-Sense note-audit schema rejection. Generate exactly three blind common-goal candidates from the unchanged Human Editor-approved source-side rulings. Comparison translations remain excluded until post-draft Decision-Brief advisory checking.","dispatch_allowed":true,"workflow":".github/workflows/phase4-sense-drafts.yml","max_attempts_per_worker":2,"task_max_attempts":8,"provider_attempts_used":0,"provider_attempts_remaining":8,"candidate_a_attempts_used":0,"candidate_b_attempts_used":0,"candidate_c_attempts_used":0,"checkpoints_to_restore":0,"dispatch_confirmed":false,"retry_allowed":false,"launch":{"mode":"automatic_manifest_push_dispatch","nonce":"HE-COL-02-006-015-BLIND-DRAFT-20260814-04","status":"armed","armed_by":"human_editor","authorization_id":"HE-COL-02-006-015-BLIND-DRAFT-NOTE-SCHEMA-RECOVERY-20260814","expected_manifest_revision":5,"consumed_run_id":null}}
   },
-  "source_gate": {
-    "status": "complete_for_blind_drafting",
-    "gate_version": "2.2",
-    "human_editor_approved": true,
-    "approved_date": "2026-08-14",
-    "approved_packet": "docs/architecture/phase-4/COL-02-006-015_approved_blind-source-v2.2.json",
-    "matrix_stubs_populated": true,
-    "contested_rulings_preserved": [
-      "Col.2.8 stoicheia underdetermined",
-      "Col.2.9 somatikos exact range contested",
-      "Col.2.12 faith-genitive contested with objective working ruling",
-      "Col.2.13-15 subject continuity is a working construal",
-      "Col.2.14 tois dogmasin relation unresolved",
-      "Col.2.15 en auto contested with through-the-cross working ruling"
-    ],
-    "required_transparency_notes_from_source_gate": [
-      "Col.2.8 stoicheia — present both live readings",
-      "Col.2.12 faith-genitive — present both live readings"
-    ],
-    "copyright_advisory": {
-      "timing": "post_draft_decision_brief_only",
-      "blind_worker_exposure": false,
-      "comparators": [
-        "NIV",
-        "CSB",
-        "NLT",
-        "ESV",
-        "NASB"
-      ],
-      "constrained_phrase_threshold": "three_or_more_comparators_converge_on_Greek_constrained_wording"
-    }
-  },
-  "editorial_decisions": {
-    "candidate_status": "blind_drafting_authorized_note_schema_recovery_not_yet_run",
-    "passage_sense_status": "human_editor_approved",
-    "copyright_status": "DEFERRED_BATCH_WITH_POST_DRAFT_ADVISORY_FOR_THIS_UNIT",
-    "publication_clearance": false
-  },
-  "invariants": [
-    "Only the default-branch copy is authoritative.",
-    "Candidate A/B/C share one constitutional goal and the same approved source-side packet.",
-    "Comparison translations and prior FLT English remain absent from blind drafting.",
-    "Every contested ruling remains visibly contested in the worker brief and Decision Brief.",
-    "BLIND-DRAFT-01 and BLIND-DRAFT-02 each consumed zero provider attempts and may not be rerun.",
-    "No successful worker may be rerun merely for stylistic variation."
-  ]
+  "source_gate": {"status":"complete_for_blind_drafting","gate_version":"2.2","human_editor_approved":true,"approved_date":"2026-08-14","approved_packet":"docs/architecture/phase-4/COL-02-006-015_approved_blind-source-v2.2.json","matrix_stubs_populated":true,"contested_rulings_preserved":["Col.2.8 stoicheia underdetermined","Col.2.9 somatikos exact range contested","Col.2.12 faith-genitive contested with objective working ruling","Col.2.13-15 subject continuity is a working construal","Col.2.14 tois dogmasin relation unresolved","Col.2.15 en auto contested with through-the-cross working ruling"],"required_transparency_notes_from_source_gate":["Col.2.8 stoicheia — present both live readings","Col.2.12 faith-genitive — present both live readings"],"copyright_advisory":{"timing":"post_draft_decision_brief_only","blind_worker_exposure":false,"comparators":["NIV","CSB","NLT","ESV","NASB"],"constrained_phrase_threshold":"three_or_more_comparators_converge_on_Greek_constrained_wording"}},
+  "editorial_decisions": {"candidate_status":"blind_drafting_authorized_note_schema_recovery_not_yet_run","passage_sense_status":"human_editor_approved","copyright_status":"DEFERRED_BATCH_WITH_POST_DRAFT_ADVISORY_FOR_THIS_UNIT","publication_clearance":false},
+  "invariants": ["Only the default-branch copy is authoritative.","Candidate A/B/C share one constitutional goal and the same approved source-side packet.","Comparison translations and prior FLT English remain absent from blind drafting.","Every contested ruling remains visibly contested in the worker brief and Decision Brief.","BLIND-DRAFT-01 and BLIND-DRAFT-02 each consumed zero provider attempts and may not be rerun.","No successful worker may be rerun merely for stylistic variation."]
 }
