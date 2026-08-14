@@ -7,11 +7,11 @@
 
 ## ἀγωνίζομαι / ἀγών · agōnizomai / agōn
 
-**Status:** approved  
-**Scope:** Colossians 1:29–2:1 lexical bridge.  
-**Approved rendering:** `struggle`, naturally inflected as `struggling`.  
-**Human Editor ruling:** The earlier `compete / contest` lock is superseded. Colossians 1:29 is retroactively governed by `struggle` so the cognate link continues naturally into Colossians 2:1 `struggling`.  
-**Restriction:** Do not reintroduce `compete / contest` inside this approved bridge unless the Human Editor reopens the precedent.
+**Status:** approved contextual lock  
+**Scope:** Colossians 2:1 local context.  
+**Approved rendering:** `fighting`.  
+**Human Editor ruling:** Use fighting in Colossians 2:1. **Do not retroactively alter Colossians 1:29; Chapter 1 remains sealed as-is.**  
+**Restriction:** This is a local contextual precedent, not a global one-to-one rendering for the word family.
 
 ## ἀποκρύπτω / ἀπόκρυφος · apokryptō / apokryphos
 
@@ -37,3 +37,19 @@
 **Approved rendering:** `bind together`, naturally inflected as `bound together`.  
 **Sense:** The community is joined together in love.  
 **Restriction:** Other contexts may use reasoning/inference senses and require fresh classification.
+
+## τάξις · taxis
+
+**Status:** approved contextual sense  
+**Scope:** Colossians 2:5.  
+**Approved rendering:** `holding together`.  
+**Sense:** Ordered arrangement or disciplined formation; in this context the Human Editor preserves the formation imagery in natural English.  
+**Note trigger:** `[tn]` may explain the military association with ordered ranks.
+
+## στερέωμα · stereōma
+
+**Status:** approved contextual sense  
+**Scope:** Colossians 2:5.  
+**Approved rendering:** `secure`.  
+**Sense:** Firmness, stability, solidity; here the believers' trust in Christ is pictured as secure.  
+**Note trigger:** `[tn]` may explain the military association with a solid front or stable formation.
