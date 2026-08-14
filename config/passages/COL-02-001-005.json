@@ -14,12 +14,13 @@
     "draft_workflow":".github/workflows/phase4-sense-drafts.yml",
     "smoothing_workflow":".github/workflows/phase4-human-smoothing.yml",
     "exact_audit_workflow":".github/workflows/phase4-exact-audit.yml",
+    "decision_log":"logs/decision-log/COL-02-001-005-human-synthesis-20260813.md",
     "state_machine_spec":"docs/architecture/phase-4/passage-manifest-state-machine-v1.md",
     "circuit_breaker_spec":"docs/architecture/phase-4/FLT_Autonomous_Circuit_Breaker_v1.md"
   },
-  "state": {"status":"ready","phase":"human_editor_synthesis_sealed_smoothing_authorized","active_job_id":null,"active_run_id":"31674368604","translation_allowed":true,"candidate_generation_allowed":false,"provider_dispatch_allowed":true,"github_workflow_dispatch_allowed":true,"translation_artifact_mutation_allowed":false,"next_permitted_action":"dispatch COL-02-001-005-SMOOTH-01 through phase4-human-smoothing.yml using the exact Human Editor synthesis"},
+  "state": {"status":"ready","phase":"human_editor_terminal_text_sealed_smoothing_authorized","active_job_id":null,"active_run_id":"31674368604","translation_allowed":true,"candidate_generation_allowed":false,"provider_dispatch_allowed":true,"github_workflow_dispatch_allowed":true,"translation_artifact_mutation_allowed":false,"next_permitted_action":"dispatch COL-02-001-005-SMOOTH-01 through phase4-human-smoothing.yml against the exact Human Editor terminal text"},
   "allowed_actions":["flt status COL-02-001-005","dispatch COL-02-001-005-SMOOTH-01","read_only_repository_inspection"],
-  "forbidden_actions":["rerun successful blind workers","change the sealed Human Editor synthesis during smoothing","use comparison translations","reuse a consumed nonce","modify Philippians v0.9 RC1"],
+  "forbidden_actions":["rerun successful blind workers","change the sealed Human Editor terminal text during smoothing","use comparison translations","reuse a consumed nonce","modify terminal Colossians chapter 1 units","modify Philippians v0.9 RC1"],
   "jobs": {
     "COL-02-001-005-BLIND-DRAFT-01":{"status":"blocked_zero_provider_workflow_setup_failure","provider_attempts_used":0,"retry_allowed":false,"remote_run_id":"31674227604"},
     "COL-02-001-005-BLIND-DRAFT-02":{"status":"completed_recovered_for_human_editor","provider_attempts_used":6,"provider_attempts_remaining":2,"retry_allowed":false,"remote_run_id":"31674368604","source_artifact_id":9170976374},
@@ -29,7 +30,7 @@
       "status":"authorized_ready",
       "authorization_id":"HE-COL-02-001-005-SMOOTH-20260813",
       "authorized_by":"human_editor",
-      "authorization_scope":"Run listener-only diagnosis and source-aware smoothing against the exact Human Editor synthesis without modifying it; preserve Human Editor lexical overrides and notes as governing package metadata.",
+      "authorization_scope":"Run listener-only diagnosis and source-aware smoothing against the exact Human Editor terminal text without modifying it; preserve both transparency notes and all Human Editor lexical overrides as governing package metadata.",
       "dispatch_allowed":true,
       "workflow":".github/workflows/phase4-human-smoothing.yml",
       "max_attempts_per_worker":2,
@@ -42,7 +43,7 @@
       "launch":{"mode":"automatic_manifest_push_dispatch","nonce":"HE-COL-02-001-005-SMOOTH-20260813-01","status":"armed","armed_by":"human_editor","authorization_id":"HE-COL-02-001-005-SMOOTH-20260813","expected_manifest_revision":10,"consumed_run_id":null,"consumed_nonce":null}
     }
   },
-  "source_gate":{"status":"complete_for_blind_drafting","gate_version":"2.2","human_editor_approved":true,"human_editor_approval_date":"2026-08-13","human_editor_lexical_override_date":"2026-08-13","locked_matrix_alerts_required":["μυστήριον -> secret plan","ἀγωνίζομαι / ἀγών -> struggle / struggling for Col.1.29-2.1","ἀποκρύπτω / ἀπόκρυφος -> hidden for Col.1.26 and 2.3","σάρξ -> in person for Col.2.1 and 2.5","συμβιβάζω -> bind together / bound together for Col.2.2"]},
-  "editorial_decisions":{"candidate_status":"human_editor_synthesis_sealed","human_editor_selection":"exact synthesis recorded 2026-08-13","note_package_status":"two transparency notes attached and required for terminal package audit","matrix_override_status":"Human Editor Colossians override layer is binding over conflicting older base-Matrix entries","acceptance_status":"not_started"},
-  "invariants":["Only the default-branch copy is authoritative.","The Human Editor synthesis is sealed and smoothing may propose but not silently modify wording.","The Colossians Matrix override layer supersedes conflicting older compete/contest language in the base Matrix.","The terminal exact audit must include the exact text, both TN-tagged notes, and the binding Human Editor lexical override.","The Human Editor alone selects or changes wording."]
+  "source_gate":{"status":"complete_for_blind_drafting","gate_version":"2.2","human_editor_approved":true,"human_editor_approval_date":"2026-08-13","human_editor_lexical_override_date":"2026-08-13","locked_matrix_alerts_required":["μυστήριον -> secret plan","ἀγών -> fighting for Col.2.1 only; do not alter Col.1.29","ἀποκρύπτω / ἀπόκρυφος -> hidden for Col.1.26 and 2.3","σάρξ -> in person for Col.2.1 and 2.5","συμβιβάζω -> bind together / bound together for Col.2.2","τάξις -> holding together for Col.2.5","στερέωμα -> secure for Col.2.5"]},
+  "editorial_decisions":{"candidate_status":"human_editor_terminal_text_sealed","human_editor_selection":"exact terminal text recorded 2026-08-13","note_package_status":"two transparency notes attached and required for terminal package audit","matrix_override_status":"Human Editor Colossians override layer is binding over conflicting older base-Matrix entries","chapter_1_non_reopening":"Colossians 1:29 remains unchanged and sealed","acceptance_status":"pending_smoothing_and_terminal_exact_audit"},
+  "invariants":["Only the default-branch copy is authoritative.","The Human Editor terminal text is sealed and smoothing may diagnose or propose but may not silently modify wording.","Colossians Chapter 1 remains terminal and may not be changed by this unit's lexical rulings.","The terminal exact audit must include the exact text, both TN-tagged notes, and the binding Human Editor lexical override.","The Human Editor alone selects or changes wording."]
 }
