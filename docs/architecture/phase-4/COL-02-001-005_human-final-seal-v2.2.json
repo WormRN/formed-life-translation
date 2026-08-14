@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "candidate_id": "COL-02-001-005-HUMAN-FINAL-V2.2",
+  "passage": "Colossians 2:1-5",
+  "human_approved": true,
+  "approved_by": "human_editor",
+  "approved_at": "2026-08-13T21:18:00-05:00",
+  "reading_text_sha256": "925d63f74a275df8f715213536fba4139a268fe83a3f1bfc3c55cacce477e251",
+  "reader_notes_sha256": "009cf59d9fa7b967ac8c93181073eeab56016ebef6497bda368a669fb88eac4b",
+  "candidate_material_sha256": "5db9926d40bc9560ee7e01cdfb22e4c80e9bfe1213aa18eb1d81838662b3d403",
+  "human_editor_overrides_sha256": "d4ae32f8c1158ccd114bb70a10c72181f9883962ce6531b34b0189e962701666",
+  "complete_package_sha256": "012a5486c20c66bc2fe11bc40da92cf8e2779159639dd3ae1ce1f3934076521a",
+  "package_components": [
+    "exact reading text Col.2.1-5",
+    "COL-02-002-TN-01",
+    "COL-02-005-TN-01",
+    "binding Human Editor Col.2.1 local fighting override with explicit non-reopening of Col.1.29"
+  ],
+  "audit_authority": "Only the candidate whose exact reading-text and reader-note hashes match this seal may enter the constitutional audit; the recorded override hash identifies the binding complete-package override supplied to auditors."
+}
