@@ -4,17 +4,18 @@
   "passage": "Colossians 2:1-5",
   "human_approved": true,
   "approved_by": "human_editor",
-  "approved_at": "2026-08-13T21:18:00-05:00",
-  "reading_text_sha256": "925d63f74a275df8f715213536fba4139a268fe83a3f1bfc3c55cacce477e251",
+  "approved_at": "2026-08-13T22:46:00-05:00",
+  "reading_text_sha256": "10b0f6c1d45562904b46bc5c7e568958611ea380f2e21f51f4c7b7db7d56496e",
   "reader_notes_sha256": "009cf59d9fa7b967ac8c93181073eeab56016ebef6497bda368a669fb88eac4b",
-  "candidate_material_sha256": "5db9926d40bc9560ee7e01cdfb22e4c80e9bfe1213aa18eb1d81838662b3d403",
-  "human_editor_overrides_sha256": "d4ae32f8c1158ccd114bb70a10c72181f9883962ce6531b34b0189e962701666",
-  "complete_package_sha256": "012a5486c20c66bc2fe11bc40da92cf8e2779159639dd3ae1ce1f3934076521a",
+  "candidate_material_sha256": "d8c82dcbea014b2f6fbe50b9372cbbf4a75410a0a02155b0487592bbbb37dcf0",
+  "audit_authority": "Only the candidate whose exact reading-text and reader-note hashes match this seal may enter the constitutional audit.",
+  "human_editor_overrides_sha256": "d8569d8b6d0becaad6f739eab280b7f540168ab907a95f5c57f9f6b8222a7c97",
+  "complete_package_sha256": "64b8082ac2614f635638ef32d622466e1e8aee742a337778c5c09216aa8a3185",
   "package_components": [
     "exact reading text Col.2.1-5",
     "COL-02-002-TN-01",
     "COL-02-005-TN-01",
-    "binding Human Editor Col.2.1 local fighting override with explicit non-reopening of Col.1.29"
-  ],
-  "audit_authority": "Only the candidate whose exact reading-text and reader-note hashes match this seal may enter the constitutional audit; the recorded override hash identifies the binding complete-package override supplied to auditors."
+    "binding Human Editor Col.2.1 fighting ruling",
+    "Human Editor Col.2.2 plērophoria verbal-assurance decision"
+  ]
 }
