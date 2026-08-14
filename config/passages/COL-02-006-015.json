@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0.0",
+  "manifest_revision": 1,
+  "last_updated": "2026-08-13",
+  "unit": {
+    "unit_id": "COL-02-006-015",
+    "book": "Colossians",
+    "passage": "Colossians 2:6-15",
+    "source_edition": "SBLGNT",
+    "engine_version": "2.2"
+  },
+  "authority": {
+    "state_source": "this_file_on_default_branch",
+    "human_editor": "David L. Davis",
+    "chat_history_authoritative": false,
+    "historical_preflight_authorization_reusable": false,
+    "conflict_policy": "stop_and_report"
+  },
+  "artifacts": {
+    "source_packet": "docs/architecture/phase-4/COL-02-006-015_blind-source-v2.2.json",
+    "contextual_lexical_matrix": "docs/current/FLT_contextual_lexical_matrix_v2.0.md",
+    "contextual_lexical_matrix_override": "docs/current/FLT_contextual_lexical_matrix_colossians_overrides_v2.0.md",
+    "draft_workflow": ".github/workflows/phase4-sense-drafts.yml",
+    "smoothing_workflow": ".github/workflows/phase4-human-smoothing.yml",
+    "exact_audit_workflow": ".github/workflows/phase4-exact-audit.yml",
+    "state_machine_spec": "docs/architecture/phase-4/passage-manifest-state-machine-v1.md",
+    "circuit_breaker_spec": "docs/architecture/phase-4/FLT_Autonomous_Circuit_Breaker_v1.md"
+  },
+  "state": {
+    "status": "awaiting_human_editor",
+    "phase": "passage_sense_packet_pending_human_editor_approval",
+    "active_job_id": null,
+    "active_run_id": null,
+    "translation_allowed": false,
+    "candidate_generation_allowed": false,
+    "provider_dispatch_allowed": false,
+    "github_workflow_dispatch_allowed": false,
+    "translation_artifact_mutation_allowed": false,
+    "next_permitted_action": "Human Editor review and resolution of the Colossians 2:6-15 Passage-Sense packet; no A/B/C drafting before approval"
+  },
+  "allowed_actions": [
+    "flt status COL-02-006-015",
+    "Human Editor Passage-Sense review",
+    "read_only_repository_inspection"
+  ],
+  "forbidden_actions": [
+    "generate A/B/C candidates before Human Editor Passage-Sense approval",
+    "dispatch phase4-sense-drafts before Human Editor Passage-Sense approval",
+    "resolve stoicheia by worker improvisation",
+    "resolve other pre-draft Matrix stubs silently during drafting",
+    "use comparison translations in the blind source packet",
+    "modify terminal Colossians 2:1-5",
+    "modify terminal Colossians chapter 1 units",
+    "modify Philippians v0.9 RC1"
+  ],
+  "jobs": {},
+  "source_gate": {
+    "status": "pending_human_editor_approval",
+    "gate_version": "2.2",
+    "human_editor_approved": false,
+    "matrix_stubs_populated": true,
+    "required_matrix_stubs": [
+      "παραλαμβάνω",
+      "ῥιζόω",
+      "ἐποικοδομέω",
+      "φιλοσοφία",
+      "στοιχεῖα",
+      "πλήρωμα",
+      "θεότης",
+      "περιτομή",
+      "χειρόγραφον",
+      "θριαμβεύω"
+    ],
+    "additional_stubs": [
+      "συλαγωγέω",
+      "σωματικῶς",
+      "ἀχειροποίητος",
+      "ἀπέκδυσις / ἀπεκδύομαι",
+      "συνθάπτω / συνεγείρω / συζωοποιέω",
+      "χαρίζομαι",
+      "ἐξαλείφω",
+      "δόγμα",
+      "ἀρχή / ἐξουσία"
+    ],
+    "human_editor_decisions_required": [
+      "Col.2.6 παραλαμβάνω reception sense",
+      "Col.2.8 στοιχεῖα",
+      "Col.2.9-10 πλήρωμα / πεπληρωμένοι relationship",
+      "Col.2.11 περιτομή τοῦ Χριστοῦ",
+      "Col.2.14 χειρόγραφον τοῖς δόγμασιν",
+      "Col.2.15 θριαμβεύω and ἐν αὐτῷ antecedent"
+    ]
+  },
+  "editorial_decisions": {
+    "candidate_status": "not_started",
+    "passage_sense_status": "awaiting_human_editor",
+    "copyright_status": "DEFERRED_BATCH",
+    "publication_clearance": false
+  },
+  "invariants": [
+    "Only the default-branch copy is authoritative once merged.",
+    "This unit contains no Human Editor-approved English reading text yet.",
+    "The Passage-Sense gate must resolve the contested source-side issues before candidate drafting.",
+    "Candidate A/B/C must receive the same approved source-side semantic brief and Matrix alerts.",
+    "Comparison translations and prior FLT English remain hidden from blind drafting."
+  ]
+}
