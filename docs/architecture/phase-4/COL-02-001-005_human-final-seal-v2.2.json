@@ -4,18 +4,21 @@
   "passage": "Colossians 2:1-5",
   "human_approved": true,
   "approved_by": "human_editor",
-  "approved_at": "2026-08-13T22:46:00-05:00",
-  "reading_text_sha256": "10b0f6c1d45562904b46bc5c7e568958611ea380f2e21f51f4c7b7db7d56496e",
-  "reader_notes_sha256": "009cf59d9fa7b967ac8c93181073eeab56016ebef6497bda368a669fb88eac4b",
-  "candidate_material_sha256": "d8c82dcbea014b2f6fbe50b9372cbbf4a75410a0a02155b0487592bbbb37dcf0",
+  "approved_at": "2026-08-13T23:43:00-05:00",
+  "reading_text_sha256": "072d1979627f3367d3277d8e9ed76102089a3fd1c302bb456dfcafb18fab5cbc",
+  "reader_notes_sha256": "7f3491ddea1ed87cfb9c6862b16a0253edcf1ea082cb93451f7dc5e837bf5ba4",
+  "candidate_material_sha256": "92aaaddfa3926bdab4ff456d25d2e80020fa60619d7a72b328138f82ede539e8",
   "audit_authority": "Only the candidate whose exact reading-text and reader-note hashes match this seal may enter the constitutional audit.",
-  "human_editor_overrides_sha256": "d8569d8b6d0becaad6f739eab280b7f540168ab907a95f5c57f9f6b8222a7c97",
-  "complete_package_sha256": "64b8082ac2614f635638ef32d622466e1e8aee742a337778c5c09216aa8a3185",
+  "human_editor_overrides_sha256": "757554a64686e3efb5d55e7a0caf7a8e697bda9ab5ca9aac796e55c0cb68e21c",
+  "complete_package_sha256": "0a27b0cb297e0cf5988121fba7e96ba65e223da8a85c29f55426a0c853a9c447",
   "package_components": [
-    "exact reading text Col.2.1-5",
-    "COL-02-002-TN-01",
-    "COL-02-005-TN-01",
-    "binding Human Editor Col.2.1 fighting ruling",
-    "Human Editor Col.2.2 plērophoria verbal-assurance decision"
-  ]
+    "exact reading text Col.2.1-5 with Col.2.2 repaired after audit",
+    "COL-02-002-TN-01 textual-basis note",
+    "COL-02-002-TN-02 plērophoria assurance note",
+    "COL-02-003-TN-01 wisdom-and-knowledge polemical-vocabulary note",
+    "COL-02-005-TN-01 formation-imagery note",
+    "all binding Human Editor lexical, discourse, semantic-compression, and oral-cadence decisions recorded in the candidate package"
+  ],
+  "changed_reading_scope": ["Col.2.2"],
+  "unchanged_reading_scope": ["Col.2.1", "Col.2.3", "Col.2.4", "Col.2.5"]
 }
