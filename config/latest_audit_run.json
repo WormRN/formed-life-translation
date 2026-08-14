@@ -1,11 +1,13 @@
 {
   "schema_version": "1.0.0",
-  "unit_id": "COL-01-024-029",
-  "passage": "Colossians 1:24-29",
-  "chapter": "Colossians 1",
-  "github_run_id": 31570445398,
-  "engine_run_id": "FLT-COL-01-20260812-4",
-  "artifact_name": "FLT-COL-01-20260812-4-final-audit",
+  "unit_id": "COL-02-001-005",
+  "passage": "Colossians 2:1-5",
+  "chapter": "Colossians 2",
+  "github_run_id": 31764022182,
+  "engine_run_id": "FLT-COL-02-001-005-20260814-1",
+  "artifact_id": 9205647021,
+  "artifact_name": "FLT-COL-02-001-005-20260814-1-final-audit",
+  "artifact_sha256": "fb5ab7f6bd8fc615a3824ca0ed7db70f860cc391d20844805dcbd2c01fbc2327",
   "outcome": "completed",
   "auditor_total": 3,
   "eligible_count": 3,
@@ -13,5 +15,6 @@
   "semantic_pass": true,
   "attempts_used": 6,
   "human_editor_acceptance_recorded": true,
-  "chapter_1_complete": true
+  "terminal_accepted": true,
+  "package": "exact reading text + two Human Editor-approved Transparency Notes + binding local Col.2.1 fighting override; Col.1.29 unchanged"
 }
