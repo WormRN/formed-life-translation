@@ -486,7 +486,7 @@
           "Col.2.8"
         ],
         "source_expression": "τὰ στοιχεῖα τοῦ κόσμου",
-        "status": "resolved_with_preserved_ambiguity",
+        "status": "alternatives_retained",
         "contextual_function": "names the non-Christ source/order behind the deceptive teaching",
         "primary_sense": "the elemental principles that govern this world",
         "viable_alternatives": [
@@ -497,7 +497,7 @@
         "reading_text_guidance": "Use deliberately underdetermined English; do not say spirit powers or basic teachings.",
         "literal_note_guidance": "[tn] required presenting both readings.",
         "choice_risks": "Do not resolve ontology beyond evidence.",
-        "human_decision_required": false,
+        "human_decision_required": true,
         "reader_note_required": true,
         "audit_text_and_note_together": true
       },
@@ -508,7 +508,7 @@
           "Col.2.10"
         ],
         "source_expression": "πᾶν τὸ πλήρωμα ... πεπληρωμένοι",
-        "status": "resolved_with_corpus_gap",
+        "status": "resolved",
         "contextual_function": "grounds believers' sufficiency in Christ's fullness",
         "primary_sense": "divine fullness in Christ; believers already possess a settled cognate state in Him",
         "viable_alternatives": [],
@@ -526,7 +526,7 @@
           "Col.2.9"
         ],
         "source_expression": "σωματικῶς",
-        "status": "resolved_with_contested_range",
+        "status": "alternatives_retained",
         "contextual_function": "qualifies deity-fullness dwelling",
         "primary_sense": "bodily/incarnational",
         "viable_alternatives": [
@@ -538,7 +538,7 @@
         "reading_text_guidance": "Preserve bodily force without false certainty.",
         "literal_note_guidance": "Note only if reading text strongly resolves nuance.",
         "choice_risks": "Do not reduce to merely really/fully.",
-        "human_decision_required": false,
+        "human_decision_required": true,
         "reader_note_required": false,
         "audit_text_and_note_together": false
       },
@@ -584,7 +584,7 @@
           "Col.2.12"
         ],
         "source_expression": "διὰ τῆς πίστεως τῆς ἐνεργείας τοῦ θεοῦ",
-        "status": "resolved_with_contested_alternative",
+        "status": "alternatives_retained",
         "contextual_function": "relates faith and God's raising work",
         "primary_sense": "faith in God's working, marginal-confidence working ruling",
         "viable_alternatives": [
@@ -594,7 +594,7 @@
         "reading_text_guidance": "Use objective only as working rendering, not settled claim.",
         "literal_note_guidance": "[tn] required presenting alternative.",
         "choice_risks": "Do not suppress live alternative.",
-        "human_decision_required": false,
+        "human_decision_required": true,
         "reader_note_required": true,
         "audit_text_and_note_together": true
       },
@@ -625,7 +625,7 @@
           "Col.2.15"
         ],
         "source_expression": "συνεζωοποίησεν ... χαρισάμενος ... ἐξαλείψας ... ἦρκεν ... θριαμβεύσας",
-        "status": "resolved_as_working_construal",
+        "status": "alternatives_retained",
         "contextual_function": "maintains coherent agency",
         "primary_sense": "God is the working subject throughout",
         "viable_alternatives": [
@@ -635,7 +635,7 @@
         "reading_text_guidance": "Keep one subject consistently; God is working construal. Mid-sentence drift is blocking.",
         "literal_note_guidance": "Apparatus may flag uncertainty.",
         "choice_risks": "Do not switch agents silently.",
-        "human_decision_required": false,
+        "human_decision_required": true,
         "reader_note_required": false,
         "audit_text_and_note_together": false
       },
@@ -645,7 +645,7 @@
           "Col.2.14"
         ],
         "source_expression": "τὸ καθ’ ἡμῶν χειρόγραφον τοῖς δόγμασιν",
-        "status": "resolved_with_preserved_syntax_ambiguity",
+        "status": "alternatives_retained",
         "contextual_function": "hostile written obligation removed at cross",
         "primary_sense": "written record of indebtedness/obligation against us",
         "viable_alternatives": [
@@ -656,7 +656,7 @@
         "reading_text_guidance": "Do not equate directly with Mosaic law; wording must survive both relations.",
         "literal_note_guidance": "[tn] if reading text necessarily chooses relation.",
         "choice_risks": "Do not confidently smooth the unresolved dative.",
-        "human_decision_required": false,
+        "human_decision_required": true,
         "reader_note_required": false,
         "audit_text_and_note_together": false
       },
@@ -666,7 +666,7 @@
           "Col.2.15"
         ],
         "source_expression": "ἀπεκδυσάμενος ... θριαμβεύσας αὐτοὺς ἐν αὐτῷ",
-        "status": "resolved_with_contested_antecedent",
+        "status": "alternatives_retained",
         "contextual_function": "public defeat of hostile powers",
         "primary_sense": "public victorious triumph; through the cross is low-confidence working reading of en auto",
         "viable_alternatives": [
@@ -676,7 +676,7 @@
         "reading_text_guidance": "Preserve public victory; technical procession wording not mandatory; do not present en auto as settled.",
         "literal_note_guidance": "[tn] recommended if compressed.",
         "choice_risks": "Do not erase victory image or false-resolve antecedent.",
-        "human_decision_required": false,
+        "human_decision_required": true,
         "reader_note_required": false,
         "audit_text_and_note_together": false
       }
