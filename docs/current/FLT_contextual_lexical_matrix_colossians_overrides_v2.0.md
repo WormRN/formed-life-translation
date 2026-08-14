@@ -38,6 +38,14 @@
 **Sense:** The community is joined together in love.  
 **Restriction:** Other contexts may use reasoning/inference senses and require fresh classification.
 
+## πληροφορία · plērophoria
+
+**Status:** approved local precedent  
+**Scope:** Colossians 2:2; consult again at Colossians 4:12.  
+**Approved rendering in 2:2:** `be completely sure`.  
+**Sense:** Full assurance or settled certainty, expressed verbally rather than with an abstract noun in the reading text.  
+**Restriction:** This is not yet a global lock; Colossians 4:12 uses the related participial form and requires fresh contextual confirmation.
+
 ## τάξις · taxis
 
 **Status:** approved contextual sense  
