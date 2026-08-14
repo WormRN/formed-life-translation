@@ -4,7 +4,7 @@
   "unit_id": "COL-02-001-005",
   "algorithm": "sha256",
   "candidate_file": "docs/architecture/phase-4/COL-02-001-005_human-editor-synthesis-v2.2.json",
-  "candidate_sha256": "9119c343e63abf925169e4a5c6cd366d78e8381a676916b37c5d88ebb46b8765",
+  "candidate_sha256": "963c1e0996681be09c196622fd3f0a9efc56cfb5a617cd14d3a63120394d619e",
   "sealed_by": "human_editor",
   "sealed_date": "2026-08-13",
   "status": "sealed_pending_oral_smoothing"
