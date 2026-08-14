@@ -4,26 +4,84 @@
   "unit_id": "COL-02-001-005",
   "passage": "Colossians 2:1-5",
   "engine_version": "2.2",
-  "status": "human_editor_final_exact_candidate_post_smoothing",
+  "status": "human_editor_final_exact_candidate_post_smoothing_v2_repair",
   "human_editor": "David L. Davis",
   "human_editor_date": "2026-08-13",
   "smoothing_run_id": "31765288528",
   "human_editor_selection": {
     "exact_wording_preserved": true,
-    "smoothing_disposition": "Human Editor adjudicated the full SMOOTH-02 evidence and supplied this exact final wording for terminal reseal and audit."
+    "smoothing_disposition": "Human Editor adjudicated the full SMOOTH-02 evidence, upheld the v1→v2 purpose-link audit flag, and supplied this exact repaired wording for terminal reseal and fresh exact audit."
   },
   "human_editor_overrides": [
     {
       "reference": "Col.2.1",
-      "issue": "local agōn/agōnizomai rendering",
-      "decision": "Lock fighting for this local Col.2.1 context. Do not retroactively alter Col.1.29; Chapter 1 remains sealed as-is.",
+      "issue": "agōn / agōnizomai contextual rendering",
+      "decision": "Render ἀγών contextually as 'fighting' in Col.2.1. Col.1.29 remains sealed as 'struggling'; Col.4.12 remains open. The earlier 'contest' lock is superseded because it failed the religion-naive vocabulary standard.",
+      "rationale": "Preserves intensity in ordinary English without forcing uniform wording across contexts.",
+      "status": "binding_human_editor_override"
+    },
+    {
+      "reference": "Col.2.1",
+      "issue": "γάρ discourse connector",
+      "decision": "Do not render γάρ explicitly in Col.2.1. The backward link to Col.1.29 crosses a paragraph boundary and belongs to the study layer.",
+      "rationale": "The Human Editor judges the explicit English connector unnecessary in the reading text.",
       "status": "binding_human_editor_override"
     },
     {
       "reference": "Col.2.2",
-      "issue": "plērophoria assurance rendering",
-      "decision": "Render the assurance concept verbally as 'be completely sure' rather than with an abstract assurance noun. Record as a local precedent to consult at Col.4.12, not an automatic global lock.",
+      "issue": "v1→v2 purpose link",
+      "decision": "Open verse 2 with 'I am fighting so that' to make the purpose relationship explicit.",
+      "rationale": "Human Editor upheld the prior blocking audit finding that the purpose link should be audible on first hearing.",
       "status": "binding_human_editor_decision"
+    },
+    {
+      "reference": "Col.2.2",
+      "issue": "μυστήριον contextual rendering",
+      "decision": "Render μυστήριον here as 'the secret God kept hidden — Christ Himself' rather than the Col.1.26 phrase 'secret plan'. This is a contextual variation under Matrix authority, not abandonment of the Col.1.26 precedent; Col.4.3 remains open.",
+      "rationale": "Makes the ἀπόκρυπτ- hidden chain audible across Col.1.26 → 2.2 → 2.3.",
+      "status": "binding_human_editor_override"
+    },
+    {
+      "reference": "Col.2.2",
+      "issue": "πληροφορία assurance rendering",
+      "decision": "Render πληροφορία verbally as 'be completely sure' rather than with an abstract assurance noun. Record as a precedent for Col.4.12 πεπληροφορημένοι.",
+      "rationale": "Improves first-hearing clarity while retaining the force of full assurance.",
+      "status": "binding_human_editor_decision"
+    },
+    {
+      "reference": "Col.2.2",
+      "issue": "σύνεσις rendering",
+      "decision": "Render σύνεσις as 'understand deeply'.",
+      "rationale": "Expresses the understanding concept in ordinary verbal English.",
+      "status": "binding_human_editor_decision"
+    },
+    {
+      "reference": "Col.2.2",
+      "issue": "ἐπίγνωσις rendering",
+      "decision": "Render ἐπίγνωσις as 'come to know', consistent with Col.1.6, 1.9, and 1.10.",
+      "rationale": "Maintains the established knowing-language in natural English.",
+      "status": "binding_human_editor_decision"
+    },
+    {
+      "reference": "Col.2.2",
+      "issue": "πᾶν πλοῦτος semantic compression",
+      "decision": "Deliberately omit an explicit rendering of πᾶν πλοῦτος in favor of first-hearing clarity. The πλοῦτος → θησαυροί handoff to verse 3 is knowingly forfeited. Do not restore it in a later pass without a new Human Editor ruling.",
+      "rationale": "The Human Editor accepts this controlled semantic compression for oral clarity.",
+      "status": "binding_human_editor_override"
+    },
+    {
+      "reference": "Col.2.2",
+      "issue": "συμβιβασθέντες syntax",
+      "decision": "Render συμβιβασθέντες as the participial phrase 'bound together in love' riding on 'take heart', not as a coordinate finite clause. Col.2.19 remains open.",
+      "rationale": "Preserves the relationship in smoother English.",
+      "status": "binding_human_editor_decision"
+    },
+    {
+      "reference": "Col.2.4",
+      "issue": "oral cadence and παραλογίζομαι",
+      "decision": "Retain 'talk you into believing something false, no matter how convincing the argument sounds.' Three smoothing passes diagnosed a soft cadence, but no proposed repair improved it.",
+      "rationale": "The wording preserves the deceive-by-reasoning sense of παραλογίζομαι in immediately understandable English.",
+      "status": "binding_human_editor_override"
     }
   ],
   "verse_renderings": [
@@ -33,7 +91,7 @@
     },
     {
       "reference": "Col.2.2",
-      "text": "I want all these believers to take heart and be bound together in love. I want them to understand deeply and to be completely sure, so that they will come to know God's secret plan, which is Christ Himself."
+      "text": "I am fighting so that all these believers will take heart, bound together in love. I want them to understand deeply, to be completely sure, and so at last to know the secret God kept hidden — Christ Himself."
     },
     {
       "reference": "Col.2.3",
@@ -52,9 +110,23 @@
     {
       "note_id": "COL-02-002-TN-01",
       "reference": "Col.2.2",
-      "anchor": "God's secret plan, which is Christ Himself",
+      "anchor": "the secret God kept hidden — Christ Himself",
       "status": "human_editor_authorized_transparency_note",
-      "text": "The SBLGNT reads “God’s secret plan, Christ,” identifying Christ Himself as the secret plan. Some manuscripts expand the wording at this point; FLT follows the SBLGNT reading."
+      "text": "The SBLGNT reads “God’s secret, Christ,” identifying Christ Himself as the secret. Some manuscripts expand the wording at this point; FLT follows the SBLGNT reading."
+    },
+    {
+      "note_id": "COL-02-002-TN-02",
+      "reference": "Col.2.2",
+      "anchor": "be completely sure",
+      "status": "human_editor_authorized_transparency_note",
+      "text": "The Greek expression translated “be completely sure” describes full assurance or settled confidence, not merely a passing feeling of certainty."
+    },
+    {
+      "note_id": "COL-02-003-TN-01",
+      "reference": "Col.2.3",
+      "anchor": "wisdom and knowledge",
+      "status": "human_editor_authorized_transparency_note",
+      "text": "Paul’s repeated emphasis on “wisdom” and “knowledge” in this section likely takes up vocabulary valued by the teachers he is opposing. His point is that every true treasure of wisdom and knowledge is found in Christ."
     },
     {
       "note_id": "COL-02-005-TN-01",
@@ -66,12 +138,34 @@
   ],
   "note_routing": {
     "COL-02-002-TN-01": "tn",
+    "COL-02-002-TN-02": "tn",
+    "COL-02-003-TN-01": "tn",
     "COL-02-005-TN-01": "tn"
   },
   "matrix_override_file": "docs/current/FLT_contextual_lexical_matrix_colossians_overrides_v2.0.md",
   "complete_package_audit_required": true,
+  "audit_change_scope": {
+    "changed_since_run_31768112012": ["Col.2.2"],
+    "unchanged_from_run_31768112012": ["Col.2.1", "Col.2.3", "Col.2.4", "Col.2.5"],
+    "instruction": "Run a fresh exact-candidate audit on the complete sealed package; verse 2 is the only changed reading text and is the required fresh review focus."
+  },
   "copyright_independence": {
     "status": "DEFERRED_BATCH",
-    "hard_check_required_before_publication": true
+    "hard_check_required_before_publication": true,
+    "constrained_phrase_flags": [
+      {
+        "reference": "Col.2.1",
+        "phrase": "I want you to know how",
+        "classification": "candidate_constrained_phrase_exception",
+        "rationale": "Multiple comparison translations converge on this ordinary source-constrained expression; treat convergence across three or more versions as evidence of constraint rather than borrowing, subject to the deferred hard audit."
+      },
+      {
+        "reference": "Col.2.5",
+        "phrase": "I am with you in spirit",
+        "classification": "candidate_constrained_phrase_exception",
+        "rationale": "This is the natural English expression of τῷ πνεύματι σὺν ὑμῖν εἰμι; retain as constrained wording subject to the deferred hard audit."
+      }
+    ],
+    "policy_amendment_status": "recommended_not_yet_adopted"
   }
 }
