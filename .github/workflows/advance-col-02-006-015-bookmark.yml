@@ -1,0 +1,48 @@
+name: Advance FLT bookmark to COL-02-006-015
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'config/passages/COL-02-006-015.json'
+
+permissions:
+  contents: write
+
+jobs:
+  advance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Advance engine bookmark and remove one-shot workflow
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('config/engine_manifest.yaml')
+          s = p.read_text()
+          replacements = {
+            'current_unit_id: "COL-02-001-005"': 'current_unit_id: "COL-02-006-015"',
+            'current_passage_manifest: "config/passages/COL-02-001-005.json"': 'current_passage_manifest: "config/passages/COL-02-006-015.json"',
+            'current_passage: "Colossians 2:1-5"': 'current_passage: "Colossians 2:6-15"',
+            'stage: "human_editor_terminal_text_pending_smoothing_and_exact_audit"': 'stage: "blind_drafting_authorized"',
+            'candidate_status: "Human Editor terminal text selected and packaged on PR #74; default-branch passage manifest remains authoritative until merge."': 'candidate_status: "Colossians 2:6-15 Passage-Sense packet approved; blind draft armed under the authoritative passage manifest."',
+            'next_permitted_action: "Merge the Human Editor-authorized Colossians 2:1-5 terminal package and allow the automatic manifest dispatcher to launch the authorized smoothing job."': 'next_permitted_action: "Allow the automatic manifest dispatcher to launch the exactly armed Colossians 2:6-15 blind-draft job; then await Human Editor candidate adjudication."',
+            'passage_manifest: "config/passages/COL-02-001-005.json"': 'passage_manifest: "config/passages/COL-02-006-015.json"',
+            'blind_source: "docs/architecture/phase-4/COL-02-001-005_smoothing-source-v2.2_blind-source-v2.2.json"': 'blind_source: "docs/architecture/phase-4/COL-02-006-015_approved-blind-source-v2.2.json"'
+          }
+          missing=[]
+          for old,new in replacements.items():
+              if old not in s: missing.append(old)
+              else: s=s.replace(old,new)
+          if missing: raise SystemExit('Bookmark advance aborted; missing anchors: '+repr(missing))
+          p.write_text(s)
+          PY
+          git rm .github/workflows/advance-col-02-006-015-bookmark.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- config/engine_manifest.yaml
+          git commit -m 'Advance engine bookmark to Colossians 2:6-15'
+          git push origin HEAD:main
