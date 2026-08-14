@@ -3,11 +3,11 @@
   "unit_id": "COL-02-001-005",
   "passage": "Colossians 2:1-5",
   "chapter": "Colossians 2",
-  "github_run_id": 31764022182,
-  "engine_run_id": "FLT-COL-02-001-005-20260814-1",
-  "artifact_id": 9205647021,
-  "artifact_name": "FLT-COL-02-001-005-20260814-1-final-audit",
-  "artifact_sha256": "fb5ab7f6bd8fc615a3824ca0ed7db70f860cc391d20844805dcbd2c01fbc2327",
+  "github_run_id": 31771152990,
+  "engine_run_id": "FLT-COL-02-001-005-20260814-3",
+  "artifact_id": 9208199593,
+  "artifact_name": "FLT-COL-02-001-005-20260814-3-final-audit",
+  "artifact_sha256": "1abf6678497ca6058520ce78b0fcdc9e46769459f3d0a8d6dbfecc383dcc3bd0",
   "outcome": "completed",
   "auditor_total": 3,
   "eligible_count": 3,
@@ -16,5 +16,5 @@
   "attempts_used": 6,
   "human_editor_acceptance_recorded": true,
   "terminal_accepted": true,
-  "package": "exact reading text + two Human Editor-approved Transparency Notes + binding local Col.2.1 fighting override; Col.1.29 unchanged"
+  "package": "exact repaired Colossians 2:1-5 reading text + four Human Editor-approved Transparency Notes + all binding Human Editor lexical/discourse/semantic-compression decisions; Col.2.2 was the only reading-text change since run 31768112012; Col.1.29 remains unchanged"
 }
