@@ -1,11 +1,12 @@
 {
   "schema_version": "1.0.0",
-  "manifest_revision": 2,
+  "manifest_revision": 3,
   "last_updated": "2026-08-14",
   "unit": {"unit_id":"COL-02-006-015","book":"Colossians","passage":"Colossians 2:6-15","source_edition":"SBLGNT","engine_version":"2.2"},
   "authority": {"state_source":"this_file_on_default_branch","human_editor":"David L. Davis","chat_history_authoritative":false,"historical_preflight_authorization_reusable":false,"conflict_policy":"stop_and_report"},
   "artifacts": {
-    "source_packet":"docs/architecture/phase-4/COL-02-006-015_approved-blind-source-v2.2.json",
+    "source_packet":"docs/architecture/phase-4/COL-02-006-015_approved_blind-source-v2.2.json",
+    "superseded_source_packet_path":"docs/architecture/phase-4/COL-02-006-015_approved-blind-source-v2.2.json",
     "human_editor_passage_sense_rulings":"docs/architecture/phase-4/COL-02-006-015_passage-sense-rulings-v2.2.md",
     "contextual_lexical_matrix":"docs/current/FLT_contextual_lexical_matrix_v2.0.md",
     "contextual_lexical_matrix_override":"docs/current/FLT_contextual_lexical_matrix_colossians_overrides_v2.0.md",
@@ -18,26 +19,40 @@
   },
   "state": {
     "status":"ready",
-    "phase":"passage_sense_complete_blind_drafting_authorized",
-    "active_job_id":"COL-02-006-015-BLIND-DRAFT-01",
+    "phase":"passage_sense_complete_blind_drafting_authorized_recovery_after_zero_provider_preflight_failure",
+    "active_job_id":null,
     "active_run_id":null,
     "translation_allowed":true,
     "candidate_generation_allowed":true,
     "provider_dispatch_allowed":true,
     "github_workflow_dispatch_allowed":true,
     "translation_artifact_mutation_allowed":true,
-    "next_permitted_action":"automatic manifest-push dispatcher may launch the exactly armed phase4-sense-drafts job once this manifest is authoritative on main"
+    "next_permitted_action":"automatic manifest-push dispatcher may launch exactly COL-02-006-015-BLIND-DRAFT-02"
   },
-  "allowed_actions":["flt status COL-02-006-015","automatic dispatch of COL-02-006-015-BLIND-DRAFT-01 only","read_only_repository_inspection"],
-  "forbidden_actions":["expose comparison translations to blind workers","use prior FLT English or conversational drafts as worker input","resolve contested stoicheia beyond the Human Editor underdetermined ruling","present the Col.2.12 faith-genitive or Col.2.15 en auto antecedent as settled","drop any member of the buried-with / raised-with / made-alive-with Christ chain","shift the working subject between God and Christ mid-sentence in Col.2.13-15","invent a corpus-level pler- family policy","rerun successful siblings","reuse a consumed nonce","modify terminal Colossians 2:1-5","modify terminal Colossians chapter 1 units","modify Philippians v0.9 RC1"],
+  "allowed_actions":["flt status COL-02-006-015","automatic dispatch of COL-02-006-015-BLIND-DRAFT-02 only","read_only_repository_inspection"],
+  "forbidden_actions":["dispatch COL-02-006-015-BLIND-DRAFT-01 again","expose comparison translations to blind workers","use prior FLT English or conversational drafts as worker input","resolve contested stoicheia beyond the Human Editor underdetermined ruling","present the Col.2.12 faith-genitive or Col.2.15 en auto antecedent as settled","drop any member of the buried-with / raised-with / made-alive-with Christ chain","shift the working subject between God and Christ mid-sentence in Col.2.13-15","invent a corpus-level pler- family policy","rerun successful siblings","reuse a consumed nonce","modify terminal Colossians 2:1-5","modify terminal Colossians chapter 1 units","modify Philippians v0.9 RC1"],
   "jobs": {
     "COL-02-006-015-BLIND-DRAFT-01": {
       "idempotency_key":"flt:2.2:COL-02-006-015:blind-draft:01",
-      "job_type":"passage_sense_blind_candidate_drafting",
-      "status":"authorized_ready",
+      "job_type":"blind_candidate_passage_sense_drafting",
+      "status":"blocked_zero_provider_preflight_path_contract_failure",
       "authorization_id":"HE-COL-02-006-015-BLIND-DRAFT-20260814",
       "authorized_by":"human_editor",
-      "authorization_scope":"Generate exactly three blind common-goal candidates from the Human Editor-approved Colossians 2:6-15 Passage-Sense packet. Preserve all resolved and contested source-side rulings. Comparison translations are forbidden from worker input and may be used only after drafts exist for Decision-Brief advisory string-spotting.",
+      "dispatch_allowed":false,
+      "provider_attempts_used":0,
+      "provider_attempts_remaining":8,
+      "checkpoints_to_restore":0,
+      "remote_run_id":"31776021443",
+      "failure":"credential-free preflight rejected blind source filename before nonce consumption or provider access",
+      "retry_allowed":false
+    },
+    "COL-02-006-015-BLIND-DRAFT-02": {
+      "idempotency_key":"flt:2.2:COL-02-006-015:blind-draft:02",
+      "job_type":"blind_candidate_passage_sense_drafting",
+      "status":"authorized_ready",
+      "authorization_id":"HE-COL-02-006-015-BLIND-DRAFT-RECOVERY-20260814",
+      "authorized_by":"human_editor",
+      "authorization_scope":"Zero-provider deterministic recovery of the Human Editor-authorized blind draft after the prior run failed credential-free on a filename contract. Generate exactly three blind common-goal candidates from the unchanged approved Passage-Sense content. Comparison translations remain forbidden from worker input and are reserved for post-draft Decision-Brief advisory string-spotting.",
       "dispatch_allowed":true,
       "workflow":".github/workflows/phase4-sense-drafts.yml",
       "max_attempts_per_worker":2,
@@ -50,7 +65,7 @@
       "checkpoints_to_restore":0,
       "dispatch_confirmed":false,
       "retry_allowed":false,
-      "launch":{"mode":"automatic_manifest_push_dispatch","nonce":"HE-COL-02-006-015-BLIND-DRAFT-20260814-01","status":"armed","armed_by":"human_editor","authorization_id":"HE-COL-02-006-015-BLIND-DRAFT-20260814","expected_manifest_revision":2}
+      "launch":{"mode":"automatic_manifest_push_dispatch","nonce":"HE-COL-02-006-015-BLIND-DRAFT-20260814-02","status":"armed","armed_by":"human_editor","authorization_id":"HE-COL-02-006-015-BLIND-DRAFT-RECOVERY-20260814","expected_manifest_revision":3,"consumed_run_id":null}
     }
   },
   "source_gate": {
@@ -58,12 +73,12 @@
     "gate_version":"2.2",
     "human_editor_approved":true,
     "approved_date":"2026-08-14",
-    "approved_packet":"docs/architecture/phase-4/COL-02-006-015_approved-blind-source-v2.2.json",
+    "approved_packet":"docs/architecture/phase-4/COL-02-006-015_approved_blind-source-v2.2.json",
     "matrix_stubs_populated":true,
     "contested_rulings_preserved":["Col.2.8 stoicheia underdetermined","Col.2.9 somatikos exact range contested","Col.2.12 faith-genitive contested with objective working ruling","Col.2.13-15 subject continuity is a working construal","Col.2.14 tois dogmasin relation unresolved","Col.2.15 en auto contested with through-the-cross working ruling"],
     "required_transparency_notes_from_source_gate":["Col.2.8 stoicheia — present both live readings","Col.2.12 faith-genitive — present both live readings"],
     "copyright_advisory":{"timing":"post_draft_decision_brief_only","blind_worker_exposure":false,"comparators":["NIV","CSB","NLT","ESV","NASB"],"constrained_phrase_threshold":"three_or_more_comparators_converge_on_Greek_constrained_wording"}
   },
-  "editorial_decisions":{"candidate_status":"blind_drafting_authorized_not_yet_run","passage_sense_status":"human_editor_approved","copyright_status":"DEFERRED_BATCH_WITH_POST_DRAFT_ADVISORY_FOR_THIS_UNIT","publication_clearance":false},
-  "invariants":["Only the default-branch copy is authoritative.","Candidate A/B/C share one constitutional goal and the same approved source-side packet.","Comparison translations and prior FLT English remain absent from blind drafting.","Every contested ruling remains visibly contested in the worker brief and Decision Brief.","No successful worker may be rerun merely for stylistic variation."]
+  "editorial_decisions":{"candidate_status":"blind_drafting_authorized_recovery_not_yet_run","passage_sense_status":"human_editor_approved","copyright_status":"DEFERRED_BATCH_WITH_POST_DRAFT_ADVISORY_FOR_THIS_UNIT","publication_clearance":false},
+  "invariants":["Only the default-branch copy is authoritative.","Candidate A/B/C share one constitutional goal and the same approved source-side packet.","Comparison translations and prior FLT English remain absent from blind drafting.","Every contested ruling remains visibly contested in the worker brief and Decision Brief.","No successful worker may be rerun merely for stylistic variation.","BLIND-DRAFT-01 consumed zero provider attempts and may not be rerun."]
 }
