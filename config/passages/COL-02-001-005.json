@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "manifest_revision": 22,
+  "manifest_revision": 23,
   "last_updated": "2026-08-13",
   "unit": {
     "unit_id": "COL-02-001-005",
@@ -38,20 +38,19 @@
     "circuit_breaker_spec": "docs/architecture/phase-4/FLT_Autonomous_Circuit_Breaker_v1.md"
   },
   "state": {
-    "status": "running",
-    "phase": "final_exact_audit_running",
-    "active_job_id": "COL-02-001-005-EXACT-AUDIT-02",
+    "status": "awaiting_human_editor",
+    "phase": "final_exact_audit_has_blocks_pending_human_editor",
+    "active_job_id": null,
     "active_run_id": "31768112012",
     "translation_allowed": true,
     "candidate_generation_allowed": false,
-    "provider_dispatch_allowed": true,
+    "provider_dispatch_allowed": false,
     "github_workflow_dispatch_allowed": false,
     "translation_artifact_mutation_allowed": false,
-    "next_permitted_action": "await verified final exact-audit completion or exact cancel"
+    "next_permitted_action": "inspect verified final exact-audit evidence; Human Editor decision required"
   },
   "allowed_actions": [
     "flt status COL-02-001-005",
-    "flt cancel COL-02-001-005 --job COL-02-001-005-EXACT-AUDIT-02 --expected-revision 22",
     "read_only_repository_inspection"
   ],
   "forbidden_actions": [
@@ -134,7 +133,7 @@
     "COL-02-001-005-EXACT-AUDIT-02": {
       "idempotency_key": "flt:2.2:COL-02-001-005:exact-audit:02",
       "job_type": "complete_package_semantic_floor_exact_candidate_audit",
-      "status": "running",
+      "status": "awaiting_human_editor",
       "authorization_id": "HE-COL-02-001-005-POST-SMOOTH-TERMINAL-AUDIT-20260813",
       "authorized_by": "human_editor",
       "authorization_scope": "Audit the exact post-smoothing Human Editor final reading text together with both approved transparency notes and binding Human Editor lexical decisions; do not alter Col.1.29; on a clean 3-of-3 zero-block semantic pass record terminal Human Editor acceptance.",
@@ -142,8 +141,8 @@
       "workflow": ".github/workflows/phase4-exact-audit.yml",
       "max_attempts_per_worker": 2,
       "task_max_attempts": 8,
-      "provider_attempts_used": 0,
-      "provider_attempts_remaining": 8,
+      "provider_attempts_used": 6,
+      "provider_attempts_remaining": 2,
       "checkpoints_to_restore": 0,
       "dispatch_confirmed": true,
       "retry_allowed": false,
@@ -157,7 +156,10 @@
         "consumed_run_id": "31768112012",
         "consumed_nonce": "HE-COL-02-001-005-POST-SMOOTH-EXACT-AUDIT-20260813-02"
       },
-      "remote_run_id": "31768112012"
+      "remote_run_id": "31768112012",
+      "auditor_total": 3,
+      "eligible_count": 2,
+      "semantic_pass": false
     }
   },
   "source_gate": {
