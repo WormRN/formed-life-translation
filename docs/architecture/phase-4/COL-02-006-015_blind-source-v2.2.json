@@ -1,0 +1,110 @@
+{
+  "chapter_id": "COL-02",
+  "book": "Colossians",
+  "chapter": 2,
+  "source_edition": "SBLGNT",
+  "tone": "pastoral, exhortational, polemical, Christ-centered, participatory, and triumphant",
+  "target_reader": "religion-naive adults and older adolescents near grade 6",
+  "translation_identity": "firmly dynamic-equivalence, NLT-like in readability but independent",
+  "test_purpose": "Source-side Passage-Sense Resolution packet for Colossians 2:6-15; no English candidate drafting is authorized until Human Editor approval.",
+  "sealed_context": {
+    "prior_flt_wording_present": false,
+    "prior_candidates_present": false,
+    "comparison_translations_present": false,
+    "conversational_drafts_present": false,
+    "editor_benchmark_present": false,
+    "instruction": "Use only the Greek, source-side sense brief, and approved/contextual Matrix information. Do not use comparison translations or prior FLT English wording."
+  },
+  "governing_rules": [
+    "Do not draft English before Human Editor approval of this Passage-Sense packet.",
+    "Treat all pre-draft Matrix stubs as questions to resolve, not English locks.",
+    "Preserve Christ as the controlling contrast: human tradition / stoicheia versus Christ in v8; fullness of deity in Christ in v9; believers' fullness/status in Him in v10.",
+    "Do not imply that philosophy as an intellectual discipline is universally condemned; Paul's target is the deceptive teaching described in this context.",
+    "Do not resolve stoicheia by worker improvisation. Human Editor resolution is required before drafting.",
+    "Preserve the rhetorical relationship between plērōma in v9 and peplērōmenoi in v10 if natural English can do so without obscurity.",
+    "Preserve the strong deity claim in v9 and the bodily force of sōmatikōs.",
+    "Resolve the circumcision metaphor and the genitive 'circumcision of Christ' before drafting; avoid English that naturally sounds like a reference to Jesus' infant circumcision unless that is deliberately chosen.",
+    "Preserve the buried-with / raised-with / made-alive-with participation chain of vv12-13.",
+    "Do not identify cheirographon with the Mosaic law as a whole unless the Human Editor accepts that specificity after source-side review.",
+    "Resolve the victory imagery in v15, including apekdyomai and thriambeuō, before drafting.",
+    "Preserve continuity of archē/exousia with the cosmic rulers/authorities language already established in Col.1:16."
+  ],
+  "matrix_alerts": [
+    {"lemma":"παραλαμβάνω","status":"pre_draft_unresolved","scope":"Col.2.6","required_resolution":"receiving Christ Himself versus receiving transmitted teaching about Him versus a fused sense"},
+    {"lemma":"ῥιζόω","status":"pre_draft_unresolved","scope":"Col.2.7","required_resolution":"completed rooting with continuing state"},
+    {"lemma":"ἐποικοδομέω","status":"pre_draft_unresolved","scope":"Col.2.7","required_resolution":"ongoing being-built-up process and mixed metaphor with rooting"},
+    {"lemma":"φιλοσοφία","status":"pre_draft_unresolved","scope":"Col.2.8","required_resolution":"context-specific deceptive philosophy/teaching without universal condemnation of philosophy"},
+    {"lemma":"στοιχεῖα","status":"contested_human_decision_required","scope":"Col.2.8 and later Col.2.20","viable_senses":["basic elements/components","elementary principles/rudiments","cosmic or elemental spiritual powers"]},
+    {"lemma":"πλήρωμα / πληρόω-family","status":"pre_draft_unresolved_with_col1_continuity","scope":"Col.2.9-10","required_resolution":"fullness in Christ and believers' cognate status in Him; preserve rhetorical link if possible"},
+    {"lemma":"θεότης","status":"pre_draft_unresolved","scope":"Col.2.9","required_resolution":"full deity / what belongs to being God, without weakening the claim or requiring opaque jargon"},
+    {"lemma":"περιτομή","status":"pre_draft_unresolved","scope":"Col.2.11","required_resolution":"non-handmade circumcision metaphor and genitive 'of Christ'"},
+    {"lemma":"χειρόγραφον","status":"pre_draft_unresolved","scope":"Col.2.14","viable_senses":["handwritten record/certificate","record of debt or indebtedness","written charge/obligation"]},
+    {"lemma":"θριαμβεύω","status":"pre_draft_unresolved","scope":"Col.2.15","required_resolution":"Roman triumph/procession victory image and antecedent of en autō"},
+    {"lemma":"συλαγωγέω","status":"pre_draft_unresolved","scope":"Col.2.8","required_resolution":"carry off as spoil / take captive"},
+    {"lemma":"σωματικῶς","status":"pre_draft_unresolved","scope":"Col.2.9","required_resolution":"bodily / in bodily form"},
+    {"lemma":"ἀχειροποίητος","status":"pre_draft_unresolved","scope":"Col.2.11","required_resolution":"not made/done by human hands"},
+    {"lemma":"ἀπέκδυσις / ἀπεκδύομαι","status":"pre_draft_unresolved_word_family","scope":"Col.2.11,15","required_resolution":"stripping/removal and stripping/disarming; assess deliberate word-family link"},
+    {"lemma":"συνθάπτω / συνεγείρω / συζωοποιέω","status":"pre_draft_unresolved_discourse_chain","scope":"Col.2.12-13","required_resolution":"buried-with / raised-with / made-alive-with participation chain"},
+    {"lemma":"χαρίζομαι","status":"pre_draft_unresolved","scope":"Col.2.13","required_resolution":"forgive with grace-gift coloring where possible"},
+    {"lemma":"ἐξαλείφω","status":"pre_draft_unresolved","scope":"Col.2.14","viable_senses":["wipe out","erase","cancel"]},
+    {"lemma":"δόγμα","status":"pre_draft_unresolved","scope":"Col.2.14","viable_senses":["decree","regulation","ordinance"]},
+    {"lemma":"ἀρχή / ἐξουσία","status":"continuity_stub","scope":"Col.2.10,15","prior_context":"Col.1.16 cosmic rulers and authorities"}
+  ],
+  "units": [{
+    "unit_id": "COL-02-006-015",
+    "passage": "Colossians 2:6-15",
+    "verses": [
+      {"reference":"Col.2.6","greek":"Ὡς οὖν παρελάβετε τὸν Χριστὸν Ἰησοῦν τὸν κύριον, ἐν αὐτῷ περιπατεῖτε,"},
+      {"reference":"Col.2.7","greek":"ἐρριζωμένοι καὶ ἐποικοδομούμενοι ἐν αὐτῷ καὶ βεβαιούμενοι τῇ πίστει καθὼς ἐδιδάχθητε, περισσεύοντες ἐν εὐχαριστίᾳ."},
+      {"reference":"Col.2.8","greek":"Βλέπετε μή τις ὑμᾶς ἔσται ὁ συλαγωγῶν διὰ τῆς φιλοσοφίας καὶ κενῆς ἀπάτης κατὰ τὴν παράδοσιν τῶν ἀνθρώπων, κατὰ τὰ στοιχεῖα τοῦ κόσμου καὶ οὐ κατὰ Χριστόν·"},
+      {"reference":"Col.2.9","greek":"ὅτι ἐν αὐτῷ κατοικεῖ πᾶν τὸ πλήρωμα τῆς θεότητος σωματικῶς,"},
+      {"reference":"Col.2.10","greek":"καὶ ἐστὲ ἐν αὐτῷ πεπληρωμένοι, ὅς ἐστιν ἡ κεφαλὴ πάσης ἀρχῆς καὶ ἐξουσίας,"},
+      {"reference":"Col.2.11","greek":"ἐν ᾧ καὶ περιετμήθητε περιτομῇ ἀχειροποιήτῳ ἐν τῇ ἀπεκδύσει τοῦ σώματος τῆς σαρκός, ἐν τῇ περιτομῇ τοῦ Χριστοῦ,"},
+      {"reference":"Col.2.12","greek":"συνταφέντες αὐτῷ ἐν τῷ βαπτισμῷ, ἐν ᾧ καὶ συνηγέρθητε διὰ τῆς πίστεως τῆς ἐνεργείας τοῦ θεοῦ τοῦ ἐγείραντος αὐτὸν ἐκ νεκρῶν·"},
+      {"reference":"Col.2.13","greek":"καὶ ὑμᾶς νεκροὺς ὄντας ἐν τοῖς παραπτώμασιν καὶ τῇ ἀκροβυστίᾳ τῆς σαρκὸς ὑμῶν, συνεζωοποίησεν ὑμᾶς σὺν αὐτῷ· χαρισάμενος ἡμῖν πάντα τὰ παραπτώματα,"},
+      {"reference":"Col.2.14","greek":"ἐξαλείψας τὸ καθ’ ἡμῶν χειρόγραφον τοῖς δόγμασιν ὃ ἦν ὑπεναντίον ἡμῖν, καὶ αὐτὸ ἦρκεν ἐκ τοῦ μέσου προσηλώσας αὐτὸ τῷ σταυρῷ·"},
+      {"reference":"Col.2.15","greek":"ἀπεκδυσάμενος τὰς ἀρχὰς καὶ τὰς ἐξουσίας ἐδειγμάτισεν ἐν παρρησίᾳ, θριαμβεύσας αὐτοὺς ἐν αὐτῷ."}
+    ]
+  }],
+  "passage_sense_resolution": {
+    "gate_version": "2.2",
+    "status": "pending_human_editor_approval",
+    "visibility_attestation": {"source_side_only":true,"prior_flt_wording_absent":true,"prior_candidates_absent":true,"editor_benchmark_absent":true,"comparison_translations_absent":true},
+    "passage_argument": [
+      "Verses 6-7 turn Paul's Christ-centered warning into an exhortation: because the believers received Christ Jesus as Lord, they must continue living in Him, rooted, built up, established in faith, and overflowing with thanksgiving.",
+      "Verse 8 states the threat: a deceptive teaching can carry them off as spoil because it follows human tradition and the stoicheia of the world rather than Christ.",
+      "Verses 9-10 give the controlling reason: the fullness of deity dwells bodily in Christ, believers have their fullness/status in Him, and He is head over every ruler and authority.",
+      "Verses 11-13 describe participation in Christ through non-handmade circumcision, burial and resurrection with Him, and being made alive with Him despite former death in transgressions.",
+      "Verses 13-14 connect new life with God's forgiveness and the removal of the hostile written record by nailing it to the cross.",
+      "Verse 15 climaxes the unit with Christ/God's public victory over rulers and authorities, using stripping/disarming and Roman-triumph imagery."
+    ],
+    "proposition_map": [
+      {"references":["Col.2.6-7"],"proposition":"Having received Christ Jesus the Lord, the believers are to continue their lives in Him, securely rooted, continually built up, strengthened in the taught faith, and overflowing with thanksgiving."},
+      {"references":["Col.2.8"],"proposition":"They must guard against being taken captive by an empty deceptive teaching grounded in human tradition and the stoicheia of the world rather than Christ."},
+      {"references":["Col.2.9-10"],"proposition":"All the fullness of deity dwells bodily in Christ; believers are filled/made complete in Him, who rules over every ruler and authority."},
+      {"references":["Col.2.11-12"],"proposition":"In Christ the believers underwent a non-human circumcision involving the stripping off of the fleshly body, and in baptism they were buried and raised with Him through faith in God's power."},
+      {"references":["Col.2.13-14"],"proposition":"Though dead in transgressions and uncircumcision, God made them alive with Christ, forgave transgressions, erased the hostile written record, removed it, and nailed it to the cross."},
+      {"references":["Col.2.15"],"proposition":"The rulers and authorities were stripped/disarmed, publicly exposed, and led in triumph/victory."
+      }
+    ],
+    "expressions": [
+      {"sense_id":"COL2-006-PARALAMBANO","references":["Col.2.6"],"source_expression":"παρελάβετε τὸν Χριστὸν Ἰησοῦν τὸν κύριον","status":"human_editor_resolution_required","primary_question":"Does Paul foreground receiving Christ Himself, receiving the transmitted apostolic teaching about Him, or intentionally fuse both?","viable_alternatives":["receive/accept Christ Himself","receive the apostolic message/tradition concerning Christ","a fused reception of Christ through the apostolic proclamation"],"reading_text_guidance":"Do not settle before Human Editor review.","human_decision_required":true},
+      {"sense_id":"COL2-008-PHILOSOPHIA","references":["Col.2.8"],"source_expression":"διὰ τῆς φιλοσοφίας καὶ κενῆς ἀπάτης","status":"source_floor_resolved_wording_open","primary_sense":"the specific deceptive teaching threatening the Colossians, not an all-purpose condemnation of philosophy","reading_text_guidance":"English must not naturally teach that every form of philosophy is evil.","reader_note_required":"possible"},
+      {"sense_id":"COL2-008-STOICHEIA","references":["Col.2.8","Col.2.20"],"source_expression":"τὰ στοιχεῖα τοῦ κόσμου","status":"contested_human_editor_resolution_required","viable_alternatives":["basic elements/components of the world","elementary principles/rudiments of the world","cosmic/elemental spiritual powers associated with the world"],"discourse_evidence":"Contrast with Christ; recurrence at 2:20; nearby rulers/authorities language may bear on the decision but does not by itself settle it.","reading_text_guidance":"No worker improvisation; resolve before A/B/C.","human_decision_required":true,"reader_note_required":true},
+      {"sense_id":"COL2-009-010-FULLNESS","references":["Col.2.9","Col.2.10"],"source_expression":"πᾶν τὸ πλήρωμα ... πεπληρωμένοι","status":"human_editor_resolution_required","primary_sense":"the fullness of deity dwells bodily in Christ; believers have a cognate fullness/completion status in Him","discourse_evidence":"The cognate wording creates a rhetorical handoff from who Christ is to what believers possess/become in Him; Col.1:19 already established fullness language.","reading_text_guidance":"Determine how much of the lexical link can remain audible in clear English.","human_decision_required":true},
+      {"sense_id":"COL2-009-THEOTES","references":["Col.2.9"],"source_expression":"τῆς θεότητος σωματικῶς","status":"source_floor_resolved_wording_open","primary_sense":"the fullness of deity—what belongs to being God—dwells in Christ bodily","reading_text_guidance":"Do not weaken to a vague divine quality; avoid unnecessary jargon if plain English can carry the claim.","reader_note_required":"likely"},
+      {"sense_id":"COL2-011-CIRCUMCISION","references":["Col.2.11"],"source_expression":"περιτομῇ ἀχειροποιήτῳ ... περιτομῇ τοῦ Χριστοῦ","status":"human_editor_resolution_required","primary_question":"How should 'circumcision of Christ' be related to Christ without sounding like a reference to Jesus' own physical circumcision?","viable_alternatives":["circumcision performed/effected by Christ","circumcision belonging to the Christ-defined covenant/community","retain a closer expression and explain in a note"],"reading_text_guidance":"Resolve genitive and metaphor before drafting.","human_decision_required":true,"reader_note_required":true},
+      {"sense_id":"COL2-012-013-WITH-CHRIST","references":["Col.2.12","Col.2.13"],"source_expression":"συνταφέντες ... συνηγέρθητε ... συνεζωοποίησεν ... σὺν αὐτῷ","status":"source_floor_resolved_wording_open","primary_sense":"believers participate with Christ: buried with Him, raised with Him, made alive with Him","reading_text_guidance":"Preserve the repeated participation logic even if sentence architecture changes for oral English."},
+      {"sense_id":"COL2-014-CHEIROGRAPHON","references":["Col.2.14"],"source_expression":"τὸ καθ’ ἡμῶν χειρόγραφον τοῖς δόγμασιν","status":"contested_human_editor_resolution_required","viable_alternatives":["written record/certificate against us","record of debt/indebtedness","written charge/obligation expressed in decrees"],"choice_risks":"Do not equate the phrase with the Mosaic law as a whole without explicit source-side ruling.","reading_text_guidance":"Resolve noun image and relation of dogmata before drafting.","human_decision_required":true,"reader_note_required":true},
+      {"sense_id":"COL2-015-TRIUMPH","references":["Col.2.15"],"source_expression":"ἀπεκδυσάμενος ... ἐδειγμάτισεν ... θριαμβεύσας αὐτοὺς ἐν αὐτῷ","status":"human_editor_resolution_required","primary_sense":"rulers and authorities are stripped/disarmed, publicly exposed, and subjected to triumphal victory","viable_alternatives":["lead them as captives in a triumphal procession","triumph over them publicly","retain victory in reading text and explain Roman procession imagery in a note"],"primary_question":"Does ἐν αὐτῷ point to Christ/Him or to the cross/it in the preferred source analysis?","human_decision_required":true,"reader_note_required":"likely"}
+    ],
+    "human_editor_questions": [
+      "2:6 — How much transmitted-teaching sense should be heard in 'received Christ Jesus the Lord'?",
+      "2:8 — Which viable sense of stoicheia best explains this paragraph and its recurrence at 2:20?",
+      "2:9-10 — How strongly should English preserve the plērōma / peplērōmenoi wordplay?",
+      "2:11 — How should the non-handmade 'circumcision of Christ' be explained without implying Jesus' own circumcision?",
+      "2:14 — What exactly is the cheirographon with dogmata: debt record, written charge, or another formulation?",
+      "2:15 — How much Roman triumph imagery belongs in reading text, and what is the antecedent of en autō?"
+    ]
+  }
+}
