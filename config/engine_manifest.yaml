@@ -1,5 +1,5 @@
 schema_version: 1
-last_updated: "2026-08-11"
+last_updated: "2026-08-13"
 project:
   name: "Formed Life Translation"
   repository: "WormRN/formed-life-translation"
@@ -57,8 +57,8 @@ bootstrap:
 execution_control:
   model: "passage_manifest_state_machine_v1"
   state_machine_spec: "docs/architecture/phase-4/passage-manifest-state-machine-v1.md"
-  current_unit_id: "COL-01-024-029"
-  current_passage_manifest: "config/passages/COL-01-024-029.json"
+  current_unit_id: "COL-02-001-005"
+  current_passage_manifest: "config/passages/COL-02-001-005.json"
   default_branch_state_is_authoritative: true
   chat_history_is_authoritative: false
   branch_and_pull_request_state_is_proposed_only: true
@@ -102,15 +102,15 @@ governing_documents:
 
 current_checkpoint:
   book: "Colossians"
-  chapter: 1
-  current_unit_id: "COL-01-024-029"
-  current_passage: "Colossians 1:24-29"
-  stage: "passage_sense_complete_pending_blind_draft_authorization"
-  candidate_status: "No English candidate exists; Engine 2.2 source-side Passage-Sense Resolution Gate is complete. Blind A/B/C drafting requires a separate Human Editor authorization."
-  candidate_sealed: false
-  latest_accepted_unit: "Colossians 1:15-23 accepted after repaired exact candidate passed 3 of 3 semantic-floor auditors with zero blocking defects."
-  next_permitted_action: "Human Editor may review the Colossians 1:24-29 source packet and separately authorize a blind A/B/C drafting job."
-  copyright_status: "not_applicable_before_candidate_drafting"
+  chapter: 2
+  current_unit_id: "COL-02-001-005"
+  current_passage: "Colossians 2:1-5"
+  stage: "human_editor_terminal_text_pending_smoothing_and_exact_audit"
+  candidate_status: "Human Editor terminal text selected and packaged on PR #74; default-branch passage manifest remains authoritative until merge."
+  candidate_sealed: true
+  latest_accepted_unit: "Colossians 1:24-29 accepted after corrected complete-package exact audit; Chapter 1 is terminal and must remain unchanged."
+  next_permitted_action: "Merge the Human Editor-authorized Colossians 2:1-5 terminal package and allow the automatic manifest dispatcher to launch the authorized smoothing job."
+  copyright_status: "DEFERRED_BATCH"
   provisional_heuristic_check: "not_started"
   source_gate_status: "complete_for_blind_drafting"
   hard_check_required: true
@@ -295,12 +295,12 @@ current_checkpoint:
     semantic_pass: true
     human_acceptance_after_oral_review_pending: false
   active_files:
-    passage_manifest: "config/passages/COL-01-015-023.json"
-    blind_source: "docs/architecture/phase-4/COL-01-015-023_blind-source-v2.2.json"
+    passage_manifest: "config/passages/COL-02-001-005.json"
+    blind_source: "docs/architecture/phase-4/COL-02-001-005_smoothing-source-v2.2_blind-source-v2.2.json"
     historical_preflight: "config/COL-01-001-014_blind-draft-preflight-v01.json"
     quarantined_workflow: ".github/workflows/phase4-col1-001-014-sense-drafts.yml"
     state_machine_spec: "docs/architecture/phase-4/passage-manifest-state-machine-v1.md"
-    latest_accepted_unit_record: "docs/architecture/phase-4/PHP-04-021-023_human-editor-synthesis-v2.2.json"
+    latest_accepted_unit_record: "docs/architecture/phase-4/COL-01-024-029_human-final-v2.2.json"
     latest_frozen_chapter: "docs/architecture/phase-4/FLT_Philippians_3_freeze-v01.md"
     latest_audit_receipt: "config/latest_audit_run.json"
 
@@ -357,7 +357,7 @@ accepted_units:
     status: "verses 20, 21, and 23 revised by the human editor after valid common-goal blind drafting; remaining wording retained; sealed candidate passed three semantic-floor auditors with zero blocking defects; process revalidated"
     draft_run_id: 30073170869
     audit_run_id: 30117320796
-  - passage: "Philippians 1:27-30"
+  - passage: "Philians 1:27-30"
     status: "verses 27-29 retained; human editor approved the final verse 30 oral-flow repair; repaired exact candidate passed three semantic-floor auditors with zero blocking defects; chapter review, notes, validation, and freeze complete"
     draft_run_id: 30073170869
     audit_run_id: 30126936712
