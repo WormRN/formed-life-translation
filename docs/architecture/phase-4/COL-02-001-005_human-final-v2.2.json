@@ -4,13 +4,13 @@
   "unit_id": "COL-02-001-005",
   "passage": "Colossians 2:1-5",
   "engine_version": "2.2",
-  "status": "human_editor_final_exact_candidate",
+  "status": "human_editor_final_exact_candidate_post_smoothing",
   "human_editor": "David L. Davis",
   "human_editor_date": "2026-08-13",
-  "smoothing_run_id": "31763747874",
+  "smoothing_run_id": "31765288528",
   "human_editor_selection": {
     "exact_wording_preserved": true,
-    "smoothing_disposition": "Human Editor terminal wording retained unchanged after successful oral-smoothing review; smoothing proposals remain evidence only."
+    "smoothing_disposition": "Human Editor adjudicated the full SMOOTH-02 evidence and supplied this exact final wording for terminal reseal and audit."
   },
   "human_editor_overrides": [
     {
@@ -18,6 +18,12 @@
       "issue": "local agōn/agōnizomai rendering",
       "decision": "Lock fighting for this local Col.2.1 context. Do not retroactively alter Col.1.29; Chapter 1 remains sealed as-is.",
       "status": "binding_human_editor_override"
+    },
+    {
+      "reference": "Col.2.2",
+      "issue": "plērophoria assurance rendering",
+      "decision": "Render the assurance concept verbally as 'be completely sure' rather than with an abstract assurance noun. Record as a local precedent to consult at Col.4.12, not an automatic global lock.",
+      "status": "binding_human_editor_decision"
     }
   ],
   "verse_renderings": [
@@ -27,11 +33,11 @@
     },
     {
       "reference": "Col.2.2",
-      "text": "I want them to take heart, and be bound together by love. I want them to have the deep, confident assurance that comes from truly understanding God's secret plan, which is Christ Himself."
+      "text": "I want all these believers to take heart and be bound together in love. I want them to understand deeply and to be completely sure, so that they will come to know God's secret plan, which is Christ Himself."
     },
     {
       "reference": "Col.2.3",
-      "text": "In Him every treasure of wisdom and knowledge lies hidden."
+      "text": "In Christ every treasure of wisdom and knowledge lies hidden."
     },
     {
       "reference": "Col.2.4",
@@ -39,7 +45,7 @@
     },
     {
       "reference": "Col.2.5",
-      "text": "Even though I am not there in person, I am with you in spirit, and I am glad to see how well you are holding together and that your trust in Christ is so secure."
+      "text": "Even though I am not there in person, I am with you in spirit. I am glad to see how well you are holding together and how secure your trust in Christ is."
     }
   ],
   "reader_notes": [
