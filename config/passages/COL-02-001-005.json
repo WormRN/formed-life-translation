@@ -1,49 +1,133 @@
 {
   "schema_version": "1.0.0",
-  "manifest_revision": 10,
+  "manifest_revision": 11,
   "last_updated": "2026-08-13",
-  "unit": {"unit_id":"COL-02-001-005","book":"Colossians","passage":"Colossians 2:1-5","source_edition":"SBLGNT","engine_version":"2.2"},
-  "authority": {"state_source":"this_file_on_default_branch","human_editor":"David L. Davis","chat_history_authoritative":false,"historical_preflight_authorization_reusable":false,"conflict_policy":"stop_and_report"},
-  "artifacts": {
-    "source_packet":"docs/architecture/phase-4/COL-02-001-005_smoothing-source-v2.2_blind-source-v2.2.json",
-    "recovered_candidate_bundle":"docs/architecture/phase-4/COL-02-001-005_blind-candidates-recovered-v2.2.json",
-    "human_editor_synthesis":"docs/architecture/phase-4/COL-02-001-005_human-editor-synthesis-v2.2.json",
-    "human_editor_synthesis_seal":"docs/architecture/phase-4/COL-02-001-005_human-editor-synthesis-seal-v2.2.json",
-    "contextual_lexical_matrix":"docs/current/FLT_contextual_lexical_matrix_v2.0.md",
-    "contextual_lexical_matrix_override":"docs/current/FLT_contextual_lexical_matrix_colossians_overrides_v2.0.md",
-    "draft_workflow":".github/workflows/phase4-sense-drafts.yml",
-    "smoothing_workflow":".github/workflows/phase4-human-smoothing.yml",
-    "exact_audit_workflow":".github/workflows/phase4-exact-audit.yml",
-    "decision_log":"logs/decision-log/COL-02-001-005-human-synthesis-20260813.md",
-    "state_machine_spec":"docs/architecture/phase-4/passage-manifest-state-machine-v1.md",
-    "circuit_breaker_spec":"docs/architecture/phase-4/FLT_Autonomous_Circuit_Breaker_v1.md"
+  "unit": {
+    "unit_id": "COL-02-001-005",
+    "book": "Colossians",
+    "passage": "Colossians 2:1-5",
+    "source_edition": "SBLGNT",
+    "engine_version": "2.2"
   },
-  "state": {"status":"ready","phase":"human_editor_terminal_text_sealed_smoothing_authorized","active_job_id":null,"active_run_id":"31674368604","translation_allowed":true,"candidate_generation_allowed":false,"provider_dispatch_allowed":true,"github_workflow_dispatch_allowed":true,"translation_artifact_mutation_allowed":false,"next_permitted_action":"dispatch COL-02-001-005-SMOOTH-01 through phase4-human-smoothing.yml against the exact Human Editor terminal text"},
-  "allowed_actions":["flt status COL-02-001-005","dispatch COL-02-001-005-SMOOTH-01","read_only_repository_inspection"],
-  "forbidden_actions":["rerun successful blind workers","change the sealed Human Editor terminal text during smoothing","use comparison translations","reuse a consumed nonce","modify terminal Colossians chapter 1 units","modify Philippians v0.9 RC1"],
+  "authority": {
+    "state_source": "this_file_on_default_branch",
+    "human_editor": "David L. Davis",
+    "chat_history_authoritative": false,
+    "historical_preflight_authorization_reusable": false,
+    "conflict_policy": "stop_and_report"
+  },
+  "artifacts": {
+    "source_packet": "docs/architecture/phase-4/COL-02-001-005_smoothing-source-v2.2_blind-source-v2.2.json",
+    "recovered_candidate_bundle": "docs/architecture/phase-4/COL-02-001-005_blind-candidates-recovered-v2.2.json",
+    "human_editor_synthesis": "docs/architecture/phase-4/COL-02-001-005_human-editor-synthesis-v2.2.json",
+    "human_editor_synthesis_seal": "docs/architecture/phase-4/COL-02-001-005_human-editor-synthesis-seal-v2.2.json",
+    "contextual_lexical_matrix": "docs/current/FLT_contextual_lexical_matrix_v2.0.md",
+    "contextual_lexical_matrix_override": "docs/current/FLT_contextual_lexical_matrix_colossians_overrides_v2.0.md",
+    "draft_workflow": ".github/workflows/phase4-sense-drafts.yml",
+    "smoothing_workflow": ".github/workflows/phase4-human-smoothing.yml",
+    "exact_audit_workflow": ".github/workflows/phase4-exact-audit.yml",
+    "decision_log": "logs/decision-log/COL-02-001-005-human-synthesis-20260813.md",
+    "state_machine_spec": "docs/architecture/phase-4/passage-manifest-state-machine-v1.md",
+    "circuit_breaker_spec": "docs/architecture/phase-4/FLT_Autonomous_Circuit_Breaker_v1.md"
+  },
+  "state": {
+    "status": "running",
+    "phase": "human_editor_smoothing_running",
+    "active_job_id": "COL-02-001-005-SMOOTH-01",
+    "active_run_id": "31763747874",
+    "translation_allowed": true,
+    "candidate_generation_allowed": false,
+    "provider_dispatch_allowed": true,
+    "github_workflow_dispatch_allowed": false,
+    "translation_artifact_mutation_allowed": false,
+    "next_permitted_action": "await verified oral-smoothing completion or exact cancel"
+  },
+  "allowed_actions": [
+    "flt status COL-02-001-005",
+    "flt cancel COL-02-001-005 --job COL-02-001-005-SMOOTH-01 --expected-revision 11",
+    "read_only_repository_inspection"
+  ],
+  "forbidden_actions": [
+    "rerun successful blind workers",
+    "change the sealed Human Editor terminal text during smoothing",
+    "use comparison translations",
+    "reuse a consumed nonce",
+    "modify terminal Colossians chapter 1 units",
+    "modify Philippians v0.9 RC1"
+  ],
   "jobs": {
-    "COL-02-001-005-BLIND-DRAFT-01":{"status":"blocked_zero_provider_workflow_setup_failure","provider_attempts_used":0,"retry_allowed":false,"remote_run_id":"31674227604"},
-    "COL-02-001-005-BLIND-DRAFT-02":{"status":"completed_recovered_for_human_editor","provider_attempts_used":6,"provider_attempts_remaining":2,"retry_allowed":false,"remote_run_id":"31674368604","source_artifact_id":9170976374},
+    "COL-02-001-005-BLIND-DRAFT-01": {
+      "status": "blocked_zero_provider_workflow_setup_failure",
+      "provider_attempts_used": 0,
+      "retry_allowed": false,
+      "remote_run_id": "31674227604"
+    },
+    "COL-02-001-005-BLIND-DRAFT-02": {
+      "status": "completed_recovered_for_human_editor",
+      "provider_attempts_used": 6,
+      "provider_attempts_remaining": 2,
+      "retry_allowed": false,
+      "remote_run_id": "31674368604",
+      "source_artifact_id": 9170976374
+    },
     "COL-02-001-005-SMOOTH-01": {
-      "idempotency_key":"flt:2.2:COL-02-001-005:human-smoothing:01",
-      "job_type":"listener_only_and_source_aware_smoothing",
-      "status":"authorized_ready",
-      "authorization_id":"HE-COL-02-001-005-SMOOTH-20260813",
-      "authorized_by":"human_editor",
-      "authorization_scope":"Run listener-only diagnosis and source-aware smoothing against the exact Human Editor terminal text without modifying it; preserve both transparency notes and all Human Editor lexical overrides as governing package metadata.",
-      "dispatch_allowed":true,
-      "workflow":".github/workflows/phase4-human-smoothing.yml",
-      "max_attempts_per_worker":2,
-      "task_max_attempts":8,
-      "provider_attempts_used":0,
-      "provider_attempts_remaining":8,
-      "checkpoints_to_restore":0,
-      "dispatch_confirmed":false,
-      "retry_allowed":false,
-      "launch":{"mode":"automatic_manifest_push_dispatch","nonce":"HE-COL-02-001-005-SMOOTH-20260813-01","status":"armed","armed_by":"human_editor","authorization_id":"HE-COL-02-001-005-SMOOTH-20260813","expected_manifest_revision":10,"consumed_run_id":null,"consumed_nonce":null}
+      "idempotency_key": "flt:2.2:COL-02-001-005:human-smoothing:01",
+      "job_type": "listener_only_and_source_aware_smoothing",
+      "status": "running",
+      "authorization_id": "HE-COL-02-001-005-SMOOTH-20260813",
+      "authorized_by": "human_editor",
+      "authorization_scope": "Run listener-only diagnosis and source-aware smoothing against the exact Human Editor terminal text without modifying it; preserve both transparency notes and all Human Editor lexical overrides as governing package metadata.",
+      "dispatch_allowed": true,
+      "workflow": ".github/workflows/phase4-human-smoothing.yml",
+      "max_attempts_per_worker": 2,
+      "task_max_attempts": 8,
+      "provider_attempts_used": 0,
+      "provider_attempts_remaining": 8,
+      "checkpoints_to_restore": 0,
+      "dispatch_confirmed": true,
+      "retry_allowed": false,
+      "launch": {
+        "mode": "automatic_manifest_push_dispatch",
+        "nonce": "HE-COL-02-001-005-SMOOTH-20260813-01",
+        "status": "consumed",
+        "armed_by": "human_editor",
+        "authorization_id": "HE-COL-02-001-005-SMOOTH-20260813",
+        "expected_manifest_revision": 10,
+        "consumed_run_id": "31763747874",
+        "consumed_nonce": "HE-COL-02-001-005-SMOOTH-20260813-01"
+      },
+      "remote_run_id": "31763747874"
     }
   },
-  "source_gate":{"status":"complete_for_blind_drafting","gate_version":"2.2","human_editor_approved":true,"human_editor_approval_date":"2026-08-13","human_editor_lexical_override_date":"2026-08-13","locked_matrix_alerts_required":["μυστήριον -> secret plan","ἀγών -> fighting for Col.2.1 only; do not alter Col.1.29","ἀποκρύπτω / ἀπόκρυφος -> hidden for Col.1.26 and 2.3","σάρξ -> in person for Col.2.1 and 2.5","συμβιβάζω -> bind together / bound together for Col.2.2","τάξις -> holding together for Col.2.5","στερέωμα -> secure for Col.2.5"]},
-  "editorial_decisions":{"candidate_status":"human_editor_terminal_text_sealed","human_editor_selection":"exact terminal text recorded 2026-08-13","note_package_status":"two transparency notes attached and required for terminal package audit","matrix_override_status":"Human Editor Colossians override layer is binding over conflicting older base-Matrix entries","chapter_1_non_reopening":"Colossians 1:29 remains unchanged and sealed","acceptance_status":"pending_smoothing_and_terminal_exact_audit"},
-  "invariants":["Only the default-branch copy is authoritative.","The Human Editor terminal text is sealed and smoothing may diagnose or propose but may not silently modify wording.","Colossians Chapter 1 remains terminal and may not be changed by this unit's lexical rulings.","The terminal exact audit must include the exact text, both TN-tagged notes, and the binding Human Editor lexical override.","The Human Editor alone selects or changes wording."]
+  "source_gate": {
+    "status": "complete_for_blind_drafting",
+    "gate_version": "2.2",
+    "human_editor_approved": true,
+    "human_editor_approval_date": "2026-08-13",
+    "human_editor_lexical_override_date": "2026-08-13",
+    "locked_matrix_alerts_required": [
+      "μυστήριον -> secret plan",
+      "ἀγών -> fighting for Col.2.1 only; do not alter Col.1.29",
+      "ἀποκρύπτω / ἀπόκρυφος -> hidden for Col.1.26 and 2.3",
+      "σάρξ -> in person for Col.2.1 and 2.5",
+      "συμβιβάζω -> bind together / bound together for Col.2.2",
+      "τάξις -> holding together for Col.2.5",
+      "στερέωμα -> secure for Col.2.5"
+    ]
+  },
+  "editorial_decisions": {
+    "candidate_status": "human_editor_terminal_text_sealed",
+    "human_editor_selection": "exact terminal text recorded 2026-08-13",
+    "note_package_status": "two transparency notes attached and required for terminal package audit",
+    "matrix_override_status": "Human Editor Colossians override layer is binding over conflicting older base-Matrix entries",
+    "chapter_1_non_reopening": "Colossians 1:29 remains unchanged and sealed",
+    "acceptance_status": "pending_smoothing_and_terminal_exact_audit"
+  },
+  "invariants": [
+    "Only the default-branch copy is authoritative.",
+    "The Human Editor terminal text is sealed and smoothing may diagnose or propose but may not silently modify wording.",
+    "Colossians Chapter 1 remains terminal and may not be changed by this unit's lexical rulings.",
+    "The terminal exact audit must include the exact text, both TN-tagged notes, and the binding Human Editor lexical override.",
+    "The Human Editor alone selects or changes wording."
+  ]
 }
