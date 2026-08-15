@@ -71,7 +71,11 @@ No approved rendering. The entry records traps and boundaries. Workers choose fr
 
 **Caution 3.** Where `him` would be ambiguous on first hearing because adjacent third-person masculine referents compete, name Christ rather than expanding the preposition. Precedent: Col.2:3.
 
-**Restricted rendering:** `in union with Christ` / `in union with him` unless specifically approved for that individual occurrence by the Human Editor.
+**Restricted renderings:**
+- `in union with Christ`
+- `in union with him`
+
+Any use of a restricted rendering in worker-facing Matrix guidance requires explicit per-instance Human Editor approval.
 
 ## Religion-naive vocabulary boundary for worker briefs
 
@@ -85,7 +89,24 @@ When both apply—the label is opaque **and** the sense varies—the term is GOV
 
 Packet construction must not convert OPEN WITH CAUTIONS material into a preferred English expansion merely because an overlay or source-side explanation used that expansion descriptively. Before a blind-source packet is passed to workers, packet-build validation must reject restricted English expansions unless the packet records explicit per-instance Human Editor approval.
 
-For the `ἐν Χριστῷ / ἐν αὐτῷ / ἐν ᾧ` entry, packet-build validation must reject worker-facing guidance containing `in union with` unless that exact occurrence carries explicit Human Editor expansion approval.
+Packet-build validation reads the `Restricted rendering` or `Restricted renderings` field from every OPEN WITH CAUTIONS entry and rejects worker-facing Matrix guidance containing any listed phrase unless explicit per-instance Human Editor approval is recorded. The harness must not hardcode a particular restricted phrase.
+
+## Legacy `approved_*` authority-label migration
+
+The following migration is Human Editor-approved. Historical committed packets remain available through Git history for provenance, but worker-facing packets must normalize these legacy labels before drafting. An unrecognized `approved_*` label is a packet-build error and may not pass through unchanged.
+
+| Legacy label | Authority type |
+| --- | --- |
+| `approved_for_unit` | GOVERNED |
+| `approved_contextual_alert` | GOVERNED |
+| `approved_underdetermined` | OPEN WITH CAUTIONS |
+| `approved_contested_stub` | OPEN WITH CAUTIONS |
+| `approved_continuity_alert` | GOVERNED |
+| `approved_word_family_alert` | GOVERNED |
+| `approved_discourse_chain` | LOCKED only for the Col.2:12–13 `συνθάπτω / συνεγείρω / συζωοποιέω` with-Christ chain |
+| `approved_contested_syntax` | OPEN WITH CAUTIONS |
+
+Repository inspection on 2026-08-15 confirmed that `approved_discourse_chain` is currently used only for `συνθάπτω`, `συνεγείρω`, and `συζωοποιέω` in Col.2:12–13. No other construction currently carries that label. Any future use outside that chain must halt for Human Editor review rather than inherit LOCKED authority.
 
 ## Decision Brief drift detection
 
