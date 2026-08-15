@@ -18,6 +18,19 @@ const requireIdsWithin=(actual,required,allowed,label)=>{
 };
 const normalizeLemma=value=>String(value||'').normalize('NFC').trim().toLocaleLowerCase('el-GR');
 const splitLemmaList=value=>String(value||'').split(/\s*(?:\/|,|;)\s*/).map(normalizeLemma).filter(Boolean);
+const escapeRegex=value=>String(value).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+
+const LEGACY_MATRIX_AUTHORITY=Object.freeze({
+  approved_for_unit:'GOVERNED',
+  approved_contextual_alert:'GOVERNED',
+  approved_underdetermined:'OPEN WITH CAUTIONS',
+  approved_contested_stub:'OPEN WITH CAUTIONS',
+  approved_continuity_alert:'GOVERNED',
+  approved_word_family_alert:'GOVERNED',
+  approved_discourse_chain:'LOCKED',
+  approved_contested_syntax:'OPEN WITH CAUTIONS'
+});
+const WITH_CHRIST_CHAIN_LEMMAS=new Set(['συνθάπτω','συνεγείρω','συζωοποιέω'].map(normalizeLemma));
 
 export function lockedMatrixLemmas(matrixMarkdown){
   if(typeof matrixMarkdown!=='string'||!matrixMarkdown.trim()) throw new Error('Locked Matrix preflight: governing Matrix Markdown is required.');
@@ -34,14 +47,53 @@ export function lockedMatrixLemmas(matrixMarkdown){
   return locked;
 }
 
-export function assertPacketMatrixHygiene(packet){
+export function openWithCautionsRestrictedRenderings(matrixMarkdown){
+  if(typeof matrixMarkdown!=='string'||!matrixMarkdown.trim()) throw new Error('Packet hygiene: governing Matrix Markdown is required.');
+  const authorityMarker=/\*\*Authority type:\*\*\s*(LOCKED|GOVERNED|OPEN WITH CAUTIONS)\b/gi;
+  const matches=[...matrixMarkdown.matchAll(authorityMarker)];
+  const restricted=new Set();
+  for(let i=0;i<matches.length;i++){
+    if(matches[i][1].toUpperCase()!=='OPEN WITH CAUTIONS') continue;
+    const start=matches[i].index;
+    const end=i+1<matches.length?matches[i+1].index:matrixMarkdown.length;
+    const block=matrixMarkdown.slice(start,end);
+    const fields=[...block.matchAll(/\*\*Restricted renderings?:\*\*\s*([\s\S]*?)(?=\n\*\*[^*\n]+:\*\*|\n#{1,6}\s|$)/gi)];
+    for(const field of fields){
+      for(const phrase of field[1].matchAll(/`([^`]+)`/g)){
+        const value=phrase[1].trim();
+        if(value) restricted.add(value);
+      }
+    }
+  }
+  return [...restricted];
+}
+
+export function normalizeMatrixAlertsForPacket(alerts){
+  if(!Array.isArray(alerts)) throw new Error('Matrix authority migration: alerts array is required.');
+  return alerts.map((alert,i)=>{
+    const status=String(alert?.status||'');
+    if(!status.startsWith('approved_')) return {...alert};
+    const authority_type=LEGACY_MATRIX_AUTHORITY[status];
+    if(!authority_type) throw new Error(`Matrix authority migration: unmapped legacy label ${status} at matrix alert ${i}.`);
+    if(status==='approved_discourse_chain'&&!WITH_CHRIST_CHAIN_LEMMAS.has(normalizeLemma(alert?.lemma))){
+      throw new Error(`Matrix authority migration: approved_discourse_chain may map to LOCKED only for the Col.2:12–13 with-Christ chain; found ${alert?.lemma||'unknown'}.`);
+    }
+    const {status:_legacyStatus,...rest}=alert;
+    return {...rest,status:'approved',authority_type};
+  });
+}
+
+export function assertPacketMatrixHygiene(packet,{matrixMarkdown}={}){
   if(!packet||typeof packet!=='object') throw new Error('Packet hygiene: packet object is required.');
   const alerts=packet.matrix_entries||[];
-  const restricted=/\bin union with\b/i;
+  const restricted=openWithCautionsRestrictedRenderings(matrixMarkdown);
   for(const [i,alert] of alerts.entries()){
     const text=JSON.stringify(alert||{});
-    if(restricted.test(text)&&alert?.human_editor_expansion_approved!==true){
-      throw new Error(`Packet hygiene: matrix_entries[${i}] propagates restricted 'in union with' language without per-instance Human Editor approval.`);
+    const explicitlyApproved=new Set((alert?.human_editor_approved_restricted_renderings||[]).map(x=>String(x).toLocaleLowerCase('en-US')));
+    for(const phrase of restricted){
+      if(!new RegExp(escapeRegex(phrase),'i').test(text)) continue;
+      const approved=alert?.human_editor_restricted_rendering_approved===true||alert?.human_editor_expansion_approved===true||explicitlyApproved.has(phrase.toLocaleLowerCase('en-US'));
+      if(!approved) throw new Error(`Packet hygiene: matrix_entries[${i}] propagates restricted '${phrase}' language from an OPEN WITH CAUTIONS Matrix entry without per-instance Human Editor approval.`);
     }
   }
   return true;
