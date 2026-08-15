@@ -28,10 +28,23 @@ export function lockedMatrixLemmas(matrixMarkdown){
     const start=matches[i].index;
     const end=i+1<matches.length?matches[i+1].index:matrixMarkdown.length;
     const block=matrixMarkdown.slice(start,end);
-    const isLocked=/\*\*Entry status:\*\*\s*approved\b/i.test(block)||/\*\*Sense status:\*\*\s*approved\b/i.test(block);
-    if(isLocked) for(const lemma of splitLemmaList(matches[i][1])) locked.add(lemma);
+    const authority=block.match(/\*\*Authority type:\*\*\s*(LOCKED|GOVERNED|OPEN WITH CAUTIONS)\b/i)?.[1]?.toUpperCase();
+    if(authority==='LOCKED') for(const lemma of splitLemmaList(matches[i][1])) locked.add(lemma);
   }
   return locked;
+}
+
+export function assertPacketMatrixHygiene(packet){
+  if(!packet||typeof packet!=='object') throw new Error('Packet hygiene: packet object is required.');
+  const alerts=packet.matrix_entries||[];
+  const restricted=/\bin union with\b/i;
+  for(const [i,alert] of alerts.entries()){
+    const text=JSON.stringify(alert||{});
+    if(restricted.test(text)&&alert?.human_editor_expansion_approved!==true){
+      throw new Error(`Packet hygiene: matrix_entries[${i}] propagates restricted 'in union with' language without per-instance Human Editor approval.`);
+    }
+  }
+  return true;
 }
 
 export function assertLockedMatrixAlerts(chapter,{matrixMarkdown,sourceLemmaIndex}={}){
