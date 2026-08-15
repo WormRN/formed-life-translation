@@ -21,6 +21,30 @@ Current Human Editor-authorized LOCKED set:
 - `συν-` compound participation chain in Col.2:11–13 — the with-Christ element must remain audible; protected thread: participation with Christ in burial, raising, and being made alive.
 - `κτίσις` — `creation`; protected thread: the creation bracket linking Col.1:15 and 1:23.
 
+### μυστήριον · mystērion
+**Authority type:** LOCKED  
+**Protected thread:** God's formerly hidden purpose disclosed in Christ; `secret plan`, with the approved Col.2:2 contextual variation `the secret God kept hidden`.
+
+### ἀποκρύπτω / ἀπόκρυφος · apokryptō / apokryphos
+**Authority type:** LOCKED  
+**Protected thread:** the Col.1:26 → 2:2 → 2:3 hidden-language chain; the `hidden` element must remain audible.
+
+### παρίστημι · paristēmi
+**Authority type:** LOCKED  
+**Protected thread:** presentation language across the Colossians argument; retain `present` within the Human Editor-approved thread.
+
+### νῦν / νυνί · nyn / nyni
+**Authority type:** LOCKED  
+**Protected thread:** temporal now/revealed-now movement; retain `now` within the approved thread.
+
+### συνθάπτω / συνεγείρω / συζωοποιέω · synthaptō / synegeirō / syzōopoieō
+**Authority type:** LOCKED  
+**Protected thread:** the Col.2:12–13 with-Christ participation chain; buried with / raised with / made alive with Christ must remain audible even if English syntax varies.
+
+### κτίσις · ktisis
+**Authority type:** LOCKED  
+**Protected thread:** the creation bracket linking Col.1:15 and Col.1:23; retain `creation` within that thread.
+
 ### GOVERNED
 
 Context varies. The entry records what governs the variation, approved renderings with their locations, and the reasoning. Approved renderings are a recorded pattern with accountability, not a menu and not a fixed gloss.
