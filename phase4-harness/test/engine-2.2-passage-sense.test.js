@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {assertPassageSenseResolution,assertLockedMatrixAlerts,lockedMatrixLemmas,assertCandidateSenseApparatus,assertCommonBasePromptHash,parseModelJson} from '../src/sense-resolution-core.js';
+import {assertPassageSenseResolution,assertLockedMatrixAlerts,lockedMatrixLemmas,openWithCautionsRestrictedRenderings,assertPacketMatrixHygiene,normalizeMatrixAlertsForPacket,assertCandidateSenseApparatus,assertCommonBasePromptHash,parseModelJson} from '../src/sense-resolution-core.js';
 
 const chapter=()=>({
   units:[{verses:[{reference:'Phil.3.1'},{reference:'Phil.3.2'}]}],
@@ -21,13 +21,13 @@ test('blocks drafting without a passage-sense brief',()=>assert.throws(()=>asser
 test('blocks leaked editor benchmark visibility',()=>{const x=chapter();x.passage_sense_resolution.visibility_attestation.editor_benchmark_absent=false;assert.throws(()=>assertPassageSenseResolution(x),/editor_benchmark_absent/)});
 test('requires unresolved senses to expose viable alternatives',()=>{const x=chapter();x.passage_sense_resolution.expressions[1].viable_alternatives=[];assert.throws(()=>assertPassageSenseResolution(x),/retain alternatives/)});
 
-test('locked Matrix parser treats approved entries or approved senses as binding',()=>{
-  const matrix=`## μυστήριον · mystērion\n\n**Entry status:** approved\n\n---\n\n## δοῦλος · doulos\n\n**Entry status:** working\n\n### Sense 1 — service\n\n**Sense status:** approved\n\n---\n\n## πλήρωμα · plērōma\n\n**Entry status:** working\n`;
-  assert.deepEqual([...lockedMatrixLemmas(matrix)].sort(),['δοῦλος','μυστήριον']);
+test('locked Matrix parser uses Authority type, not approved maturity status',()=>{
+  const matrix=`## μυστήριον · mystērion\n\n**Entry status:** approved\n**Authority type:** LOCKED\n\n---\n\n## δοῦλος · doulos\n\n**Entry status:** working\n\n### Sense 1 — service\n\n**Sense status:** approved\n**Authority type:** GOVERNED\n\n---\n\n## πλήρωμα · plērōma\n\n**Entry status:** approved\n`;
+  assert.deepEqual([...lockedMatrixLemmas(matrix)].sort(),['μυστήριον']);
 });
 
-test('locked Matrix preflight blocks a unit missing an alert for a locked Greek lemma',()=>{
-  const matrix=`## μυστήριον · mystērion\n\n**Entry status:** approved\n\n---\n\n## πλήρωμα · plērōma\n\n**Entry status:** working\n`;
+test('locked Matrix preflight blocks a unit missing an alert for an explicitly LOCKED Greek lemma',()=>{
+  const matrix=`## μυστήριον · mystērion\n\n**Entry status:** approved\n**Authority type:** LOCKED\n\n---\n\n## πλήρωμα · plērōma\n\n**Entry status:** approved\n**Authority type:** GOVERNED\n`;
   const source={'Col.2.2':[{lemma:'μυστήριον'},{lemma:'πλήρωμα'}]};
   const valid={units:[{unit_id:'COL-02-001-005',matrix_alerts:[{lemma:'μυστήριον'}],verses:[{reference:'Col.2.2'}]}]};
   assert.doesNotThrow(()=>assertLockedMatrixAlerts(valid,{matrixMarkdown:matrix,sourceLemmaIndex:source}));
@@ -36,11 +36,39 @@ test('locked Matrix preflight blocks a unit missing an alert for a locked Greek 
 });
 
 test('locked Matrix preflight requires unit-scoped matrix_alerts and canonical parsed source',()=>{
-  const matrix=`## μυστήριον · mystērion\n\n**Entry status:** approved\n`;
+  const matrix=`## μυστήριον · mystērion\n\n**Entry status:** approved\n**Authority type:** LOCKED\n`;
   const noAlerts={units:[{unit_id:'COL-02-001-005',verses:[{reference:'Col.2.2'}]}]};
   assert.throws(()=>assertLockedMatrixAlerts(noAlerts,{matrixMarkdown:matrix,sourceLemmaIndex:{'Col.2.2':[{lemma:'μυστήριον'}]}}),/matrix_alerts array is required/);
   const missingSource={units:[{unit_id:'COL-02-001-005',matrix_alerts:[],verses:[{reference:'Col.2.2'}]}]};
   assert.throws(()=>assertLockedMatrixAlerts(missingSource,{matrixMarkdown:matrix,sourceLemmaIndex:{}}),/parsed SBLGNT source missing Col\.2\.2/);
+});
+
+test('packet hygiene reads restricted renderings from OPEN WITH CAUTIONS Matrix entries',()=>{
+  const matrix=`## construction\n\n**Authority type:** OPEN WITH CAUTIONS\n\n**Restricted renderings:**\n- \`in union with Christ\`\n- \`spirit powers\`\n\n## next section\n`;
+  assert.deepEqual(openWithCautionsRestrictedRenderings(matrix),['in union with Christ','spirit powers']);
+  assert.throws(()=>assertPacketMatrixHygiene({matrix_entries:[{guidance:'Use spirit powers here.'}]},{matrixMarkdown:matrix}),/restricted 'spirit powers'/);
+  assert.doesNotThrow(()=>assertPacketMatrixHygiene({matrix_entries:[{guidance:'Use spirit powers here.',human_editor_approved_restricted_renderings:['spirit powers']}]},{matrixMarkdown:matrix}));
+});
+
+test('legacy approved labels normalize to accepted authority types and reject unmapped labels',()=>{
+  const normalized=normalizeMatrixAlertsForPacket([
+    {lemma:'φιλοσοφία',status:'approved_for_unit'},
+    {lemma:'στοιχεῖον',status:'approved_underdetermined'},
+    {lemma:'δόγμα',status:'approved_contested_syntax'},
+    {lemma:'συνθάπτω',status:'approved_discourse_chain'}
+  ]);
+  assert.deepEqual(normalized.map(x=>x.authority_type),['GOVERNED','OPEN WITH CAUTIONS','OPEN WITH CAUTIONS','LOCKED']);
+  assert(normalized.every(x=>x.status==='approved'));
+  assert.throws(()=>normalizeMatrixAlertsForPacket([{lemma:'x',status:'approved_future_label'}]),/unmapped legacy label/);
+});
+
+test('approved_discourse_chain can map to LOCKED only for the Col.2.12-13 with-Christ chain',()=>{
+  assert.doesNotThrow(()=>normalizeMatrixAlertsForPacket([
+    {lemma:'συνθάπτω',status:'approved_discourse_chain'},
+    {lemma:'συνεγείρω',status:'approved_discourse_chain'},
+    {lemma:'συζωοποιέω',status:'approved_discourse_chain'}
+  ]));
+  assert.throws(()=>normalizeMatrixAlertsForPacket([{lemma:'συμβιβάζω',status:'approved_discourse_chain'}]),/only for the Col\.2:12–13 with-Christ chain/);
 });
 
 test('requires complete candidate sense, alternative, and note apparatus',()=>{
