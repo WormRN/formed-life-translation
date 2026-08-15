@@ -4,8 +4,9 @@
 **Engine:** 2.2  
 **Scope:** Colossians 2:6–15 unless explicitly marked as a forward precedent.
 
-This overlay converts the pre-draft stubs for this unit into approved source-side rulings while preserving ambiguity where the Human Editor required it.
+This overlay converts the pre-draft stubs for this unit into approved source-side rulings while preserving ambiguity where the Human Editor required it. It is additionally governed by `FLT_contextual_lexical_matrix_authority_types_v2.0.md`.
 
+- **ἐν Χριστῷ / ἐν αὐτῷ / ἐν ᾧ:** OPEN WITH CAUTIONS under the authority-type amendment. Default to `in Christ` / `in him`; do not propagate `in union with` into worker-facing guidance without per-instance Human Editor approval.
 - **παραλαμβάνω (2:6):** Christ Himself is the object; transmitted-apostolic-teaching resonance is secondary. Preserve the `as received Him / so live in Him` correspondence.
 - **ῥιζόω (2:7):** perfect passive; completed rooting with continuing state. Preserve agricultural image.
 - **ἐποικοδομέω (2:7):** present passive; ongoing building. Preserve architectural image and the deliberate mixed metaphor.
@@ -17,7 +18,7 @@ This overlay converts the pre-draft stubs for this unit into approved source-sid
 - **σωματικῶς (2:9):** bodily/incarnational primary, exact hapax range contested.
 - **κεφαλή (2:10):** Christ's supremacy over every ruler/authority; preserve Colossians continuity.
 - **ἀρχή / ἐξουσία (2:10,15):** preserve continuity with Col.1:16 cosmic rulers/authorities.
-- **περιτομή (2:11):** circumcision effected by/in union with Christ, not Jesus' infant circumcision.
+- **περιτομή (2:11):** Christ-related circumcision, not Jesus' infant circumcision. Do not use this entry to expand `ἐν αὐτῷ`; the prepositional construction is governed separately by the OPEN WITH CAUTIONS entry.
 - **ἀχειροποίητος (2:11):** not made/done by human hands.
 - **σῶμα / σάρξ (2:11,13):** at 2:11 preserve physical-body force and Col.1:22 echo; `sinful nature` forbidden. At 2:13 do not use the phrase as a generic license for `sinful nature`.
 - **ἀπέκδυσις / ἀπεκδύομαι (2:11,15):** removal/stripping and stripping/disarming word-family echo; preserve if possible without distortion.
@@ -29,7 +30,7 @@ This overlay converts the pre-draft stubs for this unit into approved source-sid
 - **δόγμα / τοῖς δόγμασιν (2:14):** bare-dative relation to `χειρόγραφον` remains unresolved; English must survive both live relations.
 - **ἐξαλείφω (2:14):** erase/wipe out/cancel hostile written record, preferably retaining written-record imagery.
 - **θριαμβεύω (2:15):** public victorious triumph; Roman-triumph background is source rationale, but `triumphal procession` is not mandatory.
-- **ἐν αὐτῷ (2:15):** contested. `through the cross` is low-confidence working ruling from v14 proximity; Christ/Him remains live.
+- **ἐν αὐτῷ (2:15):** contested. `through the cross` is low-confidence working ruling from v14 proximity; Christ/Him remains live. This passage-specific ambiguity does not authorize a corpus-wide `in union with` expansion.
 
 ## Copyright boundary
 NIV, CSB, NLT, ESV, and NASB are excluded from all blind-worker inputs. They may be used only after A/B/C exist for Decision-Brief advisory string-spotting. A constrained-phrase exception may be proposed when at least three comparators converge on wording forced by the Greek.
