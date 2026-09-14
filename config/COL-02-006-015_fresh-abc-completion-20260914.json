@@ -1,0 +1,83 @@
+{
+  "unit_id": "COL-02-006-015",
+  "run_id": "FLT-COL-02-006-015-20260914-MINT-06",
+  "task_id": "COL-02-006-015-BLIND-DRAFT-06",
+  "authorization_id": "HE-COL-02-006-015-FRESH-ABC-20260914",
+  "status": "awaiting_human_editor",
+  "candidate_count": 3,
+  "attempts_used": 4,
+  "attempts_allowed": 6,
+  "common_prompt_sha256": "39f5736d708a0e074d25d700a4489df1f086734b1332b0b74f6b078658f18256",
+  "candidates": [
+    {
+      "role": "candidate_a",
+      "provider": "anthropic",
+      "model": "claude-sonnet-5",
+      "attempt": 1,
+      "request_id": "msg_011Cf2rDEAvbVMJHcM7Ptdnw",
+      "usage": {
+        "input_tokens": 8596,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 10578,
+        "output_tokens_details": {
+          "thinking_tokens": 5374
+        },
+        "service_tier": "standard",
+        "inference_geo": "global"
+      }
+    },
+    {
+      "role": "candidate_b",
+      "provider": "openai",
+      "model": "gpt-5.6-sol",
+      "attempt": 1,
+      "request_id": "resp_0004e1b91355d5a8006aa79262375487d191fb77a8a0b1a5c3",
+      "usage": {
+        "input_tokens": 5220,
+        "input_tokens_details": {
+          "cache_write_tokens": 5217,
+          "cached_tokens": 0
+        },
+        "output_tokens": 4965,
+        "output_tokens_details": {
+          "reasoning_tokens": 2152
+        },
+        "total_tokens": 10185
+      }
+    },
+    {
+      "role": "candidate_c",
+      "provider": "google",
+      "model": "gemini-3.1-pro-preview",
+      "attempt": 2,
+      "request_id": "qZKnaubkO9mfz7IP9trToQo",
+      "usage": {
+        "promptTokenCount": 5342,
+        "candidatesTokenCount": 2798,
+        "totalTokenCount": 12902,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 5342
+          }
+        ],
+        "thoughtsTokenCount": 4762,
+        "serviceTier": "standard"
+      }
+    }
+  ],
+  "bundle_sha256": "5af15c24e0910a969ffb80d2aec451ee660cb9a80632171b89f79014ac5e6db3",
+  "completed_at": "2026-09-14T06:24:07.338Z",
+  "semantic_audit_performed": false,
+  "candidate_bundle": "docs/architecture/phase-4/COL-02-006-015_fresh-candidates-20260914.json",
+  "human_review_document": "docs/architecture/phase-4/COL-02-006-015_fresh-candidates-20260914.md",
+  "local_output_directory": "/home/david/.codex/.chatgpt-projects/g-p-6a29c1543a408191bebabe8ca1404a5c/outputs/flt-20260914",
+  "previous_job_attempts": 4,
+  "checkpoint_restoration": false,
+  "output_retention": "Committed candidate bundle and review document plus local run archive; no dependency on expiring Actions artifacts."
+}
