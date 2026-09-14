@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "manifest_revision": 9,
+  "manifest_revision": 10,
   "last_updated": "2026-09-14",
   "dispatch_trigger": "human_authorized_mint_local_one_shot",
   "unit": {
@@ -30,21 +30,21 @@
     "circuit_breaker_spec": "docs/architecture/phase-4/FLT_Autonomous_Circuit_Breaker_v1.md"
   },
   "state": {
-    "status": "ready",
-    "phase": "blind_draft_authorized_fresh_run",
-    "active_job_id": null,
-    "active_run_id": null,
+    "status": "running",
+    "phase": "blind_draft_running",
+    "active_job_id": "COL-02-006-015-BLIND-DRAFT-06",
+    "active_run_id": "FLT-COL-02-006-015-20260914-MINT-06",
     "translation_allowed": true,
     "candidate_generation_allowed": true,
     "provider_dispatch_allowed": true,
     "github_workflow_dispatch_allowed": false,
     "translation_artifact_mutation_allowed": false,
-    "next_permitted_action": "Claim revision 9 for fresh job COL-02-006-015-BLIND-DRAFT-06, then launch once on Mint with six-call total limit."
+    "next_permitted_action": "Await this single Mint-local run; retrieve validated A/B/C or record halt. No second launch."
   },
   "allowed_actions": [
     "flt status COL-02-006-015",
     "read_only_repository_inspection",
-    "claim and execute authorized Mint-local BLIND-DRAFT-06 once"
+    "complete already claimed Mint-local BLIND-DRAFT-06"
   ],
   "forbidden_actions": [
     "dispatch BLIND-DRAFT-01 through BLIND-DRAFT-04 again",
@@ -123,7 +123,7 @@
     },
     "COL-02-006-015-BLIND-DRAFT-06": {
       "job_type": "blind_candidate_passage_sense_drafting",
-      "status": "authorized_ready",
+      "status": "running",
       "authorization_id": "HE-COL-02-006-015-FRESH-ABC-20260914",
       "authorized_by": "human_editor",
       "authorization_date": "2026-09-14",
@@ -138,19 +138,21 @@
       "checkpoints_to_restore": 0,
       "previous_ledger_restoration": "expired; prior manifest and GitHub job logs preserve four historical calls; fresh budget explicitly authorized",
       "dispatch_allowed": true,
-      "dispatch_confirmed": false,
+      "dispatch_confirmed": true,
       "retry_allowed": false,
       "execution_environment": "linux_mint_local",
       "preflight_receipt": "config/COL-02-006-015_fresh-abc-preflight-20260914.json",
       "source_commit": "2db9e6827565d83b0ee1100f61d0eb09fdad329f",
       "launch": {
         "mode": "mint_local_one_shot",
-        "status": "local_ready",
+        "status": "consumed",
         "nonce": "HE-COL-02-006-015-FRESH-ABC-20260914-06",
         "authorization_id": "HE-COL-02-006-015-FRESH-ABC-20260914",
         "expected_manifest_revision": 9,
-        "consumed_run_id": null
-      }
+        "consumed_run_id": "FLT-COL-02-006-015-20260914-MINT-06",
+        "consumed_nonce": "HE-COL-02-006-015-FRESH-ABC-20260914-06"
+      },
+      "local_run_id": "FLT-COL-02-006-015-20260914-MINT-06"
     }
   },
   "source_gate": {
