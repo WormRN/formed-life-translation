@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "at": "2026-09-14T06:02:14.561Z",
+  "task_id": "COL-02-006-015-BLIND-DRAFT-06",
+  "run_id": "FLT-COL-02-006-015-20260914-MINT-06",
+  "authorization_id": "HE-COL-02-006-015-FRESH-ABC-20260914",
+  "expected_manifest_revision": 9,
+  "source_commit": "2db9e6827565d83b0ee1100f61d0eb09fdad329f",
+  "provider_calls": 0,
+  "checks": [
+    "source_identity_ten_ordered_verses",
+    "passage_sense_gate",
+    "locked_matrix_alerts",
+    "matrix_packet_hygiene",
+    "distinct_providers",
+    "two_attempt_worker_six_attempt_task_budget",
+    "immutable_input_hashes",
+    "existing_mock_and_integrity_tests_passed"
+  ],
+  "input_hashes": {
+    "phase4-harness/src/chapter-units.js": "7dbb910839165e2febd2723e71c229717beffa5213a288a6d3842664e3160d45",
+    "phase4-harness/src/core.js": "98cb12c9f59da3df5ee034c8f770f996b99ac88473552f5a748f3b68df86188c",
+    "phase4-harness/src/run-integrity.js": "6d07537ed90787111610536e767964f3d1003ede1c80dad5cce80cfc806d7fb5",
+    "phase4-harness/src/circuit-breaker.js": "6fe16db76094ee4c866eff12c3bedb11d57f4b0e6cac4a1900eb9185c7c18fa4",
+    "phase4-harness/src/sense-resolution-core.js": "df941a5527ebbd508e0e3a1edb6778bdb380338361753042e5fce7ccc576418f",
+    "phase4-harness/schemas/chapter-unit-candidate.schema.json": "5679817052c6466b64a8d9aff561decf2b18c7b82d91fc969e31bef90cf97c01",
+    "docs/architecture/phase-4/COL-02-006-015_approved_blind-source-v2.2.json": "fa0c16c357072e826b8bcf6a5c4e3af07a1735b1e335710127d986e46c387657",
+    "docs/current/FLT_contextual_lexical_matrix_v2.0.md": "4049af26d7f5594e8053d4f51f6466986b89e223cdeffe2fda6fd96c5a7d8392",
+    "docs/current/FLT_contextual_lexical_matrix_authority_types_v2.0.md": "459d72c68714e2322662da898bbfecb36136e34d2503ae2afb1b896925b31438",
+    "data/source/sblgnt_parsed.json": "737f7a2f5ecd42bcf44527c96b06e851ac8737b415ff5aa1787ae4ebd0637391"
+  },
+  "config_sha256": "e590d8367b2453f095c1d84501afe64497dae53876307b85341763b9effcdc17",
+  "execution_mode": "mint_local_one_shot_with_default_branch_state_claim",
+  "previous_job": {
+    "id": "COL-02-006-015-BLIND-DRAFT-05",
+    "provider_attempts_used": 4,
+    "failed_operation": "blind_reader_first_unit_draft/candidate_c",
+    "failure": "WORKER_ATTEMPT_LIMIT_EXHAUSTED: malformed JSON",
+    "artifact_expired": true,
+    "checkpoints_restored": 0,
+    "ledger_policy": "Historical four-call total retained; Human Editor explicitly authorized fresh job with six new calls."
+  }
+}
